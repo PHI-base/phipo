@@ -1,0 +1,235 @@
+format-version: 1.2
+ontology: http://www.purl.obolibrary.org/obo/phipo.owl
+
+[Term]
+id: PHIPO:0000001
+name: disease formation phenotype
+namespace: disease formation phenotype
+def: "TO UPDATE_Any of the set of observable characteristics of an organism resulting from the interaction of its genotype with the environment including any other organisms" []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+created_by: alaynecuzick
+creation_date: 2018-05-02T11:20:17Z
+
+[Term]
+id: PHIPO:0000002
+name: pathogen phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-02T11:20:59Z
+
+[Term]
+id: PHIPO:0000003
+name: host phenotype
+def: "testing" []
+created_by: alaynecuzick
+creation_date: 2018-05-02T11:21:13Z
+
+[Term]
+id: PHIPO:0000004
+name: normal pathogenicity
+synonym: "unaffected pathogenicity" EXACT []
+is_a: PHIPO:0000006 ! pathogenicity phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T12:38:43Z
+
+[Term]
+id: PHIPO:0000005
+name: abnormal pathogenicity
+is_a: PHIPO:0000006 ! pathogenicity phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T12:39:00Z
+
+[Term]
+id: PHIPO:0000006
+name: pathogenicity phenotype
+is_a: PHIPO:0000001 ! disease formation phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T12:39:55Z
+
+[Term]
+id: PHIPO:0000007
+name: normal pathogenic phenotype
+is_a: PHIPO:0000004 ! normal pathogenicity
+created_by: alaynecuzick
+creation_date: 2018-05-04T12:42:00Z
+
+[Term]
+id: PHIPO:0000008
+name: normal non pathogenic phenotype
+is_a: PHIPO:0000004 ! normal pathogenicity
+created_by: alaynecuzick
+creation_date: 2018-05-04T12:42:16Z
+
+[Term]
+id: PHIPO:0000009
+name: gain of pathogenicity
+synonym: "abnormal pathogenic phenotype" EXACT []
+is_a: PHIPO:0000005 ! abnormal pathogenicity
+created_by: alaynecuzick
+creation_date: 2018-05-04T12:45:12Z
+
+[Term]
+id: PHIPO:0000010
+name: loss of pathogenicity
+synonym: "abnormal non pathogenic phenotype" EXACT []
+is_a: PHIPO:0000005 ! abnormal pathogenicity
+created_by: alaynecuzick
+creation_date: 2018-05-04T12:45:31Z
+
+[Term]
+id: PHIPO:0000011
+name: virulence phenotype
+is_a: PHIPO:0000001 ! disease formation phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T13:02:03Z
+
+[Term]
+id: PHIPO:0000012
+name: normal virulence
+synonym: "unaffected virulence" EXACT []
+is_a: PHIPO:0000011 ! virulence phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T13:02:23Z
+
+[Term]
+id: PHIPO:0000013
+name: abnormal virulence
+is_a: PHIPO:0000011 ! virulence phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T13:02:39Z
+
+[Term]
+id: PHIPO:0000014
+name: increased virulence
+is_a: PHIPO:0000013 ! abnormal virulence
+created_by: alaynecuzick
+creation_date: 2018-05-04T13:07:31Z
+
+[Term]
+id: PHIPO:0000015
+name: reduced virulence
+synonym: "decreased virulence" EXACT []
+is_a: PHIPO:0000013 ! abnormal virulence
+created_by: alaynecuzick
+creation_date: 2018-05-04T13:08:10Z
+
+[Term]
+id: PHIPO:0000016
+name: normal pathogen phenotype
+is_a: PHIPO:0000002 ! pathogen phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T13:10:48Z
+
+[Term]
+id: PHIPO:0000017
+name: abnormal pathogen phenotype
+is_a: PHIPO:0000002 ! pathogen phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T13:11:04Z
+
+[Term]
+id: PHIPO:0000018
+name: sensitive to chemical
+is_a: PHIPO:0000016 ! normal pathogen phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T13:12:20Z
+
+[Term]
+id: PHIPO:0000019
+name: lethal
+is_a: PHIPO:0000017 ! abnormal pathogen phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T13:12:47Z
+
+[Term]
+id: PHIPO:0000020
+name: abnormal chemical target phenotype
+is_a: PHIPO:0000017 ! abnormal pathogen phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T13:13:42Z
+
+[Term]
+id: PHIPO:0000021
+name: increased sensitivity to chemical
+is_a: PHIPO:0000020 ! abnormal chemical target phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T13:15:05Z
+
+[Term]
+id: PHIPO:0000022
+name: resistance to chemical
+is_a: PHIPO:0000020 ! abnormal chemical target phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T13:16:06Z
+
+[Term]
+id: PHIPO:0000023
+name: abnormal penetration assay phenotype
+is_a: PHIPO:0000002 ! pathogen phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T13:16:54Z
+
+[Term]
+id: PHIPO:0000024
+name: normal penetration assay phenotype
+is_a: PHIPO:0000016 ! normal pathogen phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T13:17:08Z
+
+[Term]
+id: PHIPO:0000025
+name: normal mating phenotype prior to penetration
+is_a: PHIPO:0000024 ! normal penetration assay phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T13:17:46Z
+
+[Term]
+id: PHIPO:0000026
+name: normal penetration
+is_a: PHIPO:0000024 ! normal penetration assay phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T13:18:03Z
+
+[Term]
+id: PHIPO:0000027
+name: normal post penetration
+is_a: PHIPO:0000024 ! normal penetration assay phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T13:19:13Z
+
+[Term]
+id: PHIPO:0000028
+name: normal pre penetration
+is_a: PHIPO:0000024 ! normal penetration assay phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T13:19:44Z
+
+[Term]
+id: PHIPO:0000029
+name: abnormal mating phenotype prior to penetration
+is_a: PHIPO:0000023 ! abnormal penetration assay phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T13:22:14Z
+
+[Term]
+id: PHIPO:0000030
+name: abnormal penetration
+is_a: PHIPO:0000023 ! abnormal penetration assay phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T13:22:31Z
+
+[Term]
+id: PHIPO:0000031
+name: abnormal post penetration
+is_a: PHIPO:0000023 ! abnormal penetration assay phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T13:22:52Z
+
+[Term]
+id: PHIPO:0000032
+name: abnormal pre penetration
+is_a: PHIPO:0000023 ! abnormal penetration assay phenotype
+created_by: alaynecuzick
+creation_date: 2018-05-04T13:23:06Z
+
