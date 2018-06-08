@@ -1,2 +1,2 @@
-# PHI-base_ontologies
-PHI-base ontologies
+# phipo
+PHI-base phenotype ontology
