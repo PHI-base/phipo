@@ -10,10 +10,10 @@ build:
   system: git
   path: "."
 contact:
-  email: cjmungall@lbl.gov
-  label: Chris Mungall
-description: PHIPO is an ontology...
-domain: stuff
+  email: alayne.cuzick@rothamsted.ac.uk
+  label: Alayne Cuzick
+description: PHIPO is a formal ontology of species-neutral phenotypes observed in pathogen-host interactions.
+domain: phenotype
 homepage: https://github.com/PHI-base/phipo
 products:
   - id: phipo.owl
