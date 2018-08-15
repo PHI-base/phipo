@@ -3,7 +3,9 @@
 
 # PHI-base Phenotype Ontology
 
-[Description here]
+PHIPO is a formal ontology of species-neutral phenotypes observed in pathogen-host interactions.
+
+PHIPO is being developed to support the comprehensive and detailed representation of phenotypes in PHI-base, the multi-species Pathogen-Host Interactions database available online at http://www.phi-base.org. PHIPO is pre-composed and logically defined.
 
 ## Versions
 
