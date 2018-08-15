@@ -1,7 +1,7 @@
 ---
 layout: ontology_detail
 id: phipo
-title: PHIPO
+title: Pathogen Host Interaction Phenotype Ontology
 jobs:
   - id: https://travis-ci.org/PHI-base/phipo
     type: travis-ci
