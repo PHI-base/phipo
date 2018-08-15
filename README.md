@@ -13,7 +13,8 @@ PHIPO is being developed to support the comprehensive and detailed representatio
 
 The latest version of the ontology can always be found at:
 
-http://purl.obolibrary.org/obo/phipo.owl
+* http://purl.obolibrary.org/obo/phipo.owl
+* http://purl.obolibrary.org/obo/phipo.obo
 
 (Note this will not show up until the request has been approved by obofoundry.org)
 
