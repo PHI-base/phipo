@@ -9,4 +9,4 @@
 # we therefore map the whole repo (../..) to a docker volume.
 #
 # See README-editors.md for more details.
-docker run -e JAVA_OPTS="-Xmx=6g" -v $PWD/../../:/work -w /work/src/ontology --rm -ti obolibrary/odkfull "$@"
+docker run -e JAVA_OPTS="-Xmx6g" -v $PWD/../../:/work -w /work/src/ontology --rm -ti obolibrary/odkfull "$@"
