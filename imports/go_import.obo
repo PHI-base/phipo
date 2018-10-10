@@ -1,0 +1,759 @@
+format-version: 1.2
+ontology: phipo/imports/go_import
+
+[Term]
+id: GO:0003674
+name: molecular_function
+namespace: molecular_function
+alt_id: GO:0005554
+def: "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process." [GOC:pdt]
+comment: Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+synonym: "molecular function" EXACT []
+
+[Term]
+id: GO:0003676
+name: nucleic acid binding
+namespace: molecular_function
+def: "Interacting selectively and non-covalently with any nucleic acid." [GOC:jl]
+subset: goslim_chembl
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+is_a: GO:0097159 ! organic cyclic compound binding
+is_a: GO:1901363 ! heterocyclic compound binding
+
+[Term]
+id: GO:0003677
+name: DNA binding
+namespace: molecular_function
+alt_id: GO:0043566
+def: "Any molecular function by which a gene product interacts selectively and non-covalently with DNA (deoxyribonucleic acid)." [GOC:dph, GOC:jl, GOC:tb, GOC:vw]
+subset: goslim_agr
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_flybase_ribbon
+subset: goslim_generic
+subset: goslim_mouse
+subset: goslim_plant
+subset: goslim_yeast
+synonym: "microtubule/chromatin interaction" RELATED []
+synonym: "plasmid binding" NARROW []
+synonym: "structure specific DNA binding" RELATED []
+synonym: "structure-specific DNA binding" RELATED []
+is_a: GO:0003676 ! nucleic acid binding
+
+[Term]
+id: GO:0003723
+name: RNA binding
+namespace: molecular_function
+alt_id: GO:0044822
+def: "Interacting selectively and non-covalently with an RNA molecule or a portion thereof." [GOC:jl, GOC:mah]
+subset: goslim_agr
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_flybase_ribbon
+subset: goslim_generic
+subset: goslim_mouse
+subset: goslim_plant
+subset: goslim_yeast
+synonym: "poly(A) RNA binding" RELATED []
+synonym: "poly(A)-RNA binding" RELATED []
+synonym: "poly-A RNA binding" RELATED []
+xref: Reactome:REACT_101703 "Exportin-5 recognizes 3' overhang of pre-miRNA, Xenopus tropicalis"
+xref: Reactome:REACT_103323 "Exportin-5 recognizes 3' overhang of pre-miRNA, Dictyostelium discoideum"
+xref: Reactome:REACT_106430 "Exportin-5 recognizes 3' overhang of pre-miRNA, Mus musculus"
+xref: Reactome:REACT_107757 "Exportin-5 recognizes 3' overhang of pre-miRNA, Drosophila melanogaster"
+xref: Reactome:REACT_108232 "Exportin-5 recognizes 3' overhang of pre-miRNA, Oryza sativa"
+xref: Reactome:REACT_108368 "Exportin-5 recognizes 3' overhang of pre-miRNA, Saccharomyces cerevisiae"
+xref: Reactome:REACT_109723 "Exportin-5 recognizes 3' overhang of pre-miRNA, Arabidopsis thaliana"
+xref: Reactome:REACT_12458 "Exportin-5 recognizes 3' overhang of pre-miRNA, Homo sapiens"
+xref: Reactome:REACT_29965 "Exportin-5 recognizes 3' overhang of pre-miRNA, Canis familiaris"
+xref: Reactome:REACT_77167 "Exportin-5 recognizes 3' overhang of pre-miRNA, Gallus gallus"
+xref: Reactome:REACT_78197 "Exportin-5 recognizes 3' overhang of pre-miRNA, Sus scrofa"
+xref: Reactome:REACT_87164 "Exportin-5 recognizes 3' overhang of pre-miRNA, Schizosaccharomyces pombe"
+xref: Reactome:REACT_89329 "Exportin-5 recognizes 3' overhang of pre-miRNA, Rattus norvegicus"
+xref: Reactome:REACT_90531 "Exportin-5 recognizes 3' overhang of pre-miRNA, Danio rerio"
+xref: Reactome:REACT_98683 "Exportin-5 recognizes 3' overhang of pre-miRNA, Taeniopygia guttata"
+is_a: GO:0003676 ! nucleic acid binding
+
+[Term]
+id: GO:0005488
+name: binding
+namespace: molecular_function
+def: "The selective, non-covalent, often stoichiometric, interaction of a molecule with one or more specific sites on another molecule." [GOC:ceb, GOC:mah, ISBN:0198506732]
+comment: Note that this term is in the subset of terms that should not be used for direct, manual gene product annotation. Please choose a more specific child term, or request a new one if no suitable term is available. For ligands that bind to signal transducing receptors, consider the molecular function term 'receptor binding ; GO:0005102' and its children.
+subset: gocheck_do_not_manually_annotate
+subset: goslim_pir
+subset: goslim_plant
+synonym: "ligand" NARROW []
+xref: Wikipedia:Binding_(molecular)
+is_a: GO:0003674 ! molecular_function
+
+[Term]
+id: GO:0005515
+name: protein binding
+namespace: molecular_function
+alt_id: GO:0001948
+alt_id: GO:0045308
+def: "Interacting selectively and non-covalently with any protein or protein complex (a complex of two or more proteins that may include other nonprotein molecules)." [GOC:go_curators]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+synonym: "glycoprotein binding" NARROW []
+synonym: "protein amino acid binding" EXACT []
+xref: Reactome:REACT_100287 "Formation of the IGF:IGFBP-4 Complex, Canis familiaris"
+xref: Reactome:REACT_101129 "Formation of the IGF:IGFBP-3:ALS Complex, Rattus norvegicus"
+xref: Reactome:REACT_102084 "Formation of the IGF:IGFBP-5:ALS Complex, Mus musculus"
+xref: Reactome:REACT_102457 "An anchoring protein, SARA, recruits SMAD2/3, Canis familiaris"
+xref: Reactome:REACT_103972 "Type II receptor recruits type I receptor, Xenopus tropicalis"
+xref: Reactome:REACT_104029 "Formation of the IGF:IGFBP-6 Complex, Bos taurus"
+xref: Reactome:REACT_104599 "Type II receptor recruits type I receptor, Sus scrofa"
+xref: Reactome:REACT_105776 "Formation of the IGF:IGFBP-3:ALS Complex, Danio rerio"
+xref: Reactome:REACT_105895 "Formation of the IGF:IGFBP-4 Complex, Bos taurus"
+xref: Reactome:REACT_106168 "Formation of the IGF:IGFBP-2 Complex, Bos taurus"
+xref: Reactome:REACT_106189 "Formation of the IGF:IGFBP-5:ALS Complex, Gallus gallus"
+xref: Reactome:REACT_107402 "Formation of the IGF:IGFBP-4 Complex, Mus musculus"
+xref: Reactome:REACT_108283 "Formation of the IGF:IGFBP-4 Complex, Xenopus tropicalis"
+xref: Reactome:REACT_109392 "Formation of the IGF:IGFBP-3:ALS Complex, Gallus gallus"
+xref: Reactome:REACT_110419 "Type II receptor recruits type I receptor, Bos taurus"
+xref: Reactome:REACT_110570 "Formation of the IGF:IGFBP-3:ALS Complex, Sus scrofa"
+xref: Reactome:REACT_15321 "Formation of the IGF:IGFBP-1 Complex, Homo sapiens"
+xref: Reactome:REACT_15325 "Formation of the IGF:IGFBP-4 Complex, Homo sapiens"
+xref: Reactome:REACT_15355 "Formation of the IGF:IGFBP-5:ALS Complex, Homo sapiens"
+xref: Reactome:REACT_15417 "Formation of the IGF:IGFBP-3:ALS Complex, Homo sapiens"
+xref: Reactome:REACT_15419 "Formation of the IGF:IGFBP-2 Complex, Homo sapiens"
+xref: Reactome:REACT_15506 "Formation of the IGF:IGFBP-6 Complex, Homo sapiens"
+xref: Reactome:REACT_15541 "Traversal of the cortical actin network and docking at plasma membrane, Homo sapiens"
+xref: Reactome:REACT_20509 "Exocytosis of Insulin, Mus musculus"
+xref: Reactome:REACT_20539 "Traversal of the cortical actin network., Mus musculus"
+xref: Reactome:REACT_28794 "Formation of the IGF:IGFBP-4 Complex, Sus scrofa"
+xref: Reactome:REACT_30571 "Formation of the IGF:IGFBP-6 Complex, Danio rerio"
+xref: Reactome:REACT_30672 "Formation of the IGF:IGFBP-2 Complex, Taeniopygia guttata"
+xref: Reactome:REACT_31305 "Formation of the IGF:IGFBP-3:ALS Complex, Taeniopygia guttata"
+xref: Reactome:REACT_31537 "Formation of the IGF:IGFBP-6 Complex, Rattus norvegicus"
+xref: Reactome:REACT_31641 "Type II receptor recruits type I receptor, Danio rerio"
+xref: Reactome:REACT_31648 "An anchoring protein, SARA, recruits SMAD2/3, Mus musculus"
+xref: Reactome:REACT_32973 "Formation of the IGF:IGFBP-1 Complex, Canis familiaris"
+xref: Reactome:REACT_33135 "An anchoring protein, SARA, recruits SMAD2/3, Rattus norvegicus"
+xref: Reactome:REACT_34719 "Formation of the IGF:IGFBP-1 Complex, Danio rerio"
+xref: Reactome:REACT_6923 "An anchoring protein, SARA, recruits SMAD2/3, Homo sapiens"
+xref: Reactome:REACT_6945 "Type II receptor recruits type I receptor, Homo sapiens"
+xref: Reactome:REACT_78382 "Formation of the IGF:IGFBP-1 Complex, Mus musculus"
+xref: Reactome:REACT_78466 "Formation of the IGF:IGFBP-6 Complex, Canis familiaris"
+xref: Reactome:REACT_79634 "Formation of the IGF:IGFBP-5:ALS Complex, Canis familiaris"
+xref: Reactome:REACT_80470 "Formation of the IGF:IGFBP-1 Complex, Rattus norvegicus"
+xref: Reactome:REACT_80778 "Type II receptor recruits type I receptor, Mus musculus"
+xref: Reactome:REACT_83147 "Type II receptor recruits type I receptor, Rattus norvegicus"
+xref: Reactome:REACT_83165 "Formation of the IGF:IGFBP-5:ALS Complex, Sus scrofa"
+xref: Reactome:REACT_83532 "Formation of the IGF:IGFBP-2 Complex, Xenopus tropicalis"
+xref: Reactome:REACT_85250 "Formation of the IGF:IGFBP-2 Complex, Canis familiaris"
+xref: Reactome:REACT_85858 "Formation of the IGF:IGFBP-2 Complex, Gallus gallus"
+xref: Reactome:REACT_85975 "An anchoring protein, SARA, recruits SMAD2/3, Danio rerio"
+xref: Reactome:REACT_87187 "An anchoring protein, SARA, recruits SMAD2/3, Xenopus tropicalis"
+xref: Reactome:REACT_87374 "Formation of the IGF:IGFBP-6 Complex, Sus scrofa"
+xref: Reactome:REACT_87652 "Formation of the IGF:IGFBP-5:ALS Complex, Bos taurus"
+xref: Reactome:REACT_88068 "Formation of the IGF:IGFBP-3:ALS Complex, Canis familiaris"
+xref: Reactome:REACT_88138 "Formation of the IGF:IGFBP-5:ALS Complex, Danio rerio"
+xref: Reactome:REACT_88223 "Formation of the IGF:IGFBP-1 Complex, Sus scrofa"
+xref: Reactome:REACT_89261 "Formation of the IGF:IGFBP-4 Complex, Taeniopygia guttata"
+xref: Reactome:REACT_90027 "Formation of the IGF:IGFBP-2 Complex, Rattus norvegicus"
+xref: Reactome:REACT_90105 "Formation of the IGF:IGFBP-1 Complex, Xenopus tropicalis"
+xref: Reactome:REACT_90666 "An anchoring protein, SARA, recruits SMAD2/3, Sus scrofa"
+xref: Reactome:REACT_91560 "Type II receptor recruits type I receptor, Canis familiaris"
+xref: Reactome:REACT_92029 "Formation of the IGF:IGFBP-4 Complex, Rattus norvegicus"
+xref: Reactome:REACT_93175 "Formation of the IGF:IGFBP-1 Complex, Gallus gallus"
+xref: Reactome:REACT_93938 "Formation of the IGF:IGFBP-5:ALS Complex, Rattus norvegicus"
+xref: Reactome:REACT_94522 "Formation of the IGF:IGFBP-5:ALS Complex, Taeniopygia guttata"
+xref: Reactome:REACT_94808 "Formation of the IGF:IGFBP-6 Complex, Mus musculus"
+xref: Reactome:REACT_95241 "Formation of the IGF:IGFBP-3:ALS Complex, Mus musculus"
+xref: Reactome:REACT_95561 "Formation of the IGF:IGFBP-5:ALS Complex, Xenopus tropicalis"
+xref: Reactome:REACT_95647 "Formation of the IGF:IGFBP-3:ALS Complex, Bos taurus"
+xref: Reactome:REACT_96236 "Formation of the IGF:IGFBP-2 Complex, Mus musculus"
+xref: Reactome:REACT_96264 "Formation of the IGF:IGFBP-2 Complex, Danio rerio"
+xref: Reactome:REACT_98028 "Formation of the IGF:IGFBP-1 Complex, Taeniopygia guttata"
+xref: Reactome:REACT_98807 "An anchoring protein, SARA, recruits SMAD2/3, Bos taurus"
+is_a: GO:0005488 ! binding
+
+[Term]
+id: GO:0006403
+name: RNA localization
+namespace: biological_process
+def: "A process in which RNA is transported to, or maintained in, a specific location." [GOC:ai]
+synonym: "establishment and maintenance of RNA localization" EXACT []
+synonym: "RNA localisation" EXACT [GOC:mah]
+is_a: GO:0033036 ! macromolecule localization
+
+[Term]
+id: GO:0006810
+name: transport
+namespace: biological_process
+alt_id: GO:0015457
+alt_id: GO:0015460
+alt_id: GO:0044765
+def: "The directed movement of substances (such as macromolecules, small molecules, ions) or cellular components (such as complexes and organelles) into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter, pore or motor protein." [GOC:dos, GOC:dph, GOC:jl, GOC:mah]
+comment: Note that this term should not be used for direct annotation. It should be possible to make a more specific annotation to one of the children of this term, for e.g. to transmembrane transport, to microtubule-based transport or to vesicle-mediated transport.
+subset: gocheck_do_not_annotate
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+synonym: "single-organism transport" RELATED []
+synonym: "small molecule transport" NARROW []
+synonym: "solute:solute exchange" NARROW []
+is_a: GO:0051234 ! establishment of localization
+created_by: janelomax
+creation_date: 2012-12-13T16:25:32Z
+
+[Term]
+id: GO:0006897
+name: endocytosis
+namespace: biological_process
+alt_id: GO:0016193
+alt_id: GO:0016196
+alt_id: GO:0098701
+def: "A vesicle-mediated transport process in which cells take up external materials or membrane constituents by the invagination of a small region of the plasma membrane to form a new membrane-bounded vesicle." [GOC:mah, ISBN:0198506732, ISBN:0716731363]
+subset: goslim_yeast
+synonym: "endocytic import into cell" EXACT []
+synonym: "nonselective vesicle endocytosis" RELATED []
+synonym: "plasma membrane invagination" NARROW []
+synonym: "vesicle endocytosis" EXACT []
+xref: Wikipedia:Endocytosis
+is_a: GO:0016192 ! vesicle-mediated transport
+is_a: GO:0098657 ! import into cell
+relationship: has_part GO:0006900 ! vesicle budding from membrane
+relationship: has_part GO:0010324 ! membrane invagination
+
+[Term]
+id: GO:0006900
+name: vesicle budding from membrane
+namespace: biological_process
+alt_id: GO:0006902
+alt_id: GO:1902591
+def: "The evagination of a membrane, resulting in formation of a vesicle." [GOC:jid, GOC:tb]
+synonym: "membrane evagination" EXACT []
+synonym: "nonselective vesicle assembly" RELATED []
+synonym: "single organism membrane budding" RELATED [GOC:TermGenie]
+synonym: "single-organism membrane budding" RELATED []
+synonym: "vesicle biosynthesis" EXACT []
+synonym: "vesicle budding" RELATED []
+synonym: "vesicle formation" EXACT []
+is_a: GO:0016050 ! vesicle organization
+is_a: GO:0061024 ! membrane organization
+relationship: part_of GO:0016192 ! vesicle-mediated transport
+created_by: jl
+creation_date: 2013-12-19T15:26:17Z
+
+[Term]
+id: GO:0006996
+name: organelle organization
+namespace: biological_process
+alt_id: GO:1902589
+def: "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of an organelle within a cell. An organelle is an organized structure of distinctive morphology and function. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton. Excludes the plasma membrane." [GOC:mah]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_pir
+synonym: "organelle organisation" EXACT [GOC:curators]
+synonym: "organelle organization and biogenesis" RELATED [GOC:dph, GOC:jl, GOC:mah]
+synonym: "single organism organelle organization" EXACT [GOC:TermGenie]
+synonym: "single-organism organelle organization" RELATED []
+is_a: GO:0016043 ! cellular component organization
+created_by: jl
+creation_date: 2013-12-19T15:25:51Z
+
+[Term]
+id: GO:0007034
+name: vacuolar transport
+namespace: biological_process
+def: "The directed movement of substances into, out of or within a vacuole." [GOC:ai]
+subset: goslim_chembl
+subset: goslim_generic
+is_a: GO:0006810 ! transport
+
+[Term]
+id: GO:0008104
+name: protein localization
+namespace: biological_process
+alt_id: GO:0008105
+def: "Any process in which a protein is transported to, or maintained in, a specific location." [GOC:ai]
+synonym: "asymmetric protein localisation" RELATED [GOC:mah]
+synonym: "asymmetric protein localization" RELATED []
+synonym: "establishment and maintenance of asymmetric protein localization" RELATED []
+synonym: "establishment and maintenance of protein localization" RELATED []
+synonym: "protein localisation" EXACT [GOC:mah]
+is_a: GO:0033036 ! macromolecule localization
+
+[Term]
+id: GO:0008150
+name: biological_process
+namespace: biological_process
+alt_id: GO:0000004
+alt_id: GO:0007582
+alt_id: GO:0044699
+def: "A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence." [GOC:pdt]
+comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_pombe
+subset: goslim_yeast
+synonym: "biological process" EXACT []
+synonym: "physiological process" EXACT []
+synonym: "single organism process" RELATED []
+synonym: "single-organism process" RELATED []
+xref: Wikipedia:Biological_process
+created_by: janelomax
+creation_date: 2012-09-19T15:05:24Z
+
+[Term]
+id: GO:0009987
+name: cellular process
+namespace: biological_process
+alt_id: GO:0008151
+alt_id: GO:0044763
+alt_id: GO:0050875
+def: "Any process that is carried out at the cellular level, but not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level." [GOC:go_curators, GOC:isa_complete]
+subset: goslim_plant
+synonym: "cell growth and/or maintenance" NARROW []
+synonym: "cell physiology" EXACT []
+synonym: "cellular physiological process" EXACT []
+synonym: "single-organism cellular process" RELATED []
+is_a: GO:0008150 ! biological_process
+created_by: janelomax
+creation_date: 2012-12-11T16:56:55Z
+
+[Term]
+id: GO:0010324
+name: membrane invagination
+namespace: biological_process
+alt_id: GO:1902534
+def: "The infolding of a membrane." [GOC:tb]
+subset: goslim_yeast
+synonym: "single-organism membrane invagination" RELATED []
+is_a: GO:0061024 ! membrane organization
+created_by: jl
+creation_date: 2013-12-02T13:58:34Z
+
+[Term]
+id: GO:0015031
+name: protein transport
+namespace: biological_process
+alt_id: GO:0015831
+def: "The directed movement of proteins into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
+subset: goslim_pir
+synonym: "enzyme transport" NARROW []
+is_a: GO:0015833 ! peptide transport
+is_a: GO:0045184 ! establishment of protein localization
+
+[Term]
+id: GO:0015833
+name: peptide transport
+namespace: biological_process
+def: "The directed movement of peptides, compounds of two or more amino acids where the alpha carboxyl group of one is bound to the alpha amino group of another, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
+subset: goslim_pir
+is_a: GO:0042886 ! amide transport
+is_a: GO:0071702 ! organic substance transport
+
+[Term]
+id: GO:0016043
+name: cellular component organization
+namespace: biological_process
+alt_id: GO:0044235
+alt_id: GO:0071842
+def: "A process that results in the assembly, arrangement of constituent parts, or disassembly of a cellular component." [GOC:ai, GOC:jl, GOC:mah]
+subset: goslim_agr
+subset: goslim_mouse
+subset: goslim_pir
+subset: goslim_plant
+synonym: "cell organisation" EXACT []
+synonym: "cell organization and biogenesis" RELATED [GOC:mah]
+synonym: "cellular component organisation at cellular level" EXACT [GOC:mah]
+synonym: "cellular component organisation in other organism" EXACT [GOC:mah]
+synonym: "cellular component organization at cellular level" EXACT []
+synonym: "cellular component organization in other organism" EXACT []
+is_a: GO:0009987 ! cellular process
+is_a: GO:0071840 ! cellular component organization or biogenesis
+
+[Term]
+id: GO:0016050
+name: vesicle organization
+namespace: biological_process
+def: "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a vesicle." [GOC:mah]
+subset: goslim_pir
+subset: goslim_yeast
+synonym: "vesicle organisation" EXACT [GOC:curators]
+synonym: "vesicle organization and biogenesis" RELATED [GOC:mah]
+is_a: GO:0006996 ! organelle organization
+
+[Term]
+id: GO:0016192
+name: vesicle-mediated transport
+namespace: biological_process
+alt_id: GO:0006899
+def: "A cellular transport process in which transported substances are moved in membrane-bounded vesicles; transported substances are enclosed in the vesicle lumen or located in the vesicle membrane. The process begins with a step that directs a substance to the forming vesicle, and includes vesicle budding and coating. Vesicles are then targeted to, and fuse with, an acceptor membrane." [GOC:ai, GOC:mah, ISBN:08789310662000]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_pir
+subset: goslim_pombe
+synonym: "nonselective vesicle transport" NARROW []
+synonym: "protein sorting along secretory pathway" RELATED []
+synonym: "vesicle trafficking" RELATED []
+synonym: "vesicle transport" EXACT []
+synonym: "vesicular transport" EXACT [GOC:mah]
+is_a: GO:0006810 ! transport
+
+[Term]
+id: GO:0031503
+name: protein-containing complex localization
+namespace: biological_process
+def: "A localization process that acts on a protein complex; the complex is transported to, or maintained in, a specific location." [GOC:mah]
+synonym: "establishment and maintenance of protein complex localization" EXACT []
+synonym: "protein complex localisation" EXACT [GOC:mah]
+synonym: "protein complex localization" RELATED []
+is_a: GO:0008104 ! protein localization
+
+[Term]
+id: GO:0033036
+name: macromolecule localization
+namespace: biological_process
+def: "Any process in which a macromolecule is transported to, or maintained in, a specific location." [GOC:mah]
+subset: goslim_flybase_ribbon
+synonym: "macromolecule localisation" EXACT [GOC:mah]
+is_a: GO:0051179 ! localization
+
+[Term]
+id: GO:0033365
+name: protein localization to organelle
+namespace: biological_process
+def: "A process in which a protein is transported to, or maintained in, a location within an organelle." [GOC:mah]
+synonym: "protein localisation to organelle" EXACT [GOC:mah]
+synonym: "protein localization in organelle" EXACT [GOC:mah]
+is_a: GO:0034613 ! cellular protein localization
+
+[Term]
+id: GO:0034504
+name: protein localization to nucleus
+namespace: biological_process
+alt_id: GO:0044744
+def: "A process in which a protein transports or maintains the localization of another protein to the nucleus." [GOC:ecd]
+synonym: "protein localisation to nucleus" EXACT [GOC:mah]
+synonym: "protein localization in cell nucleus" EXACT []
+synonym: "protein localization in nucleus" EXACT [GOC:mah]
+synonym: "protein targeting to nucleus" RELATED []
+is_a: GO:0033365 ! protein localization to organelle
+creation_date: 2012-11-07T15:45:54Z
+
+[Term]
+id: GO:0034613
+name: cellular protein localization
+namespace: biological_process
+alt_id: GO:0016249
+def: "Any process in which a protein is transported to, and/or maintained in, a specific location at the level of a cell. Localization at the cellular level encompasses movement within the cell, from within the cell to the cell surface, or from one location to another at the surface of a cell." [GOC:mah]
+synonym: "cellular protein localisation" EXACT [GOC:mah]
+synonym: "channel localizer activity" NARROW [GOC:mah]
+is_a: GO:0008104 ! protein localization
+is_a: GO:0070727 ! cellular macromolecule localization
+
+[Term]
+id: GO:0034629
+name: cellular protein-containing complex localization
+namespace: biological_process
+def: "A protein complex localization process that takes place at the cellular level; as a result, a protein complex is transported to, or maintained in, a specific location within a cell." [GOC:mah]
+synonym: "cellular protein complex localisation" EXACT [GOC:mah]
+synonym: "cellular protein complex localization" RELATED []
+synonym: "establishment and maintenance of cellular protein complex localization" EXACT []
+is_a: GO:0031503 ! protein-containing complex localization
+is_a: GO:0034613 ! cellular protein localization
+
+[Term]
+id: GO:0042886
+name: amide transport
+namespace: biological_process
+def: "The directed movement of an amide, any compound containing one, two, or three acyl groups attached to a nitrogen atom, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:jl, ISBN:0198506732]
+subset: goslim_pir
+is_a: GO:0071705 ! nitrogen compound transport
+
+[Term]
+id: GO:0044403
+name: symbiont process
+namespace: biological_process
+alt_id: GO:0043298
+alt_id: GO:0044404
+alt_id: GO:0072519
+alt_id: GO:0085031
+def: "A process carried out by symbiont gene products that enables a symbiotic interaction with a host organism. The various forms of symbiosis include parasitism, in which the association is disadvantageous or destructive to one of the organisms; mutualism, in which the association is advantageous, or often necessary to one or both and not harmful to either; and commensalism, in which one member of the association benefits while the other is not affected. However, mutualism, parasitism, and commensalism are often not discrete categories of interactions and should rather be perceived as a continuum of interaction ranging from parasitism to mutualism. In fact, the direction of a symbiotic interaction can change during the lifetime of the symbionts due to developmental changes as well as changes in the biotic/abiotic environment in which the interaction occurs. Microscopic symbionts are often referred to as endosymbionts." [GOC:cc, https://study.com/academy/lesson/symbiont-definition-lesson-quiz.html]
+comment: Changed term, definition see https://github.com/geneontology/go-ontology/issues/14807
+subset: goslim_chembl
+subset: goslim_generic
+synonym: "commensalism" NARROW []
+synonym: "host-pathogen interaction" NARROW []
+synonym: "parasitism" NARROW []
+synonym: "symbiosis" RELATED []
+synonym: "symbiosis, encompassing mutualism through parasitism" RELATED []
+synonym: "symbiotic interaction" RELATED []
+synonym: "symbiotic interaction between host and organism" RELATED []
+synonym: "symbiotic interaction between organisms" RELATED []
+synonym: "symbiotic interaction between species" RELATED []
+is_a: GO:0044419 ! interspecies interaction between organisms
+
+[Term]
+id: GO:0044419
+name: interspecies interaction between organisms
+namespace: biological_process
+def: "Any process in which an organism has an effect on an organism of a different species." [GOC:cc]
+subset: goslim_candida
+subset: goslim_pir
+synonym: "interaction with another species" EXACT []
+synonym: "interspecies interaction" EXACT []
+synonym: "interspecies interaction with other organisms" EXACT []
+is_a: GO:0051704 ! multi-organism process
+
+[Term]
+id: GO:0044877
+name: protein-containing complex binding
+namespace: molecular_function
+alt_id: GO:0032403
+def: "Interacting selectively and non-covalently with a macromolecular complex." [GOC:jl]
+subset: goslim_chembl
+synonym: "macromolecular complex binding" RELATED []
+synonym: "protein complex binding" EXACT []
+is_a: GO:0005488 ! binding
+created_by: janelomax
+creation_date: 2014-12-16T11:38:58Z
+
+[Term]
+id: GO:0045184
+name: establishment of protein localization
+namespace: biological_process
+def: "The directed movement of a protein to a specific location." [GOC:bf]
+synonym: "establishment of protein localisation" EXACT [GOC:mah]
+synonym: "protein positioning" EXACT []
+synonym: "protein recruitment" EXACT []
+is_a: GO:0008104 ! protein localization
+is_a: GO:0051234 ! establishment of localization
+
+[Term]
+id: GO:0051179
+name: localization
+namespace: biological_process
+alt_id: GO:1902578
+def: "Any process in which a cell, a substance, or a cellular entity, such as a protein complex or organelle, is transported, tethered to or otherwise maintained in a specific location. In the case of substances, localization may also be achieved via selective degradation." [GOC:ai, GOC:dos]
+subset: goslim_pir
+synonym: "establishment and maintenance of cellular component location" NARROW []
+synonym: "establishment and maintenance of localization" EXACT []
+synonym: "establishment and maintenance of position" EXACT []
+synonym: "establishment and maintenance of substance location" NARROW []
+synonym: "establishment and maintenance of substrate location" NARROW []
+synonym: "localisation" EXACT [GOC:mah]
+synonym: "single organism localization" RELATED [GOC:TermGenie]
+synonym: "single-organism localization" RELATED []
+is_a: GO:0008150 ! biological_process
+created_by: jl
+creation_date: 2013-12-18T13:51:04Z
+
+[Term]
+id: GO:0051234
+name: establishment of localization
+namespace: biological_process
+def: "Any process that localizes a substance or cellular component. This may occur via movement, tethering or selective degradation." [GOC:ai, GOC:dos]
+subset: goslim_agr
+subset: goslim_flybase_ribbon
+subset: goslim_mouse
+subset: goslim_pir
+synonym: "establishment of localisation" EXACT [GOC:mah]
+is_a: GO:0051179 ! localization
+
+[Term]
+id: GO:0051641
+name: cellular localization
+namespace: biological_process
+alt_id: GO:1902580
+def: "A cellular localization process whereby a substance or cellular entity, such as a protein complex or organelle, is transported to, and/or maintained in, a specific location within a cell including the localization of substances or cellular entities to the cell membrane." [GOC:tb, GOC:vw]
+subset: goslim_pir
+synonym: "cellular localisation" EXACT [GOC:mah]
+synonym: "establishment and maintenance of cellular localization" EXACT []
+synonym: "establishment and maintenance of localization in cell or cell membrane" EXACT []
+synonym: "intracellular localization" NARROW []
+synonym: "localization within cell" NARROW []
+synonym: "single organism cellular localization" EXACT [GOC:TermGenie]
+synonym: "single-organism cellular localization" RELATED []
+is_a: GO:0051179 ! localization
+created_by: jl
+creation_date: 2013-12-18T14:04:32Z
+
+[Term]
+id: GO:0051704
+name: multi-organism process
+namespace: biological_process
+alt_id: GO:0051706
+def: "A biological process which involves another organism of the same or different species." [GOC:jl]
+subset: goslim_pir
+synonym: "interaction between organisms" EXACT []
+synonym: "physiological interaction between organisms" EXACT []
+synonym: "physiological interaction with other organism" EXACT []
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0061024
+name: membrane organization
+namespace: biological_process
+alt_id: GO:0016044
+alt_id: GO:0044802
+def: "A process which results in the assembly, arrangement of constituent parts, or disassembly of a membrane. A membrane is a double layer of lipid molecules that encloses all cells, and, in eukaryotes, many organelles; may be a single or double lipid bilayer; also includes associated proteins." [GOC:dph, GOC:tb]
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_pir
+subset: goslim_pombe
+synonym: "cellular membrane organisation" EXACT [GOC:curators]
+synonym: "cellular membrane organization" EXACT []
+synonym: "membrane organisation" EXACT [GOC:mah]
+synonym: "membrane organization and biogenesis" RELATED [GOC:mah]
+synonym: "single-organism membrane organization" RELATED []
+xref: Reactome:REACT_101524 "Membrane Trafficking, Dictyostelium discoideum"
+xref: Reactome:REACT_103082 "Membrane Trafficking, Schizosaccharomyces pombe"
+xref: Reactome:REACT_11123 "Membrane Trafficking, Homo sapiens"
+xref: Reactome:REACT_29278 "Membrane Trafficking, Sus scrofa"
+xref: Reactome:REACT_32337 "Membrane Trafficking, Taeniopygia guttata"
+xref: Reactome:REACT_33741 "Membrane Trafficking, Bos taurus"
+xref: Reactome:REACT_34084 "Membrane Trafficking, Caenorhabditis elegans"
+xref: Reactome:REACT_78213 "Membrane Trafficking, Plasmodium falciparum"
+xref: Reactome:REACT_78288 "Membrane Trafficking, Xenopus tropicalis"
+xref: Reactome:REACT_83546 "Membrane Trafficking, Oryza sativa"
+xref: Reactome:REACT_86557 "Membrane Trafficking, Arabidopsis thaliana"
+xref: Reactome:REACT_87431 "Membrane Trafficking, Drosophila melanogaster"
+xref: Reactome:REACT_88307 "Membrane Trafficking, Mus musculus"
+xref: Reactome:REACT_91154 "Membrane Trafficking, Saccharomyces cerevisiae"
+xref: Reactome:REACT_93714 "Membrane Trafficking, Danio rerio"
+xref: Reactome:REACT_95586 "Membrane Trafficking, Gallus gallus"
+xref: Reactome:REACT_96516 "Membrane Trafficking, Canis familiaris"
+xref: Reactome:REACT_97881 "Membrane Trafficking, Rattus norvegicus"
+is_a: GO:0016043 ! cellular component organization
+created_by: janelomax
+creation_date: 2010-02-08T02:43:11Z
+
+[Term]
+id: GO:0070727
+name: cellular macromolecule localization
+namespace: biological_process
+def: "Any process in which a macromolecule is transported to, and/or maintained in, a specific location at the level of a cell. Localization at the cellular level encompasses movement within the cell, from within the cell to the cell surface, or from one location to another at the surface of a cell." [GOC:mah]
+synonym: "cellular macromolecule localisation" EXACT [GOC:mah]
+is_a: GO:0033036 ! macromolecule localization
+is_a: GO:0051641 ! cellular localization
+created_by: midori
+creation_date: 2009-06-16T04:08:29Z
+
+[Term]
+id: GO:0071702
+name: organic substance transport
+namespace: biological_process
+def: "The directed movement of organic substances into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter or pore. An organic substance is a molecular entity that contains carbon." [CHEBI:50860, GOC:mah]
+is_a: GO:0006810 ! transport
+created_by: midori
+creation_date: 2010-03-08T02:15:14Z
+
+[Term]
+id: GO:0071705
+name: nitrogen compound transport
+namespace: biological_process
+def: "The directed movement of nitrogen-containing compounds into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [CHEBI:51143, GOC:mah]
+is_a: GO:0006810 ! transport
+created_by: midori
+creation_date: 2010-03-08T03:56:28Z
+
+[Term]
+id: GO:0071840
+name: cellular component organization or biogenesis
+namespace: biological_process
+alt_id: GO:0071841
+def: "A process that results in the biosynthesis of constituent macromolecules, assembly, arrangement of constituent parts, or disassembly of a cellular component." [GOC:mah]
+subset: goslim_flybase_ribbon
+subset: goslim_metagenomics
+synonym: "cellular component organisation or biogenesis" EXACT [GOC:mah]
+synonym: "cellular component organisation or biogenesis at cellular level" EXACT [GOC:mah]
+synonym: "cellular component organization or biogenesis at cellular level" EXACT []
+is_a: GO:0008150 ! biological_process
+created_by: midori
+creation_date: 2010-09-10T01:39:16Z
+
+[Term]
+id: GO:0085030
+name: symbiont process benefiting host
+namespace: biological_process
+def: "A process carried out by symbiont gene products that enables a symbiotic interaction with a host organism, that is beneficial to the host organism." [GOC:pdt]
+synonym: "mutualism" RELATED []
+is_a: GO:0044403 ! symbiont process
+created_by: janelomax
+creation_date: 2010-07-27T01:25:21Z
+
+[Term]
+id: GO:0097159
+name: organic cyclic compound binding
+namespace: molecular_function
+def: "Interacting selectively and non-covalently with an organic cyclic compound, any molecular entity that contains carbon arranged in a cyclic molecular structure." [CHEBI:33832, GOC:sjw, PMID:7583672]
+is_a: GO:0005488 ! binding
+created_by: paola
+creation_date: 2011-09-23T02:31:01Z
+
+[Term]
+id: GO:0098657
+name: import into cell
+namespace: biological_process
+def: "The directed movement of some substance from outside of a cell into the cytoplasmic compartment. This may occur via transport across the plasma membrane or via endocytosis." [GOC:dos]
+synonym: "uptake" EXACT []
+is_a: GO:0006810 ! transport
+
+[Term]
+id: GO:0140272
+name: exogenous protein binding
+namespace: molecular_function
+def: "Interacting selectively and non-covalently with any protein or protein complex from a different species, for example a pathogen molecule binding to a host protein (a complex of two or more proteins that may include other nonprotein molecules)." [PMID:28861068]
+comment: Note that as GO captures normal processes, it may be that exogenous proteins interactions are normal for one of the participating species but not the other. Therefore reciprocal annotations should not be made without confirming that it is physiological relevant.
+is_a: GO:0005488 ! binding
+created_by: pg
+creation_date: 2018-10-01T10:03:21Z
+
+[Term]
+id: GO:1901363
+name: heterocyclic compound binding
+namespace: molecular_function
+def: "Interacting selectively and non-covalently with heterocyclic compound." [GOC:TermGenie]
+is_a: GO:0005488 ! binding
+created_by: bf
+creation_date: 2012-09-14T13:53:50Z
+
+[Typedef]
+id: has_part
+name: has_part
+namespace: external
+xref: BFO:0000051
+is_transitive: true
+
+[Typedef]
+id: part_of
+name: part of
+namespace: external
+xref: BFO:0000050
+is_transitive: true
+inverse_of: has_part ! has_part
+

@@ -1,268 +1,2851 @@
 format-version: 1.2
-data-version: phipo/releases/2018-08-08/phipo.owl
-ontology: http://www.purl.obolibrary.org/obo/phipo.owl
-owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000001>))\nDeclaration(Class(<http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000002>))\nDeclaration(Class(<http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000003>))\n############################\n#   Classes\n############################\n\n# Class: <http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000001> (disease formation phenotype)\n\nSubClassOf(<http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000001> owl:Thing)\n\n# Class: <http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000002> (pathogen phenotype)\n\nSubClassOf(<http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000002> owl:Thing)\n\n# Class: <http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000003> (host phenotype)\n\nSubClassOf(<http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000003> owl:Thing)\n\n\n)
+data-version: releases/2018-10-10
+ontology: phipo
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-07-09T13:43:00Z xsd:string
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/PHIPO_0000001>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PHIPO_0000002>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PHIPO_0000003>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/PHIPO_0000001> (pathogen host interaction phenotype)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PHIPO_0000001> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PHIPO_0000002> (pathogen phenotype)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PHIPO_0000002> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PHIPO_0000003> (host phenotype)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PHIPO_0000003> owl:Thing)\n\n\n)
 
 [Term]
 id: PHIPO:0000001
-name: disease formation phenotype
-namespace: disease_formation_phenotype
-def: "TO UPDATE_Any of the set of observable characteristics of an organism resulting from the interaction of its genotype with the environment including any other organisms" []
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+name: pathogen host interaction phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "Any of the set of observable disease formation characteristics arising from the interaction of a potentially pathogenic organism with a host organism." []
+comment: No logical definition.\n\nThis is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
-created_by: alaynecuzick
-creation_date: 2018-05-02T11:20:17Z
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-02T11:20:17Z xsd:string
 
 [Term]
 id: PHIPO:0000002
 name: pathogen phenotype
 namespace: pathogen_phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-02T11:20:59Z
+def: "Any of the set of observable characteristics of a pathogen organism resulting from the interaction of its genotype with the environment (including any other organisms)." []
+comment: No logical definition\n\nThis is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.\n\nnext to think about terms for reproduction sexual/asexual structures, growth
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-02T11:20:59Z xsd:string
 
 [Term]
 id: PHIPO:0000003
 name: host phenotype
 namespace: host_phenotype
-def: "testing" []
-created_by: alaynecuzick
-creation_date: 2018-05-02T11:21:13Z
+comment: No logical definition.\n\nThis is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.\n\nHost phenotype covers...\nhost allele only phenotye\nhost chemistry only?\nwhat about host defense response to pathogen? is this covered under disease formation?\nwhat else...?\nresponse to wounding?
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-02T11:21:13Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Any of the set of observable characteristics of a host organism resulting from the interaction of its genotype with the environment (including any other organisms)." xsd:string
 
 [Term]
 id: PHIPO:0000004
 name: normal pathogenicity
-namespace: disease_formation_phenotype
-synonym: "unaffected pathogenicity" EXACT []
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the pathogenicity is normal (i.e the same as wild-type)" []
+comment: Logical definition\nAC_pathogenicity and (has-relative-magnitude some normal (PATO:0000461))
+synonym: "unaltered pathogenicity (exact); unaffected pathogenicity (exact); unchanged pathogenicity (exact)" EXACT []
 is_a: PHIPO:0000006 ! pathogenicity phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-04T12:38:43Z
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T12:38:43Z xsd:string
 
 [Term]
 id: PHIPO:0000005
 name: abnormal pathogenicity
-namespace: disease_formation_phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the pathogenicity is abnormal (i.e different than wild-type)" []
+comment: Logical definition\nAC_pathogenicity and (has-relative-magnitude some abnormal (PATO:0000460))
 is_a: PHIPO:0000006 ! pathogenicity phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-04T12:39:00Z
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T12:39:00Z xsd:string
 
 [Term]
 id: PHIPO:0000006
 name: pathogenicity phenotype
-namespace: disease_formation_phenotype
-is_a: PHIPO:0000001 ! disease formation phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-04T12:39:55Z
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype that is relevant to pathogenicity. Pathogenicity is the ability of an organism, a pathogen, to produce an infectious disease in another organism" []
+comment: Logical definition\nAC_pathogenicity and (inheres_in some AC_organism)\nPathogenicity is a qualitative concept
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+synonym: "pathogenesis (related)" RELATED []
+is_a: PHIPO:0000001 ! pathogen host interaction phenotype
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T12:39:55Z xsd:string
 
 [Term]
 id: PHIPO:0000007
 name: normal pathogenic phenotype
-namespace: disease_formation_phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the pathogenicity is normal (i.e. the same as wild-type), and the wild-type exhibits pathogenicity" []
+comment: Logical definition\nAC_pathogenic and AC_pathogenicity and (has_relative_magnitude some normal (PATO:0000461))
 is_a: PHIPO:0000004 ! normal pathogenicity
-created_by: alaynecuzick
-creation_date: 2018-05-04T12:42:00Z
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T12:42:00Z xsd:string
 
 [Term]
 id: PHIPO:0000008
 name: normal non pathogenic phenotype
-namespace: disease_formation_phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the pathogenicity is normal (i.e. the same as wild-type) , and the wild-type exhibits no pathogenicity" []
+comment: Logical definition\nAC_non_pathogenic and AC_pathogenicity and (has_relative_magnitude some normal)
 is_a: PHIPO:0000004 ! normal pathogenicity
-created_by: alaynecuzick
-creation_date: 2018-05-04T12:42:16Z
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T12:42:16Z xsd:string
 
 [Term]
 id: PHIPO:0000009
 name: gain of pathogenicity
-namespace: disease_formation_phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where pathogenicity is observed in a mutant that is absent in the wild-type strain." []
+comment: Logical definition\nAC_gain_of and AC_pathogenicity
 synonym: "abnormal pathogenic phenotype" EXACT []
 is_a: PHIPO:0000005 ! abnormal pathogenicity
-created_by: alaynecuzick
-creation_date: 2018-05-04T12:45:12Z
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T12:45:12Z xsd:string
+property_value: hasExactSynonym "abnormal pathogenic phenotype" xsd:string
 
 [Term]
 id: PHIPO:0000010
 name: loss of pathogenicity
-namespace: disease_formation_phenotype
-synonym: "abnormal non pathogenic phenotype" EXACT []
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where pathogenicity observed in the wild-type strain is abolished." []
+comment: Logical definition\nAC_pathogenicity and (qualifier some arrested (PATO:0000297))
+synonym: "abnormal non pathogenic phenotype (exact); abolished pathogenicity (exact)" EXACT []
 is_a: PHIPO:0000005 ! abnormal pathogenicity
-created_by: alaynecuzick
-creation_date: 2018-05-04T12:45:31Z
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T12:45:31Z xsd:string
 
 [Term]
 id: PHIPO:0000011
 name: virulence phenotype
-namespace: disease_formation_phenotype
-is_a: PHIPO:0000001 ! disease formation phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-04T13:02:03Z
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype that is relevant to virulence. Virulence is the severity to which a pathogen (species or strain) is able to cause infectious disease in another organism." []
+comment: logical definition\nvirulence (PATO:0002146) and (inheres_in some AC_organism)\nVirulence is a quantitative concept
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0000001 ! pathogen host interaction phenotype
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T13:02:03Z xsd:string
 
 [Term]
 id: PHIPO:0000012
 name: normal virulence
-namespace: disease_formation_phenotype
-synonym: "unaffected virulence" EXACT []
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where virulence is normal (i.e. the same as wild-type)." []
+comment: Logical definition\nvirulence (PATO:0002146) and (has_relative_magnitude some normal (PATO:0000461))
+synonym: "unaffected virulence (exact)" EXACT []
 is_a: PHIPO:0000011 ! virulence phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-04T13:02:23Z
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T13:02:23Z xsd:string
 
 [Term]
 id: PHIPO:0000013
 name: abnormal virulence
-namespace: disease_formation_phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where virulence is abnormal (i.e. different than wild-type)." []
+comment: Logical definition\nvirulence (PATO:0002146) and (has_relative_magnitude some abnormal (PATO:0000460)
 is_a: PHIPO:0000011 ! virulence phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-04T13:02:39Z
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T13:02:39Z xsd:string
 
 [Term]
 id: PHIPO:0000014
 name: increased virulence
-namespace: disease_formation_phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where virulence is increased (compared to normal)." []
+comment: Logical definition\nvirulence (PATO:0002146) and (increased_in_magnitude_relative_to some normal (PATO:0000461))\nOR\nincreased virulence PATO:0002148
+synonym: "hypervirulence" EXACT []
 is_a: PHIPO:0000013 ! abnormal virulence
-created_by: alaynecuzick
-creation_date: 2018-05-04T13:07:31Z
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T13:07:31Z xsd:string
 
 [Term]
 id: PHIPO:0000015
 name: reduced virulence
-namespace: disease_formation_phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where virulence is decreased (i.e. fewer symptoms than normal)" []
+comment: Logical definition\nvirulence (PATO:0002146) and (decreased_in_magnitude_relative_to some normal (PATO:0000461))\nOR\nreduced virulence PATO:0002147
 synonym: "decreased virulence" EXACT []
 is_a: PHIPO:0000013 ! abnormal virulence
-created_by: alaynecuzick
-creation_date: 2018-05-04T13:08:10Z
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T13:08:10Z xsd:string
+property_value: hasExactSynonym "decreased virulence" xsd:string
 
 [Term]
 id: PHIPO:0000016
 name: normal pathogen phenotype
 namespace: pathogen_phenotype
+def: "A pathogen phenotype which is normal (i.e. the same as wild-type)." []
+comment: Logical definition\nAC_pathogen phenotype and (has_relative_magnitude some normal (PATO:0000461))
 is_a: PHIPO:0000002 ! pathogen phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-04T13:10:48Z
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T13:10:48Z xsd:string
 
 [Term]
 id: PHIPO:0000017
 name: abnormal pathogen phenotype
 namespace: pathogen_phenotype
+def: "A pathogen phenotype which is abnormal (i.e. different than wild-type)." []
+comment: Logical definition\nAC_pathogen phenotype and (has_relative_magnitude some abnormal (PATO:0000460))
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 is_a: PHIPO:0000002 ! pathogen phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-04T13:11:04Z
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T13:11:04Z xsd:string
 
 [Term]
 id: PHIPO:0000018
-name: sensitive to chemical
+name: normal sensitivity to chemical
 namespace: pathogen_phenotype
-is_a: PHIPO:0000016 ! normal pathogen phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-04T13:12:20Z
+def: "A pathogen phenotype which displays a normal sensitivity to a chemical (eg the same as wild type)." []
+comment: Logical definition\nAC_chemical and (sensitivity toward (PATO:0000085) some normal (PATO:0000461))\n\nwas 'sensitive to chemical' in PHI-base, ie normal sensitive response, same as wild-type
+is_a: PHIPO:0000036 ! normal chemical target phenotype
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T13:12:20Z xsd:string
 
 [Term]
 id: PHIPO:0000019
-name: lethal
+name: lethal pathogen phenotype
 namespace: pathogen_phenotype
-is_a: PHIPO:0000017 ! abnormal pathogen phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-04T13:12:47Z
+def: "A lethal pathogen phenotype resulting from altering a gene product that is essential for the life of the organism." []
+comment: Logical definition\nLethal (PATO:0000718) and (inheres_in some AC_organism)\n\nWill we also need lethal phenotype for Host phenotypes?
+is_a: PHIPO:0000002 ! pathogen phenotype
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T13:12:47Z xsd:string
 
 [Term]
 id: PHIPO:0000020
 name: abnormal chemical target phenotype
 namespace: pathogen_phenotype
-is_a: PHIPO:0000017 ! abnormal pathogen phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-04T13:13:42Z
+def: "A pathogen phenotype which displays an abnormal response to a chemical (eg different than wild type)." []
+comment: No logical definition\n\nWill we also need Chemistry phenotypes for Host phenotypes?
+is_a: PHIPO:0000159 ! pathogen chemical target phenotype
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T13:13:42Z xsd:string
 
 [Term]
 id: PHIPO:0000021
 name: increased sensitivity to chemical
 namespace: pathogen_phenotype
+def: "A pathogen phenotype which displays an increased sensitivity to a chemical (eg different than wild type)." []
+comment: Logical definition\nAC_chemical and (sensitivity to (PATO:0001046) some AC_increased)\n\nDo we also need 'decreased sensitivity to chemical'? No as this would be the same as 'increased resistance to chemical' (MU agrees)
 is_a: PHIPO:0000020 ! abnormal chemical target phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-04T13:15:05Z
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T13:15:05Z xsd:string
 
 [Term]
 id: PHIPO:0000022
-name: resistance to chemical
+name: increased resistance to chemical
 namespace: pathogen_phenotype
+def: "A pathogen phenotype which displays an increased resistance to a chemical (eg different than wild type)." []
+comment: Logical definition\nAC_chemical and (resistance to (PATO:0001046) some AC_increased)\n\nDo we also need 'decreased resistance to chemical'? No as this would be the same as 'increased sensitivity to chemical' (MU agrees)
 is_a: PHIPO:0000020 ! abnormal chemical target phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-04T13:16:06Z
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T13:16:06Z xsd:string
 
 [Term]
 id: PHIPO:0000023
 name: abnormal penetration assay phenotype
 namespace: pathogen_phenotype
-is_a: PHIPO:0000002 ! pathogen phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-04T13:16:54Z
+def: "A pathogen penetration assay phenotype (assessing the organism's ability to penetrate a given substance/membrane) which is abnormal (i.e. different than wild-type)." []
+is_a: PHIPO:0000160 ! pathogen penetration assay phenotype
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T13:16:54Z xsd:string
 
 [Term]
 id: PHIPO:0000024
 name: normal penetration assay phenotype
 namespace: pathogen_phenotype
-is_a: PHIPO:0000016 ! normal pathogen phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-04T13:17:08Z
+def: "A pathogen penetration assay phenotype (assessing the organism's ability to penetrate a given substance/membrane) which is normal (i.e. the same as wild-type)." []
+is_a: PHIPO:0000160 ! pathogen penetration assay phenotype
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T13:17:08Z xsd:string
 
 [Term]
 id: PHIPO:0000025
 name: normal mating phenotype prior to penetration
 namespace: pathogen_phenotype
-is_a: PHIPO:0000024 ! normal penetration assay phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-04T13:17:46Z
+comment: Is this a bit too specific?\nshould this be with sexual reproduction?\neg ustilago and rust fungus\nMU agrees REMOVE from penetration
+is_a: PHIPO:0000044 ! normal reproduction phenotype
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T13:17:46Z xsd:string
 
 [Term]
 id: PHIPO:0000026
 name: normal penetration
 namespace: pathogen_phenotype
+def: "A pathogen phenotype indicating that the pathogen is able to penetrate a given experimental substance/membrane in the same manner as the wild-type." []
+synonym: "no penetration defect" EXACT []
 is_a: PHIPO:0000024 ! normal penetration assay phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-04T13:18:03Z
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T13:18:03Z xsd:string
 
 [Term]
 id: PHIPO:0000027
 name: normal post penetration
 namespace: pathogen_phenotype
+def: "A pathogen phenotype indicating that the pathogen does not have a post-penetration defect when assessed for penetration ability on a given experimental substance/membrane and is able to continue growth after penetration in the same manner as the wild-type.\n\nWith MU: The pathogen does not have a post-penetration defect (pathogen growth or establishment of the host interfacial complex after penetration is the same as wild type)." []
 is_a: PHIPO:0000024 ! normal penetration assay phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-04T13:19:13Z
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T13:19:13Z xsd:string
 
 [Term]
 id: PHIPO:0000028
 name: normal pre penetration
 namespace: pathogen_phenotype
+def: "A pathogen phenotype indicating that the pathogen does not have a pre-penetration defect when assessed for penetration ability on a given experimental substance/membrane in the same manner as the wild-type.\n\nWith MU: The pathogen does not have a pre-penetration defect (development of a penetration structure is the same as wild type)." []
 is_a: PHIPO:0000024 ! normal penetration assay phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-04T13:19:44Z
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T13:19:44Z xsd:string
 
 [Term]
 id: PHIPO:0000029
 name: abnormal mating phenotype prior to penetration
 namespace: pathogen_phenotype
-is_a: PHIPO:0000023 ! abnormal penetration assay phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-04T13:22:14Z
+comment: Is this a bit too specific?\nshould this be with reproduction?
+is_a: PHIPO:0000043 ! abnormal reproduction phenotype
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T13:22:14Z xsd:string
 
 [Term]
 id: PHIPO:0000030
 name: abnormal penetration
 namespace: pathogen_phenotype
+def: "A pathogen phenotype indicating that the pathogen is not able to penetrate a given experimental substance/membrane in the same manner as the wild-type." []
+synonym: "penetration defect" EXACT []
 is_a: PHIPO:0000023 ! abnormal penetration assay phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-04T13:22:31Z
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T13:22:31Z xsd:string
 
 [Term]
 id: PHIPO:0000031
 name: abnormal post penetration
 namespace: pathogen_phenotype
+def: "A pathogen phenotype indicating that the pathogen does have a post-penetration defect when assessed for penetration ability on a given experimental substance/membrane and is unable to continue growth after penetration in the same manner as the wild-type.\n\nWith MU: The pathogen does have a post-penetration defect (pathogen growth or establishment of the host interfacial complex after penetration is not the same as wild type).\n\n(eg species neutral example BIC Magnaporthe/ Hpa haustoria)" []
 is_a: PHIPO:0000023 ! abnormal penetration assay phenotype
-created_by: alaynecuzick
-creation_date: 2018-05-04T13:22:52Z
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T13:22:52Z xsd:string
 
 [Term]
 id: PHIPO:0000032
 name: abnormal pre penetration
 namespace: pathogen_phenotype
+def: "A pathogen phenotype indicating that the pathogen does have a pre-penetration defect when assessed for penetration ability on a given experimental substance/membrane in the same manner as the wild-type.\n\n\nWith MU: The pathogen does have a pre-penetration defect (development of a penetration structure is the same as wild type)" []
 is_a: PHIPO:0000023 ! abnormal penetration assay phenotype
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-05-04T13:23:06Z xsd:string
+
+[Term]
+id: PHIPO:0000033
+name: normal host phenotype
+namespace: host_phenotype
+def: "A host phenotype which is normal (i.e. the same as wild-type)." []
+comment: Logical definition\nAC_host phenotype and (has_relative_magnitude some normal (PATO:0000461))
+is_a: PHIPO:0000003 ! host phenotype
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-07-04T13:41:02Z xsd:string
+
+[Term]
+id: PHIPO:0000034
+name: abnormal host phenotype
+namespace: host_phenotype
+def: "A host phenotype which is abnormal (i.e. different than wild-type)." []
+comment: Logical definition\nAC_host phenotype and (has_relative_magnitude some abnormal (PATO:0000460))
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0000003 ! host phenotype
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-07-04T13:41:14Z xsd:string
+
+[Term]
+id: PHIPO:0000035
+name: normal resistance to chemical
+namespace: pathogen_phenotype
+def: "A pathogen phenotype which displays a normal resistance to a chemical (eg the same as wild type)." []
+comment: Logical definition\nAC_chemical and (resistance to (PATO:0001046) some normal (PATO:0000461))\n\nNEW to PHI-base, ie normal resistance response, same as wild-type. Similar terms to 'normal pathogenic' and 'normal non pathogenic' phenotypes
+is_a: PHIPO:0000036 ! normal chemical target phenotype
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-07-09T13:41:47Z xsd:string
+
+[Term]
+id: PHIPO:0000036
+name: normal chemical target phenotype
+namespace: pathogen_phenotype
+def: "A pathogen phenotype which displays a normal response to a chemical (eg the same as wild type)." []
+comment: No logical definition\n\nWill we also need Chemistry phenotypes for Host phenotypes?
+is_a: PHIPO:0000159 ! pathogen chemical target phenotype
+property_value: created:by "alaynecuzick" xsd:string
+property_value: creation:date 2018-07-09T13:43:00Z xsd:string
+
+[Term]
+id: PHIPO:0000037
+name: lethal host phenotype
+namespace: host_phenotype
+def: "A lethal host phenotype resulting from altering a gene product that is essential for the life of the organism." []
+comment: Logical definition\nLethal (PATO:0000718) and (inheres_in some AC_organism)\n\nThis is the same as for 'lethal pathogen phenotype' is that ok?
+is_a: PHIPO:0000003 ! host phenotype
 created_by: alaynecuzick
-creation_date: 2018-05-04T13:23:06Z
+creation_date: 2018-07-10T11:46:51Z
+
+[Term]
+id: PHIPO:0000038
+name: mutualism phenotype
+namespace: pathogen_host_interaction_phenotype
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0000001 ! pathogen host interaction phenotype
+created_by: alaynecuzick
+creation_date: 2018-07-10T11:52:04Z
+
+[Term]
+id: PHIPO:0000039
+name: normal mutualism
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype in which the interaction is the same as the wild-type, no asymptomatic colonisation or disease formation symtoms are visible." []
+comment: Logical definition\nmutualism (GO:0085030) and (has_relative_magnitude some normal (PATO:0000461))
+is_a: PHIPO:0000038 ! mutualism phenotype
+created_by: alaynecuzick
+creation_date: 2018-07-10T11:52:33Z
+
+[Term]
+id: PHIPO:0000040
+name: abnormal mutualism shift towards disease formation
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype in which the balance of symbiotic mutualism has been disrupted compared to the normal interaction and the endosymbiont organism is able to show greater biomass within the host and/or the formation of visible disease formation symptoms compared to the normal interaction." []
+comment: Logical definition\nmutualism (GO:0085030) and (has_relative_magnitude some abnormal (PATO:0000460))\n\nneed to choose correct language for term name
+is_a: PHIPO:0000038 ! mutualism phenotype
+created_by: alaynecuzick
+creation_date: 2018-07-10T11:53:05Z
+
+[Term]
+id: PHIPO:0000041
+name: normal motility phenotype
+namespace: pathogen_phenotype
+comment: bacteria flagella\naphid flight\nnematode wiggle\nfungi non-motile (apart from spores)
+is_a: PHIPO:0000157 ! pathogen motility phenotype
+created_by: alaynecuzick
+creation_date: 2018-07-13T11:54:28Z
+
+[Term]
+id: PHIPO:0000042
+name: abnormal motility phenotype
+namespace: pathogen_phenotype
+is_a: PHIPO:0000157 ! pathogen motility phenotype
+created_by: alaynecuzick
+creation_date: 2018-07-13T11:54:54Z
+
+[Term]
+id: PHIPO:0000043
+name: abnormal reproduction phenotype
+namespace: pathogen_phenotype
+is_a: PHIPO:0000161 ! pathogen reproductive phenotype
+created_by: alaynecuzick
+creation_date: 2018-07-13T11:57:47Z
+
+[Term]
+id: PHIPO:0000044
+name: normal reproduction phenotype
+namespace: pathogen_phenotype
+comment: note: will need to add other types of reproduction, not just sporogenesis
+is_a: PHIPO:0000161 ! pathogen reproductive phenotype
+created_by: alaynecuzick
+creation_date: 2018-07-13T11:58:15Z
+
+[Term]
+id: PHIPO:0000045
+name: normal asexual reproduction
+namespace: pathogen_phenotype
+comment: note: endospores are dormant, tough non-reproductive structures -wikipedia
+is_a: PHIPO:0000044 ! normal reproduction phenotype
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:08:15Z
+
+[Term]
+id: PHIPO:0000046
+name: normal sexual reproduction
+namespace: pathogen_phenotype
+is_a: PHIPO:0000044 ! normal reproduction phenotype
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:09:04Z
+
+[Term]
+id: PHIPO:0000047
+name: abnormal asexual reproduction
+namespace: pathogen_phenotype
+is_a: PHIPO:0000043 ! abnormal reproduction phenotype
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:09:49Z
+
+[Term]
+id: PHIPO:0000048
+name: abnormal sexual reproduction
+namespace: pathogen_phenotype
+is_a: PHIPO:0000043 ! abnormal reproduction phenotype
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:10:14Z
+
+[Term]
+id: PHIPO:0000049
+name: increased quantity of sexual spores
+namespace: pathogen_phenotype
+is_a: PHIPO:0000073 ! abnormal quantity of sexual spores
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:16:49Z
+
+[Term]
+id: PHIPO:0000050
+name: decreased quantity of sexual spores
+namespace: pathogen_phenotype
+is_a: PHIPO:0000073 ! abnormal quantity of sexual spores
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:17:15Z
+
+[Term]
+id: PHIPO:0000051
+name: increased quantity of asexual spores
+namespace: pathogen_phenotype
+is_a: PHIPO:0000082 ! abnormal quantity of asexual spores
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:18:08Z
+
+[Term]
+id: PHIPO:0000052
+name: decreased quantity of asexual spores
+namespace: pathogen_phenotype
+is_a: PHIPO:0000082 ! abnormal quantity of asexual spores
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:18:34Z
+
+[Term]
+id: PHIPO:0000053
+name: delayed production of asexual spores
+namespace: pathogen_phenotype
+is_a: PHIPO:0000066 ! abnormal timing of asexual spore production
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:20:33Z
+
+[Term]
+id: PHIPO:0000054
+name: expedited production of asexual spores
+namespace: pathogen_phenotype
+is_a: PHIPO:0000066 ! abnormal timing of asexual spore production
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:22:31Z
+
+[Term]
+id: PHIPO:0000055
+name: delayed production of sexual spores
+namespace: pathogen_phenotype
+is_a: PHIPO:0000074 ! abnormal timing of sexual spore production
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:23:43Z
+
+[Term]
+id: PHIPO:0000056
+name: expedited production of sexual spores
+namespace: pathogen_phenotype
+is_a: PHIPO:0000074 ! abnormal timing of sexual spore production
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:24:07Z
+
+[Term]
+id: PHIPO:0000057
+name: normal quantity of sexual spores
+namespace: pathogen_phenotype
+is_a: PHIPO:0000079 ! normal sexual sporogenesis
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:25:33Z
+
+[Term]
+id: PHIPO:0000058
+name: normal speed in production of sexual spores
+namespace: pathogen_phenotype
+is_a: PHIPO:0000079 ! normal sexual sporogenesis
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:26:14Z
+
+[Term]
+id: PHIPO:0000059
+name: normal quantity of asexual spores
+namespace: pathogen_phenotype
+is_a: PHIPO:0000080 ! normal asexual sporogenesis
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:27:14Z
+
+[Term]
+id: PHIPO:0000060
+name: normal speed in production of asexual spores
+namespace: pathogen_phenotype
+is_a: PHIPO:0000080 ! normal asexual sporogenesis
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:27:45Z
+
+[Term]
+id: PHIPO:0000061
+name: asexual spores absent
+namespace: pathogen_phenotype
+is_a: PHIPO:0000078 ! abnormal asexual sporogenesis
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:28:57Z
+
+[Term]
+id: PHIPO:0000062
+name: sexual spores absent
+namespace: pathogen_phenotype
+is_a: PHIPO:0000130 ! abnormal sexual spore morphology
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:29:31Z
+
+[Term]
+id: PHIPO:0000063
+name: sexual spores present
+namespace: pathogen_phenotype
+is_a: PHIPO:0000079 ! normal sexual sporogenesis
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:29:58Z
+
+[Term]
+id: PHIPO:0000064
+name: asexual spores present
+namespace: pathogen_phenotype
+is_a: PHIPO:0000080 ! normal asexual sporogenesis
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:30:18Z
+
+[Term]
+id: PHIPO:0000065
+name: asexual spores increased in size
+namespace: pathogen_phenotype
+is_a: PHIPO:0000081 ! abnormal sexual spore size
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:32:36Z
+
+[Term]
+id: PHIPO:0000066
+name: abnormal timing of asexual spore production
+namespace: pathogen_phenotype
+is_a: PHIPO:0000078 ! abnormal asexual sporogenesis
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:33:03Z
+
+[Term]
+id: PHIPO:0000067
+name: asexual spores decreased in size
+namespace: pathogen_phenotype
+is_a: PHIPO:0000081 ! abnormal sexual spore size
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:36:00Z
+
+[Term]
+id: PHIPO:0000068
+name: sexual spores increased in size
+namespace: pathogen_phenotype
+is_a: PHIPO:0000071 ! abnormal sexual spore size
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:37:29Z
+
+[Term]
+id: PHIPO:0000069
+name: sexual spores decreased in size
+namespace: pathogen_phenotype
+is_a: PHIPO:0000071 ! abnormal sexual spore size
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:37:52Z
+
+[Term]
+id: PHIPO:0000070
+name: sexual spores altered in pigmentation
+namespace: pathogen_phenotype
+is_a: PHIPO:0000130 ! abnormal sexual spore morphology
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:38:19Z
+
+[Term]
+id: PHIPO:0000071
+name: abnormal sexual spore size
+namespace: pathogen_phenotype
+is_a: PHIPO:0000130 ! abnormal sexual spore morphology
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:39:04Z
+
+[Term]
+id: PHIPO:0000072
+name: abnormal sexual spore shape
+namespace: pathogen_phenotype
+is_a: PHIPO:0000130 ! abnormal sexual spore morphology
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:39:34Z
+
+[Term]
+id: PHIPO:0000073
+name: abnormal quantity of sexual spores
+namespace: pathogen_phenotype
+is_a: PHIPO:0000077 ! abnormal sexual sporogenesis
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:40:05Z
+
+[Term]
+id: PHIPO:0000074
+name: abnormal timing of sexual spore production
+namespace: pathogen_phenotype
+is_a: PHIPO:0000077 ! abnormal sexual sporogenesis
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:42:05Z
+
+[Term]
+id: PHIPO:0000075
+name: abnormal asexual spore shape
+namespace: pathogen_phenotype
+is_a: PHIPO:0000127 ! abnormal asexual spore morphology
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:43:06Z
+
+[Term]
+id: PHIPO:0000076
+name: asexual spores altered in pigmentation
+namespace: pathogen_phenotype
+is_a: PHIPO:0000127 ! abnormal asexual spore morphology
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:43:42Z
+
+[Term]
+id: PHIPO:0000077
+name: abnormal sexual sporogenesis
+namespace: pathogen_phenotype
+is_a: PHIPO:0000048 ! abnormal sexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:54:33Z
+
+[Term]
+id: PHIPO:0000078
+name: abnormal asexual sporogenesis
+namespace: pathogen_phenotype
+is_a: PHIPO:0000047 ! abnormal asexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:55:38Z
+
+[Term]
+id: PHIPO:0000079
+name: normal sexual sporogenesis
+namespace: pathogen_phenotype
+is_a: PHIPO:0000046 ! normal sexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:56:11Z
+
+[Term]
+id: PHIPO:0000080
+name: normal asexual sporogenesis
+namespace: pathogen_phenotype
+is_a: PHIPO:0000045 ! normal asexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-07-13T12:57:46Z
+
+[Term]
+id: PHIPO:0000081
+name: abnormal sexual spore size
+namespace: pathogen_phenotype
+is_a: PHIPO:0000127 ! abnormal asexual spore morphology
+created_by: alaynecuzick
+creation_date: 2018-07-13T13:08:40Z
+
+[Term]
+id: PHIPO:0000082
+name: abnormal quantity of asexual spores
+namespace: pathogen_phenotype
+is_a: PHIPO:0000078 ! abnormal asexual sporogenesis
+created_by: alaynecuzick
+creation_date: 2018-07-13T13:09:40Z
+
+[Term]
+id: PHIPO:0000083
+name: abnormal asexual spore motility
+namespace: pathogen_phenotype
+comment: zoospores motile asxual spore using flagellum for locomotion-wikipedia. \nAre there any motile sexual spores?
+is_a: PHIPO:0000047 ! abnormal asexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-07-13T13:17:24Z
+
+[Term]
+id: PHIPO:0000084
+name: increased asexual spore motility
+namespace: pathogen_phenotype
+is_a: PHIPO:0000083 ! abnormal asexual spore motility
+created_by: alaynecuzick
+creation_date: 2018-07-13T13:18:20Z
+
+[Term]
+id: PHIPO:0000085
+name: decreased asexual spore motility
+namespace: pathogen_phenotype
+is_a: PHIPO:0000083 ! abnormal asexual spore motility
+created_by: alaynecuzick
+creation_date: 2018-07-13T13:18:38Z
+
+[Term]
+id: PHIPO:0000086
+name: normal asexual spore motility
+namespace: pathogen_phenotype
+is_a: PHIPO:0000045 ! normal asexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-07-13T13:21:21Z
+
+[Term]
+id: PHIPO:0000087
+name: normal binary fission
+namespace: pathogen_phenotype
+is_a: PHIPO:0000045 ! normal asexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-07-13T13:25:48Z
+
+[Term]
+id: PHIPO:0000088
+name: normal budding
+namespace: pathogen_phenotype
+is_a: PHIPO:0000045 ! normal asexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-07-13T13:27:00Z
+
+[Term]
+id: PHIPO:0000089
+name: normal fragmentation
+namespace: pathogen_phenotype
+is_a: PHIPO:0000045 ! normal asexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-07-13T13:27:51Z
+
+[Term]
+id: PHIPO:0000090
+name: normal parthenogenesis
+namespace: pathogen_phenotype
+is_a: PHIPO:0000045 ! normal asexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-07-13T13:28:15Z
+
+[Term]
+id: PHIPO:0000091
+name: abnormal budding
+namespace: pathogen_phenotype
+is_a: PHIPO:0000047 ! abnormal asexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-07-13T13:30:12Z
+
+[Term]
+id: PHIPO:0000092
+name: abnormal binary fission
+namespace: pathogen_phenotype
+is_a: PHIPO:0000047 ! abnormal asexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-07-13T13:30:30Z
+
+[Term]
+id: PHIPO:0000093
+name: abnormal parthenogenesis
+namespace: pathogen_phenotype
+is_a: PHIPO:0000047 ! abnormal asexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-07-13T13:31:01Z
+
+[Term]
+id: PHIPO:0000094
+name: normal mitosis in asexual reproduction
+namespace: pathogen_phenotype
+is_a: PHIPO:0000045 ! normal asexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-07-13T13:38:56Z
+
+[Term]
+id: PHIPO:0000095
+name: abnormal mitosis in asexual reproduction
+namespace: pathogen_phenotype
+is_a: PHIPO:0000047 ! abnormal asexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-07-13T13:41:23Z
+
+[Term]
+id: PHIPO:0000096
+name: abnormal mitosis in sexual reproduction
+namespace: pathogen_phenotype
+is_a: PHIPO:0000048 ! abnormal sexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-07-13T13:42:09Z
+
+[Term]
+id: PHIPO:0000097
+name: abnormal meiosis in sexual reproduction
+namespace: pathogen_phenotype
+is_a: PHIPO:0000048 ! abnormal sexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-07-13T13:42:37Z
+
+[Term]
+id: PHIPO:0000098
+name: normal mitosis in sexual reproduction
+namespace: pathogen_phenotype
+is_a: PHIPO:0000046 ! normal sexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-07-13T13:43:09Z
+
+[Term]
+id: PHIPO:0000099
+name: normal meiosis in sexual reproduction
+namespace: pathogen_phenotype
+is_a: PHIPO:0000046 ! normal sexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-07-13T13:43:30Z
+
+[Term]
+id: PHIPO:0000100
+name: increased pathogen motility
+namespace: pathogen_phenotype
+is_a: PHIPO:0000042 ! abnormal motility phenotype
+created_by: alaynecuzick
+creation_date: 2018-07-17T10:24:59Z
+
+[Term]
+id: PHIPO:0000101
+name: decreased pathogen motility
+namespace: pathogen_phenotype
+is_a: PHIPO:0000042 ! abnormal motility phenotype
+created_by: alaynecuzick
+creation_date: 2018-07-17T10:25:07Z
+
+[Term]
+id: PHIPO:0000102
+name: loss of pathogen motility
+namespace: pathogen_phenotype
+is_a: PHIPO:0000042 ! abnormal motility phenotype
+created_by: alaynecuzick
+creation_date: 2018-07-17T10:25:22Z
+
+[Term]
+id: PHIPO:0000103
+name: gain of pathogen motility
+namespace: pathogen_phenotype
+is_a: PHIPO:0000042 ! abnormal motility phenotype
+created_by: alaynecuzick
+creation_date: 2018-07-17T10:25:33Z
+
+[Term]
+id: PHIPO:0000104
+name: increased size of penetration structure
+namespace: pathogen_phenotype
+is_a: PHIPO:0000124 ! abnormal penetration structure present
+created_by: alaynecuzick
+creation_date: 2018-07-17T10:58:56Z
+
+[Term]
+id: PHIPO:0000105
+name: decreased size of penetration structure
+namespace: pathogen_phenotype
+is_a: PHIPO:0000124 ! abnormal penetration structure present
+created_by: alaynecuzick
+creation_date: 2018-07-17T11:00:04Z
+
+[Term]
+id: PHIPO:0000106
+name: increased quantity of penetration structure
+namespace: pathogen_phenotype
+is_a: PHIPO:0000124 ! abnormal penetration structure present
+created_by: alaynecuzick
+creation_date: 2018-07-17T11:00:54Z
+
+[Term]
+id: PHIPO:0000107
+name: decreased quantity of penetration structure
+namespace: pathogen_phenotype
+is_a: PHIPO:0000124 ! abnormal penetration structure present
+created_by: alaynecuzick
+creation_date: 2018-07-17T11:05:16Z
+
+[Term]
+id: PHIPO:0000108
+name: delayed timing of penetration structure development
+namespace: pathogen_phenotype
+is_a: PHIPO:0000124 ! abnormal penetration structure present
+created_by: alaynecuzick
+creation_date: 2018-07-17T11:13:16Z
+
+[Term]
+id: PHIPO:0000109
+name: expedited timing of penetration structure development
+namespace: pathogen_phenotype
+is_a: PHIPO:0000124 ! abnormal penetration structure present
+created_by: alaynecuzick
+creation_date: 2018-07-17T11:13:53Z
+
+[Term]
+id: PHIPO:0000110
+name: absent penetration structure
+namespace: pathogen_phenotype
+is_a: PHIPO:0000032 ! abnormal pre penetration
+created_by: alaynecuzick
+creation_date: 2018-07-17T11:16:18Z
+
+[Term]
+id: PHIPO:0000111
+name: delayed pathogen penetration
+namespace: pathogen_phenotype
+is_a: PHIPO:0000113 ! altered functionality of penetration structure
+created_by: alaynecuzick
+creation_date: 2018-07-17T11:17:12Z
+
+[Term]
+id: PHIPO:0000112
+name: non-functional penetration structure present
+namespace: pathogen_phenotype
+is_a: PHIPO:0000030 ! abnormal penetration
+created_by: alaynecuzick
+creation_date: 2018-07-17T11:19:23Z
+
+[Term]
+id: PHIPO:0000113
+name: altered functionality of penetration structure
+namespace: pathogen_phenotype
+def: "Penetration structure formed but not functioning in the same manner as the wild type." []
+is_a: PHIPO:0000030 ! abnormal penetration
+created_by: alaynecuzick
+creation_date: 2018-07-17T11:19:35Z
+
+[Term]
+id: PHIPO:0000114
+name: increased pathogen penetration across the host barrier
+namespace: pathogen_phenotype
+is_a: PHIPO:0000113 ! altered functionality of penetration structure
+created_by: alaynecuzick
+creation_date: 2018-07-17T11:22:58Z
+
+[Term]
+id: PHIPO:0000115
+name: decreased pathogen penetration across the host barrier
+namespace: pathogen_phenotype
+is_a: PHIPO:0000113 ! altered functionality of penetration structure
+created_by: alaynecuzick
+creation_date: 2018-07-17T11:23:12Z
+
+[Term]
+id: PHIPO:0000116
+name: absent pathogen growth post penetration
+namespace: pathogen_phenotype
+is_a: PHIPO:0000031 ! abnormal post penetration
+created_by: alaynecuzick
+creation_date: 2018-07-17T11:30:36Z
+
+[Term]
+id: PHIPO:0000117
+name: increased pathogen growth post penetration
+namespace: pathogen_phenotype
+is_a: PHIPO:0000125 ! abnormal pathogen growth post penetration present
+created_by: alaynecuzick
+creation_date: 2018-07-17T11:30:56Z
+
+[Term]
+id: PHIPO:0000118
+name: decreased pathogen growth post penetration
+namespace: pathogen_phenotype
+is_a: PHIPO:0000125 ! abnormal pathogen growth post penetration present
+created_by: alaynecuzick
+creation_date: 2018-07-17T11:31:06Z
+
+[Term]
+id: PHIPO:0000119
+name: delayed timing of pathogen growth post penetration
+namespace: pathogen_phenotype
+is_a: PHIPO:0000125 ! abnormal pathogen growth post penetration present
+created_by: alaynecuzick
+creation_date: 2018-07-17T11:31:15Z
+
+[Term]
+id: PHIPO:0000120
+name: expedited timing of pathogen growth post penetration
+namespace: pathogen_phenotype
+is_a: PHIPO:0000125 ! abnormal pathogen growth post penetration present
+created_by: alaynecuzick
+creation_date: 2018-07-17T11:31:21Z
+
+[Term]
+id: PHIPO:0000121
+name: abnormal asexual reproduction structure
+namespace: pathogen_phenotype
+comment: sporangiphores\nnematadoes egg to be fertilised\naphids, live young
+is_a: PHIPO:0000043 ! abnormal reproduction phenotype
+created_by: alaynecuzick
+creation_date: 2018-07-17T11:44:01Z
+
+[Term]
+id: PHIPO:0000122
+name: abnormal asexual resting spore
+namespace: pathogen_phenotype
+comment: eg bacterial endospore\nfungal chlamydospore\nnematode cysts\n\nincreased\ndecreased\ndelayed\nexpedited\nabsent
+is_a: PHIPO:0000121 ! abnormal asexual reproduction structure
+created_by: alaynecuzick
+creation_date: 2018-07-17T11:46:50Z
+
+[Term]
+id: PHIPO:0000123
+name: normal organism growth
+namespace: pathogen_phenotype
+comment: ideas for other terms with MU\n\ncolony formation\nmaturation in aphids/nematodes\ncell size\npigment (melanin aging)\nchange of shape of growth structure/ colony shape/ cell shape\ncell morphology\nasexual and sexual spore morphology\nspore germination\nembryo growth defect
+is_a: PHIPO:0000162 ! pathogen organism growth phenotype
+created_by: alaynecuzick
+creation_date: 2018-07-17T11:49:54Z
+
+[Term]
+id: PHIPO:0000124
+name: abnormal penetration structure present
+namespace: pathogen_phenotype
+is_a: PHIPO:0000032 ! abnormal pre penetration
+created_by: alaynecuzick
+creation_date: 2018-07-17T12:23:31Z
+
+[Term]
+id: PHIPO:0000125
+name: abnormal pathogen growth post penetration present
+namespace: pathogen_phenotype
+is_a: PHIPO:0000031 ! abnormal post penetration
+created_by: alaynecuzick
+creation_date: 2018-07-17T12:28:43Z
+
+[Term]
+id: PHIPO:0000126
+name: expedited pathogen penetration
+namespace: pathogen_phenotype
+is_a: PHIPO:0000113 ! altered functionality of penetration structure
+created_by: alaynecuzick
+creation_date: 2018-07-17T12:39:33Z
+
+[Term]
+id: PHIPO:0000127
+name: abnormal asexual spore morphology
+namespace: pathogen_phenotype
+is_a: PHIPO:0000043 ! abnormal reproduction phenotype
+created_by: alaynecuzick
+creation_date: 2018-07-17T13:01:41Z
+
+[Term]
+id: PHIPO:0000128
+name: normal asexual spore morphology
+namespace: pathogen_phenotype
+is_a: PHIPO:0000045 ! normal asexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-07-17T13:04:52Z
+
+[Term]
+id: PHIPO:0000129
+name: normal asexual reproduction structure
+namespace: pathogen_phenotype
+is_a: PHIPO:0000045 ! normal asexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-07-17T13:06:10Z
+
+[Term]
+id: PHIPO:0000130
+name: abnormal sexual spore morphology
+namespace: pathogen_phenotype
+is_a: PHIPO:0000048 ! abnormal sexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-07-17T13:09:36Z
+
+[Term]
+id: PHIPO:0000131
+name: pathogen host protein protein interaction phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype that protein affects the binding of one protein to another. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0000702
+is_a: PHIPO:0000164 ! pathogen host interaction binding phenotype
+created_by: alaynecuzick
+creation_date: 2018-09-13T13:31:00Z
+
+[Term]
+id: PHIPO:0000132
+name: pathogen protein protein interaction phenotype
+namespace: pathogen_phenotype
+def: "A pathogen phenotype that protein affects the binding of one protein to another. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0000702
+is_a: PHIPO:0000158 ! pathogen binding phenotype
+created_by: alaynecuzick
+creation_date: 2018-09-13T13:31:27Z
+
+[Term]
+id: PHIPO:0000133
+name: abnormal pathogen protein protein interaction
+namespace: pathogen_phenotype
+def: "A pathogen (molecular function??) phenotype in which the binding of one protein to another is abnormal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0000704
+is_a: PHIPO:0000132 ! pathogen protein protein interaction phenotype
+created_by: alaynecuzick
+creation_date: 2018-09-13T13:32:39Z
+
+[Term]
+id: PHIPO:0000134
+name: normal pathogen protein protein interaction
+namespace: pathogen_phenotype
+def: "A pathogen (molecular function??) phenotype in which the binding of one protein to another is normal (i.e. indistinguishable from wild type). The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0000703
+is_a: PHIPO:0000132 ! pathogen protein protein interaction phenotype
+created_by: alaynecuzick
+creation_date: 2018-09-13T13:33:02Z
+
+[Term]
+id: PHIPO:0000135
+name: abolished pathogen protein protein interaction
+namespace: pathogen_phenotype
+def: "A pathogen (molecular function??) phenotype in which the binding of one protein to another does not occur. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0000705
+is_a: PHIPO:0000133 ! abnormal pathogen protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-09-13T13:33:52Z
+
+[Term]
+id: PHIPO:0000136
+name: decreased pathogen protein protein interaction
+namespace: pathogen_phenotype
+def: "A pathogen (molecular function??) phenotype in which the binding of one protein to another occurs to a lower extent than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0001645
+is_a: PHIPO:0000133 ! abnormal pathogen protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-09-13T13:34:13Z
+
+[Term]
+id: PHIPO:0000137
+name: increased pathogen protein protein interaction
+namespace: pathogen_phenotype
+def: "A pathogen (molecular function??) phenotype in which the binding of one protein to another occurs to a greater extent than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0001571
+is_a: PHIPO:0000133 ! abnormal pathogen protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-09-13T13:34:28Z
+
+[Term]
+id: PHIPO:0000138
+name: altered pathogen protein binding specificity
+namespace: pathogen_phenotype
+def: "A pathogen (molecular function??) phenotype in which a mutation causes a gene product to bind to one or more proteins with different specificity from normal. For example, a protein may bind to a protein in a mutant that it does not bind in wild type. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0005119
+is_a: PHIPO:0000133 ! abnormal pathogen protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-09-13T13:35:56Z
+
+[Term]
+id: PHIPO:0000139
+name: abnormal pathogen protein complex binding
+namespace: pathogen_phenotype
+def: "A pathogen (molecular function??) phenotype in which the binding of one protein to a protein complex is abnormal. The protein whose binding to the protein complex is affected may be encoded by the mutated gene, or may be encoded by a different gene." []
+xref: FYPO:0003591
+is_a: PHIPO:0000133 ! abnormal pathogen protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-09-13T13:36:40Z
+
+[Term]
+id: PHIPO:0000140
+name: decreased duration of pathogen protein protein interaction
+namespace: pathogen_phenotype
+def: "A pathogen (molecular function??) phenotype in which the binding of one protein to another occurs for a shorter time than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0005785
+is_a: PHIPO:0000133 ! abnormal pathogen protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-09-13T13:37:50Z
+
+[Term]
+id: PHIPO:0000141
+name: decreased extent and duration of pathogen protein protein interaction
+namespace: pathogen_phenotype
+def: "A pathogen (molecular function??) phenotype in which the binding of one protein to another occurs to a lower extent, and for a shorter time, than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0005784
+is_a: PHIPO:0000133 ! abnormal pathogen protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-09-13T13:38:26Z
+
+[Term]
+id: PHIPO:0000142
+name: pathogen RNA binding phenotype
+namespace: pathogen_phenotype
+def: "A pathogen phenotype that affects RNA binding. The relevant gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0002131
+is_a: PHIPO:0000158 ! pathogen binding phenotype
+created_by: alaynecuzick
+creation_date: 2018-09-13T13:44:08Z
+
+[Term]
+id: PHIPO:0000143
+name: pathogen DNA binding phenotype
+namespace: pathogen_phenotype
+def: "A pathogen phenotype that affects DNA binding. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.\n\nLogical definition\nphenotype (this would need to be PHIPO pathogen phenotype/host phenotype or disease formation phenotype) and (inheres_in some DNA binding (GO:0003677)
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+xref: FYPO:0000653
+is_a: PHIPO:0000158 ! pathogen binding phenotype
+created_by: alaynecuzick
+creation_date: 2018-09-13T13:44:19Z
+
+[Term]
+id: PHIPO:0000144
+name: normal pathogen protein complex binding
+namespace: pathogen_phenotype
+def: "A pathogen (molecular function??) phenotype in which the binding of one protein to a protein complex is normal (i.e. indistinguishable from wild type). The protein whose binding to the protein complex is assayed may be encoded by the mutated gene, or may be encoded by a different gene." []
+xref: FYPO:0005232
+is_a: PHIPO:0000134 ! normal pathogen protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-09-24T13:14:19Z
+
+[Term]
+id: PHIPO:0000145
+name: abnormal pathogen DNA binding
+namespace: pathogen_phenotype
+def: "A pathogen (molecular function??) phenotype in which occurrence of DNA binding by a gene product is abnormal, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0000656
+is_a: PHIPO:0000143 ! pathogen DNA binding phenotype
+created_by: alaynecuzick
+creation_date: 2018-09-25T13:33:07Z
+
+[Term]
+id: PHIPO:0000146
+name: normal pathogen DNA binding
+namespace: pathogen_phenotype
+def: "A pathogen (molecular function??) phenotype in which occurrence of DNA binding by a gene product is normal (i.e. indistinguishable from wild type). The relevant gene product may be encoded by the mutated gene, or by a different gene." []
+comment: Logical defintion\nquality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (qualifier (??) some normal PATO:0000461)
+xref: FYPO:0000655
+is_a: PHIPO:0000143 ! pathogen DNA binding phenotype
+created_by: alaynecuzick
+creation_date: 2018-09-25T13:33:18Z
+
+[Term]
+id: PHIPO:0000147
+name: abolished pathogen DNA binding
+namespace: pathogen_phenotype
+def: "A pathogen (molecular function??) phenotype in which DNA binding by a gene product does not occur, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0000659
+is_a: PHIPO:0000145 ! abnormal pathogen DNA binding
+created_by: alaynecuzick
+creation_date: 2018-09-25T13:34:30Z
+
+[Term]
+id: PHIPO:0000148
+name: altered pathogen DNA binding specificity
+namespace: pathogen_phenotype
+def: "A pathogen (molecular function??) phenotype in which a gene product that normally binds to a specific DNA sequence instead binds to a different sequence when a gene is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0003735
+is_a: PHIPO:0000145 ! abnormal pathogen DNA binding
+created_by: alaynecuzick
+creation_date: 2018-09-25T13:34:56Z
+
+[Term]
+id: PHIPO:0000149
+name: decreased pathogen DNA binding
+namespace: pathogen_phenotype
+def: "A pathogen (molecular function??) phenotype in which occurrence of DNA binding by a gene product is decreased, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0000658
+is_a: PHIPO:0000145 ! abnormal pathogen DNA binding
+created_by: alaynecuzick
+creation_date: 2018-09-25T13:35:16Z
+
+[Term]
+id: PHIPO:0000150
+name: increased pathogen DNA binding
+namespace: pathogen_phenotype
+def: "A pathogen (molecular function??) phenotype in which occurrence of DNA binding by a gene product is increased, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0000657
+is_a: PHIPO:0000145 ! abnormal pathogen DNA binding
+created_by: alaynecuzick
+creation_date: 2018-09-25T13:35:28Z
+
+[Term]
+id: PHIPO:0000151
+name: abnormal pathogen multiple protein binding to DNA
+namespace: pathogen_phenotype
+def: "A pathogen (molecular function??) phenotype in which the binding of two or more proteins to DNA is abnormal. The proteins may bind simultaneously or sequentially, but both or all would normally be present together on DNA at some time. One affected gene product may be encoded by the mutated gene, or all may be encoded by different genes." []
+xref: FYPO:0006555
+is_a: PHIPO:0000145 ! abnormal pathogen DNA binding
+created_by: alaynecuzick
+creation_date: 2018-09-25T13:36:17Z
+
+[Term]
+id: PHIPO:0000152
+name: abnormal pathogen RNA binding
+namespace: pathogen_phenotype
+def: "A pathogen (molecular function??) phenotype in which occurrence of RNA binding by a gene product is abnormal, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0002132
+is_a: PHIPO:0000142 ! pathogen RNA binding phenotype
+creation_date: 2018-09-25T13:37:19Z
+
+[Term]
+id: PHIPO:0000153
+name: normal pathogen RNA binding
+namespace: pathogen_phenotype
+def: "A pathogen (molecular function??) phenotype in which occurrence of RNA binding by a gene product is normal (i.e. indistinguishable from wild type). The relevant gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0002357
+is_a: PHIPO:0000142 ! pathogen RNA binding phenotype
+created_by: alaynecuzick
+creation_date: 2018-09-25T13:37:37Z
+
+[Term]
+id: PHIPO:0000154
+name: abolished pathogen RNA binding
+namespace: pathogen_phenotype
+def: "A pathogen (molecular function??) phenotype in which RNA binding by a gene product does not occur, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0002133
+is_a: PHIPO:0000152 ! abnormal pathogen RNA binding
+created_by: alaynecuzick
+creation_date: 2018-09-25T13:37:57Z
+
+[Term]
+id: PHIPO:0000155
+name: decreased pathogen RNA binding
+namespace: pathogen_phenotype
+def: "A pathogen (molecular function??) phenotype in which occurrence of RNA binding by a gene product is decreased, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0002134
+is_a: PHIPO:0000152 ! abnormal pathogen RNA binding
+created_by: alaynecuzick
+creation_date: 2018-09-25T13:38:20Z
+
+[Term]
+id: PHIPO:0000156
+name: increased pathogen RNA binding
+namespace: pathogen_phenotype
+def: "A pathogen (molecular function??) phenotype in which occurrence of RNA binding by a gene product is increased, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0002135
+is_a: PHIPO:0000152 ! abnormal pathogen RNA binding
+created_by: alaynecuzick
+creation_date: 2018-09-25T13:38:31Z
+
+[Term]
+id: PHIPO:0000157
+name: pathogen motility phenotype
+namespace: pathogen_phenotype
+is_a: PHIPO:0000002 ! pathogen phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T12:11:36Z
+
+[Term]
+id: PHIPO:0000158
+name: pathogen binding phenotype
+namespace: pathogen_phenotype
+def: "A pathogen phenotype that affects the binding of a gene product to another substance. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0001092
+is_a: PHIPO:0000002 ! pathogen phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T12:12:12Z
+
+[Term]
+id: PHIPO:0000159
+name: pathogen chemical target phenotype
+namespace: pathogen_phenotype
+is_a: PHIPO:0000002 ! pathogen phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T12:12:52Z
+
+[Term]
+id: PHIPO:0000160
+name: pathogen penetration assay phenotype
+namespace: pathogen_phenotype
+is_a: PHIPO:0000002 ! pathogen phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T12:13:47Z
+
+[Term]
+id: PHIPO:0000161
+name: pathogen reproductive phenotype
+namespace: pathogen_phenotype
+is_a: PHIPO:0000002 ! pathogen phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T12:14:40Z
+
+[Term]
+id: PHIPO:0000162
+name: pathogen organism growth phenotype
+namespace: pathogen_phenotype
+is_a: PHIPO:0000002 ! pathogen phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T12:15:24Z
+
+[Term]
+id: PHIPO:0000163
+name: abnormal organism growth phenotype
+namespace: pathogen_phenotype
+is_a: PHIPO:0000162 ! pathogen organism growth phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T12:18:47Z
+
+[Term]
+id: PHIPO:0000164
+name: pathogen host interaction binding phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype that affects the binding of a gene product to another substance. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0001092
+is_a: PHIPO:0000001 ! pathogen host interaction phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T12:21:51Z
+
+[Term]
+id: PHIPO:0000165
+name: host binding phenotype
+namespace: host_phenotype
+def: "A host phenotype that affects the binding of a gene product to another substance. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0001092
+is_a: PHIPO:0000003 ! host phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T12:22:45Z
+
+[Term]
+id: PHIPO:0000166
+name: host RNA binding phenotype
+namespace: host_phenotype
+def: "A host phenotype that affects RNA binding. The relevant gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0002131
+is_a: PHIPO:0000165 ! host binding phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T12:46:24Z
+
+[Term]
+id: PHIPO:0000167
+name: pathogen host interaction RNA binding phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype that affects RNA binding. The relevant gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0002131
+is_a: PHIPO:0000164 ! pathogen host interaction binding phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T12:54:51Z
+
+[Term]
+id: PHIPO:0000168
+name: abnormal pathogen host interaction RNA binding
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of RNA binding by a gene product is abnormal, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0002132
+is_a: PHIPO:0000167 ! pathogen host interaction RNA binding phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T12:56:01Z
+
+[Term]
+id: PHIPO:0000169
+name: abnormal host RNA binding
+namespace: host_phenotype
+def: "A host (molecular function??) phenotype in which occurrence of RNA binding by a gene product is abnormal, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0002132
+is_a: PHIPO:0000166 ! host RNA binding phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T12:56:11Z
+
+[Term]
+id: PHIPO:0000170
+name: normal host RNA binding
+namespace: host_phenotype
+def: "A host (molecular function??) phenotype in which occurrence of RNA binding by a gene product is normal (i.e. indistinguishable from wild type). The relevant gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0002357
+is_a: PHIPO:0000166 ! host RNA binding phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T12:57:11Z
+
+[Term]
+id: PHIPO:0000171
+name: normal pathogen host interaction RNA binding
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of RNA binding by a gene product is normal (i.e. indistinguishable from wild type). The relevant gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0002357
+is_a: PHIPO:0000167 ! pathogen host interaction RNA binding phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T12:57:15Z
+
+[Term]
+id: PHIPO:0000172
+name: abolished pathogen host interaction RNA binding
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (molecular function??) phenotype in which RNA binding by a gene product does not occur, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0002133
+is_a: PHIPO:0000168 ! abnormal pathogen host interaction RNA binding
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:04:43Z
+
+[Term]
+id: PHIPO:0000173
+name: abolished host RNA binding
+namespace: host_phenotype
+def: "A host (molecular function??) phenotype in which RNA binding by a gene product does not occur, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0002133
+is_a: PHIPO:0000169 ! abnormal host RNA binding
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:04:47Z
+
+[Term]
+id: PHIPO:0000174
+name: decreased pathogen host interaction RNA binding
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of RNA binding by a gene product is decreased, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0002134
+is_a: PHIPO:0000168 ! abnormal pathogen host interaction RNA binding
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:05:26Z
+
+[Term]
+id: PHIPO:0000175
+name: decreased host RNA binding
+namespace: host_phenotype
+def: "A host (molecular function??) phenotype in which occurrence of RNA binding by a gene product is decreased, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0002134
+is_a: PHIPO:0000169 ! abnormal host RNA binding
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:05:29Z
+
+[Term]
+id: PHIPO:0000176
+name: increased pathogen host interaction RNA binding
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of RNA binding by a gene product is increased, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0002135
+is_a: PHIPO:0000168 ! abnormal pathogen host interaction RNA binding
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:05:50Z
+
+[Term]
+id: PHIPO:0000177
+name: increased host RNA binding
+namespace: host_phenotype
+def: "A host (molecular function??) phenotype in which occurrence of RNA binding by a gene product is increased, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0002135
+is_a: PHIPO:0000169 ! abnormal host RNA binding
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:05:53Z
+
+[Term]
+id: PHIPO:0000178
+name: pathogen host interaction DNA binding phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype that affects DNA binding. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.\n\nLogical definition\nphenotype (this would need to be PHIPO pathogen phenotype/host phenotype or disease formation phenotype) and (inheres_in some DNA binding (GO:0003677)
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+xref: FYPO:0000653
+is_a: PHIPO:0000164 ! pathogen host interaction binding phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:09:13Z
+
+[Term]
+id: PHIPO:0000179
+name: host DNA binding phenotype
+namespace: host_phenotype
+def: "A phenotype that affects DNA binding. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.\n\nLogical definition\nphenotype (this would need to be PHIPO pathogen phenotype/host phenotype or disease formation phenotype) and (inheres_in some DNA binding (GO:0003677)
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+xref: FYPO:0000653
+is_a: PHIPO:0000165 ! host binding phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:09:16Z
+
+[Term]
+id: PHIPO:0000180
+name: abnormal pathogen host interaction DNA binding
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of DNA binding by a gene product is abnormal, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0000656
+is_a: PHIPO:0000178 ! pathogen host interaction DNA binding phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:09:23Z
+
+[Term]
+id: PHIPO:0000181
+name: abnormal host DNA binding
+namespace: host_phenotype
+def: "A host (molecular function??) phenotype in which occurrence of DNA binding by a gene product is abnormal, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0000656
+is_a: PHIPO:0000179 ! host DNA binding phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:09:27Z
+
+[Term]
+id: PHIPO:0000182
+name: normal host DNA binding
+namespace: host_phenotype
+def: "A host (molecular function??) phenotype in which occurrence of DNA binding by a gene product is normal (i.e. indistinguishable from wild type). The relevant gene product may be encoded by the mutated gene, or by a different gene." []
+comment: Logical defintion\nquality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (qualifier (??) some normal PATO:0000461)
+xref: FYPO:0000655
+is_a: PHIPO:0000179 ! host DNA binding phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:09:35Z
+
+[Term]
+id: PHIPO:0000183
+name: normal pathogen host interaction DNA binding
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of DNA binding by a gene product is normal (i.e. indistinguishable from wild type). The relevant gene product may be encoded by the mutated gene, or by a different gene." []
+comment: Logical defintion\nquality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (qualifier (??) some normal PATO:0000461)
+xref: FYPO:0000655
+is_a: PHIPO:0000178 ! pathogen host interaction DNA binding phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:09:42Z
+
+[Term]
+id: PHIPO:0000184
+name: abnormal host multiple protein binding to DNA
+namespace: host_phenotype
+def: "A host (molecular function??) phenotype in which the binding of two or more proteins to DNA is abnormal. The proteins may bind simultaneously or sequentially, but both or all would normally be present together on DNA at some time. One affected gene product may be encoded by the mutated gene, or all may be encoded by different genes." []
+xref: FYPO:0006555
+is_a: PHIPO:0000181 ! abnormal host DNA binding
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:12:32Z
+
+[Term]
+id: PHIPO:0000185
+name: abnormal pathogen host interaction multiple protein binding to DNA
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (molecular function??) phenotype in which the binding of two or more proteins to DNA is abnormal. The proteins may bind simultaneously or sequentially, but both or all would normally be present together on DNA at some time. One affected gene product may be encoded by the mutated gene, or all may be encoded by different genes." []
+xref: FYPO:0006555
+is_a: PHIPO:0000180 ! abnormal pathogen host interaction DNA binding
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:12:43Z
+
+[Term]
+id: PHIPO:0000186
+name: abolished host DNA binding
+namespace: host_phenotype
+def: "A host (molecular function??) phenotype in which DNA binding by a gene product does not occur, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0000659
+is_a: PHIPO:0000181 ! abnormal host DNA binding
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:12:57Z
+
+[Term]
+id: PHIPO:0000187
+name: abolished pathogen host interaction DNA binding
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (molecular function??) phenotype in which DNA binding by a gene product does not occur, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0000659
+is_a: PHIPO:0000180 ! abnormal pathogen host interaction DNA binding
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:13:16Z
+
+[Term]
+id: PHIPO:0000188
+name: altered host DNA binding specificity
+namespace: host_phenotype
+def: "A host (molecular function??) phenotype in which a gene product that normally binds to a specific DNA sequence instead binds to a different sequence when a gene is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0003735
+is_a: PHIPO:0000181 ! abnormal host DNA binding
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:13:27Z
+
+[Term]
+id: PHIPO:0000189
+name: altered pathogen host interaction DNA binding specificity
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (molecular function??) phenotype in which a gene product that normally binds to a specific DNA sequence instead binds to a different sequence when a gene is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0003735
+is_a: PHIPO:0000180 ! abnormal pathogen host interaction DNA binding
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:13:36Z
+
+[Term]
+id: PHIPO:0000190
+name: decreased host DNA binding
+namespace: host_phenotype
+def: "A host (molecular function??) phenotype in which occurrence of DNA binding by a gene product is decreased, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0000658
+is_a: PHIPO:0000181 ! abnormal host DNA binding
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:14:10Z
+
+[Term]
+id: PHIPO:0000191
+name: decreased pathogen host interaction DNA binding
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of DNA binding by a gene product is decreased, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0000658
+is_a: PHIPO:0000180 ! abnormal pathogen host interaction DNA binding
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:14:20Z
+
+[Term]
+id: PHIPO:0000192
+name: increased host DNA binding
+namespace: host_phenotype
+def: "A host (molecular function??) phenotype in which occurrence of DNA binding by a gene product is increased, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0000657
+is_a: PHIPO:0000181 ! abnormal host DNA binding
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:14:29Z
+
+[Term]
+id: PHIPO:0000193
+name: increased pathogen host interaction DNA binding
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of DNA binding by a gene product is increased, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0000657
+is_a: PHIPO:0000180 ! abnormal pathogen host interaction DNA binding
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:14:39Z
+
+[Term]
+id: PHIPO:0000195
+name: host protein protein interaction phenotype
+namespace: host_phenotype
+def: "A host phenotype that protein affects the binding of one protein to another. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0000702
+is_a: PHIPO:0000165 ! host binding phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:26:34Z
+
+[Term]
+id: PHIPO:0000196
+name: abnormal host protein protein interaction
+namespace: host_phenotype
+def: "A host (molecular function??) phenotype in which the binding of one protein to another is abnormal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0000704
+is_a: PHIPO:0000195 ! host protein protein interaction phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:27:25Z
+
+[Term]
+id: PHIPO:0000197
+name: abnormal pathogen host protein protein interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (molecular function??) phenotype in which the binding of one protein to another is abnormal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0000704
+is_a: PHIPO:0000131 ! pathogen host protein protein interaction phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:27:34Z
+
+[Term]
+id: PHIPO:0000198
+name: normal host protein protein interaction
+namespace: host_phenotype
+def: "A host (molecular function??) phenotype in which the binding of one protein to another is normal (i.e. indistinguishable from wild type). The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0000703
+is_a: PHIPO:0000195 ! host protein protein interaction phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:27:49Z
+
+[Term]
+id: PHIPO:0000199
+name: normal pathogen host protein protein interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (molecular function??) phenotype in which the binding of one protein to another is normal (i.e. indistinguishable from wild type). The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0000703
+is_a: PHIPO:0000131 ! pathogen host protein protein interaction phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:27:56Z
+
+[Term]
+id: PHIPO:0000200
+name: normal host protein complex binding
+namespace: host_phenotype
+def: "A host (molecular function??) phenotype in which the binding of one protein to a protein complex is normal (i.e. indistinguishable from wild type). The protein whose binding to the protein complex is assayed may be encoded by the mutated gene, or may be encoded by a different gene." []
+xref: FYPO:0005232
+is_a: PHIPO:0000198 ! normal host protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:28:13Z
+
+[Term]
+id: PHIPO:0000201
+name: normal pathogen host protein complex binding
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen (molecular function??) phenotype in which the binding of one protein to a protein complex is normal (i.e. indistinguishable from wild type). The protein whose binding to the protein complex is assayed may be encoded by the mutated gene, or may be encoded by a different gene." []
+xref: FYPO:0005232
+is_a: PHIPO:0000199 ! normal pathogen host protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:28:22Z
+
+[Term]
+id: PHIPO:0000202
+name: abnormal pathogen host protein complex binding
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (molecular function??) phenotype in which the binding of one protein to a protein complex is abnormal. The protein whose binding to the protein complex is affected may be encoded by the mutated gene, or may be encoded by a different gene." []
+xref: FYPO:0003591
+is_a: PHIPO:0000197 ! abnormal pathogen host protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:31:30Z
+
+[Term]
+id: PHIPO:0000203
+name: abnormal host protein complex binding
+namespace: host_phenotype
+def: "A host (molecular function??) phenotype in which the binding of one protein to a protein complex is abnormal. The protein whose binding to the protein complex is affected may be encoded by the mutated gene, or may be encoded by a different gene." []
+xref: FYPO:0003591
+is_a: PHIPO:0000196 ! abnormal host protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:31:34Z
+
+[Term]
+id: PHIPO:0000204
+name: abolished pathogen host protein protein interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (molecular function??) phenotype in which the binding of one protein to another does not occur. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0000705
+is_a: PHIPO:0000197 ! abnormal pathogen host protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:31:59Z
+
+[Term]
+id: PHIPO:0000205
+name: abolished host protein protein interaction
+namespace: host_phenotype
+def: "A host (molecular function??) phenotype in which the binding of one protein to another does not occur. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0000705
+is_a: PHIPO:0000196 ! abnormal host protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:32:01Z
+
+[Term]
+id: PHIPO:0000206
+name: altered pathogen host protein binding specificity
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (molecular function??) phenotype in which a mutation causes a gene product to bind to one or more proteins with different specificity from normal. For example, a protein may bind to a protein in a mutant that it does not bind in wild type. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0005119
+is_a: PHIPO:0000197 ! abnormal pathogen host protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:32:15Z
+
+[Term]
+id: PHIPO:0000207
+name: altered host protein binding specificity
+namespace: host_phenotype
+def: "A host (molecular function??) phenotype in which a mutation causes a gene product to bind to one or more proteins with different specificity from normal. For example, a protein may bind to a protein in a mutant that it does not bind in wild type. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+xref: FYPO:0005119
+is_a: PHIPO:0000196 ! abnormal host protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:32:18Z
+
+[Term]
+id: PHIPO:0000208
+name: decreased duration of pathogen host protein protein interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (molecular function??) phenotype in which the binding of one protein to another occurs for a shorter time than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0005785
+is_a: PHIPO:0000197 ! abnormal pathogen host protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:32:28Z
+
+[Term]
+id: PHIPO:0000209
+name: decreased duration of host protein protein interaction
+namespace: host_phenotype
+def: "A host (molecular function??) phenotype in which the binding of one protein to another occurs for a shorter time than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0005785
+is_a: PHIPO:0000196 ! abnormal host protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:32:31Z
+
+[Term]
+id: PHIPO:0000210
+name: decreased extent and duration of pathogen host protein protein interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (molecular function??) phenotype in which the binding of one protein to another occurs to a lower extent, and for a shorter time, than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0005784
+is_a: PHIPO:0000197 ! abnormal pathogen host protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:32:42Z
+
+[Term]
+id: PHIPO:0000211
+name: decreased extent and duration of host protein protein interaction
+namespace: host_phenotype
+def: "A host (molecular function??) phenotype in which the binding of one protein to another occurs to a lower extent, and for a shorter time, than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0005784
+is_a: PHIPO:0000196 ! abnormal host protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:32:46Z
+
+[Term]
+id: PHIPO:0000212
+name: decreased pathogen host protein protein interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (molecular function??) phenotype in which the binding of one protein to another occurs to a lower extent than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0001645
+is_a: PHIPO:0000197 ! abnormal pathogen host protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:33:00Z
+
+[Term]
+id: PHIPO:0000213
+name: decreased host protein protein interaction
+namespace: host_phenotype
+def: "A host (molecular function??) phenotype in which the binding of one protein to another occurs to a lower extent than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0001645
+is_a: PHIPO:0000196 ! abnormal host protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:33:03Z
+
+[Term]
+id: PHIPO:0000214
+name: increased pathogen host protein protein interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (molecular function??) phenotype in which the binding of one protein to another occurs to a greater extent than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0001571
+is_a: PHIPO:0000197 ! abnormal pathogen host protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:33:15Z
+
+[Term]
+id: PHIPO:0000215
+name: increased host protein protein interaction
+namespace: host_phenotype
+def: "A host (molecular function??) phenotype in which the binding of one protein to another occurs to a greater extent than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+xref: FYPO:0001571
+is_a: PHIPO:0000196 ! abnormal host protein protein interaction
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:33:18Z
+
+[Term]
+id: PHIPO:0000216
+name: host localization phenotype
+namespace: host_phenotype
+def: "A host phenotype that affects the localization of a structure or substance in a cell (QUERY? organism)." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+xref: FYPO:0000138
+is_a: PHIPO:0000003 ! host phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:42:29Z
+
+[Term]
+id: PHIPO:0000217
+name: host protein localization phenotype
+namespace: host_phenotype
+def: "A host phenotype that affects the localization of a protein in a cell." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+xref: FYPO:0002333
+is_a: PHIPO:0000216 ! host localization phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:43:20Z
+
+[Term]
+id: PHIPO:0000218
+name: host RNA localization phenotype
+namespace: host_phenotype
+def: "A host phenotype that affects the localization of an RNA in a cell." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+xref: FYPO:0004853
+is_a: PHIPO:0000216 ! host localization phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:43:40Z
+
+[Term]
+id: PHIPO:0000219
+name: host transport phenotype
+namespace: host_phenotype
+def: "A host (cell process???) phenotype that affects a transport process." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+xref: FYPO:0000149
+is_a: PHIPO:0000216 ! host localization phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-01T13:44:10Z
+
+[Term]
+id: PHIPO:0000220
+name: abnormal host transport
+namespace: host_phenotype
+def: "A host phenotype in which a specific transport process is abnormal." []
+xref: FYPO:0001720
+is_a: PHIPO:0000219 ! host transport phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T08:53:44Z
+
+[Term]
+id: PHIPO:0000221
+name: normal host protein transport
+namespace: host_phenotype
+def: "A host (cellular process??) phenotype in which protein transport is normal (i.e. indistinguishable from wild type)." []
+xref: FYPO:0005747
+is_a: PHIPO:0000219 ! host transport phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T08:53:54Z
+
+[Term]
+id: PHIPO:0000222
+name: abnormal host protein transport
+namespace: host_phenotype
+def: "A host (cellular process??) phenotype in which protein transport is abnormal." []
+xref: FYPO:0005744
+is_a: PHIPO:0000220 ! abnormal host transport
+created_by: alaynecuzick
+creation_date: 2018-10-02T08:56:00Z
+
+[Term]
+id: PHIPO:0000223
+name: abnormal host nuclear transport
+namespace: host_phenotype
+def: "A host (cellular process??) phenotype in which nuclear transport is abnormal." []
+xref: FYPO:0005573
+is_a: PHIPO:0000220 ! abnormal host transport
+created_by: alaynecuzick
+creation_date: 2018-10-02T08:58:26Z
+
+[Term]
+id: PHIPO:0000224
+name: abnormal host endocytosis
+namespace: host_phenotype
+def: "A host (cellular process???) phenotype in which endocytosis is abnormal. Endocytosis is a vesicle-mediated transport process in which cells take up external materials or membrane constituents by the invagination of a small region of the plasma membrane to form a new membrane-bounded vesicle. A phenotype may affect endocytosis of all cargoes, or of specific cargo such as a particular protein." []
+xref: FYPO:0003886
+is_a: PHIPO:0000220 ! abnormal host transport
+created_by: alaynecuzick
+creation_date: 2018-10-02T08:59:23Z
+
+[Term]
+id: PHIPO:0000225
+name: abnormal host vacuolar transport
+namespace: host_phenotype
+def: "A host (cellular process??) phenotype in which vacuolar transport is abnormal." []
+xref: FYPO:0003578
+is_a: PHIPO:0000220 ! abnormal host transport
+created_by: alaynecuzick
+creation_date: 2018-10-02T09:00:28Z
+
+[Term]
+id: PHIPO:0000226
+name: abnormal host RNA localization
+namespace: host_phenotype
+def: "A host phenotype in which the localization of an RNA in a cell is abnormal. An RNA may be observed in a place where it is not normally found, absent from a place where it is normally found, or both." []
+xref: FYPO:0003057
+is_a: PHIPO:0000218 ! host RNA localization phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T09:09:52Z
+
+[Term]
+id: PHIPO:0000227
+name: normal host RNA localization
+namespace: host_phenotype
+def: "A host phenotype in which the localization of an RNA in a cell is normal (i.e. indistinguishable from wild type)." []
+xref: FYPO:0003058
+is_a: PHIPO:0000218 ! host RNA localization phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T09:10:09Z
+
+[Term]
+id: PHIPO:0000228
+name: abnormal host protein localization
+namespace: host_phenotype
+def: "A host phenotype that affects the localization of a protein in a cell." []
+xref: FYPO:0002333
+is_a: PHIPO:0000217 ! host protein localization phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T09:12:44Z
+
+[Term]
+id: PHIPO:0000229
+name: normal host protein localization
+namespace: host_phenotype
+def: "A cell phenotype in which the localization of a protein in a cell is normal (i.e. indistinguishable from wild type)." []
+xref: FYPO:0003627
+is_a: PHIPO:0000217 ! host protein localization phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T09:12:59Z
+
+[Term]
+id: PHIPO:0000230
+name: normal host protein localization to nucleus
+namespace: host_phenotype
+def: "A host phenotype in which the localization of a protein to the nucleus is normal (i.e. indistinguishable from wild type)." []
+xref: FYPO:0006553
+is_a: PHIPO:0000229 ! normal host protein localization
+created_by: alaynecuzick
+creation_date: 2018-10-02T09:15:34Z
+
+[Term]
+id: PHIPO:0000231
+name: abnormal host protein complex localization
+namespace: host_phenotype
+def: "A host phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein complex is abnormal." []
+xref: FYPO:0001440
+is_a: PHIPO:0000228 ! abnormal host protein localization
+created_by: alaynecuzick
+creation_date: 2018-10-02T09:17:44Z
+
+[Term]
+id: PHIPO:0000232
+name: abnormal host protein localization to nucleus
+namespace: host_phenotype
+def: "A host phenotype in which the localization of a protein to the nucleus is abnormal." []
+comment: Encompasses both presence of proteins not normally found in the nucleus and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+xref: FYPO:0002956
+is_a: PHIPO:0000228 ! abnormal host protein localization
+created_by: alaynecuzick
+creation_date: 2018-10-02T09:18:35Z
+
+[Term]
+id: PHIPO:0000233
+name: abolished host protein localization
+namespace: host_phenotype
+def: "A host phenotype in which a protein does not localize to, and is therefore absent from, a place where it is normally found." []
+comment: If this term is used, we recommend noting which protein(s) were used in the assay.
+xref: FYPO:0001375
+is_a: PHIPO:0000228 ! abnormal host protein localization
+created_by: alaynecuzick
+creation_date: 2018-10-02T09:19:27Z
+
+[Term]
+id: PHIPO:0000234
+name: abolished host protein localization to nucleus
+namespace: host_phenotype
+def: "A host phenotype in which the localization of a protein to the nucleus is abolished." []
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+xref: FYPO:0003450
+is_a: PHIPO:0000228 ! abnormal host protein localization
+created_by: alaynecuzick
+creation_date: 2018-10-02T09:20:17Z
+
+[Term]
+id: PHIPO:0000235
+name: pathogen localization phenotype
+namespace: pathogen_phenotype
+def: "A pathogen phenotype that affects the localization of a structure or substance in a cell (QUERY? organism)." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+xref: FYPO:0000138
+is_a: PHIPO:0000002 ! pathogen phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:12:56Z
+
+[Term]
+id: PHIPO:0000236
+name: pathogen host interaction localization phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype that affects the localization of a structure or substance in a cell (QUERY? organism)." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+xref: FYPO:0000138
+is_a: PHIPO:0000001 ! pathogen host interaction phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:13:04Z
+
+[Term]
+id: PHIPO:0000237
+name: pathogen protein localization phenotype
+namespace: pathogen_phenotype
+def: "A pathogen phenotype that affects the localization of a protein in a cell." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+xref: FYPO:0002333
+is_a: PHIPO:0000235 ! pathogen localization phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:13:36Z
+
+[Term]
+id: PHIPO:0000238
+name: pathogen host interaction protein localization phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype that affects the localization of a protein in a cell." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+xref: FYPO:0002333
+is_a: PHIPO:0000236 ! pathogen host interaction localization phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:13:39Z
+
+[Term]
+id: PHIPO:0000239
+name: abnormal pathogen protein localization
+namespace: pathogen_phenotype
+def: "A pathogen phenotype that affects the localization of a protein in a cell." []
+xref: FYPO:0002333
+is_a: PHIPO:0000237 ! pathogen protein localization phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:14:02Z
+
+[Term]
+id: PHIPO:0000240
+name: abnormal pathogen host interaction protein localization
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype that affects the localization of a protein in a cell." []
+xref: FYPO:0002333
+is_a: PHIPO:0000238 ! pathogen host interaction protein localization phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:14:05Z
+
+[Term]
+id: PHIPO:0000241
+name: abnormal pathogen protein complex localization
+namespace: pathogen_phenotype
+def: "A pathogen phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein complex is abnormal." []
+xref: FYPO:0001440
+is_a: PHIPO:0000239 ! abnormal pathogen protein localization
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:14:50Z
+
+[Term]
+id: PHIPO:0000242
+name: abnormal pathogen host interaction protein complex localization
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein complex is abnormal." []
+xref: FYPO:0001440
+is_a: PHIPO:0000240 ! abnormal pathogen host interaction protein localization
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:14:53Z
+
+[Term]
+id: PHIPO:0000243
+name: abnormal pathogen host interaction protein localization to nucleus
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which the localization of a protein to the nucleus is abnormal. (Which nucleus? pathogen or host?)" []
+comment: Encompasses both presence of proteins not normally found in the nucleus and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+xref: FYPO:0002956
+is_a: PHIPO:0000240 ! abnormal pathogen host interaction protein localization
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:16:31Z
+
+[Term]
+id: PHIPO:0000244
+name: abnormal pathogen protein localization to nucleus
+namespace: pathogen_phenotype
+def: "A pathogen phenotype in which the localization of a protein to the nucleus is abnormal." []
+comment: Encompasses both presence of proteins not normally found in the nucleus and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
+xref: FYPO:0002956
+is_a: PHIPO:0000239 ! abnormal pathogen protein localization
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:16:37Z
+
+[Term]
+id: PHIPO:0000245
+name: abolished pathogen protein localization
+namespace: pathogen_phenotype
+def: "A pathogen phenotype in which a protein does not localize to, and is therefore absent from, a place where it is normally found." []
+comment: If this term is used, we recommend noting which protein(s) were used in the assay.
+xref: FYPO:0001375
+is_a: PHIPO:0000239 ! abnormal pathogen protein localization
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:17:52Z
+
+[Term]
+id: PHIPO:0000246
+name: abolished pathogen host interaction protein localization
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which a protein does not localize to, and is therefore absent from, a place where it is normally found." []
+comment: If this term is used, we recommend noting which protein(s) were used in the assay.
+xref: FYPO:0001375
+is_a: PHIPO:0000240 ! abnormal pathogen host interaction protein localization
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:17:55Z
+
+[Term]
+id: PHIPO:0000247
+name: abolished pathogen host interaction protein localization to nucleus
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which the localization of a protein to the nucleus is abolished." []
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+xref: FYPO:0003450
+is_a: PHIPO:0000240 ! abnormal pathogen host interaction protein localization
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:19:22Z
+
+[Term]
+id: PHIPO:0000248
+name: abolished pathogen protein localization to nucleus
+namespace: pathogen_phenotype
+def: "A pathogen phenotype in which the localization of a protein to the nucleus is abolished." []
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+xref: FYPO:0003450
+is_a: PHIPO:0000239 ! abnormal pathogen protein localization
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:19:27Z
+
+[Term]
+id: PHIPO:0000249
+name: pathogen RNA localization phenotype
+namespace: pathogen_phenotype
+def: "A pathogen phenotype that affects the localization of an RNA in a cell." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+xref: FYPO:0004853
+is_a: PHIPO:0000235 ! pathogen localization phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:20:15Z
+
+[Term]
+id: PHIPO:0000250
+name: pathogen host interaction RNA localization phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype that affects the localization of an RNA in a cell." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+xref: FYPO:0004853
+is_a: PHIPO:0000236 ! pathogen host interaction localization phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:20:17Z
+
+[Term]
+id: PHIPO:0000251
+name: abnormal pathogen RNA localization
+namespace: pathogen_phenotype
+def: "A pathogen phenotype in which the localization of an RNA in a cell is abnormal. An RNA may be observed in a place where it is not normally found, absent from a place where it is normally found, or both." []
+xref: FYPO:0003057
+is_a: PHIPO:0000249 ! pathogen RNA localization phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:20:49Z
+
+[Term]
+id: PHIPO:0000252
+name: abnormal pathogen host interaction RNA localization
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which the localization of an RNA in a cell is abnormal. An RNA may be observed in a place where it is not normally found, absent from a place where it is normally found, or both." []
+xref: FYPO:0003057
+is_a: PHIPO:0000250 ! pathogen host interaction RNA localization phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:20:53Z
+
+[Term]
+id: PHIPO:0000253
+name: normal pathogen RNA localization
+namespace: pathogen_phenotype
+def: "A pathogen phenotype in which the localization of an RNA in a cell is normal (i.e. indistinguishable from wild type)." []
+xref: FYPO:0003058
+is_a: PHIPO:0000249 ! pathogen RNA localization phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:21:19Z
+
+[Term]
+id: PHIPO:0000254
+name: normal pathogen host interaction RNA localization
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which the localization of an RNA in a cell is normal (i.e. indistinguishable from wild type)." []
+xref: FYPO:0003058
+is_a: PHIPO:0000250 ! pathogen host interaction RNA localization phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:21:22Z
+
+[Term]
+id: PHIPO:0000255
+name: pathogen host interaction transport phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (cell process???) phenotype that affects a transport process." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+xref: FYPO:0000149
+is_a: PHIPO:0000236 ! pathogen host interaction localization phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:21:45Z
+
+[Term]
+id: PHIPO:0000256
+name: pathogen transport phenotype
+namespace: pathogen_phenotype
+def: "A pathogen (cell process???) phenotype that affects a transport process." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+xref: FYPO:0000149
+is_a: PHIPO:0000235 ! pathogen localization phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:21:48Z
+
+[Term]
+id: PHIPO:0000257
+name: abnormal pathogen transport
+namespace: pathogen_phenotype
+def: "A pathogen phenotype in which a specific transport process is abnormal." []
+xref: FYPO:0001720
+is_a: PHIPO:0000256 ! pathogen transport phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:22:11Z
+
+[Term]
+id: PHIPO:0000258
+name: abnormal pathogen host interaction transport
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which a specific transport process is abnormal." []
+xref: FYPO:0001720
+is_a: PHIPO:0000255 ! pathogen host interaction transport phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:22:15Z
+
+[Term]
+id: PHIPO:0000259
+name: normal pathogen protein transport
+namespace: pathogen_phenotype
+def: "A pathogen (cellular process??) phenotype in which protein transport is normal (i.e. indistinguishable from wild type)." []
+xref: FYPO:0005747
+is_a: PHIPO:0000256 ! pathogen transport phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:22:37Z
+
+[Term]
+id: PHIPO:0000260
+name: normal pathogen host interaction protein transport
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (cellular process??) phenotype in which protein transport is normal (i.e. indistinguishable from wild type)." []
+xref: FYPO:0005747
+is_a: PHIPO:0000255 ! pathogen host interaction transport phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:22:40Z
+
+[Term]
+id: PHIPO:0000261
+name: abnormal pathogen endocytosis
+namespace: pathogen_phenotype
+def: "A pathogen (cellular process???) phenotype in which endocytosis is abnormal. Endocytosis is a vesicle-mediated transport process in which cells take up external materials or membrane constituents by the invagination of a small region of the plasma membrane to form a new membrane-bounded vesicle. A phenotype may affect endocytosis of all cargoes, or of specific cargo such as a particular protein." []
+xref: FYPO:0003886
+is_a: PHIPO:0000257 ! abnormal pathogen transport
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:22:57Z
+
+[Term]
+id: PHIPO:0000262
+name: abnormal pathogen host interaction endocytosis
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (cellular process???) phenotype in which endocytosis is abnormal. Endocytosis is a vesicle-mediated transport process in which cells take up external materials or membrane constituents by the invagination of a small region of the plasma membrane to form a new membrane-bounded vesicle. A phenotype may affect endocytosis of all cargoes, or of specific cargo such as a particular protein." []
+xref: FYPO:0003886
+is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:23:00Z
+
+[Term]
+id: PHIPO:0000263
+name: abnormal pathogen nuclear transport
+namespace: pathogen_phenotype
+def: "A pathogen (cellular process??) phenotype in which nuclear transport is abnormal." []
+xref: FYPO:0005573
+is_a: PHIPO:0000257 ! abnormal pathogen transport
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:23:27Z
+
+[Term]
+id: PHIPO:0000264
+name: abnormal pathogen host interaction nuclear transport
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (cellular process??) phenotype in which nuclear transport is abnormal." []
+xref: FYPO:0005573
+is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:23:30Z
+
+[Term]
+id: PHIPO:0000265
+name: abnormal pathogen protein transport
+namespace: pathogen_phenotype
+def: "A pathogen (cellular process??) phenotype in which protein transport is abnormal." []
+xref: FYPO:0005744
+is_a: PHIPO:0000257 ! abnormal pathogen transport
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:24:39Z
+
+[Term]
+id: PHIPO:0000266
+name: abnormal pathogen host interaction protein transport
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (cellular process??) phenotype in which protein transport is abnormal." []
+xref: FYPO:0005744
+is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:24:41Z
+
+[Term]
+id: PHIPO:0000267
+name: abnormal pathogen vacuolar transport
+namespace: pathogen_phenotype
+def: "A pathogen (cellular process??) phenotype in which vacuolar transport is abnormal." []
+xref: FYPO:0003578
+is_a: PHIPO:0000257 ! abnormal pathogen transport
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:24:58Z
+
+[Term]
+id: PHIPO:0000268
+name: abnormal pathogen host interaction vacuolar transport
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction (cellular process??) phenotype in which vacuolar transport is abnormal." []
+xref: FYPO:0003578
+is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
+created_by: alaynecuzick
+creation_date: 2018-10-02T10:25:00Z
+
+[Term]
+id: PHIPO:0000269
+name: normal pathogen protein localization
+namespace: pathogen_phenotype
+def: "A pathogen phenotype in which the localization of a protein in a cell is normal (i.e. indistinguishable from wild type)." []
+xref: FYPO:0003627
+is_a: PHIPO:0000237 ! pathogen protein localization phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-03T11:05:06Z
+
+[Term]
+id: PHIPO:0000270
+name: normal pathogen host interaction protein localization
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which the localization of a protein in a cell is normal (i.e. indistinguishable from wild type)." []
+xref: FYPO:0003627
+is_a: PHIPO:0000238 ! pathogen host interaction protein localization phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-03T11:05:09Z
+
+[Term]
+id: PHIPO:0000271
+name: normal pathogen protein localization to nucleus
+namespace: pathogen_phenotype
+def: "A pathogen phenotype in which the localization of a protein to the nucleus is normal (i.e. indistinguishable from wild type)." []
+xref: FYPO:0006553
+is_a: PHIPO:0000269 ! normal pathogen protein localization
+created_by: alaynecuzick
+creation_date: 2018-10-03T11:05:29Z
+
+[Term]
+id: PHIPO:0000272
+name: normal pathogen host interaction protein localization to nucleus
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which the localization of a protein to the nucleus is normal (i.e. indistinguishable from wild type)." []
+xref: FYPO:0006553
+is_a: PHIPO:0000270 ! normal pathogen host interaction protein localization
+created_by: alaynecuzick
+creation_date: 2018-10-03T11:05:31Z
+
+[Term]
+id: PHIPO:0000273
+name: host organism growth phenotype
+namespace: host_phenotype
+is_a: PHIPO:0000003 ! host phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-03T13:38:13Z
+
+[Term]
+id: PHIPO:0000274
+name: host reproductive phenotype
+namespace: host_phenotype
+is_a: PHIPO:0000003 ! host phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-03T13:38:33Z
+
+[Term]
+id: PHIPO:0000275
+name: abnormal host reproductive phenotype
+namespace: host_phenotype
+is_a: PHIPO:0000274 ! host reproductive phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-03T13:39:04Z
+
+[Term]
+id: PHIPO:0000276
+name: normal host reproductive phenotpye
+namespace: host_phenotype
+is_a: PHIPO:0000274 ! host reproductive phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-03T13:39:23Z
+
+[Term]
+id: PHIPO:0000277
+name: abnormal host organism growth phenotype
+namespace: host_phenotype
+is_a: PHIPO:0000273 ! host organism growth phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-03T13:39:41Z
+
+[Term]
+id: PHIPO:0000278
+name: normal host organism growth phenotype
+namespace: host_phenotype
+is_a: PHIPO:0000273 ! host organism growth phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-03T13:40:03Z
+
+[Term]
+id: PHIPO:0000279
+name: systemic phenotype
+is_a: PHIPO:0000001 ! pathogen host interaction phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-03T13:43:37Z
+
+[Term]
+id: PHIPO:0000280
+name: effector phenotype
+namespace: pathogen_host_interaction_phenotype
+is_a: PHIPO:0000001 ! pathogen host interaction phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-05T11:00:39Z
+
+[Term]
+id: PHIPO:0000281
+name: host stature phenotype
+namespace: host_phenotype
+is_a: PHIPO:0000003 ! host phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-05T12:33:43Z
+
+[Term]
+id: PHIPO:0000282
+name: abnormal stature
+namespace: host_phenotype
+is_a: PHIPO:0000281 ! host stature phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-05T12:33:56Z
+
+[Term]
+id: PHIPO:0000283
+name: normal stature
+namespace: host_phenotype
+is_a: PHIPO:0000281 ! host stature phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-05T12:34:05Z
+
+[Term]
+id: PHIPO:0000284
+name: host colour phenotype
+namespace: host_phenotype
+comment: do we want to precompose terms which actual colour in eg yellow, pale green, albino...\n\ncolour or pigment which is best language?
+is_a: PHIPO:0000003 ! host phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-05T12:37:03Z
+
+[Term]
+id: PHIPO:0000285
+name: abnormal colour
+namespace: host_phenotype
+is_a: PHIPO:0000284 ! host colour phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-05T12:37:16Z
+
+[Term]
+id: PHIPO:0000286
+name: normal colour
+namespace: host_phenotype
+is_a: PHIPO:0000284 ! host colour phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-05T12:37:24Z
+
+[Term]
+id: PHIPO:0000287
+name: increased intensity of colour
+namespace: host_phenotype
+is_a: PHIPO:0000285 ! abnormal colour
+created_by: alaynecuzick
+creation_date: 2018-10-05T12:38:26Z
+
+[Term]
+id: PHIPO:0000288
+name: decreased intensity of colour
+namespace: host_phenotype
+is_a: PHIPO:0000285 ! abnormal colour
+created_by: alaynecuzick
+creation_date: 2018-10-05T12:38:39Z
+
+[Term]
+id: PHIPO:0000289
+name: altered colour
+namespace: host_phenotype
+is_a: PHIPO:0000285 ! abnormal colour
+created_by: alaynecuzick
+creation_date: 2018-10-05T12:38:58Z
+
+[Term]
+id: PHIPO:0000290
+name: colour present
+namespace: host_phenotype
+is_a: PHIPO:0000285 ! abnormal colour
+created_by: alaynecuzick
+creation_date: 2018-10-05T12:39:18Z
+
+[Term]
+id: PHIPO:0000291
+name: colour absent
+namespace: host_phenotype
+is_a: PHIPO:0000285 ! abnormal colour
+created_by: alaynecuzick
+creation_date: 2018-10-05T12:39:26Z
+
+[Term]
+id: PHIPO:0000292
+name: host motility phenotype
+namespace: host_phenotype
+comment: think about motility AND mobility
+is_a: PHIPO:0000003 ! host phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-05T12:43:16Z
+
+[Term]
+id: PHIPO:0000293
+name: immune response phenotype
+namespace: host_phenotype
+comment: should this be here in host phenotype or in PHI? \na host gene mutation may alter a immune reponse (turn on or off) in the absence of the pathogen. should this be captured in the conditions in similar manner to pathogen penetration phenotypes. Or should it be duplicated in PHI with different prefixes 'host' and 'PHI'?
+is_a: PHIPO:0000003 ! host phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-05T12:48:26Z
+
+[Term]
+id: PHIPO:0000294
+name: preformed structure and chemical barrier phenotype
+namespace: host_phenotype
+is_a: PHIPO:0000003 ! host phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-05T12:52:54Z
+
+[Term]
+id: PHIPO:0000295
+name: host chemical target phenotype
+namespace: host_phenotype
+is_a: PHIPO:0000003 ! host phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-05T12:53:20Z
+
+[Term]
+id: PHIPO:0000296
+name: normal dissemination of pathogen asexual product
+namespace: pathogen_phenotype
+is_a: PHIPO:0000045 ! normal asexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-10-05T12:56:56Z
+
+[Term]
+id: PHIPO:0000297
+name: normal dissemination of pathogen sexual product
+namespace: pathogen_phenotype
+is_a: PHIPO:0000046 ! normal sexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-10-05T12:57:37Z
+
+[Term]
+id: PHIPO:0000298
+name: abnormal dissemination of pathogen asexual product
+namespace: pathogen_phenotype
+is_a: PHIPO:0000047 ! abnormal asexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-10-05T12:58:29Z
+
+[Term]
+id: PHIPO:0000299
+name: abnormal dissemination of pathogen sexual product
+namespace: pathogen_phenotype
+is_a: PHIPO:0000048 ! abnormal sexual reproduction
+created_by: alaynecuzick
+creation_date: 2018-10-05T12:58:58Z
+
+[Term]
+id: PHIPO:0000300
+name: abnormal dissemination of host asexual product
+namespace: host_phenotype
+is_a: PHIPO:0000275 ! abnormal host reproductive phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-05T13:00:13Z
+
+[Term]
+id: PHIPO:0000301
+name: normal dissemination of host asexual product
+namespace: host_phenotype
+is_a: PHIPO:0000276 ! normal host reproductive phenotpye
+created_by: alaynecuzick
+creation_date: 2018-10-05T13:00:21Z
+
+[Term]
+id: PHIPO:0000302
+name: normal dissemination of host sexual product
+namespace: host_phenotype
+is_a: PHIPO:0000276 ! normal host reproductive phenotpye
+created_by: alaynecuzick
+creation_date: 2018-10-05T13:00:34Z
+
+[Term]
+id: PHIPO:0000303
+name: abnormal dissemination of host sexual product
+namespace: host_phenotype
+is_a: PHIPO:0000275 ! abnormal host reproductive phenotype
+created_by: alaynecuzick
+creation_date: 2018-10-05T13:00:37Z
 

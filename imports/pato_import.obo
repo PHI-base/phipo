@@ -10,6 +10,19 @@ def: "A dependent entity that inheres in a bearer by virtue of how the bearer is
 synonym: "trait" EXACT []
 
 [Term]
+id: PATO:0000057
+name: occurrence
+namespace: quality
+alt_id: PATO:0000156
+alt_id: PATO:0000158
+def: "A quality of a single process inhering in a bearer by virtue of the bearer's occurrence." [PATOC:GVG]
+subset: attribute_slim
+subset: hpo_slim
+synonym: "incidence" EXACT []
+synonym: "temporal" BROAD []
+is_a: PATO:0002323 ! temporal distribution quality
+
+[Term]
 id: PATO:0000068
 name: qualitative
 namespace: quality
@@ -23,6 +36,29 @@ namespace: quality
 def: "A quality inhering in a bearer by virtue of the whether the bearer differs from normal or average." [PATOC:GVG]
 subset: attribute_slim
 is_a: PATO:0000068 ! qualitative
+
+[Term]
+id: PATO:0000169
+name: viability
+namespace: quality
+def: "An organismal quality inhering in a bearer or a population by virtue of the bearer's disposition to survive and develop normally or the number of surviving individuals in a given population." [PATOC:GVG]
+subset: attribute_slim
+subset: disposition_slim
+is_a: PATO:0001995 ! organismal quality
+
+[Term]
+id: PATO:0000297
+name: arrested
+namespace: quality
+alt_id: PATO:0001508
+def: "A quality of a process which ends earlier than the natural end time or reference process." [PATOC:LC]
+comment: TODO: the definition is incorrect. See absent.
+subset: value_slim
+synonym: "abolished" EXACT []
+synonym: "incomplete" RELATED []
+is_a: PATO:0002052 ! decreased occurrence
+is_a: PATO:0002324 ! offset quality
+relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 
 [Term]
 id: PATO:0000460
@@ -39,6 +75,410 @@ synonym: "defective" RELATED []
 is_a: PATO:0000069 ! deviation(from_normal)
 property_value: RO:0002604 PATO:0000461
 
+[Term]
+id: PATO:0000461
+name: normal
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's exhibiting no deviation from normal or average." [PATOC:GVG]
+subset: abnormal_slim
+subset: mpath_slim
+subset: value_slim
+synonym: "average" RELATED []
+is_a: PATO:0000069 ! deviation(from_normal)
+property_value: RO:0002604 PATO:0000460
+
+[Term]
+id: PATO:0000498
+name: increased duration
+namespace: quality
+alt_id: PATO:0000715
+def: "A duration quality of a process which is relatively high." [PATOC:GVG]
+subset: value_slim
+synonym: "chronic" RELATED []
+synonym: "high time" EXACT []
+synonym: "increased period" EXACT []
+synonym: "increased time" EXACT []
+synonym: "prolonged period" RELATED []
+synonym: "slow time" RELATED []
+is_a: PATO:0001309 ! duration
+is_a: PATO:0002304 ! increased process quality
+intersection_of: PATO:0001309 ! duration
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: RO:0002604 PATO:0000499
+
+[Term]
+id: PATO:0000499
+name: decreased duration
+namespace: quality
+alt_id: PATO:0000716
+def: "A duration quality of a process which is relatively low." [PATOC:GVG]
+subset: value_slim
+synonym: "decreased period" EXACT []
+synonym: "decreased time" EXACT []
+synonym: "fast time" RELATED []
+synonym: "low period" EXACT []
+synonym: "shortened period" EXACT []
+is_a: PATO:0001309 ! duration
+is_a: PATO:0002302 ! decreased process quality
+intersection_of: PATO:0001309 ! duration
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: RO:0002604 PATO:0000498
+
+[Term]
+id: PATO:0000718
+name: lethal (sensu genetics)
+namespace: quality
+def: "A viability quality inhering in a population by virtue of the bearer's long term survival inability." [PATOC:GVG]
+subset: disposition_slim
+subset: value_slim
+is_a: PATO:0000169 ! viability
+
+[Term]
+id: PATO:0001236
+name: process quality
+namespace: quality
+alt_id: PATO:0001239
+alt_id: PATO:0001240
+def: "A quality which inheres in an process." [PATOC:GVG]
+comment: See comments of relational quality of a physical entity.
+synonym: "quality of a process" EXACT []
+synonym: "quality of occurrent" EXACT []
+synonym: "quality of process" EXACT []
+synonym: "relational quality of occurrent" EXACT []
+is_a: PATO:0000001 ! quality
+
+[Term]
+id: PATO:0001241
+name: physical object quality
+namespace: quality
+alt_id: PATO:0001237
+alt_id: PATO:0001238
+def: "A quality which inheres in a continuant." [PATOC:GVG]
+comment: Relational qualities are qualities that hold between multiple entities. Normal (monadic) qualities such as the shape of a eyeball exist purely as a quality of that eyeball. A relational quality such as sensitivity to light is a quality of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles.
+synonym: "monadic quality of a continuant" EXACT []
+synonym: "monadic quality of an object" NARROW []
+synonym: "monadic quality of continuant" NARROW []
+synonym: "multiply inhering quality of a physical entity" EXACT []
+synonym: "quality of a continuant" EXACT []
+synonym: "quality of a single physical entity" EXACT []
+synonym: "quality of an object" EXACT []
+synonym: "quality of continuant" EXACT []
+xref: snap:Quality
+is_a: PATO:0000001 ! quality
+
+[Term]
+id: PATO:0001309
+name: duration
+namespace: quality
+alt_id: PATO:0000081
+def: "A process quality inhering in a bearer by virtue of the bearer's magnitude of the temporal extent between the starting and ending point." [PATOC:mellybelly]
+subset: attribute_slim
+subset: hpo_slim
+synonym: "period" EXACT []
+synonym: "time" RELATED []
+is_a: PATO:0002062 ! physical quality of a process
+
+[Term]
+id: PATO:0001558
+name: lacking processual parts
+namespace: quality
+def: "A quality of a process inhering in a bearer by virtue of the bearer's lacking a processual part as specified by the additional entity." [PATOC:GVG]
+subset: relational_slim
+subset: value_slim
+is_a: PATO:0001564 ! extra or missing processual parts
+
+[Term]
+id: PATO:0001564
+name: extra or missing processual parts
+namespace: quality
+def: "A quality of a process inhering in a bearer by virtue of the bearer's processual parts." [PATOC:GVG]
+subset: relational_slim
+is_a: PATO:0001236 ! process quality
+
+[Term]
+id: PATO:0001995
+name: organismal quality
+namespace: quality
+def: "A quality that inheres in an entire organism or part of an organism." [PATOC:CJM]
+is_a: PATO:0001241 ! physical object quality
+
+[Term]
+id: PATO:0002051
+name: increased occurrence
+namespace: quality
+def: "An occurrence which is relatively high." [PATOC:GVG]
+synonym: "increased incidence" EXACT []
+is_a: PATO:0000057 ! occurrence
+is_a: PATO:0002304 ! increased process quality
+intersection_of: PATO:0000057 ! occurrence
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: RO:0002604 PATO:0002052
+created_by: George Gkoutos
+creation_date: 2009-03-26T11:10:11Z
+
+[Term]
+id: PATO:0002052
+name: decreased occurrence
+namespace: quality
+def: "An occurrence which is relatively low." [PATOC:GVG]
+synonym: "decreased incidence" EXACT []
+is_a: PATO:0000057 ! occurrence
+is_a: PATO:0002302 ! decreased process quality
+intersection_of: PATO:0000057 ! occurrence
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: RO:0002604 PATO:0002051
+created_by: George Gkoutos
+creation_date: 2009-03-26T11:12:35Z
+
+[Term]
+id: PATO:0002062
+name: physical quality of a process
+namespace: quality
+subset: attribute_slim
+is_a: PATO:0001236 ! process quality
+created_by: george
+creation_date: 2009-06-05T09:16:46Z
+
+[Term]
+id: PATO:0002146
+name: virulence
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the severity of infectious disease caused by the bearer in a target organism." [https://orcid.org/0000-0001-5208-3432, https://orcid.org/0000-0001-8941-3984]
+subset: attribute_slim
+subset: scalar_slim
+is_a: PATO:0001995 ! organismal quality
+created_by: george
+creation_date: 2009-10-30T05:04:06Z
+
+[Term]
+id: PATO:0002147
+name: reduced virulence
+namespace: quality
+def: "A virulence that is relatively low." [PATOC:GVG]
+subset: value_slim
+synonym: "attenuated" EXACT []
+is_a: PATO:0002146 ! virulence
+is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0002146 ! virulence
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: RO:0002604 PATO:0002148
+created_by: george
+creation_date: 2009-10-30T05:05:02Z
+
+[Term]
+id: PATO:0002148
+name: increased virulence
+namespace: quality
+def: "A virulence that is relatively high." [PATOC:GVG]
+subset: value_slim
+is_a: PATO:0002146 ! virulence
+is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0002146 ! virulence
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: RO:0002604 PATO:0002147
+created_by: george
+creation_date: 2009-10-30T05:13:10Z
+
+[Term]
+id: PATO:0002300
+name: increased quality
+namespace: quality
+def: "A quality that has a value that is increased compared to normal or average." [PATOC:GVG]
+is_a: PATO:0000069 ! deviation(from_normal)
+intersection_of: PATO:0000001 ! quality
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: RO:0002604 PATO:0002301
+created_by: George Gkoutos
+creation_date: 2011-06-16T06:39:43Z
+
+[Term]
+id: PATO:0002301
+name: decreased quality
+namespace: quality
+def: "A quality that has a value that is decreased compared to normal or average." [PATOC:GVG]
+is_a: PATO:0000069 ! deviation(from_normal)
+intersection_of: PATO:0000001 ! quality
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: RO:0002604 PATO:0002300
+created_by: George Gkoutos
+creation_date: 2011-06-16T06:40:15Z
+
+[Term]
+id: PATO:0002302
+name: decreased process quality
+namespace: quality
+def: "A quality of a process that has a value that is decreased compared to normal or average." [PATOC:GVG]
+is_a: PATO:0001236 ! process quality
+is_a: PATO:0002301 ! decreased quality
+intersection_of: PATO:0001236 ! process quality
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: RO:0002604 PATO:0002304
+created_by: George Gkoutos
+creation_date: 2011-06-16T06:50:59Z
+
+[Term]
+id: PATO:0002303
+name: decreased object quality
+namespace: quality
+def: "A quality of an object that has a value that is decreased compared to normal or average." [PATOC:GVG]
+is_a: PATO:0001241 ! physical object quality
+is_a: PATO:0002301 ! decreased quality
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: RO:0002604 PATO:0002305
+created_by: George Gkoutos
+creation_date: 2011-06-16T06:51:54Z
+
+[Term]
+id: PATO:0002304
+name: increased process quality
+namespace: quality
+def: "A quality of a process that has a value that is increased compared to normal or average." [PATOC:GVG]
+is_a: PATO:0001236 ! process quality
+is_a: PATO:0002300 ! increased quality
+intersection_of: PATO:0001236 ! process quality
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: RO:0002604 PATO:0002302
+created_by: George Gkoutos
+creation_date: 2011-06-16T06:53:08Z
+
+[Term]
+id: PATO:0002305
+name: increased object quality
+namespace: quality
+def: "A quality of an object that has a value that is increased compared to normal or average." [PATOC:GVG]
+is_a: PATO:0001241 ! physical object quality
+is_a: PATO:0002300 ! increased quality
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
+property_value: RO:0002604 PATO:0002303
+created_by: George Gkoutos
+creation_date: 2011-06-16T06:54:01Z
+
+[Term]
+id: PATO:0002323
+name: temporal distribution quality
+namespace: quality
+def: "A temporal distribution pattern of process occurrences within a regulation/reference process." [PATOC:LC]
+subset: attribute_slim
+is_a: PATO:0002062 ! physical quality of a process
+created_by: George Gkoutos
+creation_date: 2011-11-22T01:12:28Z
+
+[Term]
+id: PATO:0002324
+name: offset quality
+namespace: quality
+def: "The temporal relation between the end of the process with respect to a reference process." [PATOC:LC]
+subset: attribute_slim
+synonym: "completeness" RELATED [GOC:CJM]
+synonym: "extent" RELATED [GOC:CJM]
+is_a: PATO:0002323 ! temporal distribution quality
+created_by: George Gkoutos
+creation_date: 2011-11-23T11:46:00Z
+
+[Term]
+id: PATO:0040003
+name: pathogenicity
+namespace: quality
+def: "The ability of a pathogen to produce an infectious disease or disorder in an another organism." [https://orcid.org/0000-0001-6330-7526]
+is_a: PATO:0001995 ! organismal quality
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
+property_value: http://purl.org/dc/elements/1.1/date 2018-08-02T04:24:52Z xsd:dateTime
+
+[Term]
+id: PATO:0045001
+name: normal object quality
+namespace: quality
+def: "A quality of an object that has a value that is normal or average." []
+is_a: PATO:0001241 ! physical object quality
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+relationship: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-21T14:11:01Z
+
+[Term]
+id: PATO:0045073
+name: normal process quality
+namespace: quality
+def: "A quality of aprocess that has a value that is normal or average." []
+is_a: PATO:0001236 ! process quality
+intersection_of: PATO:0001236 ! process quality
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+relationship: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-21T14:11:01Z
+
+[Term]
+id: PATO:0045080
+name: normal virulence
+namespace: quality
+def: "A virulence which is relatively normal or average" []
+subset: value_slim
+is_a: PATO:0002146 ! virulence
+is_a: PATO:0045001 ! normal object quality
+intersection_of: PATO:0002146 ! virulence
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+relationship: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
+id: PATO:0045084
+name: normal duration
+namespace: quality
+def: "A duration quality of a process which is relatively normal." []
+subset: value_slim
+is_a: PATO:0001309 ! duration
+is_a: PATO:0045073 ! normal process quality
+intersection_of: PATO:0001309 ! duration
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+relationship: has_relative_magnitude PATO:0000461 ! normal
+
+[Term]
+id: PATO:0045086
+name: normal occurrence
+namespace: quality
+def: "An occurrence which is relatively normal." []
+subset: value_slim
+is_a: PATO:0000057 ! occurrence
+is_a: PATO:0045073 ! normal process quality
+intersection_of: PATO:0000057 ! occurrence
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+relationship: has_relative_magnitude PATO:0000461 ! normal
+
+[Typedef]
+id: decreased_in_magnitude_relative_to
+name: decreased_in_magnitude_relative_to
+namespace: quality
+def: "q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) < magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
+comment: This relation is used to determine the 'directionality' of relative qualities such as 'decreased strength', relative to the parent type, 'strength'.
+domain: PATO:0000001 ! quality
+range: PATO:0000001 ! quality
+is_transitive: true
+is_a: different_in_magnitude_relative_to ! different_in_magnitude_relative_to
+
+[Typedef]
+id: different_in_magnitude_relative_to
+name: different_in_magnitude_relative_to
+namespace: quality
+def: "q1 different_in_magnitude_relative_to q2 if and only if magnitude(q1) NOT =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
+domain: PATO:0000001 ! quality
+range: PATO:0000001 ! quality
+
 [Typedef]
 id: has_part
 name: has_part
@@ -48,9 +488,18 @@ comment: We use the has_part relation to relate complex qualities to more primit
 xref: BFO:0000051
 
 [Typedef]
-id: part_of
-name: part_of
+id: has_relative_magnitude
+name: has_relative_magnitude
 namespace: quality
-xref: BFO:0000050
+
+[Typedef]
+id: increased_in_magnitude_relative_to
+name: increased_in_magnitude_relative_to
+namespace: quality
+def: "q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) > magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
+comment: This relation is used to determine the 'directionality' of relative qualities such as 'increased strength', relative to the parent type, 'strength'.
+domain: PATO:0000001 ! quality
+range: PATO:0000001 ! quality
 is_transitive: true
+is_a: different_in_magnitude_relative_to ! different_in_magnitude_relative_to
 
