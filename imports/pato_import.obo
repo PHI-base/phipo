@@ -73,7 +73,7 @@ synonym: "atypia" RELATED []
 synonym: "atypical" RELATED []
 synonym: "defective" RELATED []
 is_a: PATO:0000069 ! deviation(from_normal)
-property_value: RO:0002604 PATO:0000461
+relationship: is_opposite_of PATO:0000461 ! normal
 
 [Term]
 id: PATO:0000461
@@ -85,7 +85,7 @@ subset: mpath_slim
 subset: value_slim
 synonym: "average" RELATED []
 is_a: PATO:0000069 ! deviation(from_normal)
-property_value: RO:0002604 PATO:0000460
+relationship: is_opposite_of PATO:0000460 ! abnormal
 
 [Term]
 id: PATO:0000498
@@ -105,7 +105,7 @@ is_a: PATO:0002304 ! increased process quality
 intersection_of: PATO:0001309 ! duration
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0000499
+relationship: is_opposite_of PATO:0000499 ! decreased duration
 
 [Term]
 id: PATO:0000499
@@ -124,7 +124,7 @@ is_a: PATO:0002302 ! decreased process quality
 intersection_of: PATO:0001309 ! duration
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0000498
+relationship: is_opposite_of PATO:0000498 ! increased duration
 
 [Term]
 id: PATO:0000718
@@ -215,7 +215,7 @@ is_a: PATO:0002304 ! increased process quality
 intersection_of: PATO:0000057 ! occurrence
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0002052
+relationship: is_opposite_of PATO:0002052 ! decreased occurrence
 created_by: George Gkoutos
 creation_date: 2009-03-26T11:10:11Z
 
@@ -230,7 +230,7 @@ is_a: PATO:0002302 ! decreased process quality
 intersection_of: PATO:0000057 ! occurrence
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0002051
+relationship: is_opposite_of PATO:0002051 ! increased occurrence
 created_by: George Gkoutos
 creation_date: 2009-03-26T11:12:35Z
 
@@ -266,7 +266,7 @@ is_a: PATO:0002303 ! decreased object quality
 intersection_of: PATO:0002146 ! virulence
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0002148
+relationship: is_opposite_of PATO:0002148 ! increased virulence
 created_by: george
 creation_date: 2009-10-30T05:05:02Z
 
@@ -281,7 +281,7 @@ is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0002146 ! virulence
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0002147
+relationship: is_opposite_of PATO:0002147 ! reduced virulence
 created_by: george
 creation_date: 2009-10-30T05:13:10Z
 
@@ -294,7 +294,7 @@ is_a: PATO:0000069 ! deviation(from_normal)
 intersection_of: PATO:0000001 ! quality
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0002301
+relationship: is_opposite_of PATO:0002301 ! decreased quality
 created_by: George Gkoutos
 creation_date: 2011-06-16T06:39:43Z
 
@@ -307,7 +307,7 @@ is_a: PATO:0000069 ! deviation(from_normal)
 intersection_of: PATO:0000001 ! quality
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0002300
+relationship: is_opposite_of PATO:0002300 ! increased quality
 created_by: George Gkoutos
 creation_date: 2011-06-16T06:40:15Z
 
@@ -321,7 +321,7 @@ is_a: PATO:0002301 ! decreased quality
 intersection_of: PATO:0001236 ! process quality
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0002304
+relationship: is_opposite_of PATO:0002304 ! increased process quality
 created_by: George Gkoutos
 creation_date: 2011-06-16T06:50:59Z
 
@@ -335,7 +335,7 @@ is_a: PATO:0002301 ! decreased quality
 intersection_of: PATO:0001241 ! physical object quality
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0002305
+relationship: is_opposite_of PATO:0002305 ! increased object quality
 created_by: George Gkoutos
 creation_date: 2011-06-16T06:51:54Z
 
@@ -349,7 +349,7 @@ is_a: PATO:0002300 ! increased quality
 intersection_of: PATO:0001236 ! process quality
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0002302
+relationship: is_opposite_of PATO:0002302 ! decreased process quality
 created_by: George Gkoutos
 creation_date: 2011-06-16T06:53:08Z
 
@@ -363,7 +363,7 @@ is_a: PATO:0002300 ! increased quality
 intersection_of: PATO:0001241 ! physical object quality
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: RO:0002604 PATO:0002303
+relationship: is_opposite_of PATO:0002303 ! decreased object quality
 created_by: George Gkoutos
 creation_date: 2011-06-16T06:54:01Z
 
@@ -502,4 +502,19 @@ domain: PATO:0000001 ! quality
 range: PATO:0000001 ! quality
 is_transitive: true
 is_a: different_in_magnitude_relative_to ! different_in_magnitude_relative_to
+
+[Typedef]
+id: is_opposite_of
+name: is opposite of
+namespace: quality
+xref: RO:0002604
+is_metadata_tag: true
+is_class_level: true
+
+[Typedef]
+id: part_of
+name: part_of
+namespace: quality
+xref: BFO:0000050
+is_transitive: true
 

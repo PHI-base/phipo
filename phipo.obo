@@ -1,9 +1,807 @@
 format-version: 1.2
-data-version: releases/2018-10-10
+data-version: releases/2018-10-17
+import: http://purl.obolibrary.org/obo/phipo/imports/go_import.owl
+import: http://purl.obolibrary.org/obo/phipo/imports/pato_import.owl
+import: http://purl.obolibrary.org/obo/phipo/imports/ro_import.owl
+import: http://purl.obolibrary.org/obo/phipo/imports/so_import.owl
 ontology: phipo
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
-owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/PHIPO_0000001>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PHIPO_0000002>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PHIPO_0000003>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/PHIPO_0000001> (pathogen host interaction phenotype)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PHIPO_0000001> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PHIPO_0000002> (pathogen phenotype)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PHIPO_0000002> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PHIPO_0000003> (host phenotype)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PHIPO_0000003> owl:Thing)\n\n\n)
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000003>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0004872>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PHIPO_0000001>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PHIPO_0000002>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PHIPO_0000003>))\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/BFO_0000002> (continuant)\n\nSubClassOf(<http://purl.obolibrary.org/obo/BFO_0000002> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/BFO_0000003> (occurrent)\n\nSubClassOf(<http://purl.obolibrary.org/obo/BFO_0000003> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/GO_0004872> (receptor activity)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0004872> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PHIPO_0000001> (pathogen host interaction phenotype)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PHIPO_0000001> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PHIPO_0000002> (pathogen phenotype)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PHIPO_0000002> owl:Thing)\n\n# Class: <http://purl.obolibrary.org/obo/PHIPO_0000003> (host phenotype)\n\nSubClassOf(<http://purl.obolibrary.org/obo/PHIPO_0000003> owl:Thing)\n\n\n)
+
+[Term]
+id: BFO:0000004 ! independent continuant
+is_a: BFO:0000002 ! continuant
+
+[Term]
+id: BFO:0000015 ! process
+is_a: BFO:0000003 ! occurrent
+
+[Term]
+id: BFO:0000020 ! specifically dependent continuant
+is_a: BFO:0000002 ! continuant
+
+[Term]
+id: BFO:0000040 ! material entity
+is_a: BFO:0000004 ! independent continuant
+
+[Term]
+id: GO:0003674 ! molecular_function
+is_a: BFO:0000015 ! process
+
+[Term]
+id: GO:0003676 ! nucleic acid binding
+is_a: GO:0097159 ! organic cyclic compound binding
+is_a: GO:1901363 ! heterocyclic compound binding
+
+[Term]
+id: GO:0003677 ! DNA binding
+is_a: GO:0003676 ! nucleic acid binding
+
+[Term]
+id: GO:0003723 ! RNA binding
+is_a: GO:0003676 ! nucleic acid binding
+
+[Term]
+id: GO:0005102 ! signaling receptor binding
+is_a: GO:0005515 ! protein binding
+
+[Term]
+id: GO:0005488 ! binding
+is_a: GO:0003674 ! molecular_function
+
+[Term]
+id: GO:0005515 ! protein binding
+is_a: GO:0005488 ! binding
+
+[Term]
+id: GO:0006403 ! RNA localization
+is_a: GO:0033036 ! macromolecule localization
+
+[Term]
+id: GO:0006810 ! transport
+is_a: GO:0051234 ! establishment of localization
+
+[Term]
+id: GO:0006897 ! endocytosis
+is_a: GO:0016192 ! vesicle-mediated transport
+is_a: GO:0098657 ! import into cell
+
+[Term]
+id: GO:0006900 ! vesicle budding from membrane
+is_a: GO:0016050 ! vesicle organization
+is_a: GO:0061024 ! membrane organization
+
+[Term]
+id: GO:0006996 ! organelle organization
+is_a: GO:0016043 ! cellular component organization
+
+[Term]
+id: GO:0007034 ! vacuolar transport
+is_a: GO:0006810 ! transport
+
+[Term]
+id: GO:0007154 ! cell communication
+is_a: GO:0009987 ! cellular process
+
+[Term]
+id: GO:0007165 ! signal transduction
+is_a: GO:0009987 ! cellular process
+is_a: GO:0050794 ! regulation of cellular process
+
+[Term]
+id: GO:0008104 ! protein localization
+is_a: GO:0033036 ! macromolecule localization
+
+[Term]
+id: GO:0008150 ! biological_process
+is_a: BFO:0000015 ! process
+
+[Term]
+id: GO:0009966 ! regulation of signal transduction
+is_a: GO:0010646 ! regulation of cell communication
+is_a: GO:0023051 ! regulation of signaling
+is_a: GO:0048583 ! regulation of response to stimulus
+
+[Term]
+id: GO:0009967 ! positive regulation of signal transduction
+is_a: GO:0009966 ! regulation of signal transduction
+is_a: GO:0010647 ! positive regulation of cell communication
+is_a: GO:0023056 ! positive regulation of signaling
+is_a: GO:0048584 ! positive regulation of response to stimulus
+
+[Term]
+id: GO:0009968 ! negative regulation of signal transduction
+is_a: GO:0009966 ! regulation of signal transduction
+is_a: GO:0010648 ! negative regulation of cell communication
+is_a: GO:0023057 ! negative regulation of signaling
+is_a: GO:0048585 ! negative regulation of response to stimulus
+
+[Term]
+id: GO:0009987 ! cellular process
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0010324 ! membrane invagination
+is_a: GO:0061024 ! membrane organization
+
+[Term]
+id: GO:0010469 ! regulation of signaling receptor activity
+is_a: GO:0009966 ! regulation of signal transduction
+is_a: GO:0065009 ! regulation of molecular function
+
+[Term]
+id: GO:0010638 ! positive regulation of organelle organization
+is_a: GO:0033043 ! regulation of organelle organization
+is_a: GO:0051130 ! positive regulation of cellular component organization
+
+[Term]
+id: GO:0010639 ! negative regulation of organelle organization
+is_a: GO:0033043 ! regulation of organelle organization
+is_a: GO:0051129 ! negative regulation of cellular component organization
+
+[Term]
+id: GO:0010646 ! regulation of cell communication
+is_a: GO:0050794 ! regulation of cellular process
+
+[Term]
+id: GO:0010647 ! positive regulation of cell communication
+is_a: GO:0010646 ! regulation of cell communication
+is_a: GO:0048522 ! positive regulation of cellular process
+
+[Term]
+id: GO:0010648 ! negative regulation of cell communication
+is_a: GO:0010646 ! regulation of cell communication
+is_a: GO:0048523 ! negative regulation of cellular process
+
+[Term]
+id: GO:0015031 ! protein transport
+is_a: GO:0015833 ! peptide transport
+is_a: GO:0045184 ! establishment of protein localization
+
+[Term]
+id: GO:0015833 ! peptide transport
+is_a: GO:0042886 ! amide transport
+is_a: GO:0071702 ! organic substance transport
+
+[Term]
+id: GO:0016043 ! cellular component organization
+is_a: GO:0009987 ! cellular process
+is_a: GO:0071840 ! cellular component organization or biogenesis
+
+[Term]
+id: GO:0016050 ! vesicle organization
+is_a: GO:0006996 ! organelle organization
+
+[Term]
+id: GO:0016192 ! vesicle-mediated transport
+is_a: GO:0006810 ! transport
+
+[Term]
+id: GO:0023051 ! regulation of signaling
+is_a: GO:0050789 ! regulation of biological process
+
+[Term]
+id: GO:0023052 ! signaling
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0023056 ! positive regulation of signaling
+is_a: GO:0023051 ! regulation of signaling
+is_a: GO:0048518 ! positive regulation of biological process
+
+[Term]
+id: GO:0023057 ! negative regulation of signaling
+is_a: GO:0023051 ! regulation of signaling
+is_a: GO:0048519 ! negative regulation of biological process
+
+[Term]
+id: GO:0030100 ! regulation of endocytosis
+is_a: GO:0051128 ! regulation of cellular component organization
+is_a: GO:0060627 ! regulation of vesicle-mediated transport
+
+[Term]
+id: GO:0030545 ! receptor regulator activity
+is_a: GO:0098772 ! molecular function regulator
+
+[Term]
+id: GO:0031503 ! protein-containing complex localization
+is_a: GO:0008104 ! protein localization
+
+[Term]
+id: GO:0032091 ! negative regulation of protein binding
+is_a: GO:0043393 ! regulation of protein binding
+is_a: GO:0051100 ! negative regulation of binding
+
+[Term]
+id: GO:0032092 ! positive regulation of protein binding
+is_a: GO:0043393 ! regulation of protein binding
+is_a: GO:0051099 ! positive regulation of binding
+
+[Term]
+id: GO:0032879 ! regulation of localization
+is_a: GO:0050789 ! regulation of biological process
+
+[Term]
+id: GO:0032880 ! regulation of protein localization
+is_a: GO:0032879 ! regulation of localization
+
+[Term]
+id: GO:0033036 ! macromolecule localization
+is_a: GO:0051179 ! localization
+
+[Term]
+id: GO:0033043 ! regulation of organelle organization
+is_a: GO:0051128 ! regulation of cellular component organization
+
+[Term]
+id: GO:0033365 ! protein localization to organelle
+is_a: GO:0034613 ! cellular protein localization
+
+[Term]
+id: GO:0034504 ! protein localization to nucleus
+is_a: GO:0033365 ! protein localization to organelle
+
+[Term]
+id: GO:0034613 ! cellular protein localization
+is_a: GO:0008104 ! protein localization
+is_a: GO:0070727 ! cellular macromolecule localization
+
+[Term]
+id: GO:0034629 ! cellular protein-containing complex localization
+is_a: GO:0031503 ! protein-containing complex localization
+is_a: GO:0034613 ! cellular protein localization
+
+[Term]
+id: GO:0038023 ! signaling receptor activity
+is_a: GO:0060089 ! molecular transducer activity
+
+[Term]
+id: GO:0042886 ! amide transport
+is_a: GO:0071705 ! nitrogen compound transport
+
+[Term]
+id: GO:0043388 ! positive regulation of DNA binding
+is_a: GO:0051099 ! positive regulation of binding
+is_a: GO:0051101 ! regulation of DNA binding
+
+[Term]
+id: GO:0043392 ! negative regulation of DNA binding
+is_a: GO:0051100 ! negative regulation of binding
+is_a: GO:0051101 ! regulation of DNA binding
+
+[Term]
+id: GO:0043393 ! regulation of protein binding
+is_a: GO:0051098 ! regulation of binding
+
+[Term]
+id: GO:0043900 ! regulation of multi-organism process
+is_a: GO:0050789 ! regulation of biological process
+
+[Term]
+id: GO:0043901 ! negative regulation of multi-organism process
+is_a: GO:0043900 ! regulation of multi-organism process
+is_a: GO:0048519 ! negative regulation of biological process
+
+[Term]
+id: GO:0043902 ! positive regulation of multi-organism process
+is_a: GO:0043900 ! regulation of multi-organism process
+is_a: GO:0048518 ! positive regulation of biological process
+
+[Term]
+id: GO:0043903 ! regulation of symbiosis, encompassing mutualism through parasitism
+is_a: GO:0043900 ! regulation of multi-organism process
+
+[Term]
+id: GO:0044092 ! negative regulation of molecular function
+is_a: GO:0065009 ! regulation of molecular function
+
+[Term]
+id: GO:0044093 ! positive regulation of molecular function
+is_a: GO:0065009 ! regulation of molecular function
+
+[Term]
+id: GO:0044403 ! symbiont process
+is_a: GO:0044419 ! interspecies interaction between organisms
+
+[Term]
+id: GO:0044419 ! interspecies interaction between organisms
+is_a: GO:0051704 ! multi-organism process
+
+[Term]
+id: GO:0044877 ! protein-containing complex binding
+is_a: GO:0005488 ! binding
+
+[Term]
+id: GO:0045184 ! establishment of protein localization
+is_a: GO:0008104 ! protein localization
+is_a: GO:0051234 ! establishment of localization
+
+[Term]
+id: GO:0045806 ! negative regulation of endocytosis
+is_a: GO:0030100 ! regulation of endocytosis
+is_a: GO:0051051 ! negative regulation of transport
+is_a: GO:0051129 ! negative regulation of cellular component organization
+
+[Term]
+id: GO:0045807 ! positive regulation of endocytosis
+is_a: GO:0030100 ! regulation of endocytosis
+is_a: GO:0051050 ! positive regulation of transport
+is_a: GO:0051130 ! positive regulation of cellular component organization
+
+[Term]
+id: GO:0048018 ! receptor ligand activity
+is_a: GO:0005102 ! signaling receptor binding
+is_a: GO:0030545 ! receptor regulator activity
+
+[Term]
+id: GO:0048518 ! positive regulation of biological process
+is_a: GO:0050789 ! regulation of biological process
+
+[Term]
+id: GO:0048519 ! negative regulation of biological process
+is_a: GO:0050789 ! regulation of biological process
+
+[Term]
+id: GO:0048522 ! positive regulation of cellular process
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0050794 ! regulation of cellular process
+
+[Term]
+id: GO:0048523 ! negative regulation of cellular process
+is_a: GO:0048519 ! negative regulation of biological process
+is_a: GO:0050794 ! regulation of cellular process
+
+[Term]
+id: GO:0048583 ! regulation of response to stimulus
+is_a: GO:0050789 ! regulation of biological process
+
+[Term]
+id: GO:0048584 ! positive regulation of response to stimulus
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0048583 ! regulation of response to stimulus
+
+[Term]
+id: GO:0048585 ! negative regulation of response to stimulus
+is_a: GO:0048519 ! negative regulation of biological process
+is_a: GO:0048583 ! regulation of response to stimulus
+
+[Term]
+id: GO:0050789 ! regulation of biological process
+is_a: GO:0065007 ! biological regulation
+
+[Term]
+id: GO:0050794 ! regulation of cellular process
+is_a: GO:0050789 ! regulation of biological process
+
+[Term]
+id: GO:0050896 ! response to stimulus
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0051049 ! regulation of transport
+is_a: GO:0032879 ! regulation of localization
+
+[Term]
+id: GO:0051050 ! positive regulation of transport
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0051049 ! regulation of transport
+
+[Term]
+id: GO:0051051 ! negative regulation of transport
+is_a: GO:0048519 ! negative regulation of biological process
+is_a: GO:0051049 ! regulation of transport
+
+[Term]
+id: GO:0051098 ! regulation of binding
+is_a: GO:0065009 ! regulation of molecular function
+
+[Term]
+id: GO:0051099 ! positive regulation of binding
+is_a: GO:0044093 ! positive regulation of molecular function
+is_a: GO:0051098 ! regulation of binding
+
+[Term]
+id: GO:0051100 ! negative regulation of binding
+is_a: GO:0044092 ! negative regulation of molecular function
+is_a: GO:0051098 ! regulation of binding
+
+[Term]
+id: GO:0051101 ! regulation of DNA binding
+is_a: GO:0051098 ! regulation of binding
+
+[Term]
+id: GO:0051128 ! regulation of cellular component organization
+is_a: GO:0050794 ! regulation of cellular process
+
+[Term]
+id: GO:0051129 ! negative regulation of cellular component organization
+is_a: GO:0048523 ! negative regulation of cellular process
+is_a: GO:0051128 ! regulation of cellular component organization
+
+[Term]
+id: GO:0051130 ! positive regulation of cellular component organization
+is_a: GO:0048522 ! positive regulation of cellular process
+is_a: GO:0051128 ! regulation of cellular component organization
+
+[Term]
+id: GO:0051179 ! localization
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0051222 ! positive regulation of protein transport
+is_a: GO:0051050 ! positive regulation of transport
+is_a: GO:0051223 ! regulation of protein transport
+is_a: GO:1904951 ! positive regulation of establishment of protein localization
+
+[Term]
+id: GO:0051223 ! regulation of protein transport
+is_a: GO:0070201 ! regulation of establishment of protein localization
+is_a: GO:0090087 ! regulation of peptide transport
+
+[Term]
+id: GO:0051224 ! negative regulation of protein transport
+is_a: GO:0051051 ! negative regulation of transport
+is_a: GO:0051223 ! regulation of protein transport
+is_a: GO:1904950 ! negative regulation of establishment of protein localization
+
+[Term]
+id: GO:0051234 ! establishment of localization
+is_a: GO:0051179 ! localization
+
+[Term]
+id: GO:0051641 ! cellular localization
+is_a: GO:0051179 ! localization
+
+[Term]
+id: GO:0051704 ! multi-organism process
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0051716 ! cellular response to stimulus
+is_a: GO:0009987 ! cellular process
+is_a: GO:0050896 ! response to stimulus
+
+[Term]
+id: GO:0060089 ! molecular transducer activity
+is_a: GO:0003674 ! molecular_function
+
+[Term]
+id: GO:0060341 ! regulation of cellular localization
+is_a: GO:0032879 ! regulation of localization
+
+[Term]
+id: GO:0060627 ! regulation of vesicle-mediated transport
+is_a: GO:0050794 ! regulation of cellular process
+is_a: GO:0051049 ! regulation of transport
+
+[Term]
+id: GO:0061024 ! membrane organization
+is_a: GO:0016043 ! cellular component organization
+
+[Term]
+id: GO:0065007 ! biological regulation
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0065009 ! regulation of molecular function
+is_a: GO:0065007 ! biological regulation
+
+[Term]
+id: GO:0070201 ! regulation of establishment of protein localization
+is_a: GO:0032880 ! regulation of protein localization
+
+[Term]
+id: GO:0070727 ! cellular macromolecule localization
+is_a: GO:0033036 ! macromolecule localization
+is_a: GO:0051641 ! cellular localization
+
+[Term]
+id: GO:0071702 ! organic substance transport
+is_a: GO:0006810 ! transport
+
+[Term]
+id: GO:0071705 ! nitrogen compound transport
+is_a: GO:0006810 ! transport
+
+[Term]
+id: GO:0071840 ! cellular component organization or biogenesis
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0085030 ! symbiont process benefiting host
+is_a: GO:0044403 ! symbiont process
+
+[Term]
+id: GO:0090087 ! regulation of peptide transport
+is_a: GO:0051049 ! regulation of transport
+
+[Term]
+id: GO:0097159 ! organic cyclic compound binding
+is_a: GO:0005488 ! binding
+
+[Term]
+id: GO:0098657 ! import into cell
+is_a: GO:0006810 ! transport
+
+[Term]
+id: GO:0098772 ! molecular function regulator
+is_a: GO:0003674 ! molecular_function
+
+[Term]
+id: GO:0140272 ! exogenous protein binding
+is_a: GO:0005488 ! binding
+
+[Term]
+id: GO:1900120 ! regulation of receptor binding
+is_a: GO:0043393 ! regulation of protein binding
+
+[Term]
+id: GO:1900121 ! negative regulation of receptor binding
+is_a: GO:0032091 ! negative regulation of protein binding
+is_a: GO:1900120 ! regulation of receptor binding
+
+[Term]
+id: GO:1900122 ! positive regulation of receptor binding
+is_a: GO:0032092 ! positive regulation of protein binding
+is_a: GO:1900120 ! regulation of receptor binding
+
+[Term]
+id: GO:1900180 ! regulation of protein localization to nucleus
+is_a: GO:1903827 ! regulation of cellular protein localization
+
+[Term]
+id: GO:1900181 ! negative regulation of protein localization to nucleus
+is_a: GO:1900180 ! regulation of protein localization to nucleus
+is_a: GO:1903828 ! negative regulation of cellular protein localization
+
+[Term]
+id: GO:1900182 ! positive regulation of protein localization to nucleus
+is_a: GO:1900180 ! regulation of protein localization to nucleus
+is_a: GO:1903829 ! positive regulation of cellular protein localization
+
+[Term]
+id: GO:1901363 ! heterocyclic compound binding
+is_a: GO:0005488 ! binding
+
+[Term]
+id: GO:1903335 ! regulation of vacuolar transport
+is_a: GO:0051049 ! regulation of transport
+
+[Term]
+id: GO:1903336 ! negative regulation of vacuolar transport
+is_a: GO:0051051 ! negative regulation of transport
+is_a: GO:1903335 ! regulation of vacuolar transport
+
+[Term]
+id: GO:1903337 ! positive regulation of vacuolar transport
+is_a: GO:0051050 ! positive regulation of transport
+is_a: GO:1903335 ! regulation of vacuolar transport
+
+[Term]
+id: GO:1903827 ! regulation of cellular protein localization
+is_a: GO:0032880 ! regulation of protein localization
+is_a: GO:0060341 ! regulation of cellular localization
+
+[Term]
+id: GO:1903828 ! negative regulation of cellular protein localization
+is_a: GO:0048519 ! negative regulation of biological process
+is_a: GO:1903827 ! regulation of cellular protein localization
+
+[Term]
+id: GO:1903829 ! positive regulation of cellular protein localization
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:1903827 ! regulation of cellular protein localization
+
+[Term]
+id: GO:1904950 ! negative regulation of establishment of protein localization
+is_a: GO:0048519 ! negative regulation of biological process
+is_a: GO:0070201 ! regulation of establishment of protein localization
+
+[Term]
+id: GO:1904951 ! positive regulation of establishment of protein localization
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0070201 ! regulation of establishment of protein localization
+
+[Term]
+id: GO:1905153 ! regulation of membrane invagination
+is_a: GO:0051128 ! regulation of cellular component organization
+
+[Term]
+id: GO:1905154 ! negative regulation of membrane invagination
+is_a: GO:0051129 ! negative regulation of cellular component organization
+is_a: GO:1905153 ! regulation of membrane invagination
+
+[Term]
+id: GO:1905155 ! positive regulation of membrane invagination
+is_a: GO:0051130 ! positive regulation of cellular component organization
+is_a: GO:1905153 ! regulation of membrane invagination
+
+[Term]
+id: GO:1905214 ! regulation of RNA binding
+is_a: GO:0051098 ! regulation of binding
+
+[Term]
+id: GO:1905215 ! negative regulation of RNA binding
+is_a: GO:0051100 ! negative regulation of binding
+is_a: GO:1905214 ! regulation of RNA binding
+
+[Term]
+id: GO:1905216 ! positive regulation of RNA binding
+is_a: GO:0051099 ! positive regulation of binding
+is_a: GO:1905214 ! regulation of RNA binding
+
+[Term]
+id: GO:2000272 ! negative regulation of signaling receptor activity
+is_a: GO:0010469 ! regulation of signaling receptor activity
+is_a: GO:0044092 ! negative regulation of molecular function
+
+[Term]
+id: GO:2000273 ! positive regulation of signaling receptor activity
+is_a: GO:0010469 ! regulation of signaling receptor activity
+is_a: GO:0044093 ! positive regulation of molecular function
+
+[Term]
+id: PATO:0000001 ! quality
+is_a: BFO:0000020 ! specifically dependent continuant
+
+[Term]
+id: PATO:0000057 ! occurrence
+is_a: PATO:0002323 ! temporal distribution quality
+
+[Term]
+id: PATO:0000068 ! qualitative
+is_a: PATO:0000001 ! quality
+
+[Term]
+id: PATO:0000069 ! deviation(from_normal)
+is_a: PATO:0000068 ! qualitative
+
+[Term]
+id: PATO:0000169 ! viability
+is_a: PATO:0001995 ! organismal quality
+
+[Term]
+id: PATO:0000297 ! arrested
+is_a: PATO:0002052 ! decreased occurrence
+is_a: PATO:0002324 ! offset quality
+
+[Term]
+id: PATO:0000460 ! abnormal
+is_a: PATO:0000069 ! deviation(from_normal)
+
+[Term]
+id: PATO:0000461 ! normal
+is_a: PATO:0000069 ! deviation(from_normal)
+
+[Term]
+id: PATO:0000498 ! increased duration
+is_a: PATO:0001309 ! duration
+is_a: PATO:0002304 ! increased process quality
+
+[Term]
+id: PATO:0000499 ! decreased duration
+is_a: PATO:0001309 ! duration
+is_a: PATO:0002302 ! decreased process quality
+
+[Term]
+id: PATO:0000718 ! lethal (sensu genetics)
+is_a: PATO:0000169 ! viability
+
+[Term]
+id: PATO:0001236 ! process quality
+is_a: PATO:0000001 ! quality
+
+[Term]
+id: PATO:0001241 ! physical object quality
+is_a: PATO:0000001 ! quality
+
+[Term]
+id: PATO:0001309 ! duration
+is_a: PATO:0002062 ! physical quality of a process
+
+[Term]
+id: PATO:0001558 ! lacking processual parts
+is_a: PATO:0001564 ! extra or missing processual parts
+
+[Term]
+id: PATO:0001564 ! extra or missing processual parts
+is_a: PATO:0001236 ! process quality
+
+[Term]
+id: PATO:0001995 ! organismal quality
+is_a: PATO:0001241 ! physical object quality
+
+[Term]
+id: PATO:0002051 ! increased occurrence
+is_a: PATO:0000057 ! occurrence
+is_a: PATO:0002304 ! increased process quality
+
+[Term]
+id: PATO:0002052 ! decreased occurrence
+is_a: PATO:0000057 ! occurrence
+is_a: PATO:0002302 ! decreased process quality
+
+[Term]
+id: PATO:0002062 ! physical quality of a process
+is_a: PATO:0001236 ! process quality
+
+[Term]
+id: PATO:0002146 ! virulence
+is_a: PATO:0001995 ! organismal quality
+
+[Term]
+id: PATO:0002147 ! reduced virulence
+is_a: PATO:0002146 ! virulence
+is_a: PATO:0002303 ! decreased object quality
+
+[Term]
+id: PATO:0002148 ! increased virulence
+is_a: PATO:0002146 ! virulence
+is_a: PATO:0002305 ! increased object quality
+
+[Term]
+id: PATO:0002300 ! increased quality
+is_a: PATO:0000069 ! deviation(from_normal)
+
+[Term]
+id: PATO:0002301 ! decreased quality
+is_a: PATO:0000069 ! deviation(from_normal)
+
+[Term]
+id: PATO:0002302 ! decreased process quality
+is_a: PATO:0001236 ! process quality
+is_a: PATO:0002301 ! decreased quality
+
+[Term]
+id: PATO:0002303 ! decreased object quality
+is_a: PATO:0001241 ! physical object quality
+is_a: PATO:0002301 ! decreased quality
+
+[Term]
+id: PATO:0002304 ! increased process quality
+is_a: PATO:0001236 ! process quality
+is_a: PATO:0002300 ! increased quality
+
+[Term]
+id: PATO:0002305 ! increased object quality
+is_a: PATO:0001241 ! physical object quality
+is_a: PATO:0002300 ! increased quality
+
+[Term]
+id: PATO:0002323 ! temporal distribution quality
+is_a: PATO:0002062 ! physical quality of a process
+
+[Term]
+id: PATO:0002324 ! offset quality
+is_a: PATO:0002323 ! temporal distribution quality
+
+[Term]
+id: PATO:0040003 ! pathogenicity
+is_a: PATO:0001995 ! organismal quality
+
+[Term]
+id: PATO:0045001 ! normal object quality
+is_a: PATO:0001241 ! physical object quality
+
+[Term]
+id: PATO:0045073 ! normal process quality
+is_a: PATO:0001236 ! process quality
+
+[Term]
+id: PATO:0045080 ! normal virulence
+is_a: PATO:0002146 ! virulence
+is_a: PATO:0045001 ! normal object quality
+
+[Term]
+id: PATO:0045084 ! normal duration
+is_a: PATO:0001309 ! duration
+is_a: PATO:0045073 ! normal process quality
+
+[Term]
+id: PATO:0045086 ! normal occurrence
+is_a: PATO:0000057 ! occurrence
+is_a: PATO:0045073 ! normal process quality
 
 [Term]
 id: PHIPO:0000001
@@ -1483,6 +2281,9 @@ namespace: host_phenotype
 def: "A host phenotype that affects the binding of a gene product to another substance. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0001092
 is_a: PHIPO:0000003 ! host phenotype
+intersection_of: PHIPO:0000003 ! host phenotype
+intersection_of: RO:0000052 GO:0005488 ! inheres in binding
+relationship: RO:0000052 GO:0005488 ! inheres in binding
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:22:45Z
 
@@ -1491,8 +2292,12 @@ id: PHIPO:0000166
 name: host RNA binding phenotype
 namespace: host_phenotype
 def: "A host phenotype that affects RNA binding. The relevant gene product may be encoded by the mutated gene, or by a different gene." []
+comment: where to add 'host' in logical definition?
 xref: FYPO:0002131
 is_a: PHIPO:0000165 ! host binding phenotype
+intersection_of: PHIPO:0000003 ! host phenotype
+intersection_of: RO:0000052 GO:0003723 ! inheres in RNA binding
+relationship: RO:0000052 GO:0003723 ! inheres in RNA binding
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:46:24Z
 
@@ -1521,8 +2326,14 @@ id: PHIPO:0000169
 name: abnormal host RNA binding
 namespace: host_phenotype
 def: "A host (molecular function??) phenotype in which occurrence of RNA binding by a gene product is abnormal, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+comment: where to add 'host' in logical definition?
 xref: FYPO:0002132
+is_a: PATO:0000001 ! quality
 is_a: PHIPO:0000166 ! host RNA binding phenotype
+intersection_of: PATO:0000001 ! quality
+intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier abnormal
+intersection_of: RO:0000052 GO:0003723 ! inheres in RNA binding
+relationship: PHIPO:0000304 PATO:0000460 ! qualifier abnormal
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:56:11Z
 
@@ -1531,8 +2342,14 @@ id: PHIPO:0000170
 name: normal host RNA binding
 namespace: host_phenotype
 def: "A host (molecular function??) phenotype in which occurrence of RNA binding by a gene product is normal (i.e. indistinguishable from wild type). The relevant gene product may be encoded by the mutated gene, or by a different gene." []
+comment: where to add 'host' in logical definition?
 xref: FYPO:0002357
+is_a: PATO:0000001 ! quality
 is_a: PHIPO:0000166 ! host RNA binding phenotype
+intersection_of: PATO:0000001 ! quality
+intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier normal
+intersection_of: RO:0000052 GO:0003723 ! inheres in RNA binding
+relationship: PHIPO:0000304 PATO:0000461 ! qualifier normal
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:57:11Z
 
@@ -1561,8 +2378,13 @@ id: PHIPO:0000173
 name: abolished host RNA binding
 namespace: host_phenotype
 def: "A host (molecular function??) phenotype in which RNA binding by a gene product does not occur, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+comment: where to add 'host' in logical definition?
 xref: FYPO:0002133
+is_a: PATO:0001558 ! lacking processual parts
 is_a: PHIPO:0000169 ! abnormal host RNA binding
+intersection_of: PATO:0001558 ! lacking processual parts
+intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier abnormal
+intersection_of: RO:0000052 GO:0003723 ! inheres in RNA binding
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:04:47Z
 
@@ -1581,8 +2403,12 @@ id: PHIPO:0000175
 name: decreased host RNA binding
 namespace: host_phenotype
 def: "A host (molecular function??) phenotype in which occurrence of RNA binding by a gene product is decreased, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+comment: where to add 'host' in logical definition?
 xref: FYPO:0002134
+is_a: PATO:0002052 ! decreased occurrence
 is_a: PHIPO:0000169 ! abnormal host RNA binding
+intersection_of: PATO:0002052 ! decreased occurrence
+intersection_of: RO:0000052 GO:0003723 ! inheres in RNA binding
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:05:29Z
 
@@ -1601,8 +2427,12 @@ id: PHIPO:0000177
 name: increased host RNA binding
 namespace: host_phenotype
 def: "A host (molecular function??) phenotype in which occurrence of RNA binding by a gene product is increased, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+comment: where to add 'host' in logical definition?
 xref: FYPO:0002135
+is_a: PATO:0002051 ! increased occurrence
 is_a: PHIPO:0000169 ! abnormal host RNA binding
+intersection_of: PATO:0002051 ! increased occurrence
+intersection_of: RO:0000052 GO:0003723 ! inheres in RNA binding
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:05:53Z
 
@@ -1623,12 +2453,15 @@ creation_date: 2018-10-01T13:09:13Z
 id: PHIPO:0000179
 name: host DNA binding phenotype
 namespace: host_phenotype
-def: "A phenotype that affects DNA binding. The affected gene product may be encoded by the mutated gene, or by a different gene." []
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.\n\nLogical definition\nphenotype (this would need to be PHIPO pathogen phenotype/host phenotype or disease formation phenotype) and (inheres_in some DNA binding (GO:0003677)
+def: "A host phenotype that affects DNA binding. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 xref: FYPO:0000653
 is_a: PHIPO:0000165 ! host binding phenotype
+intersection_of: PHIPO:0000003 ! host phenotype
+intersection_of: RO:0000052 GO:0003677 ! inheres in DNA binding
+relationship: RO:0000052 GO:0003677 ! inheres in DNA binding
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:09:16Z
 
@@ -1647,8 +2480,14 @@ id: PHIPO:0000181
 name: abnormal host DNA binding
 namespace: host_phenotype
 def: "A host (molecular function??) phenotype in which occurrence of DNA binding by a gene product is abnormal, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+comment: where to add 'host' in logical definition?
 xref: FYPO:0000656
+is_a: PATO:0000001 ! quality
 is_a: PHIPO:0000179 ! host DNA binding phenotype
+intersection_of: PATO:0000001 ! quality
+intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier abnormal
+intersection_of: RO:0000052 GO:0003677 ! inheres in DNA binding
+relationship: PHIPO:0000304 PATO:0000460 ! qualifier abnormal
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:09:27Z
 
@@ -1657,9 +2496,14 @@ id: PHIPO:0000182
 name: normal host DNA binding
 namespace: host_phenotype
 def: "A host (molecular function??) phenotype in which occurrence of DNA binding by a gene product is normal (i.e. indistinguishable from wild type). The relevant gene product may be encoded by the mutated gene, or by a different gene." []
-comment: Logical defintion\nquality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (qualifier (??) some normal PATO:0000461)
+comment: where to add 'host' in logical definition?
 xref: FYPO:0000655
+is_a: PATO:0000001 ! quality
 is_a: PHIPO:0000179 ! host DNA binding phenotype
+intersection_of: PATO:0000001 ! quality
+intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier normal
+intersection_of: RO:0000052 GO:0003677 ! inheres in DNA binding
+relationship: PHIPO:0000304 PATO:0000461 ! qualifier normal
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:09:35Z
 
@@ -1679,6 +2523,7 @@ id: PHIPO:0000184
 name: abnormal host multiple protein binding to DNA
 namespace: host_phenotype
 def: "A host (molecular function??) phenotype in which the binding of two or more proteins to DNA is abnormal. The proteins may bind simultaneously or sequentially, but both or all would normally be present together on DNA at some time. One affected gene product may be encoded by the mutated gene, or all may be encoded by different genes." []
+comment: no logical definition in FYPO
 xref: FYPO:0006555
 is_a: PHIPO:0000181 ! abnormal host DNA binding
 created_by: alaynecuzick
@@ -1700,7 +2545,11 @@ name: abolished host DNA binding
 namespace: host_phenotype
 def: "A host (molecular function??) phenotype in which DNA binding by a gene product does not occur, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0000659
+is_a: PATO:0001558 ! lacking processual parts
 is_a: PHIPO:0000181 ! abnormal host DNA binding
+intersection_of: PATO:0001558 ! lacking processual parts
+intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier abnormal
+intersection_of: RO:0000052 GO:0003677 ! inheres in DNA binding
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:12:57Z
 
@@ -1719,6 +2568,7 @@ id: PHIPO:0000188
 name: altered host DNA binding specificity
 namespace: host_phenotype
 def: "A host (molecular function??) phenotype in which a gene product that normally binds to a specific DNA sequence instead binds to a different sequence when a gene is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+comment: no logical definition in FYPO
 xref: FYPO:0003735
 is_a: PHIPO:0000181 ! abnormal host DNA binding
 created_by: alaynecuzick
@@ -1739,8 +2589,12 @@ id: PHIPO:0000190
 name: decreased host DNA binding
 namespace: host_phenotype
 def: "A host (molecular function??) phenotype in which occurrence of DNA binding by a gene product is decreased, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+comment: where to add 'host' in logical definition?
 xref: FYPO:0000658
+is_a: PATO:0002052 ! decreased occurrence
 is_a: PHIPO:0000181 ! abnormal host DNA binding
+intersection_of: PATO:0002052 ! decreased occurrence
+intersection_of: RO:0000052 GO:0003677 ! inheres in DNA binding
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:14:10Z
 
@@ -1759,8 +2613,12 @@ id: PHIPO:0000192
 name: increased host DNA binding
 namespace: host_phenotype
 def: "A host (molecular function??) phenotype in which occurrence of DNA binding by a gene product is increased, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+comment: where to add 'host' in logical definition?
 xref: FYPO:0000657
+is_a: PATO:0002051 ! increased occurrence
 is_a: PHIPO:0000181 ! abnormal host DNA binding
+intersection_of: PATO:0002051 ! increased occurrence
+intersection_of: RO:0000052 GO:0003677 ! inheres in DNA binding
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:14:29Z
 
@@ -2848,4 +3706,11 @@ namespace: host_phenotype
 is_a: PHIPO:0000275 ! abnormal host reproductive phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-05T13:00:37Z
+
+[Typedef]
+id: PHIPO:0000304
+name: qualifier
+comment: Used in FYPO as described in PATO best practices; placeholder relation to indicate normality/abnormality.\n\nwhich namespace? do we need all 3 triplicated again?
+created_by: alaynecuzick
+creation_date: 2018-10-12T13:24:02Z
 
