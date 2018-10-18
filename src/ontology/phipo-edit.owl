@@ -4350,6 +4350,9 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-05T11:00:39Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHI-base definition of &apos;effector&apos;. (To be made into a class or requested from an external ontology to make into a logical definition).
+
+An effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defences or other host responses.</rdfs:comment>
         <rdfs:label xml:lang="en">effector phenotype</rdfs:label>
     </owl:Class>
     
@@ -4633,6 +4636,293 @@ a host gene mutation may alter a immune reponse (turn on or off) in the absence 
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-05T13:00:37Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">host_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">abnormal dissemination of host sexual product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000305 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000305">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000280"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(Required for successful infection of the host species). The ability of an organism to activate or suppress host defences to enable infectious disease. (Irrespective of the host genotype).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T12:55:58Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">effector of pathogencicity phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000306 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000306">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000311"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The host defences activated by the pathogen are altered compared to the wild type interaction</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T12:56:08Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal effector of virulence phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000307 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000307">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000305"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ability to cause disease by activating or suppressing host defences is unaltered compared to the wildtype interaction. This may result in the outcome of being pathogenic or not-pathogenic.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T12:58:41Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal effector of pathogenicity phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000308 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000308">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000307"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The host defences activated by the pathogen are unaltered compared to the wild type interaction</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T12:59:50Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal effector of pathogenicity activation of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000309 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000309">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000307"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The host defences suppressed by the pathogen are unaltered compared to the wild type interaction</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:11:15Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal effector of pathogenicity suppression of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000310 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000310">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000311"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The pathogen has the ability to cause infectious disease dependent upon the gene for gene relationship between the pathogen and host genotype and this is unaltered compared to the wildtype interaction. This may result in disease (virulence) or no disease (avirulence).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:12:40Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal effector of virulence phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000311 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000311">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000280"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(gene for gene relationships) or defined from the phenotype described in the published study.
+The pathogen has the ability to cause infectious disease dependent upon the gene for gene relationship between the pathogen and host genotype.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:14:06Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">effector of virulence phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000312 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000312">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000305"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ability to cause disease by activating or suppressing host defences is altered compared to the wildtype interaction.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:15:10Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal effector of pathogenicity phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000313 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000313">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000310"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The host defences activated by the pathogen are unaltered compared to the wild type interaction</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:22:08Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal effector of virulence activation of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000314 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000314">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000310"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The host defences suppressed by the pathogen are unaltered compared to the wild type interaction</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:22:20Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal effector of virulence suppression of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000315 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000315">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000306"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The pathogen has the ability to cause infectious disease dependent upon the gene for gene relationship between the pathogen and host genotype and this is altered compared to the wildtype interaction. This may result in disease (virulence) or no disease (avirulence).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:25:51Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal effector of virulence activation of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000316 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000316">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000315"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The pathogen effector entity has a decreased ability to activate host defence.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:26:40Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased effector of virulence activation of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000317 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000317">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000315"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The pathogen effector entity has an increased ability to activate host defence.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:27:34Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased effector of virulence activation of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000318 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000318">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000306"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The host defences suppressed by the pathogen are altered compare to the wild type interaction</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:28:11Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal effector of virulence suppression of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000319 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000319">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000318"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The pathogen effector entity has a decreased ability to suppress host defence.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:28:53Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased effector of virulence suppression of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000320 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000320">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000318"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The pathogen effector entity has an increased ability to suppress host defence.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:29:31Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased effector of virulence suppression of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000321 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000321">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000312"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The host defences activated by the pathogen are altered compared to the wild type interaction.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:31:28Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal effector of pathogenicity activation of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000322 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000322">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000321"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The pathogen effector entity has gained the ability to activate host defence.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:32:29Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">gain of effector of pathogenicity activation of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000323 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000323">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000321"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The pathogen effector entity has lost the ability to activate host defence.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:32:51Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">loss of effector of pathogenicity activation of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000324 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000324">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000312"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The host defences suppressed by the pathogen are altered compared to the wild type interaction</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:33:53Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal effector of pathogenicity suppression of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000325 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000325">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000324"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The pathogen effector entity has gained the ability to suppress host defence.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:34:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">gain of effector of pathogenicity suppression of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000326 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000326">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000324"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The pathogen effector entity has lost the ability to suppress host defence.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:34:33Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">loss of effector of pathogenicity suppression of host defence</rdfs:label>
     </owl:Class>
     
 
