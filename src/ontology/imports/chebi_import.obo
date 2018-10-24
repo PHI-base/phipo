@@ -1,0 +1,1525 @@
+format-version: 1.2
+ontology: phipo/imports/chebi_import
+
+[Term]
+id: CHEBI:10545
+name: electron
+namespace: chebi_ontology
+def: "Elementary particle not affected by the strong force having a spin 1/2, a negative elementary charge and a rest mass of 0.000548579903(13) u, or 0.51099906(15) MeV." []
+subset: 3_STAR
+synonym: "beta" RELATED [IUPAC]
+synonym: "beta(-)" RELATED [ChEBI]
+synonym: "beta-particle" RELATED [IUPAC]
+synonym: "e" RELATED [IUPAC]
+synonym: "e(-)" RELATED [UniProt]
+synonym: "e-" RELATED [KEGG_COMPOUND]
+synonym: "electron" EXACT [KEGG_COMPOUND]
+synonym: "electron" EXACT IUPAC_NAME [IUPAC]
+synonym: "electron" EXACT [ChEBI]
+synonym: "negatron" RELATED [IUPAC]
+xref: KEGG:C05359
+xref: PMID:21614077 "Europe PMC"
+is_a: CHEBI:36338 ! lepton
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "0.000548579903" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[*-]" xsd:string
+
+[Term]
+id: CHEBI:22712
+name: benzenes
+namespace: chebi_ontology
+def: "Any benzenoid aromatic compound consisting of the benzene skeleton and its substituted derivatives." []
+subset: 3_STAR
+is_a: CHEBI:33836 ! benzenoid aromatic compound
+
+[Term]
+id: CHEBI:23116
+name: chlorine atom
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "17Cl" RELATED [IUPAC]
+synonym: "Chlor" RELATED [ChEBI]
+synonym: "chlore" RELATED [ChEBI]
+synonym: "chlorine" EXACT IUPAC_NAME [IUPAC]
+synonym: "chlorine" RELATED [ChEBI]
+synonym: "chlorum" RELATED [ChEBI]
+synonym: "Cl" RELATED [IUPAC]
+synonym: "cloro" RELATED [ChEBI]
+xref: WebElements:Cl
+is_a: CHEBI:24473 ! halogen
+relationship: has_role CHEBI:27027 ! micronutrient
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "Cl" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/Cl" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "ZAMOUSCENKQFHK-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "35.45270" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "34.969" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[Cl]" xsd:string
+
+[Term]
+id: CHEBI:23117
+name: chlorine molecular entity
+namespace: chebi_ontology
+def: "A halogen molecular entity containing one or more atoms of chlorine." []
+subset: 3_STAR
+is_a: CHEBI:24471 ! halogen molecular entity
+relationship: has_part CHEBI:23116 ! chlorine atom
+
+[Term]
+id: CHEBI:23132
+name: chlorobenzenes
+namespace: chebi_ontology
+def: "Any organochlorine compound containing a benzene ring which is substituted by one or more chlorines." []
+subset: 3_STAR
+is_a: CHEBI:22712 ! benzenes
+is_a: CHEBI:36683 ! organochlorine compound
+
+[Term]
+id: CHEBI:23367
+name: molecular entity
+namespace: chebi_ontology
+def: "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity." []
+subset: 3_STAR
+synonym: "entidad molecular" RELATED [IUPAC]
+synonym: "entidades moleculares" RELATED [IUPAC]
+synonym: "entite moleculaire" RELATED [IUPAC]
+synonym: "molecular entities" RELATED [IUPAC]
+synonym: "molecular entity" EXACT IUPAC_NAME [IUPAC]
+synonym: "molekulare Entitaet" RELATED [ChEBI]
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:23924
+name: enzyme inhibitor
+namespace: chebi_ontology
+def: "A compound or agent that combines with an enzyme in such a manner as to prevent the normal substrate-enzyme combination and the catalytic reaction." []
+subset: 3_STAR
+synonym: "enzyme inhibitor" EXACT IUPAC_NAME [IUPAC]
+synonym: "enzyme inhibitors" RELATED [ChEBI]
+synonym: "inhibidor enzimatico" RELATED [ChEBI]
+synonym: "inhibidores enzimaticos" RELATED [ChEBI]
+synonym: "inhibiteur enzymatique" RELATED [ChEBI]
+synonym: "inhibiteurs enzymatiques" RELATED [ChEBI]
+is_a: CHEBI:35222 ! inhibitor
+is_a: CHEBI:52206 ! biochemical role
+
+[Term]
+id: CHEBI:24127
+name: fungicide
+namespace: chebi_ontology
+def: "A substance used to destroy fungal pests." []
+subset: 3_STAR
+synonym: "fungicides" RELATED [ChEBI]
+is_a: CHEBI:25944 ! pesticide
+is_a: CHEBI:35718 ! antifungal agent
+
+[Term]
+id: CHEBI:24431
+name: chemical entity
+namespace: chebi_ontology
+def: "A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances." []
+subset: 3_STAR
+synonym: "chemical entity" EXACT [UniProt]
+
+[Term]
+id: CHEBI:24432
+name: biological role
+namespace: chebi_ontology
+def: "A role played by the molecular entity or part thereof within a biological context." []
+subset: 3_STAR
+synonym: "biological function" RELATED [ChEBI]
+is_a: CHEBI:50906 ! role
+
+[Term]
+id: CHEBI:24433
+name: group
+namespace: chebi_ontology
+def: "A defined linked collection of atoms or a single atom within a molecular entity." []
+subset: 3_STAR
+synonym: "group" EXACT IUPAC_NAME [IUPAC]
+synonym: "groupe" RELATED [IUPAC]
+synonym: "grupo" RELATED [IUPAC]
+synonym: "grupos" RELATED [IUPAC]
+synonym: "Gruppe" RELATED [ChEBI]
+synonym: "Rest" RELATED [ChEBI]
+is_a: CHEBI:24431 ! chemical entity
+relationship: has_part CHEBI:33250 ! atom
+
+[Term]
+id: CHEBI:24471
+name: halogen molecular entity
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "halogen compounds" RELATED [ChEBI]
+synonym: "halogen molecular entities" RELATED [ChEBI]
+synonym: "halogen molecular entity" EXACT [ChEBI]
+is_a: CHEBI:33675 ! p-block molecular entity
+relationship: has_part CHEBI:24473 ! halogen
+
+[Term]
+id: CHEBI:24473
+name: halogen
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "group 17 elements" RELATED [ChEBI]
+synonym: "group VII elements" RELATED [ChEBI]
+synonym: "halogen" EXACT IUPAC_NAME [IUPAC]
+synonym: "Halogene" RELATED [ChEBI]
+synonym: "halogene" RELATED [ChEBI]
+synonym: "halogenes" RELATED [ChEBI]
+synonym: "halogeno" RELATED [ChEBI]
+synonym: "halogenos" RELATED [ChEBI]
+synonym: "halogens" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:25585 ! nonmetal atom
+is_a: CHEBI:33560 ! p-block element atom
+
+[Term]
+id: CHEBI:24532
+name: organic heterocyclic compound
+namespace: chebi_ontology
+def: "A cyclic compound having as ring members atoms of carbon and at least of one other element." []
+subset: 3_STAR
+synonym: "organic heterocycle" RELATED [ChEBI]
+synonym: "organic heterocyclic compounds" RELATED [ChEBI]
+is_a: CHEBI:33285 ! heteroorganic entity
+is_a: CHEBI:33832 ! organic cyclic compound
+is_a: CHEBI:5686 ! heterocyclic compound
+
+[Term]
+id: CHEBI:24651
+name: hydroxides
+namespace: chebi_ontology
+def: "Hydroxides are chemical compounds containing a hydroxy group or salts containing hydroxide (OH(-))." []
+subset: 3_STAR
+is_a: CHEBI:25806 ! oxygen molecular entity
+is_a: CHEBI:33608 ! hydrogen molecular entity
+is_a: CHEBI:37577 ! heteroatomic molecular entity
+relationship: has_part CHEBI:43176 ! hydroxy group
+
+[Term]
+id: CHEBI:24835
+name: inorganic molecular entity
+namespace: chebi_ontology
+def: "A molecular entity that contains no carbon." []
+subset: 3_STAR
+synonym: "anorganische Verbindungen" RELATED [ChEBI]
+synonym: "inorganic compounds" RELATED [ChEBI]
+synonym: "inorganic entity" RELATED [ChEBI]
+synonym: "inorganic molecular entities" RELATED [ChEBI]
+synonym: "inorganics" RELATED [ChEBI]
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:25367
+name: molecule
+namespace: chebi_ontology
+def: "Any polyatomic entity that is an electrically neutral entity consisting of more than one atom." []
+subset: 3_STAR
+synonym: "molecula" RELATED [IUPAC]
+synonym: "molecule" EXACT [IUPAC]
+synonym: "molecules" RELATED [IUPAC]
+synonym: "Molekuel" RELATED [ChEBI]
+synonym: "neutral molecular compounds" RELATED [IUPAC]
+is_a: CHEBI:36357 ! polyatomic entity
+
+[Term]
+id: CHEBI:25555
+name: nitrogen atom
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "7N" RELATED [IUPAC]
+synonym: "azote" RELATED [IUPAC]
+synonym: "N" RELATED [IUPAC]
+synonym: "nitrogen" EXACT IUPAC_NAME [IUPAC]
+synonym: "nitrogen" RELATED [ChEBI]
+synonym: "nitrogeno" RELATED [ChEBI]
+synonym: "Stickstoff" RELATED [ChEBI]
+xref: WebElements:N
+is_a: CHEBI:25585 ! nonmetal atom
+is_a: CHEBI:33300 ! pnictogen
+relationship: has_role CHEBI:33937 ! macronutrient
+property_value: http://purl.obolibrary.org/obo/chebi/formula "N" xsd:string
+
+[Term]
+id: CHEBI:25585
+name: nonmetal atom
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "Nichtmetall" RELATED [ChEBI]
+synonym: "Nichtmetalle" RELATED [ChEBI]
+synonym: "no metal" RELATED [ChEBI]
+synonym: "no metales" RELATED [ChEBI]
+synonym: "non-metal" RELATED [ChEBI]
+synonym: "non-metaux" RELATED [ChEBI]
+synonym: "nonmetal" EXACT IUPAC_NAME [IUPAC]
+synonym: "nonmetal" RELATED [ChEBI]
+synonym: "nonmetals" RELATED [ChEBI]
+is_a: CHEBI:33250 ! atom
+
+[Term]
+id: CHEBI:25805
+name: oxygen atom
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "8O" RELATED [IUPAC]
+synonym: "O" RELATED [IUPAC]
+synonym: "oxigeno" RELATED [ChEBI]
+synonym: "oxygen" EXACT IUPAC_NAME [IUPAC]
+synonym: "oxygen" RELATED [ChEBI]
+synonym: "oxygene" RELATED [ChEBI]
+synonym: "Sauerstoff" RELATED [ChEBI]
+xref: KEGG:C00007
+xref: WebElements:O
+is_a: CHEBI:25585 ! nonmetal atom
+is_a: CHEBI:33303 ! chalcogen
+relationship: has_role CHEBI:33937 ! macronutrient
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "QVGXLLKOCUKJST-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "15.99940" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "15.995" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[O]" xsd:string
+
+[Term]
+id: CHEBI:25806
+name: oxygen molecular entity
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "oxygen molecular entities" RELATED [ChEBI]
+synonym: "oxygen molecular entity" EXACT [ChEBI]
+is_a: CHEBI:33304 ! chalcogen molecular entity
+relationship: has_part CHEBI:25805 ! oxygen atom
+
+[Term]
+id: CHEBI:25944
+name: pesticide
+namespace: chebi_ontology
+def: "Strictly, a substance intended to kill pests. In common usage, any substance used for controlling, preventing, or destroying animal, microbiological or plant pests." []
+subset: 3_STAR
+synonym: "pesticide" EXACT IUPAC_NAME [IUPAC]
+synonym: "pesticides" RELATED [ChEBI]
+synonym: "Pestizid" RELATED [ChEBI]
+synonym: "Pestizide" RELATED [ChEBI]
+xref: Wikipedia:Pesticide
+is_a: CHEBI:33232 ! application
+
+[Term]
+id: CHEBI:26878
+name: tertiary alcohol
+namespace: chebi_ontology
+def: "A tertiary alcohol is a compound in which a hydroxy group, -OH, is attached to a saturated carbon atom which has three other carbon atoms attached to it." []
+subset: 3_STAR
+synonym: "tertiary alcohol" EXACT [ChEBI]
+synonym: "tertiary alcohols" RELATED [ChEBI]
+is_a: CHEBI:30879 ! alcohol
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C4H7OR3" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "71.09780" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "71.050" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "OC(C[*])(C[*])C[*]" xsd:string
+
+[Term]
+id: CHEBI:27027
+name: micronutrient
+namespace: chebi_ontology
+def: "Any nutrient required in small quantities by organisms throughout their life in order to orchestrate a range of physiological functions." []
+subset: 3_STAR
+synonym: "micronutrients" RELATED [ChEBI]
+synonym: "trace elements" RELATED [ChEBI]
+xref: Wikipedia:Micronutrient
+is_a: CHEBI:33284 ! nutrient
+
+[Term]
+id: CHEBI:27594
+name: carbon atom
+namespace: chebi_ontology
+alt_id: CHEBI:23009
+alt_id: CHEBI:3399
+subset: 3_STAR
+synonym: "6C" RELATED [IUPAC]
+synonym: "C" RELATED [IUPAC]
+synonym: "C" RELATED [KEGG_COMPOUND]
+synonym: "Carbon" RELATED [KEGG_COMPOUND]
+synonym: "carbon" EXACT IUPAC_NAME [IUPAC]
+synonym: "carbon" RELATED [ChEBI]
+synonym: "carbone" RELATED [ChEBI]
+synonym: "carbonium" RELATED [ChEBI]
+synonym: "carbono" RELATED [ChEBI]
+synonym: "Kohlenstoff" RELATED [ChEBI]
+xref: CAS:7440-44-0 "ChemIDplus"
+xref: KEGG:C06265
+xref: WebElements:C
+is_a: CHEBI:25585 ! nonmetal atom
+is_a: CHEBI:33306 ! carbon group element atom
+relationship: has_role CHEBI:33937 ! macronutrient
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "OKTJSMMVPCPJKN-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "12.01070" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "12.000" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[C]" xsd:string
+
+[Term]
+id: CHEBI:30879
+name: alcohol
+namespace: chebi_ontology
+alt_id: CHEBI:13804
+alt_id: CHEBI:22288
+alt_id: CHEBI:2553
+def: "A compound in which a hydroxy group, -OH, is attached to a saturated carbon atom." []
+subset: 3_STAR
+synonym: "Alcohol" EXACT [KEGG_COMPOUND]
+synonym: "alcohols" EXACT IUPAC_NAME [IUPAC]
+synonym: "an alcohol" RELATED [UniProt]
+xref: KEGG:C00069
+is_a: CHEBI:33822 ! organic hydroxy compound
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "HOR" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "17.003" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "O[*]" xsd:string
+
+[Term]
+id: CHEBI:33232
+name: application
+namespace: chebi_ontology
+def: "Intended use of the molecular entity or part thereof by humans." []
+subset: 3_STAR
+is_a: CHEBI:50906 ! role
+
+[Term]
+id: CHEBI:33233
+name: fundamental particle
+namespace: chebi_ontology
+def: "A particle not known to have substructure." []
+subset: 3_STAR
+synonym: "elementary particle" EXACT IUPAC_NAME [IUPAC]
+synonym: "elementary particles" RELATED [ChEBI]
+is_a: CHEBI:36342 ! subatomic particle
+
+[Term]
+id: CHEBI:33246
+name: inorganic group
+namespace: chebi_ontology
+def: "Any substituent group which does not contain carbon." []
+subset: 3_STAR
+synonym: "inorganic groups" RELATED [ChEBI]
+is_a: CHEBI:24433 ! group
+
+[Term]
+id: CHEBI:33250
+name: atom
+namespace: chebi_ontology
+alt_id: CHEBI:22671
+alt_id: CHEBI:23907
+def: "A chemical entity constituting the smallest component of an element having the chemical properties of the element." []
+subset: 3_STAR
+synonym: "atom" EXACT IUPAC_NAME [IUPAC]
+synonym: "atome" RELATED [IUPAC]
+synonym: "atomo" RELATED [IUPAC]
+synonym: "atoms" RELATED [ChEBI]
+synonym: "atomus" RELATED [ChEBI]
+synonym: "element" RELATED [ChEBI]
+synonym: "elements" RELATED [ChEBI]
+is_a: CHEBI:24431 ! chemical entity
+relationship: has_part CHEBI:10545 ! electron
+relationship: has_part CHEBI:33252 ! atomic nucleus
+
+[Term]
+id: CHEBI:33252
+name: atomic nucleus
+namespace: chebi_ontology
+def: "A nucleus is the positively charged central portion of an atom, excluding the orbital electrons." []
+subset: 3_STAR
+synonym: "Atomkern" RELATED [ChEBI]
+synonym: "Kern" RELATED [ChEBI]
+synonym: "noyau" RELATED [IUPAC]
+synonym: "noyau atomique" RELATED [ChEBI]
+synonym: "nuclei" RELATED [ChEBI]
+synonym: "nucleo" RELATED [IUPAC]
+synonym: "nucleo atomico" RELATED [ChEBI]
+synonym: "nucleus" EXACT IUPAC_NAME [IUPAC]
+synonym: "nucleus atomi" RELATED [ChEBI]
+is_a: CHEBI:36347 ! nuclear particle
+relationship: has_part CHEBI:33253 ! nucleon
+
+[Term]
+id: CHEBI:33253
+name: nucleon
+namespace: chebi_ontology
+def: "Heavy nuclear particle: proton or neutron." []
+subset: 3_STAR
+synonym: "nucleon" EXACT IUPAC_NAME [IUPAC]
+synonym: "nucleon" EXACT [IUPAC]
+synonym: "nucleons" RELATED [ChEBI]
+synonym: "Nukleon" RELATED [ChEBI]
+synonym: "Nukleonen" RELATED [ChEBI]
+is_a: CHEBI:36339 ! baryon
+is_a: CHEBI:36347 ! nuclear particle
+
+[Term]
+id: CHEBI:33281
+name: antimicrobial agent
+namespace: chebi_ontology
+alt_id: CHEBI:22582
+def: "A substance that kills or slows the growth of microorganisms, including bacteria, viruses, fungi and protozoans." []
+subset: 3_STAR
+synonym: "antibiotic" RELATED [ChEBI]
+synonym: "antibiotics" RELATED [ChEBI]
+synonym: "Antibiotika" RELATED [ChEBI]
+synonym: "Antibiotikum" RELATED [ChEBI]
+synonym: "antibiotique" RELATED [IUPAC]
+synonym: "antimicrobial" RELATED [ChEBI]
+synonym: "antimicrobial agents" RELATED [ChEBI]
+synonym: "antimicrobials" RELATED [ChEBI]
+synonym: "microbicide" RELATED [ChEBI]
+synonym: "microbicides" RELATED [ChEBI]
+xref: PMID:12964249 "Europe PMC"
+xref: PMID:22117953 "Europe PMC"
+xref: PMID:22439833 "Europe PMC"
+xref: PMID:22849268 "Europe PMC"
+xref: PMID:22849276 "Europe PMC"
+xref: PMID:22958833 "Europe PMC"
+is_a: CHEBI:24432 ! biological role
+
+[Term]
+id: CHEBI:33284
+name: nutrient
+namespace: chebi_ontology
+def: "A nutrient is a food component that an organism uses to survive and grow." []
+subset: 3_STAR
+synonym: "nutrients" RELATED [ChEBI]
+is_a: CHEBI:78295 ! food component
+
+[Term]
+id: CHEBI:33285
+name: heteroorganic entity
+namespace: chebi_ontology
+def: "A heteroorganic entity is an organic molecular entity in which carbon atoms or organic groups are bonded directly to one or more heteroatoms." []
+subset: 3_STAR
+synonym: "heteroorganic entities" RELATED [ChEBI]
+synonym: "organoelement compounds" RELATED [ChEBI]
+is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:33286
+name: agrochemical
+namespace: chebi_ontology
+def: "An agrochemical is a substance that is used in agriculture or horticulture." []
+subset: 3_STAR
+synonym: "agrichemical" RELATED [ChEBI]
+synonym: "agrichemicals" RELATED [ChEBI]
+synonym: "agricultural chemicals" RELATED [ChEBI]
+synonym: "agrochemicals" RELATED [ChEBI]
+xref: Wikipedia:Agrochemical
+is_a: CHEBI:33232 ! application
+
+[Term]
+id: CHEBI:33300
+name: pnictogen
+namespace: chebi_ontology
+def: "Any p-block element atom that is in group 15 of the periodic table: nitrogen, phosphorus, arsenic, antimony and bismuth." []
+subset: 3_STAR
+synonym: "group 15 elements" RELATED [ChEBI]
+synonym: "group V elements" RELATED [ChEBI]
+synonym: "nitrogenoideos" RELATED [ChEBI]
+synonym: "nitrogenoides" RELATED [ChEBI]
+synonym: "pnictogene" RELATED [ChEBI]
+synonym: "pnictogenes" RELATED [ChEBI]
+synonym: "pnictogens" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:33560 ! p-block element atom
+
+[Term]
+id: CHEBI:33302
+name: pnictogen molecular entity
+namespace: chebi_ontology
+def: "A p-block molecular entity containing any pnictogen." []
+subset: 3_STAR
+synonym: "pnictogen molecular entities" RELATED [ChEBI]
+synonym: "pnictogen molecular entity" EXACT [ChEBI]
+is_a: CHEBI:33675 ! p-block molecular entity
+relationship: has_part CHEBI:33300 ! pnictogen
+
+[Term]
+id: CHEBI:33303
+name: chalcogen
+namespace: chebi_ontology
+def: "Any p-block element belonging to the group 16 family of the periodic table." []
+subset: 3_STAR
+synonym: "anfigeno" RELATED [ChEBI]
+synonym: "anfigenos" RELATED [ChEBI]
+synonym: "calcogeno" RELATED [ChEBI]
+synonym: "calcogenos" RELATED [ChEBI]
+synonym: "chalcogen" EXACT IUPAC_NAME [IUPAC]
+synonym: "chalcogene" RELATED [ChEBI]
+synonym: "chalcogenes" RELATED [ChEBI]
+synonym: "chalcogens" EXACT IUPAC_NAME [IUPAC]
+synonym: "Chalkogen" RELATED [ChEBI]
+synonym: "Chalkogene" RELATED [ChEBI]
+synonym: "group 16 elements" RELATED [ChEBI]
+synonym: "group VI elements" RELATED [ChEBI]
+xref: PMID:17084588 "Europe PMC"
+is_a: CHEBI:33560 ! p-block element atom
+
+[Term]
+id: CHEBI:33304
+name: chalcogen molecular entity
+namespace: chebi_ontology
+def: "Any p-block molecular entity containing a chalcogen." []
+subset: 3_STAR
+synonym: "chalcogen compounds" RELATED [ChEBI]
+synonym: "chalcogen molecular entities" RELATED [ChEBI]
+synonym: "chalcogen molecular entity" EXACT [ChEBI]
+is_a: CHEBI:33675 ! p-block molecular entity
+relationship: has_part CHEBI:33303 ! chalcogen
+
+[Term]
+id: CHEBI:33306
+name: carbon group element atom
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "carbon group element" RELATED [ChEBI]
+synonym: "carbon group elements" RELATED [ChEBI]
+synonym: "carbonoides" RELATED [ChEBI]
+synonym: "cristallogene" RELATED [ChEBI]
+synonym: "cristallogenes" RELATED [ChEBI]
+synonym: "group 14 elements" EXACT IUPAC_NAME [IUPAC]
+synonym: "group IV elements" RELATED [ChEBI]
+is_a: CHEBI:33560 ! p-block element atom
+
+[Term]
+id: CHEBI:33318
+name: main group element atom
+namespace: chebi_ontology
+def: "An atom belonging to one of the main groups (found in the s- and p- blocks) of the periodic table." []
+subset: 3_STAR
+synonym: "Hauptgruppenelement" RELATED [ChEBI]
+synonym: "Hauptgruppenelemente" RELATED [ChEBI]
+synonym: "main group element" RELATED [ChEBI]
+synonym: "main group elements" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:33250 ! atom
+
+[Term]
+id: CHEBI:33559
+name: s-block element atom
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "s-block element" RELATED [ChEBI]
+synonym: "s-block elements" RELATED [ChEBI]
+is_a: CHEBI:33250 ! atom
+
+[Term]
+id: CHEBI:33560
+name: p-block element atom
+namespace: chebi_ontology
+def: "Any main group element atom belonging to the p-block of the periodic table." []
+subset: 3_STAR
+synonym: "p-block element" RELATED [ChEBI]
+synonym: "p-block elements" RELATED [ChEBI]
+is_a: CHEBI:33318 ! main group element atom
+
+[Term]
+id: CHEBI:33579
+name: main group molecular entity
+namespace: chebi_ontology
+def: "A molecular entity containing one or more atoms from any of groups 1, 2, 13, 14, 15, 16, 17, and 18 of the periodic table." []
+subset: 3_STAR
+synonym: "main group compounds" RELATED [ChEBI]
+synonym: "main group molecular entities" RELATED [ChEBI]
+is_a: CHEBI:23367 ! molecular entity
+relationship: has_part CHEBI:33318 ! main group element atom
+
+[Term]
+id: CHEBI:33582
+name: carbon group molecular entity
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "carbon group molecular entities" RELATED [ChEBI]
+synonym: "carbon group molecular entity" EXACT [ChEBI]
+is_a: CHEBI:33675 ! p-block molecular entity
+relationship: has_part CHEBI:33306 ! carbon group element atom
+
+[Term]
+id: CHEBI:33595
+name: cyclic compound
+namespace: chebi_ontology
+def: "Any molecule that consists of a series of atoms joined together to form a ring." []
+subset: 3_STAR
+synonym: "cyclic compounds" RELATED [ChEBI]
+xref: Wikipedia:Cyclic_compound
+is_a: CHEBI:25367 ! molecule
+
+[Term]
+id: CHEBI:33597
+name: homocyclic compound
+namespace: chebi_ontology
+def: "A cyclic compound having as ring members atoms of the same element only." []
+subset: 3_STAR
+synonym: "homocyclic compound" EXACT IUPAC_NAME [IUPAC]
+synonym: "homocyclic compounds" EXACT IUPAC_NAME [IUPAC]
+synonym: "isocyclic compounds" RELATED [IUPAC]
+is_a: CHEBI:33595 ! cyclic compound
+
+[Term]
+id: CHEBI:33598
+name: carbocyclic compound
+namespace: chebi_ontology
+def: "A homocyclic compound in which all of the ring members are carbon atoms." []
+subset: 3_STAR
+synonym: "carbocycle" RELATED [ChEBI]
+synonym: "carbocyclic compound" EXACT IUPAC_NAME [IUPAC]
+synonym: "carbocyclic compounds" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:33597 ! homocyclic compound
+is_a: CHEBI:33832 ! organic cyclic compound
+
+[Term]
+id: CHEBI:33608
+name: hydrogen molecular entity
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "hydrogen compounds" RELATED [ChEBI]
+synonym: "hydrogen molecular entities" RELATED [ChEBI]
+is_a: CHEBI:33674 ! s-block molecular entity
+relationship: has_part CHEBI:49637 ! hydrogen atom
+
+[Term]
+id: CHEBI:33655
+name: aromatic compound
+namespace: chebi_ontology
+def: "A cyclically conjugated molecular entity with a stability (due to delocalization) significantly greater than that of a hypothetical localized structure (e.g. Kekule structure) is said to possess aromatic character." []
+subset: 3_STAR
+synonym: "aromatic compounds" EXACT IUPAC_NAME [IUPAC]
+synonym: "aromatic molecular entity" EXACT IUPAC_NAME [IUPAC]
+synonym: "aromatics" RELATED [ChEBI]
+synonym: "aromatische Verbindungen" RELATED [ChEBI]
+is_a: CHEBI:33595 ! cyclic compound
+
+[Term]
+id: CHEBI:33659
+name: organic aromatic compound
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "organic aromatic compounds" RELATED [ChEBI]
+is_a: CHEBI:33655 ! aromatic compound
+is_a: CHEBI:33832 ! organic cyclic compound
+
+[Term]
+id: CHEBI:33674
+name: s-block molecular entity
+namespace: chebi_ontology
+def: "An s-block molecular entity is a molecular entity containing one or more atoms of an s-block element." []
+subset: 3_STAR
+synonym: "s-block compounds" RELATED [ChEBI]
+synonym: "s-block molecular entities" RELATED [ChEBI]
+synonym: "s-block molecular entity" EXACT [ChEBI]
+is_a: CHEBI:33579 ! main group molecular entity
+relationship: has_part CHEBI:33559 ! s-block element atom
+
+[Term]
+id: CHEBI:33675
+name: p-block molecular entity
+namespace: chebi_ontology
+def: "A main group molecular entity that contains one or more atoms of a p-block element." []
+subset: 3_STAR
+synonym: "p-block compounds" RELATED [ChEBI]
+synonym: "p-block molecular entities" RELATED [ChEBI]
+synonym: "p-block molecular entitiy" RELATED [ChEBI]
+is_a: CHEBI:33579 ! main group molecular entity
+relationship: has_part CHEBI:33560 ! p-block element atom
+
+[Term]
+id: CHEBI:33822
+name: organic hydroxy compound
+namespace: chebi_ontology
+alt_id: CHEBI:64710
+def: "An organic compound having at least one hydroxy group attached to a carbon atom." []
+subset: 3_STAR
+synonym: "hydroxy compounds" EXACT IUPAC_NAME [IUPAC]
+synonym: "organic alcohol" RELATED [ChEBI]
+synonym: "organic hydroxy compounds" RELATED [ChEBI]
+is_a: CHEBI:24651 ! hydroxides
+is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:33832
+name: organic cyclic compound
+namespace: chebi_ontology
+def: "Any organic molecule that consists of atoms connected in the form of a ring." []
+subset: 3_STAR
+synonym: "organic cyclic compounds" RELATED [ChEBI]
+is_a: CHEBI:33595 ! cyclic compound
+is_a: CHEBI:72695 ! organic molecule
+
+[Term]
+id: CHEBI:33833
+name: heteroarene
+namespace: chebi_ontology
+def: "A heterocyclic compound formally derived from an arene by replacement of one or more methine (-C=) and/or vinylene (-CH=CH-) groups by trivalent or divalent heteroatoms, respectively, in such a way as to maintain the continuous pi-electron system characteristic of aromatic systems and a number of out-of-plane pi-electrons corresponding to the Hueckel rule (4n+2)." []
+subset: 3_STAR
+synonym: "hetarenes" RELATED [IUPAC]
+synonym: "heteroarenes" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:24532 ! organic heterocyclic compound
+is_a: CHEBI:33659 ! organic aromatic compound
+
+[Term]
+id: CHEBI:33836
+name: benzenoid aromatic compound
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "benzenoid aromatic compounds" RELATED [ChEBI]
+synonym: "benzenoid compound" RELATED [ChEBI]
+is_a: CHEBI:33598 ! carbocyclic compound
+is_a: CHEBI:33659 ! organic aromatic compound
+
+[Term]
+id: CHEBI:33937
+name: macronutrient
+namespace: chebi_ontology
+subset: 1_STAR
+is_a: CHEBI:33284 ! nutrient
+
+[Term]
+id: CHEBI:35222
+name: inhibitor
+namespace: chebi_ontology
+def: "A substance that diminishes the rate of a chemical reaction." []
+subset: 3_STAR
+synonym: "inhibidor" RELATED [ChEBI]
+synonym: "inhibiteur" RELATED [ChEBI]
+synonym: "inhibitor" EXACT IUPAC_NAME [IUPAC]
+synonym: "inhibitors" RELATED [ChEBI]
+is_a: CHEBI:24432 ! biological role
+
+[Term]
+id: CHEBI:35352
+name: organonitrogen compound
+namespace: chebi_ontology
+def: "Any heteroorganic entity containing at least one carbon-nitrogen bond." []
+subset: 3_STAR
+synonym: "organonitrogen compounds" EXACT IUPAC_NAME [IUPAC]
+synonym: "organonitrogens" RELATED [ChEBI]
+is_a: CHEBI:33285 ! heteroorganic entity
+is_a: CHEBI:51143 ! nitrogen molecular entity
+
+[Term]
+id: CHEBI:35703
+name: xenobiotic
+namespace: chebi_ontology
+alt_id: CHEBI:10074
+alt_id: CHEBI:27333
+def: "A xenobiotic (Greek, xenos \"foreign\"; bios \"life\") is a compound that is foreign to a living organism. Principal xenobiotics include: drugs, carcinogens and various compounds that have been introduced into the environment by artificial means." []
+subset: 3_STAR
+synonym: "Xenobiotic" EXACT [KEGG_COMPOUND]
+synonym: "xenobiotic" EXACT IUPAC_NAME [IUPAC]
+synonym: "xenobiotic compounds" RELATED [ChEBI]
+synonym: "xenobiotics" EXACT IUPAC_NAME [IUPAC]
+xref: KEGG:C06708
+xref: Wikipedia:Xenobiotic
+is_a: CHEBI:24432 ! biological role
+
+[Term]
+id: CHEBI:35718
+name: antifungal agent
+namespace: chebi_ontology
+def: "An  antimicrobial agent that destroys fungi by suppressing their ability to grow or reproduce." []
+subset: 3_STAR
+synonym: "antifungal" RELATED [ChEBI]
+synonym: "antifungal agents" RELATED [ChEBI]
+synonym: "antifungal drug" RELATED [ChEBI]
+synonym: "antifungal drugs" RELATED [ChEBI]
+synonym: "antifungals" RELATED [ChEBI]
+is_a: CHEBI:33281 ! antimicrobial agent
+
+[Term]
+id: CHEBI:35727
+name: triazoles
+namespace: chebi_ontology
+def: "An azole in which the five-membered heterocyclic aromatic skeleton contains three N atoms and two C atoms." []
+subset: 3_STAR
+synonym: "triazole compounds" RELATED [ChEBI]
+is_a: CHEBI:68452 ! azole
+
+[Term]
+id: CHEBI:36338
+name: lepton
+namespace: chebi_ontology
+def: "Lepton is a fermion that does not experience the strong force (strong interaction). The term is derived from the Greek lambdaepsilonpitauomicronsigma (small, thin)." []
+subset: 3_STAR
+synonym: "leptons" RELATED [ChEBI]
+is_a: CHEBI:33233 ! fundamental particle
+is_a: CHEBI:36340 ! fermion
+
+[Term]
+id: CHEBI:36339
+name: baryon
+namespace: chebi_ontology
+def: "Baryon is a fermion that does experience the strong force (strong interaction). The term is derived from the Greek betaalpharhoupsilonsigma (heavy)." []
+subset: 3_STAR
+synonym: "baryons" RELATED [ChEBI]
+is_a: CHEBI:36340 ! fermion
+is_a: CHEBI:36344 ! hadron
+
+[Term]
+id: CHEBI:36340
+name: fermion
+namespace: chebi_ontology
+def: "Particle of half-integer spin quantum number following Fermi-Dirac statistics. Fermions are named after Enrico Fermi." []
+subset: 3_STAR
+synonym: "fermion" EXACT IUPAC_NAME [IUPAC]
+synonym: "fermions" RELATED [ChEBI]
+is_a: CHEBI:36342 ! subatomic particle
+
+[Term]
+id: CHEBI:36342
+name: subatomic particle
+namespace: chebi_ontology
+def: "A particle smaller than an atom." []
+subset: 3_STAR
+synonym: "subatomic particles" RELATED [ChEBI]
+
+[Term]
+id: CHEBI:36343
+name: composite particle
+namespace: chebi_ontology
+def: "A subatomic particle known to have substructure (i.e. consisting of smaller particles)." []
+subset: 3_STAR
+synonym: "composite particles" RELATED [ChEBI]
+is_a: CHEBI:36342 ! subatomic particle
+
+[Term]
+id: CHEBI:36344
+name: hadron
+namespace: chebi_ontology
+def: "Hadron is a subatomic particle which experiences the strong force." []
+subset: 3_STAR
+synonym: "hadrons" RELATED [ChEBI]
+is_a: CHEBI:36343 ! composite particle
+
+[Term]
+id: CHEBI:36347
+name: nuclear particle
+namespace: chebi_ontology
+def: "A nucleus or any of its constituents in any of their energy states." []
+subset: 3_STAR
+synonym: "nuclear particle" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:36342 ! subatomic particle
+
+[Term]
+id: CHEBI:36357
+name: polyatomic entity
+namespace: chebi_ontology
+def: "Any molecular entity consisting of more than one atom." []
+subset: 3_STAR
+synonym: "polyatomic entities" RELATED [ChEBI]
+is_a: CHEBI:23367 ! molecular entity
+relationship: has_part CHEBI:24433 ! group
+
+[Term]
+id: CHEBI:36683
+name: organochlorine compound
+namespace: chebi_ontology
+def: "An organochlorine compound is a compound containing at least one carbon-chlorine bond." []
+subset: 3_STAR
+synonym: "chloroorganic compounds" RELATED [ChEBI]
+synonym: "chlororganische Verbindungen" RELATED [ChEBI]
+synonym: "organochloride compound" RELATED [ChEBI]
+synonym: "organochloride compounds" RELATED [ChEBI]
+synonym: "organochlorine compound" EXACT [ChEBI]
+synonym: "organochlorine compounds" RELATED [ChEBI]
+xref: Wikipedia:Organochloride
+is_a: CHEBI:23117 ! chlorine molecular entity
+is_a: CHEBI:36684 ! organohalogen compound
+
+[Term]
+id: CHEBI:36684
+name: organohalogen compound
+namespace: chebi_ontology
+def: "A compound containing at least one carbon-halogen bond." []
+subset: 3_STAR
+synonym: "organohalogen compounds" RELATED [ChEBI]
+is_a: CHEBI:33285 ! heteroorganic entity
+is_a: CHEBI:37578 ! halide
+
+[Term]
+id: CHEBI:37577
+name: heteroatomic molecular entity
+namespace: chebi_ontology
+def: "A molecular entity consisting of two or more chemical elements." []
+subset: 3_STAR
+synonym: "chemical compound" RELATED [ChEBI]
+synonym: "heteroatomic molecular entities" RELATED [ChEBI]
+is_a: CHEBI:36357 ! polyatomic entity
+
+[Term]
+id: CHEBI:37578
+name: halide
+namespace: chebi_ontology
+def: "Any heteroatomic molecular entity that is a chemical compound of halogen with other chemical elements." []
+subset: 3_STAR
+synonym: "halides" RELATED [ChEBI]
+xref: Wikipedia:Halide
+is_a: CHEBI:24471 ! halogen molecular entity
+is_a: CHEBI:37577 ! heteroatomic molecular entity
+
+[Term]
+id: CHEBI:38101
+name: organonitrogen heterocyclic compound
+namespace: chebi_ontology
+def: "Any organonitrogen compound containing a cyclic component with nitrogen and at least one other element as ring member atoms." []
+subset: 3_STAR
+synonym: "heterocyclic organonitrogen compounds" RELATED [ChEBI]
+synonym: "organonitrogen heterocyclic compounds" RELATED [ChEBI]
+is_a: CHEBI:24532 ! organic heterocyclic compound
+is_a: CHEBI:35352 ! organonitrogen compound
+
+[Term]
+id: CHEBI:38179
+name: monocyclic heteroarene
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "monocyclic heteroarenes" RELATED [ChEBI]
+is_a: CHEBI:33833 ! heteroarene
+
+[Term]
+id: CHEBI:43176
+name: hydroxy group
+namespace: chebi_ontology
+alt_id: CHEBI:24706
+alt_id: CHEBI:43171
+subset: 3_STAR
+synonym: "-OH" RELATED [IUPAC]
+synonym: "hydroxy" EXACT IUPAC_NAME [IUPAC]
+synonym: "HYDROXY GROUP" EXACT [PDBeChem]
+synonym: "hydroxy group" EXACT [UniProt]
+synonym: "hydroxyl" RELATED [ChEBI]
+synonym: "hydroxyl group" RELATED [ChEBI]
+synonym: "oxidanyl" EXACT IUPAC_NAME [IUPAC]
+xref: PDBeChem:HYD
+is_a: CHEBI:33246 ! inorganic group
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "HO" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "17.00734" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "17.003" xsd:string
+
+[Term]
+id: CHEBI:49637
+name: hydrogen atom
+namespace: chebi_ontology
+alt_id: CHEBI:24634
+alt_id: CHEBI:49636
+subset: 3_STAR
+synonym: "1H" RELATED [IUPAC]
+synonym: "H" RELATED [IUPAC]
+synonym: "hidrogeno" RELATED [ChEBI]
+synonym: "hydrogen" EXACT IUPAC_NAME [IUPAC]
+synonym: "hydrogen" RELATED [ChEBI]
+synonym: "hydrogene" RELATED [ChEBI]
+synonym: "Wasserstoff" RELATED [ChEBI]
+xref: WebElements:H
+is_a: CHEBI:24835 ! inorganic molecular entity
+is_a: CHEBI:25585 ! nonmetal atom
+is_a: CHEBI:33559 ! s-block element atom
+relationship: has_role CHEBI:33937 ! macronutrient
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "H" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/H" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "YZCKVEUIGOORGS-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "1.00794" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "1.008" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H]" xsd:string
+
+[Term]
+id: CHEBI:50860
+name: organic molecular entity
+namespace: chebi_ontology
+alt_id: CHEBI:25700
+alt_id: CHEBI:33244
+def: "Any molecular entity that contains carbon." []
+subset: 3_STAR
+synonym: "organic compounds" RELATED [ChEBI]
+synonym: "organic entity" RELATED [ChEBI]
+synonym: "organic molecular entities" RELATED [ChEBI]
+is_a: CHEBI:33582 ! carbon group molecular entity
+relationship: has_part CHEBI:27594 ! carbon atom
+
+[Term]
+id: CHEBI:50906
+name: role
+namespace: chebi_ontology
+def: "A role is particular behaviour which a material entity may exhibit." []
+subset: 3_STAR
+
+[Term]
+id: CHEBI:50908
+name: hepatotoxic agent
+namespace: chebi_ontology
+def: "A role played by a chemical compound exihibiting itself through the ability to induce damage to the liver in animals." []
+subset: 3_STAR
+synonym: "agente hepatotoxico" RELATED [ChEBI]
+synonym: "hepatotoxic agents" RELATED [ChEBI]
+synonym: "hepatotoxicant" RELATED [ChEBI]
+synonym: "hepatotoxicants" RELATED [ChEBI]
+synonym: "hepatotoxin" RELATED [ChEBI]
+synonym: "hepatotoxins" RELATED [ChEBI]
+synonym: "hepatoxic agent" RELATED [ChEBI]
+synonym: "hepatoxicant" RELATED [ChEBI]
+is_a: CHEBI:52209 ! aetiopathogenetic role
+
+[Term]
+id: CHEBI:51086
+name: chemical role
+namespace: chebi_ontology
+def: "A role played by the molecular entity or part thereof within a chemical context." []
+subset: 3_STAR
+is_a: CHEBI:50906 ! role
+
+[Term]
+id: CHEBI:51143
+name: nitrogen molecular entity
+namespace: chebi_ontology
+alt_id: CHEBI:25556
+alt_id: CHEBI:7594
+subset: 3_STAR
+synonym: "nitrogen compounds" RELATED [ChEBI]
+synonym: "nitrogen molecular entities" RELATED [ChEBI]
+synonym: "Nitrogenous compounds" RELATED [KEGG_COMPOUND]
+xref: KEGG:C06061
+is_a: CHEBI:33302 ! pnictogen molecular entity
+relationship: has_part CHEBI:25555 ! nitrogen atom
+
+[Term]
+id: CHEBI:51454
+name: cyclopropanes
+namespace: chebi_ontology
+def: "Cyclopropane and its derivatives formed by substitution." []
+subset: 3_STAR
+is_a: CHEBI:33598 ! carbocyclic compound
+
+[Term]
+id: CHEBI:52206
+name: biochemical role
+namespace: chebi_ontology
+def: "A biological role played by the molecular entity or part thereof within a biochemical context." []
+subset: 3_STAR
+is_a: CHEBI:24432 ! biological role
+
+[Term]
+id: CHEBI:52209
+name: aetiopathogenetic role
+namespace: chebi_ontology
+def: "A role played by the molecular entity or part thereof which causes the development of a pathological process." []
+subset: 3_STAR
+synonym: "etiopathogenetic agent" RELATED [ChEBI]
+synonym: "etiopathogenetic role" RELATED [ChEBI]
+is_a: CHEBI:24432 ! biological role
+
+[Term]
+id: CHEBI:52211
+name: physiological role
+namespace: chebi_ontology
+subset: 1_STAR
+is_a: CHEBI:24432 ! biological role
+
+[Term]
+id: CHEBI:5686
+name: heterocyclic compound
+namespace: chebi_ontology
+def: "A cyclic compound having as ring members atoms of at least two different elements." []
+subset: 3_STAR
+synonym: "compuesto heterociclico" RELATED [IUPAC]
+synonym: "compuestos heterociclicos" RELATED [IUPAC]
+synonym: "heterocycle" RELATED [ChEBI]
+synonym: "Heterocyclic compound" EXACT [KEGG_COMPOUND]
+synonym: "heterocyclic compounds" RELATED [ChEBI]
+is_a: CHEBI:33595 ! cyclic compound
+
+[Term]
+id: CHEBI:59999
+name: chemical substance
+namespace: chebi_ontology
+def: "A chemical substance is a portion of matter of constant composition, composed of molecular entities of the same type or of different types." []
+subset: 3_STAR
+synonym: "Chemische Substanz" RELATED [ChEBI]
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:60004
+name: mixture
+namespace: chebi_ontology
+def: "A mixture is a chemical substance composed of multiple molecules, at least two of which are of a different kind." []
+subset: 3_STAR
+synonym: "Mischung" RELATED [ChEBI]
+is_a: CHEBI:59999 ! chemical substance
+
+[Term]
+id: CHEBI:60915
+name: diastereoisomeric mixture
+namespace: chebi_ontology
+def: "A mixture composed of two or more diastereoisomers (stereoisomers not related as mirror images)." []
+subset: 3_STAR
+synonym: "diastereomeric mixture" RELATED [ChEBI]
+is_a: CHEBI:60004 ! mixture
+
+[Term]
+id: CHEBI:68452
+name: azole
+namespace: chebi_ontology
+def: "Any monocyclic heteroarene consisting of a five-membered ring containing nitrogen. Azoles can also contain one or more other non-carbon atoms, such as nitrogen, sulfur or oxygen." []
+subset: 3_STAR
+synonym: "azoles" RELATED [ChEBI]
+xref: Wikipedia:Azole
+is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
+is_a: CHEBI:38179 ! monocyclic heteroarene
+
+[Term]
+id: CHEBI:72695
+name: organic molecule
+namespace: chebi_ontology
+def: "Any molecule that consists of at least one carbon atom as part of the electrically neutral entity." []
+subset: 3_STAR
+synonym: "organic compound" RELATED [ChEBI]
+synonym: "organic compounds" RELATED [ChEBI]
+synonym: "organic molecules" RELATED [ChEBI]
+is_a: CHEBI:25367 ! molecule
+is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:75282
+name: ergosterol biosynthesis inhibitor
+namespace: chebi_ontology
+def: "Any compound that inhibits one or more steps in the pathway leading to the synthesis of ergosterol." []
+subset: 3_STAR
+synonym: "ergosterol biosynthesis inhibitors" RELATED [ChEBI]
+xref: PMID:12604527 "Europe PMC"
+xref: PMID:19835945 "Europe PMC"
+is_a: CHEBI:83317 ! sterol biosynthesis inhibitor
+
+[Term]
+id: CHEBI:76725
+name: EC 1.* (oxidoreductase) inhibitor
+namespace: chebi_ontology
+def: "An enzyme inhibitor which interferes with the action of an oxidoreductase (EC 1.*.*.*)." []
+subset: 3_STAR
+synonym: "EC 1.* (oxidoreductase) inhibitors" RELATED [ChEBI]
+synonym: "EC 1.* inhibitor" RELATED [ChEBI]
+synonym: "EC 1.* inhibitors" RELATED [ChEBI]
+synonym: "oxidoreductase (EC 1.*) inhibitor" RELATED [ChEBI]
+synonym: "oxidoreductase (EC 1.*) inhibitors" RELATED [ChEBI]
+synonym: "oxidoreductase inhibitor" RELATED [ChEBI]
+synonym: "oxidoreductase inhibitors" RELATED [ChEBI]
+xref: Wikipedia:Oxidoreductase
+is_a: CHEBI:23924 ! enzyme inhibitor
+
+[Term]
+id: CHEBI:76741
+name: EC 1.14.* (oxidoreductase acting on paired donors, with incorporation or reduction of molecular oxygen) inhibitor
+namespace: chebi_ontology
+def: "An oxidoreductase inhibitor which interferes with the action of an oxidoreductase acting on hydrogen as donors (EC 1.14.*.*)." []
+subset: 3_STAR
+synonym: "EC 1.14.* (oxidoreductase acting on paired donors, with incorporation or reduction of molecular oxygen) inhibitors" RELATED [ChEBI]
+synonym: "EC 1.14.* inhibitor" RELATED [ChEBI]
+synonym: "EC 1.14.* inhibitors" RELATED [ChEBI]
+synonym: "inhibitor of oxidoreductase acting on paired donors, with incorporation or reduction of molecular oxygen (EC 1.14.*)" RELATED [ChEBI]
+synonym: "inhibitor of oxidoreductases acting on paired donors, with incorporation or reduction of molecular oxygen (EC 1.14.*)" RELATED [ChEBI]
+synonym: "inhibitors of oxidoreductase acting on paired donors, with incorporation or reduction of molecular oxygen (EC 1.14.*)" RELATED [ChEBI]
+synonym: "inhibitors of oxidoreductases acting on paired donors, with incorporation or reduction of molecular oxygen (EC 1.14.*)" RELATED [ChEBI]
+synonym: "oxidoreductase acting on paired donors, with incorporation or reduction of molecular oxygen (EC 1.14.*) inhibitor" RELATED [ChEBI]
+synonym: "oxidoreductase acting on paired donors, with incorporation or reduction of molecular oxygen (EC 1.14.*) inhibitors" RELATED [ChEBI]
+synonym: "oxidoreductase acting on paired donors, with incorporation or reduction of molecular oxygen inhibitor" RELATED [ChEBI]
+synonym: "oxidoreductase acting on paired donors, with incorporation or reduction of molecular oxygen inhibitors" RELATED [ChEBI]
+is_a: CHEBI:76725 ! EC 1.* (oxidoreductase) inhibitor
+
+[Term]
+id: CHEBI:76841
+name: EC 1.14.13.* (oxidoreductase acting on paired donors, incorporating 1 atom of oxygen, with NADH or NADPH as one donor) inhibitor
+namespace: chebi_ontology
+def: "An EC 1.14.* (oxidoreductase acting on paired donors, with incorporation or reduction of molecular oxygen) inhibitor that interferes with the action of any such enzyme incorporating one atom of oxygen and using NADH or NADPH as one donor (EC 1.14.13.*)." []
+subset: 3_STAR
+synonym: "EC 1.14.13.* (oxidoreductase acting on paired donors, incorporating 1 atom of oxygen, with NADH or NADPH as one donor) inhibitors" RELATED [ChEBI]
+synonym: "EC 1.14.13.* inhibitor" RELATED [ChEBI]
+synonym: "EC 1.14.13.* inhibitors" RELATED [ChEBI]
+synonym: "oxidoreductase acting on paired donors, incorporating 1 atom of oxygen, with NADH or NADPH as one donor (EC 1.14.13.*) inhibitor" RELATED [ChEBI]
+synonym: "oxidoreductase acting on paired donors, incorporating 1 atom of oxygen, with NADH or NADPH as one donor (EC 1.14.13.*) inhibitors" RELATED [ChEBI]
+is_a: CHEBI:76741 ! EC 1.14.* (oxidoreductase acting on paired donors, with incorporation or reduction of molecular oxygen) inhibitor
+
+[Term]
+id: CHEBI:77884
+name: EC 1.14.13.70 (sterol 14alpha-demethylase) inhibitor
+namespace: chebi_ontology
+def: "An EC 1.14.13.* (oxidoreductase acting on paired donors, incorporating 1 atom of oxygen, with NADH or NADPH as one donor) inhibitor that interferes with the action of EC 1.14.13.70 (sterol 14alpha-demethylase)." []
+subset: 3_STAR
+synonym: "cytochrome P450 51 inhibitor" RELATED [ChEBI]
+synonym: "cytochrome P450 51 inhibitors" RELATED [ChEBI]
+synonym: "EC 1.14.13.70 (sterol 14alpha-demethylase) inhibitors" RELATED [ChEBI]
+synonym: "EC 1.14.13.70 inhibitor" RELATED [ChEBI]
+synonym: "EC 1.14.13.70 inhibitors" RELATED [ChEBI]
+synonym: "lanosterol 14-demethylase inhibitor" RELATED [ChEBI]
+synonym: "lanosterol 14-demethylase inhibitors" RELATED [ChEBI]
+synonym: "lanosterol 14alpha-demethylase inhibitor" RELATED [ChEBI]
+synonym: "lanosterol 14alpha-demethylase inhibitors" RELATED [ChEBI]
+synonym: "obtusufoliol 14-demethylase inhibitor" RELATED [ChEBI]
+synonym: "obtusufoliol 14-demethylase inhibitors" RELATED [ChEBI]
+synonym: "sterol 14-demethylase inhibitor" RELATED [ChEBI]
+synonym: "sterol 14-demethylase inhibitors" RELATED [ChEBI]
+synonym: "sterol 14alpha-demethylase inhibitor" RELATED [ChEBI]
+synonym: "sterol 14alpha-demethylase inhibitors" RELATED [ChEBI]
+synonym: "sterol,NADPH:oxygen oxidoreductase (14-methyl cleaving) inhibitor" RELATED [ChEBI]
+synonym: "sterol,NADPH:oxygen oxidoreductase (14-methyl cleaving) inhibitors" RELATED [ChEBI]
+xref: Wikipedia:Sterol_14-demethylase
+is_a: CHEBI:76841 ! EC 1.14.13.* (oxidoreductase acting on paired donors, incorporating 1 atom of oxygen, with NADH or NADPH as one donor) inhibitor
+is_a: CHEBI:83734 ! sterol demethylation inhibitor
+
+[Term]
+id: CHEBI:78295
+name: food component
+namespace: chebi_ontology
+def: "Any substance that is distributed in foodstuffs. It includes materials derived from plants or animals, such as vitamins or minerals, as well as environmental contaminants." []
+subset: 3_STAR
+synonym: "dietary component" RELATED [ChEBI]
+synonym: "dietary components" RELATED [ChEBI]
+synonym: "food components" RELATED [ChEBI]
+is_a: CHEBI:52211 ! physiological role
+
+[Term]
+id: CHEBI:78298
+name: environmental contaminant
+namespace: chebi_ontology
+def: "Any minor or unwanted substance introduced into the environment that can have undesired effects." []
+subset: 3_STAR
+synonym: "environmental contaminants" RELATED [ChEBI]
+is_a: CHEBI:51086 ! chemical role
+
+[Term]
+id: CHEBI:81758
+name: cyproconazole
+namespace: chebi_ontology
+def: "A diastereoisomeric mixture composed of the enantiomeric pair (2R,3S)- and (2S,3R)-cyproconazole in ratio 1:1 with the enantiomeric pair (2R,3R)- and (2S,3S)-cyproconazole. A broad spectrum fungicide, it is used on cereals and other field crops used to control Septoria, rust, powdery mildew and other diseases." []
+subset: 3_STAR
+synonym: "alpha-(4-chlorophenyl)-alpha-(1-cyclopropylethyl)-1N-1,2,4-triazole-1-ethanol" RELATED [Alan_Wood's_Pesticides]
+synonym: "rac-2-(4-chlorophenyl)-3-cyclopropyl-1-(1H-1,2,4-triazol-1-yl)butan-2-ol" EXACT IUPAC_NAME [IUPAC]
+xref: CAS:94361-06-5 "ChemIDplus"
+xref: KEGG:C18456
+xref: Pesticides:cyproconazole "Alan Wood's Pesticides"
+xref: PMID:23708404 "Europe PMC"
+xref: PMID:24691702 "Europe PMC"
+xref: PMID:25182419 "Europe PMC"
+xref: Reaxys:8324780 "Reaxys"
+is_a: CHEBI:60915 ! diastereoisomeric mixture
+is_a: CHEBI:87067 ! conazole fungicide
+is_a: CHEBI:87100 ! triazole fungicide
+relationship: has_part CHEBI:83749 ! (2R,3S)-cyproconazole
+relationship: has_part CHEBI:83750 ! (2S,3S)-cyproconazole
+relationship: has_part CHEBI:83752 ! (2S,3R)-cyproconazole
+relationship: has_part CHEBI:83753 ! (2R,3R)-cyproconazole
+relationship: has_role CHEBI:35703 ! xenobiotic
+relationship: has_role CHEBI:50908 ! hepatotoxic agent
+relationship: has_role CHEBI:77884 ! EC 1.14.13.70 (sterol 14alpha-demethylase) inhibitor
+relationship: has_role CHEBI:78298 ! environmental contaminant
+relationship: has_role CHEBI:86328 ! antifungal agrochemical
+
+[Term]
+id: CHEBI:83317
+name: sterol biosynthesis inhibitor
+namespace: chebi_ontology
+def: "Any compound that inhibits the biosynthesis of any sterol." []
+subset: 3_STAR
+synonym: "sterol biosynthesis inhibitors" RELATED [ChEBI]
+is_a: CHEBI:35222 ! inhibitor
+is_a: CHEBI:52206 ! biochemical role
+
+[Term]
+id: CHEBI:83403
+name: monochlorobenzenes
+namespace: chebi_ontology
+def: "Any member of the class of chlorobenzenes containing a mono- or poly-substituted benzene ring in which only one substituent is chlorine." []
+subset: 3_STAR
+is_a: CHEBI:23132 ! chlorobenzenes
+
+[Term]
+id: CHEBI:83734
+name: sterol demethylation inhibitor
+namespace: chebi_ontology
+def: "A sterol biosynthesis inhibitor that acts by inhibiting the C14 demethylation step within fungal steroid biosynthesis." []
+subset: 3_STAR
+synonym: "sterol demethylation inhibitors" RELATED [ChEBI]
+is_a: CHEBI:35718 ! antifungal agent
+is_a: CHEBI:83317 ! sterol biosynthesis inhibitor
+
+[Term]
+id: CHEBI:83748
+name: 2-(4-chlorophenyl)-3-cyclopropyl-1-(1H-1,2,4-triazol-1-yl)butan-2-ol
+namespace: chebi_ontology
+def: "A tertiary alcohol that is butan-2-ol substituted by a 4-chlorophenyl group at position 2, a cyclopropyl group at position 3 and a 1H-1,2,4-triazol-1-yl group at position 1." []
+subset: 3_STAR
+synonym: "2-(4-chlorophenyl)-3-cyclopropyl-1-(1H-1,2,4-triazol-1-yl)butan-2-ol" EXACT IUPAC_NAME [IUPAC]
+xref: PPDB:198
+is_a: CHEBI:26878 ! tertiary alcohol
+is_a: CHEBI:35727 ! triazoles
+is_a: CHEBI:51454 ! cyclopropanes
+is_a: CHEBI:83403 ! monochlorobenzenes
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C15H18ClN3O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C15H18ClN3O/c1-11(12-2-3-12)15(20,8-19-10-17-9-18-19)13-4-6-14(16)7-5-13/h4-7,9-12,20H,2-3,8H2,1H3" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "UFNOUKDBUJZYDE-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "291.77600" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "291.114" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "CC(C1CC1)C(O)(Cn1cncn1)c1ccc(Cl)cc1" xsd:string
+
+[Term]
+id: CHEBI:83749
+name: (2R,3S)-cyproconazole
+namespace: chebi_ontology
+def: "The (2R,3S)-stereoisomer of 2-(4-chlorophenyl)-3-cyclopropyl-1-(1H-1,2,4-triazol-1-yl)butan-2-ol." []
+subset: 3_STAR
+synonym: "(2R,3S)-2-(4-chlorophenyl)-3-cyclopropyl-1-(1H-1,2,4-triazol-1-yl)butan-2-ol" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:83748 ! 2-(4-chlorophenyl)-3-cyclopropyl-1-(1H-1,2,4-triazol-1-yl)butan-2-ol
+relationship: is_enantiomer_of CHEBI:83752 ! (2S,3R)-cyproconazole
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C15H18ClN3O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C15H18ClN3O/c1-11(12-2-3-12)15(20,8-19-10-17-9-18-19)13-4-6-14(16)7-5-13/h4-7,9-12,20H,2-3,8H2,1H3/t11-,15+/m0/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "UFNOUKDBUJZYDE-XHDPSFHLSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "291.77600" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "291.114" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C[C@@H](C1CC1)[C@](O)(Cn1cncn1)c1ccc(Cl)cc1" xsd:string
+
+[Term]
+id: CHEBI:83750
+name: (2S,3S)-cyproconazole
+namespace: chebi_ontology
+def: "The (2S,3S)-stereoisomer of 2-(4-chlorophenyl)-3-cyclopropyl-1-(1H-1,2,4-triazol-1-yl)butan-2-ol." []
+subset: 3_STAR
+synonym: "(2S,3S)-2-(4-chlorophenyl)-3-cyclopropyl-1-(1H-1,2,4-triazol-1-yl)butan-2-ol" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:83748 ! 2-(4-chlorophenyl)-3-cyclopropyl-1-(1H-1,2,4-triazol-1-yl)butan-2-ol
+relationship: is_enantiomer_of CHEBI:83753 ! (2R,3R)-cyproconazole
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C15H18ClN3O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C15H18ClN3O/c1-11(12-2-3-12)15(20,8-19-10-17-9-18-19)13-4-6-14(16)7-5-13/h4-7,9-12,20H,2-3,8H2,1H3/t11-,15-/m0/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "UFNOUKDBUJZYDE-NHYWBVRUSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "291.77600" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "291.114" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C[C@@H](C1CC1)[C@@](O)(Cn1cncn1)c1ccc(Cl)cc1" xsd:string
+
+[Term]
+id: CHEBI:83752
+name: (2S,3R)-cyproconazole
+namespace: chebi_ontology
+def: "The (2S,3R)-stereoisomer of 2-(4-chlorophenyl)-3-cyclopropyl-1-(1H-1,2,4-triazol-1-yl)butan-2-ol." []
+subset: 3_STAR
+synonym: "(2S,3R)-2-(4-chlorophenyl)-3-cyclopropyl-1-(1H-1,2,4-triazol-1-yl)butan-2-ol" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:83748 ! 2-(4-chlorophenyl)-3-cyclopropyl-1-(1H-1,2,4-triazol-1-yl)butan-2-ol
+relationship: is_enantiomer_of CHEBI:83749 ! (2R,3S)-cyproconazole
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C15H18ClN3O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C15H18ClN3O/c1-11(12-2-3-12)15(20,8-19-10-17-9-18-19)13-4-6-14(16)7-5-13/h4-7,9-12,20H,2-3,8H2,1H3/t11-,15+/m1/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "UFNOUKDBUJZYDE-ABAIWWIYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "291.77600" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "291.114" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C[C@H](C1CC1)[C@@](O)(Cn1cncn1)c1ccc(Cl)cc1" xsd:string
+
+[Term]
+id: CHEBI:83753
+name: (2R,3R)-cyproconazole
+namespace: chebi_ontology
+def: "The (2R,3R)-stereoisomer of 2-(4-chlorophenyl)-3-cyclopropyl-1-(1H-1,2,4-triazol-1-yl)butan-2-ol." []
+subset: 3_STAR
+synonym: "(2R,3R)-2-(4-chlorophenyl)-3-cyclopropyl-1-(1H-1,2,4-triazol-1-yl)butan-2-ol" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:83748 ! 2-(4-chlorophenyl)-3-cyclopropyl-1-(1H-1,2,4-triazol-1-yl)butan-2-ol
+relationship: is_enantiomer_of CHEBI:83750 ! (2S,3S)-cyproconazole
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C15H18ClN3O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C15H18ClN3O/c1-11(12-2-3-12)15(20,8-19-10-17-9-18-19)13-4-6-14(16)7-5-13/h4-7,9-12,20H,2-3,8H2,1H3/t11-,15-/m1/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "UFNOUKDBUJZYDE-IAQYHMDHSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "291.77600" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "291.114" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C[C@H](C1CC1)[C@](O)(Cn1cncn1)c1ccc(Cl)cc1" xsd:string
+
+[Term]
+id: CHEBI:86323
+name: conazole antifungal agent
+namespace: chebi_ontology
+alt_id: CHEBI:60593
+def: "A compound that has a structure that is related to miconazole, contains an azole (imidazole or triazole) moiety, and has significant systemic antifungal properties.  They inhibit cytochrome P450-dependent enzymes (particularly C14-demethylase) involved in the biosynthesis of ergosterol, which is required for fungal cell membrane structure and function." []
+subset: 3_STAR
+synonym: "azole antibiotic" RELATED [ChEBI]
+synonym: "azole antibiotics" RELATED [ChEBI]
+synonym: "conazole antifungal agents" RELATED [ChEBI]
+is_a: CHEBI:68452 ! azole
+relationship: has_role CHEBI:35718 ! antifungal agent
+relationship: has_role CHEBI:75282 ! ergosterol biosynthesis inhibitor
+
+[Term]
+id: CHEBI:86328
+name: antifungal agrochemical
+namespace: chebi_ontology
+def: "Any substance used in acriculture, horticulture, forestry, etc. for its fungicidal properties." []
+subset: 3_STAR
+synonym: "agrichemical fungicide" RELATED [ChEBI]
+synonym: "agrichemical fungicides" RELATED [ChEBI]
+synonym: "agrochemical fungicide" RELATED [ChEBI]
+synonym: "agrochemical fungicides" RELATED [ChEBI]
+synonym: "anti-fungal agrichemical" RELATED [ChEBI]
+synonym: "anti-fungal agrichemicals" RELATED [ChEBI]
+synonym: "anti-fungal agrochemical" RELATED [ChEBI]
+synonym: "anti-fungal agrochemicals" RELATED [ChEBI]
+synonym: "antifungal agrichemical" RELATED [ChEBI]
+synonym: "antifungal agrichemicals" RELATED [ChEBI]
+synonym: "antifungal agrochemicals" RELATED [ChEBI]
+is_a: CHEBI:24127 ! fungicide
+is_a: CHEBI:25944 ! pesticide
+is_a: CHEBI:33286 ! agrochemical
+
+[Term]
+id: CHEBI:86426
+name: triazole antifungal agent
+namespace: chebi_ontology
+def: "A member of the class of triazole that has significant antifungal properties." []
+subset: 3_STAR
+synonym: "triazole antifungal agents" RELATED [ChEBI]
+is_a: CHEBI:35727 ! triazoles
+relationship: has_role CHEBI:35718 ! antifungal agent
+
+[Term]
+id: CHEBI:87067
+name: conazole fungicide
+namespace: chebi_ontology
+def: "Any conazole antifungal agent that has been used as a fungicide." []
+subset: 3_STAR
+synonym: "conazole fungicides" RELATED [ChEBI]
+is_a: CHEBI:68452 ! azole
+is_a: CHEBI:86323 ! conazole antifungal agent
+relationship: has_role CHEBI:24127 ! fungicide
+
+[Term]
+id: CHEBI:87100
+name: triazole fungicide
+namespace: chebi_ontology
+def: "Any triazole antifungal agent that has been used as a fungicide." []
+subset: 3_STAR
+synonym: "triazole fungicides" RELATED [ChEBI]
+is_a: CHEBI:86426 ! triazole antifungal agent
+relationship: has_role CHEBI:24127 ! fungicide
+
+[Typedef]
+id: has_part
+name: has part
+namespace: chebi_ontology
+xref: BFO:0000051
+is_cyclic: false
+is_transitive: true
+
+[Typedef]
+id: has_role
+name: has role
+namespace: chebi_ontology
+xref: RO:0000087
+is_cyclic: false
+is_transitive: false
+
+[Typedef]
+id: is_enantiomer_of
+name: is enantiomer of
+namespace: chebi_ontology
+is_cyclic: true
+is_transitive: false
+

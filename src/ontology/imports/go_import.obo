@@ -205,6 +205,27 @@ xref: Reactome:REACT_98807 "An anchoring protein, SARA, recruits SMAD2/3, Bos ta
 is_a: GO:0005488 ! binding
 
 [Term]
+id: GO:0005575
+name: cellular_component
+namespace: cellular_component
+alt_id: GO:0008372
+def: "A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome)." [GOC:pdt, NIF_Subcellular:sao-1337158144]
+comment: Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this.
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+synonym: "cell or subcellular entity" EXACT []
+synonym: "cellular component" EXACT []
+synonym: "subcellular entity" RELATED [NIF_Subcellular:nlx_subcell_100315]
+xref: NIF_Subcellular:sao-1337158144
+xref: NIF_Subcellular:sao1337158144
+
+[Term]
 id: GO:0006403
 name: RNA localization
 namespace: biological_process
@@ -622,6 +643,15 @@ synonym: "vesicular transport" EXACT [GOC:mah]
 is_a: GO:0006810 ! transport
 
 [Term]
+id: GO:0018995
+name: host
+namespace: cellular_component
+def: "Any organism in which another organism, especially a parasite or symbiont, spends part or all of its life cycle and from which it obtains nourishment and/or protection." [ISBN:0198506732]
+synonym: "host organism" EXACT []
+xref: Wikipedia:Host_(biology)
+is_a: GO:0044215 ! other organism
+
+[Term]
 id: GO:0023051
 name: regulation of signaling
 namespace: biological_process
@@ -968,6 +998,30 @@ intersection_of: positively_regulates GO:0003674 ! molecular_function
 relationship: positively_regulates GO:0003674 ! molecular_function
 created_by: jane
 creation_date: 2009-04-21T04:11:06Z
+
+[Term]
+id: GO:0044215
+name: other organism
+namespace: cellular_component
+def: "A secondary organism with which the first organism is interacting." [GOC:jl]
+comment: We plan to obsolete this branch of GO and replace its usage in annotation with a system for multi-organism annotation.
+is_a: GO:0005575 ! cellular_component
+created_by: jane
+creation_date: 2009-11-12T01:04:58Z
+
+[Term]
+id: GO:0044217
+name: other organism part
+namespace: cellular_component
+def: "Any constituent part of a secondary organism with which the first organism is interacting." [GOC:jl]
+comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
+subset: gocheck_do_not_annotate
+is_a: GO:0005575 ! cellular_component
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: part_of GO:0044215 ! other organism
+relationship: part_of GO:0044215 ! other organism
+created_by: jane
+creation_date: 2009-11-12T01:18:21Z
 
 [Term]
 id: GO:0044403
