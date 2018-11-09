@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/phipo.owl#"
      xml:base="http://purl.obolibrary.org/obo/phipo.owl"
+     xmlns:chebi="http://purl.obolibrary.org/obo/chebi/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:oboInOWL="http://www.geneontology.org/formats/oboInOWL#"
@@ -8,6 +9,9 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:chebi1="http://purl.obolibrary.org/obo/chebi#"
+     xmlns:chebi2="http://purl.obolibrary.org/obo/chebi#3"
+     xmlns:chebi3="http://purl.obolibrary.org/obo/chebi#1"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:pato="http://purl.obolibrary.org/obo/pato#"
@@ -16,7 +20,9 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/phipo.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2018-10-17/phipo.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2018-11-09/phipo.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/phipo/imports/chebi_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/phipo/imports/ido_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/phipo/imports/go_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/phipo/imports/so_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/phipo/imports/ro_import.owl"/>
@@ -169,10 +175,18 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000001 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000001">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/BFO_0000002 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000002">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
     </rdf:Description>
     
 
@@ -180,7 +194,7 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/BFO_0000003 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000003">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
     </rdf:Description>
     
 
@@ -201,9 +215,41 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000016 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000017 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/BFO_0000020 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000023 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000023">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000031 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000031">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
     </rdf:Description>
     
@@ -213,6 +259,1010 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CARO_0000000 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CARO_0000000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0030000"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CARO_0000003 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CARO_0000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000006"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CARO_0000006 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CARO_0000006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CARO_0000000"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CARO_0030000 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CARO_0030000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_10545 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_10545">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36338"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_22712 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_22712">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33836"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_23116 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_23116">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24473"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_23117 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_23117">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24471"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_23132 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_23132">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22712"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36683"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_23367 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_23367">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_23924 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_23924">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35222"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_52206"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_24127 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24127">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25944"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35718"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_24431 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_24432 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24432">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50906"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_24433 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24433">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_24471 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24471">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33675"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_24473 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24473">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25585"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33560"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_24532 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24532">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33285"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33832"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_5686"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_24651 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24651">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25806"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33608"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_37577"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_24835 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24835">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_25367 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_25367">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36357"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_25555 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_25555">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25585"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33300"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_25585 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_25585">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33250"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_25805 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_25805">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25585"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33303"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_25806 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_25806">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33304"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_25944 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_25944">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33232"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_26878 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_26878">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30879"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_27027 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_27027">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33284"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_27594 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_27594">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25585"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33306"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_30879 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_30879">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33822"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33232 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33232">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50906"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33233 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33233">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36342"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33246 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33246">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24433"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33250 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33250">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33252 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33252">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36347"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33253 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33253">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36339"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36347"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33281 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33281">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24432"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33284 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33284">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_78295"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33285 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33285">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50860"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33286 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33286">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33232"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33300 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33300">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33560"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33302 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33302">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33675"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33303 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33303">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33560"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33304 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33304">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33675"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33306 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33306">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33560"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33318 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33318">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33250"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33559 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33559">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33250"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33560 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33560">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33318"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33579 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33579">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33582 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33582">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33675"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33595 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33595">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25367"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33597 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33597">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33595"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33598 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33598">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33597"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33832"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33608 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33608">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33674"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33655 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33655">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33595"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33659 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33659">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33655"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33832"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33674 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33674">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33579"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33675 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33675">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33579"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33822 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33822">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24651"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50860"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33832 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33832">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33595"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_72695"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33833 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33833">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24532"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33659"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33836 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33836">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33598"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33659"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33937 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33937">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33284"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_35222 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35222">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24432"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_35352 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35352">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33285"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_51143"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_35703 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35703">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24432"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_35718 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35718">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33281"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_35727 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35727">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_68452"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_36338 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_36338">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33233"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36340"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_36339 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_36339">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36340"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36344"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_36340 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_36340">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36342"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_36342 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_36342">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_36343 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_36343">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36342"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_36344 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_36344">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36343"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_36347 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_36347">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36342"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_36357 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_36357">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_36683 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_36683">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23117"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36684"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_36684 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_36684">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33285"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_37578"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_37577 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_37577">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36357"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_37578 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_37578">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24471"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_37577"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_38101 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_38101">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24532"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35352"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_38179 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_38179">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33833"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_43176 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_43176">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33246"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_49637 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_49637">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24835"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25585"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33559"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_50860 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_50860">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33582"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_50906 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_50906">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_50908 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_50908">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_52209"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_51086 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_51086">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50906"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_51143 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_51143">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33302"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_51454 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_51454">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33598"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_52206 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_52206">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24432"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_52209 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_52209">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24432"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_52211 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_52211">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24432"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_5686 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_5686">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33595"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_59999 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_59999">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_60004 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_60004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59999"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_60915 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_60915">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_60004"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_68452 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_68452">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_38101"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_38179"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_72695 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_72695">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25367"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50860"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_75282 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_75282">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_83317"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_76725 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_76725">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23924"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_76741 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_76741">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_76725"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_76841 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_76841">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_76741"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_77884 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_77884">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_76841"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_83734"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_78295 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_78295">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_52211"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_78298 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_78298">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_51086"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_81758 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_81758">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_60915"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_87067"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_87100"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_83317 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_83317">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35222"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_52206"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_83403 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_83403">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23132"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_83734 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_83734">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35718"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_83317"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_83748 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_83748">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26878"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35727"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_51454"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_83403"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_83749 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_83749">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_83748"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_83750 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_83750">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_83748"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_83752 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_83752">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_83748"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_83753 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_83753">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_83748"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_86323 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_86323">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_68452"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_86328 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_86328">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24127"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33286"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_86426 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_86426">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35727"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_87067 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_87067">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_86323"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_87100 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_87100">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_86426"/>
     </rdf:Description>
     
 
@@ -250,6 +1300,14 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0003824 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0003824">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003674"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0004872 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0004872">
@@ -282,10 +1340,34 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0005575 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0005575">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0006403 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0006403">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0033036"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0006793 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0006793">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044237"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0006796 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0006796">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006793"/>
     </rdf:Description>
     
 
@@ -365,6 +1447,32 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0008152 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008152">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0009892 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0009892">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019222"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048519"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0009893 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0009893">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019222"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048518"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0009966 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0009966">
@@ -418,6 +1526,24 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0010469">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009966"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0065009"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0010562 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0010562">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031325"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051174"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0010563 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0010563">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031324"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051174"/>
     </rdf:Description>
     
 
@@ -509,6 +1635,62 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0016301 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0016301">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0016772"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0016310 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0016310">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006796"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0016740 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0016740">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0016772 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0016772">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0016740"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0018995 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0018995">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044215"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0019220 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0019220">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051174"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0019222 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0019222">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050789"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0023051 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0023051">
@@ -556,6 +1738,35 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0030545">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0098772"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0031323 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0031323">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019222"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050794"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0031324 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0031324">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009892"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031323"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048523"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0031325 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0031325">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009893"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031323"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048522"/>
     </rdf:Description>
     
 
@@ -626,6 +1837,26 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0033673 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0033673">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0042326"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043549"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051348"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0033674 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0033674">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0042327"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043549"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051347"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0034504 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0034504">
@@ -660,10 +1891,54 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0042325 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0042325">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019220"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0042326 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0042326">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0042325"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0045936"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0042327 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0042327">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0042325"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0045937"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0042886 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0042886">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071705"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0043085 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0043085">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044093"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050790"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0043086 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0043086">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044092"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050790"/>
     </rdf:Description>
     
 
@@ -690,6 +1965,15 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0043393">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051098"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0043549 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0043549">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0042325"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051338"/>
     </rdf:Description>
     
 
@@ -744,6 +2028,31 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0044215 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0044215">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0044217 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0044217">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0044237 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0044237">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008152"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0044403 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0044403">
@@ -793,6 +2102,24 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0030100"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051050"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051130"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0045936 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0045936">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0010563"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019220"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0045937 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0045937">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0010562"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019220"/>
     </rdf:Description>
     
 
@@ -870,6 +2197,14 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0050789">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0065007"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0050790 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0050790">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0065009"/>
     </rdf:Description>
     
 
@@ -976,6 +2311,14 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0051174 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0051174">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031323"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0051179 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0051179">
@@ -1017,6 +2360,32 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0051234">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051179"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0051338 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0051338">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050790"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0051347 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0051347">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043085"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051338"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0051348 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0051348">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043086"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051338"/>
     </rdf:Description>
     
 
@@ -1385,6 +2754,86 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000027 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000027">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000078 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000078">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000102"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000102 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000102">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000225 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000225">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000102"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000409 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000409">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000102"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000450 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0000450">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000528 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0000528">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IDO_0000626 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IDO_0000626">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OGMS_0000045 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OGMS_0000045">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0000001 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000001">
@@ -1413,6 +2862,14 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000069">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000068"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000085 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000085">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001995"/>
     </rdf:Description>
     
 
@@ -1468,10 +2925,50 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0000513 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000513">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000085"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000516 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000516">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000085"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0000718 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000718">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000169"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001043 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001043">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000085"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001046 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001046">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001995"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001178 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001178">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001046"/>
     </rdf:Description>
     
 
@@ -1500,6 +2997,24 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0001549 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001549">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000516"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002305"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001550 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001550">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000516"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002303"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0001558 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001558">
@@ -1512,6 +3027,24 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001564">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001236"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001650 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001650">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001178"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002305"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001651 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001651">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001178"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002303"/>
     </rdf:Description>
     
 
@@ -1656,6 +3189,24 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0045001">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0045047 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0045047">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001178"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0045001"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0045049 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0045049">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000516"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0045001"/>
     </rdf:Description>
     
 
@@ -1992,7 +3543,35 @@ AC_pathogen phenotype and (has_relative_magnitude some abnormal (PATO:0000460))<
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000018 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000018">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0045049"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000528"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/pato#towards"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0045049"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000036"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000528"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/pato#towards"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype which displays a normal sensitivity to a chemical (eg the same as wild type).</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:12:20Z</obo:creation_date>
@@ -2042,7 +3621,35 @@ Will we also need Chemistry phenotypes for Host phenotypes?</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000021 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000021">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001549"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000528"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/pato#towards"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001549"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000020"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000528"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/pato#towards"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype which displays an increased sensitivity to a chemical (eg different than wild type).</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:15:05Z</obo:creation_date>
@@ -2059,7 +3666,35 @@ Do we also need &apos;decreased sensitivity to chemical&apos;? No as this would 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000022 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000022">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001650"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000528"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/pato#towards"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001650"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000020"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000528"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/pato#towards"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype which displays an increased resistance to a chemical (eg different than wild type).</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:16:06Z</obo:creation_date>
@@ -2255,7 +3890,35 @@ AC_host phenotype and (has_relative_magnitude some abnormal (PATO:0000460))</rdf
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000035 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000035">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0045047"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000528"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/pato#towards"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0045047"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000036"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000528"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/pato#towards"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype which displays a normal resistance to a chemical (eg the same as wild type).</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-09T13:41:47Z</obo:creation_date>
@@ -2274,6 +3937,14 @@ NEW to PHI-base, ie normal resistance response, same as wild-type. Similar terms
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000036">
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000159"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#Subset -->
+
+    <rdf:Description rdf:about="http://www.geneontology.org/formats/oboInOwl#Subset">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000102"/>
+    </rdf:Description>
     
 
 
@@ -2833,7 +4504,7 @@ fungi non-motile (apart from spores)</rdfs:comment>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T13:08:40Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal sexual spore size</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal asexual spore size</rdfs:label>
     </owl:Class>
     
 
@@ -3232,7 +4903,7 @@ Are there any motile sexual spores?</rdfs:comment>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:22:58Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">increased pathogen penetration across the host barrier</rdfs:label>
+        <rdfs:label xml:lang="en">increased pathogen penetration across the barrier</rdfs:label>
     </owl:Class>
     
 
@@ -3244,7 +4915,7 @@ Are there any motile sexual spores?</rdfs:comment>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:23:12Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">decreased pathogen penetration across the host barrier</rdfs:label>
+        <rdfs:label xml:lang="en">decreased pathogen penetration across the barrier</rdfs:label>
     </owl:Class>
     
 
@@ -4574,7 +6245,24 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000195 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000195">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000003"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005515"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000165"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005515"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>A host phenotype that protein affects the binding of one protein to another. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:26:34Z</oboInOwl:creation_date>
@@ -4588,7 +6276,29 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000196 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000196">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000001"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005515"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000195"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>A host (molecular function??) phenotype in which the binding of one protein to another is abnormal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:27:25Z</oboInOwl:creation_date>
@@ -4616,7 +6326,29 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000198 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000198">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000001"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005515"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000461"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000195"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000461"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>A host (molecular function??) phenotype in which the binding of one protein to another is normal (i.e. indistinguishable from wild type). The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:27:49Z</oboInOwl:creation_date>
@@ -4644,7 +6376,28 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000200 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000200">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000001"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0044877"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000461"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000198"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0044877"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>A host (molecular function??) phenotype in which the binding of one protein to a protein complex is normal (i.e. indistinguishable from wild type). The protein whose binding to the protein complex is assayed may be encoded by the mutated gene, or may be encoded by a different gene.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:28:13Z</oboInOwl:creation_date>
@@ -4686,7 +6439,28 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000203 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000203">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000001"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0044877"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000196"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0044877"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>A host (molecular function??) phenotype in which the binding of one protein to a protein complex is abnormal. The protein whose binding to the protein complex is affected may be encoded by the mutated gene, or may be encoded by a different gene.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:31:34Z</oboInOwl:creation_date>
@@ -4714,6 +6488,22 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000205 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000205">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001558"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005515"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001558"/>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000196"/>
         <obo:IAO_0000115>A host (molecular function??) phenotype in which the binding of one protein to another does not occur. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
@@ -4770,6 +6560,18 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000209 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000209">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000499"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005515"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000499"/>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000196"/>
         <obo:IAO_0000115>A host (molecular function??) phenotype in which the binding of one protein to another occurs for a shorter time than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
@@ -4798,7 +6600,34 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000211 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000211">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000196"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/so#has_part"/>
+                        <owl:someValuesFrom rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000209"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/so#has_part"/>
+                        <owl:someValuesFrom rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000213"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000196"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/so#has_part"/>
+                <owl:someValuesFrom rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000209"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/so#has_part"/>
+                <owl:someValuesFrom rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000213"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>A host (molecular function??) phenotype in which the binding of one protein to another occurs to a lower extent, and for a shorter time, than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:32:46Z</oboInOwl:creation_date>
@@ -4826,6 +6655,18 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000213 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000213">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002052"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005515"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002052"/>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000196"/>
         <obo:IAO_0000115>A host (molecular function??) phenotype in which the binding of one protein to another occurs to a lower extent than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
@@ -4854,6 +6695,18 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000215 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000215">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002051"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005515"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002051"/>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000196"/>
         <obo:IAO_0000115>A host (molecular function??) phenotype in which the binding of one protein to another occurs to a greater extent than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
@@ -5786,6 +7639,7 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-03T13:43:37Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">systemic phenotype</rdfs:label>
     </owl:Class>
     
@@ -5798,6 +7652,9 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-05T11:00:39Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHI-base definition of &apos;effector&apos;. (To be made into a class or requested from an external ontology to make into a logical definition).
+
+An effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defences or other host responses.</rdfs:comment>
         <rdfs:label xml:lang="en">effector phenotype</rdfs:label>
     </owl:Class>
     
@@ -6081,6 +7938,978 @@ a host gene mutation may alter a immune reponse (turn on or off) in the absence 
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-05T13:00:37Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">host_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">abnormal dissemination of host sexual product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000305 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000305">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000280"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(Required for successful infection of the host species). The ability of an organism to activate or suppress host defences to enable infectious disease. (Irrespective of the host genotype).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T12:55:58Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">effector of pathogenicity phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000306 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000306">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000311"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The host defences activated by the pathogen are altered compared to the wild type interaction</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T12:56:08Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal effector of virulence phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000307 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000307">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000305"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ability to cause disease by activating or suppressing host defences is unaltered compared to the wildtype interaction. This may result in the outcome of being pathogenic or not-pathogenic.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T12:58:41Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal effector of pathogenicity phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000308 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000308">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000307"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The host defences activated by the pathogen are unaltered compared to the wild type interaction</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T12:59:50Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal effector of pathogenicity activation of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000309 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000309">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000307"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The host defences suppressed by the pathogen are unaltered compared to the wild type interaction</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:11:15Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal effector of pathogenicity suppression of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000310 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000310">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000311"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The pathogen has the ability to cause infectious disease dependent upon the gene for gene relationship between the pathogen and host genotype and this is unaltered compared to the wildtype interaction. This may result in disease (virulence) or no disease (avirulence).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:12:40Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal effector of virulence phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000311 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000311">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000280"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(gene for gene relationships) or defined from the phenotype described in the published study.
+The pathogen has the ability to cause infectious disease dependent upon the gene for gene relationship between the pathogen and host genotype.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:14:06Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">effector of virulence phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000312 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000312">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000305"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ability to cause disease by activating or suppressing host defences is altered compared to the wildtype interaction.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:15:10Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal effector of pathogenicity phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000313 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000313">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000310"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The host defences activated by the pathogen are unaltered compared to the wild type interaction</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:22:08Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal effector of virulence activation of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000314 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000314">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000310"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The host defences suppressed by the pathogen are unaltered compared to the wild type interaction</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:22:20Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal effector of virulence suppression of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000315 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000315">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000306"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The pathogen has the ability to cause infectious disease dependent upon the gene for gene relationship between the pathogen and host genotype and this is altered compared to the wildtype interaction. This may result in disease (virulence) or no disease (avirulence).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:25:51Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal effector of virulence activation of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000316 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000316">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000315"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The pathogen effector entity has a decreased ability to activate host defence.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:26:40Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased effector of virulence activation of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000317 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000317">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000315"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The pathogen effector entity has an increased ability to activate host defence.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:27:34Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased effector of virulence activation of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000318 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000318">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000306"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The host defences suppressed by the pathogen are altered compare to the wild type interaction</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:28:11Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal effector of virulence suppression of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000319 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000319">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000318"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The pathogen effector entity has a decreased ability to suppress host defence.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:28:53Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased effector of virulence suppression of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000320 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000320">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000318"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The pathogen effector entity has an increased ability to suppress host defence.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:29:31Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased effector of virulence suppression of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000321 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000321">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000312"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The host defences activated by the pathogen are altered compared to the wild type interaction.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:31:28Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal effector of pathogenicity activation of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000322 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000322">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000321"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The pathogen effector entity has gained the ability to activate host defence.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:32:29Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">gain of effector of pathogenicity activation of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000323 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000323">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000321"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The pathogen effector entity has lost the ability to activate host defence.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:32:51Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">loss of effector of pathogenicity activation of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000324 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000324">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000312"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The host defences suppressed by the pathogen are altered compared to the wild type interaction</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:33:53Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal effector of pathogenicity suppression of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000325 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000325">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000324"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The pathogen effector entity has gained the ability to suppress host defence.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:34:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">gain of effector of pathogenicity suppression of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000326 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000326">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000324"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The pathogen effector entity has lost the ability to suppress host defence.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:34:33Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">loss of effector of pathogenicity suppression of host defence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000327 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000327">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001650"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000528"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/pato#towards"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_81758"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000022"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/pato#towards"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_81758"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-19T13:41:59Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased resistance to cyproconazole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000328 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000328">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0045047"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000528"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/pato#towards"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_81758"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000035"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/pato#towards"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_81758"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-19T13:42:19Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal resistance to cyproconazole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000329 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000329">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001549"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000528"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/pato#towards"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_81758"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000021"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/pato#towards"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_81758"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-19T13:42:46Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased sensitivity to cyproconazole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000330 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000330">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0045049"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IDO_0000528"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/pato#towards"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_81758"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000018"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/pato#towards"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_81758"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-19T13:43:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal sensitivity to cyproconazole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000331 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000331">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T15:59:22Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:comment>add duplicate children from pathogen phenotypes. Alter to be in host assay</rdfs:comment>
+        <rdfs:label xml:lang="en">penetration of host by pathogen phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000332 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000332">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T16:06:31Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">pathogen growth in host phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000333 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000333">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000336"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T16:08:18Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">pathogen cell to cell movement in host phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000334 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000334">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000333"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T16:09:56Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal cell to cell movement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000335 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000335">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000333"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T16:10:17Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal cell to cell movement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000336 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000336">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000332"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T16:16:46Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">intracellular</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000337 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000337">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000332"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T16:17:02Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">extracellular</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000338 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000338">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000334"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T16:17:55Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased cell to cell movement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000339 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000339">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000334"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T16:18:09Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased cell to cell movement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000340 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000340">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000334"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T16:18:22Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abolished cell to cell movement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000341 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000341">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000334"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T16:18:44Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">gain of cell to cell movement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000342 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000342">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000334"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T16:19:03Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">expedited cell to cell movement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000343 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000343">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000334"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T16:19:20Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">delayed cell to cell movement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000344 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000344">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T16:23:29Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">host defence response to pathogen phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000345 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000345">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T16:32:47Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">pathogen induced disease symptons in host phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000346 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000346">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000347"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T16:33:27Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">lesion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000347 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000347">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000345"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T16:34:09Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">colour</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000348 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000348">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000344"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T17:04:57Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">deposition of substance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000349 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000349">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000331"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:23:08Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal penetration of host by pathogen phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000350 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000350">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000331"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:23:33Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal penetration of host by pathogen phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000351 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000351">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000349"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:24:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal pre penetration of host by pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000352 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000352">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000350"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:24:42Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal pre penetration of host by pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000353 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000353">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000350"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:25:01Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal penetration of host by pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000354 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000354">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000350"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:25:33Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal post penetration of host by pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000355 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000355">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000349"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:26:18Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal post penetration of host by pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000356 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000356">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000349"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:26:35Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal penetration of host by pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000357 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000357">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000356"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:28:51Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">altered functionality of pathogen penetration structure in contact with host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000358 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000358">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000356"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:30:29Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">non-functional pathogen penetration structure in contact with host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000359 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000359">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000357"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:31:26Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased pathogen penetration across the host barrier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000360 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000360">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000357"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:32:32Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased pathogen penetration across the host barrier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000361 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000361">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000357"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:32:57Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">delayed pathogen penetration across the host barrier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000362 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000362">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000357"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:33:34Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">expedited pathogen penetration across the host barrier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000363 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000363">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000355"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:35:05Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">absent pathogen growth in host post penetration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000364 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000364">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000355"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:37:31Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal pathogen growth in host post penetration present</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000365 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000365">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000364"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:39:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased pathogen growth in host post penetration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000366 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000366">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000364"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:39:34Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">delayed timing of pathogen growth in host post penetration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000367 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000367">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000364"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:40:14Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">expedited timing of pathogen growth in host post penetration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000368 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000368">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000364"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:41:05Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased pathogen growth in host post penetration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000369 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000369">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000351"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-08T12:12:18Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal pathogen penetration structure present when near host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000370 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000370">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000351"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-08T12:14:10Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">pathogen penetration structure absent when near host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000371 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000371">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000369"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-08T12:15:52Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased quantity of pathogen penetration structure when near host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000372 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000372">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000369"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-08T12:16:29Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased size of pathogen penetration structure when near host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000373 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000373">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000369"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-08T12:16:46Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased quantity of pathogen penetration structure when near host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000374 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000374">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000369"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-08T12:17:03Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased size of pathogen penetration structure when near host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000375 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000375">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000369"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-08T12:17:35Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">delayed timing of pathogen penetration structure development when near host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000376 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000376">
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000369"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-08T12:17:52Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">expedited timing of pathogen penetration structure development when near host</rdfs:label>
     </owl:Class>
     
 

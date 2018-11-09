@@ -38,6 +38,17 @@ subset: attribute_slim
 is_a: PATO:0000068 ! qualitative
 
 [Term]
+id: PATO:0000085
+name: sensitivity toward
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's disposition to detect or perceive external stimulation." [PATOC:GVG]
+subset: attribute_slim
+subset: disposition_slim
+subset: relational_slim
+synonym: "sensitivity" EXACT []
+is_a: PATO:0001995 ! organismal quality
+
+[Term]
 id: PATO:0000169
 name: viability
 namespace: quality
@@ -127,6 +138,31 @@ relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0000498 ! increased duration
 
 [Term]
+id: PATO:0000513
+name: insensitive toward
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's lacking sensitivity toward an external stimulus." [PATOC:GVG]
+subset: disposition_slim
+subset: relational_slim
+subset: value_slim
+synonym: "insensitive" EXACT []
+synonym: "resistant" RELATED []
+is_a: PATO:0000085 ! sensitivity toward
+relationship: is_opposite_of PATO:0000516 ! sensitive toward
+
+[Term]
+id: PATO:0000516
+name: sensitive toward
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's having sensitivity toward an external stimulus." [PATOC:GVG]
+subset: disposition_slim
+subset: relational_slim
+subset: value_slim
+synonym: "sensitive" EXACT []
+is_a: PATO:0000085 ! sensitivity toward
+relationship: is_opposite_of PATO:0000513 ! insensitive toward
+
+[Term]
 id: PATO:0000718
 name: lethal (sensu genetics)
 namespace: quality
@@ -134,6 +170,42 @@ def: "A viability quality inhering in a population by virtue of the bearer's lon
 subset: disposition_slim
 subset: value_slim
 is_a: PATO:0000169 ! viability
+
+[Term]
+id: PATO:0001043
+name: susceptibility toward
+namespace: quality
+def: "A quality inhering in an entity by virtue of the bearer's propensity to resist an external stimulus." [PATOC:GVG]
+subset: attribute_slim
+subset: disposition_slim
+subset: relational_slim
+synonym: "susceptibility" EXACT []
+is_a: PATO:0000085 ! sensitivity toward
+relationship: is_opposite_of PATO:0001046 ! resistance to
+
+[Term]
+id: PATO:0001046
+name: resistance to
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's disposition to resist to a stimulus." [PATOC:GVG]
+subset: attribute_slim
+subset: disposition_slim
+subset: relational_slim
+subset: scalar_slim
+synonym: "resistance" EXACT []
+is_a: PATO:0001995 ! organismal quality
+relationship: is_opposite_of PATO:0001043 ! susceptibility toward
+
+[Term]
+id: PATO:0001178
+name: resistant to
+namespace: quality
+def: "A resistance quality inhering in a bearer by virtue of the bearer's resistance to a stimulus." [PATOC:GVG]
+subset: disposition_slim
+subset: relational_slim
+subset: value_slim
+synonym: "resistant" EXACT []
+is_a: PATO:0001046 ! resistance to
 
 [Term]
 id: PATO:0001236
@@ -181,6 +253,40 @@ synonym: "time" RELATED []
 is_a: PATO:0002062 ! physical quality of a process
 
 [Term]
+id: PATO:0001549
+name: increased sensitivity toward
+namespace: quality
+def: "A sensitivity toward an external stimulus which is higher than normal/average." [PATO:GVG]
+subset: disposition_slim
+subset: relational_slim
+subset: value_slim
+synonym: "high sensitivity toward" EXACT []
+synonym: "increased sensitivity" EXACT []
+is_a: PATO:0000516 ! sensitive toward
+is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0000516 ! sensitive toward
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001550 ! decreased sensitivity toward
+
+[Term]
+id: PATO:0001550
+name: decreased sensitivity toward
+namespace: quality
+def: "A sensitivity toward an external stimulus which is lower than normal/average." [PATO:GVG]
+subset: disposition_slim
+subset: relational_slim
+subset: value_slim
+synonym: "decreased sensitivity" EXACT []
+synonym: "low sensitivity toward" EXACT []
+is_a: PATO:0000516 ! sensitive toward
+is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0000516 ! sensitive toward
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001549 ! increased sensitivity toward
+
+[Term]
 id: PATO:0001558
 name: lacking processual parts
 namespace: quality
@@ -196,6 +302,40 @@ namespace: quality
 def: "A quality of a process inhering in a bearer by virtue of the bearer's processual parts." [PATOC:GVG]
 subset: relational_slim
 is_a: PATO:0001236 ! process quality
+
+[Term]
+id: PATO:0001650
+name: increased resistance to
+namespace: quality
+def: "A resistance to a stimulus which is relatively high." [PATOC:GVG]
+subset: disposition_slim
+subset: relational_slim
+subset: value_slim
+synonym: "high resistance to" EXACT []
+synonym: "increased resistance" EXACT []
+is_a: PATO:0001178 ! resistant to
+is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0001178 ! resistant to
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001651 ! decreased resistance to
+
+[Term]
+id: PATO:0001651
+name: decreased resistance to
+namespace: quality
+def: "A resistance to a stimulus which is relatively low." [PATOC:GVG]
+subset: disposition_slim
+subset: relational_slim
+subset: value_slim
+synonym: "decreased resistance" EXACT []
+synonym: "low resistance to" EXACT []
+is_a: PATO:0001178 ! resistant to
+is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0001178 ! resistant to
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001650 ! increased resistance to
 
 [Term]
 id: PATO:0001995
@@ -411,6 +551,38 @@ created_by: Luke Slater
 creation_date: 2017-12-21T14:11:01Z
 
 [Term]
+id: PATO:0045047
+name: normal resistance to
+namespace: quality
+def: "A resistance to a stimulus which is relatively normal or average" []
+subset: disposition_slim
+subset: relational_slim
+subset: value_slim
+is_a: PATO:0001178 ! resistant to
+is_a: PATO:0045001 ! normal object quality
+intersection_of: PATO:0001178 ! resistant to
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+relationship: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
+id: PATO:0045049
+name: normal sensitivity toward
+namespace: quality
+def: "A sensitivity toward an external stimulus which is relatively normal or average" []
+subset: disposition_slim
+subset: relational_slim
+subset: value_slim
+is_a: PATO:0000516 ! sensitive toward
+is_a: PATO:0045001 ! normal object quality
+intersection_of: PATO:0000516 ! sensitive toward
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+relationship: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0045073
 name: normal process quality
 namespace: quality
@@ -517,4 +689,10 @@ name: part_of
 namespace: quality
 xref: BFO:0000050
 is_transitive: true
+
+[Typedef]
+id: towards
+name: towards
+namespace: quality
+comment: Relation binding a relational quality or disposition to the relevant type of entity.
 

@@ -138,6 +138,19 @@ relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0000498 ! increased duration
 
 [Term]
+id: PATO:0000513
+name: insensitive toward
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's lacking sensitivity toward an external stimulus." [PATOC:GVG]
+subset: disposition_slim
+subset: relational_slim
+subset: value_slim
+synonym: "insensitive" EXACT []
+synonym: "resistant" RELATED []
+is_a: PATO:0000085 ! sensitivity toward
+relationship: is_opposite_of PATO:0000516 ! sensitive toward
+
+[Term]
 id: PATO:0000516
 name: sensitive toward
 namespace: quality
@@ -147,7 +160,7 @@ subset: relational_slim
 subset: value_slim
 synonym: "sensitive" EXACT []
 is_a: PATO:0000085 ! sensitivity toward
-relationship: is_opposite_of PATO:0000513
+relationship: is_opposite_of PATO:0000513 ! insensitive toward
 
 [Term]
 id: PATO:0000718
@@ -157,6 +170,18 @@ def: "A viability quality inhering in a population by virtue of the bearer's lon
 subset: disposition_slim
 subset: value_slim
 is_a: PATO:0000169 ! viability
+
+[Term]
+id: PATO:0001043
+name: susceptibility toward
+namespace: quality
+def: "A quality inhering in an entity by virtue of the bearer's propensity to resist an external stimulus." [PATOC:GVG]
+subset: attribute_slim
+subset: disposition_slim
+subset: relational_slim
+synonym: "susceptibility" EXACT []
+is_a: PATO:0000085 ! sensitivity toward
+relationship: is_opposite_of PATO:0001046 ! resistance to
 
 [Term]
 id: PATO:0001046
@@ -169,7 +194,7 @@ subset: relational_slim
 subset: scalar_slim
 synonym: "resistance" EXACT []
 is_a: PATO:0001995 ! organismal quality
-relationship: is_opposite_of PATO:0001043
+relationship: is_opposite_of PATO:0001043 ! susceptibility toward
 
 [Term]
 id: PATO:0001178
