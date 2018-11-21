@@ -89,9 +89,10 @@ imports/%_import.owl: mirror/%.owl imports/%_terms_combined.txt
 imports/%_import.obo: imports/%_import.owl
 	$(ROBOT) convert --check false -i $< -f obo -o $@.tmp && mv $@.tmp $@
 
-# clone remote ontology locally, perfoming some excision of relations and annotations
+# clone remote ontology locally; wget is used instead of ROBOT to
+# prevent Travis-CI failing on large ontologies.
 mirror/%.owl: $(SRC)
-	$(ROBOT) convert -I $(OBO)/$*.owl -o $@
+	mkdir -p mirror && wget -O $@ $(OBO)/$*.owl
 .PRECIOUS: mirror/%.owl
 
 # ----------------------------------------
