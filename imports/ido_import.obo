@@ -227,6 +227,14 @@ property_value: IAO:0000602 "(forall (x) (if (MaterialEntity x) (IndependentCont
 property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 
 [Term]
+id: CARO:0000000
+name: anatomical entity
+def: "A part of a multicellular organism that is either an immaterial entity or a material entity with granularity above the level of a protein complex.  Or, a substance produced by a multicellular organism with granularity above the level of a protein complex." []
+is_a: BFO:0000040 ! material entity
+disjoint_from: IDO:0000528 ! pathogen
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/caro.owl
+
+[Term]
 id: CHEBI:23367
 name: molecular entity
 def: "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity." []
@@ -618,6 +626,15 @@ property_value: IAO:0000232 "For compatibility with BFO, this relation has a sho
 domain: BFO:0000004 ! independent continuant
 range: BFO:0000015 ! process
 expand_expression_to: "RO_0000053 some (RO_0000054 only ?Y)" []
+
+[Typedef]
+id: RO:0002234
+name: has output
+def: "p has output c iff c is a participant in p, c is present at the end of p, and c is not present at the beginning of p." []
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000118 "produces" xsd:string
+is_a: RO:0000057 ! has participant
 
 [Typedef]
 id: results_in_formation_of
