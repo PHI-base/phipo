@@ -2,6 +2,62 @@ format-version: 1.2
 ontology: phipo/imports/go_import
 
 [Term]
+id: GO:0002376
+name: immune system process
+namespace: biological_process
+def: "Any process involved in the development or functioning of the immune system, an organismal system for calibrated responses to potential internal or invasive threats." [GO_REF:0000022, GOC:add, GOC:mtg_15nov05]
+comment: Note that this term is a direct child of 'biological_process ; GO:0008150' because some immune system processes are types of cellular process (GO:0009987), whereas others are types of multicellular organism process (GO:0032501). This term was added by GO_REF:0000022.
+subset: goslim_agr
+subset: goslim_chembl
+subset: goslim_flybase_ribbon
+subset: goslim_generic
+subset: goslim_mouse
+subset: goslim_pir
+xref: Wikipedia:Immune_system
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0002682
+name: regulation of immune system process
+namespace: biological_process
+def: "Any process that modulates the frequency, rate, or extent of an immune system process." [GOC:add]
+is_a: GO:0050789 ! regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0002376 ! immune system process
+relationship: regulates GO:0002376 ! immune system process
+
+[Term]
+id: GO:0002683
+name: negative regulation of immune system process
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate, or extent of an immune system process." [GOC:add]
+synonym: "down regulation of immune system process" EXACT []
+synonym: "down-regulation of immune system process" EXACT []
+synonym: "downregulation of immune system process" EXACT []
+synonym: "inhibition of immune system process" NARROW []
+is_a: GO:0002682 ! regulation of immune system process
+is_a: GO:0048519 ! negative regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0002376 ! immune system process
+relationship: negatively_regulates GO:0002376 ! immune system process
+
+[Term]
+id: GO:0002684
+name: positive regulation of immune system process
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate, or extent of an immune system process." [GOC:add]
+synonym: "activation of immune system process" NARROW []
+synonym: "stimulation of immune system process" NARROW []
+synonym: "up regulation of immune system process" EXACT []
+synonym: "up-regulation of immune system process" EXACT []
+synonym: "upregulation of immune system process" EXACT []
+is_a: GO:0002682 ! regulation of immune system process
+is_a: GO:0048518 ! positive regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0002376 ! immune system process
+relationship: positively_regulates GO:0002376 ! immune system process
+
+[Term]
 id: GO:0003674
 name: molecular_function
 namespace: molecular_function
@@ -22,11 +78,13 @@ synonym: "molecular function" EXACT []
 id: GO:0003676
 name: nucleic acid binding
 namespace: molecular_function
+alt_id: GO:0000496
 def: "Interacting selectively and non-covalently with any nucleic acid." [GOC:jl]
 subset: goslim_chembl
 subset: goslim_metagenomics
 subset: goslim_pir
 subset: goslim_plant
+synonym: "base pairing" NARROW []
 is_a: GO:0097159 ! organic cyclic compound binding
 is_a: GO:1901363 ! heterocyclic compound binding
 
@@ -55,6 +113,7 @@ is_a: GO:0003676 ! nucleic acid binding
 id: GO:0003723
 name: RNA binding
 namespace: molecular_function
+alt_id: GO:0000498
 alt_id: GO:0044822
 def: "Interacting selectively and non-covalently with an RNA molecule or a portion thereof." [GOC:jl, GOC:mah]
 subset: goslim_agr
@@ -66,9 +125,11 @@ subset: goslim_generic
 subset: goslim_mouse
 subset: goslim_plant
 subset: goslim_yeast
+synonym: "base pairing with RNA" NARROW []
 synonym: "poly(A) RNA binding" RELATED []
 synonym: "poly(A)-RNA binding" RELATED []
 synonym: "poly-A RNA binding" RELATED []
+xref: reactome:R-HSA-203922 "Exportin-5 recognizes 3' overhang of pre-miRNA"
 is_a: GO:0003676 ! nucleic acid binding
 
 [Term]
@@ -130,6 +191,12 @@ subset: goslim_pir
 subset: goslim_plant
 synonym: "glycoprotein binding" NARROW []
 synonym: "protein amino acid binding" EXACT []
+xref: reactome:R-HSA-170835 "An anchoring protein, ZFYVE9 (SARA), recruits SMAD2/3"
+xref: reactome:R-HSA-170846 "TGFBR2 recruits TGFBR1"
+xref: reactome:R-HSA-3645786 "TGFBR2 mutant dimers recruit TGFBR1"
+xref: reactome:R-HSA-3656484 "TGFBR2 recruits TGFBR1 KD Mutants"
+xref: reactome:R-HSA-3702153 "An anchoring protein, ZFYVE9 (SARA), recruits SMAD2/3 MH2 domain mutants"
+xref: reactome:R-HSA-3713560 "An anchoring protein, ZFYVE9 (SARA), recruits SMAD2/3 phosphorylation motif mutants"
 is_a: GO:0005488 ! binding
 
 [Term]
@@ -163,6 +230,20 @@ synonym: "RNA localisation" EXACT [GOC:mah]
 is_a: GO:0033036 ! macromolecule localization
 
 [Term]
+id: GO:0006508
+name: proteolysis
+namespace: biological_process
+def: "The hydrolysis of proteins into smaller polypeptides and/or amino acids by cleavage of their peptide bonds." [GOC:bf, GOC:mah]
+comment: This term was intentionally placed under 'protein metabolic process ; GO:0019538' rather than 'protein catabolic process ; GO:0030163' to cover all processes centered on breaking peptide bonds, including those involved in protein processing.
+subset: goslim_chembl
+subset: goslim_metagenomics
+subset: goslim_pir
+synonym: "ATP-dependent proteolysis" NARROW [GOC:mah]
+synonym: "peptidolysis" EXACT []
+xref: Wikipedia:Proteolysis
+is_a: GO:0019538 ! protein metabolic process
+
+[Term]
 id: GO:0006793
 name: phosphorus metabolic process
 namespace: biological_process
@@ -179,6 +260,16 @@ def: "The chemical reactions and pathways involving the phosphate group, the ani
 synonym: "phosphate metabolic process" RELATED []
 synonym: "phosphate metabolism" EXACT []
 is_a: GO:0006793 ! phosphorus metabolic process
+
+[Term]
+id: GO:0006807
+name: nitrogen compound metabolic process
+namespace: biological_process
+def: "The chemical reactions and pathways involving organic or inorganic compounds that contain nitrogen." [CHEBI:51143, GOC:go_curators, GOC:jl, ISBN:0198506732]
+subset: goslim_metagenomics
+subset: goslim_pir
+synonym: "nitrogen compound metabolism" EXACT []
+is_a: GO:0008152 ! metabolic process
 
 [Term]
 id: GO:0006810
@@ -244,6 +335,59 @@ created_by: jl
 creation_date: 2013-12-19T15:26:17Z
 
 [Term]
+id: GO:0006914
+name: autophagy
+namespace: biological_process
+alt_id: GO:0016238
+def: "The cellular catabolic process in which cells digest parts of their own cytoplasm; allows for both recycling of macromolecular constituents under conditions of cellular stress and remodeling the intracellular structure for cell differentiation." [GOC:autophagy, ISBN:0198547684, PMID:11099404, PMID:9412464]
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_pir
+subset: goslim_pombe
+xref: Wikipedia:Autophagy_(cellular)
+is_a: GO:0044248 ! cellular catabolic process
+is_a: GO:0061919 ! process utilizing autophagic mechanism
+
+[Term]
+id: GO:0006950
+name: response to stress
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a disturbance in organismal or cellular homeostasis, usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation)." [GOC:mah]
+comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
+subset: gocheck_do_not_manually_annotate
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_plant
+synonym: "response to abiotic stress" RELATED []
+synonym: "response to biotic stress" RELATED []
+is_a: GO:0050896 ! response to stimulus
+
+[Term]
+id: GO:0006952
+name: defense response
+namespace: biological_process
+alt_id: GO:0002217
+alt_id: GO:0042829
+def: "Reactions, triggered in response to the presence of a foreign body or the occurrence of an injury, which result in restriction of damage to the organism attacked or prevention/recovery from the infection caused by the attack." [GOC:go_curators]
+synonym: "antimicrobial peptide activity" RELATED []
+synonym: "defence response" EXACT []
+synonym: "defense/immunity protein activity" RELATED []
+synonym: "physiological defense response" EXACT []
+is_a: GO:0006950 ! response to stress
+
+[Term]
+id: GO:0006955
+name: immune response
+namespace: biological_process
+def: "Any immune system process that functions in the calibrated response of an organism to a potential internal or invasive threat." [GO_REF:0000022, GOC:add, GOC:mtg_15nov05]
+comment: This term was improved by GO_REF:0000022. It was redefined and moved.
+is_a: GO:0002376 ! immune system process
+is_a: GO:0050896 ! response to stimulus
+
+[Term]
 id: GO:0006996
 name: organelle organization
 namespace: biological_process
@@ -304,6 +448,14 @@ relationship: part_of GO:0023052 ! signaling
 relationship: part_of GO:0051716 ! cellular response to stimulus
 
 [Term]
+id: GO:0008061
+name: chitin binding
+namespace: molecular_function
+def: "Interacting selectively and non-covalently with chitin, a linear polysaccharide consisting of beta-(1->4)-linked N-acetyl-D-glucosamine residues." [GOC:jl, ISBN:0198506732]
+is_a: GO:0008144 ! drug binding
+is_a: GO:0097367 ! carbohydrate derivative binding
+
+[Term]
 id: GO:0008104
 name: protein localization
 namespace: biological_process
@@ -315,6 +467,14 @@ synonym: "establishment and maintenance of asymmetric protein localization" RELA
 synonym: "establishment and maintenance of protein localization" RELATED []
 synonym: "protein localisation" EXACT [GOC:mah]
 is_a: GO:0033036 ! macromolecule localization
+
+[Term]
+id: GO:0008144
+name: drug binding
+namespace: molecular_function
+def: "Interacting selectively and non-covalently with a drug, any naturally occurring or synthetic substance, other than a nutrient, that, when administered or applied to an organism, affects the structure or functioning of the organism; in particular, any such substance used in the diagnosis, prevention, or treatment of disease." [GOC:jl, ISBN:0198506732]
+subset: goslim_pir
+is_a: GO:0005488 ! binding
 
 [Term]
 id: GO:0008150
@@ -366,6 +526,84 @@ created_by: janelomax
 creation_date: 2012-10-17T15:46:40Z
 
 [Term]
+id: GO:0008219
+name: cell death
+namespace: biological_process
+def: "Any biological process that results in permanent cessation of all vital functions of a cell. A cell should be considered dead when any one of the following molecular or morphological criteria is met: (1) the cell has lost the integrity of its plasma membrane; (2) the cell, including its nucleus, has undergone complete fragmentation into discrete bodies (frequently referred to as apoptotic bodies). The cell corpse (or its fragments) may be engulfed by an adjacent cell in vivo, but engulfment of whole cells should not be considered a strict criteria to define cell death as, under some circumstances, live engulfed cells can be released from phagosomes (see PMID:18045538)." [GOC:mah, GOC:mtg_apoptosis, PMID:25236395]
+comment: This term should not be used for direct annotation. The only exception should be when experimental data (e.g., staining with trypan blue or propidium iodide) show that cell death has occurred, but fail to provide details on death modality (accidental versus programmed). When information is provided on the cell death mechanism, annotations should be made to the appropriate descendant of 'cell death' (such as, but not limited to, GO:0097300 'programmed necrotic cell death' or GO:0006915 'apoptotic process'). Also, if experimental data suggest that a gene product influences cell death indirectly, rather than being involved in the death process directly, consider annotating to a 'regulation' term.
+subset: goslim_agr
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_mouse
+subset: goslim_plant
+synonym: "accidental cell death" RELATED []
+synonym: "necrosis" RELATED []
+is_a: GO:0009987 ! cellular process
+
+[Term]
+id: GO:0008233
+name: peptidase activity
+namespace: molecular_function
+def: "Catalysis of the hydrolysis of a peptide bond. A peptide bond is a covalent bond formed when the carbon atom from the carboxyl group of one amino acid shares electrons with the nitrogen atom from the amino group of a second amino acid." [GOC:jl, ISBN:0815332181]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_yeast
+synonym: "hydrolase, acting on peptide bonds" EXACT []
+synonym: "peptide hydrolase activity" EXACT []
+synonym: "protease activity" EXACT []
+synonym: "proteinase activity" NARROW []
+xref: EC:3.4
+xref: reactome:R-HSA-205112 "gamma-secretase cleaves p75NTR, releasing NRIF and TRAF6"
+xref: reactome:R-HSA-3000243 "Unknown protease degrades GIF:Cbl to release Cbl"
+xref: reactome:R-HSA-3139027 "Maturation of HIV Virion"
+xref: reactome:R-HSA-376149 "Proteolytic processing of SLIT"
+xref: reactome:R-HSA-5655483 "USP1 autocleavage"
+xref: reactome:R-HSA-5684864 "NAPSA, CTSH, PGA3-5 cleave pro-SFTPB"
+xref: reactome:R-HSA-5685902 "NAPSA, CTSH, PGA3-5 cleave pro-SFTPC"
+xref: reactome:R-HSA-5693319 "CTRC hydrolyses PRSS1"
+is_a: GO:0016787 ! hydrolase activity
+is_a: GO:0140096 ! catalytic activity, acting on a protein
+relationship: part_of GO:0006508 ! proteolysis
+
+[Term]
+id: GO:0009056
+name: catabolic process
+namespace: biological_process
+alt_id: GO:0044243
+alt_id: GO:0044712
+def: "The chemical reactions and pathways resulting in the breakdown of substances, including the breakdown of carbon compounds with the liberation of energy for use by the cell or organism." [ISBN:0198547684]
+subset: goslim_agr
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_plant
+synonym: "breakdown" EXACT []
+synonym: "catabolism" EXACT []
+synonym: "degradation" EXACT []
+synonym: "multicellular organismal catabolic process" NARROW []
+synonym: "single-organism catabolic process" RELATED []
+xref: Wikipedia:Catabolism
+is_a: GO:0008152 ! metabolic process
+created_by: janelomax
+creation_date: 2012-10-17T15:52:35Z
+
+[Term]
+id: GO:0009626
+name: plant-type hypersensitive response
+namespace: biological_process
+def: "The rapid, localized death of plant cells in response to invasion by a pathogen." [ISBN:0582227089]
+comment: Note that term is to be used to annotate gene products in the plant. To annotate symbiont gene products that induce the hypersensitive response, consider the biological process term 'modulation by symbiont of host defense-related programmed cell death ; GO:0034053'.
+synonym: "HR" EXACT []
+synonym: "HR-PCD" EXACT []
+synonym: "plant hypersensitive response" EXACT []
+is_a: GO:0033554 ! cellular response to stress
+is_a: GO:0034050 ! host programmed cell death induced by symbiont
+is_a: GO:0045087 ! innate immune response
+
+[Term]
 id: GO:0009892
 name: negative regulation of metabolic process
 namespace: biological_process
@@ -406,6 +644,56 @@ is_a: GO:0048518 ! positive regulation of biological process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0008152 ! metabolic process
 relationship: positively_regulates GO:0008152 ! metabolic process
+
+[Term]
+id: GO:0009894
+name: regulation of catabolic process
+namespace: biological_process
+def: "Any process that modulates the frequency, rate, or extent of the chemical reactions and pathways resulting in the breakdown of substances." [GOC:go_curators]
+synonym: "regulation of breakdown" EXACT []
+synonym: "regulation of catabolism" EXACT []
+synonym: "regulation of degradation" EXACT []
+is_a: GO:0019222 ! regulation of metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0009056 ! catabolic process
+relationship: regulates GO:0009056 ! catabolic process
+
+[Term]
+id: GO:0009895
+name: negative regulation of catabolic process
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the chemical reactions and pathways resulting in the breakdown of substances." [GOC:go_curators]
+synonym: "down regulation of catabolic process" EXACT []
+synonym: "down-regulation of catabolic process" EXACT []
+synonym: "downregulation of catabolic process" EXACT []
+synonym: "inhibition of catabolic process" NARROW []
+synonym: "negative regulation of breakdown" EXACT []
+synonym: "negative regulation of catabolism" EXACT []
+synonym: "negative regulation of degradation" EXACT []
+is_a: GO:0009892 ! negative regulation of metabolic process
+is_a: GO:0009894 ! regulation of catabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0009056 ! catabolic process
+relationship: negatively_regulates GO:0009056 ! catabolic process
+
+[Term]
+id: GO:0009896
+name: positive regulation of catabolic process
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the breakdown of substances." [GOC:go_curators]
+synonym: "activation of catabolic process" NARROW []
+synonym: "positive regulation of breakdown" EXACT []
+synonym: "positive regulation of catabolism" EXACT []
+synonym: "positive regulation of degradation" EXACT []
+synonym: "stimulation of catabolic process" NARROW []
+synonym: "up regulation of catabolic process" EXACT []
+synonym: "up-regulation of catabolic process" EXACT []
+synonym: "upregulation of catabolic process" EXACT []
+is_a: GO:0009893 ! positive regulation of metabolic process
+is_a: GO:0009894 ! regulation of catabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0009056 ! catabolic process
+relationship: positively_regulates GO:0009056 ! catabolic process
 
 [Term]
 id: GO:0009966
@@ -493,6 +781,34 @@ created_by: jl
 creation_date: 2013-12-02T13:58:34Z
 
 [Term]
+id: GO:0010363
+name: regulation of plant-type hypersensitive response
+namespace: biological_process
+def: "Any endogenous process that modulates the frequency, rate or extent of the plant hypersensitive response." [PMID:16255244]
+comment: Note that term is to be used to annotate gene products in the plant. To annotate genes in a symbiont, consider the biological process term 'modulation by symbiont of host programmed cell death ; GO:0052040'.
+synonym: "regulation of HR" EXACT []
+synonym: "regulation of HR-PCD" EXACT []
+synonym: "regulation of plant hypersensitive response" EXACT []
+is_a: GO:0043067 ! regulation of programmed cell death
+is_a: GO:0045088 ! regulation of innate immune response
+is_a: GO:0080135 ! regulation of cellular response to stress
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0009626 ! plant-type hypersensitive response
+relationship: regulates GO:0009626 ! plant-type hypersensitive response
+
+[Term]
+id: GO:0010466
+name: negative regulation of peptidase activity
+namespace: biological_process
+def: "Any process that stops or reduces the rate of peptidase activity, the hydrolysis of peptide bonds within proteins." [GOC:dph, GOC:tb]
+is_a: GO:0045861 ! negative regulation of proteolysis
+is_a: GO:0051346 ! negative regulation of hydrolase activity
+is_a: GO:0052547 ! regulation of peptidase activity
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0008233 ! peptidase activity
+relationship: negatively_regulates GO:0008233 ! peptidase activity
+
+[Term]
 id: GO:0010469
 name: regulation of signaling receptor activity
 namespace: biological_process
@@ -503,6 +819,38 @@ is_a: GO:0065009 ! regulation of molecular function
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0038023 ! signaling receptor activity
 relationship: regulates GO:0038023 ! signaling receptor activity
+
+[Term]
+id: GO:0010506
+name: regulation of autophagy
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of autophagy. Autophagy is the process in which cells digest parts of their own cytoplasm." [GOC:dph, GOC:tb]
+is_a: GO:0031329 ! regulation of cellular catabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0006914 ! autophagy
+relationship: regulates GO:0006914 ! autophagy
+
+[Term]
+id: GO:0010507
+name: negative regulation of autophagy
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of autophagy. Autophagy is the process in which cells digest parts of their own cytoplasm." [GOC:dph, GOC:tb]
+is_a: GO:0010506 ! regulation of autophagy
+is_a: GO:0031330 ! negative regulation of cellular catabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0006914 ! autophagy
+relationship: negatively_regulates GO:0006914 ! autophagy
+
+[Term]
+id: GO:0010508
+name: positive regulation of autophagy
+namespace: biological_process
+def: "Any process that activates, maintains or increases the rate of autophagy. Autophagy is the process in which cells digest parts of their own cytoplasm." [GOC:dph, GOC:tb]
+is_a: GO:0010506 ! regulation of autophagy
+is_a: GO:0031331 ! positive regulation of cellular catabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0006914 ! autophagy
+relationship: positively_regulates GO:0006914 ! autophagy
 
 [Term]
 id: GO:0010562
@@ -525,6 +873,28 @@ is_a: GO:0051174 ! regulation of phosphorus metabolic process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0006793 ! phosphorus metabolic process
 relationship: negatively_regulates GO:0006793 ! phosphorus metabolic process
+
+[Term]
+id: GO:0010604
+name: positive regulation of macromolecule metabolic process
+namespace: biological_process
+def: "Any process that increases the frequency, rate or extent of the chemical reactions and pathways involving macromolecules, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass." [GOC:dph, GOC:tb]
+is_a: GO:0009893 ! positive regulation of metabolic process
+is_a: GO:0060255 ! regulation of macromolecule metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0043170 ! macromolecule metabolic process
+relationship: positively_regulates GO:0043170 ! macromolecule metabolic process
+
+[Term]
+id: GO:0010605
+name: negative regulation of macromolecule metabolic process
+namespace: biological_process
+def: "Any process that decreases the frequency, rate or extent of the chemical reactions and pathways involving macromolecules, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass." [GOC:dph, GOC:tb]
+is_a: GO:0009892 ! negative regulation of metabolic process
+is_a: GO:0060255 ! regulation of macromolecule metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0043170 ! macromolecule metabolic process
+relationship: negatively_regulates GO:0043170 ! macromolecule metabolic process
 
 [Term]
 id: GO:0010638
@@ -583,6 +953,79 @@ is_a: GO:0048523 ! negative regulation of cellular process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0007154 ! cell communication
 relationship: negatively_regulates GO:0007154 ! cell communication
+
+[Term]
+id: GO:0010939
+name: regulation of necrotic cell death
+namespace: biological_process
+def: "Any process that modulates the rate, frequency or extent of necrotic cell death. Necrotic cell death is a cell death process that is morphologically characterized by a gain in cell volume (oncosis), swelling of organelles, plasma membrane rupture and subsequent loss of intracellular contents." [PMID:16507998]
+is_a: GO:0010941 ! regulation of cell death
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0070265 ! necrotic cell death
+relationship: regulates GO:0070265 ! necrotic cell death
+
+[Term]
+id: GO:0010940
+name: positive regulation of necrotic cell death
+namespace: biological_process
+def: "Any process that increases the rate, frequency or extent of necrotic cell death. Necrotic cell death is a cell death process that is morphologically characterized by a gain in cell volume (oncosis), swelling of organelles, plasma membrane rupture and subsequent loss of intracellular contents." [PMID:16507998]
+is_a: GO:0010939 ! regulation of necrotic cell death
+is_a: GO:0010942 ! positive regulation of cell death
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0070265 ! necrotic cell death
+relationship: positively_regulates GO:0070265 ! necrotic cell death
+
+[Term]
+id: GO:0010941
+name: regulation of cell death
+namespace: biological_process
+def: "Any process that modulates the rate or frequency of cell death. Cell death is the specific activation or halting of processes within a cell so that its vital functions markedly cease, rather than simply deteriorating gradually over time, which culminates in cell death." [GOC:dph, GOC:tb]
+is_a: GO:0050794 ! regulation of cellular process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0008219 ! cell death
+relationship: regulates GO:0008219 ! cell death
+
+[Term]
+id: GO:0010942
+name: positive regulation of cell death
+namespace: biological_process
+def: "Any process that increases the rate or frequency of cell death. Cell death is the specific activation or halting of processes within a cell so that its vital functions markedly cease, rather than simply deteriorating gradually over time, which culminates in cell death." [GOC:dph, GOC:tb]
+is_a: GO:0010941 ! regulation of cell death
+is_a: GO:0048522 ! positive regulation of cellular process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0008219 ! cell death
+relationship: positively_regulates GO:0008219 ! cell death
+
+[Term]
+id: GO:0010952
+name: positive regulation of peptidase activity
+namespace: biological_process
+def: "Any process that increases the frequency, rate or extent of peptidase activity, the hydrolysis of peptide bonds within proteins." [GOC:dph, GOC:tb]
+is_a: GO:0045862 ! positive regulation of proteolysis
+is_a: GO:0051345 ! positive regulation of hydrolase activity
+is_a: GO:0052547 ! regulation of peptidase activity
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0008233 ! peptidase activity
+relationship: positively_regulates GO:0008233 ! peptidase activity
+created_by: tanyaberardini
+creation_date: 2009-04-27T11:54:32Z
+
+[Term]
+id: GO:0012501
+name: programmed cell death
+namespace: biological_process
+alt_id: GO:0016244
+def: "A process which begins when a cell receives an internal or external signal and activates a series of biochemical events (signaling pathway). The process ends with the death of the cell." [GOC:lr, GOC:mtg_apoptosis]
+comment: Note that this term should be used to annotate gene products in the organism undergoing the programmed cell death. To annotate genes in another organism whose products modulate programmed cell death in a host organism, consider the term 'modulation by symbiont of host programmed cell death ; GO:0052040'. Also, note that 'programmed cell death ; GO:0012501' should be used to refer to instances of caspase-independent cell death mechanisms, in the absence of further indications on the process taking place. At present, caspase-independent cell death is not yet represented in GO due to the lack of consensus and in-depth research on the topic. 'programmed cell death ; GO:0012501' may also be used to annotate gene products in taxa where apoptosis as defined in GO:0006915 does not occur, such as plants. You may also consider these specific children: GO:0097468 'programmed cell death in response to reactive oxygen species' (with descendants GO:0010421 'hydrogen peroxide-mediated programmed cell death' and GO:0010343 'singlet oxygen-mediated programmed cell death'), and GO:0009626 'plant-type hypersensitive response' and its children, which are descendants of GO:0034050 'host programmed cell death induced by symbiont'.
+synonym: "caspase-independent apoptosis" RELATED []
+synonym: "caspase-independent cell death" NARROW []
+synonym: "non-apoptotic programmed cell death" NARROW []
+synonym: "nonapoptotic programmed cell death" NARROW []
+synonym: "PCD" RELATED []
+synonym: "RCD" RELATED []
+synonym: "regulated cell death" BROAD []
+xref: Wikipedia:Programmed_cell_death
+is_a: GO:0008219 ! cell death
 
 [Term]
 id: GO:0015031
@@ -666,6 +1109,83 @@ subset: goslim_metagenomics
 subset: goslim_plant
 subset: goslim_yeast
 synonym: "phosphokinase activity" EXACT []
+xref: reactome:R-HSA-109822 "MAPK3,(MAPK1) phosphorylates GRB2-1:SOS1:p-Y427-SHC1"
+xref: reactome:R-HSA-109823 "MAPK3,(MAPK1) phosphorylates GRB2-1:SOS1:p-Y-IRS1,p-Y-IRS2"
+xref: reactome:R-HSA-111898 "Phosphorylation of cPLA2 by ERK-2"
+xref: reactome:R-HSA-112381 "Hyperphosphorylation (Ser2) of RNA Pol II CTD by P-TEFb complex"
+xref: reactome:R-HSA-139908 "Phosphorylation of DLC2 by MAPK8"
+xref: reactome:R-HSA-139918 "Phosphorylation of BIM by JNK"
+xref: reactome:R-HSA-165692 "Phosphorylation of 4E-BP1 by activated mTORC1"
+xref: reactome:R-HSA-165718 "mTORC1 phosphorylation of RPS6KB1 (S6K)"
+xref: reactome:R-HSA-165726 "Phosphorylation of Ribosomal protein S6 by activated S6K1"
+xref: reactome:R-HSA-165758 "Phosphorylation and inactivation of eEF2K by activated S6K1"
+xref: reactome:R-HSA-165766 "Phosphorylation and activation of eIF4G by activated S6K1"
+xref: reactome:R-HSA-165777 "Phosphorylation and activation of eIF4B by activated S6K1"
+xref: reactome:R-HSA-167084 "Hyperphosphorylation (Ser2) of RNA Pol II CTD by P-TEFb complex"
+xref: reactome:R-HSA-167098 "Phosphorylation (Ser5) of RNA pol II CTD"
+xref: reactome:R-HSA-167191 "Hyperphosphorylation (Ser2) of RNA Pol II CTD by the P-TEFb(Cyclin T1:Cdk9) complex"
+xref: reactome:R-HSA-170055 "Myt-1 mediated phosphorylation of Cyclin B:Cdc2 complexes"
+xref: reactome:R-HSA-170070 "Wee1-mediated phosphorylation of Cyclin B1:phospho-Cdc2 complexes"
+xref: reactome:R-HSA-170076 "CAK-mediated phosphorylation of Cyclin B1:Cdc2 complexes"
+xref: reactome:R-HSA-170087 "CAK-mediated phosphorylation of Cyclin A:Cdc2 complexes"
+xref: reactome:R-HSA-170116 "Myt-1 mediated phosphorylation of Cyclin A:Cdc2"
+xref: reactome:R-HSA-170126 "Phosphorylation of Cyclin B1 in the CRS domain"
+xref: reactome:R-HSA-170156 "Wee1-mediated phosphorylation of Cyclin A:phospho-Cdc2 complexes"
+xref: reactome:R-HSA-170704 "Phosphorylation of DSIF by the P-TEFb(Cyclin T1:Cdk9) complex"
+xref: reactome:R-HSA-170706 "Phosphorylation of  NEFL by the P-TEFb(Cyclin T1:Cdk9) complex"
+xref: reactome:R-HSA-174164 "Phosphorylation of Cyclin A:Cdk2 at Tyr 15"
+xref: reactome:R-HSA-1839091 "Cytosolic FGFR1 fusion protein-associated PI3K phosphorylates PIP2 to PIP3"
+xref: reactome:R-HSA-1839107 "BCR-FGFR1-associated PI3K phosphorylates PIP2 to PIP3."
+xref: reactome:R-HSA-1839110 "p-BCR-p-FGFR1 phosphorylates GAB2"
+xref: reactome:R-HSA-187949 "CAK-mediated phosphorylation of Cyclin A:Cdk2"
+xref: reactome:R-HSA-188350 "CAK-mediated phosphorylation of Cyclin E:Cdk2"
+xref: reactome:R-HSA-191636 "Phosphorylation of Cx43 by c-src"
+xref: reactome:R-HSA-195275 "Phosphorylation of APC component of the destruction complex"
+xref: reactome:R-HSA-195283 "Phosphorylation of phospho- (Ser45, Thr41) beta-catenin  at Ser37 by GSK-3"
+xref: reactome:R-HSA-195287 "Phosphorylation of phospho-(Ser45 ) at Thr 41 by GSK-3"
+xref: reactome:R-HSA-195300 "Phosphorylation of phospho-(Ser45,Thr41,Ser37) at Ser33 by GSK-3"
+xref: reactome:R-HSA-195318 "Phosphorylation of beta-catenin at Ser45 by CK1 alpha"
+xref: reactome:R-HSA-201717 "CSNK2-mediated phosphorylation of DVL"
+xref: reactome:R-HSA-211583 "Partial autophosphorylation of PAK-2 at  Ser-19, Ser-20, Ser-55, Ser-192, and Ser-197"
+xref: reactome:R-HSA-211650 "Autophosphorylation of PAK-2p34 in the activation loop"
+xref: reactome:R-HSA-2214351 "PLK1 phosphorylates GORASP1"
+xref: reactome:R-HSA-2294580 "PLK1 hyperphosphorylates Condensin II complex"
+xref: reactome:R-HSA-2529020 "CK2 phosphorylates condensin I subunits"
+xref: reactome:R-HSA-389762 "Phosphorylation of PD-1"
+xref: reactome:R-HSA-392752 "Phosphorylation of L1 by CK-II"
+xref: reactome:R-HSA-442724 "Phosphorylation of CREB by ribosomal protein S6 kinase"
+xref: reactome:R-HSA-442726 "Raf activation"
+xref: reactome:R-HSA-442737 "Activation of MAPK"
+xref: reactome:R-HSA-442739 "Phosphorylation by PDK1"
+xref: reactome:R-HSA-444253 "Phosphorylation by MAPK/ERK"
+xref: reactome:R-HSA-445079 "Phosphorylation of L1 by ERK"
+xref: reactome:R-HSA-5654690 "FGFR1-associated PI3K phosphorylates PIP2 to PIP3"
+xref: reactome:R-HSA-5654692 "FGFR1- and PTPN11- associated PI3K phosphorylates PIP2 to PIP3"
+xref: reactome:R-HSA-5654697 "FGFR2- and PTPN11- associated PI3K phosphorylates PIP2 to PIP3"
+xref: reactome:R-HSA-5654701 "FGFR2-associated PI3K phosphorylates PIP2 to PIP3"
+xref: reactome:R-HSA-5654705 "FGFR3-associated PI3K phosphorylates PIP2 to PIP3"
+xref: reactome:R-HSA-5654709 "FGFR3- and PTPN11-associated PI3K phosphorylates PIP2 to PIP3"
+xref: reactome:R-HSA-5654714 "FGFR4- and PTPN11-associated PI3K phosphorylates PIP2 to PIP3"
+xref: reactome:R-HSA-5654717 "FGFR4-associated PI3K phosphorylates PIP2 to PIP3"
+xref: reactome:R-HSA-5655235 "Activated FGFR4 mutant-associated PI3K phosphorylates PIP2 to PIP3"
+xref: reactome:R-HSA-5655289 "Activated FGFR3 mutant-associated PI3K phosphorylates PIP2 to PIP3"
+xref: reactome:R-HSA-5655290 "Activated FGFR1 mutant-associated PI3K phosphorylates PIP2 to PIP3"
+xref: reactome:R-HSA-5655323 "Activated FGFR2 mutant-associated PI3K phosphorylates PIP2 to PIP3"
+xref: reactome:R-HSA-5668545 "NIK autophosphorylates on T559"
+xref: reactome:R-HSA-6788855 "FN3KRP phosphorylates PsiAm, RibAm"
+xref: reactome:R-HSA-6788867 "FN3K phosphorylates ketosamines"
+xref: reactome:R-HSA-6814409 "CK2 phosphorylates PDCL"
+xref: reactome:R-HSA-68954 "Mcm2-7 is phosphorylated by DDK"
+xref: reactome:R-HSA-69195 "Phosphorylation of Cyclin E:CDK2 complexes by WEE1"
+xref: reactome:R-HSA-69604 "Phosphorylation of Cdc25A at Ser-123 by Chk1"
+xref: reactome:R-HSA-75028 "Phosphorylation of Wee1 kinase by Chk1"
+xref: reactome:R-HSA-75809 "Phosphorylation of Cdc25C at Ser216 by CHEK2"
+xref: reactome:R-HSA-77071 "Phosphorylation (Ser5) of RNA pol II CTD"
+xref: reactome:R-HSA-8853323 "Activated FGFR3 fusion-associated PI3K phosphorylates PIP2 to PIP3"
+xref: reactome:R-HSA-8942836 "CDK4/6:CCND complexes are activated by T-loop phosphorylation of CDK4/6"
+xref: reactome:R-HSA-8948039 "FUNDC1 is phosphorylated by CK2"
+xref: reactome:R-HSA-8948143 "p-S13, FUNDC1 is phosphorylated by CK2 at Tyr18"
+xref: reactome:R-HSA-8948146 "FUNDC1 is phosphorylated by ULK1 at Ser17"
 is_a: GO:0016772 ! transferase activity, transferring phosphorus-containing groups
 relationship: part_of GO:0016310 ! phosphorylation
 
@@ -694,6 +1214,11 @@ subset: goslim_pir
 subset: goslim_plant
 subset: goslim_yeast
 xref: EC:2
+xref: reactome:R-HSA-1483089 "PE is converted to PS by PTDSS2"
+xref: reactome:R-HSA-1483186 "PC is converted to PS by PTDSS1"
+xref: reactome:R-HSA-5668414 "TRAF2 ubiquitinates cIAP1,2 in cIAP1,2:TRAF1:TRAF2:TRAF3:NIK"
+xref: reactome:R-HSA-6787403 "GTPBP3 and MTO1 transform uridine-34 yielding 5-taurinomethyluridine-34 in tRNA"
+xref: reactome:R-HSA-8868783 "TSR3 transfers aminocarboxypropyl group from S-adenosylmethionine to N(1)-methylpseudouridine-1248 of 18SE rRNA yielding N(1)-methyl-N(3)-aminocarboxypropylpseudouridine-1248"
 is_a: GO:0003824 ! catalytic activity
 
 [Term]
@@ -705,6 +1230,31 @@ comment: Note that this term encompasses all kinase activities, as well as activ
 subset: goslim_chembl
 xref: EC:2.7
 is_a: GO:0016740 ! transferase activity
+
+[Term]
+id: GO:0016787
+name: hydrolase activity
+namespace: molecular_function
+def: "Catalysis of the hydrolysis of various bonds, e.g. C-O, C-N, C-C, phosphoric anhydride bonds, etc. Hydrolase is the systematic name for any enzyme of EC class 3." [ISBN:0198506732]
+subset: goslim_agr
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_metagenomics
+subset: goslim_mouse
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+xref: EC:3
+xref: reactome:R-HSA-1236938 "Partial proteolysis of antigen in phagolysosomes"
+xref: reactome:R-HSA-2029475 "Production of AA by iPLA2 upon FCGR activation"
+xref: reactome:R-HSA-5694583 "ABHD4 hydrolyses NAPE"
+xref: reactome:R-HSA-5695964 "ABHD14B hydrolyses PNPB"
+xref: reactome:R-HSA-6786190 "CMBL hydrolyses OM to OLMS"
+xref: reactome:R-HSA-6788295 "HDHD1:Mg2+ dephosphorylates PURIDP"
+xref: reactome:R-HSA-8938314 "ENPPs hydrolyse CoA-SH to PPANT, PAP"
+xref: reactome:R-HSA-8952137 "Phospholipid phosphatase 6 hydrolyses Presqualene diphosphate to presqualene monophosphate"
+is_a: GO:0003824 ! catalytic activity
 
 [Term]
 id: GO:0018995
@@ -740,6 +1290,27 @@ is_a: GO:0050789 ! regulation of biological process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0008152 ! metabolic process
 relationship: regulates GO:0008152 ! metabolic process
+
+[Term]
+id: GO:0019538
+name: protein metabolic process
+namespace: biological_process
+alt_id: GO:0006411
+alt_id: GO:0044268
+def: "The chemical reactions and pathways involving a protein. Includes protein modification." [GOC:ma]
+subset: goslim_agr
+subset: goslim_flybase_ribbon
+subset: goslim_mouse
+subset: goslim_pir
+subset: goslim_plant
+synonym: "multicellular organismal protein metabolic process" NARROW []
+synonym: "protein metabolic process and modification" EXACT []
+synonym: "protein metabolism" EXACT []
+synonym: "protein metabolism and modification" EXACT []
+xref: Wikipedia:Protein_metabolism
+is_a: GO:0043170 ! macromolecule metabolic process
+is_a: GO:0044238 ! primary metabolic process
+is_a: GO:1901564 ! organonitrogen compound metabolic process
 
 [Term]
 id: GO:0023051
@@ -816,6 +1387,40 @@ intersection_of: regulates GO:0006897 ! endocytosis
 relationship: regulates GO:0006897 ! endocytosis
 
 [Term]
+id: GO:0030162
+name: regulation of proteolysis
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of the hydrolysis of a peptide bond or bonds within a protein." [GOC:mah]
+synonym: "regulation of peptidolysis" EXACT []
+is_a: GO:0051246 ! regulation of protein metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0006508 ! proteolysis
+relationship: regulates GO:0006508 ! proteolysis
+
+[Term]
+id: GO:0030246
+name: carbohydrate binding
+namespace: molecular_function
+alt_id: GO:0005529
+def: "Interacting selectively and non-covalently with any carbohydrate, which includes monosaccharides, oligosaccharides and polysaccharides as well as substances derived from monosaccharides by reduction of the carbonyl group (alditols), by oxidation of one or more hydroxy groups to afford the corresponding aldehydes, ketones, or carboxylic acids, or by replacement of one or more hydroxy group(s) by a hydrogen atom. Cyclitols are generally not regarded as carbohydrates." [CHEBI:16646, GOC:mah]
+subset: goslim_agr
+subset: goslim_chembl
+subset: goslim_flybase_ribbon
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+synonym: "selectin" RELATED []
+synonym: "sugar binding" EXACT []
+is_a: GO:0005488 ! binding
+
+[Term]
+id: GO:0030247
+name: polysaccharide binding
+namespace: molecular_function
+def: "Interacting selectively and non-covalently with any polysaccharide, a polymer of many (typically more than 10) monosaccharide residues linked glycosidically." [CHEBI:18154, GOC:mah]
+is_a: GO:0030246 ! carbohydrate binding
+
+[Term]
 id: GO:0030545
 name: receptor regulator activity
 namespace: molecular_function
@@ -871,6 +1476,100 @@ intersection_of: positively_regulates GO:0044237 ! cellular metabolic process
 relationship: positively_regulates GO:0044237 ! cellular metabolic process
 
 [Term]
+id: GO:0031329
+name: regulation of cellular catabolic process
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways resulting in the breakdown of substances, carried out by individual cells." [GOC:mah]
+synonym: "regulation of cellular breakdown" EXACT []
+synonym: "regulation of cellular catabolism" EXACT []
+synonym: "regulation of cellular degradation" EXACT []
+is_a: GO:0009894 ! regulation of catabolic process
+is_a: GO:0031323 ! regulation of cellular metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0044248 ! cellular catabolic process
+relationship: regulates GO:0044248 ! cellular catabolic process
+
+[Term]
+id: GO:0031330
+name: negative regulation of cellular catabolic process
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the chemical reactions and pathways resulting in the breakdown of substances, carried out by individual cells." [GOC:mah]
+synonym: "down regulation of cellular catabolic process" EXACT []
+synonym: "down-regulation of cellular catabolic process" EXACT []
+synonym: "downregulation of cellular catabolic process" EXACT []
+synonym: "inhibition of cellular catabolic process" NARROW []
+synonym: "negative regulation of cellular breakdown" EXACT []
+synonym: "negative regulation of cellular catabolism" EXACT []
+synonym: "negative regulation of cellular degradation" EXACT []
+is_a: GO:0009895 ! negative regulation of catabolic process
+is_a: GO:0031324 ! negative regulation of cellular metabolic process
+is_a: GO:0031329 ! regulation of cellular catabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0044248 ! cellular catabolic process
+relationship: negatively_regulates GO:0044248 ! cellular catabolic process
+
+[Term]
+id: GO:0031331
+name: positive regulation of cellular catabolic process
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the breakdown of substances, carried out by individual cells." [GOC:mah]
+synonym: "activation of cellular catabolic process" NARROW []
+synonym: "positive regulation of cellular breakdown" EXACT []
+synonym: "positive regulation of cellular catabolism" EXACT []
+synonym: "positive regulation of cellular degradation" EXACT []
+synonym: "stimulation of cellular catabolic process" NARROW []
+synonym: "up regulation of cellular catabolic process" EXACT []
+synonym: "up-regulation of cellular catabolic process" EXACT []
+synonym: "upregulation of cellular catabolic process" EXACT []
+is_a: GO:0009896 ! positive regulation of catabolic process
+is_a: GO:0031325 ! positive regulation of cellular metabolic process
+is_a: GO:0031329 ! regulation of cellular catabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0044248 ! cellular catabolic process
+relationship: positively_regulates GO:0044248 ! cellular catabolic process
+
+[Term]
+id: GO:0031347
+name: regulation of defense response
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of a defense response." [GOC:mah]
+is_a: GO:0080134 ! regulation of response to stress
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0006952 ! defense response
+relationship: regulates GO:0006952 ! defense response
+
+[Term]
+id: GO:0031348
+name: negative regulation of defense response
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of a defense response." [GOC:mah]
+synonym: "down regulation of defense response" EXACT []
+synonym: "down-regulation of defense response" EXACT []
+synonym: "downregulation of defense response" EXACT []
+synonym: "inhibition of defense response" NARROW []
+is_a: GO:0031347 ! regulation of defense response
+is_a: GO:0048585 ! negative regulation of response to stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0006952 ! defense response
+relationship: negatively_regulates GO:0006952 ! defense response
+
+[Term]
+id: GO:0031349
+name: positive regulation of defense response
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of a defense response." [GOC:mah]
+synonym: "activation of defense response" NARROW []
+synonym: "stimulation of defense response" NARROW []
+synonym: "up regulation of defense response" EXACT []
+synonym: "up-regulation of defense response" EXACT []
+synonym: "upregulation of defense response" EXACT []
+is_a: GO:0031347 ! regulation of defense response
+is_a: GO:0048584 ! positive regulation of response to stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0006952 ! defense response
+relationship: positively_regulates GO:0006952 ! defense response
+
+[Term]
 id: GO:0031503
 name: protein-containing complex localization
 namespace: biological_process
@@ -910,6 +1609,53 @@ is_a: GO:0051099 ! positive regulation of binding
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0005515 ! protein binding
 relationship: positively_regulates GO:0005515 ! protein binding
+
+[Term]
+id: GO:0032268
+name: regulation of cellular protein metabolic process
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways involving a protein, occurring at the level of an individual cell." [GOC:mah]
+synonym: "regulation of cellular protein metabolism" EXACT []
+is_a: GO:0031323 ! regulation of cellular metabolic process
+is_a: GO:0051246 ! regulation of protein metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0044267 ! cellular protein metabolic process
+relationship: regulates GO:0044267 ! cellular protein metabolic process
+
+[Term]
+id: GO:0032269
+name: negative regulation of cellular protein metabolic process
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the chemical reactions and pathways involving a protein, occurring at the level of an individual cell." [GOC:mah]
+synonym: "down regulation of cellular protein metabolic process" EXACT []
+synonym: "down-regulation of cellular protein metabolic process" EXACT []
+synonym: "downregulation of cellular protein metabolic process" EXACT []
+synonym: "inhibition of cellular protein metabolic process" NARROW []
+synonym: "negative regulation of cellular protein metabolism" EXACT []
+is_a: GO:0031324 ! negative regulation of cellular metabolic process
+is_a: GO:0032268 ! regulation of cellular protein metabolic process
+is_a: GO:0051248 ! negative regulation of protein metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0044267 ! cellular protein metabolic process
+relationship: negatively_regulates GO:0044267 ! cellular protein metabolic process
+
+[Term]
+id: GO:0032270
+name: positive regulation of cellular protein metabolic process
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways involving a protein, occurring at the level of an individual cell." [GOC:mah]
+synonym: "activation of cellular protein metabolic process" NARROW []
+synonym: "positive regulation of cellular protein metabolism" EXACT []
+synonym: "stimulation of cellular protein metabolic process" NARROW []
+synonym: "up regulation of cellular protein metabolic process" EXACT []
+synonym: "up-regulation of cellular protein metabolic process" EXACT []
+synonym: "upregulation of cellular protein metabolic process" EXACT []
+is_a: GO:0031325 ! positive regulation of cellular metabolic process
+is_a: GO:0032268 ! regulation of cellular protein metabolic process
+is_a: GO:0051247 ! positive regulation of protein metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0044267 ! cellular protein metabolic process
+relationship: positively_regulates GO:0044267 ! cellular protein metabolic process
 
 [Term]
 id: GO:0032879
@@ -966,6 +1712,16 @@ synonym: "protein localization in organelle" EXACT [GOC:mah]
 is_a: GO:0034613 ! cellular protein localization
 
 [Term]
+id: GO:0033554
+name: cellular response to stress
+namespace: biological_process
+def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating the organism is under stress. The stress is usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation)." [GOC:mah]
+comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
+subset: gocheck_do_not_manually_annotate
+is_a: GO:0006950 ! response to stress
+is_a: GO:0051716 ! cellular response to stimulus
+
+[Term]
 id: GO:0033673
 name: negative regulation of kinase activity
 namespace: biological_process
@@ -998,6 +1754,53 @@ is_a: GO:0051347 ! positive regulation of transferase activity
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0016301 ! kinase activity
 relationship: positively_regulates GO:0016301 ! kinase activity
+
+[Term]
+id: GO:0034050
+name: host programmed cell death induced by symbiont
+namespace: biological_process
+def: "Cell death in a host resulting from activation of host endogenous cellular processes after direct or indirect interaction with a symbiont (defined as the smaller of two, or more, organisms engaged in symbiosis, a close interaction encompassing mutualism through parasitism). An example of direct interaction is contact with penetrating hyphae of a fungus; an example of indirect interaction is encountering symbiont-secreted molecules." [GOC:pamgo_curators]
+comment: Note that this term is to be used to annotate gene products in the host, not the symbiont. To annotate gene products in the symbiont that induce programmed cell death in the host, consider the biological process term 'induction by symbiont of host programmed cell death ; GO:0052044'.
+is_a: GO:0012501 ! programmed cell death
+
+[Term]
+id: GO:0034051
+name: negative regulation of plant-type hypersensitive response
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the hypersensitive response in a plant." [GOC:pamgo_curators]
+synonym: "down regulation of plant-type hypersensitive response" EXACT [GOC:pamgo_curators]
+synonym: "down-regulation of plant-type hypersensitive response" EXACT [GOC:pamgo_curators]
+synonym: "downregulation of plant-type hypersensitive response" EXACT [GOC:pamgo_curators]
+synonym: "inhibition of plant-type hypersensitive response" NARROW [GOC:pamgo_curators]
+synonym: "negative regulation of HR" EXACT [GOC:pamgo_curators]
+synonym: "negative regulation of HR-PCD" EXACT [GOC:pamgo_curators]
+synonym: "negative regulation of plant hypersensitive response" EXACT [GOC:pamgo_curators]
+is_a: GO:0010363 ! regulation of plant-type hypersensitive response
+is_a: GO:0043069 ! negative regulation of programmed cell death
+is_a: GO:0045824 ! negative regulation of innate immune response
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0009626 ! plant-type hypersensitive response
+relationship: negatively_regulates GO:0009626 ! plant-type hypersensitive response
+
+[Term]
+id: GO:0034052
+name: positive regulation of plant-type hypersensitive response
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of the hypersensitive response in a plant." [GOC:pamgo_curators]
+synonym: "activation of plant-type hypersensitive response" NARROW [GOC:pamgo_curators]
+synonym: "positive regulation of HR" EXACT [GOC:pamgo_curators]
+synonym: "positive regulation of HR-PCD" RELATED [GOC:pamgo_curators]
+synonym: "positive regulation of plant hypersensitive response" EXACT [GOC:pamgo_curators]
+synonym: "stimulation of plant-type hypersensitive response" NARROW [GOC:pamgo_curators]
+synonym: "up regulation of plant-type hypersensitive response" EXACT [GOC:pamgo_curators]
+synonym: "up-regulation of plant-type hypersensitive response" EXACT [GOC:pamgo_curators]
+synonym: "upregulation of plant-type hypersensitive response" EXACT [GOC:pamgo_curators]
+is_a: GO:0010363 ! regulation of plant-type hypersensitive response
+is_a: GO:0043068 ! positive regulation of programmed cell death
+is_a: GO:0045089 ! positive regulation of innate immune response
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0009626 ! plant-type hypersensitive response
+relationship: positively_regulates GO:0009626 ! plant-type hypersensitive response
 
 [Term]
 id: GO:0034504
@@ -1033,6 +1836,18 @@ synonym: "cellular protein complex localization" RELATED []
 synonym: "establishment and maintenance of cellular protein complex localization" EXACT []
 is_a: GO:0031503 ! protein-containing complex localization
 is_a: GO:0034613 ! cellular protein localization
+
+[Term]
+id: GO:0036094
+name: small molecule binding
+namespace: molecular_function
+def: "Interacting selectively and non-covalently with a small molecule, any low molecular weight, monomeric, non-encoded molecule." [GOC:curators, GOC:pde, GOC:pm]
+comment: Small molecules in GO include monosaccharides but exclude disaccharides and polysaccharides.
+subset: goslim_agr
+subset: goslim_flybase_ribbon
+is_a: GO:0005488 ! binding
+created_by: rfoulger
+creation_date: 2012-01-17T04:20:34Z
 
 [Term]
 id: GO:0038023
@@ -1104,6 +1919,53 @@ subset: goslim_pir
 is_a: GO:0071705 ! nitrogen compound transport
 
 [Term]
+id: GO:0043067
+name: regulation of programmed cell death
+namespace: biological_process
+alt_id: GO:0043070
+def: "Any process that modulates the frequency, rate or extent of programmed cell death, cell death resulting from activation of endogenous cellular processes." [GOC:jl]
+synonym: "regulation of non-apoptotic programmed cell death" NARROW []
+is_a: GO:0010941 ! regulation of cell death
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0012501 ! programmed cell death
+relationship: regulates GO:0012501 ! programmed cell death
+
+[Term]
+id: GO:0043068
+name: positive regulation of programmed cell death
+namespace: biological_process
+alt_id: GO:0043071
+def: "Any process that activates or increases the frequency, rate or extent of programmed cell death, cell death resulting from activation of endogenous cellular processes." [GOC:jl]
+synonym: "activation of programmed cell death" NARROW []
+synonym: "positive regulation of non-apoptotic programmed cell death" NARROW []
+synonym: "stimulation of programmed cell death" NARROW []
+synonym: "up regulation of programmed cell death" EXACT []
+synonym: "up-regulation of programmed cell death" EXACT []
+synonym: "upregulation of programmed cell death" EXACT []
+is_a: GO:0010942 ! positive regulation of cell death
+is_a: GO:0043067 ! regulation of programmed cell death
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0012501 ! programmed cell death
+relationship: positively_regulates GO:0012501 ! programmed cell death
+
+[Term]
+id: GO:0043069
+name: negative regulation of programmed cell death
+namespace: biological_process
+alt_id: GO:0043072
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of programmed cell death, cell death resulting from activation of endogenous cellular processes." [GOC:jl]
+synonym: "down regulation of programmed cell death" EXACT []
+synonym: "down-regulation of programmed cell death" EXACT []
+synonym: "downregulation of programmed cell death" EXACT []
+synonym: "inhibition of programmed cell death" NARROW []
+synonym: "negative regulation of non-apoptotic programmed cell death" NARROW []
+is_a: GO:0043067 ! regulation of programmed cell death
+is_a: GO:0060548 ! negative regulation of cell death
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0012501 ! programmed cell death
+relationship: negatively_regulates GO:0012501 ! programmed cell death
+
+[Term]
 id: GO:0043085
 name: positive regulation of catalytic activity
 namespace: biological_process
@@ -1149,6 +2011,20 @@ is_a: GO:0050790 ! regulation of catalytic activity
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0003824 ! catalytic activity
 relationship: negatively_regulates GO:0003824 ! catalytic activity
+
+[Term]
+id: GO:0043170
+name: macromolecule metabolic process
+namespace: biological_process
+alt_id: GO:0043283
+alt_id: GO:0044259
+def: "The chemical reactions and pathways involving macromolecules, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass." [CHEBI:33694, GOC:mah]
+subset: goslim_pir
+synonym: "biopolymer metabolic process" EXACT [GOC:mtg_chebi_dec09]
+synonym: "macromolecule metabolism" EXACT []
+synonym: "multicellular organismal macromolecule metabolic process" NARROW []
+synonym: "organismal macromolecule metabolism" EXACT []
+is_a: GO:0071704 ! organic substance metabolic process
 
 [Term]
 id: GO:0043388
@@ -1303,6 +2179,46 @@ is_a: GO:0008152 ! metabolic process
 is_a: GO:0009987 ! cellular process
 
 [Term]
+id: GO:0044238
+name: primary metabolic process
+namespace: biological_process
+def: "The chemical reactions and pathways involving those compounds which are formed as a part of the normal anabolic and catabolic processes. These processes take place in most, if not all, cells of the organism." [GOC:go_curators, http://www.metacyc.org]
+subset: goslim_pir
+synonym: "primary metabolism" EXACT []
+is_a: GO:0008152 ! metabolic process
+
+[Term]
+id: GO:0044248
+name: cellular catabolic process
+namespace: biological_process
+def: "The chemical reactions and pathways resulting in the breakdown of substances, carried out by individual cells." [GOC:jl]
+synonym: "cellular breakdown" EXACT []
+synonym: "cellular catabolism" EXACT []
+synonym: "cellular degradation" EXACT []
+is_a: GO:0009056 ! catabolic process
+is_a: GO:0044237 ! cellular metabolic process
+
+[Term]
+id: GO:0044260
+name: cellular macromolecule metabolic process
+namespace: biological_process
+alt_id: GO:0034960
+def: "The chemical reactions and pathways involving macromolecules, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass, as carried out by individual cells." [CHEBI:33694, GOC:mah]
+synonym: "cellular biopolymer metabolic process" EXACT [GOC:mtg_chebi_dec09]
+synonym: "cellular macromolecule metabolism" EXACT []
+is_a: GO:0043170 ! macromolecule metabolic process
+is_a: GO:0044237 ! cellular metabolic process
+
+[Term]
+id: GO:0044267
+name: cellular protein metabolic process
+namespace: biological_process
+def: "The chemical reactions and pathways involving a specific protein, rather than of proteins in general, occurring at the level of an individual cell. Includes cellular protein modification." [GOC:jl]
+synonym: "cellular protein metabolism" EXACT []
+is_a: GO:0019538 ! protein metabolic process
+is_a: GO:0044260 ! cellular macromolecule metabolic process
+
+[Term]
 id: GO:0044403
 name: symbiont process
 namespace: biological_process
@@ -1351,6 +2267,46 @@ created_by: janelomax
 creation_date: 2014-12-16T11:38:58Z
 
 [Term]
+id: GO:0045087
+name: innate immune response
+namespace: biological_process
+alt_id: GO:0002226
+def: "Innate immune responses are defense responses mediated by germline encoded components that directly recognize components of potential pathogens." [GO_REF:0000022, GOC:add, GOC:ebc, GOC:mtg_15nov05, GOC:mtg_sensu]
+comment: This term was improved by GO_REF:0000022. It was moved.
+synonym: "innate immunity" EXACT [GOC:pg]
+synonym: "nonspecific immune response" EXACT []
+xref: Wikipedia:Innate_immune_system
+is_a: GO:0006952 ! defense response
+is_a: GO:0006955 ! immune response
+
+[Term]
+id: GO:0045088
+name: regulation of innate immune response
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of the innate immune response, the organism's first line of defense against infection." [GOC:ebc]
+is_a: GO:0031347 ! regulation of defense response
+is_a: GO:0050776 ! regulation of immune response
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0045087 ! innate immune response
+relationship: regulates GO:0045087 ! innate immune response
+
+[Term]
+id: GO:0045089
+name: positive regulation of innate immune response
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of the innate immune response, the organism's first line of defense against infection." [GOC:ebc]
+synonym: "stimulation of innate immune response" NARROW []
+synonym: "up regulation of innate immune response" EXACT []
+synonym: "up-regulation of innate immune response" EXACT []
+synonym: "upregulation of innate immune response" EXACT []
+is_a: GO:0031349 ! positive regulation of defense response
+is_a: GO:0045088 ! regulation of innate immune response
+is_a: GO:0050778 ! positive regulation of immune response
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0045087 ! innate immune response
+relationship: positively_regulates GO:0045087 ! innate immune response
+
+[Term]
 id: GO:0045184
 name: establishment of protein localization
 namespace: biological_process
@@ -1393,6 +2349,55 @@ is_a: GO:0051130 ! positive regulation of cellular component organization
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0006897 ! endocytosis
 relationship: positively_regulates GO:0006897 ! endocytosis
+
+[Term]
+id: GO:0045824
+name: negative regulation of innate immune response
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the innate immune response." [GOC:go_curators]
+synonym: "down regulation of innate immune response" EXACT []
+synonym: "down-regulation of innate immune response" EXACT []
+synonym: "downregulation of innate immune response" EXACT []
+synonym: "inhibition of innate immune response" NARROW []
+is_a: GO:0031348 ! negative regulation of defense response
+is_a: GO:0045088 ! regulation of innate immune response
+is_a: GO:0050777 ! negative regulation of immune response
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0045087 ! innate immune response
+relationship: negatively_regulates GO:0045087 ! innate immune response
+
+[Term]
+id: GO:0045861
+name: negative regulation of proteolysis
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the hydrolysis of a peptide bond or bonds within a protein." [GOC:go_curators]
+synonym: "down regulation of proteolysis" EXACT []
+synonym: "down-regulation of proteolysis" EXACT []
+synonym: "downregulation of proteolysis" EXACT []
+synonym: "inhibition of proteolysis" NARROW []
+synonym: "negative regulation of peptidolysis" EXACT []
+is_a: GO:0030162 ! regulation of proteolysis
+is_a: GO:0032269 ! negative regulation of cellular protein metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0006508 ! proteolysis
+relationship: negatively_regulates GO:0006508 ! proteolysis
+
+[Term]
+id: GO:0045862
+name: positive regulation of proteolysis
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of the hydrolysis of a peptide bond or bonds within a protein." [GOC:go_curators]
+synonym: "activation of proteolysis" NARROW []
+synonym: "positive regulation of peptidolysis" EXACT []
+synonym: "stimulation of proteolysis" NARROW []
+synonym: "up regulation of proteolysis" EXACT []
+synonym: "up-regulation of proteolysis" EXACT []
+synonym: "upregulation of proteolysis" EXACT []
+is_a: GO:0030162 ! regulation of proteolysis
+is_a: GO:0032270 ! positive regulation of cellular protein metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0006508 ! proteolysis
+relationship: positively_regulates GO:0006508 ! proteolysis
 
 [Term]
 id: GO:0045936
@@ -1442,6 +2447,14 @@ is_a: GO:0005102 ! signaling receptor binding
 is_a: GO:0030545 ! receptor regulator activity
 created_by: midori
 creation_date: 2010-09-13T04:51:59Z
+
+[Term]
+id: GO:0048029
+name: monosaccharide binding
+namespace: molecular_function
+def: "Interacting selectively and non-covalently with any monosaccharide. Monosaccharides are the simplest carbohydrates; they are polyhydroxy aldehydes H[CH(OH)]nC(=O)H or polyhydroxy ketones H[CHOH]nC(=O)[CHOH]mH with three or more carbon atoms. They form the constitutional repeating units of oligo- and polysaccharides." [CHEBI:35381, GOC:jid]
+is_a: GO:0030246 ! carbohydrate binding
+is_a: GO:0036094 ! small molecule binding
 
 [Term]
 id: GO:0048518
@@ -1559,6 +2572,49 @@ is_a: GO:0048583 ! regulation of response to stimulus
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0050896 ! response to stimulus
 relationship: negatively_regulates GO:0050896 ! response to stimulus
+
+[Term]
+id: GO:0050776
+name: regulation of immune response
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of the immune response, the immunological reaction of an organism to an immunogenic stimulus." [GOC:ai]
+is_a: GO:0002682 ! regulation of immune system process
+is_a: GO:0048583 ! regulation of response to stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0006955 ! immune response
+relationship: regulates GO:0006955 ! immune response
+
+[Term]
+id: GO:0050777
+name: negative regulation of immune response
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the immune response, the immunological reaction of an organism to an immunogenic stimulus." [GOC:ai]
+synonym: "down regulation of immune response" EXACT []
+synonym: "down-regulation of immune response" EXACT []
+synonym: "downregulation of immune response" EXACT []
+synonym: "inhibition of immune response" NARROW []
+is_a: GO:0002683 ! negative regulation of immune system process
+is_a: GO:0048585 ! negative regulation of response to stimulus
+is_a: GO:0050776 ! regulation of immune response
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0006955 ! immune response
+relationship: negatively_regulates GO:0006955 ! immune response
+
+[Term]
+id: GO:0050778
+name: positive regulation of immune response
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of the immune response, the immunological reaction of an organism to an immunogenic stimulus." [GOC:ai]
+synonym: "stimulation of immune response" NARROW []
+synonym: "up regulation of immune response" EXACT []
+synonym: "up-regulation of immune response" EXACT []
+synonym: "upregulation of immune response" EXACT []
+is_a: GO:0002684 ! positive regulation of immune system process
+is_a: GO:0048584 ! positive regulation of response to stimulus
+is_a: GO:0050776 ! regulation of immune response
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0006955 ! immune response
+relationship: positively_regulates GO:0006955 ! immune response
 
 [Term]
 id: GO:0050789
@@ -1761,6 +2817,53 @@ intersection_of: positively_regulates GO:0016043 ! cellular component organizati
 relationship: positively_regulates GO:0016043 ! cellular component organization
 
 [Term]
+id: GO:0051171
+name: regulation of nitrogen compound metabolic process
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways involving nitrogen or nitrogenous compounds." [GOC:ai, GOC:tb]
+synonym: "regulation of nitrogen metabolic process" EXACT [GOC:tb]
+synonym: "regulation of nitrogen metabolism" EXACT []
+is_a: GO:0019222 ! regulation of metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0006807 ! nitrogen compound metabolic process
+relationship: regulates GO:0006807 ! nitrogen compound metabolic process
+
+[Term]
+id: GO:0051172
+name: negative regulation of nitrogen compound metabolic process
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the chemical reactions and pathways involving nitrogen or nitrogenous compounds." [GOC:ai, GOC:tb]
+synonym: "down regulation of nitrogen metabolic process" EXACT []
+synonym: "down-regulation of nitrogen metabolic process" EXACT []
+synonym: "downregulation of nitrogen metabolic process" EXACT []
+synonym: "inhibition of nitrogen metabolic process" NARROW []
+synonym: "negative regulation of nitrogen metabolic process" EXACT [GOC:tb]
+synonym: "negative regulation of nitrogen metabolism" EXACT []
+is_a: GO:0009892 ! negative regulation of metabolic process
+is_a: GO:0051171 ! regulation of nitrogen compound metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0006807 ! nitrogen compound metabolic process
+relationship: negatively_regulates GO:0006807 ! nitrogen compound metabolic process
+
+[Term]
+id: GO:0051173
+name: positive regulation of nitrogen compound metabolic process
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways involving nitrogen or nitrogenous compounds." [GOC:ai, GOC:tb]
+synonym: "activation of nitrogen metabolic process" NARROW []
+synonym: "positive regulation of nitrogen metabolic process" EXACT [GOC:tb]
+synonym: "positive regulation of nitrogen metabolism" EXACT []
+synonym: "stimulation of nitrogen metabolic process" NARROW []
+synonym: "up regulation of nitrogen metabolic process" EXACT []
+synonym: "up-regulation of nitrogen metabolic process" EXACT []
+synonym: "upregulation of nitrogen metabolic process" EXACT []
+is_a: GO:0009893 ! positive regulation of metabolic process
+is_a: GO:0051171 ! regulation of nitrogen compound metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0006807 ! nitrogen compound metabolic process
+relationship: positively_regulates GO:0006807 ! nitrogen compound metabolic process
+
+[Term]
 id: GO:0051174
 name: regulation of phosphorus metabolic process
 namespace: biological_process
@@ -1847,6 +2950,65 @@ synonym: "establishment of localisation" EXACT [GOC:mah]
 is_a: GO:0051179 ! localization
 
 [Term]
+id: GO:0051246
+name: regulation of protein metabolic process
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways involving a protein." [GOC:ai]
+synonym: "regulation of protein metabolism" EXACT []
+is_a: GO:0051171 ! regulation of nitrogen compound metabolic process
+is_a: GO:0060255 ! regulation of macromolecule metabolic process
+is_a: GO:0080090 ! regulation of primary metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0019538 ! protein metabolic process
+relationship: regulates GO:0019538 ! protein metabolic process
+
+[Term]
+id: GO:0051247
+name: positive regulation of protein metabolic process
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways involving a protein." [GOC:ai]
+synonym: "activation of protein metabolic process" NARROW []
+synonym: "positive regulation of protein metabolism" EXACT []
+synonym: "stimulation of protein metabolic process" NARROW []
+synonym: "up regulation of protein metabolic process" EXACT []
+synonym: "up-regulation of protein metabolic process" EXACT []
+synonym: "upregulation of protein metabolic process" EXACT []
+is_a: GO:0010604 ! positive regulation of macromolecule metabolic process
+is_a: GO:0051173 ! positive regulation of nitrogen compound metabolic process
+is_a: GO:0051246 ! regulation of protein metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0019538 ! protein metabolic process
+relationship: positively_regulates GO:0019538 ! protein metabolic process
+
+[Term]
+id: GO:0051248
+name: negative regulation of protein metabolic process
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of chemical reactions and pathways involving a protein." [GOC:ai]
+synonym: "down regulation of protein metabolic process" EXACT []
+synonym: "down-regulation of protein metabolic process" EXACT []
+synonym: "downregulation of protein metabolic process" EXACT []
+synonym: "inhibition of protein metabolic process" NARROW []
+synonym: "negative regulation of protein metabolism" EXACT []
+is_a: GO:0010605 ! negative regulation of macromolecule metabolic process
+is_a: GO:0051172 ! negative regulation of nitrogen compound metabolic process
+is_a: GO:0051246 ! regulation of protein metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0019538 ! protein metabolic process
+relationship: negatively_regulates GO:0019538 ! protein metabolic process
+
+[Term]
+id: GO:0051336
+name: regulation of hydrolase activity
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of hydrolase activity, the catalysis of the hydrolysis of various bonds, e.g. C-O, C-N, C-C, phosphoric anhydride bonds, etc. Hydrolase is the systematic name for any enzyme of EC class 3." [EC:3.-.-.-, GOC:ai]
+synonym: "hydrolase regulator" EXACT []
+is_a: GO:0050790 ! regulation of catalytic activity
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0016787 ! hydrolase activity
+relationship: regulates GO:0016787 ! hydrolase activity
+
+[Term]
 id: GO:0051338
 name: regulation of transferase activity
 namespace: biological_process
@@ -1858,6 +3020,39 @@ is_a: GO:0050790 ! regulation of catalytic activity
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0016740 ! transferase activity
 relationship: regulates GO:0016740 ! transferase activity
+
+[Term]
+id: GO:0051345
+name: positive regulation of hydrolase activity
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of hydrolase activity, the catalysis of the hydrolysis of various bonds." [GOC:ai]
+synonym: "activation of hydrolase activity" NARROW []
+synonym: "hydrolase activator" EXACT []
+synonym: "stimulation of hydrolase activity" NARROW []
+synonym: "up regulation of hydrolase activity" EXACT []
+synonym: "up-regulation of hydrolase activity" EXACT []
+synonym: "upregulation of hydrolase activity" EXACT []
+is_a: GO:0043085 ! positive regulation of catalytic activity
+is_a: GO:0051336 ! regulation of hydrolase activity
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0016787 ! hydrolase activity
+relationship: positively_regulates GO:0016787 ! hydrolase activity
+
+[Term]
+id: GO:0051346
+name: negative regulation of hydrolase activity
+namespace: biological_process
+def: "Any process that stops or reduces the rate of hydrolase activity, the catalysis of the hydrolysis of various bonds." [GOC:ai]
+synonym: "down regulation of hydrolase activity" EXACT []
+synonym: "down-regulation of hydrolase activity" EXACT []
+synonym: "downregulation of hydrolase activity" EXACT []
+synonym: "hydrolase inhibitor" EXACT []
+synonym: "inhibition of hydrolase activity" NARROW []
+is_a: GO:0043086 ! negative regulation of catalytic activity
+is_a: GO:0051336 ! regulation of hydrolase activity
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0016787 ! hydrolase activity
+relationship: negatively_regulates GO:0016787 ! hydrolase activity
 
 [Term]
 id: GO:0051347
@@ -1937,6 +3132,18 @@ is_a: GO:0009987 ! cellular process
 is_a: GO:0050896 ! response to stimulus
 
 [Term]
+id: GO:0052547
+name: regulation of peptidase activity
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of peptidase activity, the hydrolysis of peptide bonds within proteins." [EC:3.4, GOC:ai]
+synonym: "peptidase regulator activity" RELATED []
+is_a: GO:0030162 ! regulation of proteolysis
+is_a: GO:0051336 ! regulation of hydrolase activity
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0008233 ! peptidase activity
+relationship: regulates GO:0008233 ! peptidase activity
+
+[Term]
 id: GO:0060089
 name: molecular transducer activity
 namespace: molecular_function
@@ -1944,6 +3151,16 @@ def: "A compound molecular function in which an effector function is controlled 
 subset: gocheck_do_not_manually_annotate
 subset: goslim_pir
 is_a: GO:0003674 ! molecular_function
+
+[Term]
+id: GO:0060255
+name: regulation of macromolecule metabolic process
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways involving macromolecules, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass." [GOC:dph, GOC:tb]
+is_a: GO:0019222 ! regulation of metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0043170 ! macromolecule metabolic process
+relationship: regulates GO:0043170 ! macromolecule metabolic process
 
 [Term]
 id: GO:0060341
@@ -1955,6 +3172,32 @@ is_a: GO:0032879 ! regulation of localization
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0051641 ! cellular localization
 relationship: regulates GO:0051641 ! cellular localization
+
+[Term]
+id: GO:0060547
+name: negative regulation of necrotic cell death
+namespace: biological_process
+def: "Any process that decreases the rate, frequency or extent of necrotic cell death. Necrotic cell death is a cell death process that is morphologically characterized by a gain in cell volume (oncosis), swelling of organelles, plasma membrane rupture and subsequent loss of intracellular contents." [GOC:BHF, GOC:dph, GOC:tb]
+is_a: GO:0010939 ! regulation of necrotic cell death
+is_a: GO:0060548 ! negative regulation of cell death
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0070265 ! necrotic cell death
+relationship: negatively_regulates GO:0070265 ! necrotic cell death
+created_by: dph
+creation_date: 2009-04-13T01:51:25Z
+
+[Term]
+id: GO:0060548
+name: negative regulation of cell death
+namespace: biological_process
+def: "Any process that decreases the rate or frequency of cell death. Cell death is the specific activation or halting of processes within a cell so that its vital functions markedly cease, rather than simply deteriorating gradually over time, which culminates in cell death." [GOC:BHF, GOC:dph, GOC:tb]
+is_a: GO:0010941 ! regulation of cell death
+is_a: GO:0048523 ! negative regulation of cellular process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0008219 ! cell death
+relationship: negatively_regulates GO:0008219 ! cell death
+created_by: dph
+creation_date: 2009-04-13T01:56:10Z
 
 [Term]
 id: GO:0060627
@@ -1988,6 +3231,16 @@ synonym: "single-organism membrane organization" RELATED []
 is_a: GO:0016043 ! cellular component organization
 created_by: janelomax
 creation_date: 2010-02-08T02:43:11Z
+
+[Term]
+id: GO:0061919
+name: process utilizing autophagic mechanism
+namespace: biological_process
+def: "A cellular process involving delivery of a portion of the cytoplasm to lysosomes or to the plant or fungal vacuole that does not involve direct transport through the endocytic or vacuolar protein sorting (Vps) pathways. This process typically leads to degradation of the cargo; however, it can also be used to deliver resident proteins, such as in the cytoplasm-to-vacuole targeting (Cvt) pathway." [PMID:21997368, PMID:22966490, PMID:28596378]
+subset: gocheck_do_not_annotate
+is_a: GO:0009987 ! cellular process
+created_by: dph
+creation_date: 2017-07-13T19:42:14Z
 
 [Term]
 id: GO:0065007
@@ -2025,6 +3278,16 @@ intersection_of: regulates GO:0045184 ! establishment of protein localization
 relationship: regulates GO:0045184 ! establishment of protein localization
 
 [Term]
+id: GO:0070265
+name: necrotic cell death
+namespace: biological_process
+def: "A type of cell death that is morphologically characterized by an increasingly translucent cytoplasm, swelling of organelles, minor ultrastructural modifications of the nucleus (specifically, dilatation of the nuclear membrane and condensation of chromatin into small, irregular, circumscribed patches) and increased cell volume (oncosis), culminating in the disruption of the plasma membrane and subsequent loss of intracellular contents. Necrotic cells do not fragment into discrete corpses as their apoptotic counterparts do. Moreover, their nuclei remain intact and can aggregate and accumulate in necrotic tissues." [GOC:mtg_apoptosis, PMID:18846107, PMID:20823910]
+comment: Note that the word necrosis has been widely used in earlier literature to describe forms of cell death which are now known by more precise terms, such as apoptosis. Necrosis can occur in a regulated fashion, involving a precise sequence of signals; in this case, consider annotating to GO:0097300 'programmed necrotic cell death' or to its more specific child GO:0070266 'necroptotic process'.
+synonym: "cellular necrosis" EXACT [GOC:add]
+synonym: "necrosis" BROAD [GOC:mah]
+is_a: GO:0008219 ! cell death
+
+[Term]
 id: GO:0070727
 name: cellular macromolecule localization
 namespace: biological_process
@@ -2043,6 +3306,18 @@ def: "The directed movement of organic substances into, out of or within a cell,
 is_a: GO:0006810 ! transport
 created_by: midori
 creation_date: 2010-03-08T02:15:14Z
+
+[Term]
+id: GO:0071704
+name: organic substance metabolic process
+namespace: biological_process
+def: "The chemical reactions and pathways involving an organic substance, any molecular entity containing carbon." [CHEBI:50860, GOC:mah]
+synonym: "organic molecular entity metabolic process" EXACT []
+synonym: "organic molecular entity metabolism" EXACT []
+synonym: "organic substance metabolism" EXACT []
+is_a: GO:0008152 ! metabolic process
+created_by: midori
+creation_date: 2010-03-08T03:32:18Z
 
 [Term]
 id: GO:0071705
@@ -2067,6 +3342,57 @@ synonym: "cellular component organization or biogenesis at cellular level" EXACT
 is_a: GO:0008150 ! biological_process
 created_by: midori
 creation_date: 2010-09-10T01:39:16Z
+
+[Term]
+id: GO:0075071
+name: autophagy involved in symbiotic interaction
+namespace: biological_process
+def: "The process in which cells digest parts of their own cytoplasm during a symbiotic interaction; allows for both recycling of macromolecular constituents under conditions of cellular stress and remodeling the intracellular structure for cell differentiation. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
+comment: Note that this term should be used to annotate gene products of the organism involved in this process.
+synonym: "autophagy during symbiotic interaction" RELATED [GOC:dph]
+is_a: GO:0006914 ! autophagy
+intersection_of: GO:0006914 ! autophagy
+intersection_of: part_of GO:0044403 ! symbiont process
+relationship: part_of GO:0044403 ! symbiont process
+
+[Term]
+id: GO:0080090
+name: regulation of primary metabolic process
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways within a cell or an organism involving those compounds formed as a part of the normal anabolic and catabolic processes. These processes take place in most, if not all, cells of the organism." [PMID:19211694]
+is_a: GO:0019222 ! regulation of metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0044238 ! primary metabolic process
+relationship: regulates GO:0044238 ! primary metabolic process
+created_by: donghui
+creation_date: 2009-04-22T04:30:52Z
+
+[Term]
+id: GO:0080134
+name: regulation of response to stress
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of a response to stress. Response to stress is a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a disturbance in organismal or cellular homeostasis, usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation)." [GOC:dhl]
+comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
+subset: gocheck_do_not_manually_annotate
+is_a: GO:0048583 ! regulation of response to stimulus
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0006950 ! response to stress
+relationship: regulates GO:0006950 ! response to stress
+created_by: donghui
+creation_date: 2009-05-06T04:51:28Z
+
+[Term]
+id: GO:0080135
+name: regulation of cellular response to stress
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of a cellular response to stress. Cellular response to stress is a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating the organism is under stress. The stress is usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation)." [GOC:dhl]
+is_a: GO:0050794 ! regulation of cellular process
+is_a: GO:0080134 ! regulation of response to stress
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0033554 ! cellular response to stress
+relationship: regulates GO:0033554 ! cellular response to stress
+created_by: donghui
+creation_date: 2009-05-06T05:02:52Z
 
 [Term]
 id: GO:0085030
@@ -2100,6 +3426,17 @@ created_by: paola
 creation_date: 2011-09-23T02:31:01Z
 
 [Term]
+id: GO:0097367
+name: carbohydrate derivative binding
+namespace: molecular_function
+def: "Interacting selectively and non-covalently with a carbohydrate derivative." [GOC:pr]
+subset: goslim_agr
+subset: goslim_mouse
+is_a: GO:0005488 ! binding
+created_by: paola
+creation_date: 2012-08-02T13:03:39Z
+
+[Term]
 id: GO:0098657
 name: import into cell
 namespace: biological_process
@@ -2115,6 +3452,16 @@ def: "A molecular function that modulates the activity of a gene product or comp
 subset: goslim_flybase_ribbon
 is_a: GO:0003674 ! molecular_function
 relationship: part_of GO:0065009 ! regulation of molecular function
+
+[Term]
+id: GO:0140096
+name: catalytic activity, acting on a protein
+namespace: molecular_function
+def: "Catalytic activity that acts to modify a protein." [GOC:pdt]
+comment: https://github.com/geneontology/go-ontology/issues/14225
+is_a: GO:0003824 ! catalytic activity
+created_by: pg
+creation_date: 2017-09-14T10:32:59Z
 
 [Term]
 id: GO:0140272
@@ -2261,6 +3608,17 @@ def: "Interacting selectively and non-covalently with heterocyclic compound." [G
 is_a: GO:0005488 ! binding
 created_by: bf
 creation_date: 2012-09-14T13:53:50Z
+
+[Term]
+id: GO:1901564
+name: organonitrogen compound metabolic process
+namespace: biological_process
+def: "The chemical reactions and pathways involving organonitrogen compound." [GOC:pr, GOC:TermGenie]
+synonym: "organonitrogen compound metabolism" EXACT [GOC:TermGenie]
+is_a: GO:0006807 ! nitrogen compound metabolic process
+is_a: GO:0071704 ! organic substance metabolic process
+created_by: pr
+creation_date: 2012-11-04T15:17:52Z
 
 [Term]
 id: GO:1903335

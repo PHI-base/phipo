@@ -242,6 +242,13 @@ is_a: BFO:0000040 ! material entity
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/chebi.owl
 
 [Term]
+id: GO:0006955
+name: immune response
+def: "Any immune system process that functions in the calibrated response of an organism to a potential internal or invasive threat." []
+is_a: GO:0008150 ! biological_process
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
 id: GO:0008150
 name: biological_process
 def: "Any process specifically pertinent to the functioning of integrated living units: cells, tissues, organs, and organisms. A process is a collection of molecular events with a defined beginning and end." []
@@ -253,6 +260,20 @@ id: GO:0044403
 name: symbiosis, encompassing mutualism through parasitism
 def: "An interaction between two organisms living together in more or less intimate association. Microscopic symbionts are often referred to as endosymbionts. The various forms of symbiosis include parasitism, in which the association is disadvantageous or destructive to one of the organisms; mutualism, in which the association is advantageous, or often necessary to one or both and not harmful to either; and commensalism, in which one member of the association benefits while the other is not affected. However, mutualism, parasitism, and commensalism are often not discrete categories of interactions and should rather be perceived as a continuum of interaction ranging from parasitism to mutualism. In fact, the direction of a symbiotic interaction can change during the lifetime of the symbionts due to developmental changes as well as changes in the biotic/abiotic environment in which the interaction occurs." []
 is_a: GO:0051704 ! multi-organism process
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0045087
+name: innate immune response
+def: "Innate immune responses are defense responses mediated by germline encoded components that directly recognize components of potential pathogens." []
+is_a: GO:0006955 ! immune response
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0050777
+name: negative regulation of immune response
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the immune response, the immunological reaction of an organism to an immunogenic stimulus." []
+is_a: GO:0065007 ! biological regulation
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
 
 [Term]
@@ -352,6 +373,17 @@ def: "A material entity with a pathogenic disposition." []
 is_a: BFO:0000040 ! material entity
 intersection_of: BFO:0000040 ! material entity
 intersection_of: RO:0000091 IDO:0000450 ! has disposition pathogenic disposition
+property_value: IAO:0000117 "Albert Goldfain" xsd:string
+property_value: IAO:0000117 "Alexander Diehl" xsd:string
+property_value: IAO:0000117 "Lindsay Cowell" xsd:string
+
+[Term]
+id: IDO:0000610
+name: immunosuppression
+def: "A process that attenuates an immune response." []
+is_a: BFO:0000015 ! process
+intersection_of: BFO:0000015 ! process
+intersection_of: RO:0002212 GO:0006955 ! negatively regulates immune response
 property_value: IAO:0000117 "Albert Goldfain" xsd:string
 property_value: IAO:0000117 "Alexander Diehl" xsd:string
 property_value: IAO:0000117 "Lindsay Cowell" xsd:string
