@@ -177,6 +177,17 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000001">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000505"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000507"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any of the set of observable disease formation characteristics arising from the interaction of a potentially pathogenic organism with a host organism.</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-02T11:20:17Z</obo:creation_date>
@@ -8813,10 +8824,10 @@ A type of cell death that is morphologically characterized by an increasingly tr
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000001"/>
+                    <rdf:Description rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000505"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
+                        <owl:someValuesFrom rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000507"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
@@ -8841,10 +8852,10 @@ A type of cell death that is morphologically characterized by an increasingly tr
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000001"/>
+                    <rdf:Description rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000505"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
+                        <owl:someValuesFrom rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000507"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
@@ -9065,6 +9076,16 @@ use fungi specific GO term GO_0106110 ## vomitoxin biosynthetic process??</rdfs:
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-23T11:16:14Z</oboInOwl:creation_date>
         <rdfs:label xml:lang="en">single organism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000507 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000507">
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-23T13:11:21Z</oboInOwl:creation_date>
+        <rdfs:label xml:lang="en">pathogen host interaction</rdfs:label>
     </owl:Class>
     
 
