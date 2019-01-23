@@ -4582,16 +4582,31 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000235 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000235">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002314"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0051641"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype that affects the localization of a structure or substance in a cell (QUERY? organism).</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism phenotype that affects the localization of a structure or substance in a cell (QUERY? organism).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:12:56Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0000138</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_do_not_manually_annotate</oboInOwl:inSubset>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
-        <rdfs:label xml:lang="en">pathogen localization phenotype</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">possible logical defintion
+&apos;single organism phenotype&apos;
+ and (&apos;inheres in part of&apos; some &apos;cellular localization&apos;)
+
+This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
+        <rdfs:label xml:lang="en">localization phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -4616,8 +4631,19 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000237 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000237">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002314"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0034613"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000235"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype that affects the localization of a protein in a cell.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism phenotype that affects the localization of a protein in a cell.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:13:36Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0002333</oboInOwl:hasDbXref>
@@ -4625,7 +4651,7 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_do_not_manually_annotate</oboInOwl:inSubset>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
-        <rdfs:label xml:lang="en">pathogen protein localization phenotype</rdfs:label>
+        <rdfs:label xml:lang="en">protein localization phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -4650,13 +4676,28 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000239 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000239">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0034613"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000237"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype that affects the localization of a protein in a cell.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism phenotype that affects the localization of a protein in a cell.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:14:02Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0002333</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal pathogen protein localization</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal protein localization</rdfs:label>
     </owl:Class>
     
 
@@ -4678,13 +4719,28 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000241 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000241">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002314"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0034629"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000239"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein complex is abnormal.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein complex is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:14:50Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0001440</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal pathogen protein complex localization</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal protein complex localization</rdfs:label>
     </owl:Class>
     
 
@@ -4721,14 +4777,29 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000244 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000244">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0034504"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000239"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype in which the localization of a protein to the nucleus is abnormal.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism phenotype in which the localization of a protein to the nucleus is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:16:37Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0002956</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Encompasses both presence of proteins not normally found in the nucleus and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.</rdfs:comment>
-        <rdfs:label xml:lang="en">abnormal pathogen protein localization to nucleus</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal protein localization to nucleus</rdfs:label>
     </owl:Class>
     
 
@@ -4736,14 +4807,33 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000245 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000245">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001558"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0034613"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000239"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype in which a protein does not localize to, and is therefore absent from, a place where it is normally found.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism phenotype in which a protein does not localize to, and is therefore absent from, a place where it is normally found.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:17:52Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0001375</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">If this term is used, we recommend noting which protein(s) were used in the assay.</rdfs:comment>
-        <rdfs:label xml:lang="en">abolished pathogen protein localization</rdfs:label>
+        <rdfs:label xml:lang="en">abolished protein localization</rdfs:label>
     </owl:Class>
     
 
@@ -4781,14 +4871,33 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000248 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000248">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001558"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0034504"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000239"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype in which the localization of a protein to the nucleus is abolished.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism organism phenotype in which the localization of a protein to the nucleus is abolished.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:19:27Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0003450</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">We recommend noting which protein(s) were used in the assay when annotating to this term.</rdfs:comment>
-        <rdfs:label xml:lang="en">abolished pathogen protein localization to nucleus</rdfs:label>
+        <rdfs:label xml:lang="en">abolished protein localization to nucleus</rdfs:label>
     </owl:Class>
     
 
@@ -4796,8 +4905,19 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000249 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000249">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002314"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006403"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000235"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype that affects the localization of an RNA in a cell.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism phenotype that affects the localization of an RNA in a cell.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:20:15Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0004853</oboInOwl:hasDbXref>
@@ -4805,7 +4925,7 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_do_not_manually_annotate</oboInOwl:inSubset>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
-        <rdfs:label xml:lang="en">pathogen RNA localization phenotype</rdfs:label>
+        <rdfs:label xml:lang="en">RNA localization phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -4830,13 +4950,28 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000251 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000251">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002314"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006403"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000249"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype in which the localization of an RNA in a cell is abnormal. An RNA may be observed in a place where it is not normally found, absent from a place where it is normally found, or both.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism phenotype in which the localization of an RNA in a cell is abnormal. An RNA may be observed in a place where it is not normally found, absent from a place where it is normally found, or both.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:20:49Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0003057</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal pathogen RNA localization</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal RNA localization</rdfs:label>
     </owl:Class>
     
 
@@ -4858,13 +4993,28 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000253 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000253">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002314"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006403"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000461"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000249"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype in which the localization of an RNA in a cell is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism phenotype in which the localization of an RNA in a cell is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:21:19Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0003058</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal pathogen RNA localization</rdfs:label>
+        <rdfs:label xml:lang="en">normal RNA localization</rdfs:label>
     </owl:Class>
     
 
@@ -4903,8 +5053,19 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000256 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000256">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002314"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006810"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000235"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen (cell process???) phenotype that affects a transport process.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism (cell process???) phenotype that affects a transport process.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:21:48Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0000149</oboInOwl:hasDbXref>
@@ -4912,7 +5073,7 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_do_not_manually_annotate</oboInOwl:inSubset>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
-        <rdfs:label xml:lang="en">pathogen transport phenotype</rdfs:label>
+        <rdfs:label xml:lang="en">transport phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -4920,13 +5081,28 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000257 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000257">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002314"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006810"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000256"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype in which a specific transport process is abnormal.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism phenotype in which a specific transport process is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:22:11Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0001720</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal pathogen transport</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal transport</rdfs:label>
     </owl:Class>
     
 
@@ -4948,13 +5124,28 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000259 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000259">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002314"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006810"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000461"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000256"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen (cellular process??) phenotype in which protein transport is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism (cellular process??) phenotype in which protein transport is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:22:37Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0005747</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal pathogen protein transport</rdfs:label>
+        <rdfs:label xml:lang="en">normal protein transport</rdfs:label>
     </owl:Class>
     
 
@@ -4976,13 +5167,28 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000261 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000261">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002314"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0006897"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000257"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen (cellular process???) phenotype in which endocytosis is abnormal. Endocytosis is a vesicle-mediated transport process in which cells take up external materials or membrane constituents by the invagination of a small region of the plasma membrane to form a new membrane-bounded vesicle. A phenotype may affect endocytosis of all cargoes, or of specific cargo such as a particular protein.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism (cellular process???) phenotype in which endocytosis is abnormal. Endocytosis is a vesicle-mediated transport process in which cells take up external materials or membrane constituents by the invagination of a small region of the plasma membrane to form a new membrane-bounded vesicle. A phenotype may affect endocytosis of all cargoes, or of specific cargo such as a particular protein.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:22:57Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0003886</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal pathogen endocytosis</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal endocytosis</rdfs:label>
     </owl:Class>
     
 
@@ -5005,12 +5211,17 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000263">
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000257"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen (cellular process??) phenotype in which nuclear transport is abnormal.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism (cellular process??) phenotype in which nuclear transport is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:23:27Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0005573</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal pathogen nuclear transport</rdfs:label>
+        <rdfs:comment>&apos;single organism phenotype&apos;
+ and (&apos;inheres in part of&apos; some &apos;nuclear transport&apos;)
+ and (qualifier some abnormal)
+
+Need import term for &apos;nuclear transport&apos;</rdfs:comment>
+        <rdfs:label xml:lang="en">abnormal nuclear transport</rdfs:label>
     </owl:Class>
     
 
@@ -5032,13 +5243,28 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000265 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000265">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002314"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0015031"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000257"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen (cellular process??) phenotype in which protein transport is abnormal.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism (cellular process??) phenotype in which protein transport is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:24:39Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0005744</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal pathogen protein transport</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal protein transport</rdfs:label>
     </owl:Class>
     
 
@@ -5060,13 +5286,28 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000267 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000267">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002314"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007034"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000257"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen (cellular process??) phenotype in which vacuolar transport is abnormal.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism (cellular process??) phenotype in which vacuolar transport is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:24:58Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0003578</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal pathogen vacuolar transport</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal vacuolar transport</rdfs:label>
     </owl:Class>
     
 
@@ -5088,13 +5329,28 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000269 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000269">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0034613"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000461"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000237"/>
-        <obo:IAO_0000115>A pathogen phenotype in which the localization of a protein in a cell is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <obo:IAO_0000115>A single organism phenotype in which the localization of a protein in a cell is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-03T11:05:06Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0003627</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal pathogen protein localization</rdfs:label>
+        <rdfs:label xml:lang="en">normal protein localization</rdfs:label>
     </owl:Class>
     
 
@@ -5116,13 +5372,28 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000271 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000271">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0034504"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000461"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000269"/>
-        <obo:IAO_0000115>A pathogen phenotype in which the localization of a protein to the nucleus is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <obo:IAO_0000115>A single organism phenotype in which the localization of a protein to the nucleus is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-03T11:05:29Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0006553</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal pathogen protein localization to nucleus</rdfs:label>
+        <rdfs:label xml:lang="en">normal protein localization to nucleus</rdfs:label>
     </owl:Class>
     
 
