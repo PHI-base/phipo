@@ -194,6 +194,17 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000002 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000002">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000505"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000506"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any of the set of observable characteristics of a single organism resulting from the interaction of its genotype with the environment.</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-02T11:20:59Z</obo:creation_date>
@@ -435,10 +446,10 @@ reduced virulence PATO:0002147</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000001"/>
+                    <rdf:Description rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000505"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+                        <owl:someValuesFrom rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000506"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
@@ -448,23 +459,11 @@ reduced virulence PATO:0002147</rdfs:comment>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype which is normal (i.e. the same as wild-type).</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism phenotype which is normal (i.e. the same as wild-type).</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:10:48Z</obo:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logical definition
-AC_pathogen phenotype and (has_relative_magnitude some normal (PATO:0000461))
-
-In FYPO
-quality
- and (inheres_in some phenotype)
- and (qualifier some normal)
-
-is below version correct?
-quality
- and (&apos;inheres in&apos; some &apos;pathogen phenotype&apos;)
- and (qualifier some normal)</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">normal pathogen phenotype</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">normal single organism phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -475,10 +474,10 @@ quality
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000001"/>
+                    <rdf:Description rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000505"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+                        <owl:someValuesFrom rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000506"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
@@ -488,15 +487,14 @@ quality
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype which is abnormal (i.e. different than wild-type).</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism phenotype which is abnormal (i.e. different than wild-type).</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:11:04Z</obo:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_do_not_manually_annotate</oboInOwl:inSubset>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logical definition
-AC_pathogen phenotype and (has_relative_magnitude some abnormal (PATO:0000460))</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal pathogen phenotype</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal single organism phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -8716,6 +8714,29 @@ use fungi specific GO term GO_0106110 ## vomitoxin biosynthetic process??</rdfs:
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-18T13:07:54Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">pathogen deoxynivalenol present</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000505 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000505">
+        <obo:IAO_0000115>Any of the set of observable characteristics of an organism resulting from the interaction of its genotype with the environment.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-23T11:11:47Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000001</oboInOwl:hasDbXref>
+        <rdfs:comment>Definition from FYPO. Unclear which namespace to enter under so currently &apos;floating&apos;</rdfs:comment>
+        <rdfs:label xml:lang="en">phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000506 -->
+
+    <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000506">
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-23T11:16:14Z</oboInOwl:creation_date>
+        <rdfs:label xml:lang="en">single organism</rdfs:label>
     </owl:Class>
     
 
