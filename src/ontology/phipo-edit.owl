@@ -3046,25 +3046,11 @@ Perhaps duplication is required to capture source from both.</rdfs:comment>
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000166 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000166">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000003"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0003723"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000165"/>
-        <obo:IAO_0000115>A host phenotype that affects RNA binding. The relevant gene product may be encoded by the mutated gene, or by a different gene.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000284"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T12:46:24Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>FYPO:0002131</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>host_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">where to add &apos;host&apos; in logical definition?</rdfs:comment>
-        <rdfs:label xml:lang="en">host RNA binding phenotype</rdfs:label>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">chlorosis phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -3129,9 +3115,8 @@ Perhaps duplication is required to capture source from both.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000166"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T12:56:11Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>FYPO:0002132</oboInOwl:hasDbXref>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">where to add &apos;host&apos; in logical definition?</rdfs:comment>
-        <rdfs:label xml:lang="en">abnormal host RNA binding</rdfs:label>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">chlorosis absent</rdfs:label>
     </owl:Class>
     
 
@@ -3142,9 +3127,8 @@ Perhaps duplication is required to capture source from both.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000166"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T12:57:11Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>FYPO:0002357</oboInOwl:hasDbXref>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">where to add &apos;host&apos; in logical definition?</rdfs:comment>
-        <rdfs:label xml:lang="en">normal host RNA binding</rdfs:label>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">chlorosis present</rdfs:label>
     </owl:Class>
     
 
@@ -3713,13 +3697,11 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000195"/>
-        <obo:IAO_0000115>A host (molecular function??) phenotype in which the binding of one protein to another is normal (i.e. indistinguishable from wild type). The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000348"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:27:49Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>FYPO:0000703</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>host_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal host protein protein interaction</rdfs:label>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal deposition of a host substance in response to pathogen phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -3756,13 +3738,11 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000198"/>
-        <obo:IAO_0000115>A host (molecular function??) phenotype in which the binding of one protein to a protein complex is normal (i.e. indistinguishable from wild type). The protein whose binding to the protein complex is assayed may be encoded by the mutated gene, or may be encoded by a different gene.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:28:13Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>FYPO:0005232</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>host_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal host protein complex binding</rdfs:label>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">host chlorosis phenotype in presence of pathogen</rdfs:label>
     </owl:Class>
     
 
@@ -3996,24 +3976,11 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000213 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000213">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002052"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                        <owl:someValuesFrom rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000195"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000196"/>
-        <obo:IAO_0000115>A host (molecular function??) phenotype in which the binding of one protein to another occurs to a lower extent than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000200"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:33:03Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>FYPO:0001645</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>host_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">decreased host protein protein interaction</rdfs:label>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">host chlorosis absent with pathogen</rdfs:label>
     </owl:Class>
     
 
@@ -4035,24 +4002,11 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000215 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000215">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002051"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                        <owl:someValuesFrom rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000195"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000196"/>
-        <obo:IAO_0000115>A host (molecular function??) phenotype in which the binding of one protein to another occurs to a greater extent than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000200"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:33:18Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0001571</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>host_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">increased host protein protein interaction</rdfs:label>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">host chlorosis present with pathogen</rdfs:label>
     </owl:Class>
     
 
@@ -6129,11 +6083,11 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000344 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000344">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000348"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T16:23:29Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">host defence response to pathogen phenotype</rdfs:label>
+        <rdfs:label xml:lang="en">normal deposition of a host substance in response to pathogen phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -6177,11 +6131,11 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
     <!-- http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000348 -->
 
     <owl:Class rdf:about="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000348">
-        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000344"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T17:04:57Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">deposition of substance</rdfs:label>
+        <rdfs:label xml:lang="en">deposition of a host substance in response to pathogen phenotype</rdfs:label>
     </owl:Class>
     
 
