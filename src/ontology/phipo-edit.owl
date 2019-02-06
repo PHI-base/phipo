@@ -255,14 +255,28 @@ response to wounding?</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000004 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000004">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0040003"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000461"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000006"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000483"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where the pathogenicity is normal (i.e the same as wild-type)</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T12:38:43Z</obo:creation_date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unaltered pathogenicity (exact); unaffected pathogenicity (exact); unchanged pathogenicity (exact)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logical definition
-AC_pathogenicity and (has-relative-magnitude some normal (PATO:0000461))</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">normal pathogenicity</rdfs:label>
     </owl:Class>
     
@@ -271,13 +285,27 @@ AC_pathogenicity and (has-relative-magnitude some normal (PATO:0000461))</rdfs:c
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000005 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000005">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0040003"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000006"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000484"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where the pathogenicity is abnormal (i.e different than wild-type)</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T12:39:00Z</obo:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logical definition
-AC_pathogenicity and (has-relative-magnitude some abnormal (PATO:0000460))</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal pathogenicity</rdfs:label>
     </owl:Class>
     
@@ -286,6 +314,17 @@ AC_pathogenicity and (has-relative-magnitude some abnormal (PATO:0000460))</rdfs
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000006 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000006">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0040003"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is relevant to pathogenicity. Pathogenicity is the ability of an organism, a pathogen, to produce an infectious disease in another organism</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
@@ -294,9 +333,7 @@ AC_pathogenicity and (has-relative-magnitude some abnormal (PATO:0000460))</rdfs
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogenesis (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_do_not_manually_annotate</oboInOwl:inSubset>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logical definition
-AC_pathogenicity and (inheres_in some AC_organism)
-Pathogenicity is a qualitative concept</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathogenicity is a qualitative concept</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogenicity phenotype</rdfs:label>
     </owl:Class>
     
@@ -352,14 +389,32 @@ AC_gain_of and AC_pathogenicity</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000010 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000010">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001558"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0040003"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000304"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000005"/>
+        <rdfs:subClassOf rdf:resource="http://www.purl.obolibrary.org/obo/phipo.owl/PHIPO_0000484"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where pathogenicity observed in the wild-type strain is abolished.</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T12:45:31Z</obo:creation_date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal non pathogenic phenotype (exact); abolished pathogenicity (exact)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logical definition
-AC_pathogenicity and (qualifier some arrested (PATO:0000297))</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">loss of pathogenicity</rdfs:label>
     </owl:Class>
     
@@ -386,9 +441,7 @@ AC_pathogenicity and (qualifier some arrested (PATO:0000297))</rdfs:comment>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_do_not_manually_annotate</oboInOwl:inSubset>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">logical definition
-virulence (PATO:0002146) and (inheres_in some AC_organism)
-Virulence is a quantitative concept</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Virulence is a quantitative concept</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">virulence phenotype</rdfs:label>
     </owl:Class>
     
@@ -419,8 +472,6 @@ Virulence is a quantitative concept</rdfs:comment>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:02:23Z</obo:creation_date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unaffected virulence (exact)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logical definition
-virulence (PATO:0002146) and (has_relative_magnitude some normal (PATO:0000461))</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">normal virulence</rdfs:label>
     </owl:Class>
     
@@ -450,8 +501,6 @@ virulence (PATO:0002146) and (has_relative_magnitude some normal (PATO:0000461))
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:02:39Z</obo:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logical definition
-virulence (PATO:0002146) and (has_relative_magnitude some abnormal (PATO:0000460)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal virulence</rdfs:label>
     </owl:Class>
     
@@ -485,10 +534,6 @@ virulence (PATO:0002146) and (has_relative_magnitude some abnormal (PATO:0000460
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:07:31Z</obo:creation_date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hypervirulence</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logical definition
-virulence (PATO:0002146) and (increased_in_magnitude_relative_to some normal (PATO:0000461))
-OR
-increased virulence PATO:0002148</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased virulence</rdfs:label>
     </owl:Class>
     
@@ -523,10 +568,6 @@ increased virulence PATO:0002148</rdfs:comment>
         <oboInOWL:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decreased virulence</oboInOWL:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decreased virulence</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logical definition
-virulence (PATO:0002146) and (decreased_in_magnitude_relative_to some normal (PATO:0000461))
-OR
-reduced virulence PATO:0002147</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reduced virulence</rdfs:label>
     </owl:Class>
     
