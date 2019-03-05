@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2019-02-26
+data-version: releases/2019-03-05
 import: http://purl.obolibrary.org/obo/phipo/imports/chebi_import.owl
 import: http://purl.obolibrary.org/obo/phipo/imports/go_import.owl
 import: http://purl.obolibrary.org/obo/phipo/imports/ido_import.owl
@@ -5109,6 +5109,7 @@ creation_date: 2018-10-01T12:14:40Z
 [Term]
 id: PHIPO:0000162
 name: organism growth phenotype
+namespace: single_organism_phenotype
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: pathogen_phenotype
 subset: qc_do_not_annotate
@@ -5276,6 +5277,7 @@ creation_date: 2018-10-01T13:05:50Z
 [Term]
 id: PHIPO:0000177
 name: yeast like growth form phenotype
+namespace: single_organism_phenotype
 is_a: PHIPO:0000162 ! organism growth phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:05:53Z
@@ -5354,6 +5356,7 @@ creation_date: 2018-10-01T13:09:42Z
 [Term]
 id: PHIPO:0000184
 name: pathogen adhesion to host phenotype
+namespace: pathogen_host_interaction_phenotype
 is_a: PHIPO:0000332 ! pathogen growth with host phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:12:32Z
@@ -5373,6 +5376,13 @@ id: PHIPO:0000186
 name: abolished hypersensitive response
 namespace: pathogen_host_interaction_phenotype
 is_a: PHIPO:0000475 ! abnormal host hypersensitive response to pathogen
+is_a: PHIPO:0000484 ! abnormal pathogen host interaction phenotype
+intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
+intersection_of: BFO:0000051 PATO:0001558
+intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
+intersection_of: RO:0000052 GO:0009626
+relationship: BFO:0000051 PATO:0001558
+relationship: RO:0000052 GO:0009626
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:12:57Z
 
@@ -5671,6 +5681,7 @@ creation_date: 2018-10-01T13:42:29Z
 [Term]
 id: PHIPO:0000217
 name: pathogen host interaction primary metabolic process phenotype
+namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype that affects the chemical reactions and pathways involving those compounds which are formed as a part of the normal anabolic and catabolic processes. These processes take place in most, if not all, cells of the organism." []
 comment: Definition adapted from GO:0044238 primary metabolic process
 xref: GO:0044238
@@ -8043,6 +8054,7 @@ creation_date: 2018-12-18T11:34:08Z
 [Term]
 id: PHIPO:0000445
 name: pathogen host interaction with host cell death phenotype
+namespace: pathogen_host_interaction_phenotype
 is_a: PHIPO:0000001 ! pathogen host interaction phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-18T12:46:14Z
@@ -8083,6 +8095,7 @@ creation_date: 2018-12-18T14:44:36Z
 [Term]
 id: PHIPO:0000450
 name: normal pathogen peptidase activity
+namespace: single_organism_phenotype
 def: "A single organism (molecular function??) phenotype in which the observed rate of a peptidase activity is normal (i.e. indistinguishable from wild type)." []
 synonym: "normal protease activity" EXACT []
 xref: FYPO:0000665
@@ -8101,6 +8114,7 @@ creation_date: 2018-12-19T09:51:47Z
 [Term]
 id: PHIPO:0000461
 name: host programmed cell death response to pathogen
+namespace: pathogen_host_interaction_phenotype
 def: "Definition from GO programmed cell death.\nA process which begins when a cell receives an internal or external signal and activates a series of biochemical events (signaling pathway). The process ends with the death of the cell. Note that this term should be used to annotate gene products in the organism undergoing the programmed cell death. To annotate genes in another organism whose products modulate programmed cell death in a host organism, consider the term 'modulation by symbiont of host programmed cell death ; GO:0052040'. Also, note that 'programmed cell death ; GO:0012501' should be used to refer to instances of caspase-independent cell death mechanisms, in the absence of further indications on the process taking place. At present, caspase-independent cell death is not yet represented in GO due to the lack of consensus and in-depth research on the topic. 'programmed cell death ; GO:0012501' may also be used to annotate gene products in taxa where apoptosis as defined in GO:0006915 does not occur, such as plants. You may also consider these specific children: GO:0097468 'programmed cell death in response to reactive oxygen species' (with descendants GO:0010421 'hydrogen peroxide-mediated programmed cell death' and GO:0010343 'singlet oxygen-mediated programmed cell death'), and GO:0009626 'plant-type hypersensitive response' and its children, which are descendants of GO:0034050 'host programmed cell death induced by symbiont'." []
 comment: Temp definition taken from GO term. Needs updating for phipo
 is_a: PHIPO:0000445 ! pathogen host interaction with host cell death phenotype
@@ -8110,6 +8124,7 @@ creation_date: 2018-12-21T12:55:04Z
 [Term]
 id: PHIPO:0000462
 name: host cell apoptosis in response to pathogen phenotype
+namespace: pathogen_host_interaction_phenotype
 comment: Note: in GO 'apoptotic process'
 is_a: PHIPO:0000461 ! host programmed cell death response to pathogen
 created_by: alaynecuzick
@@ -8118,6 +8133,7 @@ creation_date: 2018-12-21T12:55:59Z
 [Term]
 id: PHIPO:0000463
 name: host autophagy response to pathogen phenotype
+namespace: pathogen_host_interaction_phenotype
 def: "The cellular catabolic process in which cells digest parts of their own cytoplasm; allows for both recycling of macromolecular constituents under conditions of cellular stress and remodeling the intracellular structure for cell differentiation." []
 comment: Def taken from GO:0006914 autophagy. May need updating for phipo
 is_a: PHIPO:0000461 ! host programmed cell death response to pathogen
@@ -8127,6 +8143,7 @@ creation_date: 2018-12-21T12:56:41Z
 [Term]
 id: PHIPO:0000464
 name: host necrosis in response to pathogen
+namespace: pathogen_host_interaction_phenotype
 def: "Definition from GO necrotic cell death.\nA type of cell death that is morphologically characterized by an increasingly translucent cytoplasm, swelling of organelles, minor ultrastructural modifications of the nucleus (specifically, dilatation of the nuclear membrane and condensation of chromatin into small, irregular, circumscribed patches) and increased cell volume (oncosis), culminating in the disruption of the plasma membrane and subsequent loss of intracellular contents. Necrotic cells do not fragment into discrete corpses as their apoptotic counterparts do. Moreover, their nuclei remain intact and can aggregate and accumulate in necrotic tissues. Note that the word necrosis has been widely used in earlier literature to describe forms of cell death which are now known by more precise terms, such as apoptosis. Necrosis can occur in a regulated fashion, involving a precise sequence of signals; in this case, consider annotating to GO:0097300 'programmed necrotic cell death' or to its more specific child GO:0070266 'necroptotic process'." []
 comment: Temp definition taken from GO term. Needs updating for phipo
 is_a: PHIPO:0000465 ! host cell injury from pathogen phenotype
@@ -8136,6 +8153,7 @@ creation_date: 2018-12-21T13:01:44Z
 [Term]
 id: PHIPO:0000465
 name: host cell injury from pathogen phenotype
+namespace: pathogen_host_interaction_phenotype
 is_a: PHIPO:0000445 ! pathogen host interaction with host cell death phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-21T13:03:50Z
@@ -8143,6 +8161,7 @@ creation_date: 2018-12-21T13:03:50Z
 [Term]
 id: PHIPO:0000466
 name: host hypersensitive response to pathogen phenotype
+namespace: pathogen_host_interaction_phenotype
 def: "The rapid, localized death of plant cells in response to invasion by a pathogen." []
 comment: Def taken from GO:0009626 plant-type hypersensitive response
 is_a: PHIPO:0000461 ! host programmed cell death response to pathogen
@@ -8209,6 +8228,7 @@ creation_date: 2019-01-11T11:55:09Z
 [Term]
 id: PHIPO:0000474
 name: normal host hypersensitive response to pathogen
+def: "pathogen_host_interaction_phenotype" []
 is_a: PHIPO:0000466 ! host hypersensitive response to pathogen phenotype
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:21:01Z
@@ -8216,6 +8236,7 @@ creation_date: 2019-01-14T12:21:01Z
 [Term]
 id: PHIPO:0000475
 name: abnormal host hypersensitive response to pathogen
+namespace: pathogen_host_interaction_phenotype
 is_a: PHIPO:0000466 ! host hypersensitive response to pathogen phenotype
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:21:13Z
@@ -8223,6 +8244,7 @@ creation_date: 2019-01-14T12:21:13Z
 [Term]
 id: PHIPO:0000476
 name: normal host cell apoptosis in response to pathogen
+namespace: pathogen_host_interaction_phenotype
 is_a: PHIPO:0000462 ! host cell apoptosis in response to pathogen phenotype
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:22:36Z
@@ -8230,6 +8252,7 @@ creation_date: 2019-01-14T12:22:36Z
 [Term]
 id: PHIPO:0000477
 name: abnormal host cell apoptosis in response to pathogen
+namespace: pathogen_host_interaction_phenotype
 is_a: PHIPO:0000462 ! host cell apoptosis in response to pathogen phenotype
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:23:06Z
@@ -8237,6 +8260,7 @@ creation_date: 2019-01-14T12:23:06Z
 [Term]
 id: PHIPO:0000478
 name: normal host autophagy response to pathogen
+namespace: pathogen_host_interaction_phenotype
 is_a: PHIPO:0000463 ! host autophagy response to pathogen phenotype
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:23:44Z
@@ -8244,6 +8268,7 @@ creation_date: 2019-01-14T12:23:44Z
 [Term]
 id: PHIPO:0000479
 name: abnormal host autophagy response to pathogen
+namespace: pathogen_host_interaction_phenotype
 is_a: PHIPO:0000463 ! host autophagy response to pathogen phenotype
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:23:54Z
@@ -8251,6 +8276,7 @@ creation_date: 2019-01-14T12:23:54Z
 [Term]
 id: PHIPO:0000480
 name: normal host necrosis in response to pathogen
+namespace: pathogen_host_interaction_phenotype
 is_a: PHIPO:0000464 ! host necrosis in response to pathogen
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:24:50Z
@@ -8258,6 +8284,7 @@ creation_date: 2019-01-14T12:24:50Z
 [Term]
 id: PHIPO:0000481
 name: abnormal host necrosis in response to pathogen
+namespace: pathogen_host_interaction_phenotype
 is_a: PHIPO:0000464 ! host necrosis in response to pathogen
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:25:11Z
@@ -8419,6 +8446,7 @@ creation_date: 2019-01-18T13:07:54Z
 [Term]
 id: PHIPO:0000505
 name: phenotype
+namespace: phipo
 def: "Any of the set of observable characteristics of an organism resulting from the interaction of its genotype with the environment." []
 comment: Definition from FYPO. Unclear which namespace to enter under so currently 'floating'
 xref: FYPO:0000001
@@ -8428,12 +8456,14 @@ creation_date: 2019-01-23T11:11:47Z
 [Term]
 id: PHIPO:0000506
 name: single organism
+namespace: single_organism_phenotype
 created_by: alaynecuzick
 creation_date: 2019-01-23T11:16:14Z
 
 [Term]
 id: PHIPO:0000507
 name: pathogen host interaction
+namespace: pathogen_host_interaction_phenotype
 created_by: alaynecuzick
 creation_date: 2019-01-23T13:11:21Z
 
@@ -8514,6 +8544,14 @@ xref: FYPO:0002057
 is_a: PHIPO:0000509 ! single organism cell population phenotype
 created_by: alaynecuzick
 creation_date: 2019-02-11T13:07:36Z
+
+[Term]
+id: PHIPO:0000516
+name: gain of hypersensitive response
+namespace: pathogen_host_interaction_phenotype
+is_a: PHIPO:0000475 ! abnormal host hypersensitive response to pathogen
+created_by: alaynecuzick
+creation_date: 2019-03-05T13:46:52Z
 
 [Term]
 id: Subset
