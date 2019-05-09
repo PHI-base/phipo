@@ -1,33 +1,33 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/phipo.owl#"
      xml:base="http://purl.obolibrary.org/obo/phipo.owl"
-     xmlns:chebi="http://purl.obolibrary.org/obo/chebi/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:oboInOWL="http://www.geneontology.org/formats/oboInOWL#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:go="http://purl.obolibrary.org/obo/go#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:pato="http://purl.obolibrary.org/obo/pato#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:chebi="http://purl.obolibrary.org/obo/chebi/"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:chebi1="http://purl.obolibrary.org/obo/chebi#"
      xmlns:chebi2="http://purl.obolibrary.org/obo/chebi#2"
      xmlns:chebi3="http://purl.obolibrary.org/obo/chebi#3"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:chebi4="http://purl.obolibrary.org/obo/chebi#1"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:pato="http://purl.obolibrary.org/obo/pato#"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#">
+     xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
+     xmlns:oboInOWL="http://www.geneontology.org/formats/oboInOWL#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/phipo.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2019-03-26/phipo.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2019-05-09/phipo.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/phipo/imports/chebi_import.owl"/>
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/phipo/imports/ido_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/phipo/imports/go_import.owl"/>
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/phipo/imports/so_import.owl"/>
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/phipo/imports/ro_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/phipo/imports/ido_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/phipo/imports/pato_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/phipo/imports/ro_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/phipo/imports/so_import.owl"/>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-09T13:43:00Z</obo:creation_date>
     </owl:Ontology>
@@ -17501,9 +17501,10 @@ AC_gain_of and AC_pathogenicity</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000018 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000018">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000034"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000474"/>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:12:20Z</obo:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0002552</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lipid droplets present in decreased numbers</rdfs:label>
     </owl:Class>
@@ -17782,7 +17783,7 @@ With MU: The pathogen does have a pre-penetration defect (development of a penet
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000036 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000036">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000034"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000478"/>
     </owl:Class>
     
 
@@ -19863,12 +19864,11 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000159 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000159">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000034"/>
-        <obo:IAO_0000115>A cellular process phenotype in which the occurrence of lipid droplet formation is increased.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000463"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T12:12:52Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">increased lipid droplet formation</rdfs:label>
+        <rdfs:label xml:lang="en">normal subcellular component phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -20353,11 +20353,11 @@ phenotype (this would need to be PHIPO pathogen phenotype/host phenotype or dise
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000182 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000182">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000474"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000466"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:09:35Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">hypersensitive response absent</rdfs:label>
+        <rdfs:label xml:lang="en">absence of host necrotic cell death by pathogen induced HR during biotrophic lifestyle</rdfs:label>
     </owl:Class>
     
 
@@ -20423,43 +20423,11 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000186 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000186">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001558"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000304"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0009626"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000475"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000484"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001558"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0009626"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000182"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:12:57Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label>abolished hypersensitive response</rdfs:label>
+        <rdfs:label>abolished host necrotic cell death by pathogen induced HR during biotrophic lifestyle</rdfs:label>
     </owl:Class>
     
 
@@ -20532,11 +20500,11 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000190 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000190">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000475"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000192"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:14:10Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">delayed hypersensitive response</rdfs:label>
+        <rdfs:label xml:lang="en">delayed host necrotic cell death by pathogen induced HR during biotrophic lifestyle</rdfs:label>
     </owl:Class>
     
 
@@ -20583,11 +20551,12 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000192 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000192">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000474"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000466"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000480"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:14:29Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">hypersensitive response present</rdfs:label>
+        <rdfs:label xml:lang="en">presence of host necrotic cell death by pathogen induced HR during biotrophic lifestyle</rdfs:label>
     </owl:Class>
     
 
@@ -23702,7 +23671,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-05T11:44:12Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">single organism phenotype</rdfs:label>
+        <rdfs:label xml:lang="en">individual organism phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -23747,7 +23716,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000406 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000406">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000034"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000934"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-05T11:45:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -23775,7 +23744,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-05T11:46:07Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">organism morphology phenotype</rdfs:label>
+        <rdfs:label xml:lang="en">morphology phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -23878,13 +23847,11 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000415 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000415">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000034"/>
-        <obo:IAO_0000115>A cellular process phenotype in which the occurrence of lipid droplet formation is decreased.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000463"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-05T11:47:55Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>FYPO:0006054</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">decreased lipid droplet formation</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal subcellular component phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -24647,7 +24614,7 @@ A process which begins when a cell receives an internal or external signal and a
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-21T12:55:04Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:comment>Temp definition taken from GO term. Needs updating for phipo</rdfs:comment>
-        <rdfs:label xml:lang="en">host programmed cell death response to pathogen</rdfs:label>
+        <rdfs:label xml:lang="en">host necrotic cell death phenotype by pathogen induced programmed cell death</rdfs:label>
     </owl:Class>
     
 
@@ -24655,12 +24622,12 @@ A process which begins when a cell receives an internal or external signal and a
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000462 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000462">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000461"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000465"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-21T12:55:59Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:comment>Note: in GO &apos;apoptotic process&apos;</rdfs:comment>
-        <rdfs:label xml:lang="en">host cell apoptosis in response to pathogen phenotype</rdfs:label>
+        <rdfs:label xml:lang="en">abolished host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle</rdfs:label>
     </owl:Class>
     
 
@@ -24668,13 +24635,11 @@ A process which begins when a cell receives an internal or external signal and a
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000463 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000463">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000461"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The cellular catabolic process in which cells digest parts of their own cytoplasm; allows for both recycling of macromolecular constituents under conditions of cellular stress and remodeling the intracellular structure for cell differentiation.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000034"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-21T12:56:41Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment>Def taken from GO:0006914 autophagy. May need updating for phipo</rdfs:comment>
-        <rdfs:label xml:lang="en">host autophagy response to pathogen phenotype</rdfs:label>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">subcellular component phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -24682,14 +24647,14 @@ A process which begins when a cell receives an internal or external signal and a
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000464 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000464">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000465"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000445"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Definition from GO necrotic cell death.
 A type of cell death that is morphologically characterized by an increasingly translucent cytoplasm, swelling of organelles, minor ultrastructural modifications of the nucleus (specifically, dilatation of the nuclear membrane and condensation of chromatin into small, irregular, circumscribed patches) and increased cell volume (oncosis), culminating in the disruption of the plasma membrane and subsequent loss of intracellular contents. Necrotic cells do not fragment into discrete corpses as their apoptotic counterparts do. Moreover, their nuclei remain intact and can aggregate and accumulate in necrotic tissues. Note that the word necrosis has been widely used in earlier literature to describe forms of cell death which are now known by more precise terms, such as apoptosis. Necrosis can occur in a regulated fashion, involving a precise sequence of signals; in this case, consider annotating to GO:0097300 &apos;programmed necrotic cell death&apos; or to its more specific child GO:0070266 &apos;necroptotic process&apos;.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-21T13:01:44Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:comment>Temp definition taken from GO term. Needs updating for phipo</rdfs:comment>
-        <rdfs:label xml:lang="en">host necrosis in response to pathogen</rdfs:label>
+        <rdfs:label xml:lang="en">host necrotic cell death phenotype in response to pathogen</rdfs:label>
     </owl:Class>
     
 
@@ -24697,11 +24662,12 @@ A type of cell death that is morphologically characterized by an increasingly tr
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000465 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000465">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000445"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000461"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000481"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-21T13:03:50Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">host cell injury from pathogen phenotype</rdfs:label>
+        <rdfs:label xml:lang="en">absence of host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle</rdfs:label>
     </owl:Class>
     
 
@@ -24715,7 +24681,7 @@ A type of cell death that is morphologically characterized by an increasingly tr
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-21T13:09:35Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:comment>Def taken from GO:0009626 plant-type hypersensitive response</rdfs:comment>
-        <rdfs:label xml:lang="en">host hypersensitive response to pathogen phenotype</rdfs:label>
+        <rdfs:label xml:lang="en">host necrotic cell death by pathogen induced hypersensitive response</rdfs:label>
     </owl:Class>
     
 
@@ -24808,12 +24774,11 @@ A type of cell death that is morphologically characterized by an increasingly tr
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000474 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000474">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000466"/>
-        <obo:IAO_0000115>pathogen_host_interaction_phenotype</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000478"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-14T12:21:01Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal host hypersensitive response to pathogen</rdfs:label>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal quantity of lipid droplets</rdfs:label>
     </owl:Class>
     
 
@@ -24821,11 +24786,11 @@ A type of cell death that is morphologically characterized by an increasingly tr
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000475 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000475">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000466"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000036"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-14T12:21:13Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal host hypersensitive response to pathogen</rdfs:label>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased size of lipid droplet</rdfs:label>
     </owl:Class>
     
 
@@ -24833,11 +24798,11 @@ A type of cell death that is morphologically characterized by an increasingly tr
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000476 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000476">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000462"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000477"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-14T12:22:36Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal host cell apoptosis in response to pathogen</rdfs:label>
+        <rdfs:label xml:lang="en">gain of host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle</rdfs:label>
     </owl:Class>
     
 
@@ -24845,11 +24810,11 @@ A type of cell death that is morphologically characterized by an increasingly tr
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000477 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000477">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000462"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000461"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-14T12:23:06Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal host cell apoptosis in response to pathogen</rdfs:label>
+        <rdfs:label xml:lang="en">presence of host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle</rdfs:label>
     </owl:Class>
     
 
@@ -24857,11 +24822,13 @@ A type of cell death that is morphologically characterized by an increasingly tr
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000478 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000478">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000463"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000415"/>
+        <obo:IAO_0000115>GO definition of lipid droplet. An intracellular non-membrane-bounded organelle comprising a matrix of coalesced lipids surrounded by a phospholipid monolayer. May include associated proteins.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-14T12:23:44Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal host autophagy response to pathogen</rdfs:label>
+        <oboInOwl:hasDbXref>GO:0005811</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">lipid droplet phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -24869,11 +24836,11 @@ A type of cell death that is morphologically characterized by an increasingly tr
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000479 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000479">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000463"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000036"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-14T12:23:54Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal host autophagy response to pathogen</rdfs:label>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased size of lipid droplet</rdfs:label>
     </owl:Class>
     
 
@@ -24885,7 +24852,7 @@ A type of cell death that is morphologically characterized by an increasingly tr
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-14T12:24:50Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal host necrosis in response to pathogen</rdfs:label>
+        <rdfs:label xml:lang="en">presence of host necrotic cell death by pathogen</rdfs:label>
     </owl:Class>
     
 
@@ -24897,7 +24864,7 @@ A type of cell death that is morphologically characterized by an increasingly tr
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-14T12:25:11Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal host necrosis in response to pathogen</rdfs:label>
+        <rdfs:label xml:lang="en">absence of host necrotic cell death by pathogen</rdfs:label>
     </owl:Class>
     
 
@@ -25317,11 +25284,11 @@ A single organism cell population phenotype in which none of the cells in the po
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000516 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000516">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000475"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000192"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T13:46:52Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">gain of hypersensitive response</rdfs:label>
+        <rdfs:label xml:lang="en">gain of host necrotic cell death by pathogen induced HR during biotrophic lifestyle</rdfs:label>
     </owl:Class>
     
 
@@ -25329,11 +25296,9 @@ A single organism cell population phenotype in which none of the cells in the po
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000517 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000517">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000034"/>
-        <obo:IAO_0000115>lipid droplets present in increased numbers</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000474"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-19T13:18:56Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>FYPO:0002552</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">lipid droplets present in increased numbers</rdfs:label>
     </owl:Class>
@@ -25343,7 +25308,7 @@ A single organism cell population phenotype in which none of the cells in the po
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000518 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000518">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000034"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000159"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-19T13:20:18Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>FYPO:0006791</oboInOwl:hasDbXref>
@@ -30085,6 +30050,132 @@ A single organism cell population phenotype in which none of the cells in the po
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000924 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000924">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000220"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype where there is a phase of elevated metabolic activity, during which oxygen consumption increases; this leads to the production, by an NADH dependent system, of hydrogen peroxide (H2O2), superoxide anions and hydroxyl radicals.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-01T09:18:19Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>GO:0045730</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>pathogen host interaction oxidative burst phenotype</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:comment>Definition adapted from GO:0045730 respiratory burst.</rdfs:comment>
+        <rdfs:label xml:lang="en">pathogen host interaction respiratory burst phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000925 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000925">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000924"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-01T10:52:19Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal pathogen host interaction respiratory burst</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000926 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000926">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000924"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-01T10:52:28Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal pathogen host interaction respiratory burst</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000927 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000927">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000925"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-01T10:53:25Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">pathogen host interaction respiratory burst present in host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000928 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000928">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000925"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-01T10:53:36Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">pathogen host interaction respiratory burst absent in host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000929 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000929">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000926"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-01T10:58:54Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased pathogen host interaction respiratory burst in host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000930 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000930">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000926"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-01T10:59:15Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased pathogen host interaction respiratory burst in host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000931 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000931">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000926"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-01T10:59:55Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abolished pathogen host interaction respiratory burst in host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000932 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000932">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000926"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-01T11:00:10Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">gain of pathogen host interaction respiratory burst in host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000934 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000934">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000463"/>
+        <obo:IAO_0000115>A physical cellular phenotype in which the amount, distribution, or morphology of all or part of the nucleus is abnormal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-08T13:37:01Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0002403</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal nucleus</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#Subset -->
 
     <rdf:Description rdf:about="http://www.geneontology.org/formats/oboInOwl#Subset">
@@ -30127,10 +30218,10 @@ A single organism cell population phenotype in which none of the cells in the po
      -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000036">
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <obo:IAO_0000115>A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the size, shape, or structure of lipid droplets is abnormal.</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal lipid droplet morphology</rdfs:label>
+        <obo:IAO_0000115>A physical cellular phenotype observed in the vegetative growth phase of the life cycle in which the size, shape, or structure of lipid droplets is abnormal.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>FYPO:0000356</oboInOwl:hasDbXref>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-09T13:43:00Z</obo:creation_date>
     </rdf:Description>
@@ -30138,5 +30229,5 @@ A single organism cell population phenotype in which none of the cells in the po
 
 
 
-<!-- Generated by the OWL API (version 1.1.0) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
 
