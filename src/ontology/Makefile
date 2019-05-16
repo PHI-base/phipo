@@ -34,7 +34,7 @@ PATTERN_RELEASE_FILES=       $(PATTERNDIR)/definitions.owl $(PATTERNDIR)/pattern
 
 FORMATS = $(sort  owl obo json owl)
 FORMATS_INCL_TSV = $(sort $(FORMAT) tsv)
-RELEASE_ARTEFACTS = $(sort  base simple-non-classified full base full)
+RELEASE_ARTEFACTS = $(sort  base simple simple-non-classified full base full)
  
 # ----------------------------------------
 # Top-level targets
@@ -151,6 +151,11 @@ $(ONT)-base.obo: $(ONT)-base.owl
 $(ONT)-base.json: $(ONT)-base.owl
 	$(ROBOT) annotate --input $< --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ \
 		convert --check false -f json -o $@.tmp.json && mv $@.tmp.json $@
+$(ONT)-simple.obo: $(ONT)-simple.owl
+	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
+$(ONT)-simple.json: $(ONT)-simple.owl
+	$(ROBOT) annotate --input $< --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ \
+		convert --check false -f json -o $@.tmp.json && mv $@.tmp.json $@
 $(ONT)-simple-non-classified.obo: $(ONT)-simple-non-classified.owl
 	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
 $(ONT)-simple-non-classified.json: $(ONT)-simple-non-classified.owl
@@ -210,12 +215,22 @@ $(ONT)-full.owl: $(SRC) $(OTHER_SRC)
 		reduce -r ELK \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
 
+# foo-simple: (edit->reason,relax,reduce,drop imports, drop every axiom which contains an entity outside the "namespaces of interest")
+# drop every axiom: filter --term-file keep_terms.txt --trim true
+$(ONT)-simple.owl: $(SRC) $(OTHER_SRC) $(ONTOLOGYTERMS)
+	$(ROBOT) reason --input $< --reasoner ELK \
+		remove --select imports --trim false \
+		merge  $(patsubst %, -i %, $(OTHER_SRC))  \
+		relax \
+		reduce -r ELK \
+		filter --select ontology --term-file $(ONTOLOGYTERMS) --trim false --preserve-structure false \
+		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
 # foo-simple-non-classified (edit->relax,reduce,drop imports, drop every axiom which contains an entity outside the "namespaces of interest") <- aka the HPO use case, no reason.
 # Should this be the non-classified ontology with the drop foreign axiom filter? 
 # Consider adding remove --term "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace" 
 
 $(ONT)-simple-non-classified.owl: $(SRC) $(OTHER_SRC) $(ONTOLOGYTERMS)
-	$(ROBOT) remove --input $< --select imports --trim false \
+	$(ROBOT) remove --input $< --select imports --trim true \
 		merge  $(patsubst %, -i %, $(OTHER_SRC))  \
 		remove --axioms equivalent \
 		relax \
