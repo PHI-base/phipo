@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-05-15/phipo-simple-non-classified.owl
+data-version: phipo/releases/2019-05-16/phipo-simple-non-classified.owl
 ontology: phipo/phipo-simple-non-classified
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -34,7 +34,7 @@ def: "A single organism phenotype that is observed at the level of a tissue (eg 
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
-is_a: PHIPO:0000402 ! single organism phenotype
+is_a: PHIPO:0000402 ! individual organism phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-02T11:21:13Z xsd:string
 
@@ -188,7 +188,8 @@ property_value: creation:date 2018-05-04T13:11:04Z xsd:string
 id: PHIPO:0000018
 name: lipid droplets present in decreased numbers
 namespace: single_organism_phenotype
-is_a: PHIPO:0000034 ! cell phenotype
+xref: FYPO:0002552
+is_a: PHIPO:0000474 ! abnormal quantity of lipid droplets
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:12:20Z xsd:string
 
@@ -348,7 +349,7 @@ comment: This is a high-level term whose primary purpose is to organize terms be
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 xref: FYPO:0000002
-is_a: PHIPO:0000402 ! single organism phenotype
+is_a: PHIPO:0000402 ! individual organism phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-04T13:41:14Z xsd:string
 
@@ -362,7 +363,7 @@ property_value: creation:date 2018-07-09T13:41:47Z xsd:string
 
 [Term]
 id: PHIPO:0000036
-is_a: PHIPO:0000034 ! cell phenotype
+is_a: PHIPO:0000478 ! lipid droplet phenotype
 
 [Term]
 id: PHIPO:0000037
@@ -1447,10 +1448,9 @@ creation_date: 2018-10-01T12:12:12Z
 
 [Term]
 id: PHIPO:0000159
-name: increased lipid droplet formation
+name: normal subcellular component phenotype
 namespace: single_organism_phenotype
-def: "A cellular process phenotype in which the occurrence of lipid droplet formation is increased." []
-is_a: PHIPO:0000034 ! cell phenotype
+is_a: PHIPO:0000463 ! subcellular component phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:12:52Z
 
@@ -1667,9 +1667,9 @@ creation_date: 2018-10-01T13:09:27Z
 
 [Term]
 id: PHIPO:0000182
-name: hypersensitive response absent
+name: absence of host necrotic cell death by pathogen induced HR during biotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000474 ! normal host hypersensitive response to pathogen
+is_a: PHIPO:0000466 ! host necrotic cell death by pathogen induced hypersensitive response
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:09:35Z
 
@@ -1704,9 +1704,9 @@ creation_date: 2018-10-01T13:12:43Z
 
 [Term]
 id: PHIPO:0000186
-name: abolished hypersensitive response
+name: abolished host necrotic cell death by pathogen induced HR during biotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000475 ! abnormal host hypersensitive response to pathogen
+is_a: PHIPO:0000182 ! absence of host necrotic cell death by pathogen induced HR during biotrophic lifestyle
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:12:57Z
 
@@ -1740,9 +1740,9 @@ creation_date: 2018-10-01T13:13:36Z
 
 [Term]
 id: PHIPO:0000190
-name: delayed hypersensitive response
+name: delayed host necrotic cell death by pathogen induced HR during biotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000475 ! abnormal host hypersensitive response to pathogen
+is_a: PHIPO:0000192 ! presence of host necrotic cell death by pathogen induced HR during biotrophic lifestyle
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:14:10Z
 
@@ -1758,9 +1758,10 @@ creation_date: 2018-10-01T13:14:20Z
 
 [Term]
 id: PHIPO:0000192
-name: hypersensitive response present
+name: presence of host necrotic cell death by pathogen induced HR during biotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000474 ! normal host hypersensitive response to pathogen
+is_a: PHIPO:0000466 ! host necrotic cell death by pathogen induced hypersensitive response
+is_a: PHIPO:0000480 ! presence of host necrotic cell death by pathogen
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:14:29Z
 
@@ -2720,7 +2721,7 @@ creation_date: 2018-10-05T12:43:16Z
 id: PHIPO:0000293
 name: abnormal organism morphology phenotype
 namespace: single_organism_phenotype
-is_a: PHIPO:0000408 ! organism morphology phenotype
+is_a: PHIPO:0000408 ! morphology phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-05T12:48:26Z
 
@@ -2728,7 +2729,7 @@ creation_date: 2018-10-05T12:48:26Z
 id: PHIPO:0000294
 name: normal organism morphology phenotype
 namespace: single_organism_phenotype
-is_a: PHIPO:0000408 ! organism morphology phenotype
+is_a: PHIPO:0000408 ! morphology phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-05T12:52:54Z
 
@@ -3610,7 +3611,7 @@ creation_date: 2018-12-05T11:42:11Z
 id: PHIPO:0000399
 name: abnormal phialide morphology
 namespace: single_organism_phenotype
-is_a: PHIPO:0000408 ! organism morphology phenotype
+is_a: PHIPO:0000408 ! morphology phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:43:18Z
 
@@ -3626,13 +3627,13 @@ creation_date: 2018-12-05T11:43:39Z
 id: PHIPO:0000401
 name: normal phialide morphology
 namespace: single_organism_phenotype
-is_a: PHIPO:0000408 ! organism morphology phenotype
+is_a: PHIPO:0000408 ! morphology phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:43:53Z
 
 [Term]
 id: PHIPO:0000402
-name: single organism phenotype
+name: individual organism phenotype
 namespace: single_organism_phenotype
 is_a: PHIPO:0000002 ! single species phenotype
 created_by: alaynecuzick
@@ -3667,7 +3668,7 @@ creation_date: 2018-12-05T11:44:58Z
 id: PHIPO:0000406
 name: absence of nuclei
 namespace: single_organism_phenotype
-is_a: PHIPO:0000034 ! cell phenotype
+is_a: PHIPO:0000934 ! abnormal nucleus
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:45:18Z
 
@@ -3681,9 +3682,9 @@ creation_date: 2018-12-05T11:45:32Z
 
 [Term]
 id: PHIPO:0000408
-name: organism morphology phenotype
+name: morphology phenotype
 namespace: single_organism_phenotype
-is_a: PHIPO:0000402 ! single organism phenotype
+is_a: PHIPO:0000402 ! individual organism phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:46:07Z
 
@@ -3743,11 +3744,9 @@ creation_date: 2018-12-05T11:47:39Z
 
 [Term]
 id: PHIPO:0000415
-name: decreased lipid droplet formation
+name: abnormal subcellular component phenotype
 namespace: single_organism_phenotype
-def: "A cellular process phenotype in which the occurrence of lipid droplet formation is decreased." []
-xref: FYPO:0006054
-is_a: PHIPO:0000034 ! cell phenotype
+is_a: PHIPO:0000463 ! subcellular component phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:47:55Z
 
@@ -4022,7 +4021,7 @@ creation_date: 2018-12-18T11:34:08Z
 
 [Term]
 id: PHIPO:0000445
-name: pathogen host interaction with host cell death phenotype
+name: pathogen host interaction host cell death phenotype
 namespace: pathogen_host_interaction_phenotype
 is_a: PHIPO:0000001 ! pathogen host interaction phenotype
 created_by: alaynecuzick
@@ -4074,58 +4073,57 @@ creation_date: 2018-12-19T09:51:47Z
 
 [Term]
 id: PHIPO:0000461
-name: host programmed cell death response to pathogen
+name: host necrotic cell death phenotype by pathogen induced programmed cell death
 namespace: pathogen_host_interaction_phenotype
 def: "Definition from GO programmed cell death.\nA process which begins when a cell receives an internal or external signal and activates a series of biochemical events (signaling pathway). The process ends with the death of the cell. Note that this term should be used to annotate gene products in the organism undergoing the programmed cell death. To annotate genes in another organism whose products modulate programmed cell death in a host organism, consider the term 'modulation by symbiont of host programmed cell death ; GO:0052040'. Also, note that 'programmed cell death ; GO:0012501' should be used to refer to instances of caspase-independent cell death mechanisms, in the absence of further indications on the process taking place. At present, caspase-independent cell death is not yet represented in GO due to the lack of consensus and in-depth research on the topic. 'programmed cell death ; GO:0012501' may also be used to annotate gene products in taxa where apoptosis as defined in GO:0006915 does not occur, such as plants. You may also consider these specific children: GO:0097468 'programmed cell death in response to reactive oxygen species' (with descendants GO:0010421 'hydrogen peroxide-mediated programmed cell death' and GO:0010343 'singlet oxygen-mediated programmed cell death'), and GO:0009626 'plant-type hypersensitive response' and its children, which are descendants of GO:0034050 'host programmed cell death induced by symbiont'." []
 comment: Temp definition taken from GO term. Needs updating for phipo
-is_a: PHIPO:0000445 ! pathogen host interaction with host cell death phenotype
+is_a: PHIPO:0000445 ! pathogen host interaction host cell death phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-21T12:55:04Z
 
 [Term]
 id: PHIPO:0000462
-name: host cell apoptosis in response to pathogen phenotype
+name: abolished host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
 comment: Note: in GO 'apoptotic process'
-is_a: PHIPO:0000461 ! host programmed cell death response to pathogen
+is_a: PHIPO:0000465 ! absence of host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle
 created_by: alaynecuzick
 creation_date: 2018-12-21T12:55:59Z
 
 [Term]
 id: PHIPO:0000463
-name: host autophagy response to pathogen phenotype
-namespace: pathogen_host_interaction_phenotype
-def: "The cellular catabolic process in which cells digest parts of their own cytoplasm; allows for both recycling of macromolecular constituents under conditions of cellular stress and remodeling the intracellular structure for cell differentiation." []
-comment: Def taken from GO:0006914 autophagy. May need updating for phipo
-is_a: PHIPO:0000461 ! host programmed cell death response to pathogen
+name: subcellular component phenotype
+namespace: single_organism_phenotype
+is_a: PHIPO:0000034 ! cell phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-21T12:56:41Z
 
 [Term]
 id: PHIPO:0000464
-name: host necrosis in response to pathogen
+name: host necrotic cell death phenotype in response to pathogen
 namespace: pathogen_host_interaction_phenotype
 def: "Definition from GO necrotic cell death.\nA type of cell death that is morphologically characterized by an increasingly translucent cytoplasm, swelling of organelles, minor ultrastructural modifications of the nucleus (specifically, dilatation of the nuclear membrane and condensation of chromatin into small, irregular, circumscribed patches) and increased cell volume (oncosis), culminating in the disruption of the plasma membrane and subsequent loss of intracellular contents. Necrotic cells do not fragment into discrete corpses as their apoptotic counterparts do. Moreover, their nuclei remain intact and can aggregate and accumulate in necrotic tissues. Note that the word necrosis has been widely used in earlier literature to describe forms of cell death which are now known by more precise terms, such as apoptosis. Necrosis can occur in a regulated fashion, involving a precise sequence of signals; in this case, consider annotating to GO:0097300 'programmed necrotic cell death' or to its more specific child GO:0070266 'necroptotic process'." []
 comment: Temp definition taken from GO term. Needs updating for phipo
-is_a: PHIPO:0000465 ! host cell injury from pathogen phenotype
+is_a: PHIPO:0000445 ! pathogen host interaction host cell death phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-21T13:01:44Z
 
 [Term]
 id: PHIPO:0000465
-name: host cell injury from pathogen phenotype
+name: absence of host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000445 ! pathogen host interaction with host cell death phenotype
+is_a: PHIPO:0000461 ! host necrotic cell death phenotype by pathogen induced programmed cell death
+is_a: PHIPO:0000481 ! absence of host necrotic cell death by pathogen
 created_by: alaynecuzick
 creation_date: 2018-12-21T13:03:50Z
 
 [Term]
 id: PHIPO:0000466
-name: host hypersensitive response to pathogen phenotype
+name: host necrotic cell death by pathogen induced hypersensitive response
 namespace: pathogen_host_interaction_phenotype
 def: "The rapid, localized death of plant cells in response to invasion by a pathogen." []
 comment: Def taken from GO:0009626 plant-type hypersensitive response
-is_a: PHIPO:0000461 ! host programmed cell death response to pathogen
+is_a: PHIPO:0000461 ! host necrotic cell death phenotype by pathogen induced programmed cell death
 created_by: alaynecuzick
 creation_date: 2018-12-21T13:09:35Z
 
@@ -4188,66 +4186,69 @@ creation_date: 2019-01-11T11:55:09Z
 
 [Term]
 id: PHIPO:0000474
-name: normal host hypersensitive response to pathogen
-namespace: pathogen_host_interaction_phenotype
-def: "pathogen_host_interaction_phenotype" []
-is_a: PHIPO:0000466 ! host hypersensitive response to pathogen phenotype
+name: abnormal quantity of lipid droplets
+namespace: single_organism_phenotype
+is_a: PHIPO:0000478 ! lipid droplet phenotype
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:21:01Z
 
 [Term]
 id: PHIPO:0000475
-name: abnormal host hypersensitive response to pathogen
-namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000466 ! host hypersensitive response to pathogen phenotype
+name: decreased size of lipid droplet
+namespace: single_organism_phenotype
+is_a: PHIPO:0000036
+is_a: PHIPO:0000478 ! lipid droplet phenotype
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:21:13Z
 
 [Term]
 id: PHIPO:0000476
-name: normal host cell apoptosis in response to pathogen
+name: gain of host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000462 ! host cell apoptosis in response to pathogen phenotype
+is_a: PHIPO:0000477 ! presence of host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:22:36Z
 
 [Term]
 id: PHIPO:0000477
-name: abnormal host cell apoptosis in response to pathogen
+name: presence of host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000462 ! host cell apoptosis in response to pathogen phenotype
+is_a: PHIPO:0000461 ! host necrotic cell death phenotype by pathogen induced programmed cell death
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:23:06Z
 
 [Term]
 id: PHIPO:0000478
-name: normal host autophagy response to pathogen
-namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000463 ! host autophagy response to pathogen phenotype
+name: lipid droplet phenotype
+namespace: single_organism_phenotype
+def: "GO definition of lipid droplet. An intracellular non-membrane-bounded organelle comprising a matrix of coalesced lipids surrounded by a phospholipid monolayer. May include associated proteins." []
+xref: GO:0005811
+is_a: PHIPO:0000415 ! abnormal subcellular component phenotype
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:23:44Z
 
 [Term]
 id: PHIPO:0000479
-name: abnormal host autophagy response to pathogen
-namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000463 ! host autophagy response to pathogen phenotype
+name: increased size of lipid droplet
+namespace: single_organism_phenotype
+is_a: PHIPO:0000036
+is_a: PHIPO:0000478 ! lipid droplet phenotype
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:23:54Z
 
 [Term]
 id: PHIPO:0000480
-name: normal host necrosis in response to pathogen
+name: presence of host necrotic cell death by pathogen
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000464 ! host necrosis in response to pathogen
+is_a: PHIPO:0000464 ! host necrotic cell death phenotype in response to pathogen
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:24:50Z
 
 [Term]
 id: PHIPO:0000481
-name: abnormal host necrosis in response to pathogen
+name: absence of host necrotic cell death by pathogen
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000464 ! host necrosis in response to pathogen
+is_a: PHIPO:0000464 ! host necrotic cell death phenotype in response to pathogen
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:25:11Z
 
@@ -4499,9 +4500,9 @@ creation_date: 2019-02-11T13:07:36Z
 
 [Term]
 id: PHIPO:0000516
-name: gain of hypersensitive response
+name: gain of host necrotic cell death by pathogen induced HR during biotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000475 ! abnormal host hypersensitive response to pathogen
+is_a: PHIPO:0000192 ! presence of host necrotic cell death by pathogen induced HR during biotrophic lifestyle
 created_by: alaynecuzick
 creation_date: 2019-03-05T13:46:52Z
 
@@ -4509,9 +4510,7 @@ creation_date: 2019-03-05T13:46:52Z
 id: PHIPO:0000517
 name: lipid droplets present in increased numbers
 namespace: single_organism_phenotype
-def: "lipid droplets present in increased numbers" []
-xref: FYPO:0002552
-is_a: PHIPO:0000034 ! cell phenotype
+is_a: PHIPO:0000474 ! abnormal quantity of lipid droplets
 created_by: alaynecuzick
 creation_date: 2019-03-19T13:18:56Z
 
@@ -4520,7 +4519,7 @@ id: PHIPO:0000518
 name: lipid droplets present in normal numbers
 namespace: single_organism_phenotype
 xref: FYPO:0006791
-is_a: PHIPO:0000034 ! cell phenotype
+is_a: PHIPO:0000159 ! normal subcellular component phenotype
 created_by: alaynecuzick
 creation_date: 2019-03-19T13:20:18Z
 
@@ -7799,6 +7798,91 @@ def: "A phenotype in which a population of a single-species shows increased sens
 is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
+
+[Term]
+id: PHIPO:0000924
+name: pathogen host interaction oxidative burst phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where a phase of elevated metabolic activity, during which oxygen consumption increases made as part of a defense response elicited by the host; this leads to the production, by an NADH dependent system, of hydrogen peroxide (H2O2), superoxide anions and hydroxyl radicals." []
+comment: Definition adapted from GO:0002679 respiratory burst involved in defense response.
+synonym: "pathogen host interaction respiratory burst phenotype" EXACT []
+xref: GO:0002679
+is_a: PHIPO:0000220 ! pathogen host interaction metabolic process phenotype
+created_by: alaynecuzick
+creation_date: 2019-05-01T09:18:19Z
+
+[Term]
+id: PHIPO:0000925
+name: to repurpose
+created_by: alaynecuzick
+creation_date: 2019-05-01T10:52:19Z
+
+[Term]
+id: PHIPO:0000926
+name: increased host H202 production resulting from oxidative burst
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where there is an increased production of H2O2 in the host within a phase of elevated metabolic activity, during which oxygen consumption increases made as part of a defense response elicited by the host; this leads to the production, by an NADH dependent system, of hydrogen peroxide (H2O2), superoxide anions and hydroxyl radicals." []
+is_a: PHIPO:0000927 ! pathogen host interaction oxidative burst present in host
+created_by: alaynecuzick
+creation_date: 2019-05-01T10:52:28Z
+
+[Term]
+id: PHIPO:0000927
+name: pathogen host interaction oxidative burst present in host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype which is present in the host where a phase of elevated metabolic activity, during which oxygen consumption increases made as part of a defense response elicited by the host; this leads to the production, by an NADH dependent system, of hydrogen peroxide (H2O2), superoxide anions and hydroxyl radicals." []
+synonym: "pathogen host interaction respiratory burst present in host" EXACT []
+is_a: PHIPO:0000924 ! pathogen host interaction oxidative burst phenotype
+created_by: alaynecuzick
+creation_date: 2019-05-01T10:53:25Z
+
+[Term]
+id: PHIPO:0000928
+name: pathogen host interaction oxidative burst absent in host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype which is absent in the host where a phase of elevated metabolic activity, during which oxygen consumption increases made as part of a defense response elicited by the host; this leads to the production, by an NADH dependent system, of hydrogen peroxide (H2O2), superoxide anions and hydroxyl radicals." []
+synonym: "pathogen host interaction respiratory burst absent in host" EXACT []
+is_a: PHIPO:0000924 ! pathogen host interaction oxidative burst phenotype
+created_by: alaynecuzick
+creation_date: 2019-05-01T10:53:36Z
+
+[Term]
+id: PHIPO:0000929
+name: decreased pathogen host interaction respiratory burst in host
+is_a: PHIPO:0000931 ! to reuse
+created_by: alaynecuzick
+creation_date: 2019-05-01T10:58:54Z
+
+[Term]
+id: PHIPO:0000930
+name: increased pathogen host interaction respiratory burst in host
+is_a: PHIPO:0000931 ! to reuse
+created_by: alaynecuzick
+creation_date: 2019-05-01T10:59:15Z
+
+[Term]
+id: PHIPO:0000931
+name: to reuse
+is_a: PHIPO:0000925 ! to repurpose
+created_by: alaynecuzick
+creation_date: 2019-05-01T10:59:55Z
+
+[Term]
+id: PHIPO:0000932
+name: gain of pathogen host interaction respiratory burst in host
+is_a: PHIPO:0000931 ! to reuse
+created_by: alaynecuzick
+creation_date: 2019-05-01T11:00:10Z
+
+[Term]
+id: PHIPO:0000934
+name: abnormal nucleus
+namespace: single_organism_phenotype
+def: "A physical cellular phenotype in which the amount, distribution, or morphology of all or part of the nucleus is abnormal." []
+xref: FYPO:0002403
+is_a: PHIPO:0000463 ! subcellular component phenotype
+created_by: alaynecuzick
+creation_date: 2019-05-08T13:37:01Z
 
 [Typedef]
 id: PHIPO:0000304

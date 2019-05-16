@@ -1,6 +1,14 @@
 format-version: 1.2
-data-version: phipo/releases/2019-05-15/imports/go_import.owl
+data-version: phipo/releases/2019-05-16/imports/go_import.owl
 ontology: phipo/imports/go_import
+
+[Term]
+id: GO:0002252
+name: immune effector process
+namespace: biological_process
+def: "Any process of the immune system that can potentially contribute to an immune response." [GO_REF:0000022, GOC:add, GOC:mtg_15nov05, ISBN:0781735149]
+comment: This term was added by GO_REF:0000022.
+is_a: GO:0002376 ! immune system process
 
 [Term]
 id: GO:0002376
@@ -16,6 +24,17 @@ subset: goslim_mouse
 subset: goslim_pir
 xref: Wikipedia:Immune_system
 is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0002679
+name: respiratory burst involved in defense response
+namespace: biological_process
+def: "A phase of elevated metabolic activity, during which oxygen consumption increases made as part of a defense response ; this leads to the production, by an NADH dependent system, of hydrogen peroxide (H2O2), superoxide anions and hydroxyl radicals." [GOC:add, ISBN:0781735149, PMID:12789499]
+is_a: GO:0002252 ! immune effector process
+is_a: GO:0045730 ! respiratory burst
+intersection_of: GO:0045730 ! respiratory burst
+intersection_of: part_of GO:0006952 ! defense response
+relationship: part_of GO:0006952 ! defense response
 
 [Term]
 id: GO:0002682
@@ -57,6 +76,47 @@ is_a: GO:0048518 ! positive regulation of biological process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0002376 ! immune system process
 relationship: positively_regulates GO:0002376 ! immune system process
+
+[Term]
+id: GO:0002697
+name: regulation of immune effector process
+namespace: biological_process
+def: "Any process that modulates the frequency, rate, or extent of an immune effector process." [GOC:add]
+is_a: GO:0002682 ! regulation of immune system process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0002252 ! immune effector process
+relationship: regulates GO:0002252 ! immune effector process
+
+[Term]
+id: GO:0002698
+name: negative regulation of immune effector process
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate, or extent of an immune effector process." [GOC:add]
+synonym: "down regulation of immune effector process" EXACT []
+synonym: "down-regulation of immune effector process" EXACT []
+synonym: "downregulation of immune effector process" EXACT []
+synonym: "inhibition of immune effector process" NARROW []
+is_a: GO:0002683 ! negative regulation of immune system process
+is_a: GO:0002697 ! regulation of immune effector process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0002252 ! immune effector process
+relationship: negatively_regulates GO:0002252 ! immune effector process
+
+[Term]
+id: GO:0002699
+name: positive regulation of immune effector process
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate, or extent of an immune effector process." [GOC:add]
+synonym: "activation of immune effector process" NARROW []
+synonym: "stimulation of immune effector process" NARROW []
+synonym: "up regulation of immune effector process" EXACT []
+synonym: "up-regulation of immune effector process" EXACT []
+synonym: "upregulation of immune effector process" EXACT []
+is_a: GO:0002684 ! positive regulation of immune system process
+is_a: GO:0002697 ! regulation of immune effector process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0002252 ! immune effector process
+relationship: positively_regulates GO:0002252 ! immune effector process
 
 [Term]
 id: GO:0002831
@@ -2453,6 +2513,16 @@ is_a: GO:0008104 ! protein localization
 is_a: GO:0051234 ! establishment of localization
 
 [Term]
+id: GO:0045730
+name: respiratory burst
+namespace: biological_process
+def: "A phase of elevated metabolic activity, during which oxygen consumption increases; this leads to the production, by an NADH dependent system, of hydrogen peroxide (H2O2), superoxide anions and hydroxyl radicals." [ISBN:0198506732]
+synonym: "metabolic burst" EXACT []
+synonym: "oxidative burst" EXACT []
+xref: Wikipedia:Respiratory_burst
+is_a: GO:0008152 ! metabolic process
+
+[Term]
 id: GO:0045806
 name: negative regulation of endocytosis
 namespace: biological_process
@@ -3338,6 +3408,38 @@ is_a: GO:0019222 ! regulation of metabolic process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0043170 ! macromolecule metabolic process
 relationship: regulates GO:0043170 ! macromolecule metabolic process
+
+[Term]
+id: GO:0060263
+name: regulation of respiratory burst
+namespace: biological_process
+def: "Any process that modulates the rate frequency or extent of a phase of elevated metabolic activity, during which oxygen consumption increases; this leads to the production, by an NADH dependent system, of hydrogen peroxide (H2O2), superoxide anions and hydroxyl radicals." [GOC:dph, GOC:tb]
+is_a: GO:0019222 ! regulation of metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0045730 ! respiratory burst
+relationship: regulates GO:0045730 ! respiratory burst
+
+[Term]
+id: GO:0060267
+name: positive regulation of respiratory burst
+namespace: biological_process
+def: "Any process that increases the rate frequency or extent of a phase of elevated metabolic activity, during which oxygen consumption increases; this leads to the production, by an NADH dependent system, of hydrogen peroxide (H2O2), superoxide anions and hydroxyl radicals." [GOC:dph, GOC:tb]
+is_a: GO:0009893 ! positive regulation of metabolic process
+is_a: GO:0060263 ! regulation of respiratory burst
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0045730 ! respiratory burst
+relationship: positively_regulates GO:0045730 ! respiratory burst
+
+[Term]
+id: GO:0060268
+name: negative regulation of respiratory burst
+namespace: biological_process
+def: "Any process that decreases the rate frequency or extent of a phase of elevated metabolic activity, during which oxygen consumption increases; this leads to the production, by an NADH dependent system, of hydrogen peroxide (H2O2), superoxide anions and hydroxyl radicals." [GOC:dph, GOC:tb]
+is_a: GO:0009892 ! negative regulation of metabolic process
+is_a: GO:0060263 ! regulation of respiratory burst
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0045730 ! respiratory burst
+relationship: negatively_regulates GO:0045730 ! respiratory burst
 
 [Term]
 id: GO:0060341
