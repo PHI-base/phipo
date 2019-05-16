@@ -1,4 +1,5 @@
 format-version: 1.2
+data-version: phipo/releases/2019-05-15/imports/chebi_import.owl
 ontology: phipo/imports/chebi_import
 
 [Term]
@@ -75,11 +76,11 @@ synonym: "(R-(R*,S*))-alpha-(2,4-difluorophenyl)-5-fluoro-beta-methyl-alpha-(1H-
 synonym: "VCZ" RELATED [DrugBank]
 synonym: "Vfend" RELATED BRAND_NAME [ChEBI]
 synonym: "voriconazol" RELATED INN [WHO_MedNet]
-synonym: "voriconazole" RELATED INN [ChemIDplus]
 synonym: "voriconazole" RELATED INN [WHO_MedNet]
+synonym: "voriconazole" RELATED INN [ChemIDplus]
 synonym: "voriconazolum" RELATED INN [WHO_MedNet]
 xref: Beilstein:7694998 "Beilstein"
-xref: CAS:137234-62-9 "ChemIDplus"
+xref: CAS:137234-62-9 "KEGG COMPOUND"
 xref: Drug_Central:2846 "DrugCentral"
 xref: DrugBank:DB00582
 xref: KEGG:C07622
@@ -132,7 +133,7 @@ synonym: "ciprofloxacine" RELATED INN [ChemIDplus]
 synonym: "ciprofloxacino" RELATED INN [ChemIDplus]
 synonym: "ciprofloxacinum" RELATED INN [ChemIDplus]
 xref: Beilstein:3568352 "Beilstein"
-xref: CAS:85721-33-1 "ChemIDplus"
+xref: CAS:85721-33-1 "KEGG COMPOUND"
 xref: Drug_Central:659 "DrugCentral"
 xref: DrugBank:DB00537
 xref: HMDB:HMDB0014677
@@ -186,7 +187,7 @@ synonym: "norfloxacine" RELATED INN [ChemIDplus]
 synonym: "norfloxacino" RELATED INN [ChemIDplus]
 synonym: "norfloxacinum" RELATED INN [ChemIDplus]
 xref: Beilstein:567897 "Beilstein"
-xref: CAS:70458-96-7 "ChemIDplus"
+xref: CAS:70458-96-7 "KEGG COMPOUND"
 xref: Drug_Central:1967 "DrugCentral"
 xref: DrugBank:DB01059
 xref: Gmelin:1576626 "Gmelin"
@@ -266,7 +267,7 @@ synonym: "Sulphaisoxazole" RELATED [DrugBank]
 synonym: "Sulphisoxazol" RELATED [DrugBank]
 synonym: "Sulphofurazole" RELATED [DrugBank]
 xref: Beilstein:263871 "Beilstein"
-xref: CAS:127-69-5 "NIST Chemistry WebBook"
+xref: CAS:127-69-5 "ChemIDplus"
 xref: Drug_Central:2529 "DrugCentral"
 xref: DrugBank:DB00263
 xref: Gmelin:864477 "Gmelin"
@@ -283,6 +284,7 @@ is_a: CHEBI:55373 ! isoxazoles
 is_a: CHEBI:87228 ! sulfonamide antibiotic
 relationship: has_functional_parent CHEBI:45373 ! sulfanilamide
 relationship: has_role CHEBI:36047 ! antibacterial drug
+relationship: has_role CHEBI:88188 ! drug allergen
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C11H13N3O3S" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C11H13N3O3S/c1-7-8(2)13-17-11(7)14-18(15,16)10-5-3-9(12)4-6-10/h3-6,14H,12H2,1-2H3" xsd:string
@@ -328,8 +330,8 @@ synonym: "Cocositol" RELATED [NIST_Chemistry_WebBook]
 synonym: "Quercinitol" RELATED [ChemIDplus]
 synonym: "Scyllitol" RELATED [ChemIDplus]
 synonym: "scyllo-Inositol" EXACT [KEGG_COMPOUND]
-synonym: "scyllo-inositol" EXACT [UniProt]
 synonym: "scyllo-inositol" EXACT IUPAC_NAME [IUPAC]
+synonym: "scyllo-inositol" EXACT [UniProt]
 xref: Beilstein:2206312 "Beilstein"
 xref: CAS:488-59-5 "KEGG COMPOUND"
 xref: Gmelin:561300 "Gmelin"
@@ -548,8 +550,8 @@ def: "A monocarboxylic acid amide obtained by formal condensation of the carboxy
 subset: 3_STAR
 synonym: "2-Nitro-N-(phenylmethyl)-1H-imidazole-1-acetamide" RELATED [ChemIDplus]
 synonym: "benznidazol" RELATED INN [ChemIDplus]
-synonym: "benznidazole" RELATED INN [KEGG_DRUG]
 synonym: "benznidazole" RELATED INN [ChemIDplus]
+synonym: "benznidazole" RELATED INN [KEGG_DRUG]
 synonym: "benznidazolum" RELATED INN [ChemIDplus]
 synonym: "N-benzyl-2-(2-nitro-1H-imidazol-1-yl)acetamide" EXACT IUPAC_NAME [IUPAC]
 synonym: "N-Benzyl-2-nitroimidazol-1-yl-acetamide" RELATED [ChemIDplus]
@@ -766,7 +768,7 @@ synonym: "OA" RELATED [KEGG_DRUG]
 synonym: "oxolinic acid" RELATED INN [KEGG_DRUG]
 synonym: "oxolinic acid" RELATED INN [WHO_MedNet]
 xref: Beilstein:620635 "Beilstein"
-xref: CAS:14698-29-4 "ChemIDplus"
+xref: CAS:14698-29-4 "KEGG COMPOUND"
 xref: Drug_Central:2024 "DrugCentral"
 xref: Gmelin:2609419 "Gmelin"
 xref: KEGG:C11342
@@ -1054,7 +1056,7 @@ def: "Tetracycline in which the hydroxy group at position 5 and the methyl group
 subset: 3_STAR
 synonym: "(4S,4aS,5aR,12aS)-9-(2-(tert-butylamino)acetamido)-4,7-bis(dimethylamino)-1,4,4a,5,5a,6,11,12a-octahydro-3,10,12,12a-tetrahydroxy-1,11-dioxo-2-naphthacenecarboxamide" RELATED [ChemIDplus]
 synonym: "(4S,4aS,5aR,12aS)-9-[(N-tert-butylglycyl)amino]-4,7-bis(dimethylamino)-3,10,12,12a-tetrahydroxy-1,11-dioxo-1,4,4a,5,5a,6,11,12a-octahydrotetracene-2-carboxamide" EXACT IUPAC_NAME [IUPAC]
-xref: CAS:220620-09-7 "ChemIDplus"
+xref: CAS:220620-09-7 "KEGG COMPOUND"
 xref: Drug_Central:2661 "DrugCentral"
 xref: DrugBank:DB00560
 xref: KEGG:C12012
@@ -1126,7 +1128,7 @@ synonym: "N,N,N-trimethylethanol-ammonium" RELATED [ChEBI]
 synonym: "N-trimethylethanolamine" RELATED [ChEBI]
 synonym: "trimethylethanolamine" RELATED [ChEBI]
 xref: Beilstein:1736748 "Beilstein"
-xref: CAS:62-49-7 "ChemIDplus"
+xref: CAS:62-49-7 "KEGG COMPOUND"
 xref: Drug_Central:3097 "DrugCentral"
 xref: DrugBank:DB00122
 xref: ECMDB:ECMDB00097
@@ -1167,6 +1169,7 @@ xref: YMDB:YMDB00227
 is_a: CHEBI:23217 ! cholines
 relationship: has_role CHEBI:25512 ! neurotransmitter
 relationship: has_role CHEBI:33284 ! nutrient
+relationship: has_role CHEBI:50904 ! allergen
 relationship: has_role CHEBI:75771 ! mouse metabolite
 relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
 relationship: has_role CHEBI:76924 ! plant metabolite
@@ -1210,7 +1213,7 @@ synonym: "MeCO2H" RELATED [ChEBI]
 synonym: "MeCOOH" RELATED [ChEBI]
 synonym: "Methanecarboxylic acid" RELATED [ChemIDplus]
 xref: Beilstein:506007 "Beilstein"
-xref: CAS:64-19-7 "ChemIDplus"
+xref: CAS:64-19-7 "KEGG COMPOUND"
 xref: Drug_Central:4211 "DrugCentral"
 xref: Gmelin:1380 "Gmelin"
 xref: HMDB:HMDB0000042
@@ -1258,7 +1261,7 @@ def: "A large group of antibiotics isolated from various species of Streptomyces
 subset: 3_STAR
 synonym: "Actinomycin" EXACT [KEGG_COMPOUND]
 synonym: "actinomycins" RELATED [ChEBI]
-xref: CAS:1402-38-6 "ChemIDplus"
+xref: CAS:1402-38-6 "KEGG COMPOUND"
 xref: KEGG:C01775
 is_a: CHEBI:23239 ! chromopeptide
 
@@ -1321,8 +1324,8 @@ alt_id: CHEBI:24081
 def: "A monocarboxylic acid anion that is the conjugate base of formic acid. Induces severe metabolic acidosis and ocular injury in human subjects." []
 subset: 3_STAR
 synonym: "aminate" RELATED [ChEBI]
-synonym: "formate" EXACT [UniProt]
 synonym: "formate" EXACT IUPAC_NAME [IUPAC]
+synonym: "formate" EXACT [UniProt]
 synonym: "formiate" RELATED [ChEBI]
 synonym: "formic acid, ion(1-)" RELATED [ChemIDplus]
 synonym: "formylate" RELATED [ChEBI]
@@ -1330,7 +1333,7 @@ synonym: "HCO2 anion" RELATED [NIST_Chemistry_WebBook]
 synonym: "hydrogen carboxylate" RELATED [ChEBI]
 synonym: "methanoate" RELATED [ChEBI]
 xref: Beilstein:1901205 "Beilstein"
-xref: CAS:71-47-6 "ChemIDplus"
+xref: CAS:71-47-6 "NIST Chemistry WebBook"
 xref: Gmelin:1006 "Gmelin"
 xref: HMDB:HMDB0000142
 xref: KEGG:C00058
@@ -1400,7 +1403,7 @@ synonym: "pyridine-3-carboxylic acid" EXACT IUPAC_NAME [IUPAC]
 synonym: "pyridine-beta-carboxylic acid" RELATED [NIST_Chemistry_WebBook]
 synonym: "vitamin B3" RELATED [ChEBI]
 xref: Beilstein:109591 "Beilstein"
-xref: CAS:59-67-6 "ChemIDplus"
+xref: CAS:59-67-6 "NIST Chemistry WebBook"
 xref: Drug_Central:2835 "DrugCentral"
 xref: DrugBank:DB00627
 xref: Gmelin:3340 "Gmelin"
@@ -1489,7 +1492,7 @@ synonym: "Cytosine" EXACT [KEGG_COMPOUND]
 synonym: "cytosine" EXACT [UniProt]
 synonym: "Zytosin" RELATED [ChEBI]
 xref: Beilstein:2637 "Beilstein"
-xref: CAS:71-30-7 "ChemIDplus"
+xref: CAS:71-30-7 "NIST Chemistry WebBook"
 xref: Gmelin:82472 "Gmelin"
 xref: HMDB:HMDB0000630
 xref: KEGG:C00380
@@ -1539,9 +1542,9 @@ synonym: "ammoniac" RELATED [ChEBI]
 synonym: "Ammoniak" RELATED [ChemIDplus]
 synonym: "amoniaco" RELATED [ChEBI]
 synonym: "azane" EXACT IUPAC_NAME [IUPAC]
-synonym: "NH3" RELATED [IUPAC]
 synonym: "NH3" RELATED [KEGG_COMPOUND]
 synonym: "NH3" RELATED [UniProt]
+synonym: "NH3" RELATED [IUPAC]
 synonym: "R-717" RELATED [ChEBI]
 synonym: "spirit of hartshorn" RELATED [ChemIDplus]
 xref: Beilstein:3587154 "Beilstein"
@@ -1629,7 +1632,7 @@ synonym: "benzoic acid, ion(1-)" RELATED [ChemIDplus]
 synonym: "Phenylcarboxylate" RELATED [HMDB]
 synonym: "Phenylformate" RELATED [HMDB]
 xref: Beilstein:1862486 "Beilstein"
-xref: CAS:766-76-7 "ChemIDplus"
+xref: CAS:766-76-7 "NIST Chemistry WebBook"
 xref: Gmelin:2945 "Gmelin"
 xref: HMDB:HMDB0001870
 xref: KEGG:C00180
@@ -1684,6 +1687,7 @@ xref: PMID:29017833 "Europe PMC"
 xref: Reaxys:3577211 "Reaxys"
 xref: Wikipedia:Aztreonam
 is_a: CHEBI:50695 ! monobactam
+is_a: CHEBI:88225 ! beta-lactam antibiotic allergen
 relationship: has_role CHEBI:36047 ! antibacterial drug
 relationship: has_role CHEBI:50696 ! EC 2.4.1.129 (peptidoglycan glycosyltransferase) inhibitor
 relationship: has_role CHEBI:88188 ! drug allergen
@@ -1707,8 +1711,8 @@ subset: 3_STAR
 synonym: "[SO4](2-)" RELATED [IUPAC]
 synonym: "SO4(2-)" RELATED [IUPAC]
 synonym: "Sulfate" EXACT [KEGG_COMPOUND]
-synonym: "sulfate" EXACT IUPAC_NAME [IUPAC]
 synonym: "sulfate" EXACT [UniProt]
+synonym: "sulfate" EXACT IUPAC_NAME [IUPAC]
 synonym: "Sulfate anion(2-)" RELATED [HMDB]
 synonym: "Sulfate dianion" RELATED [HMDB]
 synonym: "SULFATE ION" RELATED [PDBeChem]
@@ -1720,7 +1724,7 @@ synonym: "tetraoxidosulfate(2-)" EXACT IUPAC_NAME [IUPAC]
 synonym: "tetraoxosulfate(2-)" EXACT IUPAC_NAME [IUPAC]
 synonym: "tetraoxosulfate(VI)" EXACT IUPAC_NAME [IUPAC]
 xref: Beilstein:3648446 "Beilstein"
-xref: CAS:14808-79-8 "NIST Chemistry WebBook"
+xref: CAS:14808-79-8 "ChemIDplus"
 xref: Gmelin:2120 "Gmelin"
 xref: HMDB:HMDB0001448
 xref: KEGG:C00059
@@ -1800,7 +1804,7 @@ synonym: "urea" EXACT [UniProt]
 synonym: "urea" EXACT IUPAC_NAME [IUPAC]
 synonym: "uree" RELATED [ChEBI]
 xref: Beilstein:635724 "Beilstein"
-xref: CAS:57-13-6 "NIST Chemistry WebBook"
+xref: CAS:57-13-6 "KEGG COMPOUND"
 xref: Drug_Central:4264 "DrugCentral"
 xref: DrugBank:DB03904
 xref: ECMDB:ECMDB04172
@@ -2168,6 +2172,7 @@ relationship: has_role CHEBI:35703 ! xenobiotic
 relationship: has_role CHEBI:38068 ! antimalarial
 relationship: has_role CHEBI:50683 ! EC 1.5.1.3 (dihydrofolate reductase) inhibitor
 relationship: has_role CHEBI:77853 ! persistent organic pollutant
+relationship: has_role CHEBI:88188 ! drug allergen
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C12H7Cl3O2" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C12H7Cl3O2/c13-7-1-3-11(9(15)5-7)17-12-4-2-8(14)6-10(12)16/h1-6,16H" xsd:string
@@ -2324,6 +2329,7 @@ xref: Reaxys:15080 "Reaxys"
 xref: Wikipedia:6-APA
 is_a: CHEBI:25865 ! penicillanic acids
 relationship: has_functional_parent CHEBI:37806 ! penicillanic acid
+relationship: has_role CHEBI:50904 ! allergen
 relationship: is_conjugate_base_of CHEBI:30938 ! 6-aminopenicillanate
 relationship: is_tautomer_of CHEBI:57869 ! 6-aminopenicillanic acid zwitterion
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
@@ -2349,8 +2355,8 @@ synonym: "Benzen" RELATED [IUPAC]
 synonym: "BENZENE" EXACT [PDBeChem]
 synonym: "Benzene" EXACT [KEGG_COMPOUND]
 synonym: "benzene" EXACT IUPAC_NAME [IUPAC]
-synonym: "benzene" EXACT [ChEBI]
 synonym: "benzene" EXACT [UniProt]
+synonym: "benzene" EXACT [ChEBI]
 synonym: "Benzine" RELATED [UM-BBD]
 synonym: "Benzol" RELATED [ChemIDplus]
 synonym: "benzole" RELATED [NIST_Chemistry_WebBook]
@@ -2363,7 +2369,7 @@ synonym: "phenyl hydride" RELATED [UM-BBD]
 synonym: "Pyrobenzol" RELATED [ChemIDplus]
 synonym: "Pyrobenzole" RELATED [ChemIDplus]
 xref: Beilstein:969212 "Beilstein"
-xref: CAS:71-43-2 "NIST Chemistry WebBook"
+xref: CAS:71-43-2 "KEGG COMPOUND"
 xref: Gmelin:1671 "Gmelin"
 xref: HMDB:HMDB0001505
 xref: KEGG:C01407
@@ -2444,7 +2450,7 @@ synonym: "o-Hydroxybenzoic acid" RELATED [KEGG_COMPOUND]
 synonym: "o-hydroxybenzoic acid" RELATED [NIST_Chemistry_WebBook]
 synonym: "Salicylic acid" EXACT [KEGG_COMPOUND]
 xref: Beilstein:774890 "Beilstein"
-xref: CAS:69-72-7 "NIST Chemistry WebBook"
+xref: CAS:69-72-7 "KEGG COMPOUND"
 xref: Drug_Central:2416 "DrugCentral"
 xref: DrugBank:DB00936
 xref: Gmelin:3418 "Gmelin"
@@ -2531,7 +2537,7 @@ synonym: "streomycin" RELATED [ChEBI]
 synonym: "STREPTOMYCIN" EXACT [PDBeChem]
 synonym: "streptomycin" RELATED INN [KEGG_DRUG]
 xref: Beilstein:74498 "Beilstein"
-xref: CAS:57-92-1 "KEGG COMPOUND"
+xref: CAS:57-92-1 "ChemIDplus"
 xref: Drug_Central:2481 "DrugCentral"
 xref: DrugBank:DB01082
 xref: HMDB:HMDB0015214
@@ -2686,7 +2692,7 @@ synonym: "pyridine-3-carboxamide" EXACT IUPAC_NAME [IUPAC]
 synonym: "vitamin B3" RELATED [ChemIDplus]
 synonym: "Vitamin PP" RELATED [KEGG_COMPOUND]
 xref: Beilstein:383619 "Beilstein"
-xref: CAS:98-92-0 "NIST Chemistry WebBook"
+xref: CAS:98-92-0 "KEGG COMPOUND"
 xref: Drug_Central:1906 "DrugCentral"
 xref: DrugBank:DB02701
 xref: Gmelin:3336 "Gmelin"
@@ -2896,7 +2902,7 @@ synonym: "benzeneamine" RELATED [NIST_Chemistry_WebBook]
 synonym: "kyanol" RELATED [NIST_Chemistry_WebBook]
 synonym: "Phenylamine" RELATED [KEGG_COMPOUND]
 xref: Beilstein:605631 "Beilstein"
-xref: CAS:62-53-3 "NIST Chemistry WebBook"
+xref: CAS:62-53-3 "ChemIDplus"
 xref: DrugBank:DB06728
 xref: Gmelin:2796 "Gmelin"
 xref: HMDB:HMDB0003012
@@ -2942,6 +2948,7 @@ xref: PMID:7798534 "Europe PMC"
 xref: Wikipedia:Penicillin
 is_a: CHEBI:25865 ! penicillanic acids
 relationship: has_functional_parent CHEBI:16705 ! 6-aminopenicillanic acid
+relationship: has_role CHEBI:50904 ! allergen
 relationship: is_conjugate_acid_of CHEBI:51356 ! penicillinate anion
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C9H11N2O4SR" xsd:string
@@ -2994,8 +3001,8 @@ alt_id: CHEBI:44803
 alt_id: CHEBI:7980
 def: "A straight-chain saturated fatty acid containing five carbon atoms." []
 subset: 3_STAR
-synonym: "1-butanecarboxylic acid" RELATED [ChemIDplus]
 synonym: "1-butanecarboxylic acid" RELATED [NIST_Chemistry_WebBook]
+synonym: "1-butanecarboxylic acid" RELATED [ChemIDplus]
 synonym: "CH3-[CH2]3-COOH" RELATED [IUPAC]
 synonym: "n-BuCOOH" RELATED [ChEBI]
 synonym: "n-Pentanoate" RELATED [KEGG_COMPOUND]
@@ -3014,7 +3021,7 @@ synonym: "Valeriansaeure" RELATED [ChEBI]
 synonym: "Valeric acid" EXACT [KEGG_COMPOUND]
 synonym: "valeric acid, normal" RELATED [ChemIDplus]
 xref: Beilstein:969454 "Beilstein"
-xref: CAS:109-52-4 "ChemIDplus"
+xref: CAS:109-52-4 "KEGG COMPOUND"
 xref: DrugBank:DB02406
 xref: Gmelin:26714 "Gmelin"
 xref: HMDB:HMDB0000892
@@ -3103,15 +3110,15 @@ def: "A pseudohalide anion that is the conjugate base of hydrogen cyanide." []
 subset: 3_STAR
 synonym: "CN(-)" RELATED [IUPAC]
 synonym: "CN-" RELATED [KEGG_COMPOUND]
-synonym: "Cyanide" EXACT [ChEBI]
 synonym: "Cyanide" EXACT [KEGG_COMPOUND]
+synonym: "Cyanide" EXACT [ChEBI]
 synonym: "cyanide" EXACT IUPAC_NAME [IUPAC]
 synonym: "CYANIDE ION" RELATED [PDBeChem]
 synonym: "nitridocarbonate(1-)" EXACT IUPAC_NAME [IUPAC]
 synonym: "Prussiate" RELATED [KEGG_COMPOUND]
 synonym: "Zyanid" RELATED [ChEBI]
 xref: Beilstein:1900509 "Beilstein"
-xref: CAS:57-12-5 "NIST Chemistry WebBook"
+xref: CAS:57-12-5 "KEGG COMPOUND"
 xref: Gmelin:89 "Gmelin"
 xref: HMDB:HMDB0002084
 xref: KEGG:C00177
@@ -3211,7 +3218,7 @@ synonym: "Uracil" EXACT [KEGG_COMPOUND]
 synonym: "uracil" EXACT [UniProt]
 synonym: "Urazil" RELATED [ChEBI]
 xref: Beilstein:606623 "Beilstein"
-xref: CAS:66-22-8 "ChemIDplus"
+xref: CAS:66-22-8 "NIST Chemistry WebBook"
 xref: DrugBank:DB03419
 xref: Gmelin:2896 "Gmelin"
 xref: HMDB:HMDB0000300
@@ -3245,6 +3252,7 @@ xref: Wikipedia:Uracil
 is_a: CHEBI:26432 ! pyrimidine nucleobase
 is_a: CHEBI:38337 ! pyrimidone
 relationship: has_role CHEBI:50266 ! prodrug
+relationship: has_role CHEBI:50904 ! allergen
 relationship: has_role CHEBI:75771 ! mouse metabolite
 relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
 relationship: has_role CHEBI:76971 ! Escherichia coli metabolite
@@ -3276,7 +3284,7 @@ synonym: "KANAMYCIN A" EXACT [PDBeChem]
 synonym: "Kanamycin A" EXACT [KEGG_COMPOUND]
 synonym: "O-3-amino-3-deoxy-alpha-D-glucopyranosyl-(1->6)-O-(6-amino-6-deoxy-alpha-D-glucopyranosyl-(1->4))-2-deoxy-D-streptamine" RELATED [ChemIDplus]
 xref: Beilstein:61647 "Beilstein"
-xref: CAS:59-01-8 "KEGG COMPOUND"
+xref: CAS:59-01-8 "ChemIDplus"
 xref: Drug_Central:1519 "DrugCentral"
 xref: DrugBank:DB01172
 xref: Gmelin:2044856 "Gmelin"
@@ -3377,8 +3385,8 @@ synonym: "Chloramex" RELATED BRAND_NAME [ChemIDplus]
 synonym: "CHLORAMPHENICOL" EXACT [PDBeChem]
 synonym: "Chloramphenicol" EXACT [KEGG_COMPOUND]
 synonym: "chloramphenicol" EXACT [UniProt]
-synonym: "chloramphenicol" RELATED INN [ChEBI]
 synonym: "chloramphenicol" RELATED INN [ChemIDplus]
+synonym: "chloramphenicol" RELATED INN [ChEBI]
 synonym: "chloramphenicolum" RELATED INN [ChemIDplus]
 synonym: "chlornitromycin" RELATED [ChEBI]
 synonym: "Chlorocid" RELATED BRAND_NAME [ChemIDplus]
@@ -3396,7 +3404,7 @@ synonym: "levomycetin" RELATED [ChemIDplus]
 synonym: "Oleomycetin" RELATED BRAND_NAME [ChemIDplus]
 synonym: "Sificetina" RELATED BRAND_NAME [ChemIDplus]
 xref: Beilstein:2225532 "Beilstein"
-xref: CAS:56-75-7 "ChemIDplus"
+xref: CAS:56-75-7 "KEGG COMPOUND"
 xref: Drug_Central:589 "DrugCentral"
 xref: DrugBank:DB00446
 xref: KEGG:C00918
@@ -3460,8 +3468,8 @@ synonym: "CH3OH" RELATED [ChEBI]
 synonym: "MeOH" RELATED [ChEBI]
 synonym: "METHANOL" EXACT [PDBeChem]
 synonym: "Methanol" EXACT [KEGG_COMPOUND]
-synonym: "methanol" EXACT IUPAC_NAME [IUPAC]
 synonym: "methanol" EXACT [UniProt]
+synonym: "methanol" EXACT IUPAC_NAME [IUPAC]
 synonym: "Methyl alcohol" RELATED [KEGG_COMPOUND]
 synonym: "Methylalkohol" RELATED [NIST_Chemistry_WebBook]
 synonym: "spirit of wood" RELATED [HMDB]
@@ -3469,7 +3477,7 @@ synonym: "wood alcohol" RELATED [ChemIDplus]
 synonym: "wood naphtha" RELATED [ChemIDplus]
 synonym: "wood spirit" RELATED [NIST_Chemistry_WebBook]
 xref: Beilstein:1098229 "Beilstein"
-xref: CAS:67-56-1 "KEGG COMPOUND"
+xref: CAS:67-56-1 "NIST Chemistry WebBook"
 xref: Gmelin:449 "Gmelin"
 xref: HMDB:HMDB0001875
 xref: KEGG:C00132
@@ -3530,7 +3538,7 @@ synonym: "Serin" RELATED [ChEBI]
 synonym: "Serine" EXACT [KEGG_COMPOUND]
 synonym: "serine" EXACT IUPAC_NAME [IUPAC]
 xref: Beilstein:1721402 "Beilstein"
-xref: CAS:302-84-1 "NIST Chemistry WebBook"
+xref: CAS:302-84-1 "KEGG COMPOUND"
 xref: Gmelin:26429 "Gmelin"
 xref: KEGG:C00716
 xref: KNApSAcK:C00001393
@@ -3658,6 +3666,7 @@ is_a: CHEBI:17334 ! penicillin
 is_a: CHEBI:88187 ! penicillin allergen
 relationship: has_role CHEBI:36047 ! antibacterial drug
 relationship: has_role CHEBI:53000 ! epitope
+relationship: has_role CHEBI:88188 ! drug allergen
 relationship: is_conjugate_acid_of CHEBI:51354 ! benzylpenicillin(1-)
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C16H18N2O4S" xsd:string
@@ -3761,7 +3770,7 @@ synonym: "manganese" RELATED [ChEBI]
 synonym: "manganeso" RELATED [ChEBI]
 synonym: "manganum" RELATED [ChEBI]
 synonym: "Mn" RELATED [IUPAC]
-xref: CAS:7439-96-5 "KEGG COMPOUND"
+xref: CAS:7439-96-5 "ChemIDplus"
 xref: KEGG:C00034
 xref: WebElements:Mn
 is_a: CHEBI:33352 ! manganese group element atom
@@ -3885,7 +3894,7 @@ synonym: "hydrogen cyanide" EXACT [IUPAC]
 synonym: "hydrogen cyanide" EXACT [UniProt]
 synonym: "hydrogen(nitridocarbonate)" EXACT IUPAC_NAME [IUPAC]
 synonym: "methanenitrile" EXACT IUPAC_NAME [IUPAC]
-xref: CAS:74-90-8 "NIST Chemistry WebBook"
+xref: CAS:74-90-8 "KEGG COMPOUND"
 xref: HMDB:HMDB0060292
 xref: KEGG:C01326
 xref: KNApSAcK:C00007569
@@ -3953,7 +3962,7 @@ synonym: "cefotaxime" RELATED INN [KEGG_DRUG]
 synonym: "cefotaximum" RELATED INN [ChemIDplus]
 synonym: "Cephotaxime" RELATED [ChemIDplus]
 xref: Beilstein:1096643 "Beilstein"
-xref: CAS:63527-52-6 "ChemIDplus"
+xref: CAS:63527-52-6 "KEGG DRUG"
 xref: Drug_Central:546 "DrugCentral"
 xref: DrugBank:DB00493
 xref: KEGG:C06885
@@ -4060,6 +4069,7 @@ xref: Wikipedia:Cefoxitin
 is_a: CHEBI:23066 ! cephalosporin
 is_a: CHEBI:55429 ! cephamycin
 is_a: CHEBI:72588 ! semisynthetic derivative
+is_a: CHEBI:88225 ! beta-lactam antibiotic allergen
 relationship: has_role CHEBI:36047 ! antibacterial drug
 relationship: is_conjugate_acid_of CHEBI:53655 ! cefoxitin(1-)
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
@@ -4227,8 +4237,8 @@ namespace: chebi_ontology
 def: "A monoatomic or polyatomic species having one or more elementary charges of the electron." []
 subset: 3_STAR
 synonym: "Anion" EXACT [ChEBI]
-synonym: "anion" EXACT [ChEBI]
 synonym: "anion" EXACT IUPAC_NAME [IUPAC]
+synonym: "anion" EXACT [ChEBI]
 synonym: "Anionen" RELATED [ChEBI]
 synonym: "aniones" RELATED [ChEBI]
 synonym: "anions" RELATED [IUPAC]
@@ -4259,7 +4269,7 @@ synonym: "Fintrol" RELATED [ChemIDplus]
 synonym: "Virosin" RELATED [ChemIDplus]
 xref: Beilstein:72665 "Beilstein"
 xref: CAS:1397-94-0 "ChemIDplus"
-xref: CAS:642-15-9 "KEGG COMPOUND"
+xref: CAS:642-15-9 "ChemIDplus"
 xref: KEGG:C11339
 is_a: CHEBI:22702 ! benzamides
 is_a: CHEBI:24079 ! formamides
@@ -4325,8 +4335,8 @@ namespace: chebi_ontology
 def: "A molecular entity having an available pair of electrons capable of forming a covalent bond with a hydron (Bronsted base) or with the vacant orbital of some other molecular entity (Lewis base)." []
 subset: 3_STAR
 synonym: "Base" EXACT [ChEBI]
-synonym: "base" EXACT IUPAC_NAME [IUPAC]
 synonym: "base" EXACT [ChEBI]
+synonym: "base" EXACT IUPAC_NAME [IUPAC]
 synonym: "Base1" RELATED [KEGG_COMPOUND]
 synonym: "Base2" RELATED [KEGG_COMPOUND]
 synonym: "Basen" RELATED [ChEBI]
@@ -4841,8 +4851,8 @@ namespace: chebi_ontology
 def: "Any member of the class of chlorobenzenes carrying two chloro groups at unspecified positions." []
 subset: 3_STAR
 synonym: "Dichlorbenzol" RELATED [ChEBI]
-synonym: "dichlorobenzene" EXACT [ChEBI]
 synonym: "dichlorobenzene" EXACT IUPAC_NAME [IUPAC]
+synonym: "dichlorobenzene" EXACT [ChEBI]
 synonym: "dichlorobenzenes" RELATED [ChEBI]
 is_a: CHEBI:23132 ! chlorobenzenes
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
@@ -5595,8 +5605,8 @@ namespace: chebi_ontology
 def: "A molecular entity having a net electric charge." []
 subset: 3_STAR
 synonym: "Ion" EXACT [ChEBI]
-synonym: "ion" EXACT [ChEBI]
 synonym: "ion" EXACT IUPAC_NAME [IUPAC]
+synonym: "ion" EXACT [ChEBI]
 synonym: "Ionen" RELATED [ChEBI]
 synonym: "iones" RELATED [ChEBI]
 synonym: "ions" RELATED [ChEBI]
@@ -6443,7 +6453,7 @@ synonym: "proline" EXACT [ChEBI]
 synonym: "proline" EXACT IUPAC_NAME [IUPAC]
 synonym: "pyrrolidine-2-carboxylic acid" RELATED [IUPAC]
 xref: Beilstein:80809 "Beilstein"
-xref: CAS:609-36-9 "ChemIDplus"
+xref: CAS:609-36-9 "NIST Chemistry WebBook"
 xref: Gmelin:26927 "Gmelin"
 xref: KEGG:C16435
 xref: PMID:16534801 "Europe PMC"
@@ -6758,7 +6768,7 @@ synonym: "Clamoxyl" RELATED BRAND_NAME [ChemIDplus]
 synonym: "Moxal" RELATED BRAND_NAME [DrugBank]
 synonym: "p-hydroxyampicillin" RELATED [ChemIDplus]
 xref: Beilstein:4274654 "Beilstein"
-xref: CAS:26787-78-0 "ChemIDplus"
+xref: CAS:26787-78-0 "KEGG COMPOUND"
 xref: Drug_Central:192 "DrugCentral"
 xref: DrugBank:DB01060
 xref: HMDB:HMDB0015193
@@ -6898,8 +6908,8 @@ subset: 3_STAR
 synonym: "16S" RELATED [IUPAC]
 synonym: "azufre" RELATED [ChEBI]
 synonym: "Elemental sulfur" RELATED [KEGG_COMPOUND]
-synonym: "S" RELATED [IUPAC]
 synonym: "S" RELATED [KEGG_COMPOUND]
+synonym: "S" RELATED [IUPAC]
 synonym: "Schwefel" RELATED [ChEBI]
 synonym: "soufre" RELATED [ChEBI]
 synonym: "sulfur" EXACT IUPAC_NAME [IUPAC]
@@ -6907,7 +6917,7 @@ synonym: "sulfur" RELATED [ChEBI]
 synonym: "sulfur" RELATED [UniProt]
 synonym: "sulphur" RELATED [ChEBI]
 synonym: "theion" RELATED [IUPAC]
-xref: CAS:7704-34-9 "NIST Chemistry WebBook"
+xref: CAS:7704-34-9 "ChemIDplus"
 xref: KEGG:C00087
 xref: KEGG:D06527
 xref: PPDB:605
@@ -6955,7 +6965,7 @@ synonym: "sulfuric acid" EXACT IUPAC_NAME [IUPAC]
 synonym: "sulfuric acid" EXACT [ChEBI]
 synonym: "sulphuric acid" RELATED [MolBase]
 synonym: "tetraoxosulfuric acid" EXACT IUPAC_NAME [IUPAC]
-xref: CAS:7664-93-9 "NIST Chemistry WebBook"
+xref: CAS:7664-93-9 "KEGG COMPOUND"
 xref: Gmelin:2122 "Gmelin"
 xref: KEGG:C00059
 xref: KEGG:D05963
@@ -7165,8 +7175,8 @@ def: "Any fatty acid containing at least one C=C or C#C bond." []
 subset: 3_STAR
 synonym: "alkene acid" RELATED [ChEBI]
 synonym: "olefinic acid" RELATED [ChEBI]
-synonym: "unsaturated fatty acids" RELATED [ChEBI]
 synonym: "unsaturated fatty acids" RELATED [LIPID_MAPS]
+synonym: "unsaturated fatty acids" RELATED [ChEBI]
 xref: LIPID_MAPS_class:LMFA0103 "LIPID MAPS"
 xref: PMID:5322381 "Europe PMC"
 is_a: CHEBI:35366 ! fatty acid
@@ -7237,7 +7247,7 @@ synonym: "Zink" RELATED [ChEBI]
 synonym: "Zn" RELATED [IUPAC]
 synonym: "Zn(II)" RELATED [KEGG_COMPOUND]
 synonym: "Zn2+" RELATED [KEGG_COMPOUND]
-xref: CAS:7440-66-6 "ChemIDplus"
+xref: CAS:7440-66-6 "KEGG COMPOUND"
 xref: Gmelin:16321 "Gmelin"
 xref: KEGG:C00038
 xref: PDBeChem:ZN
@@ -7362,7 +7372,7 @@ synonym: "oxirane" EXACT IUPAC_NAME [IUPAC]
 synonym: "oxyde d'ethylene" RELATED [ChemIDplus]
 synonym: "Oxyfume" RELATED [ChEBI]
 xref: Beilstein:102378 "Beilstein"
-xref: CAS:75-21-8 "KEGG COMPOUND"
+xref: CAS:75-21-8 "ChemIDplus"
 xref: Gmelin:676 "Gmelin"
 xref: HMDB:HMDB0031305
 xref: KEGG:C06548
@@ -7379,6 +7389,7 @@ is_a: CHEBI:138675 ! gas molecular entity
 is_a: CHEBI:36389 ! saturated organic heteromonocyclic parent
 is_a: CHEBI:38104 ! oxacycle
 relationship: has_role CHEBI:25435 ! mutagen
+relationship: has_role CHEBI:50904 ! allergen
 relationship: has_role CHEBI:75771 ! mouse metabolite
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C2H4O" xsd:string
@@ -7476,7 +7487,7 @@ synonym: "carbone" RELATED [ChEBI]
 synonym: "carbonium" RELATED [ChEBI]
 synonym: "carbono" RELATED [ChEBI]
 synonym: "Kohlenstoff" RELATED [ChEBI]
-xref: CAS:7440-44-0 "ChemIDplus"
+xref: CAS:7440-44-0 "KEGG COMPOUND"
 xref: KEGG:C06265
 xref: WebElements:C
 is_a: CHEBI:25585 ! nonmetal atom
@@ -7649,7 +7660,7 @@ synonym: "Actinomycin D" EXACT [KEGG_COMPOUND]
 synonym: "actinomycin IV" RELATED [ChemIDplus]
 synonym: "Dactinomycin" RELATED [KEGG_COMPOUND]
 xref: Beilstein:4173766 "Beilstein"
-xref: CAS:50-76-0 "ChemIDplus"
+xref: CAS:50-76-0 "KEGG COMPOUND"
 xref: Drug_Central:774 "DrugCentral"
 xref: DrugBank:DB00970
 xref: KEGG:C06770
@@ -7688,7 +7699,7 @@ synonym: "oxytetracyclinum" RELATED INN [ChemIDplus]
 xref: Beilstein:2686362 "Beilstein"
 xref: Beilstein:2714587 "Beilstein"
 xref: BPDB:503
-xref: CAS:79-57-2 "ChemIDplus"
+xref: CAS:79-57-2 "KEGG COMPOUND"
 xref: Drug_Central:2041 "DrugCentral"
 xref: DrugBank:DB00595
 xref: Gmelin:623487 "Gmelin"
@@ -7747,7 +7758,7 @@ synonym: "2-Aminobenzimidazole" EXACT [KEGG_COMPOUND]
 synonym: "2-Iminobenzimidazoline" RELATED [ChemIDplus]
 synonym: "Benzimidazol-2-ylamine" RELATED [ChemIDplus]
 xref: Beilstein:116525 "Beilstein"
-xref: CAS:934-32-7 "NIST Chemistry WebBook"
+xref: CAS:934-32-7 "KEGG COMPOUND"
 xref: KEGG:C10901
 xref: PDBeChem:AX7
 xref: PMID:22076761 "Europe PMC"
@@ -7903,7 +7914,7 @@ synonym: "(1R,2r,3S,4R,5s,6S)-4,6-diaminocyclohexane-1,2,3,5-tetrol" EXACT IUPAC
 synonym: "1,3-diamino-1,3-dideoxy-scyllo-inositol" EXACT IUPAC_NAME [IUPAC]
 synonym: "Streptamine" EXACT [KEGG_COMPOUND]
 xref: Beilstein:26714 "Beilstein"
-xref: CAS:488-52-8 "ChemIDplus"
+xref: CAS:488-52-8 "KEGG COMPOUND"
 xref: KEGG:C01854
 xref: Reaxys:2802452 "Reaxys"
 is_a: CHEBI:61689 ! amino cyclitol
@@ -8030,7 +8041,7 @@ synonym: "rifampicina" RELATED INN [DrugBank]
 synonym: "rifampicinum" RELATED INN [DrugBank]
 synonym: "Rifampin" RELATED [KEGG_COMPOUND]
 xref: Beilstein:5723476 "Beilstein"
-xref: CAS:13292-46-1 "ChemIDplus"
+xref: CAS:13292-46-1 "KEGG COMPOUND"
 xref: DrugBank:DB01045
 xref: HMDB:HMDB0015179
 xref: KEGG:C06688
@@ -8181,7 +8192,7 @@ synonym: "Rotenone" EXACT [KEGG_COMPOUND]
 synonym: "tubatoxin" RELATED [ChemIDplus]
 xref: Beilstein:99070 "Beilstein"
 xref: BPDB:587
-xref: CAS:83-79-4 "NIST Chemistry WebBook"
+xref: CAS:83-79-4 "KEGG COMPOUND"
 xref: KEGG:C07593
 xref: KNApSAcK:C00002568
 xref: LINCS:LSM-5260
@@ -8372,7 +8383,7 @@ synonym: "Cyclic(D-alpha-hydroxyisovaleryl-D-valyl-L-lactoyl-L-valyl-D-alpha-hyd
 synonym: "cyclo[-D-O-Val-D-Val-L-O-Ala-L-Val]3" RELATED [ChEBI]
 synonym: "Valinomycin" EXACT [KEGG_COMPOUND]
 xref: Beilstein:78657 "Beilstein"
-xref: CAS:2001-95-8 "ChemIDplus"
+xref: CAS:2001-95-8 "KEGG COMPOUND"
 xref: KEGG:C06684
 xref: PMID:10603383 "Europe PMC"
 xref: PMID:18633285 "Europe PMC"
@@ -8410,7 +8421,7 @@ synonym: "3,7,11-trimethyldodeca-2,6,10-trien-1-ol" EXACT IUPAC_NAME [IUPAC]
 synonym: "Farnesol" EXACT [KEGG_COMPOUND]
 synonym: "farnesyl alcohol" RELATED [NIST_Chemistry_WebBook]
 xref: Beilstein:1763926 "Beilstein"
-xref: CAS:4602-84-0 "NIST Chemistry WebBook"
+xref: CAS:4602-84-0 "KEGG COMPOUND"
 xref: DrugBank:DB02509
 xref: HMDB:HMDB0004305
 xref: KEGG:C01493
@@ -8453,7 +8464,7 @@ synonym: "Carbamic acid" EXACT [KEGG_COMPOUND]
 synonym: "carbamic acid" EXACT IUPAC_NAME [IUPAC]
 synonym: "Carbamidsaeure" RELATED [ChEBI]
 xref: Beilstein:1734754 "Beilstein"
-xref: CAS:463-77-4 "KEGG COMPOUND"
+xref: CAS:463-77-4 "ChemIDplus"
 xref: DrugBank:DB04261
 xref: Gmelin:130345 "Gmelin"
 xref: KEGG:C01563
@@ -8481,14 +8492,14 @@ alt_id: CHEBI:8168
 subset: 3_STAR
 synonym: "15P" RELATED [IUPAC]
 synonym: "fosforo" RELATED [ChEBI]
-synonym: "P" RELATED [KEGG_COMPOUND]
 synonym: "P" RELATED [IUPAC]
+synonym: "P" RELATED [KEGG_COMPOUND]
 synonym: "Phosphor" RELATED [ChEBI]
 synonym: "phosphore" RELATED [ChEBI]
 synonym: "Phosphorus" RELATED [KEGG_COMPOUND]
 synonym: "phosphorus" EXACT IUPAC_NAME [IUPAC]
 synonym: "phosphorus" RELATED [ChEBI]
-xref: CAS:7723-14-0 "ChemIDplus"
+xref: CAS:7723-14-0 "KEGG COMPOUND"
 xref: Gmelin:16235 "Gmelin"
 xref: KEGG:C06262
 xref: WebElements:P
@@ -8549,6 +8560,7 @@ xref: Gmelin:16269 "Gmelin"
 xref: KEGG:C00070
 xref: WebElements:Cu
 is_a: CHEBI:33366 ! copper group element atom
+is_a: CHEBI:88184 ! metal allergen
 relationship: has_role CHEBI:27027 ! micronutrient
 relationship: has_role CHEBI:76971 ! Escherichia coli metabolite
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
@@ -8577,7 +8589,7 @@ synonym: "dodecane" EXACT IUPAC_NAME [IUPAC]
 synonym: "Dodekan" RELATED [ChEBI]
 synonym: "n-Dodecane" RELATED [KEGG_COMPOUND]
 xref: Beilstein:1697175 "ChemIDplus"
-xref: CAS:112-40-3 "NIST Chemistry WebBook"
+xref: CAS:112-40-3 "KEGG COMPOUND"
 xref: DrugBank:DB02771
 xref: Gmelin:201408 "Gmelin"
 xref: HMDB:HMDB0031444
@@ -8616,7 +8628,7 @@ synonym: "O-3-Amino-3-deoxy-alpha-D-glucopyranosyl-(1-4)-O-(2,6-diamino-2,3,6-tr
 synonym: "Tobracin (TN)" RELATED [KEGG_DRUG]
 synonym: "Tobramycin" EXACT [KEGG_COMPOUND]
 synonym: "Tobrex (TN)" RELATED [KEGG_DRUG]
-xref: CAS:32986-56-4 "ChemIDplus"
+xref: CAS:32986-56-4 "KEGG COMPOUND"
 xref: Drug_Central:2684 "DrugCentral"
 xref: DrugBank:DB00684
 xref: KEGG:C00397
@@ -8692,7 +8704,7 @@ synonym: "tetracosoic acid" RELATED [ChEBI]
 synonym: "tetraeicosanoic acid" RELATED [ChEBI]
 synonym: "tetraicosanoic acid" RELATED [ChEBI]
 xref: Beilstein:1728237 "Beilstein"
-xref: CAS:557-59-5 "NIST Chemistry WebBook"
+xref: CAS:557-59-5 "KEGG COMPOUND"
 xref: Gmelin:107095 "Gmelin"
 xref: HMDB:HMDB0002003
 xref: KEGG:C08320
@@ -8768,11 +8780,11 @@ synonym: "3-(3,5-dichlorophenyl)-N-(1-methylethyl)-2,4-dioxoimidazolidine-1-carb
 synonym: "3-(3,5-dichlorophenyl)-N-isopropyl-2,4-dioxoimidazolidine-1-carboxamide" RELATED [ChemIDplus]
 synonym: "3-(3,5-dichlorophenyl)hydantoin-1-carboxylic acid isopropylamide" RELATED [ChemIDplus]
 synonym: "Iprodione" EXACT [KEGG_COMPOUND]
-synonym: "Rovral" RELATED [KEGG_COMPOUND]
 synonym: "Rovral" RELATED BRAND_NAME [ChEBI]
+synonym: "Rovral" RELATED [KEGG_COMPOUND]
 synonym: "Rovrol" RELATED [KEGG_COMPOUND]
 xref: Beilstein:895003 "Beilstein"
-xref: CAS:36734-19-7 "KEGG COMPOUND"
+xref: CAS:36734-19-7 "ChemIDplus"
 xref: HMDB:HMDB0031795
 xref: KEGG:C11208
 xref: Patent:CN103053579
@@ -8875,15 +8887,15 @@ alt_id: CHEBI:7435
 def: "An onium cation obtained by protonation of ammonia." []
 subset: 3_STAR
 synonym: "[NH4](+)" RELATED [MolBase]
-synonym: "ammonium" EXACT [ChEBI]
 synonym: "ammonium" EXACT IUPAC_NAME [IUPAC]
+synonym: "ammonium" EXACT [ChEBI]
 synonym: "AMMONIUM ION" RELATED [PDBeChem]
 synonym: "Ammonium(1+)" RELATED [ChemIDplus]
 synonym: "azanium" EXACT IUPAC_NAME [IUPAC]
-synonym: "NH4(+)" RELATED [IUPAC]
 synonym: "NH4(+)" RELATED [UniProt]
+synonym: "NH4(+)" RELATED [IUPAC]
 synonym: "NH4+" RELATED [KEGG_COMPOUND]
-xref: CAS:14798-03-9 "ChemIDplus"
+xref: CAS:14798-03-9 "NIST Chemistry WebBook"
 xref: Gmelin:84 "Gmelin"
 xref: KEGG:C01342
 xref: MetaCyc:AMMONIUM
@@ -9034,6 +9046,7 @@ xref: VSDB:1849
 xref: Wikipedia:Ampicillin
 is_a: CHEBI:17334 ! penicillin
 is_a: CHEBI:27933 ! beta-lactam antibiotic
+is_a: CHEBI:88187 ! penicillin allergen
 relationship: has_role CHEBI:36047 ! antibacterial drug
 relationship: is_conjugate_acid_of CHEBI:50658 ! ampicillin(1-)
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
@@ -9058,10 +9071,10 @@ synonym: "Carbonic acid" EXACT [KEGG_COMPOUND]
 synonym: "carbonic acid" EXACT IUPAC_NAME [IUPAC]
 synonym: "Dihydrogen carbonate" RELATED [KEGG_COMPOUND]
 synonym: "dihydroxidooxidocarbon" EXACT IUPAC_NAME [IUPAC]
-synonym: "H2CO3" RELATED [IUPAC]
 synonym: "H2CO3" RELATED [KEGG_COMPOUND]
+synonym: "H2CO3" RELATED [IUPAC]
 synonym: "Koehlensaeure" RELATED [ChEBI]
-xref: CAS:463-79-6 "ChemIDplus"
+xref: CAS:463-79-6 "KEGG COMPOUND"
 xref: Gmelin:25554 "Gmelin"
 xref: KEGG:C01353
 xref: PDBeChem:CO3
@@ -9093,7 +9106,7 @@ synonym: "ceftriaxone" RELATED INN [KEGG_DRUG]
 synonym: "ceftriaxonum" RELATED INN [ChemIDplus]
 synonym: "rocephin" RELATED [ChEBI]
 xref: Beilstein:6495519 "Beilstein"
-xref: CAS:73384-59-5 "ChemIDplus"
+xref: CAS:73384-59-5 "KEGG COMPOUND"
 xref: Drug_Central:564 "DrugCentral"
 xref: DrugBank:DB01212
 xref: HMDB:HMDB0015343
@@ -9487,7 +9500,7 @@ synonym: "abamectin component B1a" RELATED [ChemIDplus]
 synonym: "Avermectin B1a" EXACT [KEGG_COMPOUND]
 xref: Beilstein:3645625 "Beilstein"
 xref: BPDB:8
-xref: CAS:65195-55-3 "ChemIDplus"
+xref: CAS:65195-55-3 "KEGG COMPOUND"
 xref: KEGG:C11983
 xref: LIPID_MAPS_instance:LMPK04000024 "LIPID MAPS"
 xref: MetaCyc:CPD-12963
@@ -9511,7 +9524,7 @@ synonym: "(2aE,4E,5'S,6S,6'R,7S,8E,11R,13S,15S,17aR,20R,20aR,20bS)-20,20b-dihydr
 synonym: "abamectin component B1b" RELATED [ChemIDplus]
 synonym: "Avermectin B1b" EXACT [KEGG_COMPOUND]
 xref: Beilstein:8399072 "Beilstein"
-xref: CAS:65195-56-4 "KEGG COMPOUND"
+xref: CAS:65195-56-4 "ChemIDplus"
 xref: KEGG:C11967
 xref: LIPID_MAPS_instance:LMPK04000020 "LIPID MAPS"
 xref: MetaCyc:CPD-12964
@@ -9584,7 +9597,7 @@ synonym: "teicoplanin" RELATED INN [ChemIDplus]
 synonym: "teicoplanina" RELATED INN [ChemIDplus]
 synonym: "teicoplanine" RELATED INN [WHO_MedNet]
 synonym: "teicoplaninum" RELATED INN [ChemIDplus]
-xref: CAS:61036-62-2 "ChemIDplus"
+xref: CAS:61036-62-2 "KEGG DRUG"
 xref: DrugBank:DB06149
 xref: KEGG:C15820
 xref: KEGG:D02142
@@ -9646,7 +9659,7 @@ namespace: chebi_ontology
 def: "A mixture of antiviral nucleoside antibiotics produced by Streptomyces lysosuperificus. It contains at least 10 homologues comprising uracil, N-acetylglucosamine, an 11-carbon aminodialdose called tunicamine, and a fatty acid linked to the amino group of the tunicamine.  The homologues vary in the composition of the fatty acid moiety." []
 subset: 3_STAR
 synonym: "Tunicamycin" EXACT [KEGG_COMPOUND]
-xref: CAS:11089-65-9 "ChemIDplus"
+xref: CAS:11089-65-9 "KEGG COMPOUND"
 xref: KEGG:C12063
 xref: PMID:11478581 "Europe PMC"
 xref: PMID:11514096 "Europe PMC"
@@ -9709,7 +9722,7 @@ synonym: "20-Dsdr" RELATED [ChemIDplus]
 synonym: "Protylonolide" RELATED [KEGG_COMPOUND]
 synonym: "Tylactone" EXACT [KEGG_COMPOUND]
 synonym: "tylactone" EXACT [UniProt]
-xref: CAS:74758-60-4 "KEGG COMPOUND"
+xref: CAS:74758-60-4 "ChemIDplus"
 xref: KEGG:C12000
 xref: MetaCyc:CPD-15948 "SUBMITTER"
 xref: PMID:3733529 "Europe PMC"
@@ -9763,7 +9776,7 @@ synonym: "Ethanoat" RELATED [ChEBI]
 synonym: "ethanoate" RELATED [ChEBI]
 synonym: "MeCO2 anion" RELATED [NIST_Chemistry_WebBook]
 xref: Beilstein:1901470 "Beilstein"
-xref: CAS:71-50-1 "ChemIDplus"
+xref: CAS:71-50-1 "NIST Chemistry WebBook"
 xref: DrugBank:DB03166
 xref: Gmelin:1379 "Gmelin"
 xref: KEGG:C00033
@@ -9803,7 +9816,7 @@ synonym: "Methyl 1-(butylcarbamoyl)-2-benzimidazolecarbamate" RELATED [HMDB]
 synonym: "methyl [1-(butylcarbamoyl)-1H-benzimidazol-2-yl]carbamate" EXACT IUPAC_NAME [IUPAC]
 synonym: "Methyl N-(1-butylcarbamoyl-2-benzimidazole)carbamate" RELATED [HMDB]
 xref: Beilstein:825455 "Beilstein"
-xref: CAS:17804-35-2 "NIST Chemistry WebBook"
+xref: CAS:17804-35-2 "KEGG COMPOUND"
 xref: HMDB:HMDB0031767
 xref: KEGG:C10896
 xref: Pesticides:benomyl "Alan Wood's Pesticides"
@@ -9861,7 +9874,7 @@ synonym: "en" RELATED [IUPAC]
 synonym: "ethane-1,2-diamine" EXACT IUPAC_NAME [IUPAC]
 synonym: "ethylenediamine" EXACT [IUPAC]
 xref: Beilstein:605263 "Beilstein"
-xref: CAS:107-15-3 "ChemIDplus"
+xref: CAS:107-15-3 "NIST Chemistry WebBook"
 xref: Gmelin:1098 "Gmelin"
 xref: HMDB:HMDB0031225
 xref: KEGG:D01114
@@ -9922,7 +9935,7 @@ synonym: "E210" RELATED [ChEBI]
 synonym: "Phenylcarboxylic acid" RELATED [HMDB]
 synonym: "Phenylformic acid" RELATED [KEGG_COMPOUND]
 xref: Beilstein:636131 "Beilstein"
-xref: CAS:65-85-0 "KEGG COMPOUND"
+xref: CAS:65-85-0 "ChemIDplus"
 xref: Drug_Central:4664 "DrugCentral"
 xref: DrugBank:DB03793
 xref: Gmelin:2946 "Gmelin"
@@ -10218,8 +10231,8 @@ synonym: "lignocerate" RELATED [CBN]
 synonym: "n-tetracosanoate" RELATED [ChEBI]
 synonym: "tetracosanate" RELATED [ChEBI]
 synonym: "Tetracosanoat" RELATED [ChEBI]
-synonym: "tetracosanoate" EXACT IUPAC_NAME [IUPAC]
 synonym: "tetracosanoate" EXACT [UniProt]
+synonym: "tetracosanoate" EXACT IUPAC_NAME [IUPAC]
 synonym: "tetracosoate" RELATED [ChEBI]
 synonym: "tetraeicosanoate" RELATED [ChEBI]
 xref: Gmelin:373325 "Gmelin"
@@ -10252,8 +10265,8 @@ synonym: "(RS)-bifonazole" RELATED [ChEBI]
 synonym: "1-((4-Biphenylyl)phenylmethyl)-1H-imidazole" RELATED [DrugBank]
 synonym: "1-(alpha-(4-Biphenylyl)benzyl)imidazole" RELATED [ChemIDplus]
 synonym: "bifonazol" RELATED INN [DrugBank]
-synonym: "bifonazole" RELATED INN [KEGG_DRUG]
 synonym: "bifonazole" RELATED INN [WHO_MedNet]
+synonym: "bifonazole" RELATED INN [KEGG_DRUG]
 synonym: "bifonazolum" RELATED INN [DrugBank]
 synonym: "Mycospor" RELATED BRAND_NAME [KEGG_DRUG]
 synonym: "rac-1-[biphenyl-4-yl(phenyl)methyl]-1H-imidazole" EXACT IUPAC_NAME [IUPAC]
@@ -10356,7 +10369,7 @@ synonym: "Sulfadimethoxydiazine" RELATED [ChemIDplus]
 synonym: "sulfadimetoxina" RELATED INN [ChemIDplus]
 synonym: "Sulphadimethoxine" RELATED [ChemIDplus]
 xref: Beilstein:306856 "Beilstein"
-xref: CAS:122-11-2 "ChemIDplus"
+xref: CAS:122-11-2 "KEGG DRUG"
 xref: Drug_Central:2501 "DrugCentral"
 xref: DrugBank:DB06150
 xref: Gmelin:677830 "Gmelin"
@@ -10386,6 +10399,7 @@ relationship: has_role CHEBI:33281 ! antimicrobial agent
 relationship: has_role CHEBI:35441 ! antiinfective agent
 relationship: has_role CHEBI:35703 ! xenobiotic
 relationship: has_role CHEBI:78298 ! environmental contaminant
+relationship: has_role CHEBI:88188 ! drug allergen
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C12H14N4O4S" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C12H14N4O4S/c1-19-11-7-10(14-12(15-11)20-2)16-21(17,18)9-5-3-8(13)4-6-9/h3-7H,13H2,1-2H3,(H,14,15,16)" xsd:string
@@ -10964,8 +10978,8 @@ name: nucleon
 namespace: chebi_ontology
 def: "Heavy nuclear particle: proton or neutron." []
 subset: 3_STAR
-synonym: "nucleon" EXACT IUPAC_NAME [IUPAC]
 synonym: "nucleon" EXACT [IUPAC]
+synonym: "nucleon" EXACT IUPAC_NAME [IUPAC]
 synonym: "nucleons" RELATED [ChEBI]
 synonym: "Nukleon" RELATED [ChEBI]
 synonym: "Nukleonen" RELATED [ChEBI]
@@ -11064,7 +11078,7 @@ is_a: CHEBI:24432 ! biological role
 id: CHEBI:33282
 name: antibacterial agent
 namespace: chebi_ontology
-def: "A substance that kills or slows the growth of bacteria." []
+def: "A substance (or active part thereof) that kills or slows the growth of bacteria." []
 subset: 3_STAR
 synonym: "antibacterial agents" RELATED [ChEBI]
 synonym: "antibacterials" RELATED [ChEBI]
@@ -12271,6 +12285,7 @@ xref: PMID:6176550 "Europe PMC"
 xref: Reaxys:1230663 "Reaxys"
 xref: Wikipedia:Carbenicillin
 is_a: CHEBI:17334 ! penicillin
+is_a: CHEBI:88187 ! penicillin allergen
 relationship: has_role CHEBI:36047 ! antibacterial drug
 relationship: is_conjugate_acid_of CHEBI:51897 ! carbenicillin(2-)
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
@@ -12302,7 +12317,7 @@ synonym: "o-Phenylenediamine" RELATED [KEGG_COMPOUND]
 synonym: "OPDA" RELATED [ChemIDplus]
 synonym: "phenylene-1,2-dimaine" RELATED [ChEBI]
 xref: Beilstein:606074 "Beilstein"
-xref: CAS:95-54-5 "KEGG COMPOUND"
+xref: CAS:95-54-5 "NIST Chemistry WebBook"
 xref: KEGG:C14402
 xref: PMID:23099167 "Europe PMC"
 xref: PMID:23172354 "Europe PMC"
@@ -12346,7 +12361,7 @@ synonym: "Carbathiin" RELATED [ChemIDplus]
 synonym: "Carboxine" RELATED [ChemIDplus]
 synonym: "oxatin" RELATED [MetaCyc]
 xref: Beilstein:983249 "ChemIDplus"
-xref: CAS:5234-68-4 "NIST Chemistry WebBook"
+xref: CAS:5234-68-4 "KEGG COMPOUND"
 xref: KEGG:C11255
 xref: LINCS:LSM-25660
 xref: MetaCyc:CPD0-1366
@@ -12412,7 +12427,7 @@ synonym: "Vanicide" RELATED BRAND_NAME [ChemIDplus]
 synonym: "Venturin" RELATED BRAND_NAME [NIST_Chemistry_WebBook]
 synonym: "Vondcaptan" RELATED BRAND_NAME [NIST_Chemistry_WebBook]
 synonym: "Zenecal" RELATED BRAND_NAME [NIST_Chemistry_WebBook]
-xref: CAS:133-06-2 "KEGG COMPOUND"
+xref: CAS:133-06-2 "ChemIDplus"
 xref: KEGG:C14438
 xref: Patent:US2553771
 xref: Patent:US2653155
@@ -12459,7 +12474,7 @@ synonym: "Cefaclor anhydrous" RELATED [ChemIDplus]
 synonym: "cefaclorum" RELATED INN [DrugBank]
 synonym: "Cephaclor" RELATED [ChemIDplus]
 xref: Beilstein:3632473 "Beilstein"
-xref: CAS:53994-73-3 "KEGG COMPOUND"
+xref: CAS:53994-73-3 "KEGG DRUG"
 xref: Drug_Central:525 "DrugCentral"
 xref: DrugBank:DB00833
 xref: HMDB:HMDB0014971
@@ -12504,7 +12519,7 @@ synonym: "cefotetan" EXACT [ChEMBL]
 synonym: "cefotetan" RELATED INN [ChemIDplus]
 synonym: "cefotetanum" RELATED INN [ChemIDplus]
 xref: Beilstein:5697364 "Beilstein"
-xref: CAS:69712-56-7 "KEGG COMPOUND"
+xref: CAS:69712-56-7 "ChemIDplus"
 xref: Drug_Central:547 "DrugCentral"
 xref: DrugBank:DB01330
 xref: KEGG:C06886
@@ -12582,7 +12597,7 @@ synonym: "34-O-(2-(acetylamino)-2-deoxy-beta-D-glucopyranosyl)-22,31-dichloro-7-
 synonym: "34-O-[2-(acetamido)-2-deoxy-beta-D-glucopyranosyl]-22,31-dichloro-7-demethyl-64-O-demethyl-19-deoxy-56-O-{2-deoxy-2-[(1-oxodecyl)amino]-beta-D-glucopyranosyl}-42-O-alpha-D-mannopyranosylristomycin A aglycone" RELATED [ChEBI]
 synonym: "Teichomycin A2 factor 3" RELATED [KEGG_COMPOUND]
 synonym: "Teicoplanin A2-3" EXACT [KEGG_COMPOUND]
-xref: CAS:91032-36-9 "ChemIDplus"
+xref: CAS:91032-36-9 "KEGG COMPOUND"
 xref: KEGG:C13588
 xref: Reaxys:6995259 "Reaxys"
 is_a: CHEBI:34994 ! teicoplanin A2
@@ -12605,7 +12620,7 @@ synonym: "34-O-(2-(acetylamino)-2-deoxy-beta-D-glucopyranosyl)-22,31-dichloro-7-
 synonym: "34-O-[2-(acetamido)-2-deoxy-beta-D-glucopyranosyl]-22,31-dichloro-7-demethyl-64-O-demethyl-19-deoxy-56-O-{2-deoxy-2-[(8-methyl-1-oxodecyl)amino]-beta-D-glucopyranosyl}-42-O-alpha-D-mannopyranosylristomycin A aglycone" RELATED [ChEBI]
 synonym: "Teichomycin A2 factor 4" RELATED [KEGG_COMPOUND]
 synonym: "Teicoplanin A2-4" EXACT [KEGG_COMPOUND]
-xref: CAS:91032-37-0 "KEGG COMPOUND"
+xref: CAS:91032-37-0 "ChemIDplus"
 xref: KEGG:C13610
 xref: Reaxys:6261978 "Reaxys"
 is_a: CHEBI:34994 ! teicoplanin A2
@@ -12628,7 +12643,7 @@ synonym: "34-O-(2-(acetylamino)-2-deoxy-beta-D-glucopyranosyl)-22,31-dichloro-7-
 synonym: "34-O-[2-(acetamido)-2-deoxy-beta-D-glucopyranosyl]-22,31-dichloro-7-demethyl-64-O-demethyl-19-deoxy-56-O-{2-deoxy-2-[(9-methyl-1-oxodecyl)amino]-beta-D-glucopyranosyl}-42-O-alpha-D-mannopyranosylristomycin A aglycone" RELATED [ChEBI]
 synonym: "Teichomycin A2 factor 5" RELATED [KEGG_COMPOUND]
 synonym: "Teicoplanin A2-5" EXACT [KEGG_COMPOUND]
-xref: CAS:91032-38-1 "KEGG COMPOUND"
+xref: CAS:91032-38-1 "ChemIDplus"
 xref: KEGG:C13612
 xref: Reaxys:6995322 "Reaxys"
 xref: Reaxys:7509352 "Reaxys"
@@ -12651,7 +12666,7 @@ subset: 3_STAR
 synonym: "34-O-(2-(acetylamino)-2-deoxy-beta-D-glucopyranosyl)-22,31-dichloro-7-demethyl-64-O-demethyl-19-deoxy-42-O-alpha-D-mannopyranosylristomycin A aglycone" RELATED [ChemIDplus]
 synonym: "34-O-[2-(acetamido)-2-deoxy-beta-D-glucopyranosyl]-22,31-dichloro-7-demethyl-64-O-demethyl-19-deoxy-42-O-alpha-D-mannopyranosylristomycin A aglycone" RELATED [ChEBI]
 synonym: "Teicoplanin A3-1" EXACT [KEGG_COMPOUND]
-xref: CAS:93616-27-4 "KEGG COMPOUND"
+xref: CAS:93616-27-4 "ChemIDplus"
 xref: KEGG:C13613
 xref: PMID:1416858 "Europe PMC"
 xref: Reaxys:6267420 "Reaxys"
@@ -12689,7 +12704,7 @@ synonym: "Methyl thiophanate" RELATED [ChemIDplus]
 synonym: "Methylthiofanate" RELATED [ChemIDplus]
 synonym: "Methylthiophanate" RELATED [ChemIDplus]
 synonym: "o-Bis(3-methoxycarbonyl-2-thioureido)benzene" RELATED [ChemIDplus]
-xref: CAS:23564-05-8 "ChemIDplus"
+xref: CAS:23564-05-8 "KEGG COMPOUND"
 xref: KEGG:C14432
 xref: Pesticides:thiophanate-methyl "Alan Wood's Pesticides"
 xref: PMID:22057426 "Europe PMC"
@@ -12766,7 +12781,7 @@ synonym: "1-{[(propan-2-yloxy)carbonyl]oxy}ethyl (6R,7R)-7-{[(2Z)-2-(2-amino-1,3
 synonym: "1-{[(propan-2-yloxy)carbonyl]oxy}ethyl 7beta-[(2Z)-2-(2-amino-1,3-thiazol-4-yl)-2-(methoxyimino)acetamido]-3-(methoxymethyl)-3,4-didehydrocepham-4-carboxylate" EXACT IUPAC_NAME [IUPAC]
 synonym: "cefpodoxime 1-(isopropyloxycarbonyloxy)ethyl ester" RELATED [ChEBI]
 xref: Beilstein:8174918 "Beilstein"
-xref: CAS:87239-81-4 "ChemIDplus"
+xref: CAS:87239-81-4 "KEGG COMPOUND"
 xref: Drug_Central:555 "DrugCentral"
 xref: DrugBank:DB01416
 xref: KEGG:C08115
@@ -12802,7 +12817,7 @@ synonym: "ceftazidime" RELATED INN [KEGG_DRUG]
 synonym: "Ceftazidime anhydrous" RELATED [ChemIDplus]
 synonym: "ceftazidimum" RELATED INN [DrugBank]
 xref: Beilstein:5475149 "Beilstein"
-xref: CAS:72558-82-8 "KEGG DRUG"
+xref: CAS:72558-82-8 "ChemIDplus"
 xref: DrugBank:DB00438
 xref: KEGG:C06889
 xref: KEGG:D07654
@@ -12896,7 +12911,7 @@ synonym: "cefuroximum" RELATED INN [ChemIDplus]
 synonym: "Cephuroxime" RELATED [ChemIDplus]
 synonym: "Sharox" RELATED BRAND_NAME [ChemIDplus]
 synonym: "Zinacef Danmark" RELATED BRAND_NAME [ChemIDplus]
-xref: CAS:55268-75-2 "ChemIDplus"
+xref: CAS:55268-75-2 "KEGG COMPOUND"
 xref: Drug_Central:565 "DrugCentral"
 xref: DrugBank:DB01112
 xref: KEGG:C06894
@@ -13273,6 +13288,7 @@ xref: VSDB:1791
 xref: Wikipedia:Cefalexin
 is_a: CHEBI:23066 ! cephalosporin
 is_a: CHEBI:72588 ! semisynthetic derivative
+is_a: CHEBI:88225 ! beta-lactam antibiotic allergen
 relationship: has_role CHEBI:36047 ! antibacterial drug
 relationship: is_conjugate_acid_of CHEBI:59392 ! cephalexin(1-)
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
@@ -13690,7 +13706,7 @@ synonym: "(5alpha)-cholestane" RELATED [NIST_Chemistry_WebBook]
 synonym: "5alpha-cholestane" EXACT IUPAC_NAME [IUPAC]
 synonym: "alpha-cholestane" RELATED [NIST_Chemistry_WebBook]
 xref: Beilstein:2051806 "Beilstein"
-xref: CAS:481-21-0 "NIST Chemistry WebBook"
+xref: CAS:481-21-0 "ChemIDplus"
 xref: HMDB:HMDB0041632
 xref: Reaxys:2051806 "Reaxys"
 is_a: CHEBI:35516 ! cholestane
@@ -13709,7 +13725,7 @@ namespace: chebi_ontology
 subset: 3_STAR
 synonym: "cholestane" EXACT IUPAC_NAME [IUPAC]
 xref: Beilstein:5334741 "Beilstein"
-xref: CAS:14982-53-7 "ChemIDplus"
+xref: CAS:14982-53-7 "NIST Chemistry WebBook"
 xref: LIPID_MAPS_instance:LMST01010000 "LIPID MAPS"
 xref: Wikipedia:Cholestane
 is_a: CHEBI:35508 ! steroid fundamental parent
@@ -14472,7 +14488,7 @@ def: "A steroid ester obtained by formal condensation of the carboxy group of an
 subset: 3_STAR
 synonym: "3-hydroxysteroid ester" RELATED [ChEBI]
 synonym: "3-hydroxysteroid esters" RELATED [ChEBI]
-synonym: "a steryl ester" RELATED [UniProt]
+synonym: "a sterol ester" RELATED [UniProt]
 synonym: "Sterol ester" EXACT [KEGG_COMPOUND]
 synonym: "Steryl ester" RELATED [KEGG_COMPOUND]
 xref: KEGG:C01958
@@ -14726,8 +14742,8 @@ alt_id: CHEBI:26081
 alt_id: CHEBI:29196
 subset: 3_STAR
 synonym: "[P(OH)3]" RELATED [IUPAC]
-synonym: "H3PO3" RELATED [IUPAC]
 synonym: "H3PO3" RELATED [NIST_Chemistry_WebBook]
+synonym: "H3PO3" RELATED [IUPAC]
 synonym: "P(OH)3" RELATED [IUPAC]
 synonym: "phosphite" RELATED [UniProt]
 synonym: "phosphorige Saeure" RELATED [ChEBI]
@@ -14765,7 +14781,7 @@ synonym: "DICHLORO-ACETIC ACID" RELATED [PDBeChem]
 synonym: "Dichloroacetate" RELATED [KEGG_COMPOUND]
 synonym: "dichloroacetic acid" EXACT IUPAC_NAME [IUPAC]
 xref: Beilstein:1098596 "ChemIDplus"
-xref: CAS:79-43-6 "NIST Chemistry WebBook"
+xref: CAS:79-43-6 "KEGG COMPOUND"
 xref: Drug_Central:862 "DrugCentral"
 xref: DrugBank:DB08809
 xref: Gmelin:2477 "Gmelin"
@@ -14829,7 +14845,7 @@ synonym: "meta-Tetrachlorophthalodinitrile" RELATED [ChemIDplus]
 synonym: "Tetrachloroisophthalonitrile" RELATED [KEGG_COMPOUND]
 synonym: "TPN" RELATED [KEGG_COMPOUND]
 xref: Beilstein:1978326 "Beilstein"
-xref: CAS:1897-45-6 "NIST Chemistry WebBook"
+xref: CAS:1897-45-6 "KEGG COMPOUND"
 xref: KEGG:C11037
 xref: Patent:US3290353
 xref: Patent:US3652637
@@ -14963,7 +14979,7 @@ synonym: "1,8-naphthyridine" EXACT IUPAC_NAME [IUPAC]
 synonym: "1,8-pyridopyridine" RELATED [NIST_Chemistry_WebBook]
 synonym: "napy" RELATED [IUPAC]
 xref: Beilstein:109347 "Beilstein"
-xref: CAS:254-60-4 "ChemIDplus"
+xref: CAS:254-60-4 "NIST Chemistry WebBook"
 xref: Gmelin:27124 "Gmelin"
 xref: Reaxys:109347 "Reaxys"
 is_a: CHEBI:36624 ! naphthyridine
@@ -15290,8 +15306,8 @@ alt_id: CHEBI:3473
 def: "A monoatomic or polyatomic species having one or more elementary charges of the proton." []
 subset: 3_STAR
 synonym: "Cation" EXACT [KEGG_COMPOUND]
-synonym: "cation" EXACT [ChEBI]
 synonym: "cation" EXACT IUPAC_NAME [IUPAC]
+synonym: "cation" EXACT [ChEBI]
 synonym: "cationes" RELATED [ChEBI]
 synonym: "cations" RELATED [ChEBI]
 synonym: "Kation" RELATED [ChEBI]
@@ -15625,7 +15641,7 @@ synonym: "Cleocin (TN)" RELATED [KEGG_DRUG]
 synonym: "Clindamycin" EXACT [KEGG_COMPOUND]
 synonym: "Methyl 7-chloro-6,7,8-trideoxy-6-(1-methyl-trans-4-propyl-L-2-pyrrolidinecarboxamido)-1-thio-L-threo-alpha-D-galacto-octopyranoside" RELATED [ChemIDplus]
 synonym: "methyl 7-chloro-6,7,8-trideoxy-6-({[(2S,4R)-1-methyl-4-propylpyrrolidin-2-yl]carbonyl}amino)-1-thio-D-glycero-alpha-D-galacto-octopyranoside" EXACT IUPAC_NAME [IUPAC]
-xref: CAS:18323-44-9 "ChemIDplus"
+xref: CAS:18323-44-9 "KEGG COMPOUND"
 xref: DrugBank:DB01190
 xref: HMDB:HMDB0015321
 xref: KEGG:C06914
@@ -15881,7 +15897,7 @@ synonym: "colistine" RELATED INN [ChemIDplus]
 synonym: "colistinum" RELATED INN [ChemIDplus]
 synonym: "polymyxin E" RELATED [ChemIDplus]
 xref: CAS:1066-17-7 "ChemIDplus"
-xref: CAS:1264-72-8 "ChemIDplus"
+xref: CAS:1264-72-8 "KEGG COMPOUND"
 xref: DrugBank:DB00803
 xref: KEGG:C13768
 xref: KEGG:D02138
@@ -16524,7 +16540,7 @@ synonym: "1,3-difluorobenzene" EXACT IUPAC_NAME [IUPAC]
 synonym: "m-difluorobenzene" RELATED [ChemIDplus]
 synonym: "meta-difluorobenzene" RELATED [NIST_Chemistry_WebBook]
 xref: Beilstein:1904537 "Beilstein"
-xref: CAS:372-18-9 "NIST Chemistry WebBook"
+xref: CAS:372-18-9 "ChemIDplus"
 xref: Gmelin:200891 "Gmelin"
 xref: Patent:CN101607874
 xref: Patent:CN1634895
@@ -17067,14 +17083,14 @@ synonym: "(R)-4-AMINO-ISOXAZOLIDIN-3-ONE" RELATED [PDBeChem]
 synonym: "alpha-Cycloserine" RELATED [NIST_Chemistry_WebBook]
 synonym: "cicloserina" RELATED INN [ChemIDplus]
 synonym: "cyclo-D-serine" RELATED [ChemIDplus]
-synonym: "cycloserine" RELATED INN [WHO_MedNet]
 synonym: "cycloserine" RELATED INN [ChemIDplus]
+synonym: "cycloserine" RELATED INN [WHO_MedNet]
 synonym: "cycloserinum" RELATED INN [ChemIDplus]
 synonym: "D-(+)-cycloserine" RELATED [ChEBI]
 synonym: "D-4-amino-3-isoxazolidinone" RELATED [ChemIDplus]
 synonym: "D-4-amino-3-isoxazolidone" RELATED [ChemIDplus]
-synonym: "D-Cycloserine" EXACT [ChemIDplus]
 synonym: "D-Cycloserine" EXACT [KEGG_COMPOUND]
+synonym: "D-Cycloserine" EXACT [ChemIDplus]
 synonym: "DCS" RELATED [ChemIDplus]
 synonym: "orientomycin" RELATED [ChemIDplus]
 synonym: "PA 94" RELATED [ChemIDplus]
@@ -17082,7 +17098,7 @@ synonym: "PA-94" RELATED [ChemIDplus]
 synonym: "Ro-1-9213" RELATED [ChemIDplus]
 synonym: "Seromycin" RELATED BRAND_NAME [ChemIDplus]
 xref: Beilstein:80798 "Beilstein"
-xref: CAS:68-41-7 "NIST Chemistry WebBook"
+xref: CAS:68-41-7 "ChemIDplus"
 xref: Drug_Central:759 "DrugCentral"
 xref: DrugBank:DB00260
 xref: HMDB:HMDB0014405
@@ -17152,8 +17168,8 @@ synonym: "ciclosporine" RELATED INN [ChemIDplus]
 synonym: "ciclosporinum" RELATED INN [ChemIDplus]
 synonym: "Cyclo(L-alanyl-D-alanyl-N-methyl-L-leucyl-N-methyl-L-leucyl-N-methyl-L-valyl-((3R,4R,6E)-6,7-didehydro-3-hydroxy-N,4-dimethyl-L-2-aminooctanoyl)-L-2-aminobutanoyl-N-methylglycyl-N-methyl-L-leucyl-L-valyl-N-methylleucyl)" RELATED [ChemIDplus]
 synonym: "Cyclosporin A" EXACT [KEGG_COMPOUND]
-synonym: "Cyclosporine" RELATED [KEGG_COMPOUND]
 synonym: "Cyclosporine" RELATED [ChemIDplus]
+synonym: "Cyclosporine" RELATED [KEGG_COMPOUND]
 synonym: "Gengraf" RELATED BRAND_NAME [DrugBank]
 synonym: "Neoral" RELATED BRAND_NAME [DrugBank]
 synonym: "Sandimmune" RELATED BRAND_NAME [DrugBank]
@@ -17272,7 +17288,7 @@ synonym: "(4R,5S,6S)-3-({(3S,5S)-5-[(3-carboxyphenyl)carbamoyl]pyrrolidin-3-yl}s
 synonym: "ERTAPENEM" EXACT [ChEMBL]
 synonym: "ertapenem" RELATED INN [KEGG_DRUG]
 xref: Beilstein:9025520 "Beilstein"
-xref: CAS:153832-46-3 "KEGG DRUG"
+xref: CAS:153832-46-3 "ChemIDplus"
 xref: Drug_Central:1046 "DrugCentral"
 xref: DrugBank:DB00303
 xref: KEGG:D07908
@@ -17537,8 +17553,8 @@ synonym: "Erythromycin" RELATED [KEGG_COMPOUND]
 synonym: "erythromycin" EXACT IUPAC_NAME [IUPAC]
 synonym: "erythromycin" RELATED INN [ChemIDplus]
 synonym: "ERYTHROMYCIN A" EXACT [PDBeChem]
-synonym: "Erythromycin A" EXACT [KEGG_COMPOUND]
 synonym: "Erythromycin A" EXACT [ChEMBL]
+synonym: "Erythromycin A" EXACT [KEGG_COMPOUND]
 synonym: "Erythromycin C" RELATED [KEGG_COMPOUND]
 synonym: "erythromycine" RELATED INN [ChemIDplus]
 synonym: "erythromycinum" RELATED INN [ChemIDplus]
@@ -17719,7 +17735,7 @@ synonym: "tiamulin" RELATED INN [WHO_MedNet]
 synonym: "tiamulina" RELATED INN [WHO_MedNet]
 synonym: "tiamuline" RELATED INN [WHO_MedNet]
 synonym: "tiamulinum" RELATED INN [WHO_MedNet]
-xref: CAS:55297-95-5 "ChemIDplus"
+xref: CAS:55297-95-5 "KEGG COMPOUND"
 xref: KEGG:C12065
 xref: KEGG:D06127
 xref: Patent:DE2248237
@@ -17971,7 +17987,7 @@ synonym: "1-methylethyl N-(3,4-diethoxyphenyl)carbamate" RELATED [Alan_Wood's_Pe
 synonym: "isopropyl (3,4-diethoxyphenyl)carbamate" RELATED [IUPAC]
 synonym: "Isopropyl 3,4-diethoxycarbanilate" RELATED [ChemIDplus]
 synonym: "propan-2-yl (3,4-diethoxyphenyl)carbamate" EXACT IUPAC_NAME [IUPAC]
-xref: CAS:87130-20-9 "ChemIDplus"
+xref: CAS:87130-20-9 "KEGG COMPOUND"
 xref: KEGG:C11077
 xref: Pesticides:diethofencarb "Alan Wood's Pesticides"
 xref: PMID:21174194 "Europe PMC"
@@ -18020,7 +18036,7 @@ synonym: "pyrazine-2-carboxamide" EXACT IUPAC_NAME [IUPAC]
 synonym: "pyrazineamide" RELATED [NIST_Chemistry_WebBook]
 synonym: "Pyrazinoic acid amide" RELATED [KEGG_COMPOUND]
 xref: Beilstein:112306 "Beilstein"
-xref: CAS:98-96-4 "KEGG COMPOUND"
+xref: CAS:98-96-4 "ChemIDplus"
 xref: Drug_Central:2328 "DrugCentral"
 xref: DrugBank:DB00339
 xref: Gmelin:279021 "Gmelin"
@@ -18058,8 +18074,8 @@ synonym: "1,4-Dihydro-1-deoxy-1',4-didehydro-5'-(2-methylpropyl)-1-oxorifamycin 
 synonym: "4-Deoxo-3,4-(2-spiro(N-isobutyl-4-piperidyl)-2,5-dihydro-1H-imidazo)-rifamycin S" RELATED [ChemIDplus]
 synonym: "4-N-isobutylspiropiperidylrifamycin S" RELATED [ChemIDplus]
 synonym: "Mycobutin (TN)" RELATED [KEGG_DRUG]
-synonym: "Rifabutin" EXACT [KEGG_COMPOUND]
 synonym: "Rifabutin" EXACT [KEGG_DRUG]
+synonym: "Rifabutin" EXACT [KEGG_COMPOUND]
 xref: CAS:72559-06-9 "KEGG COMPOUND"
 xref: Drug_Central:2376 "DrugCentral"
 xref: DrugBank:DB00615
@@ -18100,7 +18116,7 @@ synonym: "SULFANILAMIDE" EXACT [PDBeChem]
 synonym: "Sulfanilamide" EXACT [KEGG_COMPOUND]
 synonym: "sulphanilamide" RELATED [ChEBI]
 xref: Beilstein:511852 "Beilstein"
-xref: CAS:63-74-1 "ChemIDplus"
+xref: CAS:63-74-1 "NIST Chemistry WebBook"
 xref: Drug_Central:2521 "DrugCentral"
 xref: DrugBank:DB00259
 xref: Gmelin:83068 "Gmelin"
@@ -18128,6 +18144,7 @@ is_a: CHEBI:48975 ! substituted aniline
 is_a: CHEBI:87228 ! sulfonamide antibiotic
 relationship: has_role CHEBI:23018 ! EC 4.2.1.1 (carbonic anhydrase) inhibitor
 relationship: has_role CHEBI:33282 ! antibacterial agent
+relationship: has_role CHEBI:88188 ! drug allergen
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C6H8N2O2S" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C6H8N2O2S/c7-5-1-3-6(4-2-5)11(8,9)10/h1-4H,7H2,(H2,8,9,10)" xsd:string
@@ -18149,7 +18166,7 @@ synonym: "N,2-dihydroxybenzamide" EXACT IUPAC_NAME [IUPAC]
 synonym: "o-Hydroxybenzohydroxamic acid" RELATED [ChemIDplus]
 synonym: "Salicylohydroximic acid" RELATED [ChemIDplus]
 synonym: "SHAM" RELATED [ChEBI]
-xref: CAS:89-73-6 "ChemIDplus"
+xref: CAS:89-73-6 "KEGG COMPOUND"
 xref: DrugBank:DB03819
 xref: KEGG:C11343
 xref: MetaCyc:CPD-6543
@@ -18223,7 +18240,7 @@ synonym: "TRIMETHOPRIM" EXACT [PDBeChem]
 synonym: "Trimethoprim" EXACT [KEGG_COMPOUND]
 synonym: "Trimpex" RELATED [ChemIDplus]
 xref: Beilstein:625127 "Beilstein"
-xref: CAS:738-70-5 "KEGG COMPOUND"
+xref: CAS:738-70-5 "ChemIDplus"
 xref: Drug_Central:2755 "DrugCentral"
 xref: DrugBank:DB00440
 xref: Gmelin:808843 "Gmelin"
@@ -18357,7 +18374,7 @@ subset: 3_STAR
 synonym: "1,2,4-TRIAZOLE" RELATED [PDBeChem]
 synonym: "4H-1,2,4-triazole" EXACT IUPAC_NAME [IUPAC]
 xref: Beilstein:605619 "Beilstein"
-xref: CAS:63598-71-0 "NIST Chemistry WebBook"
+xref: CAS:63598-71-0 "ChemIDplus"
 xref: Gmelin:323206 "Gmelin"
 xref: PDBeChem:TRI
 is_a: CHEBI:35560 ! 1,2,4-triazole
@@ -18436,7 +18453,7 @@ synonym: "N-[(6R,9S,10R,13S,15aS,22S,24aS)-22-benzyl-6-ethyl-10,23-dimethyl-5,8,
 synonym: "virginiamycin factor S" RELATED [ChemIDplus]
 synonym: "Virginiamycin S1" EXACT [KEGG_COMPOUND]
 synonym: "virginiamycin S1" EXACT [ChemIDplus]
-xref: CAS:23152-29-6 "KEGG COMPOUND"
+xref: CAS:23152-29-6 "ChemIDplus"
 xref: DrugBank:DB04805
 xref: KEGG:C11269
 xref: PDBeChem:VRS
@@ -18667,7 +18684,6 @@ name: ornithinium(1+)
 namespace: chebi_ontology
 subset: 3_STAR
 synonym: "2,5-diammoniopentanoate" EXACT IUPAC_NAME [IUPAC]
-synonym: "ornithine" RELATED [UniProt]
 synonym: "ornithine monocation" RELATED [JCBN]
 synonym: "ornithinium" EXACT IUPAC_NAME [IUPAC]
 synonym: "ornithinium(1+)" EXACT [JCBN]
@@ -18765,7 +18781,7 @@ synonym: "imipenemum" RELATED [ChemIDplus]
 synonym: "N-formimidoyl thienamycin" RELATED [Patent]
 synonym: "N-formimidoylthienamycin" RELATED [ChemIDplus]
 xref: Beilstein:434624 "Beilstein"
-xref: CAS:64221-86-9 "ChemIDplus"
+xref: CAS:64221-86-9 "KEGG COMPOUND"
 xref: Drug_Central:1426 "DrugCentral"
 xref: DrugBank:DB01598
 xref: KEGG:C06665
@@ -18785,6 +18801,7 @@ xref: PMID:9131470 "Europe PMC"
 xref: Reaxys:434624 "Reaxys"
 xref: Wikipedia:Imipenem
 is_a: CHEBI:46633 ! carbapenems
+is_a: CHEBI:88225 ! beta-lactam antibiotic allergen
 relationship: has_role CHEBI:36047 ! antibacterial drug
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C12H17N3O4S" xsd:string
@@ -18808,7 +18825,7 @@ synonym: "cefixima" RELATED INN [ChemIDplus]
 synonym: "cefixime" RELATED INN [ChemIDplus]
 synonym: "cefiximum" RELATED INN [ChemIDplus]
 xref: Beilstein:6025058 "Beilstein"
-xref: CAS:79350-37-1 "KEGG COMPOUND"
+xref: CAS:79350-37-1 "ChemIDplus"
 xref: Drug_Central:537 "DrugCentral"
 xref: DrugBank:DB00671
 xref: KEGG:C06881
@@ -18848,7 +18865,7 @@ synonym: "Cephazolin" RELATED [ChemIDplus]
 synonym: "Cephazoline" RELATED [ChemIDplus]
 synonym: "CEZ" RELATED [ChEBI]
 xref: Beilstein:4169371 "Beilstein"
-xref: CAS:25953-19-9 "ChemIDplus"
+xref: CAS:25953-19-9 "KEGG COMPOUND"
 xref: Drug_Central:530 "DrugCentral"
 xref: DrugBank:DB01327
 xref: HMDB:HMDB0015422
@@ -18870,6 +18887,7 @@ xref: Wikipedia:Cefazolin
 is_a: CHEBI:23066 ! cephalosporin
 is_a: CHEBI:35689 ! tetrazoles
 is_a: CHEBI:38099 ! thiadiazoles
+is_a: CHEBI:88225 ! beta-lactam antibiotic allergen
 relationship: has_role CHEBI:36047 ! antibacterial drug
 relationship: is_conjugate_acid_of CHEBI:53657 ! cefazolin(1-)
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
@@ -18947,8 +18965,8 @@ synonym: "cis-1-acetyl-4-(4-((2-(2,4-dichlorophenyl)-2-(1H-imidazol-1-ylmethyl)-
 synonym: "Fungarest" RELATED BRAND_NAME [DrugBank]
 synonym: "Fungoral" RELATED BRAND_NAME [DrugBank]
 synonym: "ketoconazol" RELATED INN [WHO_MedNet]
-synonym: "ketoconazole" RELATED INN [WHO_MedNet]
 synonym: "ketoconazole" RELATED INN [ChemIDplus]
+synonym: "ketoconazole" RELATED INN [WHO_MedNet]
 synonym: "ketoconazolum" RELATED INN [ChemIDplus]
 synonym: "Ketoderm" RELATED BRAND_NAME [DrugBank]
 synonym: "Ketoisdin" RELATED BRAND_NAME [DrugBank]
@@ -18957,7 +18975,7 @@ synonym: "Panfungol" RELATED BRAND_NAME [DrugBank]
 synonym: "rac-1-acetyl-4-(4-{[(2R,4S)-2-(2,4-dichlorophenyl)-2-(1H-imidazol-1-ylmethyl)-1,3-dioxolan-4-yl]methoxy}phenyl)piperazine" EXACT IUPAC_NAME [IUPAC]
 synonym: "Xolegel" RELATED BRAND_NAME [KEGG_DRUG]
 xref: Beilstein:4303081 "ChemIDplus"
-xref: CAS:65277-42-1 "KEGG DRUG"
+xref: CAS:65277-42-1 "ChemIDplus"
 xref: DrugBank:DB01026
 xref: Gmelin:1713206 "Gmelin"
 xref: HMDB:HMDB0012242
@@ -19844,7 +19862,7 @@ synonym: "rac-(R)-(2-chlorophenyl)(4-chlorophenyl)(pyrimidin-5-yl)methanol" RELA
 synonym: "rac-fenarimol" RELATED [ChEBI]
 synonym: "Rimidin" RELATED BRAND_NAME [NIST_Chemistry_WebBook]
 synonym: "Rubigan" RELATED BRAND_NAME [NIST_Chemistry_WebBook]
-xref: CAS:60168-88-9 "KEGG COMPOUND"
+xref: CAS:60168-88-9 "Alan Wood's Pesticides"
 xref: HMDB:HMDB0040599
 xref: KEGG:C11226
 xref: Patent:US3818009
@@ -20260,7 +20278,7 @@ synonym: "Minocycline" EXACT [KEGG_COMPOUND]
 synonym: "minocycline" RELATED INN [ChemIDplus]
 synonym: "minomycin" RELATED [ChEBI]
 xref: Beilstein:3077644 "Beilstein"
-xref: CAS:10118-90-8 "ChemIDplus"
+xref: CAS:10118-90-8 "KEGG COMPOUND"
 xref: Drug_Central:1813 "DrugCentral"
 xref: DrugBank:DB01017
 xref: HMDB:HMDB0015152
@@ -20408,7 +20426,7 @@ synonym: "Jenacyclin" RELATED BRAND_NAME [DrugBank]
 synonym: "Supracyclin" RELATED BRAND_NAME [DrugBank]
 synonym: "Vibramycin" RELATED BRAND_NAME [DrugBank]
 xref: Beilstein:3041790 "Beilstein"
-xref: CAS:564-25-0 "ChemIDplus"
+xref: CAS:564-25-0 "KEGG COMPOUND"
 xref: Drug_Central:961 "DrugCentral"
 xref: DrugBank:DB00254
 xref: KEGG:C06973
@@ -20517,7 +20535,7 @@ is_a: CHEBI:52209 ! aetiopathogenetic role
 id: CHEBI:50904
 name: allergen
 namespace: chebi_ontology
-def: "A chemical compound which causes the onset of an allergic reaction by interacting with any of the molecular pathways involved in an allergy." []
+def: "A chemical compound, or part thereof, which causes the onset of an allergic reaction by interacting with any of the molecular pathways involved in an allergy." []
 subset: 3_STAR
 synonym: "alergeno" RELATED [ChEBI]
 synonym: "allergene" RELATED [ChEBI]
@@ -20618,7 +20636,7 @@ synonym: "Ancotil" RELATED BRAND_NAME [ChemIDplus]
 synonym: "flucytosina" RELATED INN [WHO_MedNet]
 synonym: "flucytosine" RELATED INN [WHO_MedNet]
 synonym: "flucytosinum" RELATED INN [WHO_MedNet]
-xref: CAS:2022-85-7 "KEGG DRUG"
+xref: CAS:2022-85-7 "ChemIDplus"
 xref: Drug_Central:1188 "DrugCentral"
 xref: DrugBank:DB01099
 xref: HMDB:HMDB0015231
@@ -21092,7 +21110,7 @@ synonym: "N-(5-Nitro-2-furfurylidene)-3-aminooxazolidine-2-one" RELATED [ChemIDp
 synonym: "Nitrofurazolidone" RELATED [DrugBank]
 synonym: "Nitrofurazolidonum" RELATED [DrugBank]
 xref: Beilstein:384794 "Beilstein"
-xref: CAS:67-45-8 "ChemIDplus"
+xref: CAS:67-45-8 "DrugBank"
 xref: Drug_Central:1257 "DrugCentral"
 xref: DrugBank:DB00614
 xref: HMDB:HMDB0014752
@@ -21378,7 +21396,7 @@ synonym: "Novozir" RELATED BRAND_NAME [ChemIDplus]
 synonym: "Othane" RELATED BRAND_NAME [ChemIDplus]
 synonym: "Penncozeb" RELATED BRAND_NAME [ChemIDplus]
 xref: Beilstein:8188972 "Beilstein"
-xref: CAS:8018-01-7 "ChemIDplus"
+xref: CAS:8018-01-7 "KEGG COMPOUND"
 xref: KEGG:C15225
 xref: Pesticides:mancozeb "Alan Wood's Pesticides"
 xref: PMID:22369882 "Europe PMC"
@@ -21476,7 +21494,7 @@ subset: 3_STAR
 synonym: "(1R,3aR,4S,4aR,7R,7aR,8aS)-8a-{[(6-deoxy-4-O-methyl-beta-D-altropyranosyl)oxy]methyl}-4-formyl-7-methyl-3-(propan-2-yl)-4,4a,5,6,7,7a,8,8a-octahydro-1,4-methano-s-indacene-3a(1H)-carboxylic acid" EXACT IUPAC_NAME [IUPAC]
 synonym: "Antibiotic SL-2266" RELATED [ChemIDplus]
 synonym: "sordarin B" RELATED [SUBMITTER]
-xref: CAS:11076-17-8 "ChemIDplus"
+xref: CAS:11076-17-8 "SUBMITTER"
 is_a: CHEBI:24400 ! glycoside
 is_a: CHEBI:52557 ! tetracyclic diterpenoid
 is_a: CHEBI:63367 ! monosaccharide derivative
@@ -21675,7 +21693,7 @@ namespace: chebi_ontology
 def: "A tetracyclic antibacterial agent derived from neomycin, being a glycoside ester of neamine and neobiosamine C." []
 subset: 3_STAR
 synonym: "(1R,2R,3S,4R,6S)-4,6-diamino-2-{[3-O-(2,6-diamino-2,6-dideoxy-alpha-D-glucopyranosyl)-beta-D-ribofuranosyl]oxy}-3-hydroxycyclohexyl 2,6-diamino-2,6-dideoxy-alpha-D-glucopyranoside" EXACT IUPAC_NAME [IUPAC]
-xref: CAS:66-86-4 "KEGG COMPOUND"
+xref: CAS:66-86-4 "ChemIDplus"
 xref: KEGG:C15652
 xref: PMID:13355298 "Europe PMC"
 xref: PMID:17206729 "Europe PMC"
@@ -21868,7 +21886,7 @@ synonym: "Glutarimide" RELATED [KEGG_COMPOUND]
 synonym: "Piperidine-2,6-dione" EXACT [KEGG_COMPOUND]
 synonym: "piperidine-2,6-dione" EXACT IUPAC_NAME [IUPAC]
 xref: Beilstein:110052 "Beilstein"
-xref: CAS:1121-89-7 "KEGG COMPOUND"
+xref: CAS:1121-89-7 "NIST Chemistry WebBook"
 xref: Gmelin:971891 "Gmelin"
 xref: KEGG:C07275
 xref: PMID:10783491 "Europe PMC"
@@ -21895,7 +21913,7 @@ synonym: "Gramicidin C" RELATED [ChemIDplus]
 synonym: "Gramicidin S" EXACT [KEGG_COMPOUND]
 synonym: "Gramicin S 1" RELATED [ChemIDplus]
 synonym: "Gramicin S-A" RELATED [ChEBI]
-xref: CAS:113-73-5 "ChemIDplus"
+xref: CAS:113-73-5 "KEGG COMPOUND"
 xref: KEGG:C11218
 is_a: CHEBI:24613 ! homodetic cyclic peptide
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
@@ -22904,7 +22922,7 @@ synonym: "LY 146032" RELATED [ChemIDplus]
 synonym: "N-decanoyl-L-tryptophyl-L-asparaginyl-L-aspartyl-L-threonylglycyl-L-ornithyl-L-aspartyl-D-alanyl-L-aspartylglycyl-D-seryl-threo-3-methyl-L-glutamyl-3-anthraniloyl-L-alanine 1.13-3.4-lactone" RELATED [ChEBI]
 synonym: "N-decanoyl-L-tryptophyl-L-asparaginyl-L-aspartyl-L-threonylglycyl-L-ornithyl-L-aspartyl-D-alanyl-L-aspartylglycyl-D-seryl-threo-3-methyl-L-glutamyl-3-anthraniloyl-L-alanine epsilon(1)-lactone" RELATED [ChemIDplus]
 synonym: "N-decanoyl-L-tryptophyl-L-asparaginyl-N-[(3S,6S,9R,15S,18R,21S,24S,30S,31R)-3-[2-(2-aminophenyl)-2-oxoethyl]-24-(3-aminopropyl)-15,21-bis(carboxymethyl)-6-[(2R)-1-carboxypropan-2-yl]-9-(hydroxymethyl)-18,31-dimethyl-2,5,8,11,14,17,20,23,26,29-decaoxo-1-oxa-4,7,10,13,16,19,22,25,28-nonaazacyclohentriacontan-30-yl]-L-alpha-asparagine" EXACT IUPAC_NAME [IUPAC]
-xref: CAS:103060-53-3 "KEGG COMPOUND"
+xref: CAS:103060-53-3 "ChemIDplus"
 xref: DrugBank:DB00080
 xref: KEGG:C12013
 xref: KEGG:D01080
@@ -23900,7 +23918,7 @@ synonym: "1-Cyclopropyl-6-fluoro-1,4-dihydro-8-methoxy-7-((4aS,7aS)-octahydro-6H
 synonym: "1-cyclopropyl-6-fluoro-8-methoxy-7-[(4aS,7aS)-octahydro-6H-pyrrolo[3,4-b]pyridin-6-yl]-4-oxo-1,4-dihydroquinoline-3-carboxylic acid" EXACT IUPAC_NAME [IUPAC]
 synonym: "Moxifloxacin" EXACT [KEGG_COMPOUND]
 synonym: "moxifloxacin" RELATED INN [ChemIDplus]
-xref: CAS:151096-09-2 "ChemIDplus"
+xref: CAS:151096-09-2 "KEGG COMPOUND"
 xref: Drug_Central:1854 "DrugCentral"
 xref: DrugBank:DB00218
 xref: KEGG:C07663
@@ -24446,7 +24464,7 @@ synonym: "lincomycine" RELATED INN [ChemIDplus]
 synonym: "lincomycinum" RELATED INN [ChemIDplus]
 synonym: "methyl 6,8-dideoxy-6-({[(2S,4R)-1-methyl-4-propylpyrrolidin-2-yl]carbonyl}amino)-1-thio-D-erythro-alpha-D-galacto-octopyranoside" EXACT IUPAC_NAME [IUPAC]
 synonym: "Methyl 6,8-dideoxy-6-trans-(1-methyl-4-propyl-L-2-pyrrolidinecarboxamido)-1-thio-D-erythro-alpha-D-galacto-octopyranoside" RELATED [NIST_Chemistry_WebBook]
-xref: CAS:154-21-2 "KEGG COMPOUND"
+xref: CAS:154-21-2 "ChemIDplus"
 xref: Drug_Central:1582 "DrugCentral"
 xref: DrugBank:DB01627
 xref: HMDB:HMDB0015564
@@ -24803,6 +24821,7 @@ xref: PMID:26962156 "Europe PMC"
 xref: Reaxys:966227 "Reaxys"
 xref: Wikipedia:Meticillin
 is_a: CHEBI:17334 ! penicillin
+is_a: CHEBI:88187 ! penicillin allergen
 relationship: has_role CHEBI:36047 ! antibacterial drug
 relationship: is_conjugate_acid_of CHEBI:52064 ! methicillin(1-)
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
@@ -25632,11 +25651,11 @@ synonym: "(2E)-N-methyl-N-(1-naphthylmethyl)-3-phenylprop-2-en-1-amine" EXACT IU
 synonym: "(E)-N-cinnamyl-N-methyl-1-naphthalenemethylamine" RELATED [ChemIDplus]
 synonym: "naftifin" RELATED [ChemIDplus]
 synonym: "naftifina" RELATED INN [WHO_MedNet]
-synonym: "naftifine" RELATED INN [WHO_MedNet]
 synonym: "naftifine" RELATED INN [KEGG_DRUG]
+synonym: "naftifine" RELATED INN [WHO_MedNet]
 synonym: "naftifinum" RELATED INN [WHO_MedNet]
 synonym: "trans-N-cinnamyl-N-methyl-(1-naphthylmethyl)amine" RELATED [ChEBI]
-xref: CAS:65472-88-0 "KEGG COMPOUND"
+xref: CAS:65472-88-0 "ChemIDplus"
 xref: Drug_Central:1872 "DrugCentral"
 xref: DrugBank:DB00735
 xref: HMDB:HMDB0014873
@@ -25703,7 +25722,7 @@ synonym: "4-O-(2,6-diamino-2,6-dideoxy-alpha-D-glucopyranosyl)-2-deoxy-D-strepta
 synonym: "Neamine" EXACT [KEGG_COMPOUND]
 synonym: "neamine" EXACT [ChEMBL]
 synonym: "Neomycin A" RELATED [KEGG_COMPOUND]
-xref: CAS:3947-65-7 "ChemIDplus"
+xref: CAS:3947-65-7 "KEGG COMPOUND"
 xref: DrugBank:DB04808
 xref: KEGG:C01441
 xref: PDBeChem:XXX
@@ -25836,12 +25855,12 @@ subset: 3_STAR
 synonym: "Hexadecylphosphocholine" RELATED [ChemIDplus]
 synonym: "Hexadecylphosphorylcholine" RELATED [ChemIDplus]
 synonym: "miltefosina" RELATED INN [ChemIDplus]
-synonym: "miltefosine" RELATED INN [KEGG_DRUG]
 synonym: "miltefosine" RELATED INN [WHO_MedNet]
+synonym: "miltefosine" RELATED INN [KEGG_DRUG]
 synonym: "miltefosinum" RELATED INN [ChemIDplus]
 synonym: "monohexadecylphosphocholine" RELATED [ChEBI]
 synonym: "monohexadecylphosphorylcholine" RELATED [ChEBI]
-xref: CAS:58066-85-6 "KEGG DRUG"
+xref: CAS:58066-85-6 "ChemIDplus"
 xref: Drug_Central:1810 "DrugCentral"
 xref: KEGG:D02494
 xref: PMID:22385017 "Europe PMC"
@@ -25923,8 +25942,8 @@ synonym: "cyclo-L-serine" RELATED [ChemIDplus]
 synonym: "L-4-aminoisoxazolidin-3-one" RELATED [ChEBI]
 synonym: "L-CS" RELATED [ChEBI]
 synonym: "levcicloserina" RELATED INN [ChemIDplus]
-synonym: "levcycloserine" RELATED INN [ChemIDplus]
 synonym: "levcycloserine" RELATED INN [WHO_MedNet]
+synonym: "levcycloserine" RELATED INN [ChemIDplus]
 synonym: "levcycloserinum" RELATED INN [ChemIDplus]
 xref: CAS:339-72-0 "ChemIDplus"
 xref: DrugBank:DB00260
@@ -27092,7 +27111,7 @@ synonym: "R 31,520" RELATED [ChemIDplus]
 synonym: "R 31520" RELATED [ChemIDplus]
 synonym: "rac-N-{5-chloro-4-[(4-chlorophenyl)(cyano)methyl]-2-methylphenyl}-2-hydroxy-3,5-diiodobenzamide" EXACT IUPAC_NAME [IUPAC]
 synonym: "Seponver" RELATED BRAND_NAME [ChEBI]
-xref: CAS:57808-65-8 "ChemIDplus"
+xref: CAS:57808-65-8 "KEGG DRUG"
 xref: KEGG:D03567
 xref: Patent:BE839481
 xref: Patent:US4005218
@@ -27249,8 +27268,8 @@ def: "An oxazinoquinolone carrying carboxy, fluoro, methyl and 4-methylpiperazin
 subset: 3_STAR
 synonym: "8-Fluoro-3-methyl-9-(4-methyl-piperazin-1-yl)-6-oxo-2,3-dihydro-6H-1-oxa-3a-aza-phenalene-5-carboxylic acid" RELATED [ChEMBL]
 synonym: "9-fluoro-3-methyl-10-(4-methylpiperazin-1-yl)-7-oxo-2,3-dihydro-7H-[1,4]oxazino[2,3,4-ij]quinoline-6-carboxylic acid" EXACT IUPAC_NAME [IUPAC]
-synonym: "ofloxacin" RELATED INN [KEGG_DRUG]
 synonym: "ofloxacin" RELATED INN [ChemIDplus]
+synonym: "ofloxacin" RELATED INN [KEGG_DRUG]
 synonym: "ofloxacine" RELATED INN [ChemIDplus]
 synonym: "ofloxacino" RELATED INN [ChemIDplus]
 synonym: "ofloxacinum" RELATED INN [ChemIDplus]
@@ -27730,7 +27749,7 @@ synonym: "6beta-(5-methyl-3-phenylisoxazol-4-yl)penicillanic acid" RELATED [ChEB
 synonym: "Oxacillin" EXACT [KEGG_COMPOUND]
 synonym: "oxazocillin" RELATED [ChemIDplus]
 xref: Beilstein:1093589 "Beilstein"
-xref: CAS:66-79-5 "ChemIDplus"
+xref: CAS:66-79-5 "KEGG COMPOUND"
 xref: Drug_Central:2006 "DrugCentral"
 xref: DrugBank:DB00713
 xref: HMDB:HMDB0014851
@@ -28163,7 +28182,7 @@ synonym: "paucimycinum" RELATED [ChemIDplus]
 synonym: "R 400" RELATED [ChemIDplus]
 synonym: "R-400" RELATED [ChEBI]
 synonym: "Zygomycin A1" RELATED [KEGG_COMPOUND]
-xref: CAS:7542-37-2 "ChemIDplus"
+xref: CAS:7542-37-2 "KEGG COMPOUND"
 xref: Drug_Central:2067 "DrugCentral"
 xref: DrugBank:DB01421
 xref: KEGG:C00832
@@ -28225,7 +28244,7 @@ def: "A diastereoisomeric mixture composed of the enantiomeric pair (2R,3S)- and
 subset: 3_STAR
 synonym: "alpha-(4-chlorophenyl)-alpha-(1-cyclopropylethyl)-1N-1,2,4-triazole-1-ethanol" RELATED [Alan_Wood's_Pesticides]
 synonym: "rac-2-(4-chlorophenyl)-3-cyclopropyl-1-(1H-1,2,4-triazol-1-yl)butan-2-ol" EXACT IUPAC_NAME [IUPAC]
-xref: CAS:94361-06-5 "ChemIDplus"
+xref: CAS:94361-06-5 "KEGG COMPOUND"
 xref: KEGG:C18456
 xref: Pesticides:cyproconazole "Alan Wood's Pesticides"
 xref: PMID:23708404 "Europe PMC"
@@ -28252,7 +28271,7 @@ namespace: chebi_ontology
 def: "A member of the class of dioxolanes that is 1,3-dioxolane substituted at position 2 by 2-chloro-4-(4-chlorophenoxy)phenyl and 1,2,4-triazol-1-ylmethyl groups.  A broad spectrum fungicide with novel broad-range activity used as a spray or seed treatment. It is moderately toxic to humans, mammals, birds and most aquatic organisms." []
 subset: 3_STAR
 synonym: "1-({2-[2-chloro-4-(4-chlorophenoxy)phenyl]-4-methyl-1,3-dioxolan-2-yl}methyl)-1H-1,2,4-triazole" EXACT IUPAC_NAME [IUPAC]
-xref: CAS:119446-68-3 "ChemIDplus"
+xref: CAS:119446-68-3 "NIST Chemistry WebBook"
 xref: KEGG:C18459
 xref: Pesticides:difenoconazole "Alan Wood's Pesticides"
 xref: PMID:24405376 "Europe PMC"
@@ -28285,7 +28304,7 @@ namespace: chebi_ontology
 def: "A member of the class of benzodioxoles that is 2,2-difluoro-1,3-benzodioxole substituted at position 4 by a 3-cyanopyrrol-4-yl group. A fungicide seed treatment for control of a range of diseases including Fusarium, Rhizoctonia and Alternaria." []
 subset: 3_STAR
 synonym: "4-(2,2-difluoro-1,3-benzodioxol-4-yl)-1H-pyrrole-3-carbonitrile" EXACT IUPAC_NAME [IUPAC]
-xref: CAS:131341-86-1 "NIST Chemistry WebBook"
+xref: CAS:131341-86-1 "ChemIDplus"
 xref: KEGG:C18462
 xref: Pesticides:fludioxonil "Alan Wood's Pesticides"
 xref: PMID:23052036 "Europe PMC"
@@ -28324,7 +28343,7 @@ synonym: "Ethyltrianol" RELATED [ChemIDplus]
 synonym: "Fenetrazole" RELATED [ChemIDplus]
 synonym: "rac-1-(4-chlorophenyl)-4,4-dimethyl-3-(1H-1,2,4-triazol-1-ylmethyl)pentan-3-ol" EXACT IUPAC_NAME [IUPAC]
 synonym: "Terbuconazole" RELATED [ChemIDplus]
-xref: CAS:107534-96-3 "ChemIDplus"
+xref: CAS:107534-96-3 "KEGG COMPOUND"
 xref: KEGG:C18489
 xref: Pesticides:tebuconazole "Alan Wood's Pesticides"
 xref: PMID:24200952 "Europe PMC"
@@ -28358,7 +28377,7 @@ synonym: "Pilarblas" RELATED BRAND_NAME [ChemIDplus]
 synonym: "Sivic" RELATED BRAND_NAME [NIST_Chemistry_WebBook]
 synonym: "Tizole" RELATED BRAND_NAME [ChemIDplus]
 synonym: "Trizole" RELATED BRAND_NAME [ChemIDplus]
-xref: CAS:41814-78-2 "Alan Wood's Pesticides"
+xref: CAS:41814-78-2 "NIST Chemistry WebBook"
 xref: HMDB:HMDB0031809
 xref: KEGG:C18492
 xref: PDBeChem:BEA
@@ -28394,7 +28413,7 @@ subset: 3_STAR
 synonym: "2-chloro-N-(4'-chloro[1,1'-biphenyl]-2-yl)-3-pyridinecarboxamide" RELATED [Alan_Wood's_Pesticides]
 synonym: "2-chloro-N-(4'-chloro[1,1'-biphenyl]-2-yl)pyridine-3-carboxamide" RELATED [Alan_Wood's_Pesticides]
 synonym: "2-chloro-N-(4'-chlorobiphenyl-2-yl)nicotinamide" EXACT IUPAC_NAME [IUPAC]
-xref: CAS:188425-85-6 "KEGG COMPOUND"
+xref: CAS:188425-85-6 "ChemIDplus"
 xref: KEGG:C18547
 xref: Pesticides:boscalid "Alan Wood's Pesticides"
 xref: PMID:24380616 "Europe PMC"
@@ -28435,7 +28454,7 @@ synonym: "1-(2,4-Dichlorophenyl)-4,4-dimethyl-2-(1,2,4-triazol-1-yl)pent-1-en-3-
 synonym: "rac-(1E)-1-(2,4-dichlorophenyl)-4,4-dimethyl-2-(1H-1,2,4-triazol-1-yl)pent-1-en-3-ol" EXACT IUPAC_NAME [IUPAC]
 synonym: "rac-diniconazole" RELATED [ChEBI]
 synonym: "racemic diniconazole" RELATED [ChEBI]
-xref: CAS:83657-24-3 "KEGG COMPOUND"
+xref: CAS:83657-24-3 "NIST Chemistry WebBook"
 xref: KEGG:C18720
 xref: Pesticides:diniconazole "Alan Wood's Pesticides"
 xref: PMID:18973222 "Europe PMC"
@@ -28502,7 +28521,7 @@ synonym: "R 152450" RELATED [NIST_Chemistry_WebBook]
 synonym: "rac flutriafol" RELATED [ChEBI]
 synonym: "rac-(1R)-1-(2-fluorophenyl)-1-(4-fluorophenyl)-2-(1H-1,2,4-triazol-1-yl)ethan-1-ol" RELATED [Alan_Wood's_Pesticides]
 synonym: "rac-1-(2-fluorophenyl)-1-(4-fluorophenyl)-2-(1H-1,2,4-triazol-1-yl)ethanol" EXACT IUPAC_NAME [IUPAC]
-xref: CAS:76674-21-0 "KEGG COMPOUND"
+xref: CAS:76674-21-0 "NIST Chemistry WebBook"
 xref: KEGG:C18734
 xref: Patent:EP15756
 xref: Pesticides:76674-21-0 "Alan Wood's Pesticides"
@@ -28544,7 +28563,7 @@ synonym: "Piperacillin" EXACT [KEGG_COMPOUND]
 synonym: "piperacillin" RELATED INN [KEGG_DRUG]
 synonym: "Piperacillin anhydrous" RELATED [KEGG_COMPOUND]
 xref: Beilstein:6081140 "Beilstein"
-xref: CAS:61477-96-1 "KEGG COMPOUND"
+xref: CAS:61477-96-1 "ChemIDplus"
 xref: Drug_Central:2187 "DrugCentral"
 xref: DrugBank:DB00319
 xref: KEGG:C14034
@@ -28610,7 +28629,7 @@ synonym: "Plumbagin" EXACT [KEGG_COMPOUND]
 synonym: "plumbagine" RELATED [MetaCyc]
 synonym: "plumbagone" RELATED [ChEBI]
 xref: Beilstein:1870475 "ChemIDplus"
-xref: CAS:481-42-5 "KEGG COMPOUND"
+xref: CAS:481-42-5 "ChemIDplus"
 xref: Gmelin:959690 "Gmelin"
 xref: KEGG:C10387
 xref: KNApSAcK:C00002852
@@ -29683,7 +29702,7 @@ namespace: chebi_ontology
 def: "A member of the class of ureas that is 1H-imidazole-1-carboxamide substituted by a propyl and a 2-(2,4,6-trichlorophenoxy)ethyl group at the amino nitrogen atom. A fungicide active against a wide range of diseases affecting field crops, fruit, turf and vegetables." []
 subset: 3_STAR
 synonym: "N-propyl-N-[2-(2,4,6-trichlorophenoxy)ethyl]-1H-imidazole-1-carboxamide" EXACT IUPAC_NAME [IUPAC]
-xref: CAS:67747-09-5 "KEGG COMPOUND"
+xref: CAS:67747-09-5 "ChemIDplus"
 xref: KEGG:C11182
 xref: Pesticides:prochloraz "Alan Wood's Pesticides"
 xref: PMID:24401010 "Europe PMC"
@@ -29747,7 +29766,7 @@ subset: 3_STAR
 synonym: "(+-)-1-[2-(2,4-dichlorophenyl)-4-propyl-1,3-dioxolan-2-yl-methyl]-1H-1,2,4-triazole" RELATED [ChEBI]
 synonym: "1-{[2-(2,4-dichlorophenyl)-4-propyl-1,3-dioxolan-2-yl]methyl}-1H-1,2,4-triazole" EXACT IUPAC_NAME [IUPAC]
 synonym: "Propiconazole" EXACT [KEGG_COMPOUND]
-xref: CAS:60207-90-1 "ChemIDplus"
+xref: CAS:60207-90-1 "KEGG COMPOUND"
 xref: CAS:75881-82-2 "NIST Chemistry WebBook"
 xref: KEGG:C11121
 xref: MetaCyc:CPD-14540
@@ -30438,6 +30457,18 @@ xref: Wikipedia:Polyamine
 is_a: CHEBI:50047 ! organic amino compound
 
 [Term]
+id: CHEBI:88184
+name: metal allergen
+namespace: chebi_ontology
+def: "Any metal which causes the onset of an allergic reaction." []
+subset: 3_STAR
+synonym: "allergenic metal" RELATED [ChEBI]
+synonym: "allergenic metals" RELATED [ChEBI]
+synonym: "metal allergens" RELATED [ChEBI]
+is_a: CHEBI:33521 ! metal atom
+relationship: has_role CHEBI:50904 ! allergen
+
+[Term]
 id: CHEBI:88187
 name: penicillin allergen
 namespace: chebi_ontology
@@ -30460,6 +30491,18 @@ subset: 3_STAR
 synonym: "allergenic drug" RELATED [ChEBI]
 is_a: CHEBI:23888 ! drug
 is_a: CHEBI:50904 ! allergen
+
+[Term]
+id: CHEBI:88225
+name: beta-lactam antibiotic allergen
+namespace: chebi_ontology
+def: "Any beta-lactam antibiotic which causes the onset of an allergic reaction." []
+subset: 3_STAR
+synonym: "allergenic beta-lactam antibiotic" RELATED [ChEBI]
+synonym: "allergenic beta-lactam antibiotics" RELATED [ChEBI]
+synonym: "beta-lactam antibiotic allergens" RELATED [ChEBI]
+is_a: CHEBI:27933 ! beta-lactam antibiotic
+relationship: has_role CHEBI:50904 ! allergen
 
 [Term]
 id: CHEBI:88227
@@ -30512,7 +30555,7 @@ synonym: "rapamycin" RELATED [ChEBI]
 synonym: "Sirolimus" EXACT [KEGG_COMPOUND]
 synonym: "sirolimus" RELATED INN [WHO_MedNet]
 synonym: "sirolimusum" RELATED INN [WHO_MedNet]
-xref: CAS:53123-88-9 "KEGG COMPOUND"
+xref: CAS:53123-88-9 "ChemIDplus"
 xref: Drug_Central:2446 "DrugCentral"
 xref: DrugBank:DB00877
 xref: HMDB:HMDB0015015
@@ -30638,7 +30681,7 @@ synonym: "N-[(8-tert-butyl-1,4-dioxaspiro[4.5]dec-2-yl)methyl]-N-ethylpropan-1-a
 synonym: "Prosper" RELATED BRAND_NAME [ChEBI]
 synonym: "Spiroxamine" EXACT [KEGG_COMPOUND]
 xref: AGR:IND43667533 "Europe PMC"
-xref: CAS:118134-30-8 "ChemIDplus"
+xref: CAS:118134-30-8 "KEGG COMPOUND"
 xref: KEGG:C11124
 xref: Patent:DE3735555
 xref: Patent:US4851405
@@ -30678,7 +30721,7 @@ synonym: "penicillanic acid sulfone" RELATED [ChEBI]
 synonym: "sulbactam" RELATED INN [ChemIDplus]
 synonym: "sulbactamum" RELATED INN [ChemIDplus]
 xref: Beilstein:4192832 "Beilstein"
-xref: CAS:68373-14-8 "ChemIDplus"
+xref: CAS:68373-14-8 "KEGG COMPOUND"
 xref: Drug_Central:2492 "DrugCentral"
 xref: KEGG:C07770
 xref: KEGG:C14001
@@ -30768,7 +30811,7 @@ synonym: "ticarcillin" RELATED INN [ChemIDplus]
 synonym: "ticarcilline" RELATED INN [ChemIDplus]
 synonym: "ticarcillinum" RELATED INN [ChemIDplus]
 xref: Beilstein:6009447 "Beilstein"
-xref: CAS:34787-01-4 "ChemIDplus"
+xref: CAS:34787-01-4 "KEGG COMPOUND"
 xref: Drug_Central:2656 "DrugCentral"
 xref: DrugBank:DB01607
 xref: KEGG:C07139
@@ -30783,6 +30826,7 @@ xref: PMID:29017833 "Europe PMC"
 xref: Reaxys:6009447 "Reaxys"
 xref: Wikipedia:Ticarcillin
 is_a: CHEBI:17334 ! penicillin
+is_a: CHEBI:88187 ! penicillin allergen
 relationship: has_role CHEBI:36047 ! antibacterial drug
 relationship: is_conjugate_acid_of CHEBI:51811 ! ticarcillin(2-)
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
@@ -30809,7 +30853,7 @@ synonym: "rac-1-(4-chlorophenoxy)-3,3-dimethyl-1-(1H-1,2,4-triazol-1-yl)butan-2-
 synonym: "rac-triadimefon" RELATED [ChEBI]
 synonym: "racemic triadimefon" RELATED [ChEBI]
 synonym: "triadimefone" RELATED [MetaCyc]
-xref: CAS:43121-43-3 "ChemIDplus"
+xref: CAS:43121-43-3 "KEGG COMPOUND"
 xref: KEGG:C11156
 xref: MetaCyc:CPD-4061
 xref: Pesticides:triadimefon "Alan Wood's Pesticides"
@@ -30878,7 +30922,7 @@ synonym: "trovafloxacin" RELATED INN [KEGG_DRUG]
 synonym: "trovafloxacine" RELATED INN [WHO_MedNet]
 synonym: "trovafloxacino" RELATED INN [WHO_MedNet]
 synonym: "trovafloxacinum" RELATED INN [WHO_MedNet]
-xref: CAS:147059-72-1 "ChemIDplus"
+xref: CAS:147059-72-1 "KEGG COMPOUND"
 xref: Drug_Central:2777 "DrugCentral"
 xref: DrugBank:DB00685
 xref: HMDB:HMDB0014823
@@ -30926,12 +30970,12 @@ def: "A racemate comprising equimolar amounts of dexverapamil and (S)-verapamil.
 subset: 3_STAR
 synonym: "rac-2-(3,4-dimethoxyphenyl)-5-{[2-(3,4-dimethoxyphenyl)ethyl](methyl)amino}-2-(propan-2-yl)pentanenitrile" EXACT IUPAC_NAME [IUPAC]
 synonym: "Verapamil" EXACT [KEGG_COMPOUND]
-synonym: "verapamil" RELATED INN [ChemIDplus]
 synonym: "verapamil" RELATED INN [WHO_MedNet]
+synonym: "verapamil" RELATED INN [ChemIDplus]
 synonym: "verapamilo" RELATED INN [ChemIDplus]
 synonym: "verapamilum" RELATED INN [ChemIDplus]
 xref: Beilstein:2825000 "Beilstein"
-xref: CAS:52-53-9 "NIST Chemistry WebBook"
+xref: CAS:52-53-9 "KEGG COMPOUND"
 xref: DrugBank:DB00661
 xref: HMDB:HMDB0001850
 xref: KEGG:C07188
@@ -30996,7 +31040,7 @@ synonym: "rac-vinclozolin" RELATED [ChEBI]
 synonym: "racemic vinclozolin" RELATED [ChEBI]
 synonym: "Vinchlozoline" RELATED [ChemIDplus]
 synonym: "Vinclozoline" RELATED [ChemIDplus]
-xref: CAS:50471-44-8 "ChemIDplus"
+xref: CAS:50471-44-8 "KEGG COMPOUND"
 xref: KEGG:C10981
 xref: Pesticides:vinclozolin "Alan Wood's Pesticides"
 xref: PMID:24072643 "Europe PMC"
