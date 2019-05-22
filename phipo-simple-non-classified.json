@@ -1755,6 +1755,13 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000400",
       "meta" : {
+        "definition" : {
+          "val" : "A cellular process phenotype in which any process of cellular component organization at the cellular level is abnormal.",
+          "xrefs" : [ ]
+        },
+        "xrefs" : [ {
+          "val" : "FYPO:0000335"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "single_organism_phenotype"
@@ -1871,6 +1878,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000406",
       "meta" : {
+        "definition" : {
+          "val" : "A single organism phenotype in which the nucleus is absent.",
+          "xrefs" : [ ]
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-12-05T11:45:18Z"
@@ -1883,7 +1894,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "absence of nuclei"
+      "lbl" : "nucleus absent"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000648",
       "meta" : {
@@ -2040,6 +2051,38 @@
       "type" : "CLASS",
       "lbl" : "transporter activity phenotype"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000407",
+      "meta" : {
+        "definition" : {
+          "val" : "A phenotype that affects a process of cellular component organization, i.e. the assembly, arrangement of constituent parts, or disassembly of a cellular component, that occurs at the cellular level.",
+          "xrefs" : [ ]
+        },
+        "subsets" : [ "\"qc_do_not_manually_annotate\"", "\"qc_do_not_annotate\"" ],
+        "xrefs" : [ {
+          "val" : "FYPO:0000334"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "cellular component organisation phenotype",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_organism_phenotype"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype."
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2018-12-05T11:45:32Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "cellular component organization phenotype"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000649",
       "meta" : {
         "definition" : {
@@ -2059,22 +2102,6 @@
       },
       "type" : "CLASS",
       "lbl" : "resistance to methicillin"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000407",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "single_organism_phenotype"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2018-12-05T11:45:32Z"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "alaynecuzick"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "cellular component organization phenotype"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000408",
       "meta" : {
@@ -2337,6 +2364,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000410",
       "meta" : {
+        "definition" : {
+          "val" : "A population phenotype in which the frequency of occurence of asexual spore germination is decreased.",
+          "xrefs" : [ ]
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-12-05T11:46:43Z"
@@ -2586,22 +2617,6 @@
       "type" : "CLASS",
       "lbl" : "resistance to nicotinamide"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000415",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "alaynecuzick"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "single_organism_phenotype"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2018-12-05T11:47:55Z"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal subcellular component phenotype"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000899",
       "meta" : {
         "definition" : {
@@ -2641,6 +2656,29 @@
       },
       "type" : "CLASS",
       "lbl" : "resistance to sulbactam"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000415",
+      "meta" : {
+        "definition" : {
+          "val" : "A single organism phenotype in which the amount, distribution, composition or morphology of a cell part is abnormal.",
+          "xrefs" : [ ]
+        },
+        "xrefs" : [ {
+          "val" : "FYPO:0000287"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_organism_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2018-12-05T11:47:55Z"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "abnormal subcellular component"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000418",
       "meta" : {
@@ -4396,7 +4434,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "decreased quantity of pathogen deoxynivalenol production with host"
+      "lbl" : "decreased level of pathogen deoxynivalenol produced with host"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000216",
       "meta" : {
@@ -4442,6 +4480,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000463",
       "meta" : {
+        "definition" : {
+          "val" : "A single organism phenotype that affects the subcellular components in a cell.",
+          "xrefs" : [ ]
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
@@ -4486,7 +4528,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "increased quantity of host lesions with pathogen"
+      "lbl" : "increased number of host lesions with pathogen"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000464",
       "meta" : {
@@ -4684,7 +4726,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "decreased quantity of host lesions with pathogen"
+      "lbl" : "decreased number of host lesions with pathogen"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000224",
       "meta" : {
@@ -4728,7 +4770,7 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000229",
       "meta" : {
         "definition" : {
-          "val" : "A pathogen host interaction phenotype in which the biosynthesis of deoxynivalenol is abnormal (i.e. different than the wild type).",
+          "val" : "A pathogen host interaction phenotype in which the pathogen biosynthesis of deoxynivalenol is abnormal (i.e. different than the wild type).",
           "xrefs" : [ ]
         },
         "basicPropertyValues" : [ {
@@ -4790,7 +4832,7 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000228",
       "meta" : {
         "definition" : {
-          "val" : "A pathogen host interaction phenotype in which the biosynthesis of deoxynivalenol is normal (i.e. same as the wild type).",
+          "val" : "A pathogen host interaction phenotype in which the pathogen biosynthesis of deoxynivalenol is normal (i.e. same as the wild type).",
           "xrefs" : [ ]
         },
         "basicPropertyValues" : [ {
@@ -4841,6 +4883,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000474",
       "meta" : {
+        "definition" : {
+          "val" : "A single species phenotype observed in the vegetative growth phase of the life cycle in which cells contain a different number of lipid droplets than normal.",
+          "xrefs" : [ ]
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2019-01-14T12:21:01Z"
@@ -4853,12 +4899,12 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "abnormal quantity of lipid droplets"
+      "lbl" : "abnormal number of lipid droplets"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000232",
       "meta" : {
         "definition" : {
-          "val" : "A pathogen host interaction phenotype where there is a increased amount of deoxynivalenol.",
+          "val" : "A pathogen host interaction phenotype where there is an increased amount of deoxynivalenol.",
           "xrefs" : [ ]
         },
         "basicPropertyValues" : [ {
@@ -4873,10 +4919,14 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "increased quantity of pathogen deoxynivalenol production with host"
+      "lbl" : "increased level of pathogen deoxynivalenol produced with host"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000475",
       "meta" : {
+        "definition" : {
+          "val" : "A single organism phenotype observed in the vegetative growth phase of the life cycle in which the size of lipid droplets is decreased.",
+          "xrefs" : [ ]
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
@@ -5019,7 +5069,7 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000478",
       "meta" : {
         "definition" : {
-          "val" : "GO definition of lipid droplet. An intracellular non-membrane-bounded organelle comprising a matrix of coalesced lipids surrounded by a phospholipid monolayer. May include associated proteins.",
+          "val" : "A single organism phenotype that affects an intracellular non-membrane-bounded organelle comprising a matrix of coalesced lipids surrounded by a phospholipid monolayer. May include associated proteins.",
           "xrefs" : [ ]
         },
         "xrefs" : [ {
@@ -5041,6 +5091,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000479",
       "meta" : {
+        "definition" : {
+          "val" : "A single organism phenotype observed in the vegetative growth phase of the life cycle in which the size of lipid droplets is increased.",
+          "xrefs" : [ ]
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2019-01-14T12:23:54Z"
@@ -6386,6 +6440,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000018",
       "meta" : {
+        "definition" : {
+          "val" : "A single species phenotype observed in the vegetative growth phase of the life cycle in which cells contain fewer lipid droplets than normal.",
+          "xrefs" : [ ]
+        },
         "xrefs" : [ {
           "val" : "FYPO:0002552"
         } ],
@@ -7106,6 +7164,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000274",
       "meta" : {
+        "definition" : {
+          "val" : "A population phenotype in which the frequency of occurence of asexual spore germination is increased.",
+          "xrefs" : [ ]
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "single_organism_phenotype"
@@ -9251,7 +9313,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "increased quantity of deoxynivalenol"
+      "lbl" : "increased level of deoxynivalenol"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000740",
       "meta" : {
@@ -9417,7 +9479,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "decreased quantity of deoxynivalenol"
+      "lbl" : "decreased level of deoxynivalenol"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000745",
       "meta" : {
@@ -9891,6 +9953,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000517",
       "meta" : {
+        "definition" : {
+          "val" : "A single species phenotype observed in the vegetative growth phase of the life cycle in which cells contain more lipid droplets than normal.",
+          "xrefs" : [ ]
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
@@ -9927,6 +9993,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000518",
       "meta" : {
+        "definition" : {
+          "val" : "A single species phenotype observed in the vegetative growth phase of the life cycle in which cells contain the same number of lipid droplets as normal (i.e. indistinguishable from wild type).",
+          "xrefs" : [ ]
+        },
         "xrefs" : [ {
           "val" : "FYPO:0006791"
         } ],
@@ -12106,6 +12176,13 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000328",
       "meta" : {
+        "definition" : {
+          "val" : "A cellular process phenotype in which any process of cellular component organization at the cellular level is normal (i.e. indistinguishable from wild type).",
+          "xrefs" : [ ]
+        },
+        "xrefs" : [ {
+          "val" : "FYPO:0006003"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "single_organism_phenotype"
@@ -12222,6 +12299,11 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000331",
       "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "pathogen entry into host phenotype",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
@@ -12786,6 +12868,22 @@
       "type" : "CLASS",
       "lbl" : "resistance to trimethoprim"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000346",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2018-10-29T16:33:27Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "pathogen_host_interaction_phenotype"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "host necrotic lesion with pathogen phenotype"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000104",
       "meta" : {
         "subsets" : [ "\"pathogen_phenotype\"" ],
@@ -12802,22 +12900,6 @@
       },
       "type" : "CLASS",
       "lbl" : "increased size of penetration structure"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000346",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2018-10-29T16:33:27Z"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "alaynecuzick"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "pathogen_host_interaction_phenotype"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "host nectrotic lesion with pathogen phenotype"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000589",
       "meta" : {
@@ -13171,6 +13253,11 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000353",
       "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "normal pathogen entry into host",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-11-05T13:25:01Z"
@@ -13205,22 +13292,6 @@
       "type" : "CLASS",
       "lbl" : "resistance to eflornithine"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000354",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "pathogen_host_interaction_phenotype"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2018-11-05T13:25:33Z"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "alaynecuzick"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "normal post penetration of host by pathogen"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000112",
       "meta" : {
         "subsets" : [ "\"pathogen_phenotype\"" ],
@@ -13237,6 +13308,27 @@
       },
       "type" : "CLASS",
       "lbl" : "non-functional penetration structure present"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000354",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "normal post penetration of host by pathogen",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "pathogen_host_interaction_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2018-11-05T13:25:33Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "normal post penetration growth of pathogen after entry into host"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000593",
       "meta" : {
@@ -13274,22 +13366,6 @@
       "type" : "CLASS",
       "lbl" : "abnormal pre penetration of host by pathogen"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000352",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2018-11-05T13:24:42Z"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "alaynecuzick"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "pathogen_host_interaction_phenotype"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "normal pre penetration of host by pathogen"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000594",
       "meta" : {
         "definition" : {
@@ -13309,6 +13385,27 @@
       },
       "type" : "CLASS",
       "lbl" : "resistance to cefpodoxime proxetil"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000352",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "normal pre penetration of host by pathogen",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2018-11-05T13:24:42Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "pathogen_host_interaction_phenotype"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "normal development of pathogen penetration structure prior to entry into host"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000110",
       "meta" : {
@@ -13366,6 +13463,11 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000357",
       "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "abolished pathogen entry into host",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
@@ -13378,7 +13480,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "altered functionality of pathogen penetration structure in contact with host"
+      "lbl" : "abolished pathogen penetration into host"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000358",
       "meta" : {
@@ -13470,6 +13572,27 @@
       "type" : "CLASS",
       "lbl" : "abnormal post penetration of host by pathogen"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000356",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "abnormal pathogen entry into host phenotype",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "pathogen_host_interaction_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2018-11-05T13:26:35Z"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "abnormal penetration of host by pathogen"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000114",
       "meta" : {
         "subsets" : [ "\"pathogen_phenotype\"" ],
@@ -13506,22 +13629,6 @@
       },
       "type" : "CLASS",
       "lbl" : "resistance to pyrimethanil"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000356",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "pathogen_host_interaction_phenotype"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "alaynecuzick"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2018-11-05T13:26:35Z"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal penetration of host by pathogen"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000119",
       "meta" : {
@@ -14172,6 +14279,13 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000379",
       "meta" : {
+        "definition" : {
+          "val" : "A cellular process phenotype in which cell wall organization is abnormal. Cell wall organization results in the assembly, arrangement of constituent parts, or disassembly of the fungal-type cell wall.",
+          "xrefs" : [ ]
+        },
+        "xrefs" : [ {
+          "val" : "FYPO:0004805"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-12-05T11:33:32Z"
@@ -15117,6 +15231,13 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000159",
       "meta" : {
+        "definition" : {
+          "val" : "A single species phenotype in which the amount, distribution, composition or morphology of a cell part is normal (i.e. indistinguishable from wild type).",
+          "xrefs" : [ ]
+        },
+        "xrefs" : [ {
+          "val" : "FYPO:0001233"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "single_organism_phenotype"
@@ -15129,7 +15250,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "normal subcellular component phenotype"
+      "lbl" : "normal subcellular component"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000157",
       "meta" : {
@@ -15471,6 +15592,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000049",
       "meta" : {
+        "definition" : {
+          "val" : "A population phenotype in which the frequency of occurence of sexual spores is increased.",
+          "xrefs" : [ ]
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
@@ -15483,7 +15608,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "increased quantity of sexual spores"
+      "lbl" : "increased number of sexual spores"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000047",
       "meta" : {
@@ -15569,6 +15694,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000052",
       "meta" : {
+        "definition" : {
+          "val" : "A population phenotype in which the frequency of occurence of asexual spores is decreased.",
+          "xrefs" : [ ]
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "single_organism_phenotype"
@@ -15581,7 +15710,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "decreased quantity of asexual spores"
+      "lbl" : "decreased number of asexual spores"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000294",
       "meta" : {
@@ -15636,6 +15765,26 @@
       "type" : "CLASS",
       "lbl" : "sinusoidal filament"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000050",
+      "meta" : {
+        "definition" : {
+          "val" : "A population phenotype in which the frequency of occurence of sexual spores is decreased.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_organism_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2018-07-13T12:17:15Z"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "decreased number of sexual spores"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000292",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -15651,22 +15800,6 @@
       },
       "type" : "CLASS",
       "lbl" : "reduced filament length"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000050",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "alaynecuzick"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "single_organism_phenotype"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2018-07-13T12:17:15Z"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "decreased quantity of sexual spores"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000293",
       "meta" : {
@@ -15686,6 +15819,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000051",
       "meta" : {
+        "definition" : {
+          "val" : "A population phenotype in which the frequency of occurence of asexual spores is increased.",
+          "xrefs" : [ ]
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "single_organism_phenotype"
@@ -15698,7 +15835,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "increased quantity of asexual spores"
+      "lbl" : "increased number of asexual spores"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000056",
       "meta" : {
@@ -15750,6 +15887,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000057",
       "meta" : {
+        "definition" : {
+          "val" : "A population phenotype in which the frequency of occurence of sexual spores is normal  (i.e. indistinguishable from wild type).",
+          "xrefs" : [ ]
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-07-13T12:25:33Z"
@@ -15762,7 +15903,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "normal quantity of sexual spores"
+      "lbl" : "normal number of sexual spores"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000296",
       "meta" : {
@@ -15846,6 +15987,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000059",
       "meta" : {
+        "definition" : {
+          "val" : "A population phenotype in which the frequency of occurence of asexual spores is normal  (i.e. indistinguishable from wild type).",
+          "xrefs" : [ ]
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
@@ -15858,7 +16003,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "normal quantity of asexual spores"
+      "lbl" : "normal number of asexual spores"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000060",
       "meta" : {
@@ -16102,6 +16247,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000073",
       "meta" : {
+        "definition" : {
+          "val" : "A population phenotype in which the frequency of occurence of sexual spores is abnormal.",
+          "xrefs" : [ ]
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
@@ -16114,7 +16263,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "abnormal quantity of sexual spores"
+      "lbl" : "abnormal number of sexual spores"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000078",
       "meta" : {
@@ -16198,6 +16347,10 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000082",
       "meta" : {
+        "definition" : {
+          "val" : "A population phenotype in which the frequency of occurence of asexual spores is abnormal.",
+          "xrefs" : [ ]
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-07-13T13:09:40Z"
@@ -16210,7 +16363,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "abnormal quantity of asexual spores"
+      "lbl" : "abnormal number of asexual spores"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000080",
       "meta" : {
@@ -16655,16 +16808,28 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000925",
       "meta" : {
+        "definition" : {
+          "val" : "A cellular process phenotype in which the biosynthesis of constituent macromolecules, assembly, arrangement of constituent parts, or disassembly of a cell wall is abnormal.",
+          "xrefs" : [ ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "abnormal cell wall integrity",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2019-05-01T10:52:19Z"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_organism_phenotype"
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "to repurpose"
+      "lbl" : "abnormal cell wall organization or biogenesis"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000928",
       "meta" : {
@@ -16693,34 +16858,62 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000929",
       "meta" : {
+        "definition" : {
+          "val" : "A phenotype in which a specific cellular process is abnormal.",
+          "xrefs" : [ ]
+        },
+        "subsets" : [ "\"qc_do_not_annotate\"", "\"qc_do_not_manually_annotate\"" ],
+        "xrefs" : [ {
+          "val" : "FYPO:0000628"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2019-05-01T10:58:54Z"
         }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_organism_phenotype"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype."
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "decreased pathogen host interaction respiratory burst in host"
+      "lbl" : "abnormal cellular process"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000930",
       "meta" : {
+        "definition" : {
+          "val" : "A phenotype that affects a cellular process.",
+          "xrefs" : [ ]
+        },
+        "subsets" : [ "\"qc_do_not_annotate\"", "\"qc_do_not_manually_annotate\"" ],
+        "xrefs" : [ {
+          "val" : "FYPO:0000114"
+        } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_organism_phenotype"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype."
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2019-05-01T10:59:15Z"
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "increased pathogen host interaction respiratory burst in host"
+      "lbl" : "cellular process phenotype"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000934",
       "meta" : {
         "definition" : {
-          "val" : "A physical cellular phenotype in which the amount, distribution, or morphology of all or part of the nucleus is abnormal.",
+          "val" : "A single organism phenotype in which the amount, distribution, or morphology of all or part of the nucleus is abnormal.",
           "xrefs" : [ ]
         },
         "xrefs" : [ {
@@ -16742,29 +16935,222 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000931",
       "meta" : {
+        "definition" : {
+          "val" : "A phenotype that affects cell wall organization or biogenesis.",
+          "xrefs" : [ ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "cell wall integrity phenotype",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_organism_phenotype"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2019-05-01T10:59:55Z"
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "to reuse"
+      "lbl" : "cell wall organization or biogenesis phenotype"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000932",
       "meta" : {
+        "definition" : {
+          "val" : "A phenotype in which a specific cellular process is normal (i.e. indistinguishable from wild type).",
+          "xrefs" : [ ]
+        },
+        "subsets" : [ "\"qc_do_not_manually_annotate\"", "\"qc_do_not_annotate\"" ],
+        "xrefs" : [ {
+          "val" : "FYPO:0000627"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2019-05-01T11:00:10Z"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype."
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_organism_phenotype"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "gain of pathogen host interaction respiratory burst in host"
+      "lbl" : "normal cellular process"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000937",
+      "meta" : {
+        "definition" : {
+          "val" : "An single species phenotype in which an asexual spore lyses, i.e. the plasma membrane ruptures and cytoplasm is lost.",
+          "xrefs" : [ ]
+        },
+        "xrefs" : [ {
+          "val" : "FYPO:0002489"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "asexual spore cytolysis present",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-05-21T10:29:30Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_organism_phenotype"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "asexual spore lysis present"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000938",
+      "meta" : {
+        "definition" : {
+          "val" : "An single species phenotype in which a vegetative cell lyses, i.e. the plasma membrane ruptures and cytoplasm is lost.",
+          "xrefs" : [ ]
+        },
+        "xrefs" : [ {
+          "val" : "FYPO:0000647"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-05-21T10:30:07Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_organism_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "vegetative cell lysis"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000935",
+      "meta" : {
+        "definition" : {
+          "val" : "A cellular process phenotype in which the biosynthesis of constituent macromolecules, assembly, arrangement of constituent parts, or disassembly of a cell wall is decreased.",
+          "xrefs" : [ ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "decreased cell wall organization or biogenesis",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_organism_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-05-17T10:49:13Z"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "decreased cell wall integrity"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000936",
+      "meta" : {
+        "definition" : {
+          "val" : "An single species phenotype in which a cell lyses, i.e. the plasma membrane ruptures and cytoplasm is lost.",
+          "xrefs" : [ ]
+        },
+        "xrefs" : [ {
+          "val" : "FYPO:0002488"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_organism_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-05-21T10:29:14Z"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "cell lysis"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000939",
+      "meta" : {
+        "definition" : {
+          "val" : "An single species phenotype in which an asexual spore does not lyse, i.e. the plasma membrane ruptures and cytoplasm is lost.",
+          "xrefs" : [ ]
+        },
+        "xrefs" : [ {
+          "val" : "FYPO:0002489"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "asexual spore cytolysis absent",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-05-21T11:22:31Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_organism_phenotype"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "asexual spore lysis absent"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000940",
+      "meta" : {
+        "definition" : {
+          "val" : "A single species phenotype where the slender tubular outgrowth first produced by most spores in germination is abnormal.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-05-21T11:34:47Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_organism_phenotype"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "abnormal germ tube"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000941",
+      "meta" : {
+        "definition" : {
+          "val" : "A single species phenotype where the slender tubular outgrowth first produced by most spores in germination is shorter than normal.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-05-21T11:35:21Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_organism_phenotype"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "short germ tube"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000702",
       "meta" : {
@@ -16786,6 +17172,34 @@
       "type" : "CLASS",
       "lbl" : "resistance to phosphomycin"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000944",
+      "meta" : {
+        "definition" : {
+          "val" : "A single species cell phenotype in which the amount of a specific substance measured in a cell differs from normal.",
+          "xrefs" : [ ]
+        },
+        "xrefs" : [ {
+          "val" : "FYPO:0000989"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "abnormal level of substance in cell",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_organism_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-05-21T11:59:04Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "altered level of substance in cell"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000703",
       "meta" : {
         "definition" : {
@@ -16806,6 +17220,38 @@
       "type" : "CLASS",
       "lbl" : "resistance to aureobasidin A"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000945",
+      "meta" : {
+        "definition" : {
+          "val" : "A single species cell phenotype in which the amount of reactive oxygen species (ROS) measured in a cell differs from normal.",
+          "xrefs" : [ ]
+        },
+        "xrefs" : [ {
+          "val" : "FYPO:0002142"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "abnormal cellular reactive oxygen species level",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "abnormal cellular ROS accumulation",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-05-21T12:00:07Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_organism_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "altered cellular reactive oxygen species level"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000700",
       "meta" : {
         "definition" : {
@@ -16825,6 +17271,26 @@
       },
       "type" : "CLASS",
       "lbl" : "resistance to miconazole"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000943",
+      "meta" : {
+        "definition" : {
+          "val" : "A phenotype in which a population of a single-species shows increased sensitivity to hydrogen peroxide, manifested as an affect on the extent of population growth.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-05-21T11:55:15Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_organism_phenotype"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "sensitive to hydrogen peroxide"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000701",
       "meta" : {
@@ -16905,6 +17371,46 @@
       },
       "type" : "CLASS",
       "lbl" : "resistance to lincomycin"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000946",
+      "meta" : {
+        "definition" : {
+          "val" : "A single species cell phenotype in which the amount of reactive oxygen species (ROS) measured in a cell is lower than normal.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-05-21T12:01:32Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_organism_phenotype"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "decreased cellular reactive oxygen species level"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000947",
+      "meta" : {
+        "definition" : {
+          "val" : "A single species cell phenotype in which the amount of reactive oxygen species (ROS) measured in a cell is higher than normal.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_organism_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-05-21T12:01:41Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "increased cellular reactive oxygen species level"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000705",
       "meta" : {
@@ -17115,13 +17621,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000425"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000503",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000500"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000309",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000307"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000503",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000500"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000645",
       "pred" : "is_a",
@@ -17199,13 +17705,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000464",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000445"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000462",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000465"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000464",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000445"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000474",
       "pred" : "is_a",
@@ -17231,13 +17737,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000131"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000233",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000229"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000099",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000046"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000233",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000229"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000769",
       "pred" : "is_a",
@@ -17431,13 +17937,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000755",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000132",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000158"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000755",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000888",
       "pred" : "is_a",
@@ -17611,6 +18117,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000079"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000944",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000034"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000630",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
@@ -17691,10 +18201,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000369"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000929",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000931"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000230",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000231"
@@ -17718,6 +18224,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000256",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000235"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000929",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000930"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000340",
       "pred" : "is_a",
@@ -17831,13 +18341,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000152"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000811",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000642",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000811",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000037",
       "pred" : "is_a",
@@ -17935,6 +18445,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000125"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000930",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000034"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000779",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
@@ -18007,6 +18521,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000434"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000940",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000402"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000330",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000409"
@@ -18042,6 +18560,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000317",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000315"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000943",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000521",
       "pred" : "is_a",
@@ -18086,10 +18608,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000252",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000250"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000274",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000162"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000534",
       "pred" : "is_a",
@@ -18147,6 +18665,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000369"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000362",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000356"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000404",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000034"
@@ -18183,21 +18705,17 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000362",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000357"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000606",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000765",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000198",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000347"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000765",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000583",
       "pred" : "is_a",
@@ -18263,17 +18781,21 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000047"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000938",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000936"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000080",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000045"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000067",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000081"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000068",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000071"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000067",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000081"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000653",
       "pred" : "is_a",
@@ -18310,6 +18832,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000848",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000274",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000509"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000666",
       "pred" : "is_a",
@@ -18383,6 +18909,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000939",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000936"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000884",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
@@ -18394,10 +18924,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000470",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000332"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000361",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000357"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000871",
       "pred" : "is_a",
@@ -18414,6 +18940,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000373",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000369"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000361",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000356"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000332",
       "pred" : "is_a",
@@ -18487,6 +19017,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000434"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000937",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000936"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000882",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
@@ -18551,6 +19085,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000284"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000925",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000929"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000545",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
@@ -18599,9 +19137,17 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000925",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000931"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000372",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000369"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000360",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000356"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000512",
       "pred" : "is_a",
@@ -18651,10 +19197,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000249"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000360",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000357"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000106",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000124"
@@ -18663,25 +19205,25 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000125"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000222",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000165"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000602",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000222",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000165"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000510",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000001"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000326",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000324"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000182",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000466"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000326",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000324"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000761",
       "pred" : "is_a",
@@ -18923,6 +19465,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000947",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000945"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000100",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000042"
@@ -18963,13 +19509,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000165"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000434",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000432"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000229",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000218"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000434",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000432"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000543",
       "pred" : "is_a",
@@ -19067,10 +19613,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000142"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000934",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000463"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000176",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000168"
@@ -19155,9 +19697,17 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000005"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000935",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000925"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000349",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000331"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000946",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000945"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000902",
       "pred" : "is_a",
@@ -19231,13 +19781,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000182"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000293",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000408"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000208",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000197"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000293",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000408"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000283",
       "pred" : "is_a",
@@ -19339,6 +19889,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000031"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000945",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000944"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000625",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
@@ -19347,13 +19901,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000236"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000359",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000357"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000215",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000200"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000359",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000356"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000784",
       "pred" : "is_a",
@@ -19575,13 +20129,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000932",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000930"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000611",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000932",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000931"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000890",
       "pred" : "is_a",
@@ -19603,13 +20157,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000004"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000465",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000481"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000469",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000441"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000465",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000481"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000624",
       "pred" : "is_a",
@@ -19771,10 +20325,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000038"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000410",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000162"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000302",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000044"
@@ -19871,6 +20421,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000934"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000931",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000930"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000442",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000440"
@@ -19951,6 +20505,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000078"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000410",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000509"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000387",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
@@ -19978,6 +20536,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000804",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000936",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000034"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000622",
       "pred" : "is_a",
@@ -20035,17 +20597,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000121",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000043"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000114",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000113"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000931",
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000121",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000925"
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000043"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000879",
       "pred" : "is_a",
@@ -20062,10 +20620,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000467",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000446"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000930",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000931"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000248",
       "pred" : "is_a",
@@ -20147,13 +20701,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000178"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000204",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000197"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000409",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000411"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000204",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000197"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000073",
       "pred" : "is_a",
@@ -20163,13 +20717,17 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000300",
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000934",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000043"
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000415"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000161",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000002"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000300",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000043"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000840",
       "pred" : "is_a",
@@ -20223,13 +20781,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000133"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000246",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000240"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000017",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000002"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000246",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000240"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000647",
       "pred" : "is_a",
@@ -20274,6 +20832,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000780",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000941",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000940"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000563",
       "pred" : "is_a",
@@ -20586,7 +21148,7 @@
         "pred" : "http://purl.obolibrary.org/obo/creation_date",
         "val" : "2018-07-09T13:43:00Z"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/phipo/releases/2019-05-16/phipo-simple-non-classified.json"
+      "version" : "http://purl.obolibrary.org/obo/phipo/releases/2019-05-22/phipo-simple-non-classified.json"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],

@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-05-16/imports/pato_import.owl
+data-version: phipo/releases/2019-05-22/imports/pato_import.owl
 ontology: phipo/imports/pato_import
 
 [Term]
@@ -9,6 +9,25 @@ namespace: quality
 alt_id: PATO:0000072
 def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
 synonym: "trait" EXACT []
+
+[Term]
+id: PATO:0000033
+name: concentration of
+namespace: quality
+def: "A quality inhering in a substance by virtue of the amount of the bearer's there is mixed with another substance." [Wikipedia:http\://en.wikipedia.org/wiki/concentration]
+subset: attribute_slim
+subset: relational_slim
+subset: scalar_slim
+synonym: "concentration" EXACT []
+is_a: PATO:0002182 ! molecular quality
+
+[Term]
+id: PATO:0000051
+name: morphology
+namespace: quality
+def: "A quality of a single physical entity inhering in the bearer by virtue of the bearer's size or shape or structure." [PATOC:GVG]
+subset: attribute_slim
+is_a: PATO:0001241 ! physical object quality
 
 [Term]
 id: PATO:0000057
@@ -48,6 +67,15 @@ subset: disposition_slim
 subset: relational_slim
 synonym: "sensitivity" EXACT []
 is_a: PATO:0001995 ! organismal quality
+
+[Term]
+id: PATO:0000161
+name: rate
+namespace: quality
+def: "A quality of a single process inhering in a bearer by virtue of the bearer's occurrence per unit time." [PATOC:melissa]
+subset: attribute_slim
+subset: scalar_slim
+is_a: PATO:0002062 ! physical quality of a process
 
 [Term]
 id: PATO:0000169
@@ -170,6 +198,35 @@ subset: value_slim
 is_a: PATO:0000169 ! viability
 
 [Term]
+id: PATO:0000911
+name: decreased rate
+namespace: quality
+def: "A rate which is relatively low." [PATO:GVG]
+subset: mpath_slim
+subset: value_slim
+synonym: "slow rate" EXACT []
+is_a: PATO:0000161 ! rate
+is_a: PATO:0002302 ! decreased process quality
+intersection_of: PATO:0000161 ! rate
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0000912 ! increased rate
+
+[Term]
+id: PATO:0000912
+name: increased rate
+namespace: quality
+def: "A rate which is relatively high." [PATO:GVG]
+subset: mpath_slim
+subset: value_slim
+synonym: "fast rate" EXACT []
+synonym: "high rate" EXACT []
+is_a: PATO:0000161 ! rate
+is_a: PATO:0002304 ! increased process quality
+intersection_of: PATO:0000161 ! rate
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0000911 ! decreased rate
+
+[Term]
 id: PATO:0001043
 name: susceptibility toward
 namespace: quality
@@ -193,6 +250,43 @@ subset: scalar_slim
 synonym: "resistance" EXACT []
 is_a: PATO:0001995 ! organismal quality
 relationship: is_opposite_of PATO:0001043 ! susceptibility toward
+
+[Term]
+id: PATO:0001159
+name: concentrated
+namespace: quality
+def: "A concentration quality inhering in a bearer by virtue of the bearer's exhibiting concentration." [PATOC:GVG]
+subset: relational_slim
+subset: value_slim
+is_a: PATO:0000033 ! concentration of
+
+[Term]
+id: PATO:0001162
+name: increased concentration
+namespace: quality
+def: "A concentration which is higher relative to the normal or average." [PATOC:GVG]
+subset: relational_slim
+subset: value_slim
+synonym: "high concentration" EXACT []
+is_a: PATO:0001159 ! concentrated
+is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0001159 ! concentrated
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001163 ! decreased concentration
+
+[Term]
+id: PATO:0001163
+name: decreased concentration
+namespace: quality
+def: "A concentration which is lower relative to the normal or average." [PATOC:GVG]
+subset: relational_slim
+subset: value_slim
+synonym: "low concentration" EXACT []
+is_a: PATO:0001159 ! concentrated
+is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0001159 ! concentrated
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001162 ! increased concentration
 
 [Term]
 id: PATO:0001178
@@ -251,6 +345,17 @@ synonym: "time" RELATED []
 is_a: PATO:0002062 ! physical quality of a process
 
 [Term]
+id: PATO:0001457
+name: sensitivity of a process
+namespace: quality
+def: "A quality of a process inhering in bearer by virtue of the bearer's disposition to respond to stimulation." [PATOC:GVG]
+subset: attribute_slim
+subset: disposition_slim
+subset: relational_slim
+synonym: "sensitivity of occurrent" EXACT []
+is_a: PATO:0002062 ! physical quality of a process
+
+[Term]
 id: PATO:0001549
 name: increased sensitivity toward
 namespace: quality
@@ -281,6 +386,52 @@ is_a: PATO:0002303 ! decreased object quality
 intersection_of: PATO:0000516 ! sensitive toward
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001549 ! increased sensitivity toward
+
+[Term]
+id: PATO:0001551
+name: increased sensitivity of a process
+namespace: quality
+def: "A sensitivity of a process which is higher than normal or average." [PATO:GVG]
+subset: relational_slim
+subset: value_slim
+synonym: "high sensitivity of occurrent" EXACT []
+synonym: "increased sensitivity of occurrent" EXACT []
+is_a: PATO:0001457 ! sensitivity of a process
+is_a: PATO:0002304 ! increased process quality
+intersection_of: PATO:0001457 ! sensitivity of a process
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001552 ! decreased sensitivity of a process
+
+[Term]
+id: PATO:0001552
+name: decreased sensitivity of a process
+namespace: quality
+def: "A sensitivity of a process which is lower than normal or average." [PATO:GVG]
+subset: relational_slim
+subset: value_slim
+synonym: "decreased sensitivity of occurrent" EXACT []
+synonym: "low sensitivity of occurrent" EXACT []
+is_a: PATO:0001457 ! sensitivity of a process
+is_a: PATO:0002302 ! decreased process quality
+intersection_of: PATO:0001457 ! sensitivity of a process
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001551 ! increased sensitivity of a process
+
+[Term]
+id: PATO:0001555
+name: has number of
+namespace: quality
+def: "The number of parts of a particular type that the bearer entity has. This is a relational quality, and thus holds between two entities: the bearer of the quality, and the type of parts." [PATOC:CJM]
+subset: attribute_slim
+subset: relational_slim
+synonym: "cardinality" RELATED []
+synonym: "extra or missing physical or functional parts" EXACT []
+synonym: "has or lacks parts of type" EXACT []
+synonym: "mereological quality" EXACT []
+synonym: "number" RELATED []
+synonym: "number of" EXACT []
+xref: OBO_REL:has_part
+is_a: PATO:0001241 ! physical object quality
 
 [Term]
 id: PATO:0001558
@@ -332,11 +483,65 @@ intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001650 ! increased resistance to
 
 [Term]
+id: PATO:0001905
+name: has normal numbers of parts of type
+namespace: quality
+def: "The bearer of this quality has_part = n, where n is the normal amount for a comparable organism. Note that the bearer of the quality is the whole, not the part." [PATOC:CJM]
+subset: relational_slim
+synonym: "having physical part" EXACT []
+is_a: PATO:0001555 ! has number of
+
+[Term]
 id: PATO:0001995
 name: organismal quality
 namespace: quality
 def: "A quality that inheres in an entire organism or part of an organism." [PATOC:CJM]
 is_a: PATO:0001241 ! physical object quality
+
+[Term]
+id: PATO:0001999
+name: lacks parts or has fewer parts of type
+namespace: quality
+def: "The bearer of this quality has_part < n of the indicated entity type, where n is the normal amount for a comparable organism. Note that the bearer of the quality is the whole, not the part. Formally: If a bearer entity e has fewer parts of type X at time t, then the number of instances x of X at t such that x part_of e is < n, where n is either the normal number for comparable entities, or n is stated explicitly. This case includes the limit case, where the bearer lacks all parts of the specified type." [PATOC:CJM]
+subset: relational_slim
+synonym: "loss of" EXACT []
+is_a: PATO:0002083 ! altered number of
+
+[Term]
+id: PATO:0002001
+name: has fewer parts of type
+namespace: quality
+alt_id: PATO:0001569
+def: "The bearer of this quality has_part < n AND has_part > 0 of the indicated entity type, where n is the normal amount for a comparable organism. Note that the bearer of the quality is the whole, not the part. Formally: If a bearer entity e has fewer parts of type X at time t, then the number of instances x of X at t such that x part_of e is < n, where n is either the normal number for comparable entities, or n is stated explicitly." [PATOC:CJM]
+comment: Example: [E=hand Q=has_fewer_parts_of_type E2=digit] - applies to an organism that has no less fingers than is normal for organisms of that type.
+subset: relational_slim
+synonym: "decreased number of" EXACT []
+synonym: "has decreased number of" EXACT []
+synonym: "has fewer physical parts of type" EXACT []
+is_a: PATO:0001999 ! lacks parts or has fewer parts of type
+is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0001999 ! lacks parts or has fewer parts of type
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0002002 ! has extra parts of type
+
+[Term]
+id: PATO:0002002
+name: has extra parts of type
+namespace: quality
+alt_id: PATO:0001560
+def: "The bearer of this quality has_part > n of the indicated entity type, where n is the normal amount for a comparable organism. Note that the bearer of the quality is the whole, not the part." [PATOC:CJM]
+comment: In polydactyly, the bearer of the quality is the hand, and the entity type being counted is 'finger'. In EQ syntax, E=hand, Q=<this> E2=finger.
+subset: relational_slim
+synonym: "has extra parts of" EXACT []
+synonym: "has increased number of" EXACT []
+synonym: "having extra physical parts" EXACT []
+synonym: "having supernumerary physical parts" EXACT []
+synonym: "increased number of" EXACT []
+is_a: PATO:0002083 ! altered number of
+is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0002083 ! altered number of
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0002001 ! has fewer parts of type
 
 [Term]
 id: PATO:0002051
@@ -374,6 +579,17 @@ subset: attribute_slim
 is_a: PATO:0001236 ! process quality
 created_by: george
 creation_date: 2009-06-05T09:16:46Z
+
+[Term]
+id: PATO:0002083
+name: altered number of
+namespace: quality
+def: "Having extra or fewer parts." [PATOC:GVG]
+subset: attribute_slim
+subset: relational_slim
+is_a: PATO:0001555 ! has number of
+created_by: George Gkoutos
+creation_date: 2009-09-21T10:41:58Z
 
 [Term]
 id: PATO:0002146
@@ -414,6 +630,17 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0002147 ! reduced virulence
 created_by: george
 creation_date: 2009-10-30T05:13:10Z
+
+[Term]
+id: PATO:0002182
+name: molecular quality
+namespace: quality
+alt_id: PATO:0002061
+def: "A quality which inheres in a molecular entity, a single molecule, atom, ion, radical etc." [PATOC:GVG]
+synonym: "relational molecular quality" EXACT []
+is_a: PATO:0001241 ! physical object quality
+created_by: George Gkoutos
+creation_date: 2010-03-10T03:18:15Z
 
 [Term]
 id: PATO:0002300
@@ -525,6 +752,18 @@ property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-00
 property_value: http://purl.org/dc/elements/1.1/date 2018-08-02T04:24:52Z xsd:dateTime
 
 [Term]
+id: PATO:0045000
+name: normal rate
+namespace: quality
+def: "A rate which is relatively normal." []
+subset: mpath_slim
+subset: value_slim
+is_a: PATO:0000161 ! rate
+is_a: PATO:0045073 ! normal process quality
+intersection_of: PATO:0000161 ! rate
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+
+[Term]
 id: PATO:0045001
 name: normal object quality
 namespace: quality
@@ -535,6 +774,20 @@ intersection_of: has_relative_magnitude PATO:0000461 ! normal
 relationship: has_relative_magnitude PATO:0000461 ! normal
 created_by: Luke Slater
 creation_date: 2017-12-21T14:11:01Z
+
+[Term]
+id: PATO:0045010
+name: normal concentration
+namespace: quality
+def: "A concentration which is relatively normal or average." []
+subset: relational_slim
+subset: value_slim
+is_a: PATO:0001159 ! concentrated
+is_a: PATO:0045001 ! normal object quality
+intersection_of: PATO:0001159 ! concentrated
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0045047
@@ -611,6 +864,18 @@ subset: value_slim
 is_a: PATO:0000057 ! occurrence
 is_a: PATO:0045073 ! normal process quality
 intersection_of: PATO:0000057 ! occurrence
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+
+[Term]
+id: PATO:0045088
+name: normal sensitivity of a process
+namespace: quality
+def: "A sensitivity of a process which is relatively normal." []
+subset: relational_slim
+subset: value_slim
+is_a: PATO:0001457 ! sensitivity of a process
+is_a: PATO:0045073 ! normal process quality
+intersection_of: PATO:0001457 ! sensitivity of a process
 intersection_of: has_relative_magnitude PATO:0000461 ! normal
 
 [Typedef]

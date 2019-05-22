@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-05-16/phipo-simple-non-classified.owl
+data-version: phipo/releases/2019-05-22/phipo-simple-non-classified.owl
 ontology: phipo/phipo-simple-non-classified
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -188,8 +188,9 @@ property_value: creation:date 2018-05-04T13:11:04Z xsd:string
 id: PHIPO:0000018
 name: lipid droplets present in decreased numbers
 namespace: single_organism_phenotype
+def: "A single species phenotype observed in the vegetative growth phase of the life cycle in which cells contain fewer lipid droplets than normal." []
 xref: FYPO:0002552
-is_a: PHIPO:0000474 ! abnormal quantity of lipid droplets
+is_a: PHIPO:0000474 ! abnormal number of lipid droplets
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:12:20Z xsd:string
 
@@ -471,33 +472,37 @@ creation_date: 2018-07-13T12:10:14Z
 
 [Term]
 id: PHIPO:0000049
-name: increased quantity of sexual spores
+name: increased number of sexual spores
 namespace: single_organism_phenotype
-is_a: PHIPO:0000073 ! abnormal quantity of sexual spores
+def: "A population phenotype in which the frequency of occurence of sexual spores is increased." []
+is_a: PHIPO:0000073 ! abnormal number of sexual spores
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:16:49Z
 
 [Term]
 id: PHIPO:0000050
-name: decreased quantity of sexual spores
+name: decreased number of sexual spores
 namespace: single_organism_phenotype
-is_a: PHIPO:0000073 ! abnormal quantity of sexual spores
+def: "A population phenotype in which the frequency of occurence of sexual spores is decreased." []
+is_a: PHIPO:0000073 ! abnormal number of sexual spores
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:17:15Z
 
 [Term]
 id: PHIPO:0000051
-name: increased quantity of asexual spores
+name: increased number of asexual spores
 namespace: single_organism_phenotype
-is_a: PHIPO:0000082 ! abnormal quantity of asexual spores
+def: "A population phenotype in which the frequency of occurence of asexual spores is increased." []
+is_a: PHIPO:0000082 ! abnormal number of asexual spores
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:18:08Z
 
 [Term]
 id: PHIPO:0000052
-name: decreased quantity of asexual spores
+name: decreased number of asexual spores
 namespace: single_organism_phenotype
-is_a: PHIPO:0000082 ! abnormal quantity of asexual spores
+def: "A population phenotype in which the frequency of occurence of asexual spores is decreased." []
+is_a: PHIPO:0000082 ! abnormal number of asexual spores
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:18:34Z
 
@@ -535,8 +540,9 @@ creation_date: 2018-07-13T12:24:07Z
 
 [Term]
 id: PHIPO:0000057
-name: normal quantity of sexual spores
+name: normal number of sexual spores
 namespace: single_organism_phenotype
+def: "A population phenotype in which the frequency of occurence of sexual spores is normal  (i.e. indistinguishable from wild type)." []
 is_a: PHIPO:0000079 ! normal sexual sporogenesis
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:25:33Z
@@ -551,8 +557,9 @@ creation_date: 2018-07-13T12:26:14Z
 
 [Term]
 id: PHIPO:0000059
-name: normal quantity of asexual spores
+name: normal number of asexual spores
 namespace: single_organism_phenotype
+def: "A population phenotype in which the frequency of occurence of asexual spores is normal  (i.e. indistinguishable from wild type)." []
 is_a: PHIPO:0000080 ! normal asexual sporogenesis
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:27:14Z
@@ -663,8 +670,9 @@ creation_date: 2018-07-13T12:39:34Z
 
 [Term]
 id: PHIPO:0000073
-name: abnormal quantity of sexual spores
+name: abnormal number of sexual spores
 namespace: single_organism_phenotype
+def: "A population phenotype in which the frequency of occurence of sexual spores is abnormal." []
 is_a: PHIPO:0000077 ! abnormal sexual sporogenesis
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:40:05Z
@@ -735,8 +743,9 @@ creation_date: 2018-07-13T13:08:40Z
 
 [Term]
 id: PHIPO:0000082
-name: abnormal quantity of asexual spores
+name: abnormal number of asexual spores
 namespace: single_organism_phenotype
+def: "A population phenotype in which the frequency of occurence of asexual spores is abnormal." []
 is_a: PHIPO:0000078 ! abnormal asexual sporogenesis
 created_by: alaynecuzick
 creation_date: 2018-07-13T13:09:40Z
@@ -1448,8 +1457,10 @@ creation_date: 2018-10-01T12:12:12Z
 
 [Term]
 id: PHIPO:0000159
-name: normal subcellular component phenotype
+name: normal subcellular component
 namespace: single_organism_phenotype
+def: "A single species phenotype in which the amount, distribution, composition or morphology of a cell part is normal (i.e. indistinguishable from wild type)." []
+xref: FYPO:0001233
 is_a: PHIPO:0000463 ! subcellular component phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:12:52Z
@@ -1512,7 +1523,7 @@ creation_date: 2018-10-01T12:21:51Z
 id: PHIPO:0000165
 name: abnormal host lesion formation with pathogen
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000346 ! host nectrotic lesion with pathogen phenotype
+is_a: PHIPO:0000346 ! host necrotic lesion with pathogen phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:22:45Z
 
@@ -1779,7 +1790,7 @@ creation_date: 2018-10-01T13:14:39Z
 id: PHIPO:0000195
 name: normal host lesion formation with pathogen
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000346 ! host nectrotic lesion with pathogen phenotype
+is_a: PHIPO:0000346 ! host necrotic lesion with pathogen phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:26:34Z
 
@@ -1997,7 +2008,7 @@ creation_date: 2018-10-01T13:43:40Z
 
 [Term]
 id: PHIPO:0000219
-name: decreased quantity of pathogen deoxynivalenol production with host
+name: decreased level of pathogen deoxynivalenol produced with host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype where there is a decreased amount of deoxynivalenol." []
 is_a: PHIPO:0000229 ! abnormal pathogen host interaction biosynthesis of deoxynivalenol
@@ -2025,7 +2036,7 @@ creation_date: 2018-10-02T08:53:54Z
 
 [Term]
 id: PHIPO:0000222
-name: increased quantity of host lesions with pathogen
+name: increased number of host lesions with pathogen
 namespace: pathogen_host_interaction_phenotype
 is_a: PHIPO:0000165 ! abnormal host lesion formation with pathogen
 created_by: alaynecuzick
@@ -2033,7 +2044,7 @@ creation_date: 2018-10-02T08:56:00Z
 
 [Term]
 id: PHIPO:0000223
-name: decreased quantity of host lesions with pathogen
+name: decreased number of host lesions with pathogen
 namespace: pathogen_host_interaction_phenotype
 is_a: PHIPO:0000165 ! abnormal host lesion formation with pathogen
 created_by: alaynecuzick
@@ -2081,7 +2092,7 @@ creation_date: 2018-10-02T09:10:09Z
 id: PHIPO:0000228
 name: normal pathogen host interaction biosynthesis of deoxynivalenol
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype in which the biosynthesis of deoxynivalenol is normal (i.e. same as the wild type)." []
+def: "A pathogen host interaction phenotype in which the pathogen biosynthesis of deoxynivalenol is normal (i.e. same as the wild type)." []
 is_a: PHIPO:0000230 ! normal pathogen host interaction toxin biosynthetic process
 created_by: alaynecuzick
 creation_date: 2018-10-02T09:12:44Z
@@ -2090,7 +2101,7 @@ creation_date: 2018-10-02T09:12:44Z
 id: PHIPO:0000229
 name: abnormal pathogen host interaction biosynthesis of deoxynivalenol
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype in which the biosynthesis of deoxynivalenol is abnormal (i.e. different than the wild type)." []
+def: "A pathogen host interaction phenotype in which the pathogen biosynthesis of deoxynivalenol is abnormal (i.e. different than the wild type)." []
 is_a: PHIPO:0000218 ! abnormal pathogen host interaction toxin biosynthetic process
 created_by: alaynecuzick
 creation_date: 2018-10-02T09:12:59Z
@@ -2117,9 +2128,9 @@ creation_date: 2018-10-02T09:17:44Z
 
 [Term]
 id: PHIPO:0000232
-name: increased quantity of pathogen deoxynivalenol production with host
+name: increased level of pathogen deoxynivalenol produced with host
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype where there is a increased amount of deoxynivalenol." []
+def: "A pathogen host interaction phenotype where there is an increased amount of deoxynivalenol." []
 is_a: PHIPO:0000229 ! abnormal pathogen host interaction biosynthesis of deoxynivalenol
 created_by: alaynecuzick
 creation_date: 2018-10-02T09:18:35Z
@@ -2565,7 +2576,8 @@ creation_date: 2018-10-03T13:38:13Z
 id: PHIPO:0000274
 name: increased germination of asexual spore
 namespace: single_organism_phenotype
-is_a: PHIPO:0000162 ! population growth phenotype
+def: "A population phenotype in which the frequency of occurence of asexual spore germination is increased." []
+is_a: PHIPO:0000509 ! population phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-03T13:38:33Z
 
@@ -3017,6 +3029,8 @@ creation_date: 2018-10-19T13:41:59Z
 id: PHIPO:0000328
 name: normal cellular component organization
 namespace: single_organism_phenotype
+def: "A cellular process phenotype in which any process of cellular component organization at the cellular level is normal (i.e. indistinguishable from wild type)." []
+xref: FYPO:0006003
 is_a: PHIPO:0000407 ! cellular component organization phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-19T13:42:19Z
@@ -3045,6 +3059,7 @@ id: PHIPO:0000331
 name: penetration of host by pathogen phenotype
 namespace: pathogen_host_interaction_phenotype
 comment: this may be a child of 'pathogen growth with host phenotype'
+synonym: "pathogen entry into host phenotype" EXACT []
 is_a: PHIPO:0000001 ! pathogen host interaction phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-29T15:59:22Z
@@ -3163,7 +3178,7 @@ creation_date: 2018-10-29T16:32:47Z
 
 [Term]
 id: PHIPO:0000346
-name: host nectrotic lesion with pathogen phenotype
+name: host necrotic lesion with pathogen phenotype
 namespace: pathogen_host_interaction_phenotype
 is_a: PHIPO:0000216 ! pathogen host interaction disease symptom phenotype
 created_by: alaynecuzick
@@ -3211,8 +3226,9 @@ creation_date: 2018-11-05T13:24:13Z
 
 [Term]
 id: PHIPO:0000352
-name: normal pre penetration of host by pathogen
+name: normal development of pathogen penetration structure prior to entry into host
 namespace: pathogen_host_interaction_phenotype
+synonym: "normal pre penetration of host by pathogen" EXACT []
 is_a: PHIPO:0000350 ! normal penetration of host by pathogen phenotype
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:24:42Z
@@ -3221,14 +3237,16 @@ creation_date: 2018-11-05T13:24:42Z
 id: PHIPO:0000353
 name: normal penetration of host by pathogen
 namespace: pathogen_host_interaction_phenotype
+synonym: "normal pathogen entry into host" EXACT []
 is_a: PHIPO:0000350 ! normal penetration of host by pathogen phenotype
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:25:01Z
 
 [Term]
 id: PHIPO:0000354
-name: normal post penetration of host by pathogen
+name: normal post penetration growth of pathogen after entry into host
 namespace: pathogen_host_interaction_phenotype
+synonym: "normal post penetration of host by pathogen" EXACT []
 is_a: PHIPO:0000350 ! normal penetration of host by pathogen phenotype
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:25:33Z
@@ -3245,14 +3263,16 @@ creation_date: 2018-11-05T13:26:18Z
 id: PHIPO:0000356
 name: abnormal penetration of host by pathogen
 namespace: pathogen_host_interaction_phenotype
+synonym: "abnormal pathogen entry into host phenotype" EXACT []
 is_a: PHIPO:0000349 ! abnormal penetration of host by pathogen phenotype
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:26:35Z
 
 [Term]
 id: PHIPO:0000357
-name: altered functionality of pathogen penetration structure in contact with host
+name: abolished pathogen penetration into host
 namespace: pathogen_host_interaction_phenotype
+synonym: "abolished pathogen entry into host" EXACT []
 is_a: PHIPO:0000356 ! abnormal penetration of host by pathogen
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:28:51Z
@@ -3269,7 +3289,7 @@ creation_date: 2018-11-05T13:30:29Z
 id: PHIPO:0000359
 name: decreased pathogen penetration across the host barrier
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000357 ! altered functionality of pathogen penetration structure in contact with host
+is_a: PHIPO:0000356 ! abnormal penetration of host by pathogen
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:31:26Z
 
@@ -3277,7 +3297,7 @@ creation_date: 2018-11-05T13:31:26Z
 id: PHIPO:0000360
 name: increased pathogen penetration across the host barrier
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000357 ! altered functionality of pathogen penetration structure in contact with host
+is_a: PHIPO:0000356 ! abnormal penetration of host by pathogen
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:32:32Z
 
@@ -3285,7 +3305,7 @@ creation_date: 2018-11-05T13:32:32Z
 id: PHIPO:0000361
 name: delayed pathogen penetration across the host barrier
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000357 ! altered functionality of pathogen penetration structure in contact with host
+is_a: PHIPO:0000356 ! abnormal penetration of host by pathogen
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:32:57Z
 
@@ -3293,7 +3313,7 @@ creation_date: 2018-11-05T13:32:57Z
 id: PHIPO:0000362
 name: expedited pathogen penetration across the host barrier
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000357 ! altered functionality of pathogen penetration structure in contact with host
+is_a: PHIPO:0000356 ! abnormal penetration of host by pathogen
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:33:34Z
 
@@ -3431,6 +3451,8 @@ creation_date: 2018-12-05T11:33:05Z
 id: PHIPO:0000379
 name: abnormal cell wall organization
 namespace: single_organism_phenotype
+def: "A cellular process phenotype in which cell wall organization is abnormal. Cell wall organization results in the assembly, arrangement of constituent parts, or disassembly of the fungal-type cell wall." []
+xref: FYPO:0004805
 is_a: PHIPO:0000400 ! abnormal cellular component organization
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:33:32Z
@@ -3619,6 +3641,8 @@ creation_date: 2018-12-05T11:43:18Z
 id: PHIPO:0000400
 name: abnormal cellular component organization
 namespace: single_organism_phenotype
+def: "A cellular process phenotype in which any process of cellular component organization at the cellular level is abnormal." []
+xref: FYPO:0000335
 is_a: PHIPO:0000407 ! cellular component organization phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:43:39Z
@@ -3666,8 +3690,9 @@ creation_date: 2018-12-05T11:44:58Z
 
 [Term]
 id: PHIPO:0000406
-name: absence of nuclei
+name: nucleus absent
 namespace: single_organism_phenotype
+def: "A single organism phenotype in which the nucleus is absent." []
 is_a: PHIPO:0000934 ! abnormal nucleus
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:45:18Z
@@ -3676,6 +3701,12 @@ creation_date: 2018-12-05T11:45:18Z
 id: PHIPO:0000407
 name: cellular component organization phenotype
 namespace: single_organism_phenotype
+def: "A phenotype that affects a process of cellular component organization, i.e. the assembly, arrangement of constituent parts, or disassembly of a cellular component, that occurs at the cellular level." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+synonym: "cellular component organisation phenotype" EXACT []
+xref: FYPO:0000334
 is_a: PHIPO:0000034 ! cell phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:45:32Z
@@ -3702,7 +3733,8 @@ creation_date: 2018-12-05T11:46:27Z
 id: PHIPO:0000410
 name: decreased germination of asexual spore
 namespace: single_organism_phenotype
-is_a: PHIPO:0000162 ! population growth phenotype
+def: "A population phenotype in which the frequency of occurence of asexual spore germination is decreased." []
+is_a: PHIPO:0000509 ! population phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:46:43Z
 
@@ -3744,8 +3776,10 @@ creation_date: 2018-12-05T11:47:39Z
 
 [Term]
 id: PHIPO:0000415
-name: abnormal subcellular component phenotype
+name: abnormal subcellular component
 namespace: single_organism_phenotype
+def: "A single organism phenotype in which the amount, distribution, composition or morphology of a cell part is abnormal." []
+xref: FYPO:0000287
 is_a: PHIPO:0000463 ! subcellular component phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:47:55Z
@@ -4094,6 +4128,7 @@ creation_date: 2018-12-21T12:55:59Z
 id: PHIPO:0000463
 name: subcellular component phenotype
 namespace: single_organism_phenotype
+def: "A single organism phenotype that affects the subcellular components in a cell." []
 is_a: PHIPO:0000034 ! cell phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-21T12:56:41Z
@@ -4186,8 +4221,9 @@ creation_date: 2019-01-11T11:55:09Z
 
 [Term]
 id: PHIPO:0000474
-name: abnormal quantity of lipid droplets
+name: abnormal number of lipid droplets
 namespace: single_organism_phenotype
+def: "A single species phenotype observed in the vegetative growth phase of the life cycle in which cells contain a different number of lipid droplets than normal." []
 is_a: PHIPO:0000478 ! lipid droplet phenotype
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:21:01Z
@@ -4196,6 +4232,7 @@ creation_date: 2019-01-14T12:21:01Z
 id: PHIPO:0000475
 name: decreased size of lipid droplet
 namespace: single_organism_phenotype
+def: "A single organism phenotype observed in the vegetative growth phase of the life cycle in which the size of lipid droplets is decreased." []
 is_a: PHIPO:0000036
 is_a: PHIPO:0000478 ! lipid droplet phenotype
 created_by: alaynecuzick
@@ -4221,9 +4258,9 @@ creation_date: 2019-01-14T12:23:06Z
 id: PHIPO:0000478
 name: lipid droplet phenotype
 namespace: single_organism_phenotype
-def: "GO definition of lipid droplet. An intracellular non-membrane-bounded organelle comprising a matrix of coalesced lipids surrounded by a phospholipid monolayer. May include associated proteins." []
+def: "A single organism phenotype that affects an intracellular non-membrane-bounded organelle comprising a matrix of coalesced lipids surrounded by a phospholipid monolayer. May include associated proteins." []
 xref: GO:0005811
-is_a: PHIPO:0000415 ! abnormal subcellular component phenotype
+is_a: PHIPO:0000415 ! abnormal subcellular component
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:23:44Z
 
@@ -4231,6 +4268,7 @@ creation_date: 2019-01-14T12:23:44Z
 id: PHIPO:0000479
 name: increased size of lipid droplet
 namespace: single_organism_phenotype
+def: "A single organism phenotype observed in the vegetative growth phase of the life cycle in which the size of lipid droplets is increased." []
 is_a: PHIPO:0000036
 is_a: PHIPO:0000478 ! lipid droplet phenotype
 created_by: alaynecuzick
@@ -4364,7 +4402,7 @@ creation_date: 2019-01-18T13:06:19Z
 
 [Term]
 id: PHIPO:0000501
-name: increased quantity of deoxynivalenol
+name: increased level of deoxynivalenol
 namespace: single_organism_phenotype
 def: "A single organism phenotype where there is an increased amount of deoxynivalenol." []
 is_a: PHIPO:0000500 ! abnormal biosynthesis of deoxynivalenol
@@ -4373,7 +4411,7 @@ creation_date: 2019-01-18T13:06:49Z
 
 [Term]
 id: PHIPO:0000502
-name: decreased quantity of deoxynivalenol
+name: decreased level of deoxynivalenol
 namespace: single_organism_phenotype
 def: "A single organism phenotype where there is a decreased amount of deoxynivalenol." []
 is_a: PHIPO:0000500 ! abnormal biosynthesis of deoxynivalenol
@@ -4510,7 +4548,8 @@ creation_date: 2019-03-05T13:46:52Z
 id: PHIPO:0000517
 name: lipid droplets present in increased numbers
 namespace: single_organism_phenotype
-is_a: PHIPO:0000474 ! abnormal quantity of lipid droplets
+def: "A single species phenotype observed in the vegetative growth phase of the life cycle in which cells contain more lipid droplets than normal." []
+is_a: PHIPO:0000474 ! abnormal number of lipid droplets
 created_by: alaynecuzick
 creation_date: 2019-03-19T13:18:56Z
 
@@ -4518,8 +4557,9 @@ creation_date: 2019-03-19T13:18:56Z
 id: PHIPO:0000518
 name: lipid droplets present in normal numbers
 namespace: single_organism_phenotype
+def: "A single species phenotype observed in the vegetative growth phase of the life cycle in which cells contain the same number of lipid droplets as normal (i.e. indistinguishable from wild type)." []
 xref: FYPO:0006791
-is_a: PHIPO:0000159 ! normal subcellular component phenotype
+is_a: PHIPO:0000159 ! normal subcellular component
 created_by: alaynecuzick
 creation_date: 2019-03-19T13:20:18Z
 
@@ -7813,7 +7853,12 @@ creation_date: 2019-05-01T09:18:19Z
 
 [Term]
 id: PHIPO:0000925
-name: to repurpose
+name: abnormal cell wall organization or biogenesis
+namespace: single_organism_phenotype
+def: "A cellular process phenotype in which the biosynthesis of constituent macromolecules, assembly, arrangement of constituent parts, or disassembly of a cell wall is abnormal." []
+synonym: "abnormal cell wall integrity" EXACT []
+is_a: PHIPO:0000929 ! abnormal cellular process
+is_a: PHIPO:0000931 ! cell wall organization or biogenesis phenotype
 created_by: alaynecuzick
 creation_date: 2019-05-01T10:52:19Z
 
@@ -7848,29 +7893,50 @@ creation_date: 2019-05-01T10:53:36Z
 
 [Term]
 id: PHIPO:0000929
-name: decreased pathogen host interaction respiratory burst in host
-is_a: PHIPO:0000931 ! to reuse
+name: abnormal cellular process
+namespace: single_organism_phenotype
+def: "A phenotype in which a specific cellular process is abnormal." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+xref: FYPO:0000628
+is_a: PHIPO:0000930 ! cellular process phenotype
 created_by: alaynecuzick
 creation_date: 2019-05-01T10:58:54Z
 
 [Term]
 id: PHIPO:0000930
-name: increased pathogen host interaction respiratory burst in host
-is_a: PHIPO:0000931 ! to reuse
+name: cellular process phenotype
+namespace: single_organism_phenotype
+def: "A phenotype that affects a cellular process." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+xref: FYPO:0000114
+is_a: PHIPO:0000034 ! cell phenotype
 created_by: alaynecuzick
 creation_date: 2019-05-01T10:59:15Z
 
 [Term]
 id: PHIPO:0000931
-name: to reuse
-is_a: PHIPO:0000925 ! to repurpose
+name: cell wall organization or biogenesis phenotype
+namespace: single_organism_phenotype
+def: "A phenotype that affects cell wall organization or biogenesis." []
+synonym: "cell wall integrity phenotype" EXACT []
+is_a: PHIPO:0000930 ! cellular process phenotype
 created_by: alaynecuzick
 creation_date: 2019-05-01T10:59:55Z
 
 [Term]
 id: PHIPO:0000932
-name: gain of pathogen host interaction respiratory burst in host
-is_a: PHIPO:0000931 ! to reuse
+name: normal cellular process
+namespace: single_organism_phenotype
+def: "A phenotype in which a specific cellular process is normal (i.e. indistinguishable from wild type)." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+xref: FYPO:0000627
+is_a: PHIPO:0000930 ! cellular process phenotype
 created_by: alaynecuzick
 creation_date: 2019-05-01T11:00:10Z
 
@@ -7878,11 +7944,131 @@ creation_date: 2019-05-01T11:00:10Z
 id: PHIPO:0000934
 name: abnormal nucleus
 namespace: single_organism_phenotype
-def: "A physical cellular phenotype in which the amount, distribution, or morphology of all or part of the nucleus is abnormal." []
+def: "A single organism phenotype in which the amount, distribution, or morphology of all or part of the nucleus is abnormal." []
 xref: FYPO:0002403
-is_a: PHIPO:0000463 ! subcellular component phenotype
+is_a: PHIPO:0000415 ! abnormal subcellular component
 created_by: alaynecuzick
 creation_date: 2019-05-08T13:37:01Z
+
+[Term]
+id: PHIPO:0000935
+name: decreased cell wall integrity
+namespace: single_organism_phenotype
+def: "A cellular process phenotype in which the biosynthesis of constituent macromolecules, assembly, arrangement of constituent parts, or disassembly of a cell wall is decreased." []
+synonym: "decreased cell wall organization or biogenesis" EXACT []
+is_a: PHIPO:0000925 ! abnormal cell wall organization or biogenesis
+created_by: alaynecuzick
+creation_date: 2019-05-17T10:49:13Z
+
+[Term]
+id: PHIPO:0000936
+name: cell lysis
+namespace: single_organism_phenotype
+def: "An single species phenotype in which a cell lyses, i.e. the plasma membrane ruptures and cytoplasm is lost." []
+xref: FYPO:0002488
+is_a: PHIPO:0000034 ! cell phenotype
+created_by: alaynecuzick
+creation_date: 2019-05-21T10:29:14Z
+
+[Term]
+id: PHIPO:0000937
+name: asexual spore lysis present
+namespace: single_organism_phenotype
+def: "An single species phenotype in which an asexual spore lyses, i.e. the plasma membrane ruptures and cytoplasm is lost." []
+synonym: "asexual spore cytolysis present" EXACT []
+xref: FYPO:0002489
+is_a: PHIPO:0000936 ! cell lysis
+created_by: alaynecuzick
+creation_date: 2019-05-21T10:29:30Z
+
+[Term]
+id: PHIPO:0000938
+name: vegetative cell lysis
+namespace: single_organism_phenotype
+def: "An single species phenotype in which a vegetative cell lyses, i.e. the plasma membrane ruptures and cytoplasm is lost." []
+xref: FYPO:0000647
+is_a: PHIPO:0000936 ! cell lysis
+created_by: alaynecuzick
+creation_date: 2019-05-21T10:30:07Z
+
+[Term]
+id: PHIPO:0000939
+name: asexual spore lysis absent
+namespace: single_organism_phenotype
+def: "An single species phenotype in which an asexual spore does not lyse, i.e. the plasma membrane ruptures and cytoplasm is lost." []
+synonym: "asexual spore cytolysis absent" EXACT []
+xref: FYPO:0002489
+is_a: PHIPO:0000936 ! cell lysis
+created_by: alaynecuzick
+creation_date: 2019-05-21T11:22:31Z
+
+[Term]
+id: PHIPO:0000940
+name: abnormal germ tube
+namespace: single_organism_phenotype
+def: "A single species phenotype where the slender tubular outgrowth first produced by most spores in germination is abnormal." []
+is_a: PHIPO:0000402 ! individual organism phenotype
+created_by: alaynecuzick
+creation_date: 2019-05-21T11:34:47Z
+
+[Term]
+id: PHIPO:0000941
+name: short germ tube
+namespace: single_organism_phenotype
+def: "A single species phenotype where the slender tubular outgrowth first produced by most spores in germination is shorter than normal." []
+is_a: PHIPO:0000940 ! abnormal germ tube
+created_by: alaynecuzick
+creation_date: 2019-05-21T11:35:21Z
+
+[Term]
+id: PHIPO:0000943
+name: sensitive to hydrogen peroxide
+namespace: single_organism_phenotype
+def: "A phenotype in which a population of a single-species shows increased sensitivity to hydrogen peroxide, manifested as an affect on the extent of population growth." []
+is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+created_by: alaynecuzick
+creation_date: 2019-05-21T11:55:15Z
+
+[Term]
+id: PHIPO:0000944
+name: altered level of substance in cell
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of a specific substance measured in a cell differs from normal." []
+synonym: "abnormal level of substance in cell" EXACT []
+xref: FYPO:0000989
+is_a: PHIPO:0000034 ! cell phenotype
+created_by: alaynecuzick
+creation_date: 2019-05-21T11:59:04Z
+
+[Term]
+id: PHIPO:0000945
+name: altered cellular reactive oxygen species level
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of reactive oxygen species (ROS) measured in a cell differs from normal." []
+synonym: "abnormal cellular reactive oxygen species level" EXACT []
+synonym: "abnormal cellular ROS accumulation" RELATED []
+xref: FYPO:0002142
+is_a: PHIPO:0000944 ! altered level of substance in cell
+created_by: alaynecuzick
+creation_date: 2019-05-21T12:00:07Z
+
+[Term]
+id: PHIPO:0000946
+name: decreased cellular reactive oxygen species level
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of reactive oxygen species (ROS) measured in a cell is lower than normal." []
+is_a: PHIPO:0000945 ! altered cellular reactive oxygen species level
+created_by: alaynecuzick
+creation_date: 2019-05-21T12:01:32Z
+
+[Term]
+id: PHIPO:0000947
+name: increased cellular reactive oxygen species level
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of reactive oxygen species (ROS) measured in a cell is higher than normal." []
+is_a: PHIPO:0000945 ! altered cellular reactive oxygen species level
+created_by: alaynecuzick
+creation_date: 2019-05-21T12:01:41Z
 
 [Typedef]
 id: PHIPO:0000304

@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-05-16/imports/chebi_import.owl
+data-version: phipo/releases/2019-05-22/imports/chebi_import.owl
 ontology: phipo/imports/chebi_import
 
 [Term]
@@ -62,6 +62,47 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "MHWLWQUZZRMNGJ-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "232.23530" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "232.08479" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "CCn1cc(C(O)=O)c(=O)c2ccc(C)nc12" xsd:string
+
+[Term]
+id: CHEBI:10022
+name: deoxynivalenol
+namespace: chebi_ontology
+def: "A trichothecene mycotoxin produced by Fusarium to which wheat, barley, maize (corn) and their products are susceptible to contamination." []
+subset: 3_STAR
+synonym: "3alpha,7alpha,15-trihydroxy-12,13-epoxytrichothec-9-en-8-one" EXACT IUPAC_NAME [IUPAC]
+synonym: "3alpha,7alpha,15-trihydroxy-12,13-epoxytrichothec-9-en-8-one" RELATED [ChemIDplus]
+synonym: "4-Deoxynivalenol" RELATED [ChemIDplus]
+synonym: "4-Desoxynivalenol" RELATED [ChemIDplus]
+synonym: "Dehydronivalenol" RELATED [ChemIDplus]
+synonym: "Desoxynivalenol" RELATED [ChemIDplus]
+synonym: "DON" RELATED [KEGG_COMPOUND]
+synonym: "Vomitoxin" RELATED [KEGG_COMPOUND]
+xref: CAS:51481-10-8 "KEGG COMPOUND"
+xref: KEGG:C09747
+xref: KNApSAcK:C00003201
+xref: LIPID_MAPS_instance:LMPR0103180002 "LIPID MAPS"
+xref: PMID:28780485 "Europe PMC"
+xref: PMID:30284112 "Europe PMC"
+xref: PMID:30714884 "Europe PMC"
+xref: PMID:30760085 "Europe PMC"
+xref: PMID:30802751 "Europe PMC"
+xref: PMID:30806951 "Europe PMC"
+xref: PMID:30841652 "Europe PMC"
+xref: Wikipedia:Vomitoxin
+is_a: CHEBI:15734 ! primary alcohol
+is_a: CHEBI:2468 ! secondary alpha-hydroxy ketone
+is_a: CHEBI:27136 ! triol
+is_a: CHEBI:3992 ! cyclic ketone
+is_a: CHEBI:51689 ! enone
+is_a: CHEBI:55517 ! trichothecene
+relationship: has_role CHEBI:25442 ! mycotoxin
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C15H20O6" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C15H20O6/c1-7-3-9-14(5-16,11(19)10(7)18)13(2)4-8(17)12(21-9)15(13)6-20-15/h3,8-9,11-12,16-17,19H,4-6H2,1-2H3/t8-,9-,11-,12-,13-,14-,15-/m1/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "LINOMUASTDIRTM-LZTLOYDTSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "296.319" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "296.12599" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C1O[C@@]21[C@]3([C@@]4([C@@](C=C(C)C([C@H]4O)=O)(O[C@@]2([C@H](O)C3)[H])[H])CO)C" xsd:string
 
 [Term]
 id: CHEBI:10023
@@ -4530,8 +4571,8 @@ namespace: chebi_ontology
 subset: 3_STAR
 synonym: ">C=O" RELATED [IUPAC]
 synonym: "carbonyl" EXACT IUPAC_NAME [IUPAC]
-synonym: "carbonyl group" EXACT [UniProt]
 synonym: "carbonyl group" EXACT [ChEBI]
+synonym: "carbonyl group" EXACT [UniProt]
 is_a: CHEBI:51422 ! organodiyl group
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CO" xsd:string
@@ -5355,6 +5396,28 @@ property_value: http://purl.obolibrary.org/obo/chebi/mass "138.121" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "138.03169" xsd:string
 
 [Term]
+id: CHEBI:2468
+name: secondary alpha-hydroxy ketone
+namespace: chebi_ontology
+def: "An alpha-hydroxy ketone in which the carbonyl group and the hydroxy group are linked by a carbon bearing one hydrogen and one organyl group. Secondary alpha-hydroxy ketones are also known as acyloins, and are formally derived from reductive coupling of two carboxylic acid groups." []
+subset: 3_STAR
+synonym: "acyloin" RELATED [ChEBI]
+synonym: "acyloins" RELATED [ChEBI]
+synonym: "secondary alpha-hydroxy ketones" RELATED [ChEBI]
+synonym: "secondary alpha-hydroxy-ketone" RELATED [ChEBI]
+synonym: "secondary alpha-hydroxy-ketones" RELATED [ChEBI]
+synonym: "secondary alpha-hydroxyketone" RELATED [ChEBI]
+synonym: "secondary alpha-hydroxyketones" RELATED [ChEBI]
+xref: Wikipedia:Acyloin
+is_a: CHEBI:139588 ! alpha-hydroxy ketone
+is_a: CHEBI:35681 ! secondary alcohol
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C2H2O2R2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "58.036" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "58.00548" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C(C(=O)*)(O)([H])*" xsd:string
+
+[Term]
 id: CHEBI:24712
 name: hydroxymethyl group
 namespace: chebi_ontology
@@ -5831,6 +5894,17 @@ synonym: "mutagenos" RELATED [ChEBI]
 synonym: "mutagens" RELATED [ChEBI]
 xref: Wikipedia:Mutagen
 is_a: CHEBI:50902 ! genotoxin
+
+[Term]
+id: CHEBI:25442
+name: mycotoxin
+namespace: chebi_ontology
+def: "Poisonous substance produced by fungi." []
+subset: 3_STAR
+synonym: "fungal toxins" RELATED [ChEBI]
+synonym: "mycotoxins" RELATED [ChEBI]
+is_a: CHEBI:27026 ! toxin
+is_a: CHEBI:76946 ! fungal metabolite
 
 [Term]
 id: CHEBI:25477
@@ -22024,6 +22098,23 @@ property_value: http://purl.obolibrary.org/obo/chebi/mass "213.212" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "243.28000" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "213.00958" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "N12C([C@](*)(C1=O)OC)SCC(=C2C(O)=O)*" xsd:string
+
+[Term]
+id: CHEBI:55517
+name: trichothecene
+namespace: chebi_ontology
+def: "Any one of a large family of chemically related mycotoxins with a structure based on a sesquiterpene skeleton. The most important structural features causing the biological activities of trichothecenes are a 12,13-epoxy ring, the presence of hydroxy or acetyl groups at appropriate positions on the trichothecene nucleus and the structure and position of the side-chain." []
+subset: 3_STAR
+synonym: "trichothecenes" RELATED [ChEBI]
+is_a: CHEBI:26658 ! sesquiterpenoid
+is_a: CHEBI:32955 ! epoxide
+is_a: CHEBI:38166 ! organic heteropolycyclic compound
+relationship: has_role CHEBI:25442 ! mycotoxin
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C15H17O2R5" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "229.29430" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "229.12285" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H][C@]12O[C@]3([H])[C@H]([*])[C@@H]([*])[C@@](C)(C33CO3)C1(C[*])C([*])C([*])C(C)=C2" xsd:string
 
 [Term]
 id: CHEBI:5653
