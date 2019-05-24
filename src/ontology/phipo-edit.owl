@@ -334,12 +334,10 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000004"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where the pathogenicity is normal (i.e. the same as wild-type), and the wild-type exhibits pathogenicity</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where the pathogenicity is normal (i.e. the same as wild-type) , and the wild-type exhibits no pathogenicity</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T12:42:00Z</obo:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logical definition
-AC_pathogenic and AC_pathogenicity and (has_relative_magnitude some normal (PATO:0000461))</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogenicity absent</rdfs:label>
     </owl:Class>
     
@@ -349,12 +347,10 @@ AC_pathogenic and AC_pathogenicity and (has_relative_magnitude some normal (PATO
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000004"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where the pathogenicity is normal (i.e. the same as wild-type) , and the wild-type exhibits no pathogenicity</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where the pathogenicity is normal (i.e. the same as wild-type), and the wild-type exhibits pathogenicity</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T12:42:16Z</obo:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logical definition
-AC_non_pathogenic and AC_pathogenicity and (has_relative_magnitude some normal)</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogenicity present</rdfs:label>
     </owl:Class>
     
@@ -888,11 +884,12 @@ With MU: The pathogen does have a pre-penetration defect (development of a penet
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000035 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000035">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000034"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000039"/>
+        <obo:IAO_0000115>A pathogen host phenotype where the mutualism phenotype is normal (i.e. the same as wild-type), and the wild-type interaction exhibits mutualism.</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-09T13:41:47Z</obo:creation_date>
-        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal excretion of intracellular content</rdfs:label>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mutualism present</rdfs:label>
     </owl:Class>
     
 
@@ -935,7 +932,7 @@ With MU: The pathogen does have a pre-penetration defect (development of a penet
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000039">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000038"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype in which the interaction is the same as the wild-type, no asymptomatic colonisation or disease formation symtoms are visible.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype in which the interaction is the same as the wild-type, no asymptomatic colonisation or disease formation symptoms are visible.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-10T11:52:33Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
@@ -5672,7 +5669,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000331 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000331">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000332"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T15:59:22Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>pathogen entry into host phenotype</oboInOwl:hasExactSynonym>
@@ -13181,6 +13178,19 @@ A single organism cell population phenotype in which none of the cells in the po
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-21T12:01:41Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">increased cellular reactive oxygen species level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000948 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000948">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000039"/>
+        <obo:IAO_0000115>A pathogen host interaction where the mutualism phenotype is normal (i.e. the same as wild-type), and the wild-type interaction does not exhibit mutualism.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-24T11:02:11Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">mutualism absent</rdfs:label>
     </owl:Class>
     
 
