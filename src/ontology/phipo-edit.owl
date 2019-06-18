@@ -356,9 +356,10 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000011">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000512"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is relevant to virulence. Virulence is the severity to which a pathogen (species or strain) is able to cause infectious disease in another organism.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype that is relevant to virulence. Virulence is the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism. (Virulence is observed where pathogenicity is present).</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:02:03Z</obo:creation_date>
+        <oboInOwl:hasExactSynonym>disease severity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_do_not_manually_annotate</oboInOwl:inSubset>
@@ -372,12 +373,13 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000012">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000011"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where virulence is normal (i.e. the same as wild-type).</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is unchanged (i.e. the same degree of infectious disease as wild-type interaction).</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:02:23Z</obo:creation_date>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unaffected virulence (exact)</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>normal virulence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>unaffected disease severity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">normal virulence</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unaffected virulence</rdfs:label>
     </owl:Class>
     
 
@@ -385,12 +387,12 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000013 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000013">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000011"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where virulence is abnormal (i.e. different than wild-type).</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:02:39Z</obo:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal virulence</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete abnormal virulence</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -398,11 +400,12 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000014 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000014">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000013"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where virulence is increased (compared to normal).</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000011"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is increased (i.e. more symptoms than normal).</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:07:31Z</obo:creation_date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hypervirulence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>increased disease severity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increased virulence</rdfs:label>
     </owl:Class>
@@ -412,12 +415,12 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000015 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000015">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000013"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where virulence is decreased (i.e. fewer symptoms than normal)</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000011"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is decreased (i.e. fewer symptoms than normal).</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:08:10Z</obo:creation_date>
-        <oboInOWL:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decreased virulence</oboInOWL:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decreased virulence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>reduced disease severity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reduced virulence</rdfs:label>
     </owl:Class>
