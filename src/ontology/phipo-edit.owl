@@ -277,27 +277,12 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000005 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000005">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000304"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0040003"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000006"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where the pathogenicity is abnormal (i.e different than wild-type)</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T12:39:00Z</obo:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal pathogenicity</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete abnormal pathogenicity</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -359,7 +344,7 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000009 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000009">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000005"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000006"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where pathogenicity is observed in a mutant that is absent in the wild-type strain.</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T12:45:12Z</obo:creation_date>
@@ -395,7 +380,6 @@ AC_gain_of and AC_pathogenicity</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000005"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where pathogenicity observed in the wild-type strain is abolished.</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T12:45:31Z</obo:creation_date>
