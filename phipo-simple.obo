@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-06-12/phipo-simple.owl
+data-version: phipo/releases/2019-06-20/phipo-simple.owl
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -48,30 +48,25 @@ property_value: creation:date 2018-05-02T11:21:13Z xsd:string
 
 [Term]
 id: PHIPO:0000004
-name: normal pathogenicity
+name: unaffected pathogenicity
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the pathogenicity is normal (i.e the same as wild-type)" []
-synonym: "unaltered pathogenicity (exact); unaffected pathogenicity (exact); unchanged pathogenicity (exact)" EXACT []
+def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is unaffected (i.e the same as wild-type, this could be pathogenicity present or pathogenicity absent)." []
+synonym: "normal pathogenicity" EXACT []
+synonym: "unaffected disease causing ability" EXACT []
+synonym: "unaltered pathogenicity" EXACT []
+synonym: "unchanged pathogenicity" EXACT []
 is_a: PHIPO:0000006 ! pathogenicity phenotype
-is_a: PHIPO:0000483 ! normal pathogen host interaction phenotype
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier
-intersection_of: RO:0000052 PATO:0040003
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T12:38:43Z xsd:string
 
 [Term]
 id: PHIPO:0000005
-name: abnormal pathogenicity
+name: obsolete abnormal pathogenicity
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the pathogenicity is abnormal (i.e different than wild-type)" []
-is_a: PHIPO:0000006 ! pathogenicity phenotype
-is_a: PHIPO:0000484 ! abnormal pathogen host interaction phenotype
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 PATO:0040003
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T12:39:00Z xsd:string
+is_obsolete: true
 
 [Term]
 id: PHIPO:0000006
@@ -81,11 +76,9 @@ def: "A phenotype that is relevant to pathogenicity. Pathogenicity is the abilit
 comment: Pathogenicity is a qualitative concept
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
+synonym: "disease causing ability" EXACT []
 synonym: "pathogenesis (related)" RELATED []
 is_a: PHIPO:0000512 ! pathogen host interaction tissue phenotype
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: RO:0000052 PATO:0040003
-relationship: RO:0000052 PATO:0040003
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T12:39:55Z xsd:string
 
@@ -93,8 +86,9 @@ property_value: creation:date 2018-05-04T12:39:55Z xsd:string
 id: PHIPO:0000007
 name: pathogenicity absent
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the pathogenicity is normal (i.e. the same as wild-type) , and the wild-type exhibits no pathogenicity" []
-is_a: PHIPO:0000004 ! normal pathogenicity
+def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is absent." []
+synonym: "disease causing ability absent" EXACT []
+is_a: PHIPO:0000006 ! pathogenicity phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T12:42:00Z xsd:string
 
@@ -102,8 +96,9 @@ property_value: creation:date 2018-05-04T12:42:00Z xsd:string
 id: PHIPO:0000008
 name: pathogenicity present
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the pathogenicity is normal (i.e. the same as wild-type), and the wild-type exhibits pathogenicity" []
-is_a: PHIPO:0000004 ! normal pathogenicity
+def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is present." []
+synonym: "disease causing ability present" EXACT []
+is_a: PHIPO:0000006 ! pathogenicity phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T12:42:16Z xsd:string
 
@@ -111,26 +106,22 @@ property_value: creation:date 2018-05-04T12:42:16Z xsd:string
 id: PHIPO:0000009
 name: gain of pathogenicity
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where pathogenicity is observed in a mutant that is absent in the wild-type strain." []
-comment: Logical definition\nAC_gain_of and AC_pathogenicity
-synonym: "abnormal pathogenic phenotype" EXACT []
-is_a: PHIPO:0000005 ! abnormal pathogenicity
+def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is obtained (pathogenicity was absent and is now present)." []
+comment: Note that this ability to cause pathogenicity is a feature of the pathogen. Therefore gain/loss of pathogenicity should never be dependent on changes to the host genotype, only on changes to the pathogen genotype. If you are annotating changes in disease presence or absence dependent on the changes to the host consider increased/decreased virulence phenotypes.
+synonym: "gain of disease causing ability" EXACT []
+is_a: PHIPO:0000014 ! increased virulence
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T12:45:12Z xsd:string
-property_value: hasExactSynonym "abnormal pathogenic phenotype" xsd:string
 
 [Term]
 id: PHIPO:0000010
 name: loss of pathogenicity
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where pathogenicity observed in the wild-type strain is abolished." []
-synonym: "abnormal non pathogenic phenotype (exact); abolished pathogenicity (exact)" EXACT []
-is_a: PHIPO:0000005 ! abnormal pathogenicity
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: BFO:0000051 PATO:0001558
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 PATO:0040003
-relationship: BFO:0000051 PATO:0001558
+def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is abolished (pathogenicity was present and is now absent)." []
+comment: Note that this ability to cause pathogenicity is a feature of the pathogen. Therefore gain/loss of pathogenicity should never be dependent on changes to the host genotype, only on changes to the pathogen genotype. If you are annotating changes in disease presence or absence dependent on the changes to the host consider increased/decreased virulence phenotypes.
+synonym: "abolished pathogenicity" EXACT []
+synonym: "loss of disease causing ability" EXACT []
+is_a: PHIPO:0000007 ! pathogenicity absent
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T12:45:31Z xsd:string
 
@@ -138,56 +129,43 @@ property_value: creation:date 2018-05-04T12:45:31Z xsd:string
 id: PHIPO:0000011
 name: virulence phenotype
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype that is relevant to virulence. Virulence is the severity to which a pathogen (species or strain) is able to cause infectious disease in another organism." []
+def: "A phenotype that is relevant to virulence. Virulence is the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism. (Virulence is observed where pathogenicity is present)." []
 comment: Virulence is a quantitative concept
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
-is_a: PHIPO:0000512 ! pathogen host interaction tissue phenotype
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: RO:0000052 PATO:0002146
-relationship: RO:0000052 PATO:0002146
+synonym: "disease severity" EXACT []
+is_a: PHIPO:0000008 ! pathogenicity present
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:02:03Z xsd:string
 
 [Term]
 id: PHIPO:0000012
-name: normal virulence
+name: unaffected virulence
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where virulence is normal (i.e. the same as wild-type)." []
-synonym: "unaffected virulence (exact)" EXACT []
+def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is unchanged (i.e. the same degree of infectious disease as wild-type interaction)." []
+synonym: "normal virulence" EXACT []
+synonym: "unaffected disease severity" EXACT []
 is_a: PHIPO:0000011 ! virulence phenotype
-is_a: PHIPO:0000483 ! normal pathogen host interaction phenotype
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier
-intersection_of: RO:0000052 PATO:0002146
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:02:23Z xsd:string
 
 [Term]
 id: PHIPO:0000013
-name: abnormal virulence
+name: obsolete abnormal virulence
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where virulence is abnormal (i.e. different than wild-type)." []
-is_a: PHIPO:0000011 ! virulence phenotype
-is_a: PHIPO:0000484 ! abnormal pathogen host interaction phenotype
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 PATO:0002146
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:02:39Z xsd:string
+is_obsolete: true
 
 [Term]
 id: PHIPO:0000014
 name: increased virulence
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where virulence is increased (compared to normal)." []
+def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is increased (i.e. more symptoms than normal)." []
 synonym: "hypervirulence" EXACT []
-is_a: PHIPO:0000013 ! abnormal virulence
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: BFO:0000051 PATO:0002051
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 PATO:0002146
-relationship: BFO:0000051 PATO:0002051
+synonym: "increased disease severity" EXACT []
+is_a: PHIPO:0000011 ! virulence phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:07:31Z xsd:string
 
@@ -195,17 +173,12 @@ property_value: creation:date 2018-05-04T13:07:31Z xsd:string
 id: PHIPO:0000015
 name: reduced virulence
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where virulence is decreased (i.e. fewer symptoms than normal)" []
+def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is decreased (i.e. fewer symptoms than normal)." []
 synonym: "decreased virulence" EXACT []
-is_a: PHIPO:0000013 ! abnormal virulence
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: BFO:0000051 PATO:0002052
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 PATO:0002146
-relationship: BFO:0000051 PATO:0002052
+synonym: "reduced disease severity" EXACT []
+is_a: PHIPO:0000011 ! virulence phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:08:10Z xsd:string
-property_value: hasExactSynonym "decreased virulence" xsd:string
 
 [Term]
 id: PHIPO:0000016
@@ -420,7 +393,13 @@ property_value: creation:date 2018-07-09T13:41:47Z xsd:string
 
 [Term]
 id: PHIPO:0000036
+name: abnormal lipid droplet morphology
+namespace: single_organism_phenotype
+def: "A single organism phenotype observed in the vegetative growth phase of the life cycle in which the size, shape, or structure of lipid droplets is abnormal." []
+xref: FYPO:0000356
 is_a: PHIPO:0000478 ! lipid droplet phenotype
+created_by: alaynecuzick
+creation_date: 2019-01-14T12:21:13Z
 
 [Term]
 id: PHIPO:0000037
@@ -1686,7 +1665,7 @@ creation_date: 2018-10-01T12:21:51Z
 id: PHIPO:0000165
 name: abnormal host lesion formation with pathogen
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000346 ! host necrotic lesion with pathogen phenotype
+is_a: PHIPO:0000445 ! pathogen host interaction host tissue necrosis phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:22:45Z
 
@@ -1923,6 +1902,7 @@ id: PHIPO:0000186
 name: abolished host necrotic cell death by pathogen induced HR during biotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
 is_a: PHIPO:0000182 ! absence of host necrotic cell death by pathogen induced HR during biotrophic lifestyle
+is_a: PHIPO:0000280 ! effector phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:12:57Z
 
@@ -2009,9 +1989,9 @@ creation_date: 2018-10-01T13:14:39Z
 
 [Term]
 id: PHIPO:0000195
-name: normal host lesion formation with pathogen
+name: obsolete normal host lesion formation with pathogen
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000346 ! host necrotic lesion with pathogen phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:26:34Z
 
@@ -2927,7 +2907,8 @@ creation_date: 2018-10-03T13:43:37Z
 id: PHIPO:0000280
 name: effector phenotype
 namespace: pathogen_host_interaction_phenotype
-comment: PHI-base definition of 'effector'. (To be made into a class or requested from an external ontology to make into a logical definition).\n\nAn effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defences or other host responses.
+def: "An effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defences or other host responses." []
+comment: This is only to be used when there is manipulation of the host.
 is_a: PHIPO:0000510 ! pathogen host interaction cell level phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-05T11:00:39Z
@@ -3128,199 +3109,199 @@ creation_date: 2018-10-05T13:00:37Z
 
 [Term]
 id: PHIPO:0000305
-name: effector of pathogenicity phenotype
+name: obsolete effector of pathogenicity phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "(Required for successful infection of the host species). The ability of an organism to activate or suppress host defences to enable infectious disease. (Irrespective of the host genotype)." []
-is_a: PHIPO:0000280 ! effector phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T12:55:58Z
 
 [Term]
 id: PHIPO:0000306
-name: abnormal effector of virulence
+name: obsolete abnormal effector of virulence
 namespace: pathogen_host_interaction_phenotype
 def: "The host defences activated by the pathogen are altered compared to the wild type interaction" []
-is_a: PHIPO:0000311 ! effector of virulence phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T12:56:08Z
 
 [Term]
 id: PHIPO:0000307
-name: normal effector of pathogenicity
+name: obsolete normal effector of pathogenicity
 namespace: pathogen_host_interaction_phenotype
 def: "The ability to cause disease by activating or suppressing host defences is unaltered compared to the wildtype interaction. This may result in the outcome of being pathogenic or not-pathogenic." []
-is_a: PHIPO:0000305 ! effector of pathogenicity phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T12:58:41Z
 
 [Term]
 id: PHIPO:0000308
-name: normal effector of pathogenicity activation of host defence
+name: obsolete normal effector of pathogenicity activation of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The host defences activated by the pathogen are unaltered compared to the wild type interaction" []
-is_a: PHIPO:0000307 ! normal effector of pathogenicity
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T12:59:50Z
 
 [Term]
 id: PHIPO:0000309
-name: normal effector of pathogenicity suppression of host defence
+name: obsolete normal effector of pathogenicity suppression of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The host defences suppressed by the pathogen are unaltered compared to the wild type interaction" []
-is_a: PHIPO:0000307 ! normal effector of pathogenicity
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:11:15Z
 
 [Term]
 id: PHIPO:0000310
-name: normal effector of virulence
+name: obsolete normal effector of virulence
 namespace: pathogen_host_interaction_phenotype
 def: "The pathogen has the ability to cause infectious disease dependent upon the gene for gene relationship between the pathogen and host genotype and this is unaltered compared to the wildtype interaction. This may result in disease (virulence) or no disease (avirulence)." []
-is_a: PHIPO:0000311 ! effector of virulence phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:12:40Z
 
 [Term]
 id: PHIPO:0000311
-name: effector of virulence phenotype
+name: obsolete effector of virulence phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "(gene for gene relationships) or defined from the phenotype described in the published study.\nThe pathogen has the ability to cause infectious disease dependent upon the gene for gene relationship between the pathogen and host genotype." []
-is_a: PHIPO:0000280 ! effector phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:14:06Z
 
 [Term]
 id: PHIPO:0000312
-name: abnormal effector of pathogenicity
+name: obsolete abnormal effector of pathogenicity
 namespace: pathogen_host_interaction_phenotype
 def: "The ability to cause disease by activating or suppressing host defences is altered compared to the wildtype interaction." []
-is_a: PHIPO:0000305 ! effector of pathogenicity phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:15:10Z
 
 [Term]
 id: PHIPO:0000313
-name: normal effector of virulence activation of host defence
+name: obsolete normal effector of virulence activation of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The host defences activated by the pathogen are unaltered compared to the wild type interaction" []
-is_a: PHIPO:0000310 ! normal effector of virulence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:22:08Z
 
 [Term]
 id: PHIPO:0000314
-name: normal effector of virulence suppression of host defence
+name: obsolete normal effector of virulence suppression of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The host defences suppressed by the pathogen are unaltered compared to the wild type interaction" []
-is_a: PHIPO:0000310 ! normal effector of virulence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:22:20Z
 
 [Term]
 id: PHIPO:0000315
-name: abnormal effector of virulence activation of host defence
+name: obsolete abnormal effector of virulence activation of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The pathogen has the ability to cause infectious disease dependent upon the gene for gene relationship between the pathogen and host genotype and this is altered compared to the wildtype interaction. This may result in disease (virulence) or no disease (avirulence)." []
-is_a: PHIPO:0000306 ! abnormal effector of virulence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:25:51Z
 
 [Term]
 id: PHIPO:0000316
-name: decreased effector of virulence activation of host defence
+name: obsolete decreased effector of virulence activation of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The pathogen effector entity has a decreased ability to activate host defence." []
-is_a: PHIPO:0000315 ! abnormal effector of virulence activation of host defence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:26:40Z
 
 [Term]
 id: PHIPO:0000317
-name: increased effector of virulence activation of host defence
+name: obsolete increased effector of virulence activation of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The pathogen effector entity has an increased ability to activate host defence." []
-is_a: PHIPO:0000315 ! abnormal effector of virulence activation of host defence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:27:34Z
 
 [Term]
 id: PHIPO:0000318
-name: abnormal effector of virulence suppression of host defence
+name: obsolete abnormal effector of virulence suppression of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The host defences suppressed by the pathogen are altered compare to the wild type interaction" []
-is_a: PHIPO:0000306 ! abnormal effector of virulence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:28:11Z
 
 [Term]
 id: PHIPO:0000319
-name: decreased effector of virulence suppression of host defence
+name: obsolete decreased effector of virulence suppression of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The pathogen effector entity has a decreased ability to suppress host defence." []
-is_a: PHIPO:0000318 ! abnormal effector of virulence suppression of host defence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:28:53Z
 
 [Term]
 id: PHIPO:0000320
-name: increased effector of virulence suppression of host defence
+name: obsolete increased effector of virulence suppression of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The pathogen effector entity has an increased ability to suppress host defence." []
-is_a: PHIPO:0000318 ! abnormal effector of virulence suppression of host defence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:29:31Z
 
 [Term]
 id: PHIPO:0000321
-name: abnormal effector of pathogenicity activation of host defence
+name: obsolete abnormal effector of pathogenicity activation of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The host defences activated by the pathogen are altered compared to the wild type interaction." []
-is_a: PHIPO:0000312 ! abnormal effector of pathogenicity
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:31:28Z
 
 [Term]
 id: PHIPO:0000322
-name: gain of effector of pathogenicity activation of host defence
+name: obsolete gain of effector of pathogenicity activation of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The pathogen effector entity has gained the ability to activate host defence." []
-is_a: PHIPO:0000321 ! abnormal effector of pathogenicity activation of host defence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:32:29Z
 
 [Term]
 id: PHIPO:0000323
-name: loss of effector of pathogenicity activation of host defence
+name: obsolete loss of effector of pathogenicity activation of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The pathogen effector entity has lost the ability to activate host defence." []
-is_a: PHIPO:0000321 ! abnormal effector of pathogenicity activation of host defence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:32:51Z
 
 [Term]
 id: PHIPO:0000324
-name: abnormal effector of pathogenicity suppression of host defence
+name: obsolete abnormal effector of pathogenicity suppression of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The host defences suppressed by the pathogen are altered compared to the wild type interaction" []
-is_a: PHIPO:0000312 ! abnormal effector of pathogenicity
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:33:53Z
 
 [Term]
 id: PHIPO:0000325
-name: gain of effector of pathogenicity suppression of host defence
+name: obsolete gain of effector of pathogenicity suppression of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The pathogen effector entity has gained the ability to suppress host defence." []
-is_a: PHIPO:0000324 ! abnormal effector of pathogenicity suppression of host defence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:34:13Z
 
 [Term]
 id: PHIPO:0000326
-name: loss of effector of pathogenicity suppression of host defence
+name: obsolete loss of effector of pathogenicity suppression of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The pathogen effector entity has lost the ability to suppress host defence." []
-is_a: PHIPO:0000324 ! abnormal effector of pathogenicity suppression of host defence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:34:33Z
 
@@ -3487,9 +3468,9 @@ creation_date: 2018-10-29T16:32:47Z
 
 [Term]
 id: PHIPO:0000346
-name: host necrotic lesion with pathogen phenotype
+name: obsolete host necrotic lesion with pathogen phenotype
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000216 ! pathogen host interaction disease symptom phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:33:27Z
 
@@ -4455,9 +4436,11 @@ creation_date: 2018-12-18T11:34:08Z
 
 [Term]
 id: PHIPO:0000445
-name: pathogen host interaction host cell death phenotype
+name: pathogen host interaction host tissue necrosis phenotype
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000001 ! pathogen host interaction phenotype
+def: "A phenotype that affects the process host tissue death induced by the presence of a pathogen. This usually involves the formation of a lesion." []
+synonym: "host necrotic lesion with pathogen phenotype" EXACT []
+is_a: PHIPO:0000512 ! pathogen host interaction tissue phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-18T12:46:14Z
 
@@ -4519,7 +4502,7 @@ name: host necrotic cell death phenotype by pathogen induced programmed cell dea
 namespace: pathogen_host_interaction_phenotype
 def: "Definition from GO programmed cell death.\nA process which begins when a cell receives an internal or external signal and activates a series of biochemical events (signaling pathway). The process ends with the death of the cell. Note that this term should be used to annotate gene products in the organism undergoing the programmed cell death. To annotate genes in another organism whose products modulate programmed cell death in a host organism, consider the term 'modulation by symbiont of host programmed cell death ; GO:0052040'. Also, note that 'programmed cell death ; GO:0012501' should be used to refer to instances of caspase-independent cell death mechanisms, in the absence of further indications on the process taking place. At present, caspase-independent cell death is not yet represented in GO due to the lack of consensus and in-depth research on the topic. 'programmed cell death ; GO:0012501' may also be used to annotate gene products in taxa where apoptosis as defined in GO:0006915 does not occur, such as plants. You may also consider these specific children: GO:0097468 'programmed cell death in response to reactive oxygen species' (with descendants GO:0010421 'hydrogen peroxide-mediated programmed cell death' and GO:0010343 'singlet oxygen-mediated programmed cell death'), and GO:0009626 'plant-type hypersensitive response' and its children, which are descendants of GO:0034050 'host programmed cell death induced by symbiont'." []
 comment: Temp definition taken from GO term. Needs updating for phipo
-is_a: PHIPO:0000445 ! pathogen host interaction host cell death phenotype
+is_a: PHIPO:0000445 ! pathogen host interaction host tissue necrosis phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-21T12:55:04Z
 
@@ -4547,7 +4530,7 @@ name: host necrotic cell death phenotype in response to pathogen
 namespace: pathogen_host_interaction_phenotype
 def: "Definition from GO necrotic cell death.\nA type of cell death that is morphologically characterized by an increasingly translucent cytoplasm, swelling of organelles, minor ultrastructural modifications of the nucleus (specifically, dilatation of the nuclear membrane and condensation of chromatin into small, irregular, circumscribed patches) and increased cell volume (oncosis), culminating in the disruption of the plasma membrane and subsequent loss of intracellular contents. Necrotic cells do not fragment into discrete corpses as their apoptotic counterparts do. Moreover, their nuclei remain intact and can aggregate and accumulate in necrotic tissues. Note that the word necrosis has been widely used in earlier literature to describe forms of cell death which are now known by more precise terms, such as apoptosis. Necrosis can occur in a regulated fashion, involving a precise sequence of signals; in this case, consider annotating to GO:0097300 'programmed necrotic cell death' or to its more specific child GO:0070266 'necroptotic process'." []
 comment: Temp definition taken from GO term. Needs updating for phipo
-is_a: PHIPO:0000445 ! pathogen host interaction host cell death phenotype
+is_a: PHIPO:0000445 ! pathogen host interaction host tissue necrosis phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-21T13:01:44Z
 
@@ -4641,7 +4624,7 @@ id: PHIPO:0000475
 name: decreased size of lipid droplet
 namespace: single_organism_phenotype
 def: "A single organism phenotype observed in the vegetative growth phase of the life cycle in which the size of lipid droplets is decreased." []
-is_a: PHIPO:0000036
+is_a: PHIPO:0000036 ! abnormal lipid droplet morphology
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:21:13Z
 
@@ -4676,7 +4659,7 @@ id: PHIPO:0000479
 name: increased size of lipid droplet
 namespace: single_organism_phenotype
 def: "A single organism phenotype observed in the vegetative growth phase of the life cycle in which the size of lipid droplets is increased." []
-is_a: PHIPO:0000036
+is_a: PHIPO:0000036 ! abnormal lipid droplet morphology
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:23:54Z
 
@@ -4684,6 +4667,7 @@ creation_date: 2019-01-14T12:23:54Z
 id: PHIPO:0000480
 name: presence of host necrotic cell death by pathogen
 namespace: pathogen_host_interaction_phenotype
+synonym: "normal host lesion formation with pathogen" EXACT []
 is_a: PHIPO:0000464 ! host necrotic cell death phenotype in response to pathogen
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:24:50Z
