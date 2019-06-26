@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-06-20/phipo-simple.owl
+data-version: phipo/releases/2019-06-26/phipo-simple.owl
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -51,6 +51,7 @@ id: PHIPO:0000004
 name: unaffected pathogenicity
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is unaffected (i.e the same as wild-type, this could be pathogenicity present or pathogenicity absent)." []
+comment: Can only apply to changes in the pathogen.
 synonym: "normal pathogenicity" EXACT []
 synonym: "unaffected disease causing ability" EXACT []
 synonym: "unaltered pathogenicity" EXACT []
@@ -73,7 +74,7 @@ id: PHIPO:0000006
 name: pathogenicity phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype that is relevant to pathogenicity. Pathogenicity is the ability of an organism, a pathogen, to produce an infectious disease in another organism" []
-comment: Pathogenicity is a qualitative concept
+comment: Can only apply to changes in the pathogen.\nPathogenicity is a qualitative concept.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "disease causing ability" EXACT []
@@ -87,6 +88,7 @@ id: PHIPO:0000007
 name: pathogenicity absent
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is absent." []
+comment: Can only apply to changes in the pathogen.
 synonym: "disease causing ability absent" EXACT []
 is_a: PHIPO:0000006 ! pathogenicity phenotype
 property_value: created:by "alaynecuzick" xsd:string
@@ -97,6 +99,7 @@ id: PHIPO:0000008
 name: pathogenicity present
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is present." []
+comment: Can only apply to changes in the pathogen.
 synonym: "disease causing ability present" EXACT []
 is_a: PHIPO:0000006 ! pathogenicity phenotype
 property_value: created:by "alaynecuzick" xsd:string
@@ -107,7 +110,7 @@ id: PHIPO:0000009
 name: gain of pathogenicity
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is obtained (pathogenicity was absent and is now present)." []
-comment: Note that this ability to cause pathogenicity is a feature of the pathogen. Therefore gain/loss of pathogenicity should never be dependent on changes to the host genotype, only on changes to the pathogen genotype. If you are annotating changes in disease presence or absence dependent on the changes to the host consider increased/decreased virulence phenotypes.
+comment: Can only apply to changes in the pathogen. Note that this ability to cause pathogenicity is a feature of the pathogen. Therefore gain/loss of pathogenicity should never be dependent on changes to the host genotype, only on changes to the pathogen genotype. If you are annotating changes in disease presence or absence dependent on the changes to the host consider increased/decreased virulence phenotypes.
 synonym: "gain of disease causing ability" EXACT []
 is_a: PHIPO:0000014 ! increased virulence
 property_value: created:by "alaynecuzick" xsd:string
@@ -118,7 +121,7 @@ id: PHIPO:0000010
 name: loss of pathogenicity
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is abolished (pathogenicity was present and is now absent)." []
-comment: Note that this ability to cause pathogenicity is a feature of the pathogen. Therefore gain/loss of pathogenicity should never be dependent on changes to the host genotype, only on changes to the pathogen genotype. If you are annotating changes in disease presence or absence dependent on the changes to the host consider increased/decreased virulence phenotypes.
+comment: Can only apply to changes in the pathogen. Note that this ability to cause pathogenicity is a feature of the pathogen. Therefore gain/loss of pathogenicity should never be dependent on changes to the host genotype, only on changes to the pathogen genotype. If you are annotating changes in disease presence or absence dependent on the changes to the host consider increased/decreased virulence phenotypes.\nNote that avirulence means loss of/abolished virulence in plant pathology terminology.
 synonym: "abolished pathogenicity" EXACT []
 synonym: "loss of disease causing ability" EXACT []
 is_a: PHIPO:0000007 ! pathogenicity absent
@@ -130,7 +133,7 @@ id: PHIPO:0000011
 name: virulence phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype that is relevant to virulence. Virulence is the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism. (Virulence is observed where pathogenicity is present)." []
-comment: Virulence is a quantitative concept
+comment: Can apply to changes in the pathogen or the host.\nVirulence is a quantitative concept
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "disease severity" EXACT []
@@ -143,6 +146,7 @@ id: PHIPO:0000012
 name: unaffected virulence
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is unchanged (i.e. the same degree of infectious disease as wild-type interaction)." []
+comment: Can apply to changes in the pathogen or the host.
 synonym: "normal virulence" EXACT []
 synonym: "unaffected disease severity" EXACT []
 is_a: PHIPO:0000011 ! virulence phenotype
@@ -163,6 +167,7 @@ id: PHIPO:0000014
 name: increased virulence
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is increased (i.e. more symptoms than normal)." []
+comment: Can apply to changes in the pathogen or the host.
 synonym: "hypervirulence" EXACT []
 synonym: "increased disease severity" EXACT []
 is_a: PHIPO:0000011 ! virulence phenotype
@@ -174,6 +179,7 @@ id: PHIPO:0000015
 name: reduced virulence
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is decreased (i.e. fewer symptoms than normal)." []
+comment: Can apply to changes in the pathogen or the host.
 synonym: "decreased virulence" EXACT []
 synonym: "reduced disease severity" EXACT []
 is_a: PHIPO:0000011 ! virulence phenotype
@@ -1860,6 +1866,7 @@ creation_date: 2018-10-01T13:09:27Z
 id: PHIPO:0000182
 name: absence of host necrotic cell death by pathogen induced HR during biotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
+is_a: PHIPO:0000280 ! effector phenotype
 is_a: PHIPO:0000466 ! host necrotic cell death by pathogen induced hypersensitive response
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:09:35Z
@@ -1902,7 +1909,6 @@ id: PHIPO:0000186
 name: abolished host necrotic cell death by pathogen induced HR during biotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
 is_a: PHIPO:0000182 ! absence of host necrotic cell death by pathogen induced HR during biotrophic lifestyle
-is_a: PHIPO:0000280 ! effector phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:12:57Z
 
@@ -1967,6 +1973,7 @@ creation_date: 2018-10-01T13:14:20Z
 id: PHIPO:0000192
 name: presence of host necrotic cell death by pathogen induced HR during biotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
+is_a: PHIPO:0000280 ! effector phenotype
 is_a: PHIPO:0000466 ! host necrotic cell death by pathogen induced hypersensitive response
 is_a: PHIPO:0000480 ! presence of host necrotic cell death by pathogen
 created_by: alaynecuzick
@@ -4538,6 +4545,7 @@ creation_date: 2018-12-21T13:01:44Z
 id: PHIPO:0000465
 name: absence of host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
+is_a: PHIPO:0000280 ! effector phenotype
 is_a: PHIPO:0000461 ! host necrotic cell death phenotype by pathogen induced programmed cell death
 is_a: PHIPO:0000481 ! absence of host necrotic cell death by pathogen
 created_by: alaynecuzick
@@ -4640,6 +4648,7 @@ creation_date: 2019-01-14T12:22:36Z
 id: PHIPO:0000477
 name: presence of host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
+is_a: PHIPO:0000280 ! effector phenotype
 is_a: PHIPO:0000461 ! host necrotic cell death phenotype by pathogen induced programmed cell death
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:23:06Z
@@ -8616,6 +8625,28 @@ def: "A single species population phenotype in which the population grows normal
 is_a: PHIPO:0000405 ! normal population growth phenotype
 created_by: alaynecuzick
 creation_date: 2019-06-12T10:54:55Z
+
+[Term]
+id: PHIPO:0000964
+name: loss of virulence
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is abolished on a specific host genotype." []
+comment: Note this pathogen may still be pathogenic on an alternate host genotype. \nNote that avirulence means loss of pathogenicity in medical terminology.
+synonym: "abolished virulence" EXACT []
+synonym: "avirulence" RELATED []
+is_a: PHIPO:0000015 ! reduced virulence
+created_by: alaynecuzick
+creation_date: 2019-06-26T11:54:44Z
+
+[Term]
+id: PHIPO:0000965
+name: loss of virulence of gain of pathogenicity mutant
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is abolished when observed in an interaction with a pathogen mutant which was previously engineered to gain pathogenicity." []
+comment: Note this pathogen may still be pathogenic on an alternate host genotype.
+is_a: PHIPO:0000964 ! loss of virulence
+created_by: alaynecuzick
+creation_date: 2019-06-26T12:27:44Z
 
 [Typedef]
 id: PHIPO:0000304
