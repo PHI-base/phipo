@@ -350,7 +350,8 @@ Pathogenicity is a qualitative concept.</rdfs:comment>
         <oboInOwl:hasExactSynonym>abolished pathogenicity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>loss of disease causing ability</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment>Can only apply to changes in the pathogen. Note that this ability to cause pathogenicity is a feature of the pathogen. Therefore gain/loss of pathogenicity should never be dependent on changes to the host genotype, only on changes to the pathogen genotype. If you are annotating changes in disease presence or absence dependent on the changes to the host consider increased/decreased virulence phenotypes.</rdfs:comment>
+        <rdfs:comment>Can only apply to changes in the pathogen. Note that this ability to cause pathogenicity is a feature of the pathogen. Therefore gain/loss of pathogenicity should never be dependent on changes to the host genotype, only on changes to the pathogen genotype. If you are annotating changes in disease presence or absence dependent on the changes to the host consider increased/decreased virulence phenotypes.
+Note that avirulence means loss of/abolished virulence in plant pathology terminology.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">loss of pathogenicity</rdfs:label>
     </owl:Class>
     
@@ -13317,6 +13318,23 @@ A single organism cell population phenotype in which none of the cells in the po
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-12T10:54:55Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">normal population growth during hyphal-form</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000964 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000964">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000015"/>
+        <obo:IAO_0000115>A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is abolished on a specific host genotype.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-26T11:54:44Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>abolished virulence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>avirulence</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment>Note this pathogen may still be pathogenic on an alternate host genotype. 
+Note that avirulence means loss of pathogenicity in medical terminology.</rdfs:comment>
+        <rdfs:label xml:lang="en">loss of virulence</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
