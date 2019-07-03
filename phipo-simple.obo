@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-06-26/phipo-simple.owl
+data-version: phipo/releases/2019-07-03/phipo-simple.owl
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -1669,9 +1669,9 @@ creation_date: 2018-10-01T12:21:51Z
 
 [Term]
 id: PHIPO:0000165
-name: abnormal host lesion formation with pathogen
+name: obsolete abnormal host lesion formation with pathogen
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000445 ! pathogen host interaction host tissue necrosis phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:22:45Z
 
@@ -1864,8 +1864,12 @@ creation_date: 2018-10-01T13:09:27Z
 
 [Term]
 id: PHIPO:0000182
-name: absence of host necrotic cell death by pathogen induced HR during biotrophic lifestyle
+name: absence of host HR induced by pathogen during biotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the immune system process of host tissue HR modulated by the pathogen is absent (GO:0009626)." []
+comment: Comment: this term is to be used for host protection against the pathogen.
+synonym: "absence of host lesion" RELATED []
+synonym: "absence of host necrotic cell death" RELATED []
 is_a: PHIPO:0000280 ! effector phenotype
 is_a: PHIPO:0000466 ! host necrotic cell death by pathogen induced hypersensitive response
 created_by: alaynecuzick
@@ -1906,9 +1910,13 @@ creation_date: 2018-10-01T13:12:43Z
 
 [Term]
 id: PHIPO:0000186
-name: abolished host necrotic cell death by pathogen induced HR during biotrophic lifestyle
+name: abolished host HR induced by pathogen during biotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000182 ! absence of host necrotic cell death by pathogen induced HR during biotrophic lifestyle
+def: "A phenotype where the immune system process of host tissue HR modulated by the pathogen is abolished (GO:0009626)." []
+comment: This term is to be used for host protection against the pathogen.
+synonym: "abolished host lesion" RELATED []
+synonym: "abolished host necrotic cell death" RELATED []
+is_a: PHIPO:0000182 ! absence of host HR induced by pathogen during biotrophic lifestyle
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:12:57Z
 
@@ -1948,9 +1956,13 @@ creation_date: 2018-10-01T13:13:36Z
 
 [Term]
 id: PHIPO:0000190
-name: delayed host necrotic cell death by pathogen induced HR during biotrophic lifestyle
+name: delayed host HR induced by pathogen during biotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000192 ! presence of host necrotic cell death by pathogen induced HR during biotrophic lifestyle
+def: "A phenotype where the immune system process of host tissue HR modulated by the pathogen is delayed (GO:0009626)." []
+comment: This term is to be used for host protection against the pathogen.
+synonym: "delayed host necrotic cell death" RELATED []
+synonym: "delayed presence of host lesion" RELATED []
+is_a: PHIPO:0000192 ! presence of host HR induced by pathogen during biotrophic lifestyle
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:14:10Z
 
@@ -1971,8 +1983,12 @@ creation_date: 2018-10-01T13:14:20Z
 
 [Term]
 id: PHIPO:0000192
-name: presence of host necrotic cell death by pathogen induced HR during biotrophic lifestyle
+name: presence of host HR induced by pathogen during biotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the immune system process of host tissue HR modulated by the pathogen is present (GO:0009626)." []
+comment: This term is to be used for host protection against the pathogen.
+synonym: "presence of host lesion" RELATED []
+synonym: "presence of host necrotic cell death" RELATED []
 is_a: PHIPO:0000280 ! effector phenotype
 is_a: PHIPO:0000466 ! host necrotic cell death by pathogen induced hypersensitive response
 is_a: PHIPO:0000480 ! presence of host necrotic cell death by pathogen
@@ -2243,41 +2259,45 @@ creation_date: 2018-10-02T08:53:44Z
 
 [Term]
 id: PHIPO:0000221
-name: increased host lesion size with pathogen
+name: increased size of pathogen-associated host lesion
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000165 ! abnormal host lesion formation with pathogen
+def: "A phenotype where the size of a host tissue lesion induced by the presence of a pathogen is increased." []
+is_a: PHIPO:0000445 ! Pathogen host interaction host lesion formation phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-02T08:53:54Z
 
 [Term]
 id: PHIPO:0000222
-name: increased number of host lesions with pathogen
+name: increased number of pathogen-associated host lesions
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000165 ! abnormal host lesion formation with pathogen
+def: "A phenotype where the number of individual host tissue lesions induced by the presence of a pathogen is increased." []
+is_a: PHIPO:0000445 ! Pathogen host interaction host lesion formation phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-02T08:56:00Z
 
 [Term]
 id: PHIPO:0000223
-name: decreased number of host lesions with pathogen
+name: decreased number of pathogen-associated host lesions
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000165 ! abnormal host lesion formation with pathogen
+def: "A phenotype where the number of individual host tissue lesions induced by the presence of a pathogen is reduced." []
+is_a: PHIPO:0000445 ! Pathogen host interaction host lesion formation phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-02T08:58:26Z
 
 [Term]
 id: PHIPO:0000224
-name: altered colour of host lesion with pathogen
+name: obsolete altered colour of host lesion with pathogen
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000165 ! abnormal host lesion formation with pathogen
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T08:59:23Z
 
 [Term]
 id: PHIPO:0000225
-name: decreased host lesion size with pathogen
+name: decreased size of pathogen-associated host lesion
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000165 ! abnormal host lesion formation with pathogen
+def: "A phenotype where the size of a host tissue lesion induced by the presence of a pathogen is reduced." []
+is_a: PHIPO:0000445 ! Pathogen host interaction host lesion formation phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-02T09:00:28Z
 
@@ -4443,9 +4463,9 @@ creation_date: 2018-12-18T11:34:08Z
 
 [Term]
 id: PHIPO:0000445
-name: pathogen host interaction host tissue necrosis phenotype
+name: Pathogen host interaction host lesion formation phenotype
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype that affects the process host tissue death induced by the presence of a pathogen. This usually involves the formation of a lesion." []
+def: "A phenotype that affects the process of host tissue death causing a host lesion induced by the presence of a pathogen." []
 synonym: "host necrotic lesion with pathogen phenotype" EXACT []
 is_a: PHIPO:0000512 ! pathogen host interaction tissue phenotype
 created_by: alaynecuzick
@@ -4505,20 +4525,24 @@ creation_date: 2018-12-19T09:51:47Z
 
 [Term]
 id: PHIPO:0000461
-name: host necrotic cell death phenotype by pathogen induced programmed cell death
+name: host programmed cell death phenotype induced by pathogen presence
 namespace: pathogen_host_interaction_phenotype
-def: "Definition from GO programmed cell death.\nA process which begins when a cell receives an internal or external signal and activates a series of biochemical events (signaling pathway). The process ends with the death of the cell. Note that this term should be used to annotate gene products in the organism undergoing the programmed cell death. To annotate genes in another organism whose products modulate programmed cell death in a host organism, consider the term 'modulation by symbiont of host programmed cell death ; GO:0052040'. Also, note that 'programmed cell death ; GO:0012501' should be used to refer to instances of caspase-independent cell death mechanisms, in the absence of further indications on the process taking place. At present, caspase-independent cell death is not yet represented in GO due to the lack of consensus and in-depth research on the topic. 'programmed cell death ; GO:0012501' may also be used to annotate gene products in taxa where apoptosis as defined in GO:0006915 does not occur, such as plants. You may also consider these specific children: GO:0097468 'programmed cell death in response to reactive oxygen species' (with descendants GO:0010421 'hydrogen peroxide-mediated programmed cell death' and GO:0010343 'singlet oxygen-mediated programmed cell death'), and GO:0009626 'plant-type hypersensitive response' and its children, which are descendants of GO:0034050 'host programmed cell death induced by symbiont'." []
-comment: Temp definition taken from GO term. Needs updating for phipo
-is_a: PHIPO:0000445 ! pathogen host interaction host tissue necrosis phenotype
+def: "A phenotype that affects the process of host tissue death causing a host lesion induced by the presence of a pathogen. The frequency, rate or extent of programmed cell death in the host organism may be modulated by the pathogen or the host. (GO:0043067)." []
+synonym: "host necrotic cell death" RELATED []
+synonym: "presence of host lesion" RELATED []
+is_a: PHIPO:0000445 ! Pathogen host interaction host lesion formation phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-21T12:55:04Z
 
 [Term]
 id: PHIPO:0000462
-name: abolished host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle
+name: abolished host PCD induced by pathogen during necrotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
-comment: Note: in GO 'apoptotic process'
-is_a: PHIPO:0000465 ! absence of host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle
+def: "A phenotype where the process of host tissue PCD modulated by the pathogen is abolished. (GO:0052040)." []
+comment: This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen.
+synonym: "abolished host lesion" RELATED []
+synonym: "abolished host necrotic cell death" RELATED []
+is_a: PHIPO:0000465 ! absence of host PCD induced by pathogen during necrotrophic lifestyle
 created_by: alaynecuzick
 creation_date: 2018-12-21T12:55:59Z
 
@@ -4537,16 +4561,20 @@ name: host necrotic cell death phenotype in response to pathogen
 namespace: pathogen_host_interaction_phenotype
 def: "Definition from GO necrotic cell death.\nA type of cell death that is morphologically characterized by an increasingly translucent cytoplasm, swelling of organelles, minor ultrastructural modifications of the nucleus (specifically, dilatation of the nuclear membrane and condensation of chromatin into small, irregular, circumscribed patches) and increased cell volume (oncosis), culminating in the disruption of the plasma membrane and subsequent loss of intracellular contents. Necrotic cells do not fragment into discrete corpses as their apoptotic counterparts do. Moreover, their nuclei remain intact and can aggregate and accumulate in necrotic tissues. Note that the word necrosis has been widely used in earlier literature to describe forms of cell death which are now known by more precise terms, such as apoptosis. Necrosis can occur in a regulated fashion, involving a precise sequence of signals; in this case, consider annotating to GO:0097300 'programmed necrotic cell death' or to its more specific child GO:0070266 'necroptotic process'." []
 comment: Temp definition taken from GO term. Needs updating for phipo
-is_a: PHIPO:0000445 ! pathogen host interaction host tissue necrosis phenotype
+is_a: PHIPO:0000445 ! Pathogen host interaction host lesion formation phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-21T13:01:44Z
 
 [Term]
 id: PHIPO:0000465
-name: absence of host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle
+name: absence of host PCD induced by pathogen during necrotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the process of host tissue PCD modulated by the pathogen is absent (GO:0052040)." []
+comment: This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen.
+synonym: "absence of host lesion" RELATED []
+synonym: "absence of host necrotic cell death" RELATED []
 is_a: PHIPO:0000280 ! effector phenotype
-is_a: PHIPO:0000461 ! host necrotic cell death phenotype by pathogen induced programmed cell death
+is_a: PHIPO:0000461 ! host programmed cell death phenotype induced by pathogen presence
 is_a: PHIPO:0000481 ! absence of host necrotic cell death by pathogen
 created_by: alaynecuzick
 creation_date: 2018-12-21T13:03:50Z
@@ -4555,9 +4583,9 @@ creation_date: 2018-12-21T13:03:50Z
 id: PHIPO:0000466
 name: host necrotic cell death by pathogen induced hypersensitive response
 namespace: pathogen_host_interaction_phenotype
-def: "The rapid, localized death of plant cells in response to invasion by a pathogen." []
-comment: Def taken from GO:0009626 plant-type hypersensitive response
-is_a: PHIPO:0000461 ! host necrotic cell death phenotype by pathogen induced programmed cell death
+def: "A phenotype that affects the immune system process of host necrotic cell death by pathogen induced hypersensitive response. Pathogen induced HR is the rapid, localized death of plant cells in response to invasion by a pathogen (GO:0009626)." []
+comment: This term is to be used for host protection against the pathogen.
+is_a: PHIPO:0000461 ! host programmed cell death phenotype induced by pathogen presence
 created_by: alaynecuzick
 creation_date: 2018-12-21T13:09:35Z
 
@@ -4638,18 +4666,26 @@ creation_date: 2019-01-14T12:21:13Z
 
 [Term]
 id: PHIPO:0000476
-name: gain of host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle
+name: gain of host PCD induced by pathogen during necrotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000477 ! presence of host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle
+def: "A phenotype where the process of host tissue PCD modulated by the pathogen has been gained (host PCD was absent and is now present) (GO:0052040)." []
+comment: This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen.
+synonym: "gain of host necrotic cell death" RELATED []
+synonym: "gain of presence of host lesion" RELATED []
+is_a: PHIPO:0000477 ! presence of host PCD induced by pathogen during necrotrophic lifestyle
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:22:36Z
 
 [Term]
 id: PHIPO:0000477
-name: presence of host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle
+name: presence of host PCD induced by pathogen during necrotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the process of host tissue PCD modulated by the pathogen is present (GO:0052040)." []
+comment: This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen.
+synonym: "presence of host lesion" RELATED []
+synonym: "presence of host necrotic cell death" RELATED []
 is_a: PHIPO:0000280 ! effector phenotype
-is_a: PHIPO:0000461 ! host necrotic cell death phenotype by pathogen induced programmed cell death
+is_a: PHIPO:0000461 ! host programmed cell death phenotype induced by pathogen presence
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:23:06Z
 
@@ -4948,9 +4984,13 @@ creation_date: 2019-02-11T13:07:36Z
 
 [Term]
 id: PHIPO:0000516
-name: gain of host necrotic cell death by pathogen induced HR during biotrophic lifestyle
+name: gain of host HR induced by pathogen during biotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000192 ! presence of host necrotic cell death by pathogen induced HR during biotrophic lifestyle
+def: "A phenotype where the process of host tissue HR modulated by the pathogen has been gained (host HR was absent and is now present) (GO:0009626)." []
+comment: This term is to be used for host protection against the pathogen.
+synonym: "gain of host necrotic cell death" RELATED []
+synonym: "gain of presence of host lesion" RELATED []
+is_a: PHIPO:0000192 ! presence of host HR induced by pathogen during biotrophic lifestyle
 created_by: alaynecuzick
 creation_date: 2019-03-05T13:46:52Z
 
