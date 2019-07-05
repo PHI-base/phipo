@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-07-03/phipo-simple.owl
+data-version: phipo/releases/2019-07-05/phipo-simple.owl
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -265,21 +265,21 @@ property_value: creation:date 2018-05-04T13:16:06Z xsd:string
 
 [Term]
 id: PHIPO:0000023
-name: abnormal penetration assay phenotype
+name: obsolete abnormal penetration assay phenotype
 namespace: single_organism_phenotype
 def: "A pathogen penetration assay phenotype (assessing the organism's ability to penetrate a given substance/membrane) which is abnormal (i.e. different than wild-type)." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000160 ! pathogen penetration assay phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:16:54Z xsd:string
+is_obsolete: true
 
 [Term]
 id: PHIPO:0000024
-name: normal penetration assay phenotype
+name: pathogen penetration across the barrier present
 namespace: single_organism_phenotype
-def: "A pathogen penetration assay phenotype (assessing the organism's ability to penetrate a given substance/membrane) which is normal (i.e. the same as wild-type)." []
+def: "A single species pathogen penetration phenotype in which pathogen penetration of a given experimental substance/membrane is present." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000160 ! pathogen penetration assay phenotype
+is_a: PHIPO:0000160 ! pathogen penetration across barrier assay phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:17:08Z xsd:string
 
@@ -294,32 +294,34 @@ property_value: creation:date 2018-05-04T13:17:46Z xsd:string
 
 [Term]
 id: PHIPO:0000026
-name: normal penetration
+name: obsolete normal penetration
 namespace: single_organism_phenotype
 def: "A pathogen phenotype indicating that the pathogen is able to penetrate a given experimental substance/membrane in the same manner as the wild-type." []
 subset: pathogen_phenotype
 synonym: "no penetration defect" EXACT []
-is_a: PHIPO:0000024 ! normal penetration assay phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:18:03Z xsd:string
+is_obsolete: true
 
 [Term]
 id: PHIPO:0000027
-name: normal post penetration
+name: normal pathogen growth after penetration of the barrier
 namespace: single_organism_phenotype
-def: "A pathogen phenotype indicating that the pathogen does not have a post-penetration defect when assessed for penetration ability on a given experimental substance/membrane and is able to continue growth after penetration in the same manner as the wild-type.\n\nWith MU: The pathogen does not have a post-penetration defect (pathogen growth or establishment of the host interfacial complex after penetration is the same as wild type)." []
+def: "A single species phenotype in which the pathogen's ability to contine to grow after penetration of a given experimental substance/membrane in an in vitro assay is normal (i.e indistinguishable from wild type)." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000024 ! normal penetration assay phenotype
+synonym: "normal pathogen post penetration" EXACT []
+is_a: PHIPO:0000160 ! pathogen penetration across barrier assay phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:19:13Z xsd:string
 
 [Term]
 id: PHIPO:0000028
-name: normal pre penetration
+name: normal formation of pathogen penetration structure
 namespace: single_organism_phenotype
-def: "A pathogen phenotype indicating that the pathogen does not have a pre-penetration defect when assessed for penetration ability on a given experimental substance/membrane in the same manner as the wild-type.\n\nWith MU: The pathogen does not have a pre-penetration defect (development of a penetration structure is the same as wild type)." []
+def: "A single species pathogen growth phenotype in which the formation of the pathogen penetration structure is normal (i.e same as wild-type) when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000024 ! normal penetration assay phenotype
+synonym: "normal pathogen pre penetration" EXACT []
+is_a: PHIPO:0000160 ! pathogen penetration across barrier assay phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:19:44Z xsd:string
 
@@ -334,32 +336,34 @@ property_value: creation:date 2018-05-04T13:22:14Z xsd:string
 
 [Term]
 id: PHIPO:0000030
-name: abnormal penetration
+name: pathogen penetration across the barrier absent
 namespace: single_organism_phenotype
-def: "A pathogen phenotype indicating that the pathogen is not able to penetrate a given experimental substance/membrane in the same manner as the wild-type." []
+def: "A single species pathogen penetration phenotype in which pathogen penetration of a given experimental substance/membrane is absent." []
 subset: pathogen_phenotype
 synonym: "penetration defect" EXACT []
-is_a: PHIPO:0000023 ! abnormal penetration assay phenotype
+is_a: PHIPO:0000160 ! pathogen penetration across barrier assay phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:22:31Z xsd:string
 
 [Term]
 id: PHIPO:0000031
-name: abnormal post penetration
+name: abnormal pathogen growth after penetration of the barrier
 namespace: single_organism_phenotype
-def: "A pathogen phenotype indicating that the pathogen does have a post-penetration defect when assessed for penetration ability on a given experimental substance/membrane and is unable to continue growth after penetration in the same manner as the wild-type.\n\nWith MU: The pathogen does have a post-penetration defect (pathogen growth or establishment of the host interfacial complex after penetration is not the same as wild type).\n\n(eg species neutral example BIC Magnaporthe/ Hpa haustoria)" []
+def: "A single species phenotype in which the pathogen's ability to contine to grow after penetration of a given experimental substance/membrane in an in vitro assay is abnormal (i.e indistinguishable from wild type)." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000023 ! abnormal penetration assay phenotype
+synonym: "abnormal pathogen post penetration" EXACT []
+is_a: PHIPO:0000160 ! pathogen penetration across barrier assay phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:22:52Z xsd:string
 
 [Term]
 id: PHIPO:0000032
-name: abnormal pre penetration
+name: abnormal formation of pathogen penetration structure
 namespace: single_organism_phenotype
-def: "A pathogen phenotype indicating that the pathogen does have a pre-penetration defect when assessed for penetration ability on a given experimental substance/membrane in the same manner as the wild-type.\n\n\nWith MU: The pathogen does have a pre-penetration defect (development of a penetration structure is the same as wild type)" []
+def: "A single species pathogen growth phenotype in which the formation of the pathogen penetration structure is abnormal (i.e different than wild-type) when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000023 ! abnormal penetration assay phenotype
+synonym: "abnormal pathogen pre penetration" EXACT []
+is_a: PHIPO:0000160 ! pathogen penetration across barrier assay phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:23:06Z xsd:string
 
@@ -963,8 +967,9 @@ creation_date: 2018-07-17T10:25:33Z
 id: PHIPO:0000104
 name: increased size of penetration structure
 namespace: single_organism_phenotype
+def: "A single species pathogen growth phenotype in which the size of pathogen penetration stuctures are increased when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000124 ! abnormal penetration structure present
+is_a: PHIPO:0000032 ! abnormal formation of pathogen penetration structure
 created_by: alaynecuzick
 creation_date: 2018-07-17T10:58:56Z
 
@@ -972,81 +977,88 @@ creation_date: 2018-07-17T10:58:56Z
 id: PHIPO:0000105
 name: decreased size of penetration structure
 namespace: single_organism_phenotype
+def: "A single species pathogen growth phenotype in which the size of pathogen penetration stuctures are decreased when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000124 ! abnormal penetration structure present
+is_a: PHIPO:0000032 ! abnormal formation of pathogen penetration structure
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:00:04Z
 
 [Term]
 id: PHIPO:0000106
-name: increased quantity of penetration structure
+name: increased number of penetration structure
 namespace: single_organism_phenotype
+def: "A single species pathogen growth phenotype in which the frequency of occurence of pathogen penetration stuctures are increased when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000124 ! abnormal penetration structure present
+is_a: PHIPO:0000032 ! abnormal formation of pathogen penetration structure
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:00:54Z
 
 [Term]
 id: PHIPO:0000107
-name: decreased quantity of penetration structure
+name: decreased number of penetration structure
 namespace: single_organism_phenotype
+def: "A single species pathogen growth phenotype in which the frequency of occurence of pathogen penetration stuctures are decreased when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000124 ! abnormal penetration structure present
+is_a: PHIPO:0000032 ! abnormal formation of pathogen penetration structure
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:05:16Z
 
 [Term]
 id: PHIPO:0000108
-name: delayed timing of penetration structure development
+name: delayed timing of penetration structure formation
 namespace: single_organism_phenotype
+def: "A single species pathogen growth phenotype in which formation of pathogen specialized penetration structure begins later than normal when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000124 ! abnormal penetration structure present
+is_a: PHIPO:0000032 ! abnormal formation of pathogen penetration structure
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:13:16Z
 
 [Term]
 id: PHIPO:0000109
-name: expedited timing of penetration structure development
+name: expedited timing of penetration structure formation
 namespace: single_organism_phenotype
+def: "A single species pathogen growth phenotype in which formation of pathogen specialized penetration structure begins sooner than normal when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000124 ! abnormal penetration structure present
+is_a: PHIPO:0000032 ! abnormal formation of pathogen penetration structure
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:13:53Z
 
 [Term]
 id: PHIPO:0000110
-name: absent penetration structure
+name: abolished formation of pathogen penetration structure
 namespace: single_organism_phenotype
+def: "A single species pathogen growth phenotype in which the  ability of the pathogen to  form a specialized penetration structure is abolished when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000032 ! abnormal pre penetration
+is_a: PHIPO:0000032 ! abnormal formation of pathogen penetration structure
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:16:18Z
 
 [Term]
 id: PHIPO:0000111
-name: delayed pathogen penetration
+name: delayed pathogen penetration across the barrier
 namespace: single_organism_phenotype
+def: "A single species pathogen growth phenotype in which the frequency of occurence of pathogen penetration begins later than normal when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000113 ! altered functionality of penetration structure
+is_a: PHIPO:0000024 ! pathogen penetration across the barrier present
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:17:12Z
 
 [Term]
 id: PHIPO:0000112
-name: non-functional penetration structure present
+name: obsolete non-functional penetration structure present
 namespace: single_organism_phenotype
 subset: pathogen_phenotype
-is_a: PHIPO:0000030 ! abnormal penetration
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:19:23Z
 
 [Term]
 id: PHIPO:0000113
-name: altered functionality of penetration structure
+name: obsolete altered functionality of penetration structure
 namespace: single_organism_phenotype
 def: "Penetration structure formed but not functioning in the same manner as the wild type." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000030 ! abnormal penetration
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:19:35Z
 
@@ -1054,8 +1066,9 @@ creation_date: 2018-07-17T11:19:35Z
 id: PHIPO:0000114
 name: increased pathogen penetration across the barrier
 namespace: single_organism_phenotype
+def: "A single species pathogen penetration phenotype in which the frequency of occurence of pathogen penetration of a given experimental substance/membrane is increased." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000113 ! altered functionality of penetration structure
+is_a: PHIPO:0000024 ! pathogen penetration across the barrier present
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:22:58Z
 
@@ -1063,53 +1076,59 @@ creation_date: 2018-07-17T11:22:58Z
 id: PHIPO:0000115
 name: decreased pathogen penetration across the barrier
 namespace: single_organism_phenotype
+def: "A single species pathogen penetration phenotype in which the frequency of occurence of pathogen penetration of a given experimental substance/membrane is decreased" []
 subset: pathogen_phenotype
-is_a: PHIPO:0000113 ! altered functionality of penetration structure
+is_a: PHIPO:0000024 ! pathogen penetration across the barrier present
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:23:12Z
 
 [Term]
 id: PHIPO:0000116
-name: absent pathogen growth post penetration
+name: abolished pathogen growth after penetration of the barrier
 namespace: single_organism_phenotype
+def: "A single species phenotype in which the pathogen's ability to contine to grow after penetration of a given experimental substance/membrane in an in vitro assay is abolished." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000031 ! abnormal post penetration
+is_a: PHIPO:0000031 ! abnormal pathogen growth after penetration of the barrier
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:30:36Z
 
 [Term]
 id: PHIPO:0000117
-name: increased pathogen growth post penetration
+name: increased pathogen growth after penetraton of the barrier
 namespace: single_organism_phenotype
+def: "A single species phenotype in which the frequency of occurence of pathogen growth after penetration of a given experimental substance/membrane in an in vitro assay is increased." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000125 ! abnormal pathogen growth post penetration present
+is_a: PHIPO:0000031 ! abnormal pathogen growth after penetration of the barrier
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:30:56Z
 
 [Term]
 id: PHIPO:0000118
-name: decreased pathogen growth post penetration
+name: increased pathogen growth after penetraton of the barrier
 namespace: single_organism_phenotype
+def: "A single species phenotype in which the frequency of occurence of pathogen growth after penetration of a given experimental substance/membrane in an in vitro assay is decreased." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000125 ! abnormal pathogen growth post penetration present
+is_a: PHIPO:0000031 ! abnormal pathogen growth after penetration of the barrier
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:31:06Z
 
 [Term]
 id: PHIPO:0000119
-name: delayed timing of pathogen growth post penetration
+name: delayed timing of pathogen growth after penetration of the barrier
 namespace: single_organism_phenotype
+def: "A single species phenotype in which the frequency of occurence of pathogen growth after penetration of a given experimental substance/membrane in an in vitro assay begins later than normal." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000125 ! abnormal pathogen growth post penetration present
+is_a: PHIPO:0000031 ! abnormal pathogen growth after penetration of the barrier
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:31:15Z
 
 [Term]
 id: PHIPO:0000120
-name: expedited timing of pathogen growth post penetration
+name: expedited timing of pathogen growth after penetration of the barrier
 namespace: single_organism_phenotype
+def: "A single species phenotype in which the frequency of occurence of pathogen growth after penetration of a given experimental substance/membrane in an in vitro assay begins sooner than normal." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000125 ! abnormal pathogen growth post penetration present
+is_a: PHIPO:0000031 ! abnormal pathogen growth after penetration of the barrier
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:31:21Z
 
@@ -1143,28 +1162,29 @@ creation_date: 2018-07-17T11:49:54Z
 
 [Term]
 id: PHIPO:0000124
-name: abnormal penetration structure present
+name: obsolete abnormal penetration structure present
 namespace: single_organism_phenotype
 subset: pathogen_phenotype
-is_a: PHIPO:0000032 ! abnormal pre penetration
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-17T12:23:31Z
 
 [Term]
 id: PHIPO:0000125
-name: abnormal pathogen growth post penetration present
+name: obsolete abnormal pathogen growth post penetration present
 namespace: single_organism_phenotype
 subset: pathogen_phenotype
-is_a: PHIPO:0000031 ! abnormal post penetration
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-17T12:28:43Z
 
 [Term]
 id: PHIPO:0000126
-name: expedited pathogen penetration
+name: expedited pathogen penetration across the barrier
 namespace: single_organism_phenotype
+def: "A single species pathogen growth phenotype in which the frequency of occurence of pathogen penetration begins sooner than normal when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000113 ! altered functionality of penetration structure
+is_a: PHIPO:0000024 ! pathogen penetration across the barrier present
 created_by: alaynecuzick
 creation_date: 2018-07-17T12:39:33Z
 
@@ -1610,8 +1630,9 @@ creation_date: 2018-10-01T12:12:52Z
 
 [Term]
 id: PHIPO:0000160
-name: pathogen penetration assay phenotype
+name: pathogen penetration across barrier assay phenotype
 namespace: single_organism_phenotype
+def: "A single species phenotype which affects the pathogen's ability to penetrate a given experimental substance/membrane in an in vitro assay." []
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: pathogen_phenotype
 subset: qc_do_not_annotate
@@ -8687,6 +8708,46 @@ comment: Note this pathogen may still be pathogenic on an alternate host genotyp
 is_a: PHIPO:0000964 ! loss of virulence
 created_by: alaynecuzick
 creation_date: 2019-06-26T12:27:44Z
+
+[Term]
+id: PHIPO:0000966
+name: pathogen penetration structure present
+namespace: single_organism_phenotype
+def: "A single species pathogen growth phenotype in which the pathogen specialized host penetration structure is present when assessed for penetration ability on a given experimental substance/membrane." []
+subset: pathogen_phenotype
+is_a: PHIPO:0000028 ! normal formation of pathogen penetration structure
+created_by: alaynecuzick
+creation_date: 2019-07-05T09:48:18Z
+
+[Term]
+id: PHIPO:0000967
+name: abolished pathogen penetration across the barrier
+namespace: single_organism_phenotype
+def: "A single species pathogen penetration phenotype in in which the ability of the pathogen to  penetrate a given experimental substance/membrane is abolished." []
+subset: pathogen_phenotype
+is_a: PHIPO:0000030 ! pathogen penetration across the barrier absent
+created_by: alaynecuzick
+creation_date: 2019-07-05T10:18:20Z
+
+[Term]
+id: PHIPO:0000968
+name: absent pathogen growth after penetration of the barrier
+namespace: single_organism_phenotype
+def: "A single species phenotype in which the pathogen's ability to contine to grow after penetration of a given experimental substance/membrane in an in vitro assay is absent." []
+subset: pathogen_phenotype
+is_a: PHIPO:0000027 ! normal pathogen growth after penetration of the barrier
+created_by: alaynecuzick
+creation_date: 2019-07-05T11:08:06Z
+
+[Term]
+id: PHIPO:0000969
+name: present pathogen growth after penetration of the barrier
+namespace: single_organism_phenotype
+def: "A single species phenotype in which the pathogen's ability to contine to grow after penetration of a given experimental substance/membrane in an in vitro assay is present." []
+subset: pathogen_phenotype
+is_a: PHIPO:0000027 ! normal pathogen growth after penetration of the barrier
+created_by: alaynecuzick
+creation_date: 2019-07-05T11:08:42Z
 
 [Typedef]
 id: PHIPO:0000304
