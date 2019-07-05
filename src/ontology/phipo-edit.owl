@@ -568,13 +568,13 @@ Lethal (PATO:0000718) and (inheres_in some AC_organism)</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000023 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000023">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000160"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen penetration assay phenotype (assessing the organism&apos;s ability to penetrate a given substance/membrane) which is abnormal (i.e. different than wild-type).</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:16:54Z</obo:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal penetration assay phenotype</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete abnormal penetration assay phenotype</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -583,12 +583,12 @@ Lethal (PATO:0000718) and (inheres_in some AC_organism)</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000024">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000160"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen penetration assay phenotype (assessing the organism&apos;s ability to penetrate a given substance/membrane) which is normal (i.e. the same as wild-type).</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single species pathogen penetration phenotype in which pathogen penetration of a given experimental substance/membrane is present.</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:17:08Z</obo:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">normal penetration assay phenotype</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen penetration across the barrier present</rdfs:label>
     </owl:Class>
     
 
@@ -612,14 +612,14 @@ MU agrees REMOVE from penetration</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000026 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000026">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000024"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype indicating that the pathogen is able to penetrate a given experimental substance/membrane in the same manner as the wild-type.</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:18:03Z</obo:creation_date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no penetration defect</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">normal penetration</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete normal penetration</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -627,15 +627,14 @@ MU agrees REMOVE from penetration</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000027 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000027">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000024"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype indicating that the pathogen does not have a post-penetration defect when assessed for penetration ability on a given experimental substance/membrane and is able to continue growth after penetration in the same manner as the wild-type.
-
-With MU: The pathogen does not have a post-penetration defect (pathogen growth or establishment of the host interfacial complex after penetration is the same as wild type).</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000160"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single species phenotype in which the pathogen&apos;s ability to contine to grow after penetration of a given experimental substance/membrane in an in vitro assay is normal (i.e indistinguishable from wild type).</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:19:13Z</obo:creation_date>
+        <oboInOwl:hasExactSynonym>normal pathogen post penetration</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">normal post penetration</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">normal pathogen growth after penetration of the barrier</rdfs:label>
     </owl:Class>
     
 
@@ -643,15 +642,14 @@ With MU: The pathogen does not have a post-penetration defect (pathogen growth o
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000028 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000028">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000024"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype indicating that the pathogen does not have a pre-penetration defect when assessed for penetration ability on a given experimental substance/membrane in the same manner as the wild-type.
-
-With MU: The pathogen does not have a pre-penetration defect (development of a penetration structure is the same as wild type).</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000160"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single species pathogen growth phenotype in which the formation of the pathogen penetration structure is normal (i.e same as wild-type) when assessed for penetration ability on a given experimental substance/membrane.</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:19:44Z</obo:creation_date>
+        <oboInOwl:hasExactSynonym>normal pathogen pre penetration</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">normal pre penetration</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">normal formation of pathogen penetration structure</rdfs:label>
     </owl:Class>
     
 
@@ -673,14 +671,14 @@ should this be with reproduction?</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000030 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000030">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000023"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype indicating that the pathogen is not able to penetrate a given experimental substance/membrane in the same manner as the wild-type.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000160"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single species pathogen penetration phenotype in which pathogen penetration of a given experimental substance/membrane is absent.</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:22:31Z</obo:creation_date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">penetration defect</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal penetration</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen penetration across the barrier absent</rdfs:label>
     </owl:Class>
     
 
@@ -688,17 +686,14 @@ should this be with reproduction?</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000031 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000031">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000023"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype indicating that the pathogen does have a post-penetration defect when assessed for penetration ability on a given experimental substance/membrane and is unable to continue growth after penetration in the same manner as the wild-type.
-
-With MU: The pathogen does have a post-penetration defect (pathogen growth or establishment of the host interfacial complex after penetration is not the same as wild type).
-
-(eg species neutral example BIC Magnaporthe/ Hpa haustoria)</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000160"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single species phenotype in which the pathogen&apos;s ability to contine to grow after penetration of a given experimental substance/membrane in an in vitro assay is abnormal (i.e indistinguishable from wild type).</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:22:52Z</obo:creation_date>
+        <oboInOwl:hasExactSynonym>abnormal pathogen post penetration</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal post penetration</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal pathogen growth after penetration of the barrier</rdfs:label>
     </owl:Class>
     
 
@@ -706,16 +701,14 @@ With MU: The pathogen does have a post-penetration defect (pathogen growth or es
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000032 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000032">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000023"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen phenotype indicating that the pathogen does have a pre-penetration defect when assessed for penetration ability on a given experimental substance/membrane in the same manner as the wild-type.
-
-
-With MU: The pathogen does have a pre-penetration defect (development of a penetration structure is the same as wild type)</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000160"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single species pathogen growth phenotype in which the formation of the pathogen penetration structure is abnormal (i.e different than wild-type) when assessed for penetration ability on a given experimental substance/membrane.</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:23:06Z</obo:creation_date>
+        <oboInOwl:hasExactSynonym>abnormal pathogen pre penetration</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal pre penetration</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal formation of pathogen penetration structure</rdfs:label>
     </owl:Class>
     
 
@@ -1619,7 +1612,8 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000104 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000104">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000124"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000032"/>
+        <obo:IAO_0000115>A single species pathogen growth phenotype in which the size of pathogen penetration stuctures are increased when assessed for penetration ability on a given experimental substance/membrane.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T10:58:56Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -1632,7 +1626,8 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000105 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000105">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000124"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000032"/>
+        <obo:IAO_0000115>A single species pathogen growth phenotype in which the size of pathogen penetration stuctures are decreased when assessed for penetration ability on a given experimental substance/membrane.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:00:04Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -1645,12 +1640,13 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000106 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000106">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000124"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000032"/>
+        <obo:IAO_0000115>A single species pathogen growth phenotype in which the frequency of occurence of pathogen penetration stuctures are increased when assessed for penetration ability on a given experimental substance/membrane.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:00:54Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">increased quantity of penetration structure</rdfs:label>
+        <rdfs:label xml:lang="en">increased number of penetration structure</rdfs:label>
     </owl:Class>
     
 
@@ -1658,12 +1654,13 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000107 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000107">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000124"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000032"/>
+        <obo:IAO_0000115>A single species pathogen growth phenotype in which the frequency of occurence of pathogen penetration stuctures are decreased when assessed for penetration ability on a given experimental substance/membrane.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:05:16Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">decreased quantity of penetration structure</rdfs:label>
+        <rdfs:label xml:lang="en">decreased number of penetration structure</rdfs:label>
     </owl:Class>
     
 
@@ -1671,12 +1668,13 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000108 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000108">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000124"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000032"/>
+        <obo:IAO_0000115>A single species pathogen growth phenotype in which formation of pathogen specialized penetration structure begins later than normal when assessed for penetration ability on a given experimental substance/membrane.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:13:16Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">delayed timing of penetration structure development</rdfs:label>
+        <rdfs:label xml:lang="en">delayed timing of penetration structure formation</rdfs:label>
     </owl:Class>
     
 
@@ -1684,12 +1682,13 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000109 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000109">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000124"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000032"/>
+        <obo:IAO_0000115>A single species pathogen growth phenotype in which formation of pathogen specialized penetration structure begins sooner than normal when assessed for penetration ability on a given experimental substance/membrane.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:13:53Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">expedited timing of penetration structure development</rdfs:label>
+        <rdfs:label xml:lang="en">expedited timing of penetration structure formation</rdfs:label>
     </owl:Class>
     
 
@@ -1698,11 +1697,12 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000110">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000032"/>
+        <obo:IAO_0000115>A single species pathogen growth phenotype in which the  ability of the pathogen to  form a specialized penetration structure is abolished when assessed for penetration ability on a given experimental substance/membrane.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:16:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">absent penetration structure</rdfs:label>
+        <rdfs:label xml:lang="en">abolished formation of pathogen penetration structure</rdfs:label>
     </owl:Class>
     
 
@@ -1710,12 +1710,13 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000111 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000111">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000113"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000024"/>
+        <obo:IAO_0000115>A single species pathogen growth phenotype in which the frequency of occurence of pathogen penetration begins later than normal when assessed for penetration ability on a given experimental substance/membrane.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:17:12Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">delayed pathogen penetration</rdfs:label>
+        <rdfs:label xml:lang="en">delayed pathogen penetration across the barrier</rdfs:label>
     </owl:Class>
     
 
@@ -1723,12 +1724,12 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000112 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000112">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000030"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:19:23Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">non-functional penetration structure present</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete non-functional penetration structure present</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1736,13 +1737,13 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000113 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000113">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000030"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Penetration structure formed but not functioning in the same manner as the wild type.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:19:35Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">altered functionality of penetration structure</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete altered functionality of penetration structure</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1750,7 +1751,8 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000114 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000114">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000113"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000024"/>
+        <obo:IAO_0000115>A single species pathogen penetration phenotype in which the frequency of occurence of pathogen penetration of a given experimental substance/membrane is increased.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:22:58Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -1763,7 +1765,8 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000115 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000115">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000113"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000024"/>
+        <obo:IAO_0000115>A single species pathogen penetration phenotype in which the frequency of occurence of pathogen penetration of a given experimental substance/membrane is decreased</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:23:12Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -1777,11 +1780,12 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000116">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000031"/>
+        <obo:IAO_0000115>A single species phenotype in which the pathogen&apos;s ability to contine to grow after penetration of a given experimental substance/membrane in an in vitro assay is abolished.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:30:36Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">absent pathogen growth post penetration</rdfs:label>
+        <rdfs:label xml:lang="en">abolished pathogen growth after penetration of the barrier</rdfs:label>
     </owl:Class>
     
 
@@ -1789,12 +1793,13 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000117 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000117">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000125"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000031"/>
+        <obo:IAO_0000115>A single species phenotype in which the frequency of occurence of pathogen growth after penetration of a given experimental substance/membrane in an in vitro assay is increased.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:30:56Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">increased pathogen growth post penetration</rdfs:label>
+        <rdfs:label xml:lang="en">increased pathogen growth after penetraton of the barrier</rdfs:label>
     </owl:Class>
     
 
@@ -1802,12 +1807,13 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000118 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000118">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000125"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000031"/>
+        <obo:IAO_0000115>A single species phenotype in which the frequency of occurence of pathogen growth after penetration of a given experimental substance/membrane in an in vitro assay is decreased.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:31:06Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">decreased pathogen growth post penetration</rdfs:label>
+        <rdfs:label xml:lang="en">increased pathogen growth after penetraton of the barrier</rdfs:label>
     </owl:Class>
     
 
@@ -1815,12 +1821,13 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000119 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000119">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000125"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000031"/>
+        <obo:IAO_0000115>A single species phenotype in which the frequency of occurence of pathogen growth after penetration of a given experimental substance/membrane in an in vitro assay begins later than normal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:31:15Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">delayed timing of pathogen growth post penetration</rdfs:label>
+        <rdfs:label xml:lang="en">delayed timing of pathogen growth after penetration of the barrier</rdfs:label>
     </owl:Class>
     
 
@@ -1828,12 +1835,13 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000120 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000120">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000125"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000031"/>
+        <obo:IAO_0000115>A single species phenotype in which the frequency of occurence of pathogen growth after penetration of a given experimental substance/membrane in an in vitro assay begins sooner than normal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:31:21Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">expedited timing of pathogen growth post penetration</rdfs:label>
+        <rdfs:label xml:lang="en">expedited timing of pathogen growth after penetration of the barrier</rdfs:label>
     </owl:Class>
     
 
@@ -1891,12 +1899,12 @@ absent</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000124 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000124">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000032"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T12:23:31Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">abnormal penetration structure present</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete abnormal penetration structure present</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1904,12 +1912,12 @@ absent</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000125 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000125">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000031"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T12:28:43Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">abnormal pathogen growth post penetration present</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete abnormal pathogen growth post penetration present</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1917,12 +1925,13 @@ absent</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000126 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000126">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000113"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000024"/>
+        <obo:IAO_0000115>A single species pathogen growth phenotype in which the frequency of occurence of pathogen penetration begins sooner than normal when assessed for penetration ability on a given experimental substance/membrane.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T12:39:33Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">expedited pathogen penetration</rdfs:label>
+        <rdfs:label xml:lang="en">expedited pathogen penetration across the barrier</rdfs:label>
     </owl:Class>
     
 
@@ -2781,6 +2790,7 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000160">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+        <obo:IAO_0000115>A single species phenotype which affects the pathogen&apos;s ability to penetrate a given experimental substance/membrane in an in vitro assay.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T12:13:47Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -2788,7 +2798,7 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_do_not_manually_annotate</oboInOwl:inSubset>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
-        <rdfs:label xml:lang="en">pathogen penetration assay phenotype</rdfs:label>
+        <rdfs:label xml:lang="en">pathogen penetration across barrier assay phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -13391,6 +13401,62 @@ Note that avirulence means loss of pathogenicity in medical terminology.</rdfs:c
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:comment>Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:comment>
         <rdfs:label xml:lang="en">loss of virulence of gain of pathogenicity mutant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000966 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000966">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000028"/>
+        <obo:IAO_0000115>A single species pathogen growth phenotype in which the pathogen specialized host penetration structure is present when assessed for penetration ability on a given experimental substance/membrane.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-05T09:48:18Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">pathogen penetration structure present</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000967 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000967">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000030"/>
+        <obo:IAO_0000115>A single species pathogen penetration phenotype in in which the ability of the pathogen to  penetrate a given experimental substance/membrane is abolished.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-05T10:18:20Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">abolished pathogen penetration across the barrier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000968 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000968">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000027"/>
+        <obo:IAO_0000115>A single species phenotype in which the pathogen&apos;s ability to contine to grow after penetration of a given experimental substance/membrane in an in vitro assay is absent.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-05T11:08:06Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">absent pathogen growth after penetration of the barrier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000969 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000969">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000027"/>
+        <obo:IAO_0000115>A single species phenotype in which the pathogen&apos;s ability to contine to grow after penetration of a given experimental substance/membrane in an in vitro assay is present.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-05T11:08:42Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">present pathogen growth after penetration of the barrier</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
