@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-07-09/phipo-simple.owl
+data-version: phipo/releases/2019-07-16/phipo-simple.owl
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -250,7 +250,7 @@ id: PHIPO:0000021
 name: increased sensitivity to chemical
 namespace: single_organism_phenotype
 def: "A single species population phenotype in which a population shows decreased resistance to a chemical stimulus. Resistance to a chemical is usually measured by determining the maximum concentration of the chemical at which a population grows and divides. Typically, populations are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type populations to grow." []
-is_a: PHIPO:0000414 ! abnormal population growth phenotype
+is_a: PHIPO:0000414 ! abnormal population growth
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:15:05Z xsd:string
 
@@ -259,7 +259,7 @@ id: PHIPO:0000022
 name: increased resistance to chemical
 namespace: single_organism_phenotype
 def: "A single species population phenotype in which a population shows increased resistance to a chemical stimulus. Resistance to a chemical is usually measured by determining the maximum concentration of the chemical at which a population grows and divides." []
-is_a: PHIPO:0000414 ! abnormal population growth phenotype
+is_a: PHIPO:0000414 ! abnormal population growth
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:16:06Z xsd:string
 
@@ -1156,7 +1156,7 @@ name: normal population growth during yeast-form
 namespace: single_organism_phenotype
 def: "A single species population phenotype in which the population grows normally during the yeast-form lifecycle stage." []
 is_a: PHIPO:0000177 ! yeast-form growth phenotype
-is_a: PHIPO:0000405 ! normal population growth phenotype
+is_a: PHIPO:0000405 ! normal population growth
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:49:54Z
 
@@ -1670,7 +1670,7 @@ name: abnormal population growth during yeast-form
 namespace: single_organism_phenotype
 def: "A single species population phenotype in which the population grows abnormally during the yeast-form lifecycle stage." []
 is_a: PHIPO:0000177 ! yeast-form growth phenotype
-is_a: PHIPO:0000414 ! abnormal population growth phenotype
+is_a: PHIPO:0000414 ! abnormal population growth
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:18:47Z
 
@@ -4062,7 +4062,7 @@ creation_date: 2018-12-05T11:44:40Z
 
 [Term]
 id: PHIPO:0000405
-name: normal population growth phenotype
+name: normal population growth
 namespace: single_organism_phenotype
 def: "A single species population phenotype in which a population grows normally (i.e. indistinguishably from wild type)." []
 is_a: PHIPO:0000162 ! population growth phenotype
@@ -4151,7 +4151,7 @@ creation_date: 2018-12-05T11:47:25Z
 
 [Term]
 id: PHIPO:0000414
-name: abnormal population growth phenotype
+name: abnormal population growth
 namespace: single_organism_phenotype
 def: "A single species population phenotype in which a population grows abnormally." []
 is_a: PHIPO:0000162 ! population growth phenotype
@@ -4560,7 +4560,7 @@ creation_date: 2018-12-19T09:51:47Z
 id: PHIPO:0000461
 name: host programmed cell death phenotype induced by pathogen presence
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype that affects the process of host tissue death causing a host lesion induced by the presence of a pathogen. The frequency, rate or extent of programmed cell death in the host organism may be modulated by the pathogen or the host (GO:0097300)." []
+def: "A phenotype that affects the process of host tissue death causing a host lesion induced by the presence of a pathogen. The frequency, rate or extent of programmed cell death in the host organism may be modulated by the pathogen or the host (GO:0097300 and GO:0034053)." []
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
@@ -8704,7 +8704,7 @@ id: PHIPO:0000963
 name: normal population growth during hyphal-form
 namespace: single_organism_phenotype
 def: "A single species population phenotype in which the population grows normally during the hyphal-form lifecycle stage." []
-is_a: PHIPO:0000405 ! normal population growth phenotype
+is_a: PHIPO:0000405 ! normal population growth
 created_by: alaynecuzick
 creation_date: 2019-06-12T10:54:55Z
 

@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-05-22/imports/go_import.owl
+data-version: phipo/releases/2019-07-16/imports/go_import.owl
 ontology: phipo/imports/go_import
 
 [Term]
@@ -30,6 +30,23 @@ is_a: GO:0007165 ! signal transduction
 intersection_of: GO:0007165 ! signal transduction
 intersection_of: part_of GO:0030447 ! filamentous growth
 relationship: part_of GO:0030447 ! filamentous growth
+
+[Term]
+id: GO:0001906
+name: cell killing
+namespace: biological_process
+def: "Any process in an organism that results in the killing of its own cells or those of another organism, including in some cases the death of the other organism. Killing here refers to the induction of death in one cell by another cell, not cell-autonomous death due to internal or other environmental conditions." [GOC:add]
+subset: goslim_pir
+synonym: "necrosis" RELATED []
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0001907
+name: killing by symbiont of host cells
+namespace: biological_process
+def: "Any process mediated by an organism that results in the death of cells in the host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:add]
+is_a: GO:0044004 ! disruption by symbiont of host cell
+is_a: GO:0051883 ! killing of cells in other organism involved in symbiotic interaction
 
 [Term]
 id: GO:0002252
@@ -356,7 +373,7 @@ name: binding
 namespace: molecular_function
 def: "The selective, non-covalent, often stoichiometric, interaction of a molecule with one or more specific sites on another molecule." [GOC:ceb, GOC:mah, ISBN:0198506732]
 comment: Note that this term is in the subset of terms that should not be used for direct, manual gene product annotation. Please choose a more specific child term, or request a new one if no suitable term is available. For ligands that bind to signal transducing receptors, consider the molecular function term 'receptor binding ; GO:0005102' and its children.
-subset: gocheck_do_not_manually_annotate
+subset: gocheck_do_not_annotate
 subset: goslim_pir
 subset: goslim_plant
 synonym: "ligand" NARROW []
@@ -1639,12 +1656,12 @@ is_a: GO:0003824 ! catalytic activity
 
 [Term]
 id: GO:0018995
-name: host
+name: host cellular component
 namespace: cellular_component
 def: "Any organism in which another organism, especially a parasite or symbiont, spends part or all of its life cycle and from which it obtains nourishment and/or protection." [ISBN:0198506732]
 synonym: "host organism" EXACT []
 xref: Wikipedia:Host_(biology)
-is_a: GO:0044215 ! other organism
+is_a: GO:0005575 ! cellular_component
 
 [Term]
 id: GO:0019220
@@ -1864,7 +1881,9 @@ is_a: GO:0005488 ! binding
 id: GO:0030247
 name: polysaccharide binding
 namespace: molecular_function
+alt_id: GO:0002506
 def: "Interacting selectively and non-covalently with any polysaccharide, a polymer of many (typically more than 10) monosaccharide residues linked glycosidically." [CHEBI:18154, GOC:mah]
+synonym: "polysaccharide assembly with MHC class II protein complex" NARROW []
 xref: MIPS_funcat:16.05
 is_a: GO:0030246 ! carbohydrate binding
 
@@ -2050,6 +2069,47 @@ intersection_of: positively_regulates GO:0044248 ! cellular catabolic process
 relationship: positively_regulates GO:0044248 ! cellular catabolic process
 
 [Term]
+id: GO:0031341
+name: regulation of cell killing
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of cell killing, the process in which a cell brings about the death of another cell, either in the same or a different organism." [GOC:mah]
+is_a: GO:0050789 ! regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0001906 ! cell killing
+relationship: regulates GO:0001906 ! cell killing
+
+[Term]
+id: GO:0031342
+name: negative regulation of cell killing
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of cell killing." [GOC:mah]
+synonym: "down regulation of cell killing" EXACT []
+synonym: "down-regulation of cell killing" EXACT []
+synonym: "downregulation of cell killing" EXACT []
+synonym: "inhibition of cell killing" NARROW []
+is_a: GO:0031341 ! regulation of cell killing
+is_a: GO:0048519 ! negative regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0001906 ! cell killing
+relationship: negatively_regulates GO:0001906 ! cell killing
+
+[Term]
+id: GO:0031343
+name: positive regulation of cell killing
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of cell killing." [GOC:mah]
+synonym: "activation of cell killing" NARROW []
+synonym: "stimulation of cell killing" NARROW []
+synonym: "up regulation of cell killing" EXACT []
+synonym: "up-regulation of cell killing" EXACT []
+synonym: "upregulation of cell killing" EXACT []
+is_a: GO:0031341 ! regulation of cell killing
+is_a: GO:0048518 ! positive regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0001906 ! cell killing
+relationship: positively_regulates GO:0001906 ! cell killing
+
+[Term]
 id: GO:0031347
 name: regulation of defense response
 namespace: biological_process
@@ -2099,6 +2159,18 @@ synonym: "establishment and maintenance of protein complex localization" EXACT [
 synonym: "protein complex localisation" EXACT [GOC:mah]
 synonym: "protein complex localization" RELATED []
 is_a: GO:0008104 ! protein localization
+
+[Term]
+id: GO:0031640
+name: killing of cells of other organism
+namespace: biological_process
+alt_id: GO:0001908
+def: "Any process in an organism that results in the killing of cells of another organism, including in some cases the death of the other organism. Killing here refers to the induction of death in one cell by another cell, not cell-autonomous death due to internal or other environmental conditions." [GOC:add]
+subset: goslim_pir
+synonym: "killing of cells of another organism" EXACT [GOC:bf]
+synonym: "killing of cells of another, non-host, organism" NARROW []
+is_a: GO:0001906 ! cell killing
+is_a: GO:0044364 ! disruption of cells of other organism
 
 [Term]
 id: GO:0032091
@@ -2553,6 +2625,21 @@ created_by: rfoulger
 creation_date: 2011-04-21T01:31:51Z
 
 [Term]
+id: GO:0035940
+name: negative regulation of peptidase activity in other organism
+namespace: biological_process
+def: "Any process in which an organism stops, prevents, or reduces the frequency, rate or extent of peptidase activity, the catalysis of the hydrolysis of peptide bonds in a protein, in a second organism." [GOC:klp, PMID:10595640]
+synonym: "down regulation of peptidase activity in other organism" EXACT [GOC:bf]
+synonym: "down-regulation of protease activity in other organism" NARROW [GOC:bf]
+synonym: "downregulation of peptidase activity in other organism" EXACT [GOC:bf]
+synonym: "inhibition of protease activity in other organism" NARROW [GOC:bf]
+synonym: "negative regulation of protease activity in other organism" NARROW [GOC:bf]
+is_a: GO:0010466 ! negative regulation of peptidase activity
+is_a: GO:0044362 ! negative regulation of molecular function in other organism
+created_by: rfoulger
+creation_date: 2011-07-22T02:59:40Z
+
+[Term]
 id: GO:0036094
 name: small molecule binding
 namespace: molecular_function
@@ -2973,16 +3060,57 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of symbiosis, an interaction between two organisms living together in more or less intimate association." [GOC:jl]
 is_a: GO:0043900 ! regulation of multi-organism process
 intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0044403 ! symbiont process
-relationship: regulates GO:0044403 ! symbiont process
+intersection_of: regulates GO:0044403 ! symbiotic process
+relationship: regulates GO:0044403 ! symbiotic process
+
+[Term]
+id: GO:0043946
+name: positive regulation of catalytic activity in other organism involved in symbiotic interaction
+namespace: biological_process
+def: "Any process in which an organism activates, maintains or increases the frequency, rate or extent of enzyme activity in a second organism, where the two organisms are in a symbiotic interaction." [GOC:mtg_pamgo_17jul06, GOC:tb]
+synonym: "activation of enzyme activity in other organism" NARROW []
+synonym: "activation of enzyme activity in other organism during symbiotic interaction" NARROW []
+synonym: "positive regulation of catalytic activity in other organism during symbiotic interaction" RELATED [GOC:dph]
+synonym: "up regulation of enzyme activity in other organism during symbiotic interaction" RELATED []
+synonym: "up-regulation of enzyme activity in other organism during symbiotic interaction" RELATED []
+synonym: "upregulation of enzyme activity in other organism during symbiotic interaction" RELATED []
+is_a: GO:0052203 ! modulation of catalytic activity in other organism involved in symbiotic interaction
+
+[Term]
+id: GO:0043948
+name: positive regulation by symbiont of host catalytic activity
+namespace: biological_process
+def: "Any process in which the symbiont activates, maintains or increases the frequency, rate or extent of host enzyme activity. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:mtg_pamgo_17jul06]
+synonym: "activation by symbiont of host enzyme activity" NARROW []
+synonym: "activation of host enzyme activity" NARROW []
+synonym: "positive regulation by symbiont of host enzyme activity" EXACT []
+synonym: "up regulation by symbiont of host enzyme activity" EXACT []
+synonym: "up-regulation by symbiont of host enzyme activity" EXACT []
+synonym: "upregulation by symbiont of host enzyme activity" EXACT []
+is_a: GO:0043085 ! positive regulation of catalytic activity
+is_a: GO:0043946 ! positive regulation of catalytic activity in other organism involved in symbiotic interaction
+is_a: GO:0052148 ! modulation by symbiont of host catalytic activity
+intersection_of: GO:0052055 ! modulation by symbiont of host molecular function
+intersection_of: positively_regulates GO:0003824 ! catalytic activity
 
 [Term]
 id: GO:0044003
 name: modification by symbiont of host morphology or physiology
 namespace: biological_process
+alt_id: GO:0044055
 def: "The process in which a symbiont organism effects a change in the structure or processes of its host organism." [GOC:cc]
+synonym: "modulation by symbiont of host system process" NARROW []
+synonym: "regulation by symbiont of host system process" NARROW []
 is_a: GO:0051701 ! interaction with host
 is_a: GO:0051817 ! modification of morphology or physiology of other organism involved in symbiotic interaction
+
+[Term]
+id: GO:0044004
+name: disruption by symbiont of host cell
+namespace: biological_process
+def: "Any process in which an organism has a negative effect on the functioning of the host's cells. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:cc]
+is_a: GO:0044003 ! modification by symbiont of host morphology or physiology
+is_a: GO:0051818 ! disruption of cells of other organism involved in symbiotic interaction
 
 [Term]
 id: GO:0044068
@@ -2993,6 +3121,9 @@ synonym: "modulation of host cellular process by symbiont" EXACT []
 synonym: "regulation by symbiont of host cellular process" EXACT []
 synonym: "regulation of host cellular process by symbiont" EXACT []
 is_a: GO:0044003 ! modification by symbiont of host morphology or physiology
+is_a: GO:0050794 ! regulation of cellular process
+intersection_of: GO:0044003 ! modification by symbiont of host morphology or physiology
+intersection_of: regulates GO:0009987 ! cellular process
 
 [Term]
 id: GO:0044092
@@ -3022,14 +3153,17 @@ creation_date: 2009-04-21T04:11:06Z
 id: GO:0044110
 name: growth involved in symbiotic interaction
 namespace: biological_process
+alt_id: GO:0044153
 def: "The increase in size or mass of an organism occurring when the organism is in a symbiotic interaction." [GO:jl, GOC:pamgo_curators]
 comment: This term partially replaces the obsolete term 'growth or development during symbiotic interaction ; GO:0052171'. See also 'development during symbiotic interaction ; GO:0044111'.
 synonym: "growth during symbiotic interaction" RELATED [GOC:dph]
+synonym: "growth on or near surface of other organism during symbiotic interaction" RELATED [GOC:tb]
+synonym: "growth on or near surface of other organism involved in symbiotic interaction" RELATED []
 is_a: GO:0040007 ! growth
 is_a: GO:0051704 ! multi-organism process
 intersection_of: GO:0040007 ! growth
-intersection_of: part_of GO:0044403 ! symbiont process
-relationship: part_of GO:0044403 ! symbiont process
+intersection_of: part_of GO:0044403 ! symbiotic process
+relationship: part_of GO:0044403 ! symbiotic process
 created_by: jane
 creation_date: 2009-07-30T02:22:33Z
 
@@ -3037,24 +3171,27 @@ creation_date: 2009-07-30T02:22:33Z
 id: GO:0044111
 name: development involved in symbiotic interaction
 namespace: biological_process
+alt_id: GO:0044152
 def: "The progression of an organism from an initial condition to a later condition, occurring when the organism is in a symbiotic interaction." [GO:jl, GOC:pamgo_curators]
 comment: This term partially replaces the obsolete term 'growth or development during symbiotic interaction ; GO:0052171'. See also 'growth during symbiotic interaction ; GO:0044110'.
 synonym: "development during symbiotic interaction" RELATED [gOC:dph]
+synonym: "development on or near surface of other organism during symbiotic interaction" RELATED [GOC:dph]
+synonym: "development on or near surface of other organism involved in symbiotic interaction" NARROW []
 is_a: GO:0032502 ! developmental process
 is_a: GO:0051704 ! multi-organism process
 intersection_of: GO:0032502 ! developmental process
-intersection_of: part_of GO:0044403 ! symbiont process
-relationship: part_of GO:0044403 ! symbiont process
+intersection_of: part_of GO:0044403 ! symbiotic process
+relationship: part_of GO:0044403 ! symbiotic process
 created_by: jane
 creation_date: 2009-07-30T02:26:46Z
 
 [Term]
 id: GO:0044215
-name: other organism
+name: obsolete other organism
 namespace: cellular_component
-def: "A secondary organism with which the first organism is interacting." [GOC:jl]
-comment: We plan to obsolete this branch of GO and replace its usage in annotation with a system for multi-organism annotation.
-is_a: GO:0005575 ! cellular_component
+def: "OBSOLETE. A secondary organism with which the first organism is interacting." [GOC:jl]
+comment: This term was obsoleted because it represents an organism, which is outside the scope of GO.
+is_obsolete: true
 created_by: jane
 creation_date: 2009-11-12T01:04:58Z
 
@@ -3066,9 +3203,6 @@ def: "Any constituent part of a secondary organism with which the first organism
 comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
 subset: gocheck_do_not_annotate
 is_a: GO:0005575 ! cellular_component
-intersection_of: GO:0005575 ! cellular_component
-intersection_of: part_of GO:0044215 ! other organism
-relationship: part_of GO:0044215 ! other organism
 created_by: jane
 creation_date: 2009-11-12T01:18:21Z
 
@@ -3135,8 +3269,36 @@ is_a: GO:0019538 ! protein metabolic process
 is_a: GO:0044260 ! cellular macromolecule metabolic process
 
 [Term]
+id: GO:0044359
+name: modulation of molecular function in other organism
+namespace: biological_process
+def: "The process in which an organism effects a change in the function of proteins in a second organism." [GOC:jl]
+is_a: GO:0035821 ! modification of morphology or physiology of other organism
+created_by: janelomax
+creation_date: 2011-10-27T01:28:16Z
+
+[Term]
+id: GO:0044362
+name: negative regulation of molecular function in other organism
+namespace: biological_process
+def: "Any process in which an organism stops, prevents or reduces the frequency, rate or extent of the function of proteins in a second organism." [GOC:jl]
+is_a: GO:0044092 ! negative regulation of molecular function
+is_a: GO:0044359 ! modulation of molecular function in other organism
+created_by: janelomax
+creation_date: 2011-10-27T02:12:49Z
+
+[Term]
+id: GO:0044364
+name: disruption of cells of other organism
+namespace: biological_process
+def: "A process in which an organism has a negative effect on the functioning of the second organism's cells." [GOC:jl]
+is_a: GO:0035821 ! modification of morphology or physiology of other organism
+created_by: janelomax
+creation_date: 2011-10-27T02:27:48Z
+
+[Term]
 id: GO:0044403
-name: symbiont process
+name: symbiotic process
 namespace: biological_process
 alt_id: GO:0043298
 alt_id: GO:0044404
@@ -3161,12 +3323,20 @@ is_a: GO:0044419 ! interspecies interaction between organisms
 id: GO:0044409
 name: entry into host
 namespace: biological_process
-def: "Penetration by an organism into the body, tissues, or cells of the host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:cc]
+alt_id: GO:0051828
+def: "Penetration by a symbiont into the body, tissues, or cells of a host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:cc]
+synonym: "entry into other organism during symbiotic interaction" RELATED [GOC:tb]
+synonym: "entry into other organism involved in symbiotic interaction" RELATED []
 synonym: "host invasion" EXACT []
+synonym: "host penetration" EXACT [GOC:vw]
 synonym: "invasion into host" EXACT []
+synonym: "invasion into other organism" RELATED []
 synonym: "invasion of host" EXACT []
+synonym: "invasion of other organism" RELATED []
 synonym: "invasive growth" RELATED []
-is_a: GO:0051828 ! entry into other organism involved in symbiotic interaction
+synonym: "other organism invasion" RELATED []
+synonym: "penetration into host" EXACT [GOC:vw]
+is_a: GO:0051701 ! interaction with host
 
 [Term]
 id: GO:0044419
@@ -3245,6 +3415,16 @@ is_a: GO:0005575 ! cellular_component
 intersection_of: GO:0005575 ! cellular_component
 intersection_of: part_of GO:0005623 ! cell
 relationship: part_of GO:0005623 ! cell
+
+[Term]
+id: GO:0044531
+name: modulation of programmed cell death in other organism
+namespace: biological_process
+def: "A process in which an organism modulates the frequency, rate or extent of programmed cell death in a second organism." [GOC:jl]
+is_a: GO:0035821 ! modification of morphology or physiology of other organism
+is_a: GO:0043067 ! regulation of programmed cell death
+created_by: janelomax
+creation_date: 2012-03-20T04:48:41Z
 
 [Term]
 id: GO:0044550
@@ -4326,7 +4506,7 @@ name: interaction with host
 namespace: biological_process
 def: "An interaction between two organisms living together in more or less intimate association. The term host is used for the larger (macro) of the two members of a symbiosis; the various forms of symbiosis include parasitism, commensalism and mutualism." [GOC:cc]
 is_a: GO:0044419 ! interspecies interaction between organisms
-relationship: part_of GO:0044403 ! symbiont process
+relationship: part_of GO:0044403 ! symbiotic process
 
 [Term]
 id: GO:0051704
@@ -4352,6 +4532,52 @@ is_a: GO:0043207 ! response to external biotic stimulus
 is_a: GO:0051704 ! multi-organism process
 
 [Term]
+id: GO:0051709
+name: regulation of killing of cells of other organism
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of the killing by an organism of cells in another organism." [GOC:ai]
+synonym: "regulation of killing of cells of another organism" EXACT [GOC:bf]
+is_a: GO:0031341 ! regulation of cell killing
+is_a: GO:0043900 ! regulation of multi-organism process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0031640 ! killing of cells of other organism
+relationship: regulates GO:0031640 ! killing of cells of other organism
+
+[Term]
+id: GO:0051711
+name: negative regulation of killing of cells of other organism
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the killing by an organism of cells in another organism." [GOC:ai]
+synonym: "down regulation of killing of cells of another organism" EXACT []
+synonym: "down-regulation of killing of cells of another organism" EXACT []
+synonym: "downregulation of killing of cells of another organism" EXACT []
+synonym: "inhibition of killing of cells of another organism" NARROW []
+synonym: "negative regulation of killing of cells of another organism" EXACT [GOC:bf]
+is_a: GO:0031342 ! negative regulation of cell killing
+is_a: GO:0043901 ! negative regulation of multi-organism process
+is_a: GO:0051709 ! regulation of killing of cells of other organism
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0031640 ! killing of cells of other organism
+relationship: negatively_regulates GO:0031640 ! killing of cells of other organism
+
+[Term]
+id: GO:0051712
+name: positive regulation of killing of cells of other organism
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of the killing by an organism of cells in another organism." [GOC:ai]
+synonym: "activation of killing of cells of another organism" NARROW []
+synonym: "stimulation of killing of cells of another organism" NARROW []
+synonym: "up regulation of killing of cells of another organism" EXACT []
+synonym: "up-regulation of killing of cells of another organism" EXACT []
+synonym: "upregulation of killing of cells of another organism" EXACT []
+is_a: GO:0031343 ! positive regulation of cell killing
+is_a: GO:0043902 ! positive regulation of multi-organism process
+is_a: GO:0051709 ! regulation of killing of cells of other organism
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0031640 ! killing of cells of other organism
+relationship: positively_regulates GO:0031640 ! killing of cells of other organism
+
+[Term]
 id: GO:0051716
 name: cellular response to stimulus
 namespace: biological_process
@@ -4374,20 +4600,26 @@ synonym: "regulation of physiological process in other organism during symbiotic
 synonym: "regulation of physiology of other organism during symbiotic interaction" NARROW []
 is_a: GO:0035821 ! modification of morphology or physiology of other organism
 intersection_of: GO:0035821 ! modification of morphology or physiology of other organism
-intersection_of: part_of GO:0044403 ! symbiont process
-relationship: part_of GO:0044403 ! symbiont process
+intersection_of: part_of GO:0044403 ! symbiotic process
+relationship: part_of GO:0044403 ! symbiotic process
 
 [Term]
-id: GO:0051828
-name: entry into other organism involved in symbiotic interaction
+id: GO:0051818
+name: disruption of cells of other organism involved in symbiotic interaction
 namespace: biological_process
-def: "Penetration by an organism into the body, tissues, or cells of a second organism, where the two organisms are in a symbiotic interaction." [GOC:cc]
-synonym: "entry into other organism during symbiotic interaction" RELATED [GOC:tb]
-synonym: "invasion into other organism" EXACT []
-synonym: "invasion of other organism" EXACT []
-synonym: "invasive growth" RELATED []
-synonym: "other organism invasion" EXACT []
-is_a: GO:0051701 ! interaction with host
+def: "A process in which an organism has a negative effect on the functioning of the second organism's cells, where the two organisms are in a symbiotic interaction." [GOC:cc]
+synonym: "disruption of cells of other organism during symbiotic interaction" RELATED [GOC:tb]
+is_a: GO:0044364 ! disruption of cells of other organism
+is_a: GO:0051817 ! modification of morphology or physiology of other organism involved in symbiotic interaction
+
+[Term]
+id: GO:0051883
+name: killing of cells in other organism involved in symbiotic interaction
+namespace: biological_process
+def: "Any process mediated by an organism that results in the death of cells in a second organism, where the two organisms are in a symbiotic interaction." [GOC:add]
+synonym: "killing of cells in other organism during symbiotic interaction" RELATED [GOC:tb]
+is_a: GO:0031640 ! killing of cells of other organism
+is_a: GO:0051818 ! disruption of cells of other organism involved in symbiotic interaction
 
 [Term]
 id: GO:0052038
@@ -4401,6 +4633,233 @@ intersection_of: GO:0044068 ! modulation by symbiont of host cellular process
 intersection_of: regulates GO:0046907 ! intracellular transport
 
 [Term]
+id: GO:0052040
+name: modulation by symbiont of host programmed cell death
+namespace: biological_process
+alt_id: GO:0052152
+def: "Any process in which an organism modulates the frequency, rate or extent of programmed cell death in the host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:mtg_pamgo_17jul06]
+synonym: "effector-triggered necrosis" NARROW [PMID:22241993, PMID:27641772]
+synonym: "modulation by symbiont of host non-apoptotic programmed cell death" NARROW []
+synonym: "modulation of host PCD" EXACT []
+is_a: GO:0043067 ! regulation of programmed cell death
+is_a: GO:0044068 ! modulation by symbiont of host cellular process
+intersection_of: GO:0044003 ! modification by symbiont of host morphology or physiology
+intersection_of: regulates GO:0012501 ! programmed cell death
+
+[Term]
+id: GO:0052041
+name: negative regulation by symbiont of host programmed cell death
+namespace: biological_process
+def: "Any process in which an organism stops, prevents, or reduces the frequency, rate or extent of programmed cell death in the host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:mtg_pamgo_17jul06]
+synonym: "down regulation by symbiont of host programmed cell death" EXACT []
+synonym: "down-regulation by symbiont of host programmed cell death" EXACT []
+synonym: "downregulation by symbiont of host programmed cell death" EXACT []
+synonym: "inhibition by symbiont of host programmed cell death" NARROW []
+synonym: "inhibition of host programmed cell death" EXACT []
+synonym: "suppression by symbiont of host PCD" EXACT []
+synonym: "suppression by symbiont of host programmed cell death" EXACT []
+is_a: GO:0043069 ! negative regulation of programmed cell death
+is_a: GO:0052040 ! modulation by symbiont of host programmed cell death
+intersection_of: GO:0044003 ! modification by symbiont of host morphology or physiology
+intersection_of: negatively_regulates GO:0012501 ! programmed cell death
+
+[Term]
+id: GO:0052042
+name: positive regulation by symbiont of host programmed cell death
+namespace: biological_process
+alt_id: GO:0012504
+alt_id: GO:0052044
+alt_id: GO:0052045
+alt_id: GO:0052153
+alt_id: GO:0052397
+alt_id: GO:0052400
+def: "Any process in which an organism activates, maintains or increases the frequency, rate or extent of programmed cell death in the host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:jl, GOC:mtg_pamgo_17jul06]
+synonym: "activation by organism of host programmed cell death" EXACT []
+synonym: "activation by organism of non-apoptotic programmed cell death in other organism" NARROW []
+synonym: "activation by organism of programmed cell death in other organism during symbiotic interaction" EXACT []
+synonym: "activation by symbiont of host programmed cell death" NARROW []
+synonym: "enhancement of host programmed cell death" EXACT []
+synonym: "enhancement of host programmed cell death by organism" EXACT []
+synonym: "induction by organism of non-apoptotic programmed cell death in other organism during symbiotic interaction" NARROW []
+synonym: "induction by organism of programmed cell death in other organism during symbiotic interaction" RELATED [GOC:dph]
+synonym: "induction by organism of programmed cell death in other organism involved in symbiotic interaction" EXACT []
+synonym: "induction by symbiont of host programmed cell death" EXACT []
+synonym: "induction of non-apoptotic programmed cell death by other organism" RELATED []
+synonym: "positive regulation by symbiont of host non-apoptotic programmed cell death" NARROW []
+synonym: "stimulation by symbiont of host programmed cell death" NARROW []
+synonym: "upregulation by symbiont of host programmed cell death" EXACT []
+is_a: GO:0052040 ! modulation by symbiont of host programmed cell death
+is_a: GO:0052330 ! positive regulation by organism of programmed cell death in other organism involved in symbiotic interaction
+intersection_of: GO:0044003 ! modification by symbiont of host morphology or physiology
+intersection_of: positively_regulates GO:0012501 ! programmed cell death
+relationship: part_of GO:0001907 ! killing by symbiont of host cells
+
+[Term]
+id: GO:0052053
+name: negative regulation by symbiont of host catalytic activity
+namespace: biological_process
+def: "Any process in which an organism stops, prevents, or reduces the frequency, rate or extent of host enzyme activity. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:mtg_pamgo_17jul06]
+synonym: "down regulation by symbiont of host enzyme activity" EXACT []
+synonym: "down-regulation by symbiont of host enzyme activity" EXACT []
+synonym: "downregulation by symbiont of host enzyme activity" EXACT []
+synonym: "inhibition by symbiont of host enzyme activity" NARROW []
+synonym: "inhibition of host enzyme activity" EXACT []
+synonym: "negative regulation by symbiont of host enzyme activity" EXACT []
+is_a: GO:0052056 ! negative regulation by symbiont of host molecular function
+is_a: GO:0052148 ! modulation by symbiont of host catalytic activity
+is_a: GO:0052199 ! negative regulation of catalytic activity in other organism involved in symbiotic interaction
+intersection_of: GO:0052055 ! modulation by symbiont of host molecular function
+intersection_of: negatively_regulates GO:0003824 ! catalytic activity
+
+[Term]
+id: GO:0052054
+name: negative regulation by symbiont of host peptidase activity
+namespace: biological_process
+def: "Any process in which an organism stops, prevents, or reduces the frequency, rate or extent of host protease activity, the catalysis of the hydrolysis of peptide bonds in a protein. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:dph, GOC:mtg_pamgo_17jul06, GOC:tb]
+synonym: "down regulation by symbiont of host protease activity" NARROW []
+synonym: "down-regulation by symbiont of host protease activity" NARROW []
+synonym: "downregulation by symbiont of host protease activity" NARROW []
+synonym: "inhibition by symbiont of host protease activity" NARROW []
+synonym: "inhibition of host protease activity" NARROW []
+synonym: "negative regulation by symbiont of host protease activity" NARROW [GOC:dph, GOC:tb]
+is_a: GO:0044068 ! modulation by symbiont of host cellular process
+is_a: GO:0052053 ! negative regulation by symbiont of host catalytic activity
+is_a: GO:0052149 ! modulation by symbiont of host peptidase activity
+is_a: GO:0052180 ! negative regulation of peptidase activity in other organism involved in symbiotic interaction
+intersection_of: GO:0052055 ! modulation by symbiont of host molecular function
+intersection_of: negatively_regulates GO:0008233 ! peptidase activity
+
+[Term]
+id: GO:0052055
+name: modulation by symbiont of host molecular function
+namespace: biological_process
+def: "The process in which an organism effects a change in the function of a host protein via a direct interaction. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:dph, GOC:mtg_pamgo_17jul06, GOC:tb]
+synonym: "modification by symbiont of host molecular function" EXACT []
+synonym: "modification by symbiont of host protein function" EXACT [GOC:dph, GOC:tb]
+is_a: GO:0044003 ! modification by symbiont of host morphology or physiology
+is_a: GO:0052205 ! modulation of molecular function in other organism involved in symbiotic interaction
+is_a: GO:0065009 ! regulation of molecular function
+intersection_of: GO:0044003 ! modification by symbiont of host morphology or physiology
+intersection_of: regulates GO:0003674 ! molecular_function
+
+[Term]
+id: GO:0052056
+name: negative regulation by symbiont of host molecular function
+namespace: biological_process
+def: "Any process in which an organism stops, prevents, or reduces the frequency, rate or extent of the functional activity of host proteins. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:dph, GOC:mtg_pamgo_17jul06, GOC:tb]
+synonym: "down regulation by symbiont of host protein function" EXACT []
+synonym: "down-regulation by symbiont of host protein function" EXACT []
+synonym: "downregulation by symbiont of host protein function" EXACT []
+synonym: "inhibition by symbiont of host protein function" NARROW []
+synonym: "inhibition of host protein function" EXACT []
+synonym: "negative regulation by symbiont of host protein function" EXACT [GOC:dph, GOC:tb]
+is_a: GO:0052055 ! modulation by symbiont of host molecular function
+is_a: GO:0052204 ! negative regulation of molecular function in other organism involved in symbiotic interaction
+intersection_of: GO:0052055 ! modulation by symbiont of host molecular function
+intersection_of: negatively_regulates GO:0003674 ! molecular_function
+
+[Term]
+id: GO:0052148
+name: modulation by symbiont of host catalytic activity
+namespace: biological_process
+def: "The process in which an organism effects a change in host enzyme activity. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:mtg_pamgo_17jul06, GOC:tb]
+synonym: "modulation by symbiont of host enzyme activity" EXACT [GOC:tb]
+synonym: "modulation of catalytic activity of host by symbiont" EXACT []
+synonym: "regulation by symbiont of host catalytic activity" EXACT []
+synonym: "regulation of catalytic activity of host by symbiont" EXACT []
+synonym: "regulation of host catalytic activity by symbiont" EXACT []
+is_a: GO:0052055 ! modulation by symbiont of host molecular function
+is_a: GO:0052203 ! modulation of catalytic activity in other organism involved in symbiotic interaction
+intersection_of: GO:0052055 ! modulation by symbiont of host molecular function
+intersection_of: regulates GO:0003824 ! catalytic activity
+
+[Term]
+id: GO:0052149
+name: modulation by symbiont of host peptidase activity
+namespace: biological_process
+def: "The process in which an organism effects a change in host peptidase activity, the catalysis of the hydrolysis of peptide bonds in a protein. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:mtg_pamgo_17jul06]
+synonym: "modulation by symbiont of host protease activity" NARROW [GOC:bf]
+is_a: GO:0052148 ! modulation by symbiont of host catalytic activity
+is_a: GO:0052198 ! modulation of peptidase activity in other organism involved in symbiotic interaction
+is_a: GO:0052547 ! regulation of peptidase activity
+intersection_of: GO:0052055 ! modulation by symbiont of host molecular function
+intersection_of: regulates GO:0008233 ! peptidase activity
+
+[Term]
+id: GO:0052180
+name: negative regulation of peptidase activity in other organism involved in symbiotic interaction
+namespace: biological_process
+def: "Any process in which an organism stops, prevents, or reduces the frequency, rate or extent of protease activity, the catalysis of the hydrolysis of peptide bonds in a protein, in a second organism, where the two organisms are in a symbiotic interaction." [GOC:dph, GOC:mtg_pamgo_17jul06, GOC:tb]
+synonym: "down regulation of protease activity in other organism during symbiotic interaction" EXACT []
+synonym: "down-regulation of protease activity in other organism during symbiotic interaction" EXACT []
+synonym: "downregulation of protease activity in other organism during symbiotic interaction" EXACT []
+synonym: "inhibition of protease activity in other organism during symbiotic interaction" NARROW []
+synonym: "negative regulation of protease activity in other organism during symbiotic interaction" EXACT [GOC:dph, GOC:tb]
+is_a: GO:0035940 ! negative regulation of peptidase activity in other organism
+is_a: GO:0052198 ! modulation of peptidase activity in other organism involved in symbiotic interaction
+is_a: GO:0052199 ! negative regulation of catalytic activity in other organism involved in symbiotic interaction
+
+[Term]
+id: GO:0052198
+name: modulation of peptidase activity in other organism involved in symbiotic interaction
+namespace: biological_process
+def: "The process in which an organism effects a change in peptidase activity, the catalysis of the hydrolysis of peptide bonds in a protein, in a second organism, where the two organisms are in a symbiotic interaction." [GOC:mtg_pamgo_17jul06]
+synonym: "modulation of protease activity in other organism during symbiotic interaction" RELATED [GOC:dph]
+synonym: "modulation of protease activity in other organism involved in symbiotic interaction" NARROW [GOC:bf]
+is_a: GO:0052203 ! modulation of catalytic activity in other organism involved in symbiotic interaction
+
+[Term]
+id: GO:0052199
+name: negative regulation of catalytic activity in other organism involved in symbiotic interaction
+namespace: biological_process
+def: "Any process in which an organism stops, prevents, or reduces the frequency, rate or extent of enzyme activity in a second organism, where the two organisms are in a symbiotic interaction." [GOC:mtg_pamgo_17jul06, GOC:tb]
+synonym: "down regulation of enzyme activity in other organism during symbiotic interaction" RELATED []
+synonym: "down-regulation of enzyme activity in other organism during symbiotic interaction" RELATED []
+synonym: "downregulation of enzyme activity in other organism during symbiotic interaction" RELATED []
+synonym: "inhibition of enzyme activity in other organism" EXACT []
+synonym: "inhibition of enzyme activity in other organism during symbiotic interaction" NARROW []
+synonym: "negative regulation of enzyme activity in other organism during symbiotic interaction" EXACT [GOC:tb]
+is_a: GO:0043086 ! negative regulation of catalytic activity
+is_a: GO:0052203 ! modulation of catalytic activity in other organism involved in symbiotic interaction
+is_a: GO:0052204 ! negative regulation of molecular function in other organism involved in symbiotic interaction
+intersection_of: GO:0052203 ! modulation of catalytic activity in other organism involved in symbiotic interaction
+intersection_of: negatively_regulates GO:0003824 ! catalytic activity
+
+[Term]
+id: GO:0052203
+name: modulation of catalytic activity in other organism involved in symbiotic interaction
+namespace: biological_process
+def: "The process in which an organism effects a change in enzyme activity in a second organism, where the two organisms are in a symbiotic interaction." [GOC:mtg_pamgo_17jul06, GOC:tb]
+synonym: "modulation of enzyme activity within other organism during symbiotic interaction" EXACT [GOC:tb]
+is_a: GO:0050790 ! regulation of catalytic activity
+is_a: GO:0052205 ! modulation of molecular function in other organism involved in symbiotic interaction
+
+[Term]
+id: GO:0052204
+name: negative regulation of molecular function in other organism involved in symbiotic interaction
+namespace: biological_process
+def: "Any process in which an organism stops, prevents, or reduces the frequency, rate or extent of the functional activity of proteins in a second organism, where the two organisms are in a symbiotic interaction." [GOC:dph, GOC:mtg_pamgo_17jul06, GOC:tb]
+synonym: "down regulation of protein function in other organism during symbiotic interaction" EXACT []
+synonym: "down-regulation of protein function in other organism during symbiotic interaction" EXACT []
+synonym: "downregulation of protein function in other organism during symbiotic interaction" EXACT []
+synonym: "inhibition of protein function in other organism" EXACT []
+synonym: "inhibition of protein function in other organism during symbiotic interaction" NARROW []
+synonym: "negative regulation of protein function in other organism during symbiotic interaction" EXACT [GOC:dph, GOC:tb]
+is_a: GO:0044362 ! negative regulation of molecular function in other organism
+is_a: GO:0052205 ! modulation of molecular function in other organism involved in symbiotic interaction
+
+[Term]
+id: GO:0052205
+name: modulation of molecular function in other organism involved in symbiotic interaction
+namespace: biological_process
+def: "The process in which an organism effects a change in the function of proteins in a second organism, where the two organisms are in a symbiotic interaction." [GOC:dph, GOC:mtg_pamgo_17jul06, GOC:tb]
+synonym: "modification of molecular function in other organism during symbiotic interaction" EXACT []
+synonym: "modification of protein function in other organism during symbiotic interaction" EXACT [GOC:dph, GOC:tb]
+synonym: "modulation of molecular function in other organism during symbiotic interaction" RELATED [GOC:dph]
+is_a: GO:0044359 ! modulation of molecular function in other organism
+is_a: GO:0051817 ! modification of morphology or physiology of other organism involved in symbiotic interaction
+
+[Term]
 id: GO:0052230
 name: modulation of intracellular transport in other organism involved in symbiotic interaction
 namespace: biological_process
@@ -4409,6 +4868,37 @@ synonym: "modulation of intracellular trafficking in other organism" EXACT []
 synonym: "modulation of intracellular transport in other organism during symbiotic interaction" RELATED [GOC:dph]
 is_a: GO:0032386 ! regulation of intracellular transport
 is_a: GO:0051817 ! modification of morphology or physiology of other organism involved in symbiotic interaction
+
+[Term]
+id: GO:0052248
+name: modulation of programmed cell death in other organism involved in symbiotic interaction
+namespace: biological_process
+alt_id: GO:0052459
+def: "Any process in which an organism modulates the frequency, rate or extent of programmed cell death in a second organism, where the two organisms are in a symbiotic interaction." [GOC:mtg_pamgo_17jul06]
+synonym: "modulation by organism of non-apoptotic programmed cell death in other organism during symbiotic interaction" NARROW []
+synonym: "modulation of programmed cell death in other organism during symbiotic interaction" RELATED [GOC:dph]
+is_a: GO:0044531 ! modulation of programmed cell death in other organism
+is_a: GO:0051817 ! modification of morphology or physiology of other organism involved in symbiotic interaction
+
+[Term]
+id: GO:0052330
+name: positive regulation by organism of programmed cell death in other organism involved in symbiotic interaction
+namespace: biological_process
+alt_id: GO:0052518
+alt_id: GO:0052529
+def: "Any process in which an organism activates, maintains or increases the frequency, rate or extent of programmed cell death in a second organism, where the two organisms are in a symbiotic interaction." [GOC:jl, GOC:mtg_pamgo_17jul06]
+synonym: "activation by organism of programmed cell death in other organism during symbiotic interaction" NARROW []
+synonym: "enhancement of other organism programmed cell death by organism" RELATED []
+synonym: "positive regulation by organism of non-apoptotic programmed cell death in other organism during symbiotic interaction" NARROW []
+synonym: "positive regulation by organism of programmed cell death in other organism during symbiotic interaction" RELATED [GOC:tb]
+synonym: "stimulation by organism of programmed cell death in other organism during symbiotic interaction" NARROW []
+synonym: "upregulation by organism of programmed cell death in other organism during symbiotic interaction" RELATED [GOC:tb]
+synonym: "upregulation by organism of programmed cell death in other organism involved in symbiotic interaction" EXACT []
+is_a: GO:0043068 ! positive regulation of programmed cell death
+is_a: GO:0043903 ! regulation of symbiosis, encompassing mutualism through parasitism
+is_a: GO:0051712 ! positive regulation of killing of cells of other organism
+is_a: GO:0052248 ! modulation of programmed cell death in other organism involved in symbiotic interaction
+relationship: positively_regulates GO:0051883 ! killing of cells in other organism involved in symbiotic interaction
 
 [Term]
 id: GO:0052547
@@ -4698,6 +5188,17 @@ intersection_of: GO:0044068 ! modulation by symbiont of host cellular process
 intersection_of: positively_regulates GO:0006914 ! autophagy
 
 [Term]
+id: GO:0075052
+name: entry into host via a specialized structure
+namespace: biological_process
+def: "Penetration of a symbiont into the body, tissues, or cells of a host organism via a specialized structure. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
+comment: Note that this term should not be used to annotate gene products of the host. It should only be used to annotate those gene products from the symbiont involved in this process.
+synonym: "entry into host via a specialized structure during symbiotic interaction" EXACT []
+synonym: "penetration into host via a specialized structure" EXACT [GOC:vw]
+synonym: "penetration into host via a specialized structure during symbiotic interaction" EXACT [GOC:vw]
+is_a: GO:0044409 ! entry into host
+
+[Term]
 id: GO:0075071
 name: modulation by symbiont of host autophagy
 namespace: biological_process
@@ -4751,11 +5252,11 @@ creation_date: 2009-05-06T05:02:52Z
 
 [Term]
 id: GO:0085030
-name: symbiont process benefiting host
+name: symbiotic process benefiting host
 namespace: biological_process
 def: "A process carried out by symbiont gene products that enables a symbiotic interaction with a host organism, that is beneficial to the host organism." [GOC:pdt]
 synonym: "mutualism" RELATED []
-is_a: GO:0044403 ! symbiont process
+is_a: GO:0044403 ! symbiotic process
 created_by: janelomax
 creation_date: 2010-07-27T01:25:21Z
 
@@ -4818,8 +5319,8 @@ creation_date: 2013-11-11T12:59:11Z
 id: GO:0098657
 name: import into cell
 namespace: biological_process
-def: "The directed movement of some substance from outside of a cell into the cytoplasmic compartment. This may occur via transport across the plasma membrane or via endocytosis." [GOC:dos]
-synonym: "uptake" EXACT []
+def: "The directed movement of some substance from outside of a cell into a cell. This may occur via transport across the plasma membrane or via endocytosis." [GOC:dos]
+synonym: "uptake" BROAD []
 is_a: GO:0006810 ! transport
 
 [Term]
@@ -4835,7 +5336,7 @@ relationship: part_of GO:0065009 ! regulation of molecular function
 id: GO:0106110
 name: vomitoxin biosynthetic process
 namespace: biological_process
-def: "The chemical reactions and pathways resulting in the formation of type B trichothecene vomitoxin, a poisonous substance produced by some species of fungi and predominantly occurs in grains such as wheat, barley and oats." [CHEBI:10022, http://www.inchem.org/documents/jecfa/jecmono/v47je05.htm, https://doi.org/10.1007/BF03356188, PMID:19333439, PMID:25680507, PMID:25758923, PMID:8637056]
+def: "The chemical reactions and pathways resulting in the formation of type B trichothecene vomitoxin, a poisonous substance produced by some species of fungi and predominantly occurs in grains such as wheat, barley and oats." [http://www.inchem.org/documents/jecfa/jecmono/v47je05.htm, https://doi.org/10.1007/BF03356188, PMID:19333439, PMID:25680507, PMID:25758923, PMID:8637056]
 synonym: "deoxynivalenol biosynthetic process" EXACT []
 synonym: "DON biosynthetic process" EXACT []
 synonym: "vomitoxin anabolism" EXACT []
