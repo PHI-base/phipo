@@ -4277,6 +4277,7 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000239"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000245"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism phenotype in which a protein does not localize to, and is therefore absent from, a place where it is normally found.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:17:52Z</oboInOwl:creation_date>
@@ -13487,7 +13488,7 @@ Note that avirulence means loss of pathogenicity in medical terminology.</rdfs:c
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000970">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000415"/>
-        <obo:IAO_0000115>A single species phenotype observed in the vegetative growth phase of the life cycle in which cells contain fewer autophagosomes than normal (GO:0005776).</obo:IAO_0000115>
+        <obo:IAO_0000115>A single organism phenotype observed in the vegetative growth phase of the life cycle in which cells contain fewer autophagosomes than normal (GO:0005776).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-16T11:41:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -13500,11 +13501,25 @@ Note that avirulence means loss of pathogenicity in medical terminology.</rdfs:c
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000971">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000415"/>
-        <obo:IAO_0000115>A single species phenotype observed in the vegetative growth phase of the life cycle in which the ability of the organism to form autophagosomes is abolished (they were present and are now absent) (GO:0005776).</obo:IAO_0000115>
+        <obo:IAO_0000115>A single organism phenotype observed in the vegetative growth phase of the life cycle in which the ability of the organism to form autophagosomes is abolished (they were present and are now absent) (GO:0005776).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-16T12:03:12Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">abolished formation of autophagosomes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000972 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000972">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000245"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000415"/>
+        <obo:IAO_0000115>A single organism phenotype in which a protein does not localize to, and is therefore absent from the autophagosome (GO:0005776).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-16T13:07:53Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abolished protein localization to autophagosome</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
