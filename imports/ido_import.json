@@ -735,11 +735,11 @@
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
           "val" : "(forall (x) (if (and (Entity x) (exists (y t) (and (MaterialEntity y) (continuantPartOfAt y x t)))) (MaterialEntity x))) // axiom label in BFO2 CLIF: [020-002] "
         }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "an aggregate of human beings."
-        }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
           "val" : "BFO 2 Reference: ‘Matter’ is intended to encompass both mass and energy (we will address the ontological treatment of portions of energy in a later version of BFO). A portion of matter is anything that includes elementary particles among its proper or improper parts: quarks and leptons, including electrons, as the smallest particles thus far discovered; baryons (including protons and neutrons) at a higher level of granularity; atoms and molecules at still higher levels, forming the cells, organs, organisms and other material entities studied by biologists, the portions of rock studied by geologists, the fossils studied by paleontologists, and so on.Material entities are three-dimensional entities (entities extended in three spatial dimensions), as contrasted with the processes in which they participate, which are four-dimensional entities (entities extended also along the dimension of time).According to the FMA, material entities may have immaterial entities as parts – including the entities identified below as sites; for example the interior (or ‘lumen’) of your small intestine is a part of your body. BFO 2.0 embodies a decision to follow the FMA here."
+        }, {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
+          "val" : "an aggregate of human beings."
         }, {
           "pred" : "http://purl.obolibrary.org/obo/BFO_0000180",
           "val" : "MaterialEntity"
@@ -848,6 +848,20 @@
       "type" : "PROPERTY",
       "lbl" : "has disposition"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0040007",
+      "meta" : {
+        "definition" : {
+          "val" : "The increase in size or mass of an entire organism, a part of an organism or a cell.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
+          "val" : "http://purl.obolibrary.org/obo/go.owl"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "growth"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0008150",
       "meta" : {
         "definition" : {
@@ -861,6 +875,20 @@
       },
       "type" : "CLASS",
       "lbl" : "biological_process"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0051093",
+      "meta" : {
+        "definition" : {
+          "val" : "Any process that stops, prevents or reduces the rate or extent of development, the biological process whose specific outcome is the progression of an organism over time from an initial condition (e.g. a zygote, or a young adult) to a later condition (e.g. a multicellular animal or an aged adult).",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
+          "val" : "http://purl.obolibrary.org/obo/go.owl"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "negative regulation of developmental process"
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000412",
       "meta" : {
@@ -1378,6 +1406,20 @@
       "type" : "CLASS",
       "lbl" : "realizable entity"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0000003",
+      "meta" : {
+        "definition" : {
+          "val" : "The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
+          "val" : "http://purl.obolibrary.org/obo/go.owl"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "reproduction"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000030",
       "type" : "CLASS",
       "lbl" : "information content entity"
@@ -1446,10 +1488,10 @@
           "val" : "(forall (x t) (if (and (IndependentContinuant x) (existsAt x t)) (exists (y) (and (Entity y) (specificallyDependsOnAt y x t))))) // axiom label in BFO2 CLIF: [018-002] "
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "a molecule"
+          "val" : "an organism"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "an organism"
+          "val" : "a molecule"
         }, {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000602",
           "val" : "(iff (IndependentContinuant a) (and (Continuant a) (not (exists (b t) (specificallyDependsOnAt a b t))))) // axiom label in BFO2 CLIF: [017-002] "
@@ -1460,6 +1502,20 @@
       },
       "type" : "CLASS",
       "lbl" : "independent continuant"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0032502",
+      "meta" : {
+        "definition" : {
+          "val" : "A biological process whose specific outcome is the progression of an integrated living unit: an anatomical structure (which may be a subcellular structure, cell, tissue, or organ), or organism over time from an initial condition to a later condition.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
+          "val" : "http://purl.obolibrary.org/obo/go.owl"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "developmental process"
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0010000",
       "meta" : {
@@ -1855,6 +1911,20 @@
       },
       "type" : "PROPERTY",
       "lbl" : "bearer of"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0044409",
+      "meta" : {
+        "definition" : {
+          "val" : "Penetration by an organism into the body, tissues, or cells of the host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0000412",
+          "val" : "http://purl.obolibrary.org/obo/go.owl"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "entry into host"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
       "type" : "PROPERTY",
@@ -2267,6 +2337,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0044403"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0044409",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0051704"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000421",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000409"
@@ -2282,6 +2356,10 @@
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000066",
       "pred" : "inverseOf",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000067"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0000003",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0008150"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000410",
       "pred" : "type",
@@ -2304,6 +2382,10 @@
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000031"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0051704",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0008150"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0040007",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0008150"
     }, {
@@ -2455,6 +2537,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000020"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0051093",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0065007"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/IAO_0000229",
       "pred" : "type",
       "obj" : "http://purl.obolibrary.org/obo/IAO_0000225"
@@ -2470,6 +2556,10 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_0065007",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0032502",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0008150"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000031",
       "pred" : "is_a",
@@ -2544,7 +2634,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/phipo/releases/2019-05-22/imports/ido_import.owl"
+      "version" : "http://purl.obolibrary.org/obo/phipo/releases/2019-07-16/imports/ido_import.owl"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ {

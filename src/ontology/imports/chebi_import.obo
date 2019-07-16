@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-05-22/imports/chebi_import.owl
+data-version: phipo/releases/2019-07-16/imports/chebi_import.owl
 ontology: phipo/imports/chebi_import
 
 [Term]
@@ -1044,10 +1044,19 @@ is_a: CHEBI:38499 ! mitochondrial cytochrome-bc1 complex inhibitor
 id: CHEBI:141498
 name: hemiaminal ether
 namespace: chebi_ontology
-subset: 1_STAR
+def: "An organic amino compound that is a hemiaminal in which the hydrogen atom of the hydroxy group has been replaced by an organyl group. General formula: R2C(OR')NR2 ( R =/= H ). Also known as alpha-amino ethers." []
+subset: 3_STAR
+synonym: "alpha-amino ether" RELATED [ChEBI]
+synonym: "alpha-amino ethers" RELATED [ChEBI]
+synonym: "hemiaminal ethers" RELATED [ChEBI]
 is_a: CHEBI:36963 ! organooxygen compound
 is_a: CHEBI:50047 ! organic amino compound
 relationship: has_functional_parent CHEBI:73080 ! hemiaminal
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "CNOR5" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "42.017" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "41.99799" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "N(C(O*)(*)*)(*)*" xsd:string
 
 [Term]
 id: CHEBI:142513
@@ -2039,10 +2048,6 @@ is_a: CHEBI:18059 ! lipid
 is_a: CHEBI:25703 ! organic phosphate
 is_a: CHEBI:37734 ! phosphoric ester
 relationship: is_conjugate_acid_of CHEBI:62643 ! anionic phospholipid
-property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/formula "C5H6O8PR3" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "225.070" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "224.98003" xsd:string
 
 [Term]
 id: CHEBI:16313
@@ -3069,10 +3074,12 @@ xref: HMDB:HMDB0000892
 xref: KEGG:C00803
 xref: KNApSAcK:C00001208
 xref: LIPID_MAPS_instance:LMFA01010005 "LIPID MAPS"
+xref: PDBeChem:LEA
 xref: PDBeChem:PEI
 xref: PMID:20507156 "Europe PMC"
 xref: PPDB:3130
 xref: Reaxys:969454 "Reaxys"
+xref: Wikipedia:Valeric_acid
 is_a: CHEBI:26666 ! short-chain fatty acid
 is_a: CHEBI:39418 ! straight-chain saturated fatty acid
 relationship: has_role CHEBI:76924 ! plant metabolite
@@ -9386,7 +9393,6 @@ synonym: "carboxylic anions" RELATED [ChEBI]
 is_a: CHEBI:25696 ! organic anion
 is_a: CHEBI:35406 ! oxoanion
 relationship: is_conjugate_base_of CHEBI:33575 ! carboxylic acid
-property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CO2R" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "44.00950" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "43.98983" xsd:string
@@ -10188,6 +10194,7 @@ subset: 3_STAR
 synonym: "1,3-benzenedicarboxylate" RELATED [ChEBI]
 synonym: "benzene-1,3-dicarboxylate" EXACT IUPAC_NAME [IUPAC]
 synonym: "isophthalate" RELATED [IUPAC]
+synonym: "isophthalate" RELATED [UniProt]
 xref: Beilstein:3906186 "Beilstein"
 xref: Gmelin:328933 "Gmelin"
 is_a: CHEBI:28965 ! dicarboxylic acid dianion
@@ -29012,26 +29019,65 @@ is_a: CHEBI:52206 ! biochemical role
 id: CHEBI:83319
 name: EC 1.3.1.70 (Delta(14)-sterol reductase) inhibitor
 namespace: chebi_ontology
-subset: 1_STAR
+def: "An EC 1.3.1.* (oxidoreductase acting on donor CH-CH group, NAD(+) or NADP(+) as acceptor) inhibitor that interferes with the action of Delta(14)-sterol reductase (EC 1.3.1.70)." []
+subset: 3_STAR
+synonym: "4,4-dimethyl-5alpha-cholesta-8,24-dien-3beta-ol:NADP(+) Delta(14)-oxidoreductase inhibitor" RELATED [ChEBI]
+synonym: "4,4-dimethyl-5alpha-cholesta-8,24-dien-3beta-ol:NADP(+) Delta(14)-oxidoreductase inhibitors" RELATED [ChEBI]
+synonym: "C-14 sterol reductase inhibitor" RELATED [ChEBI]
+synonym: "C-14 sterol reductase inhibitors" RELATED [ChEBI]
+synonym: "Delta(14)-sterol reductase (EC 1.3.1.70) inhibitor" RELATED [ChEBI]
+synonym: "Delta(14)-sterol reductase (EC 1.3.1.70) inhibitors" RELATED [ChEBI]
+synonym: "Delta(14)-sterol reductase inhibitor" RELATED [ChEBI]
+synonym: "Delta(14)-sterol reductase inhibitors" RELATED [ChEBI]
+synonym: "EC 1.3.1.70 (Delta(14)-sterol reductase) inhibitors" RELATED [ChEBI]
+synonym: "EC 1.3.1.70 inhibitor" RELATED [ChEBI]
+synonym: "EC 1.3.1.70 inhibitors" RELATED [ChEBI]
+synonym: "sterol C14-reductase inhibitor" RELATED [ChEBI]
+synonym: "sterol C14-reductase inhibitors" RELATED [ChEBI]
+xref: Wikipedia:Delta14-sterol_reductase
 is_a: CHEBI:76857 ! EC 1.3.1.* (oxidoreductase acting on donor CH-CH group, NAD(+) or NADP(+) as acceptor) inhibitor
 
 [Term]
 id: CHEBI:83365
 name: 2,6-dimethyl-4-tridecylmorpholine
 namespace: chebi_ontology
-subset: 1_STAR
+def: "A member of the class of morpholines that is 2,6-dimethylmorpholine in which the hydrogen attached to the nitrogen is replaced by a tridecyl group. The configuration at positions 2 and 6 is unknown or unspecified." []
+subset: 3_STAR
+synonym: "(2Xi,6Xi)-2,6-dimethyl-4-tridecylmorpholine" EXACT IUPAC_NAME [IUPAC]
+synonym: "N-tridecyl-2,6-dimethylmorpholine" RELATED [ChEBI]
+xref: CAS:24602-86-6 "Alan Wood's Pesticides"
+xref: HMDB:HMDB0031810
+xref: KEGG:C11285
+xref: Reaxys:608429 "Reaxys"
 is_a: CHEBI:38785 ! morpholines
 is_a: CHEBI:50996 ! tertiary amino compound
 relationship: has_role CHEBI:86328 ! antifungal agrochemical
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C19H39NO" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C19H39NO/c1-4-5-6-7-8-9-10-11-12-13-14-15-20-16-18(2)21-19(3)17-20/h18-19H,4-17H2,1-3H3" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "YTOPFCCWCSOHFV-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "297.51910" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "297.30316" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "CCCCCCCCCCCCCN1CC(C)OC(C)C1" xsd:string
 
 [Term]
 id: CHEBI:83368
 name: 2,6-dimethyl-4-undecylmorpholine
 namespace: chebi_ontology
-subset: 1_STAR
+def: "A member of the class of morpholines that is 2,6-dimethylmorpholine in which the hydrogen attached to the nitrogen is replaced by an undecyl group. The configuration at positions 2 and 6 is unknown or unspecified." []
+subset: 3_STAR
+synonym: "(2Xi,6Xi)-2,6-dimethyl-4-undecylmorpholine" EXACT IUPAC_NAME [IUPAC]
+synonym: "2,6-dimethyl-N-undecylmorpholine" RELATED [ChEBI]
 is_a: CHEBI:38785 ! morpholines
 is_a: CHEBI:50996 ! tertiary amino compound
 relationship: has_role CHEBI:86328 ! antifungal agrochemical
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C17H35NO" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C17H35NO/c1-4-5-6-7-8-9-10-11-12-13-18-14-16(2)19-17(3)15-18/h16-17H,4-15H2,1-3H3" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "LVHAEMOCOJOUOD-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "269.46590" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "269.27186" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "CCCCCCCCCCCN1CC(C)OC(C)C1" xsd:string
 
 [Term]
 id: CHEBI:83370
@@ -29980,7 +30026,8 @@ is_a: CHEBI:33286 ! agrochemical
 id: CHEBI:86411
 name: cis-1-acetyl-4-(4-\{[2-(2,4-dichlorophenyl)-2-(1H-imidazol-1-ylmethyl)-1,3-dioxolan-4-yl]methoxy}phenyl)piperazine
 namespace: chebi_ontology
-subset: 1_STAR
+def: "Either of the two diastereoisomers of 1-acetyl-4-(4-{[2-(2,4-dichlorophenyl)-2-(1H-imidazol-1-ylmethyl)-1,3-dioxolan-4-yl]methoxy}phenyl)piperazine in which the imidazol-1-ylmethyl group and the aryloxymethyl group are in a cis relationship to each other - i.e. they are both on the same side of the plane of the dioxolane ring. The antifungal drug ketoconazole is a racemic mixture of the two cis diastereoisomers." []
+subset: 3_STAR
 is_a: CHEBI:48339 ! 1-acetyl-4-(4-{[2-(2,4-dichlorophenyl)-2-(1H-imidazol-1-ylmethyl)-1,3-dioxolan-4-yl]methoxy}phenyl)piperazine
 
 [Term]
@@ -30361,7 +30408,9 @@ is_a: CHEBI:87195 ! dicarboximide fungicide
 id: CHEBI:87198
 name: phthalimide fungicide
 namespace: chebi_ontology
-subset: 1_STAR
+def: "A dicarboximide fungicide whose structure contains a phthalimide derivative." []
+subset: 3_STAR
+synonym: "phthalimide fungicides" RELATED [ChEBI]
 is_a: CHEBI:87195 ! dicarboximide fungicide
 
 [Term]

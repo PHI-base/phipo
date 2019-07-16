@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-05-22/phipo-simple-non-classified.owl
+data-version: phipo/releases/2019-07-16/phipo-simple-non-classified.owl
 ontology: phipo/phipo-simple-non-classified
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -40,31 +40,36 @@ property_value: creation:date 2018-05-02T11:21:13Z xsd:string
 
 [Term]
 id: PHIPO:0000004
-name: normal pathogenicity
+name: unaffected pathogenicity
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the pathogenicity is normal (i.e the same as wild-type)" []
-synonym: "unaltered pathogenicity (exact); unaffected pathogenicity (exact); unchanged pathogenicity (exact)" EXACT []
+def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is unaffected (i.e the same as wild-type, this could be pathogenicity present or pathogenicity absent)." []
+comment: Can only apply to changes in the pathogen.
+synonym: "normal pathogenicity" EXACT []
+synonym: "unaffected disease causing ability" EXACT []
+synonym: "unaltered pathogenicity" EXACT []
+synonym: "unchanged pathogenicity" EXACT []
 is_a: PHIPO:0000006 ! pathogenicity phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T12:38:43Z xsd:string
 
 [Term]
 id: PHIPO:0000005
-name: abnormal pathogenicity
+name: obsolete abnormal pathogenicity
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the pathogenicity is abnormal (i.e different than wild-type)" []
-is_a: PHIPO:0000006 ! pathogenicity phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T12:39:00Z xsd:string
+is_obsolete: true
 
 [Term]
 id: PHIPO:0000006
 name: pathogenicity phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype that is relevant to pathogenicity. Pathogenicity is the ability of an organism, a pathogen, to produce an infectious disease in another organism" []
-comment: Pathogenicity is a qualitative concept
+comment: Can only apply to changes in the pathogen.\nPathogenicity is a qualitative concept.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
+synonym: "disease causing ability" EXACT []
 synonym: "pathogenesis (related)" RELATED []
 is_a: PHIPO:0000512 ! pathogen host interaction tissue phenotype
 property_value: created:by "alaynecuzick" xsd:string
@@ -74,9 +79,10 @@ property_value: creation:date 2018-05-04T12:39:55Z xsd:string
 id: PHIPO:0000007
 name: pathogenicity absent
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the pathogenicity is normal (i.e. the same as wild-type), and the wild-type exhibits pathogenicity" []
-comment: Logical definition\nAC_pathogenic and AC_pathogenicity and (has_relative_magnitude some normal (PATO:0000461))
-is_a: PHIPO:0000004 ! normal pathogenicity
+def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is absent." []
+comment: Can only apply to changes in the pathogen.
+synonym: "disease causing ability absent" EXACT []
+is_a: PHIPO:0000006 ! pathogenicity phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T12:42:00Z xsd:string
 
@@ -84,9 +90,10 @@ property_value: creation:date 2018-05-04T12:42:00Z xsd:string
 id: PHIPO:0000008
 name: pathogenicity present
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the pathogenicity is normal (i.e. the same as wild-type) , and the wild-type exhibits no pathogenicity" []
-comment: Logical definition\nAC_non_pathogenic and AC_pathogenicity and (has_relative_magnitude some normal)
-is_a: PHIPO:0000004 ! normal pathogenicity
+def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is present." []
+comment: Can only apply to changes in the pathogen.
+synonym: "disease causing ability present" EXACT []
+is_a: PHIPO:0000006 ! pathogenicity phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T12:42:16Z xsd:string
 
@@ -94,21 +101,22 @@ property_value: creation:date 2018-05-04T12:42:16Z xsd:string
 id: PHIPO:0000009
 name: gain of pathogenicity
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where pathogenicity is observed in a mutant that is absent in the wild-type strain." []
-comment: Logical definition\nAC_gain_of and AC_pathogenicity
-synonym: "abnormal pathogenic phenotype" EXACT []
-is_a: PHIPO:0000005 ! abnormal pathogenicity
+def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is obtained (pathogenicity was absent and is now present)." []
+comment: Can only apply to changes in the pathogen. Note that this ability to cause pathogenicity is a feature of the pathogen. Therefore gain/loss of pathogenicity should never be dependent on changes to the host genotype, only on changes to the pathogen genotype. If you are annotating changes in disease presence or absence dependent on the changes to the host consider increased/decreased virulence phenotypes.
+synonym: "gain of disease causing ability" EXACT []
+is_a: PHIPO:0000014 ! increased virulence
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T12:45:12Z xsd:string
-property_value: hasExactSynonym "abnormal pathogenic phenotype" xsd:string
 
 [Term]
 id: PHIPO:0000010
 name: loss of pathogenicity
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where pathogenicity observed in the wild-type strain is abolished." []
-synonym: "abnormal non pathogenic phenotype (exact); abolished pathogenicity (exact)" EXACT []
-is_a: PHIPO:0000005 ! abnormal pathogenicity
+def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is abolished (pathogenicity was present and is now absent)." []
+comment: Can only apply to changes in the pathogen. Note that this ability to cause pathogenicity is a feature of the pathogen. Therefore gain/loss of pathogenicity should never be dependent on changes to the host genotype, only on changes to the pathogen genotype. If you are annotating changes in disease presence or absence dependent on the changes to the host consider increased/decreased virulence phenotypes.\nNote that avirulence means loss of/abolished virulence in plant pathology terminology.
+synonym: "abolished pathogenicity" EXACT []
+synonym: "loss of disease causing ability" EXACT []
+is_a: PHIPO:0000007 ! pathogenicity absent
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T12:45:31Z xsd:string
 
@@ -116,40 +124,45 @@ property_value: creation:date 2018-05-04T12:45:31Z xsd:string
 id: PHIPO:0000011
 name: virulence phenotype
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype that is relevant to virulence. Virulence is the severity to which a pathogen (species or strain) is able to cause infectious disease in another organism." []
-comment: Virulence is a quantitative concept
+def: "A phenotype that is relevant to virulence. Virulence is the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism. (Virulence is observed where pathogenicity is present)." []
+comment: Can apply to changes in the pathogen or the host.\nVirulence is a quantitative concept
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
-is_a: PHIPO:0000512 ! pathogen host interaction tissue phenotype
+synonym: "disease severity" EXACT []
+is_a: PHIPO:0000008 ! pathogenicity present
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:02:03Z xsd:string
 
 [Term]
 id: PHIPO:0000012
-name: normal virulence
+name: unaffected virulence
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where virulence is normal (i.e. the same as wild-type)." []
-synonym: "unaffected virulence (exact)" EXACT []
+def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is unchanged (i.e. the same degree of infectious disease as wild-type interaction)." []
+comment: Can apply to changes in the pathogen or the host.
+synonym: "normal virulence" EXACT []
+synonym: "unaffected disease severity" EXACT []
 is_a: PHIPO:0000011 ! virulence phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:02:23Z xsd:string
 
 [Term]
 id: PHIPO:0000013
-name: abnormal virulence
+name: obsolete abnormal virulence
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where virulence is abnormal (i.e. different than wild-type)." []
-is_a: PHIPO:0000011 ! virulence phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:02:39Z xsd:string
+is_obsolete: true
 
 [Term]
 id: PHIPO:0000014
 name: increased virulence
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where virulence is increased (compared to normal)." []
+def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is increased (i.e. more symptoms than normal)." []
+comment: Can apply to changes in the pathogen or the host.
 synonym: "hypervirulence" EXACT []
-is_a: PHIPO:0000013 ! abnormal virulence
+synonym: "increased disease severity" EXACT []
+is_a: PHIPO:0000011 ! virulence phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:07:31Z xsd:string
 
@@ -157,12 +170,13 @@ property_value: creation:date 2018-05-04T13:07:31Z xsd:string
 id: PHIPO:0000015
 name: reduced virulence
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where virulence is decreased (i.e. fewer symptoms than normal)" []
+def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is decreased (i.e. fewer symptoms than normal)." []
+comment: Can apply to changes in the pathogen or the host.
 synonym: "decreased virulence" EXACT []
-is_a: PHIPO:0000013 ! abnormal virulence
+synonym: "reduced disease severity" EXACT []
+is_a: PHIPO:0000011 ! virulence phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:08:10Z xsd:string
-property_value: hasExactSynonym "decreased virulence" xsd:string
 
 [Term]
 id: PHIPO:0000016
@@ -220,7 +234,7 @@ id: PHIPO:0000021
 name: increased sensitivity to chemical
 namespace: single_organism_phenotype
 def: "A single species population phenotype in which a population shows decreased resistance to a chemical stimulus. Resistance to a chemical is usually measured by determining the maximum concentration of the chemical at which a population grows and divides. Typically, populations are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type populations to grow." []
-is_a: PHIPO:0000414 ! abnormal population growth phenotype
+is_a: PHIPO:0000414 ! abnormal population growth
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:15:05Z xsd:string
 
@@ -229,27 +243,27 @@ id: PHIPO:0000022
 name: increased resistance to chemical
 namespace: single_organism_phenotype
 def: "A single species population phenotype in which a population shows increased resistance to a chemical stimulus. Resistance to a chemical is usually measured by determining the maximum concentration of the chemical at which a population grows and divides." []
-is_a: PHIPO:0000414 ! abnormal population growth phenotype
+is_a: PHIPO:0000414 ! abnormal population growth
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:16:06Z xsd:string
 
 [Term]
 id: PHIPO:0000023
-name: abnormal penetration assay phenotype
+name: obsolete abnormal penetration assay phenotype
 namespace: single_organism_phenotype
 def: "A pathogen penetration assay phenotype (assessing the organism's ability to penetrate a given substance/membrane) which is abnormal (i.e. different than wild-type)." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000160 ! pathogen penetration assay phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:16:54Z xsd:string
+is_obsolete: true
 
 [Term]
 id: PHIPO:0000024
-name: normal penetration assay phenotype
+name: pathogen penetration across the barrier present
 namespace: single_organism_phenotype
-def: "A pathogen penetration assay phenotype (assessing the organism's ability to penetrate a given substance/membrane) which is normal (i.e. the same as wild-type)." []
+def: "A single species pathogen penetration phenotype in which pathogen penetration of a given experimental substance/membrane is present." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000160 ! pathogen penetration assay phenotype
+is_a: PHIPO:0000160 ! pathogen penetration across barrier phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:17:08Z xsd:string
 
@@ -264,32 +278,34 @@ property_value: creation:date 2018-05-04T13:17:46Z xsd:string
 
 [Term]
 id: PHIPO:0000026
-name: normal penetration
+name: obsolete normal penetration
 namespace: single_organism_phenotype
 def: "A pathogen phenotype indicating that the pathogen is able to penetrate a given experimental substance/membrane in the same manner as the wild-type." []
 subset: pathogen_phenotype
 synonym: "no penetration defect" EXACT []
-is_a: PHIPO:0000024 ! normal penetration assay phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:18:03Z xsd:string
+is_obsolete: true
 
 [Term]
 id: PHIPO:0000027
-name: normal post penetration
+name: normal pathogen growth after penetration of the barrier
 namespace: single_organism_phenotype
-def: "A pathogen phenotype indicating that the pathogen does not have a post-penetration defect when assessed for penetration ability on a given experimental substance/membrane and is able to continue growth after penetration in the same manner as the wild-type.\n\nWith MU: The pathogen does not have a post-penetration defect (pathogen growth or establishment of the host interfacial complex after penetration is the same as wild type)." []
+def: "A single species phenotype in which the pathogen's ability to contine to grow after penetration of a given experimental substance/membrane in an in vitro assay is normal (i.e indistinguishable from wild type)." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000024 ! normal penetration assay phenotype
+synonym: "normal pathogen post penetration" EXACT []
+is_a: PHIPO:0000160 ! pathogen penetration across barrier phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:19:13Z xsd:string
 
 [Term]
 id: PHIPO:0000028
-name: normal pre penetration
+name: normal formation of pathogen penetration structure
 namespace: single_organism_phenotype
-def: "A pathogen phenotype indicating that the pathogen does not have a pre-penetration defect when assessed for penetration ability on a given experimental substance/membrane in the same manner as the wild-type.\n\nWith MU: The pathogen does not have a pre-penetration defect (development of a penetration structure is the same as wild type)." []
+def: "A single species pathogen growth phenotype in which the formation of the pathogen penetration structure is normal (i.e same as wild-type) when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000024 ! normal penetration assay phenotype
+synonym: "normal pathogen pre penetration" EXACT []
+is_a: PHIPO:0000160 ! pathogen penetration across barrier phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:19:44Z xsd:string
 
@@ -304,39 +320,42 @@ property_value: creation:date 2018-05-04T13:22:14Z xsd:string
 
 [Term]
 id: PHIPO:0000030
-name: abnormal penetration
+name: pathogen penetration across the barrier absent
 namespace: single_organism_phenotype
-def: "A pathogen phenotype indicating that the pathogen is not able to penetrate a given experimental substance/membrane in the same manner as the wild-type." []
+def: "A single species pathogen penetration phenotype in which pathogen penetration of a given experimental substance/membrane is absent." []
 subset: pathogen_phenotype
 synonym: "penetration defect" EXACT []
-is_a: PHIPO:0000023 ! abnormal penetration assay phenotype
+is_a: PHIPO:0000160 ! pathogen penetration across barrier phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:22:31Z xsd:string
 
 [Term]
 id: PHIPO:0000031
-name: abnormal post penetration
+name: abnormal pathogen growth after penetration of the barrier
 namespace: single_organism_phenotype
-def: "A pathogen phenotype indicating that the pathogen does have a post-penetration defect when assessed for penetration ability on a given experimental substance/membrane and is unable to continue growth after penetration in the same manner as the wild-type.\n\nWith MU: The pathogen does have a post-penetration defect (pathogen growth or establishment of the host interfacial complex after penetration is not the same as wild type).\n\n(eg species neutral example BIC Magnaporthe/ Hpa haustoria)" []
+def: "A single species phenotype in which the pathogen's ability to contine to grow after penetration of a given experimental substance/membrane in an in vitro assay is abnormal (i.e indistinguishable from wild type)." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000023 ! abnormal penetration assay phenotype
+synonym: "abnormal pathogen post penetration" EXACT []
+is_a: PHIPO:0000160 ! pathogen penetration across barrier phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:22:52Z xsd:string
 
 [Term]
 id: PHIPO:0000032
-name: abnormal pre penetration
+name: abnormal formation of pathogen penetration structure
 namespace: single_organism_phenotype
-def: "A pathogen phenotype indicating that the pathogen does have a pre-penetration defect when assessed for penetration ability on a given experimental substance/membrane in the same manner as the wild-type.\n\n\nWith MU: The pathogen does have a pre-penetration defect (development of a penetration structure is the same as wild type)" []
+def: "A single species pathogen growth phenotype in which the formation of the pathogen penetration structure is abnormal (i.e different than wild-type) when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000023 ! abnormal penetration assay phenotype
+synonym: "abnormal pathogen pre penetration" EXACT []
+is_a: PHIPO:0000160 ! pathogen penetration across barrier phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:23:06Z xsd:string
 
 [Term]
 id: PHIPO:0000033
-name: abnormal pathogen growth on host surface phenotype
+name: abnormal pathogen growth on host surface
 namespace: pathogen_host_interaction_phenotype
+def: "A pathogen colonization of host phenotype where the vegetative growth or proliferation of the pathogen on the host surface is abnormal." []
 is_a: PHIPO:0000188 ! pathogen growth on host surface phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-04T13:41:02Z xsd:string
@@ -356,21 +375,29 @@ property_value: creation:date 2018-07-04T13:41:14Z xsd:string
 
 [Term]
 id: PHIPO:0000035
-name: abnormal excretion of intracellular content
-namespace: single_organism_phenotype
-is_a: PHIPO:0000034 ! cell phenotype
+name: mutualism present
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host phenotype where the mutualism phenotype is normal (i.e. the same as wild-type), and the wild-type interaction exhibits mutualism." []
+is_a: PHIPO:0000039 ! normal mutualism
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:41:47Z xsd:string
 
 [Term]
 id: PHIPO:0000036
+name: abnormal lipid droplet morphology
+namespace: single_organism_phenotype
+def: "A single organism phenotype observed in the vegetative growth phase of the life cycle in which the size, shape, or structure of lipid droplets is abnormal." []
+xref: FYPO:0000356
 is_a: PHIPO:0000478 ! lipid droplet phenotype
+created_by: alaynecuzick
+creation_date: 2019-01-14T12:21:13Z
 
 [Term]
 id: PHIPO:0000037
-name: altered shape of filamentous growth
+name: abnormal hyphal colony morphology
 namespace: single_organism_phenotype
-is_a: PHIPO:0000277 ! abnormal filamentous growth
+def: "A single species population phenotype where the morphology of a colony growing in filamentous form is abnormal." []
+is_a: PHIPO:0000273 ! filamentous colony morphology phenotype
 created_by: alaynecuzick
 creation_date: 2018-07-10T11:46:51Z
 
@@ -388,7 +415,7 @@ creation_date: 2018-07-10T11:52:04Z
 id: PHIPO:0000039
 name: normal mutualism
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype in which the interaction is the same as the wild-type, no asymptomatic colonisation or disease formation symtoms are visible." []
+def: "A phenotype in which the interaction is the same as the wild-type, no asymptomatic colonisation or disease formation symptoms are visible." []
 comment: Logical definition\nmutualism (GO:0085030) and (has_relative_magnitude some normal (PATO:0000461))
 is_a: PHIPO:0000038 ! mutualism phenotype
 created_by: alaynecuzick
@@ -921,8 +948,9 @@ creation_date: 2018-07-17T10:25:33Z
 id: PHIPO:0000104
 name: increased size of penetration structure
 namespace: single_organism_phenotype
+def: "A single species pathogen growth phenotype in which the size of pathogen penetration stuctures are increased when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000124 ! abnormal penetration structure present
+is_a: PHIPO:0000032 ! abnormal formation of pathogen penetration structure
 created_by: alaynecuzick
 creation_date: 2018-07-17T10:58:56Z
 
@@ -930,81 +958,88 @@ creation_date: 2018-07-17T10:58:56Z
 id: PHIPO:0000105
 name: decreased size of penetration structure
 namespace: single_organism_phenotype
+def: "A single species pathogen growth phenotype in which the size of pathogen penetration stuctures are decreased when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000124 ! abnormal penetration structure present
+is_a: PHIPO:0000032 ! abnormal formation of pathogen penetration structure
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:00:04Z
 
 [Term]
 id: PHIPO:0000106
-name: increased quantity of penetration structure
+name: increased number of penetration structure
 namespace: single_organism_phenotype
+def: "A single species pathogen growth phenotype in which the frequency of occurence of pathogen penetration stuctures are increased when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000124 ! abnormal penetration structure present
+is_a: PHIPO:0000032 ! abnormal formation of pathogen penetration structure
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:00:54Z
 
 [Term]
 id: PHIPO:0000107
-name: decreased quantity of penetration structure
+name: decreased number of penetration structure
 namespace: single_organism_phenotype
+def: "A single species pathogen growth phenotype in which the frequency of occurence of pathogen penetration stuctures are decreased when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000124 ! abnormal penetration structure present
+is_a: PHIPO:0000032 ! abnormal formation of pathogen penetration structure
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:05:16Z
 
 [Term]
 id: PHIPO:0000108
-name: delayed timing of penetration structure development
+name: delayed timing of penetration structure formation
 namespace: single_organism_phenotype
+def: "A single species pathogen growth phenotype in which formation of pathogen specialized penetration structure begins later than normal when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000124 ! abnormal penetration structure present
+is_a: PHIPO:0000032 ! abnormal formation of pathogen penetration structure
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:13:16Z
 
 [Term]
 id: PHIPO:0000109
-name: expedited timing of penetration structure development
+name: expedited timing of penetration structure formation
 namespace: single_organism_phenotype
+def: "A single species pathogen growth phenotype in which formation of pathogen specialized penetration structure begins sooner than normal when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000124 ! abnormal penetration structure present
+is_a: PHIPO:0000032 ! abnormal formation of pathogen penetration structure
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:13:53Z
 
 [Term]
 id: PHIPO:0000110
-name: absent penetration structure
+name: abolished formation of pathogen penetration structure
 namespace: single_organism_phenotype
+def: "A single species pathogen growth phenotype in which the  ability of the pathogen to  form a specialized penetration structure is abolished when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000032 ! abnormal pre penetration
+is_a: PHIPO:0000032 ! abnormal formation of pathogen penetration structure
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:16:18Z
 
 [Term]
 id: PHIPO:0000111
-name: delayed pathogen penetration
+name: delayed pathogen penetration across the barrier
 namespace: single_organism_phenotype
+def: "A single species pathogen growth phenotype in which the frequency of occurence of pathogen penetration begins later than normal when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000113 ! altered functionality of penetration structure
+is_a: PHIPO:0000024 ! pathogen penetration across the barrier present
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:17:12Z
 
 [Term]
 id: PHIPO:0000112
-name: non-functional penetration structure present
+name: obsolete non-functional penetration structure present
 namespace: single_organism_phenotype
 subset: pathogen_phenotype
-is_a: PHIPO:0000030 ! abnormal penetration
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:19:23Z
 
 [Term]
 id: PHIPO:0000113
-name: altered functionality of penetration structure
+name: obsolete altered functionality of penetration structure
 namespace: single_organism_phenotype
 def: "Penetration structure formed but not functioning in the same manner as the wild type." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000030 ! abnormal penetration
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:19:35Z
 
@@ -1012,8 +1047,9 @@ creation_date: 2018-07-17T11:19:35Z
 id: PHIPO:0000114
 name: increased pathogen penetration across the barrier
 namespace: single_organism_phenotype
+def: "A single species pathogen penetration phenotype in which the frequency of occurence of pathogen penetration of a given experimental substance/membrane is increased." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000113 ! altered functionality of penetration structure
+is_a: PHIPO:0000024 ! pathogen penetration across the barrier present
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:22:58Z
 
@@ -1021,53 +1057,59 @@ creation_date: 2018-07-17T11:22:58Z
 id: PHIPO:0000115
 name: decreased pathogen penetration across the barrier
 namespace: single_organism_phenotype
+def: "A single species pathogen penetration phenotype in which the frequency of occurence of pathogen penetration of a given experimental substance/membrane is decreased" []
 subset: pathogen_phenotype
-is_a: PHIPO:0000113 ! altered functionality of penetration structure
+is_a: PHIPO:0000024 ! pathogen penetration across the barrier present
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:23:12Z
 
 [Term]
 id: PHIPO:0000116
-name: absent pathogen growth post penetration
+name: abolished pathogen growth after penetration of the barrier
 namespace: single_organism_phenotype
+def: "A single species phenotype in which the pathogen's ability to contine to grow after penetration of a given experimental substance/membrane in an in vitro assay is abolished." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000031 ! abnormal post penetration
+is_a: PHIPO:0000031 ! abnormal pathogen growth after penetration of the barrier
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:30:36Z
 
 [Term]
 id: PHIPO:0000117
-name: increased pathogen growth post penetration
+name: increased pathogen growth after penetraton of the barrier
 namespace: single_organism_phenotype
+def: "A single species phenotype in which the frequency of occurence of pathogen growth after penetration of a given experimental substance/membrane in an in vitro assay is increased." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000125 ! abnormal pathogen growth post penetration present
+is_a: PHIPO:0000031 ! abnormal pathogen growth after penetration of the barrier
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:30:56Z
 
 [Term]
 id: PHIPO:0000118
-name: decreased pathogen growth post penetration
+name: increased pathogen growth after penetraton of the barrier
 namespace: single_organism_phenotype
+def: "A single species phenotype in which the frequency of occurence of pathogen growth after penetration of a given experimental substance/membrane in an in vitro assay is decreased." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000125 ! abnormal pathogen growth post penetration present
+is_a: PHIPO:0000031 ! abnormal pathogen growth after penetration of the barrier
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:31:06Z
 
 [Term]
 id: PHIPO:0000119
-name: delayed timing of pathogen growth post penetration
+name: delayed timing of pathogen growth after penetration of the barrier
 namespace: single_organism_phenotype
+def: "A single species phenotype in which the frequency of occurence of pathogen growth after penetration of a given experimental substance/membrane in an in vitro assay begins later than normal." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000125 ! abnormal pathogen growth post penetration present
+is_a: PHIPO:0000031 ! abnormal pathogen growth after penetration of the barrier
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:31:15Z
 
 [Term]
 id: PHIPO:0000120
-name: expedited timing of pathogen growth post penetration
+name: expedited timing of pathogen growth after penetration of the barrier
 namespace: single_organism_phenotype
+def: "A single species phenotype in which the frequency of occurence of pathogen growth after penetration of a given experimental substance/membrane in an in vitro assay begins sooner than normal." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000125 ! abnormal pathogen growth post penetration present
+is_a: PHIPO:0000031 ! abnormal pathogen growth after penetration of the barrier
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:31:21Z
 
@@ -1091,37 +1133,39 @@ creation_date: 2018-07-17T11:46:50Z
 
 [Term]
 id: PHIPO:0000123
-name: normal yeast like growth
+name: normal population growth during yeast-form
 namespace: single_organism_phenotype
-comment: ideas for other terms with MU\n\ncolony formation\nmaturation in aphids/nematodes\ncell size\npigment (melanin aging)\nchange of shape of growth structure/ colony shape/ cell shape\ncell morphology\nasexual and sexual spore morphology\nspore germination\nembryo growth defect
-is_a: PHIPO:0000177 ! yeast like growth form phenotype
+def: "A single species population phenotype in which the population grows normally during the yeast-form lifecycle stage." []
+is_a: PHIPO:0000177 ! yeast-form growth phenotype
+is_a: PHIPO:0000405 ! normal population growth
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:49:54Z
 
 [Term]
 id: PHIPO:0000124
-name: abnormal penetration structure present
+name: obsolete abnormal penetration structure present
 namespace: single_organism_phenotype
 subset: pathogen_phenotype
-is_a: PHIPO:0000032 ! abnormal pre penetration
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-17T12:23:31Z
 
 [Term]
 id: PHIPO:0000125
-name: abnormal pathogen growth post penetration present
+name: obsolete abnormal pathogen growth post penetration present
 namespace: single_organism_phenotype
 subset: pathogen_phenotype
-is_a: PHIPO:0000031 ! abnormal post penetration
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-17T12:28:43Z
 
 [Term]
 id: PHIPO:0000126
-name: expedited pathogen penetration
+name: expedited pathogen penetration across the barrier
 namespace: single_organism_phenotype
+def: "A single species pathogen growth phenotype in which the frequency of occurence of pathogen penetration begins sooner than normal when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
-is_a: PHIPO:0000113 ! altered functionality of penetration structure
+is_a: PHIPO:0000024 ! pathogen penetration across the barrier present
 created_by: alaynecuzick
 creation_date: 2018-07-17T12:39:33Z
 
@@ -1467,9 +1511,10 @@ creation_date: 2018-10-01T12:12:52Z
 
 [Term]
 id: PHIPO:0000160
-name: pathogen penetration assay phenotype
+name: pathogen penetration across barrier phenotype
 namespace: single_organism_phenotype
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+def: "A single species phenotype which affects the pathogen's ability to penetrate a given experimental substance/membrane in an in vitro assay." []
+comment: Penetration assays are often performed in vitro to assess pathogen penetration machinery.\nThis is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: pathogen_phenotype
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
@@ -1502,9 +1547,11 @@ creation_date: 2018-10-01T12:15:24Z
 
 [Term]
 id: PHIPO:0000163
-name: abnormal yeast like growth
+name: abnormal population growth during yeast-form
 namespace: single_organism_phenotype
-is_a: PHIPO:0000177 ! yeast like growth form phenotype
+def: "A single species population phenotype in which the population grows abnormally during the yeast-form lifecycle stage." []
+is_a: PHIPO:0000177 ! yeast-form growth phenotype
+is_a: PHIPO:0000414 ! abnormal population growth
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:18:47Z
 
@@ -1521,9 +1568,9 @@ creation_date: 2018-10-01T12:21:51Z
 
 [Term]
 id: PHIPO:0000165
-name: abnormal host lesion formation with pathogen
+name: obsolete abnormal host lesion formation with pathogen
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000346 ! host necrotic lesion with pathogen phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:22:45Z
 
@@ -1595,7 +1642,8 @@ creation_date: 2018-10-01T13:04:43Z
 id: PHIPO:0000173
 name: abolished filamentous growth on host surface
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000033 ! abnormal pathogen growth on host surface phenotype
+def: "A pathogen colonization of host phenotype where the vegetative growth or proliferation of the pathogen on the host surface is abolished (it was present and is now absent)." []
+is_a: PHIPO:0000033 ! abnormal pathogen growth on host surface
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:04:47Z
 
@@ -1611,8 +1659,9 @@ creation_date: 2018-10-01T13:05:26Z
 
 [Term]
 id: PHIPO:0000175
-name: normal pathogen growth on host surface phenotype
+name: normal pathogen growth on host surface
 namespace: pathogen_host_interaction_phenotype
+def: "A pathogen colonization of host phenotype where the vegetative growth or proliferation of the pathogen on the host surface is normal." []
 is_a: PHIPO:0000188 ! pathogen growth on host surface phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:05:29Z
@@ -1629,8 +1678,9 @@ creation_date: 2018-10-01T13:05:50Z
 
 [Term]
 id: PHIPO:0000177
-name: yeast like growth form phenotype
+name: yeast-form growth phenotype
 namespace: single_organism_phenotype
+def: "A single species population phenotype in which affects the population growth during the yeast-form lifecycle stage." []
 is_a: PHIPO:0000162 ! population growth phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:05:53Z
@@ -1650,11 +1700,11 @@ creation_date: 2018-10-01T13:09:13Z
 
 [Term]
 id: PHIPO:0000179
-name: increased filamentous growth
+name: increased size of filamentous colony
 namespace: single_organism_phenotype
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
-is_a: PHIPO:0000277 ! abnormal filamentous growth
+def: "A single species hyphal colony morphology phenotype where the size of the colony is decreased." []
+synonym: "increased filamentous growth" EXACT []
+is_a: PHIPO:0000957 ! abnormal size of hyphal colony morphology
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:09:16Z
 
@@ -1670,16 +1720,23 @@ creation_date: 2018-10-01T13:09:23Z
 
 [Term]
 id: PHIPO:0000181
-name: decreased filamentous growth
+name: decreased size of filamentous colony
 namespace: single_organism_phenotype
-is_a: PHIPO:0000277 ! abnormal filamentous growth
+def: "A single species hyphal colony morphology phenotype where the size of the colony is decreased." []
+synonym: "decreased filamentous growth" EXACT []
+is_a: PHIPO:0000957 ! abnormal size of hyphal colony morphology
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:09:27Z
 
 [Term]
 id: PHIPO:0000182
-name: absence of host necrotic cell death by pathogen induced HR during biotrophic lifestyle
+name: absence of host HR induced by pathogen during biotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the immune system process of host tissue HR modulated by the pathogen is absent (GO:0009626)." []
+comment: Comment: this term is to be used for host protection against the pathogen.
+synonym: "absence of host lesion" RELATED []
+synonym: "absence of host necrotic cell death" RELATED []
+is_a: PHIPO:0000280 ! effector phenotype
 is_a: PHIPO:0000466 ! host necrotic cell death by pathogen induced hypersensitive response
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:09:35Z
@@ -1699,7 +1756,7 @@ creation_date: 2018-10-01T13:09:42Z
 id: PHIPO:0000184
 name: pathogen adhesion to host phenotype
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000332 ! pathogen growth with host phenotype
+is_a: PHIPO:0000332 ! pathogen colonization of host phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:12:32Z
 
@@ -1715,9 +1772,13 @@ creation_date: 2018-10-01T13:12:43Z
 
 [Term]
 id: PHIPO:0000186
-name: abolished host necrotic cell death by pathogen induced HR during biotrophic lifestyle
+name: abolished host HR induced by pathogen during biotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000182 ! absence of host necrotic cell death by pathogen induced HR during biotrophic lifestyle
+def: "A phenotype where the immune system process of host tissue HR modulated by the pathogen is abolished (GO:0009626)." []
+comment: This term is to be used for host protection against the pathogen.
+synonym: "abolished host lesion" RELATED []
+synonym: "abolished host necrotic cell death" RELATED []
+is_a: PHIPO:0000182 ! absence of host HR induced by pathogen during biotrophic lifestyle
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:12:57Z
 
@@ -1735,7 +1796,8 @@ creation_date: 2018-10-01T13:13:16Z
 id: PHIPO:0000188
 name: pathogen growth on host surface phenotype
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000332 ! pathogen growth with host phenotype
+def: "A pathogen colonization of host phenotype which affects the vegetative growth or proliferation of the pathogen on the host surface." []
+is_a: PHIPO:0000332 ! pathogen colonization of host phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:13:27Z
 
@@ -1751,9 +1813,13 @@ creation_date: 2018-10-01T13:13:36Z
 
 [Term]
 id: PHIPO:0000190
-name: delayed host necrotic cell death by pathogen induced HR during biotrophic lifestyle
+name: delayed host HR induced by pathogen during biotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000192 ! presence of host necrotic cell death by pathogen induced HR during biotrophic lifestyle
+def: "A phenotype where the immune system process of host tissue HR modulated by the pathogen is delayed (GO:0009626)." []
+comment: This term is to be used for host protection against the pathogen.
+synonym: "delayed host necrotic cell death" RELATED []
+synonym: "delayed presence of host lesion" RELATED []
+is_a: PHIPO:0000192 ! presence of host HR induced by pathogen during biotrophic lifestyle
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:14:10Z
 
@@ -1769,8 +1835,13 @@ creation_date: 2018-10-01T13:14:20Z
 
 [Term]
 id: PHIPO:0000192
-name: presence of host necrotic cell death by pathogen induced HR during biotrophic lifestyle
+name: presence of host HR induced by pathogen during biotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the immune system process of host tissue HR modulated by the pathogen is present (GO:0009626)." []
+comment: This term is to be used for host protection against the pathogen.
+synonym: "presence of host lesion" RELATED []
+synonym: "presence of host necrotic cell death" RELATED []
+is_a: PHIPO:0000280 ! effector phenotype
 is_a: PHIPO:0000466 ! host necrotic cell death by pathogen induced hypersensitive response
 is_a: PHIPO:0000480 ! presence of host necrotic cell death by pathogen
 created_by: alaynecuzick
@@ -1788,18 +1859,18 @@ creation_date: 2018-10-01T13:14:39Z
 
 [Term]
 id: PHIPO:0000195
-name: normal host lesion formation with pathogen
+name: obsolete normal host lesion formation with pathogen
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000346 ! host necrotic lesion with pathogen phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:26:34Z
 
 [Term]
 id: PHIPO:0000196
-name: normal aerial height of filamentous growth
+name: normal aerial height of filamentous colony
 namespace: single_organism_phenotype
-comment: should this be linked to stature phenotype?
-is_a: PHIPO:0000278 ! normal filamentous growth
+def: "A single species hyphal colony morphology phenotype where the aerial height of the filamentous colony is normal." []
+is_a: PHIPO:0000278 ! normal hyphal colony morphology
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:27:25Z
 
@@ -1861,10 +1932,10 @@ creation_date: 2018-10-01T13:31:30Z
 
 [Term]
 id: PHIPO:0000203
-name: increased aerial height of filamentous growth
+name: increased aerial height of filamentous colony
 namespace: single_organism_phenotype
-comment: should this be linked to stature phenotype?
-is_a: PHIPO:0000277 ! abnormal filamentous growth
+def: "A single species hyphal colony morphology phenotype where the aerial height of the filamentous colony is increased." []
+is_a: PHIPO:0000958 ! abnormal shape of hyphal colony morphology
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:31:34Z
 
@@ -1880,10 +1951,10 @@ creation_date: 2018-10-01T13:31:59Z
 
 [Term]
 id: PHIPO:0000205
-name: decreased aerial height of filamentous growth
+name: decreased aerial height of filamentous colony
 namespace: single_organism_phenotype
-comment: should this be linked to stature phenotype?
-is_a: PHIPO:0000277 ! abnormal filamentous growth
+def: "A single species hyphal colony morphology phenotype where the aerial height of the filamentous colony is decreased." []
+is_a: PHIPO:0000958 ! abnormal shape of hyphal colony morphology
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:32:01Z
 
@@ -1918,9 +1989,9 @@ creation_date: 2018-10-01T13:32:28Z
 
 [Term]
 id: PHIPO:0000209
-name: increased stature
+name: obsolete increased stature
 namespace: single_organism_phenotype
-is_a: PHIPO:0000282 ! abnormal stature
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:32:31Z
 
@@ -1936,9 +2007,9 @@ creation_date: 2018-10-01T13:32:42Z
 
 [Term]
 id: PHIPO:0000211
-name: decreased stature
+name: obsolete decreased stature
 namespace: single_organism_phenotype
-is_a: PHIPO:0000282 ! abnormal stature
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:32:46Z
 
@@ -2022,47 +2093,51 @@ namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype that affects the chemical reactions and pathways, including anabolism and catabolism, by which living organisms transform chemical substances. Metabolic processes typically transform small molecules, but also include macromolecular processes such as DNA repair and replication, and protein synthesis and degradation." []
 comment: Definition adapted from GO_0008152 metabolic process
 xref: GO_0008152
-is_a: PHIPO:0000510 ! pathogen host interaction cell phenotype
+is_a: PHIPO:0000510 ! pathogen host interaction cell level phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-02T08:53:44Z
 
 [Term]
 id: PHIPO:0000221
-name: increased host lesion size with pathogen
+name: increased size of pathogen-associated host lesion
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000165 ! abnormal host lesion formation with pathogen
+def: "A phenotype where the size of a host tissue lesion induced by the presence of a pathogen is increased." []
+is_a: PHIPO:0000445 ! Pathogen host interaction host lesion formation phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-02T08:53:54Z
 
 [Term]
 id: PHIPO:0000222
-name: increased number of host lesions with pathogen
+name: increased number of pathogen-associated host lesions
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000165 ! abnormal host lesion formation with pathogen
+def: "A phenotype where the number of individual host tissue lesions induced by the presence of a pathogen is increased." []
+is_a: PHIPO:0000445 ! Pathogen host interaction host lesion formation phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-02T08:56:00Z
 
 [Term]
 id: PHIPO:0000223
-name: decreased number of host lesions with pathogen
+name: decreased number of pathogen-associated host lesions
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000165 ! abnormal host lesion formation with pathogen
+def: "A phenotype where the number of individual host tissue lesions induced by the presence of a pathogen is reduced." []
+is_a: PHIPO:0000445 ! Pathogen host interaction host lesion formation phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-02T08:58:26Z
 
 [Term]
 id: PHIPO:0000224
-name: altered colour of host lesion with pathogen
+name: obsolete altered colour of host lesion with pathogen
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000165 ! abnormal host lesion formation with pathogen
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T08:59:23Z
 
 [Term]
 id: PHIPO:0000225
-name: decreased host lesion size with pathogen
+name: decreased size of pathogen-associated host lesion
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000165 ! abnormal host lesion formation with pathogen
+def: "A phenotype where the size of a host tissue lesion induced by the presence of a pathogen is reduced." []
+is_a: PHIPO:0000445 ! Pathogen host interaction host lesion formation phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-02T09:00:28Z
 
@@ -2175,7 +2250,7 @@ comment: This is a high-level term whose primary purpose is to organize terms be
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 xref: FYPO:0000138
-is_a: PHIPO:0000510 ! pathogen host interaction cell phenotype
+is_a: PHIPO:0000510 ! pathogen host interaction cell level phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:13:04Z
 
@@ -2566,15 +2641,16 @@ creation_date: 2018-10-03T11:05:31Z
 
 [Term]
 id: PHIPO:0000273
-name: filamentous growth phenotype
+name: filamentous colony morphology phenotype
 namespace: single_organism_phenotype
-is_a: PHIPO:0000162 ! population growth phenotype
+def: "A single species population phenotype affecting the morphology of a colony growing in filamentous form." []
+is_a: PHIPO:0000509 ! population phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-03T13:38:13Z
 
 [Term]
 id: PHIPO:0000274
-name: increased germination of asexual spore
+name: increased asexual spore germination frequency
 namespace: single_organism_phenotype
 def: "A population phenotype in which the frequency of occurence of asexual spore germination is increased." []
 is_a: PHIPO:0000509 ! population phenotype
@@ -2599,17 +2675,18 @@ creation_date: 2018-10-03T13:39:23Z
 
 [Term]
 id: PHIPO:0000277
-name: abnormal filamentous growth
+name: obsolete abnormal filamentous growth
 namespace: single_organism_phenotype
-is_a: PHIPO:0000273 ! filamentous growth phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-03T13:39:41Z
 
 [Term]
 id: PHIPO:0000278
-name: normal filamentous growth
+name: normal hyphal colony morphology
 namespace: single_organism_phenotype
-is_a: PHIPO:0000273 ! filamentous growth phenotype
+def: "A single species population phenotype where the morphology of a colony growing in filamentous form is normal." []
+is_a: PHIPO:0000273 ! filamentous colony morphology phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-03T13:40:03Z
 
@@ -2625,32 +2702,33 @@ creation_date: 2018-10-03T13:43:37Z
 id: PHIPO:0000280
 name: effector phenotype
 namespace: pathogen_host_interaction_phenotype
-comment: PHI-base definition of 'effector'. (To be made into a class or requested from an external ontology to make into a logical definition).\n\nAn effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defences or other host responses.
-is_a: PHIPO:0000510 ! pathogen host interaction cell phenotype
+def: "An effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defences or other host responses." []
+comment: This is only to be used when there is manipulation of the host.
+is_a: PHIPO:0000510 ! pathogen host interaction cell level phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-05T11:00:39Z
 
 [Term]
 id: PHIPO:0000281
-name: stature phenotype
+name: obsolete stature phenotype
 namespace: single_organism_phenotype
-is_a: PHIPO:0000162 ! population growth phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-05T12:33:43Z
 
 [Term]
 id: PHIPO:0000282
-name: abnormal stature
+name: obsolete abnormal stature
 namespace: single_organism_phenotype
-is_a: PHIPO:0000281 ! stature phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-05T12:33:56Z
 
 [Term]
 id: PHIPO:0000283
-name: normal stature
+name: obsolete normal stature
 namespace: single_organism_phenotype
-is_a: PHIPO:0000281 ! stature phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-05T12:34:05Z
 
@@ -2658,66 +2736,70 @@ creation_date: 2018-10-05T12:34:05Z
 id: PHIPO:0000284
 name: pigment phenotype
 namespace: single_organism_phenotype
-comment: do we want to precompose terms which actual colour in eg yellow, pale green, albino...\n\ncolour or pigment which is best language?
-is_a: PHIPO:0000003 ! tissue phenotype
+def: "A single species individual organism phenotype affecting the deposition or aggregation of coloring matter in a cell." []
+is_a: PHIPO:0000402 ! individual organism phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-05T12:37:03Z
 
 [Term]
 id: PHIPO:0000285
-name: abnormal colour
+name: abnormal cellular pigment accumulation
 namespace: single_organism_phenotype
+def: "A single species individual organism phenotype where the accumulation of coloring matter in a cell is abnormal." []
 is_a: PHIPO:0000284 ! pigment phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-05T12:37:16Z
 
 [Term]
 id: PHIPO:0000286
-name: normal colour
+name: normal cellular pigment accumulation
 namespace: single_organism_phenotype
+def: "A single species individual organism phenotype where the accumulation of coloring matter in a cell is normal." []
 is_a: PHIPO:0000284 ! pigment phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-05T12:37:24Z
 
 [Term]
 id: PHIPO:0000287
-name: increased intensity of colour
+name: increased cellular pigment accumulation
 namespace: single_organism_phenotype
-is_a: PHIPO:0000285 ! abnormal colour
+def: "A single species individual organism phenotype where the accumulation of coloring matter in a cell is increased." []
+is_a: PHIPO:0000285 ! abnormal cellular pigment accumulation
 created_by: alaynecuzick
 creation_date: 2018-10-05T12:38:26Z
 
 [Term]
 id: PHIPO:0000288
-name: decreased intensity of colour
+name: decreased cellular pigment accumulation
 namespace: single_organism_phenotype
-is_a: PHIPO:0000290 ! colour present
+def: "A single species individual organism phenotype where the accumulation of coloring matter in a cell is decreased." []
+is_a: PHIPO:0000285 ! abnormal cellular pigment accumulation
 created_by: alaynecuzick
 creation_date: 2018-10-05T12:38:39Z
 
 [Term]
 id: PHIPO:0000289
-name: altered colour
+name: obsolete altered colour
 namespace: single_organism_phenotype
 subset: host_phenotype
-is_a: PHIPO:0000285 ! abnormal colour
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-05T12:38:58Z
 
 [Term]
 id: PHIPO:0000290
-name: colour present
+name: obsolete colour present
 namespace: single_organism_phenotype
 subset: host_phenotype
-is_a: PHIPO:0000285 ! abnormal colour
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-05T12:39:18Z
 
 [Term]
 id: PHIPO:0000291
-name: colour absent
+name: obsolete colour absent
 namespace: single_organism_phenotype
-is_a: PHIPO:0000285 ! abnormal colour
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-05T12:39:26Z
 
@@ -2725,7 +2807,8 @@ creation_date: 2018-10-05T12:39:26Z
 id: PHIPO:0000292
 name: reduced filament length
 namespace: single_organism_phenotype
-is_a: PHIPO:0000037 ! altered shape of filamentous growth
+def: "A single species cell morphology phenotype where hyphal filaments are short in length." []
+is_a: PHIPO:0000961 ! cell morphology phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-05T12:43:16Z
 
@@ -2749,8 +2832,9 @@ creation_date: 2018-10-05T12:52:54Z
 id: PHIPO:0000295
 name: sinusoidal filament
 namespace: single_organism_phenotype
+def: "A single species cell morphology phenotype where hyphal filaments are wavy." []
 synonym: "wavy hyphae" EXACT []
-is_a: PHIPO:0000037 ! altered shape of filamentous growth
+is_a: PHIPO:0000961 ! cell morphology phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-05T12:53:20Z
 
@@ -2820,199 +2904,199 @@ creation_date: 2018-10-05T13:00:37Z
 
 [Term]
 id: PHIPO:0000305
-name: effector of pathogenicity phenotype
+name: obsolete effector of pathogenicity phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "(Required for successful infection of the host species). The ability of an organism to activate or suppress host defences to enable infectious disease. (Irrespective of the host genotype)." []
-is_a: PHIPO:0000280 ! effector phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T12:55:58Z
 
 [Term]
 id: PHIPO:0000306
-name: abnormal effector of virulence
+name: obsolete abnormal effector of virulence
 namespace: pathogen_host_interaction_phenotype
 def: "The host defences activated by the pathogen are altered compared to the wild type interaction" []
-is_a: PHIPO:0000311 ! effector of virulence phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T12:56:08Z
 
 [Term]
 id: PHIPO:0000307
-name: normal effector of pathogenicity
+name: obsolete normal effector of pathogenicity
 namespace: pathogen_host_interaction_phenotype
 def: "The ability to cause disease by activating or suppressing host defences is unaltered compared to the wildtype interaction. This may result in the outcome of being pathogenic or not-pathogenic." []
-is_a: PHIPO:0000305 ! effector of pathogenicity phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T12:58:41Z
 
 [Term]
 id: PHIPO:0000308
-name: normal effector of pathogenicity activation of host defence
+name: obsolete normal effector of pathogenicity activation of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The host defences activated by the pathogen are unaltered compared to the wild type interaction" []
-is_a: PHIPO:0000307 ! normal effector of pathogenicity
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T12:59:50Z
 
 [Term]
 id: PHIPO:0000309
-name: normal effector of pathogenicity suppression of host defence
+name: obsolete normal effector of pathogenicity suppression of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The host defences suppressed by the pathogen are unaltered compared to the wild type interaction" []
-is_a: PHIPO:0000307 ! normal effector of pathogenicity
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:11:15Z
 
 [Term]
 id: PHIPO:0000310
-name: normal effector of virulence
+name: obsolete normal effector of virulence
 namespace: pathogen_host_interaction_phenotype
 def: "The pathogen has the ability to cause infectious disease dependent upon the gene for gene relationship between the pathogen and host genotype and this is unaltered compared to the wildtype interaction. This may result in disease (virulence) or no disease (avirulence)." []
-is_a: PHIPO:0000311 ! effector of virulence phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:12:40Z
 
 [Term]
 id: PHIPO:0000311
-name: effector of virulence phenotype
+name: obsolete effector of virulence phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "(gene for gene relationships) or defined from the phenotype described in the published study.\nThe pathogen has the ability to cause infectious disease dependent upon the gene for gene relationship between the pathogen and host genotype." []
-is_a: PHIPO:0000280 ! effector phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:14:06Z
 
 [Term]
 id: PHIPO:0000312
-name: abnormal effector of pathogenicity
+name: obsolete abnormal effector of pathogenicity
 namespace: pathogen_host_interaction_phenotype
 def: "The ability to cause disease by activating or suppressing host defences is altered compared to the wildtype interaction." []
-is_a: PHIPO:0000305 ! effector of pathogenicity phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:15:10Z
 
 [Term]
 id: PHIPO:0000313
-name: normal effector of virulence activation of host defence
+name: obsolete normal effector of virulence activation of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The host defences activated by the pathogen are unaltered compared to the wild type interaction" []
-is_a: PHIPO:0000310 ! normal effector of virulence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:22:08Z
 
 [Term]
 id: PHIPO:0000314
-name: normal effector of virulence suppression of host defence
+name: obsolete normal effector of virulence suppression of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The host defences suppressed by the pathogen are unaltered compared to the wild type interaction" []
-is_a: PHIPO:0000310 ! normal effector of virulence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:22:20Z
 
 [Term]
 id: PHIPO:0000315
-name: abnormal effector of virulence activation of host defence
+name: obsolete abnormal effector of virulence activation of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The pathogen has the ability to cause infectious disease dependent upon the gene for gene relationship between the pathogen and host genotype and this is altered compared to the wildtype interaction. This may result in disease (virulence) or no disease (avirulence)." []
-is_a: PHIPO:0000306 ! abnormal effector of virulence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:25:51Z
 
 [Term]
 id: PHIPO:0000316
-name: decreased effector of virulence activation of host defence
+name: obsolete decreased effector of virulence activation of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The pathogen effector entity has a decreased ability to activate host defence." []
-is_a: PHIPO:0000315 ! abnormal effector of virulence activation of host defence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:26:40Z
 
 [Term]
 id: PHIPO:0000317
-name: increased effector of virulence activation of host defence
+name: obsolete increased effector of virulence activation of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The pathogen effector entity has an increased ability to activate host defence." []
-is_a: PHIPO:0000315 ! abnormal effector of virulence activation of host defence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:27:34Z
 
 [Term]
 id: PHIPO:0000318
-name: abnormal effector of virulence suppression of host defence
+name: obsolete abnormal effector of virulence suppression of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The host defences suppressed by the pathogen are altered compare to the wild type interaction" []
-is_a: PHIPO:0000306 ! abnormal effector of virulence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:28:11Z
 
 [Term]
 id: PHIPO:0000319
-name: decreased effector of virulence suppression of host defence
+name: obsolete decreased effector of virulence suppression of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The pathogen effector entity has a decreased ability to suppress host defence." []
-is_a: PHIPO:0000318 ! abnormal effector of virulence suppression of host defence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:28:53Z
 
 [Term]
 id: PHIPO:0000320
-name: increased effector of virulence suppression of host defence
+name: obsolete increased effector of virulence suppression of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The pathogen effector entity has an increased ability to suppress host defence." []
-is_a: PHIPO:0000318 ! abnormal effector of virulence suppression of host defence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:29:31Z
 
 [Term]
 id: PHIPO:0000321
-name: abnormal effector of pathogenicity activation of host defence
+name: obsolete abnormal effector of pathogenicity activation of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The host defences activated by the pathogen are altered compared to the wild type interaction." []
-is_a: PHIPO:0000312 ! abnormal effector of pathogenicity
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:31:28Z
 
 [Term]
 id: PHIPO:0000322
-name: gain of effector of pathogenicity activation of host defence
+name: obsolete gain of effector of pathogenicity activation of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The pathogen effector entity has gained the ability to activate host defence." []
-is_a: PHIPO:0000321 ! abnormal effector of pathogenicity activation of host defence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:32:29Z
 
 [Term]
 id: PHIPO:0000323
-name: loss of effector of pathogenicity activation of host defence
+name: obsolete loss of effector of pathogenicity activation of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The pathogen effector entity has lost the ability to activate host defence." []
-is_a: PHIPO:0000321 ! abnormal effector of pathogenicity activation of host defence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:32:51Z
 
 [Term]
 id: PHIPO:0000324
-name: abnormal effector of pathogenicity suppression of host defence
+name: obsolete abnormal effector of pathogenicity suppression of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The host defences suppressed by the pathogen are altered compared to the wild type interaction" []
-is_a: PHIPO:0000312 ! abnormal effector of pathogenicity
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:33:53Z
 
 [Term]
 id: PHIPO:0000325
-name: gain of effector of pathogenicity suppression of host defence
+name: obsolete gain of effector of pathogenicity suppression of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The pathogen effector entity has gained the ability to suppress host defence." []
-is_a: PHIPO:0000324 ! abnormal effector of pathogenicity suppression of host defence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:34:13Z
 
 [Term]
 id: PHIPO:0000326
-name: loss of effector of pathogenicity suppression of host defence
+name: obsolete loss of effector of pathogenicity suppression of host defence
 namespace: pathogen_host_interaction_phenotype
 def: "The pathogen effector entity has lost the ability to suppress host defence." []
-is_a: PHIPO:0000324 ! abnormal effector of pathogenicity suppression of host defence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-18T13:34:33Z
 
@@ -3056,107 +3140,117 @@ creation_date: 2018-10-19T13:43:13Z
 
 [Term]
 id: PHIPO:0000331
-name: penetration of host by pathogen phenotype
+name: pathogen penetration into host present
 namespace: pathogen_host_interaction_phenotype
-comment: this may be a child of 'pathogen growth with host phenotype'
-synonym: "pathogen entry into host phenotype" EXACT []
-is_a: PHIPO:0000001 ! pathogen host interaction phenotype
+def: "A pathogen entry into host phenotype in which pathogen penetration into the body, tissues, or cells of the host organism is present." []
+is_a: PHIPO:0000949 ! pathogen entry into host phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-29T15:59:22Z
 
 [Term]
 id: PHIPO:0000332
-name: pathogen growth with host phenotype
+name: pathogen colonization of host phenotype
 namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction tissue phenotype which affects the pathogen colonization of the body, tissues, or cells of the host organism." []
+comment: Colonization of host is the action of a pathogen establishing itself in a host. (Covers adhesion, penetration, surface growth).
 is_a: PHIPO:0000512 ! pathogen host interaction tissue phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:06:31Z
 
 [Term]
 id: PHIPO:0000333
-name: pathogen cell to cell movement in host phenotype
+name: pathogen cell to cell migration in host phenotype
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000332 ! pathogen growth with host phenotype
+def: "A pathogen host interaction tissue colonization phenotype which affects the directional movement of the pathogen within the host organism (GO:0044001)." []
+is_a: PHIPO:0000332 ! pathogen colonization of host phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:08:18Z
 
 [Term]
 id: PHIPO:0000334
-name: abnormal cell to cell movement
+name: abnormal pathogen cell to cell migration in host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000333 ! pathogen cell to cell movement in host phenotype
+def: "A pathogen host interaction colonization phenotype in which the occurence of the directional movement of the pathogen within the host organism is abnormal." []
+is_a: PHIPO:0000333 ! pathogen cell to cell migration in host phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:09:56Z
 
 [Term]
 id: PHIPO:0000335
-name: normal cell to cell movement
+name: normal pathogen cell to cell migration in host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000333 ! pathogen cell to cell movement in host phenotype
+def: "A pathogen host interaction colonization phenotype in which the occurence of the directional movement of the pathogen within the host organism is normal." []
+is_a: PHIPO:0000333 ! pathogen cell to cell migration in host phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:10:17Z
 
 [Term]
 id: PHIPO:0000336
-name: intracellular growth phenotype
+name: obsolete intracellular growth phenotype
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000470 ! location of pathogen growth within host phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:16:46Z
 
 [Term]
 id: PHIPO:0000337
-name: extracellular growth phenotype
+name: obsolete extracellular growth phenotype
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000470 ! location of pathogen growth within host phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:17:02Z
 
 [Term]
 id: PHIPO:0000338
-name: increased cell to cell movement
+name: increased pathogen cell to cell migration in host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000334 ! abnormal cell to cell movement
+def: "A pathogen host interaction colonization phenotype in which the occurence of the directional movement of the pathogen within the host organism is increased compared to normal." []
+is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration in host
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:17:55Z
 
 [Term]
 id: PHIPO:0000339
-name: decreased cell to cell movement
+name: decreased pathogen cell to cell migration in host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000334 ! abnormal cell to cell movement
+def: "A pathogen host interaction colonization phenotype in which the occurence of the directional movement of the pathogen within the host organism is decreased compared to normal." []
+is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration in host
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:18:09Z
 
 [Term]
 id: PHIPO:0000340
-name: abolished cell to cell movement
+name: abolished pathogen cell to cell migration in host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000334 ! abnormal cell to cell movement
+def: "A pathogen host interaction colonization phenotype in which the ability of the pathogen to move directionally within the host organism is abolished (pathogen migration was present within the host and is now absent)." []
+is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration in host
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:18:22Z
 
 [Term]
 id: PHIPO:0000341
-name: gain of cell to cell movement
+name: gain of pathogen cell to cell migration in host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000334 ! abnormal cell to cell movement
+def: "A pathogen host interaction colonization phenotype in which the ability of the pathogen to move directionally within the host organism is gained (pathogen migration was absent within the host and is now present)." []
+is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration in host
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:18:44Z
 
 [Term]
 id: PHIPO:0000342
-name: expedited cell to cell movement
+name: expedited pathogen cell to cell migration in host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000334 ! abnormal cell to cell movement
+def: "A pathogen host interaction colonization phenotype in which the occurence of the directional movement of the pathogen within the host organism happens sooner than normal." []
+is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration in host
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:19:03Z
 
 [Term]
 id: PHIPO:0000343
-name: delayed cell to cell movement
+name: delayed pathogen cell to cell migration in host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000334 ! abnormal cell to cell movement
+def: "A pathogen host interaction colonization phenotype in which the occurence of the directional movement of the pathogen within the host organism happens later than normal." []
+is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration in host
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:19:20Z
 
@@ -3178,9 +3272,9 @@ creation_date: 2018-10-29T16:32:47Z
 
 [Term]
 id: PHIPO:0000346
-name: host necrotic lesion with pathogen phenotype
+name: obsolete host necrotic lesion with pathogen phenotype
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000216 ! pathogen host interaction disease symptom phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:33:27Z
 
@@ -3202,69 +3296,77 @@ creation_date: 2018-10-29T17:04:57Z
 
 [Term]
 id: PHIPO:0000349
-name: abnormal penetration of host by pathogen phenotype
+name: pathogen growth present on host surface
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000331 ! penetration of host by pathogen phenotype
+def: "A pathogen colonization of host phenotype where the vegetative growth or proliferation of the pathogen on the host surface is present." []
+is_a: PHIPO:0000175 ! normal pathogen growth on host surface
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:23:08Z
 
 [Term]
 id: PHIPO:0000350
-name: normal penetration of host by pathogen phenotype
+name: pathogen growth absent on host surface
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000331 ! penetration of host by pathogen phenotype
+def: "A pathogen colonization of host phenotype where the vegetative growth or proliferation of the pathogen on the host surface is absent." []
+is_a: PHIPO:0000175 ! normal pathogen growth on host surface
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:23:33Z
 
 [Term]
 id: PHIPO:0000351
-name: abnormal pre penetration of host by pathogen
+name: obsolete pathogen is able to penetrate host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000349 ! abnormal penetration of host by pathogen phenotype
+def: "A pathogen growth with host phenotype in which the pathogen is able to penetrate the host." []
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:24:13Z
 
 [Term]
 id: PHIPO:0000352
-name: normal development of pathogen penetration structure prior to entry into host
+name: normal formation of pathogen penetration structure prior to entry into host
 namespace: pathogen_host_interaction_phenotype
+def: "A pathogen growth with host phenotype in which the formation of the pathogen penetration structure is normal (i.e indistinguishable from wild type)." []
 synonym: "normal pre penetration of host by pathogen" EXACT []
-is_a: PHIPO:0000350 ! normal penetration of host by pathogen phenotype
+is_a: PHIPO:0000949 ! pathogen entry into host phenotype
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:24:42Z
 
 [Term]
 id: PHIPO:0000353
-name: normal penetration of host by pathogen
+name: obsolete normal penetration of host by pathogen
 namespace: pathogen_host_interaction_phenotype
+def: "A pathogen growth with host phenotype in which the pathogen penetration into the host is normal (i.e. indistinguishable from wild type)." []
 synonym: "normal pathogen entry into host" EXACT []
-is_a: PHIPO:0000350 ! normal penetration of host by pathogen phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:25:01Z
 
 [Term]
 id: PHIPO:0000354
-name: normal post penetration growth of pathogen after entry into host
+name: normal pathogen growth in host
 namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is normal (i.e indistinguishable from wild type)." []
 synonym: "normal post penetration of host by pathogen" EXACT []
-is_a: PHIPO:0000350 ! normal penetration of host by pathogen phenotype
+is_a: PHIPO:0000951 ! pathogen growth inside host phenotype
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:25:33Z
 
 [Term]
 id: PHIPO:0000355
-name: abnormal post penetration of host by pathogen
+name: pathogen penetration into host absent
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000349 ! abnormal penetration of host by pathogen phenotype
+def: "A pathogen entry into host phenotype in which pathogen penetration into the body, tissues, or cells of the host organism is absent." []
+is_a: PHIPO:0000949 ! pathogen entry into host phenotype
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:26:18Z
 
 [Term]
 id: PHIPO:0000356
-name: abnormal penetration of host by pathogen
+name: obsolete abnormal penetration of host by pathogen
 namespace: pathogen_host_interaction_phenotype
+def: "A pathogen growth with host phenotype in which the pathogen penetration into the host is abnormal (i.e different than wild-type)." []
 synonym: "abnormal pathogen entry into host phenotype" EXACT []
-is_a: PHIPO:0000349 ! abnormal penetration of host by pathogen phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:26:35Z
 
@@ -3272,120 +3374,140 @@ creation_date: 2018-11-05T13:26:35Z
 id: PHIPO:0000357
 name: abolished pathogen penetration into host
 namespace: pathogen_host_interaction_phenotype
+def: "A pathogen entry into host phenotype in which the ability of the pathogen to  penetrate into the body, tissues, or cells of the host organism is abolished." []
 synonym: "abolished pathogen entry into host" EXACT []
-is_a: PHIPO:0000356 ! abnormal penetration of host by pathogen
+is_a: PHIPO:0000355 ! pathogen penetration into host absent
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:28:51Z
 
 [Term]
 id: PHIPO:0000358
-name: non-functional pathogen penetration structure in contact with host
+name: obsolete non-functional pathogen penetration structure in contact with host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000356 ! abnormal penetration of host by pathogen
+def: "A pathogen growth with host phenotype in which the pathogen forms a non-functional specialized penetration structure." []
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:30:29Z
 
 [Term]
 id: PHIPO:0000359
-name: decreased pathogen penetration across the host barrier
+name: decreased pathogen penetration into host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000356 ! abnormal penetration of host by pathogen
+def: "A pathogen entry into host phenotype in which the frequency of occurence of pathogen penetration into the body, tissues, or cells of the host organism is decreased." []
+synonym: "decreased pathogen entry into host" EXACT []
+is_a: PHIPO:0000331 ! pathogen penetration into host present
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:31:26Z
 
 [Term]
 id: PHIPO:0000360
-name: increased pathogen penetration across the host barrier
+name: increased pathogen penetration into host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000356 ! abnormal penetration of host by pathogen
+def: "A pathogen entry into host phenotype in which the frequency of occurence of pathogen penetration into the body, tissues, or cells of the host organism is increased." []
+synonym: "increased pathogen entry into host" EXACT []
+is_a: PHIPO:0000331 ! pathogen penetration into host present
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:32:32Z
 
 [Term]
 id: PHIPO:0000361
-name: delayed pathogen penetration across the host barrier
+name: delayed pathogen penetration into host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000356 ! abnormal penetration of host by pathogen
+def: "A pathogen entry into host phenotype in which the frequency of occurence of pathogen penetration into the body, tissues, or cells of the host organism begins later than normal." []
+synonym: "delayed pathogen entry into host" EXACT []
+is_a: PHIPO:0000331 ! pathogen penetration into host present
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:32:57Z
 
 [Term]
 id: PHIPO:0000362
-name: expedited pathogen penetration across the host barrier
+name: expedited pathogen penetration into host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000356 ! abnormal penetration of host by pathogen
+def: "A pathogen entry into host phenotype in which the frequency of occurence of pathogen penetration into the body, tissues, or cells of the host organism begins sooner than normal." []
+synonym: "expedited pathogen entry into host" EXACT []
+is_a: PHIPO:0000331 ! pathogen penetration into host present
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:33:34Z
 
 [Term]
 id: PHIPO:0000363
-name: absent pathogen growth in host post penetration
+name: absent pathogen growth in host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000355 ! abnormal post penetration of host by pathogen
+def: "A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is absent." []
+is_a: PHIPO:0000354 ! normal pathogen growth in host
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:35:05Z
 
 [Term]
 id: PHIPO:0000364
-name: abnormal pathogen growth in host post penetration present
+name: abnormal pathogen growth in host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000355 ! abnormal post penetration of host by pathogen
+def: "A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is abnormal (i.e different than wild type)." []
+is_a: PHIPO:0000951 ! pathogen growth inside host phenotype
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:37:31Z
 
 [Term]
 id: PHIPO:0000365
-name: decreased pathogen growth in host post penetration
+name: decreased pathogen growth in host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000364 ! abnormal pathogen growth in host post penetration present
+def: "A pathogen host phenotype in which the frequency of occurence of vegetative growth or proliferation of the pathogen inside the host is decreased." []
+is_a: PHIPO:0000364 ! abnormal pathogen growth in host
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:39:00Z
 
 [Term]
 id: PHIPO:0000366
-name: delayed timing of pathogen growth in host post penetration
+name: delayed timing of pathogen growth in host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000364 ! abnormal pathogen growth in host post penetration present
+def: "A pathogen host phenotype in which the frequency of occurence of vegetative growth or proliferation of the pathogen inside the host begins later than normal." []
+is_a: PHIPO:0000364 ! abnormal pathogen growth in host
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:39:34Z
 
 [Term]
 id: PHIPO:0000367
-name: expedited timing of pathogen growth in host post penetration
+name: expedited timing of pathogen growth in host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000364 ! abnormal pathogen growth in host post penetration present
+def: "A pathogen host phenotype in which the frequency of occurence of vegetative growth or proliferation of the pathogen inside the host begins sooner than normal." []
+is_a: PHIPO:0000364 ! abnormal pathogen growth in host
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:40:14Z
 
 [Term]
 id: PHIPO:0000368
-name: increased pathogen growth in host post penetration
+name: increased pathogen growth in host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000364 ! abnormal pathogen growth in host post penetration present
+def: "A pathogen host phenotype in which the frequency of occurence of vegetative growth or proliferation of the pathogen inside the host is increased." []
+is_a: PHIPO:0000364 ! abnormal pathogen growth in host
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:41:05Z
 
 [Term]
 id: PHIPO:0000369
-name: abnormal pathogen penetration structure present when near host
+name: abnormal formation of pathogen penetration structure when near host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000351 ! abnormal pre penetration of host by pathogen
+def: "A pathogen growth with host phenotype in which the formation of the pathogen penetration structure is abnormal (i.e different than wild-type)." []
+synonym: "abnormal pre penetration" EXACT []
+is_a: PHIPO:0000949 ! pathogen entry into host phenotype
 created_by: alaynecuzick
 creation_date: 2018-11-08T12:12:18Z
 
 [Term]
 id: PHIPO:0000370
-name: pathogen penetration structure absent when near host
+name: obsolete pathogen penetration structure absent when near host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000351 ! abnormal pre penetration of host by pathogen
+def: "A pathogen growth with host phenotype in which the pathogen specialized host penetration structure is absent." []
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-11-08T12:14:10Z
 
 [Term]
 id: PHIPO:0000371
-name: decreased quantity of pathogen penetration structure when near host
+name: decreased number of pathogen penetration structure when near host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000369 ! abnormal pathogen penetration structure present when near host
+def: "A pathogen growth with host phenotype in which the frequency of occurence of pathogen penetration stuctures near the host are decreased." []
+is_a: PHIPO:0000369 ! abnormal formation of pathogen penetration structure when near host
 created_by: alaynecuzick
 creation_date: 2018-11-08T12:15:52Z
 
@@ -3393,15 +3515,17 @@ creation_date: 2018-11-08T12:15:52Z
 id: PHIPO:0000372
 name: decreased size of pathogen penetration structure when near host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000369 ! abnormal pathogen penetration structure present when near host
+def: "A pathogen growth with host phenotype in which the size of pathogen penetration stuctures near the host are decreased." []
+is_a: PHIPO:0000369 ! abnormal formation of pathogen penetration structure when near host
 created_by: alaynecuzick
 creation_date: 2018-11-08T12:16:29Z
 
 [Term]
 id: PHIPO:0000373
-name: increased quantity of pathogen penetration structure when near host
+name: increased number of pathogen penetration structure when near host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000369 ! abnormal pathogen penetration structure present when near host
+def: "A pathogen growth with host phenotype in which the frequency of occurence of pathogen penetration stuctures near the host are increased." []
+is_a: PHIPO:0000369 ! abnormal formation of pathogen penetration structure when near host
 created_by: alaynecuzick
 creation_date: 2018-11-08T12:16:46Z
 
@@ -3409,23 +3533,26 @@ creation_date: 2018-11-08T12:16:46Z
 id: PHIPO:0000374
 name: increased size of pathogen penetration structure when near host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000369 ! abnormal pathogen penetration structure present when near host
+def: "A pathogen growth with host phenotype in which the size of pathogen penetration stuctures near the host are increased." []
+is_a: PHIPO:0000369 ! abnormal formation of pathogen penetration structure when near host
 created_by: alaynecuzick
 creation_date: 2018-11-08T12:17:03Z
 
 [Term]
 id: PHIPO:0000375
-name: delayed timing of pathogen penetration structure development when near host
+name: delayed timing of pathogen penetration structure formation when near host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000369 ! abnormal pathogen penetration structure present when near host
+def: "A pathogen growth with host phenotype in which the formation of pathogen specialized penetration structure begins later than normal." []
+is_a: PHIPO:0000369 ! abnormal formation of pathogen penetration structure when near host
 created_by: alaynecuzick
 creation_date: 2018-11-08T12:17:35Z
 
 [Term]
 id: PHIPO:0000376
-name: expedited timing of pathogen penetration structure development when near host
+name: expedited timing of pathogen penetration structure formation when near host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000369 ! abnormal pathogen penetration structure present when near host
+def: "A pathogen growth with host phenotype in which the formation of pathogen specialized penetration structure begins sooner than normal." []
+is_a: PHIPO:0000369 ! abnormal formation of pathogen penetration structure when near host
 created_by: alaynecuzick
 creation_date: 2018-11-08T12:17:52Z
 
@@ -3659,6 +3786,7 @@ creation_date: 2018-12-05T11:43:53Z
 id: PHIPO:0000402
 name: individual organism phenotype
 namespace: single_organism_phenotype
+def: "A single species phenotype that is observed at the level of an individual organism." []
 is_a: PHIPO:0000002 ! single species phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:44:12Z
@@ -3681,7 +3809,7 @@ creation_date: 2018-12-05T11:44:40Z
 
 [Term]
 id: PHIPO:0000405
-name: normal population growth phenotype
+name: normal population growth
 namespace: single_organism_phenotype
 def: "A single species population phenotype in which a population grows normally (i.e. indistinguishably from wild type)." []
 is_a: PHIPO:0000162 ! population growth phenotype
@@ -3731,7 +3859,7 @@ creation_date: 2018-12-05T11:46:27Z
 
 [Term]
 id: PHIPO:0000410
-name: decreased germination of asexual spore
+name: decreased asexual spore germination frequency
 namespace: single_organism_phenotype
 def: "A population phenotype in which the frequency of occurence of asexual spore germination is decreased." []
 is_a: PHIPO:0000509 ! population phenotype
@@ -3767,7 +3895,7 @@ creation_date: 2018-12-05T11:47:25Z
 
 [Term]
 id: PHIPO:0000414
-name: abnormal population growth phenotype
+name: abnormal population growth
 namespace: single_organism_phenotype
 def: "A single species population phenotype in which a population grows abnormally." []
 is_a: PHIPO:0000162 ! population growth phenotype
@@ -4055,9 +4183,14 @@ creation_date: 2018-12-18T11:34:08Z
 
 [Term]
 id: PHIPO:0000445
-name: pathogen host interaction host cell death phenotype
+name: Pathogen host interaction host lesion formation phenotype
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000001 ! pathogen host interaction phenotype
+def: "A phenotype that affects the process of host tissue death causing a host lesion induced by the presence of a pathogen." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+synonym: "host necrotic lesion with pathogen phenotype" EXACT []
+is_a: PHIPO:0000512 ! pathogen host interaction tissue phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-18T12:46:14Z
 
@@ -4107,20 +4240,27 @@ creation_date: 2018-12-19T09:51:47Z
 
 [Term]
 id: PHIPO:0000461
-name: host necrotic cell death phenotype by pathogen induced programmed cell death
+name: host programmed cell death phenotype induced by pathogen presence
 namespace: pathogen_host_interaction_phenotype
-def: "Definition from GO programmed cell death.\nA process which begins when a cell receives an internal or external signal and activates a series of biochemical events (signaling pathway). The process ends with the death of the cell. Note that this term should be used to annotate gene products in the organism undergoing the programmed cell death. To annotate genes in another organism whose products modulate programmed cell death in a host organism, consider the term 'modulation by symbiont of host programmed cell death ; GO:0052040'. Also, note that 'programmed cell death ; GO:0012501' should be used to refer to instances of caspase-independent cell death mechanisms, in the absence of further indications on the process taking place. At present, caspase-independent cell death is not yet represented in GO due to the lack of consensus and in-depth research on the topic. 'programmed cell death ; GO:0012501' may also be used to annotate gene products in taxa where apoptosis as defined in GO:0006915 does not occur, such as plants. You may also consider these specific children: GO:0097468 'programmed cell death in response to reactive oxygen species' (with descendants GO:0010421 'hydrogen peroxide-mediated programmed cell death' and GO:0010343 'singlet oxygen-mediated programmed cell death'), and GO:0009626 'plant-type hypersensitive response' and its children, which are descendants of GO:0034050 'host programmed cell death induced by symbiont'." []
-comment: Temp definition taken from GO term. Needs updating for phipo
-is_a: PHIPO:0000445 ! pathogen host interaction host cell death phenotype
+def: "A phenotype that affects the process of host tissue death causing a host lesion induced by the presence of a pathogen. The frequency, rate or extent of programmed cell death in the host organism may be modulated by the pathogen or the host (GO:0097300 and GO:0034053)." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+synonym: "host necrotic cell death" RELATED []
+synonym: "presence of host lesion" RELATED []
+is_a: PHIPO:0000445 ! Pathogen host interaction host lesion formation phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-21T12:55:04Z
 
 [Term]
 id: PHIPO:0000462
-name: abolished host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle
+name: abolished host PCD induced by pathogen during necrotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
-comment: Note: in GO 'apoptotic process'
-is_a: PHIPO:0000465 ! absence of host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle
+def: "A phenotype where the process of host tissue PCD modulated by the pathogen is abolished (GO:0034053)." []
+comment: This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen.
+synonym: "abolished host lesion" RELATED []
+synonym: "abolished host necrotic cell death" RELATED []
+is_a: PHIPO:0000465 ! absence of host PCD induced by pathogen during necrotrophic lifestyle
 created_by: alaynecuzick
 creation_date: 2018-12-21T12:55:59Z
 
@@ -4137,17 +4277,24 @@ creation_date: 2018-12-21T12:56:41Z
 id: PHIPO:0000464
 name: host necrotic cell death phenotype in response to pathogen
 namespace: pathogen_host_interaction_phenotype
-def: "Definition from GO necrotic cell death.\nA type of cell death that is morphologically characterized by an increasingly translucent cytoplasm, swelling of organelles, minor ultrastructural modifications of the nucleus (specifically, dilatation of the nuclear membrane and condensation of chromatin into small, irregular, circumscribed patches) and increased cell volume (oncosis), culminating in the disruption of the plasma membrane and subsequent loss of intracellular contents. Necrotic cells do not fragment into discrete corpses as their apoptotic counterparts do. Moreover, their nuclei remain intact and can aggregate and accumulate in necrotic tissues. Note that the word necrosis has been widely used in earlier literature to describe forms of cell death which are now known by more precise terms, such as apoptosis. Necrosis can occur in a regulated fashion, involving a precise sequence of signals; in this case, consider annotating to GO:0097300 'programmed necrotic cell death' or to its more specific child GO:0070266 'necroptotic process'." []
-comment: Temp definition taken from GO term. Needs updating for phipo
-is_a: PHIPO:0000445 ! pathogen host interaction host cell death phenotype
+def: "A phenotype affecting the process of host tissue cell death caused by the pathogen (GO:0097300 part of GO:0009608 )." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0000445 ! Pathogen host interaction host lesion formation phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-21T13:01:44Z
 
 [Term]
 id: PHIPO:0000465
-name: absence of host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle
+name: absence of host PCD induced by pathogen during necrotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000461 ! host necrotic cell death phenotype by pathogen induced programmed cell death
+def: "A phenotype where the process of host tissue PCD modulated by the pathogen is absent (GO:0034053)." []
+comment: This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen.
+synonym: "absence of host lesion" RELATED []
+synonym: "absence of host necrotic cell death" RELATED []
+is_a: PHIPO:0000280 ! effector phenotype
+is_a: PHIPO:0000461 ! host programmed cell death phenotype induced by pathogen presence
 is_a: PHIPO:0000481 ! absence of host necrotic cell death by pathogen
 created_by: alaynecuzick
 creation_date: 2018-12-21T13:03:50Z
@@ -4156,9 +4303,11 @@ creation_date: 2018-12-21T13:03:50Z
 id: PHIPO:0000466
 name: host necrotic cell death by pathogen induced hypersensitive response
 namespace: pathogen_host_interaction_phenotype
-def: "The rapid, localized death of plant cells in response to invasion by a pathogen." []
-comment: Def taken from GO:0009626 plant-type hypersensitive response
-is_a: PHIPO:0000461 ! host necrotic cell death phenotype by pathogen induced programmed cell death
+def: "A phenotype that affects the immune system process of host necrotic cell death by pathogen induced hypersensitive response. Pathogen induced HR is the rapid, localized death of plant cells in response to invasion by a pathogen (GO:0009626)." []
+comment: This term is to be used for host protection against the pathogen.\nThis is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0000461 ! host programmed cell death phenotype induced by pathogen presence
 created_by: alaynecuzick
 creation_date: 2018-12-21T13:09:35Z
 
@@ -4189,9 +4338,9 @@ creation_date: 2019-01-11T10:32:18Z
 
 [Term]
 id: PHIPO:0000470
-name: location of pathogen growth within host phenotype
+name: obsolete location of pathogen growth within host phenotype
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000332 ! pathogen growth with host phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-01-11T10:40:06Z
 
@@ -4199,7 +4348,7 @@ creation_date: 2019-01-11T10:40:06Z
 id: PHIPO:0000471
 name: pathogen biomass within host phenotype
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000332 ! pathogen growth with host phenotype
+is_a: PHIPO:0000332 ! pathogen colonization of host phenotype
 created_by: alaynecuzick
 creation_date: 2019-01-11T10:40:34Z
 
@@ -4233,24 +4382,32 @@ id: PHIPO:0000475
 name: decreased size of lipid droplet
 namespace: single_organism_phenotype
 def: "A single organism phenotype observed in the vegetative growth phase of the life cycle in which the size of lipid droplets is decreased." []
-is_a: PHIPO:0000036
-is_a: PHIPO:0000478 ! lipid droplet phenotype
+is_a: PHIPO:0000036 ! abnormal lipid droplet morphology
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:21:13Z
 
 [Term]
 id: PHIPO:0000476
-name: gain of host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle
+name: gain of host PCD induced by pathogen during necrotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000477 ! presence of host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle
+def: "A phenotype where the process of host tissue PCD modulated by the pathogen has been gained (host PCD was absent and is now present) (GO:0034053)." []
+comment: This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen.
+synonym: "gain of host necrotic cell death" RELATED []
+synonym: "gain of presence of host lesion" RELATED []
+is_a: PHIPO:0000477 ! presence of host PCD induced by pathogen during necrotrophic lifestyle
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:22:36Z
 
 [Term]
 id: PHIPO:0000477
-name: presence of host necrotic cell death by pathogen induced PCD during necrotrophic lifestyle
+name: presence of host PCD induced by pathogen during necrotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000461 ! host necrotic cell death phenotype by pathogen induced programmed cell death
+def: "A phenotype where the process of host tissue PCD modulated by the pathogen is present (GO:0034053)." []
+comment: This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen.
+synonym: "presence of host lesion" RELATED []
+synonym: "presence of host necrotic cell death" RELATED []
+is_a: PHIPO:0000280 ! effector phenotype
+is_a: PHIPO:0000461 ! host programmed cell death phenotype induced by pathogen presence
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:23:06Z
 
@@ -4269,8 +4426,7 @@ id: PHIPO:0000479
 name: increased size of lipid droplet
 namespace: single_organism_phenotype
 def: "A single organism phenotype observed in the vegetative growth phase of the life cycle in which the size of lipid droplets is increased." []
-is_a: PHIPO:0000036
-is_a: PHIPO:0000478 ! lipid droplet phenotype
+is_a: PHIPO:0000036 ! abnormal lipid droplet morphology
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:23:54Z
 
@@ -4278,6 +4434,8 @@ creation_date: 2019-01-14T12:23:54Z
 id: PHIPO:0000480
 name: presence of host necrotic cell death by pathogen
 namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the process of host tissue cell death caused by the pathogen is present (GO:0097300 part of GO:0009608)." []
+synonym: "normal host lesion formation with pathogen" EXACT []
 is_a: PHIPO:0000464 ! host necrotic cell death phenotype in response to pathogen
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:24:50Z
@@ -4286,6 +4444,7 @@ creation_date: 2019-01-14T12:24:50Z
 id: PHIPO:0000481
 name: absence of host necrotic cell death by pathogen
 namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the process of host tissue cell death caused by the pathogen is absent (GO:0097300 part of GO:0009608)." []
 is_a: PHIPO:0000464 ! host necrotic cell death phenotype in response to pathogen
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:25:11Z
@@ -4476,7 +4635,7 @@ creation_date: 2019-02-11T12:07:38Z
 
 [Term]
 id: PHIPO:0000510
-name: pathogen host interaction cell phenotype
+name: pathogen host interaction cell level phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype that is observed at the level of an individual cell." []
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
@@ -4538,9 +4697,13 @@ creation_date: 2019-02-11T13:07:36Z
 
 [Term]
 id: PHIPO:0000516
-name: gain of host necrotic cell death by pathogen induced HR during biotrophic lifestyle
+name: gain of host HR induced by pathogen during biotrophic lifestyle
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000192 ! presence of host necrotic cell death by pathogen induced HR during biotrophic lifestyle
+def: "A phenotype where the process of host tissue HR modulated by the pathogen has been gained (host HR was absent and is now present) (GO:0009626)." []
+comment: This term is to be used for host protection against the pathogen.
+synonym: "gain of host necrotic cell death" RELATED []
+synonym: "gain of presence of host lesion" RELATED []
+is_a: PHIPO:0000192 ! presence of host HR induced by pathogen during biotrophic lifestyle
 created_by: alaynecuzick
 creation_date: 2019-03-05T13:46:52Z
 
@@ -8069,6 +8232,214 @@ def: "A single species cell phenotype in which the amount of reactive oxygen spe
 is_a: PHIPO:0000945 ! altered cellular reactive oxygen species level
 created_by: alaynecuzick
 creation_date: 2019-05-21T12:01:41Z
+
+[Term]
+id: PHIPO:0000948
+name: mutualism absent
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction where the mutualism phenotype is normal (i.e. the same as wild-type), and the wild-type interaction does not exhibit mutualism." []
+is_a: PHIPO:0000039 ! normal mutualism
+created_by: alaynecuzick
+creation_date: 2019-05-24T11:02:11Z
+
+[Term]
+id: PHIPO:0000949
+name: pathogen entry into host phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen colonization of host phenotype which affects the penetration of the pathogen into the body, tissues, or cells of the host organism (GO:0044409)." []
+comment: This covers formation of any penetration structure, the process of penetration, and phenotypes which affect number of penetration structures, or the timing.
+is_a: PHIPO:0000332 ! pathogen colonization of host phenotype
+created_by: alaynecuzick
+creation_date: 2019-05-24T11:54:37Z
+
+[Term]
+id: PHIPO:0000950
+name: pathogen spore germination on host phenotype
+namespace: pathogen_host_interaction_phenotype
+comment: Note: to add asexual/sexual etc
+is_a: PHIPO:0000332 ! pathogen colonization of host phenotype
+created_by: alaynecuzick
+creation_date: 2019-05-24T12:00:40Z
+
+[Term]
+id: PHIPO:0000951
+name: pathogen growth inside host phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host phenotype which affects the vegetative growth or proliferation of the pathogen inside the host (e.g. after entry by penetration or infiltration)." []
+is_a: PHIPO:0000332 ! pathogen colonization of host phenotype
+created_by: alaynecuzick
+creation_date: 2019-05-24T12:07:04Z
+
+[Term]
+id: PHIPO:0000952
+name: abolished pathogen growth in host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is abolished (it was present as is now absent)." []
+is_a: PHIPO:0000364 ! abnormal pathogen growth in host
+created_by: alaynecuzick
+creation_date: 2019-05-24T12:21:58Z
+
+[Term]
+id: PHIPO:0000953
+name: pathogen penetration structure present when near host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen growth with host phenotype in which the pathogen specialized host penetration structure is present." []
+is_a: PHIPO:0000352 ! normal formation of pathogen penetration structure prior to entry into host
+created_by: alaynecuzick
+creation_date: 2019-05-24T12:23:57Z
+
+[Term]
+id: PHIPO:0000954
+name: pathogen growth present in host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is present." []
+is_a: PHIPO:0000354 ! normal pathogen growth in host
+created_by: alaynecuzick
+creation_date: 2019-05-24T12:25:01Z
+
+[Term]
+id: PHIPO:0000955
+name: abolished formation of pathogen penetration structure when near host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen growth with host phenotype in which the ability of the pathogen to  form a specialized penetration structure is abolished." []
+is_a: PHIPO:0000369 ! abnormal formation of pathogen penetration structure when near host
+created_by: alaynecuzick
+creation_date: 2019-05-24T13:17:03Z
+
+[Term]
+id: PHIPO:0000956
+name: normal asexual spore germination frequency
+namespace: single_organism_phenotype
+def: "A population phenotype in which the frequency of occurence of asexual spore germination is normal (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0000509 ! population phenotype
+created_by: alaynecuzick
+creation_date: 2019-06-10T09:09:38Z
+
+[Term]
+id: PHIPO:0000957
+name: abnormal size of hyphal colony morphology
+namespace: single_organism_phenotype
+def: "A single species hyphal colony morphology phenotype where the size of the colony is abnormal." []
+is_a: PHIPO:0000037 ! abnormal hyphal colony morphology
+created_by: alaynecuzick
+creation_date: 2019-06-10T09:31:25Z
+
+[Term]
+id: PHIPO:0000958
+name: abnormal shape of hyphal colony morphology
+namespace: single_organism_phenotype
+def: "A single species hyphal colony morphology phenotype where the shape of the colony is abnormal." []
+is_a: PHIPO:0000037 ! abnormal hyphal colony morphology
+created_by: alaynecuzick
+creation_date: 2019-06-10T09:31:56Z
+
+[Term]
+id: PHIPO:0000959
+name: normal cellular melanin accumulation
+namespace: single_organism_phenotype
+def: "A single species individual organism phenotype where the accumulation of melanin in a cell is normal." []
+synonym: "melanization" EXACT []
+is_a: PHIPO:0000286 ! normal cellular pigment accumulation
+created_by: alaynecuzick
+creation_date: 2019-06-11T09:24:45Z
+
+[Term]
+id: PHIPO:0000960
+name: normal size of filamentous colony
+namespace: single_organism_phenotype
+def: "A single species hyphal colony morphology phenotype where the size of the colony is normal." []
+is_a: PHIPO:0000278 ! normal hyphal colony morphology
+created_by: alaynecuzick
+creation_date: 2019-06-11T09:57:34Z
+
+[Term]
+id: PHIPO:0000961
+name: cell morphology phenotype
+namespace: single_organism_phenotype
+def: "A single species phenotype that affects the morphology of a cell." []
+is_a: PHIPO:0000034 ! cell phenotype
+created_by: alaynecuzick
+creation_date: 2019-06-11T10:58:14Z
+
+[Term]
+id: PHIPO:0000962
+name: decreased filamentous growth on host surface
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen colonization of host phenotype where the vegetative growth or proliferation of the pathogen on the host surface is decreased." []
+is_a: PHIPO:0000033 ! abnormal pathogen growth on host surface
+created_by: alaynecuzick
+creation_date: 2019-06-12T10:48:26Z
+
+[Term]
+id: PHIPO:0000963
+name: normal population growth during hyphal-form
+namespace: single_organism_phenotype
+def: "A single species population phenotype in which the population grows normally during the hyphal-form lifecycle stage." []
+is_a: PHIPO:0000405 ! normal population growth
+created_by: alaynecuzick
+creation_date: 2019-06-12T10:54:55Z
+
+[Term]
+id: PHIPO:0000964
+name: loss of virulence
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is abolished on a specific host genotype." []
+comment: Note this pathogen may still be pathogenic on an alternate host genotype. \nNote that avirulence means loss of pathogenicity in medical terminology.
+synonym: "abolished virulence" EXACT []
+synonym: "avirulence" RELATED []
+is_a: PHIPO:0000015 ! reduced virulence
+created_by: alaynecuzick
+creation_date: 2019-06-26T11:54:44Z
+
+[Term]
+id: PHIPO:0000965
+name: loss of virulence of gain of pathogenicity mutant
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is abolished when observed in an interaction with a pathogen mutant which was previously engineered to gain pathogenicity." []
+comment: Note this pathogen may still be pathogenic on an alternate host genotype.
+is_a: PHIPO:0000964 ! loss of virulence
+created_by: alaynecuzick
+creation_date: 2019-06-26T12:27:44Z
+
+[Term]
+id: PHIPO:0000966
+name: pathogen penetration structure present
+namespace: single_organism_phenotype
+def: "A single species pathogen growth phenotype in which the pathogen specialized host penetration structure is present when assessed for penetration ability on a given experimental substance/membrane." []
+subset: pathogen_phenotype
+is_a: PHIPO:0000028 ! normal formation of pathogen penetration structure
+created_by: alaynecuzick
+creation_date: 2019-07-05T09:48:18Z
+
+[Term]
+id: PHIPO:0000967
+name: abolished pathogen penetration across the barrier
+namespace: single_organism_phenotype
+def: "A single species pathogen penetration phenotype in in which the ability of the pathogen to  penetrate a given experimental substance/membrane is abolished." []
+subset: pathogen_phenotype
+is_a: PHIPO:0000030 ! pathogen penetration across the barrier absent
+created_by: alaynecuzick
+creation_date: 2019-07-05T10:18:20Z
+
+[Term]
+id: PHIPO:0000968
+name: absent pathogen growth after penetration of the barrier
+namespace: single_organism_phenotype
+def: "A single species phenotype in which the pathogen's ability to contine to grow after penetration of a given experimental substance/membrane in an in vitro assay is absent." []
+subset: pathogen_phenotype
+is_a: PHIPO:0000027 ! normal pathogen growth after penetration of the barrier
+created_by: alaynecuzick
+creation_date: 2019-07-05T11:08:06Z
+
+[Term]
+id: PHIPO:0000969
+name: present pathogen growth after penetration of the barrier
+namespace: single_organism_phenotype
+def: "A single species phenotype in which the pathogen's ability to contine to grow after penetration of a given experimental substance/membrane in an in vitro assay is present." []
+subset: pathogen_phenotype
+is_a: PHIPO:0000027 ! normal pathogen growth after penetration of the barrier
+created_by: alaynecuzick
+creation_date: 2019-07-05T11:08:42Z
 
 [Typedef]
 id: PHIPO:0000304
