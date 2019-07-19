@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-07-16/phipo-simple.owl
+data-version: phipo/releases/2019-07-19/phipo-simple.owl
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -8769,6 +8769,43 @@ subset: pathogen_phenotype
 is_a: PHIPO:0000027 ! normal pathogen growth after penetration of the barrier
 created_by: alaynecuzick
 creation_date: 2019-07-05T11:08:42Z
+
+[Term]
+id: PHIPO:0000970
+name: autophagosomes present in decreased numbers
+namespace: single_organism_phenotype
+def: "A single organism phenotype observed in the vegetative growth phase of the life cycle in which cells contain fewer autophagosomes than normal (GO:0005776)." []
+is_a: PHIPO:0000973 ! autophagosome phenotype
+created_by: alaynecuzick
+creation_date: 2019-07-16T11:41:18Z
+
+[Term]
+id: PHIPO:0000971
+name: abolished formation of autophagosomes
+namespace: single_organism_phenotype
+def: "A single organism phenotype observed in the vegetative growth phase of the life cycle in which the ability of the organism to form autophagosomes is abolished (they were present and are now absent) (GO:0005776)." []
+is_a: PHIPO:0000973 ! autophagosome phenotype
+created_by: alaynecuzick
+creation_date: 2019-07-16T12:03:12Z
+
+[Term]
+id: PHIPO:0000972
+name: abolished protein localization to autophagosome
+namespace: single_organism_phenotype
+def: "A single organism phenotype in which a protein does not localize to, and is therefore absent from the autophagosome (GO:0005776)." []
+is_a: PHIPO:0000245 ! abolished protein localization
+is_a: PHIPO:0000973 ! autophagosome phenotype
+created_by: alaynecuzick
+creation_date: 2019-07-16T13:07:53Z
+
+[Term]
+id: PHIPO:0000973
+name: autophagosome phenotype
+namespace: single_organism_phenotype
+def: "A single organism phenotype that affects a double-membrane-bounded compartment that engulfs endogenous cellular material as well as invading microorganisms to target them to the lytic vacuole/lysosome for degradation as part of macroautophagy (GO:0005776)." []
+is_a: PHIPO:0000415 ! abnormal subcellular component
+created_by: alaynecuzick
+creation_date: 2019-07-16T13:22:46Z
 
 [Typedef]
 id: PHIPO:0000304
