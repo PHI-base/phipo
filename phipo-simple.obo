@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-07-19/phipo-simple.owl
+data-version: phipo/releases/2019-07-27/phipo-simple.owl
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -285,12 +285,12 @@ property_value: creation:date 2018-05-04T13:17:08Z xsd:string
 
 [Term]
 id: PHIPO:0000025
-name: normal mating phenotype prior to penetration
+name: obsolete normal mating phenotype prior to penetration
 namespace: single_organism_phenotype
 comment: Is this a bit too specific?\nshould this be with sexual reproduction?\neg ustilago and rust fungus\nMU agrees REMOVE from penetration
-is_a: PHIPO:0000044 ! normal reproduction phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:17:46Z xsd:string
+is_obsolete: true
 
 [Term]
 id: PHIPO:0000026
@@ -327,12 +327,12 @@ property_value: creation:date 2018-05-04T13:19:44Z xsd:string
 
 [Term]
 id: PHIPO:0000029
-name: abnormal mating phenotype prior to penetration
+name: obsolete abnormal mating phenotype prior to penetration
 namespace: single_organism_phenotype
 comment: Is this a bit too specific?\nshould this be with reproduction?
-is_a: PHIPO:0000043 ! abnormal reproduction phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:22:14Z xsd:string
+is_obsolete: true
 
 [Term]
 id: PHIPO:0000030
@@ -471,6 +471,7 @@ creation_date: 2018-07-13T11:54:54Z
 id: PHIPO:0000043
 name: abnormal reproduction phenotype
 namespace: single_organism_phenotype
+def: "A single species phenotype where reproduction is abnormal." []
 is_a: PHIPO:0000161 ! reproductive phenotype
 created_by: alaynecuzick
 creation_date: 2018-07-13T11:57:47Z
@@ -479,6 +480,7 @@ creation_date: 2018-07-13T11:57:47Z
 id: PHIPO:0000044
 name: normal reproduction phenotype
 namespace: single_organism_phenotype
+def: "A single species phenotype where reproduction is normal (indistinguishable from wild type)." []
 is_a: PHIPO:0000161 ! reproductive phenotype
 created_by: alaynecuzick
 creation_date: 2018-07-13T11:58:15Z
@@ -487,7 +489,8 @@ creation_date: 2018-07-13T11:58:15Z
 id: PHIPO:0000045
 name: normal asexual reproduction
 namespace: single_organism_phenotype
-comment: note: endospores are dormant, tough non-reproductive structures -wikipedia
+def: "A single species phenotype where the asexual reproduction process in which new individuals are produced by either a single cell or a group of cells, in the absence of any sexual process is normal (indistinguishable from wild type)(GO:0019954)." []
+synonym: "normal parthenogenesis" RELATED []
 is_a: PHIPO:0000044 ! normal reproduction phenotype
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:08:15Z
@@ -496,6 +499,7 @@ creation_date: 2018-07-13T12:08:15Z
 id: PHIPO:0000046
 name: normal sexual reproduction
 namespace: single_organism_phenotype
+def: "A single species phenotype where the sexual reproduction process in which new individuals are produced by combining the genetic material of two gametes, which may come from two organisms or from a single organism is normal (indistinguishable from wild type) (GO:0019953)." []
 is_a: PHIPO:0000044 ! normal reproduction phenotype
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:09:04Z
@@ -504,6 +508,8 @@ creation_date: 2018-07-13T12:09:04Z
 id: PHIPO:0000047
 name: abnormal asexual reproduction
 namespace: single_organism_phenotype
+def: "A single species phenotype where the asexual reproduction process in which new individuals are produced by either a single cell or a group of cells, in the absence of any sexual process is abnormal (GO:0019954)." []
+synonym: "abnormal parthenogenesis" RELATED []
 is_a: PHIPO:0000043 ! abnormal reproduction phenotype
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:09:49Z
@@ -512,6 +518,7 @@ creation_date: 2018-07-13T12:09:49Z
 id: PHIPO:0000048
 name: abnormal sexual reproduction
 namespace: single_organism_phenotype
+def: "A single species phenotype where the sexual reproduction process in which new individuals are produced by combining the genetic material of two gametes, which may come from two organisms or from a single organism is abnormal (GO:0019953)." []
 is_a: PHIPO:0000043 ! abnormal reproduction phenotype
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:10:14Z
@@ -554,33 +561,37 @@ creation_date: 2018-07-13T12:18:34Z
 
 [Term]
 id: PHIPO:0000053
-name: delayed production of asexual spores
+name: delayed asexual sporulation
 namespace: single_organism_phenotype
-is_a: PHIPO:0000066 ! abnormal timing of asexual spore production
+def: "A reproductive phenotype in which the occurence of asexual spore formation happens later than normal." []
+is_a: PHIPO:0000078 ! abnormal asexual sporulation
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:20:33Z
 
 [Term]
 id: PHIPO:0000054
-name: expedited production of asexual spores
+name: expedited asexual sporulation
 namespace: single_organism_phenotype
-is_a: PHIPO:0000066 ! abnormal timing of asexual spore production
+def: "A reproductive phenotype in which the occurence of asexual spore formation happens sooner than normal." []
+is_a: PHIPO:0000078 ! abnormal asexual sporulation
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:22:31Z
 
 [Term]
 id: PHIPO:0000055
-name: delayed production of sexual spores
+name: delayed sexual sporulation
 namespace: single_organism_phenotype
-is_a: PHIPO:0000074 ! abnormal timing of sexual spore production
+def: "A reproductive phenotype in which the occurence of sexual spore formation happens later than normal." []
+is_a: PHIPO:0000077 ! abnormal sexual sporulation
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:23:43Z
 
 [Term]
 id: PHIPO:0000056
-name: expedited production of sexual spores
+name: expedited sexual sporulation
 namespace: single_organism_phenotype
-is_a: PHIPO:0000074 ! abnormal timing of sexual spore production
+def: "A reproductive phenotype in which the occurence of sexual spore formation happens sooner than normal." []
+is_a: PHIPO:0000077 ! abnormal sexual sporulation
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:24:07Z
 
@@ -589,15 +600,15 @@ id: PHIPO:0000057
 name: normal number of sexual spores
 namespace: single_organism_phenotype
 def: "A population phenotype in which the frequency of occurence of sexual spores is normal  (i.e. indistinguishable from wild type)." []
-is_a: PHIPO:0000079 ! normal sexual sporogenesis
+is_a: PHIPO:0000079 ! normal sexual sporulation
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:25:33Z
 
 [Term]
 id: PHIPO:0000058
-name: normal speed in production of sexual spores
+name: obsolete normal timing in production of sexual spores
 namespace: single_organism_phenotype
-is_a: PHIPO:0000079 ! normal sexual sporogenesis
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:26:14Z
 
@@ -606,15 +617,15 @@ id: PHIPO:0000059
 name: normal number of asexual spores
 namespace: single_organism_phenotype
 def: "A population phenotype in which the frequency of occurence of asexual spores is normal  (i.e. indistinguishable from wild type)." []
-is_a: PHIPO:0000080 ! normal asexual sporogenesis
+is_a: PHIPO:0000080 ! normal asexual sporulation
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:27:14Z
 
 [Term]
 id: PHIPO:0000060
-name: normal speed in production of asexual spores
+name: obsolete normal timing in production of asexual spores
 namespace: single_organism_phenotype
-is_a: PHIPO:0000080 ! normal asexual sporogenesis
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:27:45Z
 
@@ -622,7 +633,8 @@ creation_date: 2018-07-13T12:27:45Z
 id: PHIPO:0000061
 name: asexual spores absent
 namespace: single_organism_phenotype
-is_a: PHIPO:0000078 ! abnormal asexual sporogenesis
+def: "A reproductive phenotype where asexual spores are absent (FAO:0000023)." []
+is_a: PHIPO:0000078 ! abnormal asexual sporulation
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:28:57Z
 
@@ -630,6 +642,7 @@ creation_date: 2018-07-13T12:28:57Z
 id: PHIPO:0000062
 name: sexual spores absent
 namespace: single_organism_phenotype
+def: "A reproductive phenotype where sexual spores are absent (FAO:0000017)." []
 is_a: PHIPO:0000130 ! abnormal sexual spore morphology
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:29:31Z
@@ -638,7 +651,8 @@ creation_date: 2018-07-13T12:29:31Z
 id: PHIPO:0000063
 name: sexual spores present
 namespace: single_organism_phenotype
-is_a: PHIPO:0000079 ! normal sexual sporogenesis
+def: "A reproductive phenotype where asexual spores are present (FAO:0000017). The product of meiosis." []
+is_a: PHIPO:0000079 ! normal sexual sporulation
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:29:58Z
 
@@ -646,7 +660,8 @@ creation_date: 2018-07-13T12:29:58Z
 id: PHIPO:0000064
 name: asexual spores present
 namespace: single_organism_phenotype
-is_a: PHIPO:0000080 ! normal asexual sporogenesis
+def: "A reproductive phenotype where asexual spores are present (FAO:0000023). The product of mitosis." []
+is_a: PHIPO:0000080 ! normal asexual sporulation
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:30:18Z
 
@@ -654,15 +669,16 @@ creation_date: 2018-07-13T12:30:18Z
 id: PHIPO:0000065
 name: asexual spores increased in size
 namespace: single_organism_phenotype
+def: "A reproductive morphology phenotype where the size of the asexual spore is increased." []
 is_a: PHIPO:0000081 ! abnormal asexual spore size
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:32:36Z
 
 [Term]
 id: PHIPO:0000066
-name: abnormal timing of asexual spore production
+name: obsolete abnormal timing of asexual spore production
 namespace: single_organism_phenotype
-is_a: PHIPO:0000078 ! abnormal asexual sporogenesis
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:33:03Z
 
@@ -670,6 +686,7 @@ creation_date: 2018-07-13T12:33:03Z
 id: PHIPO:0000067
 name: asexual spores decreased in size
 namespace: single_organism_phenotype
+def: "A reproductive morphology phenotype where the size of the asexual spore is decreased." []
 is_a: PHIPO:0000081 ! abnormal asexual spore size
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:36:00Z
@@ -678,6 +695,7 @@ creation_date: 2018-07-13T12:36:00Z
 id: PHIPO:0000068
 name: sexual spores increased in size
 namespace: single_organism_phenotype
+def: "A reproductive morphology phenotype where the size of the sexual spore is increased." []
 is_a: PHIPO:0000071 ! abnormal sexual spore size
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:37:29Z
@@ -686,6 +704,7 @@ creation_date: 2018-07-13T12:37:29Z
 id: PHIPO:0000069
 name: sexual spores decreased in size
 namespace: single_organism_phenotype
+def: "A reproductive morphology phenotype where the size of the sexual spore is decreased." []
 is_a: PHIPO:0000071 ! abnormal sexual spore size
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:37:52Z
@@ -702,6 +721,7 @@ creation_date: 2018-07-13T12:38:19Z
 id: PHIPO:0000071
 name: abnormal sexual spore size
 namespace: single_organism_phenotype
+def: "A reproductive morphology phenotype where the size of the sexual spore is abnormal." []
 is_a: PHIPO:0000130 ! abnormal sexual spore morphology
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:39:04Z
@@ -710,6 +730,7 @@ creation_date: 2018-07-13T12:39:04Z
 id: PHIPO:0000072
 name: abnormal sexual spore shape
 namespace: single_organism_phenotype
+def: "A reproductive morphology phenotype where the shape of the sexual spore is abnormal." []
 is_a: PHIPO:0000130 ! abnormal sexual spore morphology
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:39:34Z
@@ -719,15 +740,15 @@ id: PHIPO:0000073
 name: abnormal number of sexual spores
 namespace: single_organism_phenotype
 def: "A population phenotype in which the frequency of occurence of sexual spores is abnormal." []
-is_a: PHIPO:0000077 ! abnormal sexual sporogenesis
+is_a: PHIPO:0000077 ! abnormal sexual sporulation
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:40:05Z
 
 [Term]
 id: PHIPO:0000074
-name: abnormal timing of sexual spore production
+name: obsolete abnormal timing of sexual spore production
 namespace: single_organism_phenotype
-is_a: PHIPO:0000077 ! abnormal sexual sporogenesis
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:42:05Z
 
@@ -735,6 +756,7 @@ creation_date: 2018-07-13T12:42:05Z
 id: PHIPO:0000075
 name: abnormal asexual spore shape
 namespace: single_organism_phenotype
+def: "A reproductive morphology phenotype where the shape of the asexual spore is abnormal." []
 is_a: PHIPO:0000127 ! abnormal asexual spore morphology
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:43:06Z
@@ -749,32 +771,44 @@ creation_date: 2018-07-13T12:43:42Z
 
 [Term]
 id: PHIPO:0000077
-name: abnormal sexual sporogenesis
+name: abnormal sexual sporulation
 namespace: single_organism_phenotype
+def: "A reproductive phenotype where the process of sexual sporulation, the formation of spores from the products of meiosis, is abnormal (GO:0034293)." []
+synonym: "abnormal meiotic sporulation" EXACT []
+synonym: "abnormal sexual spore formation" EXACT []
 is_a: PHIPO:0000048 ! abnormal sexual reproduction
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:54:33Z
 
 [Term]
 id: PHIPO:0000078
-name: abnormal asexual sporogenesis
+name: abnormal asexual sporulation
 namespace: single_organism_phenotype
+def: "A reproductive phenotype where the process of asexual sporulation, the formation of spores derived from the products of an asexual cell division, is abnormal (GO:0030436)." []
+synonym: "abnormal asexual spore formation" EXACT []
+synonym: "abnormal mitotic sporulation" EXACT []
 is_a: PHIPO:0000047 ! abnormal asexual reproduction
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:55:38Z
 
 [Term]
 id: PHIPO:0000079
-name: normal sexual sporogenesis
+name: normal sexual sporulation
 namespace: single_organism_phenotype
+def: "A reproductive phenotype where the process of sexual sporulation, the formation of spores from the products of meiosis, is normal (GO:0034293)." []
+synonym: "normal meiotic sporulation" EXACT []
+synonym: "normal sexual spore formation" EXACT []
 is_a: PHIPO:0000046 ! normal sexual reproduction
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:56:11Z
 
 [Term]
 id: PHIPO:0000080
-name: normal asexual sporogenesis
+name: normal asexual sporulation
 namespace: single_organism_phenotype
+def: "A reproductive phenotype where the process of asexual sporulation, the formation of spores derived from the products of an asexual cell division, is normal (GO:0030436)." []
+synonym: "normal asexual spore formation" EXACT []
+synonym: "normal mitotic sporulation" EXACT []
 is_a: PHIPO:0000045 ! normal asexual reproduction
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:57:46Z
@@ -783,6 +817,7 @@ creation_date: 2018-07-13T12:57:46Z
 id: PHIPO:0000081
 name: abnormal asexual spore size
 namespace: single_organism_phenotype
+def: "A reproductive morphology phenotype where the size of the asexual spore is abnormal." []
 is_a: PHIPO:0000127 ! abnormal asexual spore morphology
 created_by: alaynecuzick
 creation_date: 2018-07-13T13:08:40Z
@@ -792,142 +827,154 @@ id: PHIPO:0000082
 name: abnormal number of asexual spores
 namespace: single_organism_phenotype
 def: "A population phenotype in which the frequency of occurence of asexual spores is abnormal." []
-is_a: PHIPO:0000078 ! abnormal asexual sporogenesis
+is_a: PHIPO:0000078 ! abnormal asexual sporulation
 created_by: alaynecuzick
 creation_date: 2018-07-13T13:09:40Z
 
 [Term]
 id: PHIPO:0000083
-name: abnormal asexual spore motility
+name: obsolete abnormal asexual spore motility
 namespace: single_organism_phenotype
-is_a: PHIPO:0000047 ! abnormal asexual reproduction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-13T13:17:24Z
 
 [Term]
 id: PHIPO:0000084
-name: increased asexual spore motility
+name: obsolete increased asexual spore motility
 namespace: single_organism_phenotype
-is_a: PHIPO:0000083 ! abnormal asexual spore motility
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-13T13:18:20Z
 
 [Term]
 id: PHIPO:0000085
-name: decreased asexual spore motility
+name: obsolete decreased asexual spore motility
 namespace: single_organism_phenotype
-is_a: PHIPO:0000083 ! abnormal asexual spore motility
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-13T13:18:38Z
 
 [Term]
 id: PHIPO:0000086
-name: normal asexual spore motility
+name: obsolete normal asexual spore motility
 namespace: single_organism_phenotype
-is_a: PHIPO:0000045 ! normal asexual reproduction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-13T13:21:21Z
 
 [Term]
 id: PHIPO:0000087
-name: normal binary fission
+name: obsolete normal binary fission
 namespace: single_organism_phenotype
-is_a: PHIPO:0000045 ! normal asexual reproduction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-13T13:25:48Z
 
 [Term]
 id: PHIPO:0000088
-name: normal budding
+name: obsolete normal budding
 namespace: single_organism_phenotype
-is_a: PHIPO:0000045 ! normal asexual reproduction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-13T13:27:00Z
 
 [Term]
 id: PHIPO:0000089
-name: normal fragmentation
+name: obsolete normal fragmentation
 namespace: single_organism_phenotype
-is_a: PHIPO:0000045 ! normal asexual reproduction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-13T13:27:51Z
 
 [Term]
 id: PHIPO:0000090
-name: normal parthenogenesis
+name: obsolete normal parthenogenesis
 namespace: single_organism_phenotype
-is_a: PHIPO:0000045 ! normal asexual reproduction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-13T13:28:15Z
 
 [Term]
 id: PHIPO:0000091
-name: abnormal budding
+name: obsolete abnormal budding
 namespace: single_organism_phenotype
-is_a: PHIPO:0000047 ! abnormal asexual reproduction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-13T13:30:12Z
 
 [Term]
 id: PHIPO:0000092
-name: abnormal binary fission
+name: obsolete abnormal binary fission
 namespace: single_organism_phenotype
-is_a: PHIPO:0000047 ! abnormal asexual reproduction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-13T13:30:30Z
 
 [Term]
 id: PHIPO:0000093
-name: abnormal parthenogenesis
+name: obsolete abnormal parthenogenesis
 namespace: single_organism_phenotype
-is_a: PHIPO:0000047 ! abnormal asexual reproduction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-13T13:31:01Z
 
 [Term]
 id: PHIPO:0000094
-name: normal mitosis in asexual reproduction
+name: obsolete normal mitosis in asexual reproduction
 namespace: single_organism_phenotype
-is_a: PHIPO:0000045 ! normal asexual reproduction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-13T13:38:56Z
 
 [Term]
 id: PHIPO:0000095
-name: abnormal mitosis in asexual reproduction
+name: obsolete abnormal mitosis in asexual reproduction
 namespace: single_organism_phenotype
-is_a: PHIPO:0000047 ! abnormal asexual reproduction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-13T13:41:23Z
 
 [Term]
 id: PHIPO:0000096
-name: abnormal mitosis in sexual reproduction
+name: abnormal meiosis II
 namespace: single_organism_phenotype
-is_a: PHIPO:0000048 ! abnormal sexual reproduction
+def: "A reproductive process phenotype in which the second meiotic nuclear division is abnormal (GO:0007135)." []
+synonym: "abnormal second meiotic nuclear division" EXACT []
+xref: FYPO:0006526
+is_a: PHIPO:0000981 ! abnormal meiosis
 created_by: alaynecuzick
 creation_date: 2018-07-13T13:42:09Z
 
 [Term]
 id: PHIPO:0000097
-name: abnormal meiosis in sexual reproduction
+name: abnormal meiosis I
 namespace: single_organism_phenotype
-is_a: PHIPO:0000048 ! abnormal sexual reproduction
+def: "A reproductive process phenotype in which the first meiotic nuclear division is abnormal (GO:0007127)." []
+synonym: "abnormal first meiotic nuclear division" EXACT []
+xref: FYPO:0003603
+is_a: PHIPO:0000981 ! abnormal meiosis
 created_by: alaynecuzick
 
 [Term]
 id: PHIPO:0000098
-name: normal mitosis in sexual reproduction
+name: normal meiosis II
 namespace: single_organism_phenotype
-is_a: PHIPO:0000046 ! normal sexual reproduction
+def: "A reproductive process phenotype in which the second meiotic nuclear division is normal (i.e. indistinguishable from wild type)(GO:0007135)." []
+synonym: "normal second meiotic nuclear division" EXACT []
+xref: FYPO:0003798
+is_a: PHIPO:0000982 ! normal meiosis
 created_by: alaynecuzick
 creation_date: 2018-07-13T13:43:09Z
 
 [Term]
 id: PHIPO:0000099
-name: normal meiosis in sexual reproduction
+name: normal meiosis I
 namespace: single_organism_phenotype
-is_a: PHIPO:0000046 ! normal sexual reproduction
+def: "A reproductive process phenotype in which the first meiotic nuclear division is normal (GO:0007127)." []
+synonym: "normal first meiotic nuclear division" EXACT []
+xref: FYPO:0003563
+is_a: PHIPO:0000982 ! normal meiosis
 created_by: alaynecuzick
 creation_date: 2018-07-13T13:43:30Z
 
@@ -1192,6 +1239,7 @@ creation_date: 2018-07-17T12:39:33Z
 id: PHIPO:0000127
 name: abnormal asexual spore morphology
 namespace: single_organism_phenotype
+def: "A reproductive phenotype where the morphology of the asexual spore is abnormal (FAO:0000023). The product of mitosis." []
 is_a: PHIPO:0000043 ! abnormal reproduction phenotype
 created_by: alaynecuzick
 creation_date: 2018-07-17T13:01:41Z
@@ -1200,6 +1248,7 @@ creation_date: 2018-07-17T13:01:41Z
 id: PHIPO:0000128
 name: normal asexual spore morphology
 namespace: single_organism_phenotype
+def: "A reproductive phenotype where the morphology of the asexual spore is normal (FAO:0000023). The product of mitosis." []
 is_a: PHIPO:0000045 ! normal asexual reproduction
 created_by: alaynecuzick
 creation_date: 2018-07-17T13:04:52Z
@@ -1216,6 +1265,7 @@ creation_date: 2018-07-17T13:06:10Z
 id: PHIPO:0000130
 name: abnormal sexual spore morphology
 namespace: single_organism_phenotype
+def: "A reproductive phenotype where the morphology of the sexual spore is abnormal (FAO:0000017). The product of meiosis." []
 is_a: PHIPO:0000048 ! abnormal sexual reproduction
 created_by: alaynecuzick
 creation_date: 2018-07-17T13:09:36Z
@@ -1645,6 +1695,7 @@ creation_date: 2018-10-01T12:13:47Z
 id: PHIPO:0000161
 name: reproductive phenotype
 namespace: single_organism_phenotype
+def: "A single species phenotype which affects the reproductive process. The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms (GO:0000003)." []
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
@@ -3093,64 +3144,68 @@ creation_date: 2018-10-05T12:53:20Z
 
 [Term]
 id: PHIPO:0000296
-name: normal dissemination of pathogen asexual product
+name: obsolete normal dissemination of pathogen asexual product
 namespace: single_organism_phenotype
-is_a: PHIPO:0000045 ! normal asexual reproduction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-05T12:56:56Z
 
 [Term]
 id: PHIPO:0000297
-name: normal dissemination of pathogen sexual product
+name: obsolete normal dissemination of pathogen sexual product
 namespace: single_organism_phenotype
-is_a: PHIPO:0000046 ! normal sexual reproduction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-05T12:57:37Z
 
 [Term]
 id: PHIPO:0000298
-name: abnormal dissemination of pathogen asexual product
+name: obsolete abnormal dissemination of pathogen asexual product
 namespace: single_organism_phenotype
-is_a: PHIPO:0000047 ! abnormal asexual reproduction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-05T12:58:29Z
 
 [Term]
 id: PHIPO:0000299
-name: abnormal dissemination of pathogen sexual product
+name: obsolete abnormal dissemination of pathogen sexual product
 namespace: single_organism_phenotype
-is_a: PHIPO:0000048 ! abnormal sexual reproduction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-05T12:58:58Z
 
 [Term]
 id: PHIPO:0000300
-name: abnormal dissemination of asexual product
+name: abnormal dissemination of asexual spore
 namespace: single_organism_phenotype
+def: "A single species phenotype where the dispersal of asexual spores is abnormal (FAO:0000023)." []
 is_a: PHIPO:0000043 ! abnormal reproduction phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-05T13:00:13Z
 
 [Term]
 id: PHIPO:0000301
-name: normal dissemination of asexual product
+name: normal dissemination of asexual spore
 namespace: single_organism_phenotype
+def: "A single species phenotype where the dispersal of asexual spores is normal (FAO:0000023)." []
 is_a: PHIPO:0000044 ! normal reproduction phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-05T13:00:21Z
 
 [Term]
 id: PHIPO:0000302
-name: normal dissemination of sexual product
+name: normal dissemination of sexual spore
 namespace: single_organism_phenotype
+def: "A single species phenotype where the dispersal of sexual spores is normal (FAO:0000017)." []
 is_a: PHIPO:0000044 ! normal reproduction phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-05T13:00:34Z
 
 [Term]
 id: PHIPO:0000303
-name: abnormal dissemination of sexual product
+name: abnormal dissemination of sexual spore
 namespace: single_organism_phenotype
+def: "A single species phenotype where the dispersal of sexual spores is abnormal (FAO:0000017)." []
 is_a: PHIPO:0000043 ! abnormal reproduction phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-05T13:00:37Z
@@ -8726,6 +8781,7 @@ name: loss of virulence of gain of pathogenicity mutant
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is abolished when observed in an interaction with a pathogen mutant which was previously engineered to gain pathogenicity." []
 comment: Note this pathogen may still be pathogenic on an alternate host genotype.
+is_a: PHIPO:0000009 ! gain of pathogenicity
 is_a: PHIPO:0000964 ! loss of virulence
 created_by: alaynecuzick
 creation_date: 2019-06-26T12:27:44Z
@@ -8806,6 +8862,116 @@ def: "A single organism phenotype that affects a double-membrane-bounded compart
 is_a: PHIPO:0000415 ! abnormal subcellular component
 created_by: alaynecuzick
 creation_date: 2019-07-16T13:22:46Z
+
+[Term]
+id: PHIPO:0000974
+name: decreased population growth
+namespace: single_organism_phenotype
+def: "A single species phenotype in which population growth is decreased relative to normal. Decreased growth may reflect a reduced growth rate (i.e. slower growth), growth that occurs to a lesser extent than normal, or both." []
+synonym: "slower growth" RELATED []
+xref: FYPO:0000046
+is_a: PHIPO:0000414 ! abnormal population growth
+created_by: alaynecuzick
+creation_date: 2019-07-27T10:55:41Z
+
+[Term]
+id: PHIPO:0000975
+name: increased population growth
+namespace: single_organism_phenotype
+def: "A single species phenotype in which population growth is increased relative to normal. Increased growth may reflect an increased growth rate (i.e. faster growth), growth that occurs to a greater extent than normal, or both." []
+synonym: "faster growth" RELATED []
+xref: FYPO:0003937
+is_a: PHIPO:0000414 ! abnormal population growth
+created_by: alaynecuzick
+creation_date: 2019-07-27T10:58:04Z
+
+[Term]
+id: PHIPO:0000976
+name: decreased lipid droplet degradation
+namespace: single_organism_phenotype
+def: "A single organism metabolic process phenotype in which the occurrence of lipid droplet degradation (lipolysis) is decreased (GO:0016042 and GO:0005811)." []
+synonym: "decreased lipolysis" EXACT []
+is_a: PHIPO:0000478 ! lipid droplet phenotype
+is_a: PHIPO:0000493 ! primary metabolic process phenotype
+created_by: alaynecuzick
+creation_date: 2019-07-27T11:17:17Z
+
+[Term]
+id: PHIPO:0000977
+name: sensitive to sodium dodecyl sulfate
+namespace: single_organism_phenotype
+def: "A phenotype in which a population of a single-species shows increased sensitivity to sodium dodecyl sulfate (SDS), manifested as an affect on the extent of population growth. (CHEBI:8984)." []
+is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+created_by: alaynecuzick
+creation_date: 2019-07-27T11:30:10Z
+
+[Term]
+id: PHIPO:0000978
+name: sensitive to sodium chloride
+namespace: single_organism_phenotype
+def: "A phenotype in which a population of a single-species shows increased sensitivity to sodium chloride, manifested as an affect on the extent of population growth. (CHEBI:26710)." []
+is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+created_by: alaynecuzick
+creation_date: 2019-07-27T11:32:29Z
+
+[Term]
+id: PHIPO:0000979
+name: sensitive to dithiothreitol
+namespace: single_organism_phenotype
+def: "A phenotype in which a population of a single-species shows increased sensitivity to 1,4-dithiothreitol (DTT), manifested as an affect on the extent of population growth. (CHEBI:18320)." []
+is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+created_by: alaynecuzick
+creation_date: 2019-07-27T11:32:42Z
+
+[Term]
+id: PHIPO:0000980
+name: normal sexual spore morphology
+namespace: single_organism_phenotype
+def: "A reproductive phenotype where the morphology of the sexual spore is normal (FAO:0000017). The product of meiosis." []
+is_a: PHIPO:0000046 ! normal sexual reproduction
+created_by: alaynecuzick
+creation_date: 2019-07-27T12:17:27Z
+
+[Term]
+id: PHIPO:0000981
+name: abnormal meiosis
+namespace: single_organism_phenotype
+def: "A reproductive process phenotype in which meiosis is abnormal. Meiosis refers specifically to the nuclear division phases of a meiotic cell cycle. (GO:0140013)." []
+synonym: "abnormal meiotic nuclear division" EXACT []
+xref: FYPO:0000051
+is_a: PHIPO:0000983 ! abnormal meiotic cell cycle
+created_by: alaynecuzick
+creation_date: 2019-07-27T13:29:17Z
+
+[Term]
+id: PHIPO:0000982
+name: normal meiosis
+namespace: single_organism_phenotype
+def: "A reproductive process phenotype in which the meiotic nuclear divisions are normal (i.e. indistinguishable from wild type). (GO:0140013)." []
+synonym: "normal meiotic nuclear division" EXACT []
+xref: FYPO:0000478
+is_a: PHIPO:0000984 ! normal meiotic cell cycle
+created_by: alaynecuzick
+creation_date: 2019-07-27T13:33:11Z
+
+[Term]
+id: PHIPO:0000983
+name: abnormal meiotic cell cycle
+namespace: single_organism_phenotype
+def: "A reproductive process phenotype in which a cell does not proceed normally through a meiotic cell cycle (GO:0051321)." []
+xref: FYPO:0000052
+is_a: PHIPO:0000048 ! abnormal sexual reproduction
+created_by: alaynecuzick
+creation_date: 2019-07-27T13:48:15Z
+
+[Term]
+id: PHIPO:0000984
+name: normal meiotic cell cycle
+namespace: single_organism_phenotype
+def: "A reproductive process phenotype in which a cell proceeds normally through a meiotic cell cycle (GO:0051321)." []
+is_a: PHIPO:0000046 ! normal sexual reproduction
+created_by: alaynecuzick
+creation_date: 2019-07-27T13:52:11Z
 
 [Typedef]
 id: PHIPO:0000304
