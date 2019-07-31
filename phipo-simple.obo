@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-07-27/phipo-simple.owl
+data-version: phipo/releases/2019-07-31/phipo-simple.owl
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -13,9 +13,6 @@ comment: No logical definition.\n\nThis is a high-level term whose primary purpo
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 is_a: PHIPO:0000505 ! phenotype
-intersection_of: PHIPO:0000505 ! phenotype
-intersection_of: RO:0000052 PHIPO:0000507 ! pathogen host interaction
-relationship: RO:0000052 PHIPO:0000507 ! pathogen host interaction
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-02T11:20:17Z xsd:string
 
@@ -28,9 +25,6 @@ comment: This is a high-level term whose primary purpose is to organize terms be
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 is_a: PHIPO:0000505 ! phenotype
-intersection_of: PHIPO:0000505 ! phenotype
-intersection_of: RO:0000052 PHIPO:0000506 ! single species
-relationship: RO:0000052 PHIPO:0000506 ! single species
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-02T11:20:59Z xsd:string
 
@@ -192,10 +186,6 @@ name: normal single species phenotype
 namespace: single_organism_phenotype
 def: "A single organism phenotype which is normal (i.e. the same as wild-type)." []
 is_a: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000505 ! phenotype
-intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier
-intersection_of: RO:0000052 PHIPO:0000506 ! single species
-relationship: PHIPO:0000304 PATO:0000461 ! qualifier
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:10:48Z xsd:string
 
@@ -207,10 +197,6 @@ def: "A single organism phenotype which is abnormal (i.e. different than wild-ty
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 is_a: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000505 ! phenotype
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 PHIPO:0000506 ! single species
-relationship: PHIPO:0000304 PATO:0000460 ! qualifier
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:11:04Z xsd:string
 
@@ -386,9 +372,6 @@ subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 xref: FYPO:0000002
 is_a: PHIPO:0000402 ! individual organism phenotype
-intersection_of: PHIPO:0000402 ! individual organism phenotype
-intersection_of: RO:0002314 GO:0005575
-relationship: RO:0002314 GO:0005575
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-04T13:41:14Z xsd:string
 
@@ -1290,9 +1273,6 @@ subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 xref: FYPO:0000702
 is_a: PHIPO:0000158 ! binding phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: RO:0000052 GO:0005515
-relationship: RO:0000052 GO:0005515
 created_by: alaynecuzick
 creation_date: 2018-09-13T13:31:27Z
 
@@ -1304,9 +1284,6 @@ def: "A single organism (molecular function??) phenotype in which the binding of
 xref: FYPO:0000704
 is_a: PHIPO:0000017 ! abnormal single species phenotype
 is_a: PHIPO:0000132 ! protein protein interaction phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0005515
 created_by: alaynecuzick
 creation_date: 2018-09-13T13:32:39Z
 
@@ -1318,9 +1295,6 @@ def: "A single organism (molecular function??) phenotype in which the binding of
 xref: FYPO:0000703
 is_a: PHIPO:0000016 ! normal single species phenotype
 is_a: PHIPO:0000132 ! protein protein interaction phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier
-intersection_of: RO:0000052 GO:0005515
 created_by: alaynecuzick
 creation_date: 2018-09-13T13:33:02Z
 
@@ -1331,11 +1305,6 @@ namespace: single_organism_phenotype
 def: "A single organism (molecular function??) phenotype in which the binding of one protein to another does not occur. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
 xref: FYPO:0000705
 is_a: PHIPO:0000133 ! abnormal protein protein interaction
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: BFO:0000051 PATO:0001558
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0005515
-relationship: BFO:0000051 PATO:0001558
 created_by: alaynecuzick
 creation_date: 2018-09-13T13:33:52Z
 
@@ -1346,11 +1315,6 @@ namespace: single_organism_phenotype
 def: "A single organism (molecular function??) phenotype in which the binding of one protein to another occurs to a lower extent than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
 xref: FYPO:0001645
 is_a: PHIPO:0000133 ! abnormal protein protein interaction
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: BFO:0000051 PATO:0002052
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0005515
-relationship: BFO:0000051 PATO:0002052
 created_by: alaynecuzick
 creation_date: 2018-09-13T13:34:13Z
 
@@ -1362,10 +1326,6 @@ def: "A single organism (molecular function??) phenotype in which the binding of
 xref: FYPO:0001571
 is_a: PHIPO:0000134 ! normal protein protein interaction
 is_a: PHIPO:0000136 ! decreased protein protein interaction
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: BFO:0000051 PATO:0002052
-intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier
-intersection_of: RO:0000052 GO:0005515
 created_by: alaynecuzick
 creation_date: 2018-09-13T13:34:28Z
 
@@ -1387,10 +1347,6 @@ namespace: single_organism_phenotype
 def: "A single organism (molecular function??) phenotype in which the binding of one protein to a protein complex is abnormal. The protein whose binding to the protein complex is affected may be encoded by the mutated gene, or may be encoded by a different gene." []
 xref: FYPO:0003591
 is_a: PHIPO:0000133 ! abnormal protein protein interaction
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0044877
-relationship: RO:0000052 GO:0044877
 created_by: alaynecuzick
 creation_date: 2018-09-13T13:36:40Z
 
@@ -1402,11 +1358,6 @@ def: "A single organism (molecular function??) phenotype in which the binding of
 comment: logical definition needs checking.
 xref: FYPO:0005785
 is_a: PHIPO:0000133 ! abnormal protein protein interaction
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: BFO:0000051 PATO:0000499
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0005515
-relationship: BFO:0000051 PATO:0000499
 created_by: alaynecuzick
 creation_date: 2018-09-13T13:37:50Z
 
@@ -1419,11 +1370,6 @@ comment: logical definition needs checking.
 xref: FYPO:0005784
 is_a: PHIPO:0000136 ! decreased protein protein interaction
 is_a: PHIPO:0000140 ! decreased duration of protein protein interaction
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: BFO:0000051 PATO:0000499
-intersection_of: BFO:0000051 PATO:0002052
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0005515
 created_by: alaynecuzick
 creation_date: 2018-09-13T13:38:26Z
 
@@ -1437,9 +1383,6 @@ subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 xref: FYPO:0002131
 is_a: PHIPO:0000158 ! binding phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: RO:0000052 GO:0003723
-relationship: RO:0000052 GO:0003723
 created_by: alaynecuzick
 creation_date: 2018-09-13T13:44:08Z
 
@@ -1453,9 +1396,6 @@ subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 xref: FYPO:0000653
 is_a: PHIPO:0000158 ! binding phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: RO:0000052 GO:0003677
-relationship: RO:0000052 GO:0003677
 created_by: alaynecuzick
 creation_date: 2018-09-13T13:44:19Z
 
@@ -1466,10 +1406,6 @@ namespace: single_organism_phenotype
 def: "A single organism (molecular function??) phenotype in which the binding of one protein to a protein complex is normal (i.e. indistinguishable from wild type). The protein whose binding to the protein complex is assayed may be encoded by the mutated gene, or may be encoded by a different gene." []
 xref: FYPO:0005232
 is_a: PHIPO:0000134 ! normal protein protein interaction
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier
-intersection_of: RO:0000052 GO:0044877
-relationship: RO:0000052 GO:0044877
 created_by: alaynecuzick
 creation_date: 2018-09-24T13:14:19Z
 
@@ -1481,9 +1417,6 @@ def: "A single organism (molecular function??) phenotype in which occurrence of 
 xref: FYPO:0000656
 is_a: PHIPO:0000017 ! abnormal single species phenotype
 is_a: PHIPO:0000143 ! DNA binding phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0003677
 created_by: alaynecuzick
 creation_date: 2018-09-25T13:33:07Z
 
@@ -1496,9 +1429,6 @@ comment: Logical defintion\nquality (PATO:0000001) and (inheres_in some DNA bind
 xref: FYPO:0000655
 is_a: PHIPO:0000016 ! normal single species phenotype
 is_a: PHIPO:0000143 ! DNA binding phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier
-intersection_of: RO:0000052 GO:0003677
 created_by: alaynecuzick
 creation_date: 2018-09-25T13:33:18Z
 
@@ -1509,11 +1439,6 @@ namespace: single_organism_phenotype
 def: "A single organism (molecular function??) phenotype in which DNA binding by a gene product does not occur, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0000659
 is_a: PHIPO:0000145 ! abnormal DNA binding
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: BFO:0000051 PATO:0001558
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0003677
-relationship: BFO:0000051 PATO:0001558
 created_by: alaynecuzick
 creation_date: 2018-09-25T13:34:30Z
 
@@ -1535,11 +1460,6 @@ namespace: single_organism_phenotype
 def: "A single organism (molecular function??) phenotype in which occurrence of DNA binding by a gene product is decreased, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0000658
 is_a: PHIPO:0000145 ! abnormal DNA binding
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: BFO:0000051 PATO:0002052
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0003677
-relationship: BFO:0000051 PATO:0002052
 created_by: alaynecuzick
 creation_date: 2018-09-25T13:35:16Z
 
@@ -1550,11 +1470,6 @@ namespace: single_organism_phenotype
 def: "A single organism (molecular function??) phenotype in which occurrence of DNA binding by a gene product is increased, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0000657
 is_a: PHIPO:0000145 ! abnormal DNA binding
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: BFO:0000051 PATO:0002051
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0003677
-relationship: BFO:0000051 PATO:0002051
 created_by: alaynecuzick
 creation_date: 2018-09-25T13:35:28Z
 
@@ -1577,9 +1492,6 @@ def: "A single organism (molecular function??) phenotype in which occurrence of 
 xref: FYPO:0002132
 is_a: PHIPO:0000017 ! abnormal single species phenotype
 is_a: PHIPO:0000142 ! RNA binding phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0003723
 creation_date: 2018-09-25T13:37:19Z
 
 [Term]
@@ -1590,9 +1502,6 @@ def: "A single organism (molecular function??) phenotype in which occurrence of 
 xref: FYPO:0002357
 is_a: PHIPO:0000016 ! normal single species phenotype
 is_a: PHIPO:0000142 ! RNA binding phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier
-intersection_of: RO:0000052 GO:0003723
 created_by: alaynecuzick
 creation_date: 2018-09-25T13:37:37Z
 
@@ -1603,11 +1512,6 @@ namespace: single_organism_phenotype
 def: "A single organism (molecular function??) phenotype in which RNA binding by a gene product does not occur, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0002133
 is_a: PHIPO:0000152 ! abnormal RNA binding
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: BFO:0000051 PATO:0001558
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0003723
-relationship: BFO:0000051 PATO:0001558
 created_by: alaynecuzick
 creation_date: 2018-09-25T13:37:57Z
 
@@ -1618,11 +1522,6 @@ namespace: single_organism_phenotype
 def: "A single organism (molecular function??) phenotype in which occurrence of RNA binding by a gene product is decreased, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0002134
 is_a: PHIPO:0000152 ! abnormal RNA binding
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: BFO:0000051 PATO:0002052
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0003723
-relationship: BFO:0000051 PATO:0002052
 created_by: alaynecuzick
 creation_date: 2018-09-25T13:38:20Z
 
@@ -1633,11 +1532,6 @@ namespace: single_organism_phenotype
 def: "A single organism (molecular function??) phenotype in which occurrence of RNA binding by a gene product is increased, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0002135
 is_a: PHIPO:0000152 ! abnormal RNA binding
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: BFO:0000051 PATO:0002051
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0003723
-relationship: BFO:0000051 PATO:0002051
 created_by: alaynecuzick
 creation_date: 2018-09-25T13:38:31Z
 
@@ -1662,9 +1556,6 @@ subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 xref: FYPO:0001092
 is_a: PHIPO:0000411 ! molecular function phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: RO:0000052 GO:0005488
-relationship: RO:0000052 GO:0005488
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:12:12Z
 
@@ -1733,9 +1624,6 @@ def: "A pathogen host interaction phenotype that affects the binding of a gene p
 comment: These terms need to be thought about further. Need to capture whether source of DNA, RNA, Protein, carbohydrate is from the pathogen or the host???\nPerhaps duplication is required to capture source from both.
 xref: FYPO:0001092
 is_a: PHIPO:0000347 ! pathogen host interaction molecular function phenotype
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: RO:0000052 GO:0005488
-relationship: RO:0000052 GO:0005488
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:21:51Z
 
@@ -1762,9 +1650,6 @@ namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype that affects RNA binding. The relevant gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0002131
 is_a: PHIPO:0000164 ! pathogen host interaction binding phenotype
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: RO:0000052 GO:0003723
-relationship: RO:0000052 GO:0003723
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:54:51Z
 
@@ -1776,9 +1661,6 @@ def: "A pathogen host interaction (molecular function??) phenotype in which occu
 xref: FYPO:0002132
 is_a: PHIPO:0000167 ! pathogen host interaction RNA binding phenotype
 is_a: PHIPO:0000484 ! abnormal pathogen host interaction phenotype
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0003723
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:56:01Z
 
@@ -1806,9 +1688,6 @@ def: "A pathogen host interaction (molecular function??) phenotype in which occu
 xref: FYPO:0002357
 is_a: PHIPO:0000167 ! pathogen host interaction RNA binding phenotype
 is_a: PHIPO:0000483 ! normal pathogen host interaction phenotype
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier
-intersection_of: RO:0000052 GO:0003723
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:57:15Z
 
@@ -1819,11 +1698,6 @@ namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which RNA binding by a gene product does not occur, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0002133
 is_a: PHIPO:0000168 ! abnormal pathogen host interaction RNA binding
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: BFO:0000051 PATO:0001558
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0003723
-relationship: BFO:0000051 PATO:0001558
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:04:43Z
 
@@ -1843,11 +1717,6 @@ namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of RNA binding by a gene product is decreased, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0002134
 is_a: PHIPO:0000168 ! abnormal pathogen host interaction RNA binding
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: BFO:0000051 PATO:0002052
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0003723
-relationship: BFO:0000051 PATO:0002052
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:05:26Z
 
@@ -1867,11 +1736,6 @@ namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of RNA binding by a gene product is increased, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0002135
 is_a: PHIPO:0000168 ! abnormal pathogen host interaction RNA binding
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: BFO:0000051 PATO:0002051
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0003723
-relationship: BFO:0000051 PATO:0002051
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:05:50Z
 
@@ -1894,9 +1758,6 @@ subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 xref: FYPO:0000653
 is_a: PHIPO:0000164 ! pathogen host interaction binding phenotype
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: RO:0000052 GO:0003677
-relationship: RO:0000052 GO:0003677
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:09:13Z
 
@@ -1918,9 +1779,6 @@ def: "A pathogen host interaction (molecular function??) phenotype in which occu
 xref: FYPO:0000656
 is_a: PHIPO:0000178 ! pathogen host interaction DNA binding phenotype
 is_a: PHIPO:0000484 ! abnormal pathogen host interaction phenotype
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0003677
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:09:23Z
 
@@ -1956,9 +1814,6 @@ comment: Logical defintion\nquality (PATO:0000001) and (inheres_in some DNA bind
 xref: FYPO:0000655
 is_a: PHIPO:0000178 ! pathogen host interaction DNA binding phenotype
 is_a: PHIPO:0000483 ! normal pathogen host interaction phenotype
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier
-intersection_of: RO:0000052 GO:0003677
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:09:42Z
 
@@ -1999,11 +1854,6 @@ namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which DNA binding by a gene product does not occur, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0000659
 is_a: PHIPO:0000180 ! abnormal pathogen host interaction DNA binding
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: BFO:0000051 PATO:0001558
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0003677
-relationship: BFO:0000051 PATO:0001558
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:13:16Z
 
@@ -2045,11 +1895,6 @@ namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of DNA binding by a gene product is decreased, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0000658
 is_a: PHIPO:0000180 ! abnormal pathogen host interaction DNA binding
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: BFO:0000051 PATO:0002052
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0003677
-relationship: BFO:0000051 PATO:0002052
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:14:20Z
 
@@ -2074,11 +1919,6 @@ namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of DNA binding by a gene product is increased, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0000657
 is_a: PHIPO:0000180 ! abnormal pathogen host interaction DNA binding
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: BFO:0000051 PATO:0002051
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0003677
-relationship: BFO:0000051 PATO:0002051
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:14:39Z
 
@@ -2131,14 +1971,9 @@ creation_date: 2018-10-01T13:27:56Z
 id: PHIPO:0000200
 name: host chlorosis phenotype in presence of pathogen
 namespace: pathogen_host_interaction_phenotype
-is_a: PATO:0000001
 is_a: PHIPO:0000164 ! pathogen host interaction binding phenotype
 is_a: PHIPO:0000216 ! pathogen host interaction disease symptom phenotype
 is_a: PHIPO:0000483 ! normal pathogen host interaction phenotype
-intersection_of: PATO:0000001
-intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier
-intersection_of: RO:0000052 GO:0044877
-relationship: RO:0000052 GO:0044877
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:28:13Z
 
@@ -2470,9 +2305,6 @@ subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 xref: FYPO:0000138
 is_a: PHIPO:0000034 ! cell phenotype
-intersection_of: PHIPO:0000034 ! cell phenotype
-intersection_of: RO:0002314 GO:0051641
-relationship: RO:0002314 GO:0051641
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:12:56Z
 
@@ -2499,9 +2331,6 @@ subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 xref: FYPO:0002333
 is_a: PHIPO:0000235 ! localization phenotype
-intersection_of: PHIPO:0000034 ! cell phenotype
-intersection_of: RO:0002314 GO:0034613
-relationship: RO:0002314 GO:0034613
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:13:36Z
 
@@ -2526,10 +2355,6 @@ def: "A single organism phenotype that affects the localization of a protein in 
 xref: FYPO:0002333
 is_a: PHIPO:0000017 ! abnormal single species phenotype
 is_a: PHIPO:0000237 ! protein localization phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0034613
-relationship: RO:0000052 GO:0034613
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:14:02Z
 
@@ -2550,10 +2375,6 @@ namespace: single_organism_phenotype
 def: "A single organism phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein complex is abnormal." []
 xref: FYPO:0001440
 is_a: PHIPO:0000239 ! abnormal protein localization
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0002314 GO:0034629
-relationship: RO:0002314 GO:0034629
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:14:50Z
 
@@ -2586,10 +2407,6 @@ def: "A single organism phenotype in which the localization of a protein to the 
 comment: Encompasses both presence of proteins not normally found in the nucleus and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
 xref: FYPO:0002956
 is_a: PHIPO:0000239 ! abnormal protein localization
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0034504
-relationship: RO:0000052 GO:0034504
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:16:37Z
 
@@ -2601,11 +2418,6 @@ def: "A single organism phenotype in which a protein does not localize to, and i
 comment: If this term is used, we recommend noting which protein(s) were used in the assay.
 xref: FYPO:0001375
 is_a: PHIPO:0000239 ! abnormal protein localization
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: BFO:0000051 PATO:0001558
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0034613
-relationship: BFO:0000051 PATO:0001558
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:17:52Z
 
@@ -2640,10 +2452,6 @@ comment: We recommend noting which protein(s) were used in the assay when annota
 xref: FYPO:0003450
 is_a: PHIPO:0000244 ! abnormal protein localization to nucleus
 is_a: PHIPO:0000245 ! abolished protein localization
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: BFO:0000051 PATO:0001558
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0034504
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:19:27Z
 
@@ -2657,9 +2465,6 @@ subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 xref: FYPO:0004853
 is_a: PHIPO:0000235 ! localization phenotype
-intersection_of: PHIPO:0000034 ! cell phenotype
-intersection_of: RO:0002314 GO:0006403
-relationship: RO:0002314 GO:0006403
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:20:15Z
 
@@ -2684,9 +2489,6 @@ def: "A single organism phenotype in which the localization of an RNA in a cell 
 xref: FYPO:0003057
 is_a: PHIPO:0000017 ! abnormal single species phenotype
 is_a: PHIPO:0000249 ! RNA localization phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0002314 GO:0006403
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:20:49Z
 
@@ -2708,9 +2510,6 @@ def: "A single organism phenotype in which the localization of an RNA in a cell 
 xref: FYPO:0003058
 is_a: PHIPO:0000016 ! normal single species phenotype
 is_a: PHIPO:0000249 ! RNA localization phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier
-intersection_of: RO:0002314 GO:0006403
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:21:19Z
 
@@ -2747,9 +2546,6 @@ subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 xref: FYPO:0000149
 is_a: PHIPO:0000235 ! localization phenotype
-intersection_of: PHIPO:0000034 ! cell phenotype
-intersection_of: RO:0002314 GO:0006810
-relationship: RO:0002314 GO:0006810
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:21:48Z
 
@@ -2761,9 +2557,6 @@ def: "A single organism phenotype in which a specific transport process is abnor
 xref: FYPO:0001720
 is_a: PHIPO:0000017 ! abnormal single species phenotype
 is_a: PHIPO:0000256 ! transport phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0002314 GO:0006810
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:22:11Z
 
@@ -2785,9 +2578,6 @@ def: "A single organism (cellular process??) phenotype in which protein transpor
 xref: FYPO:0005747
 is_a: PHIPO:0000016 ! normal single species phenotype
 is_a: PHIPO:0000256 ! transport phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier
-intersection_of: RO:0002314 GO:0006810
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:22:37Z
 
@@ -2808,10 +2598,6 @@ namespace: single_organism_phenotype
 def: "A single organism (cellular process???) phenotype in which endocytosis is abnormal. Endocytosis is a vesicle-mediated transport process in which cells take up external materials or membrane constituents by the invagination of a small region of the plasma membrane to form a new membrane-bounded vesicle. A phenotype may affect endocytosis of all cargoes, or of specific cargo such as a particular protein." []
 xref: FYPO:0003886
 is_a: PHIPO:0000257 ! abnormal transport
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0002314 GO:0006897
-relationship: RO:0002314 GO:0006897
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:22:57Z
 
@@ -2853,10 +2639,6 @@ namespace: single_organism_phenotype
 def: "A single organism (cellular process??) phenotype in which protein transport is abnormal." []
 xref: FYPO:0005744
 is_a: PHIPO:0000257 ! abnormal transport
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0002314 GO:0015031
-relationship: RO:0002314 GO:0015031
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:24:39Z
 
@@ -2877,10 +2659,6 @@ namespace: single_organism_phenotype
 def: "A single organism (cellular process??) phenotype in which vacuolar transport is abnormal." []
 xref: FYPO:0003578
 is_a: PHIPO:0000257 ! abnormal transport
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0002314 GO:0007034
-relationship: RO:0002314 GO:0007034
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:24:58Z
 
@@ -2902,10 +2680,6 @@ def: "A single organism phenotype in which the localization of a protein in a ce
 xref: FYPO:0003627
 is_a: PHIPO:0000016 ! normal single species phenotype
 is_a: PHIPO:0000237 ! protein localization phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier
-intersection_of: RO:0000052 GO:0034613
-relationship: RO:0000052 GO:0034613
 created_by: alaynecuzick
 creation_date: 2018-10-03T11:05:06Z
 
@@ -2926,10 +2700,6 @@ namespace: single_organism_phenotype
 def: "A single organism phenotype in which the localization of a protein to the nucleus is normal (i.e. indistinguishable from wild type)." []
 xref: FYPO:0006553
 is_a: PHIPO:0000269 ! normal protein localization
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier
-intersection_of: RO:0000052 GO:0034504
-relationship: RO:0000052 GO:0034504
 created_by: alaynecuzick
 creation_date: 2018-10-03T11:05:29Z
 
@@ -4179,9 +3949,6 @@ id: PHIPO:0000411
 name: molecular function phenotype
 namespace: single_organism_phenotype
 is_a: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: RO:0000052 GO:0003674
-relationship: RO:0000052 GO:0003674
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:46:59Z
 
@@ -4248,9 +4015,6 @@ namespace: single_organism_phenotype
 def: "A single organism (molecular function??) phenotype in which occurrence of carbohydrate binding by a gene product is normal (i.e. indistinguishable from wild type). The relevant gene product may be encoded by the mutated gene, or by a different gene." []
 is_a: PHIPO:0000016 ! normal single species phenotype
 is_a: PHIPO:0000430 ! carbohydrate binding phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier
-intersection_of: RO:0000052 GO:0030246
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:12:55Z
 
@@ -4261,9 +4025,6 @@ namespace: single_organism_phenotype
 def: "A single organism  (molecular function??) phenotype in which occurrence of carbohydrate binding by a gene product (usually a protein) in a mutant is abnormal. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 is_a: PHIPO:0000017 ! abnormal single species phenotype
 is_a: PHIPO:0000430 ! carbohydrate binding phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0030246
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:13:02Z
 
@@ -4275,9 +4036,6 @@ def: "A pathogen (molecular function??) phenotype in which occurrence of chitin 
 comment: this term may need changing to be non-pathogen specific
 is_a: PHIPO:0000016 ! normal single species phenotype
 is_a: PHIPO:0000430 ! carbohydrate binding phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier
-intersection_of: RO:0000052 GO:0030246
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:14:16Z
 
@@ -4287,11 +4045,6 @@ name: abolished carbohydrate binding
 namespace: single_organism_phenotype
 def: "A single organism (molecular function??) phenotype in which carbohydrate binding by a gene product does not occur, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 is_a: PHIPO:0000419 ! abnormal carbohydrate binding
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: BFO:0000051 PATO:0001558
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0030246
-relationship: BFO:0000051 PATO:0001558
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:16:24Z
 
@@ -4310,11 +4063,7 @@ id: PHIPO:0000423
 name: decreased carbohydrate binding
 namespace: single_organism_phenotype
 def: "A single organism (molecular function??) phenotype in which occurrence of carbohydrate binding by a gene product (usually a protein) in a mutant is decreased. The affected gene product may be encoded by the mutated gene, or by a different gene." []
-is_a: PATO:0002052
 is_a: PHIPO:0000419 ! abnormal carbohydrate binding
-intersection_of: PATO:0002052
-intersection_of: RO:0000052 PHIPO:0000430 ! carbohydrate binding phenotype
-relationship: RO:0000052 PHIPO:0000430 ! carbohydrate binding phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:17:46Z
 
@@ -4323,11 +4072,7 @@ id: PHIPO:0000424
 name: increased carbohydrate binding
 namespace: single_organism_phenotype
 def: "A single organism (molecular function??) phenotype in which occurrence of carbohydrate binding by a gene product (usually a protein) in a mutant is increased. The affected gene product may be encoded by the mutated gene, or by a different gene." []
-is_a: PATO:0002051
 is_a: PHIPO:0000419 ! abnormal carbohydrate binding
-intersection_of: PATO:0002051
-intersection_of: RO:0000052 PHIPO:0000430 ! carbohydrate binding phenotype
-relationship: RO:0000052 PHIPO:0000430 ! carbohydrate binding phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:18:04Z
 
@@ -4381,9 +4126,6 @@ comment: This is a high-level term whose primary purpose is to organize terms be
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 is_a: PHIPO:0000158 ! binding phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: RO:0000052 GO:0030246
-relationship: RO:0000052 GO:0030246
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:37:34Z
 
@@ -4407,9 +4149,6 @@ subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 xref: FYPO:0000654
 is_a: PHIPO:0000411 ! molecular function phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: RO:0000052 GO:0003824
-relationship: RO:0000052 GO:0003824
 created_by: alaynecuzick
 creation_date: 2018-12-11T13:52:59Z
 
@@ -4421,9 +4160,6 @@ def: "A single organism (molecular function??) phenotype in which the observed r
 xref: FYPO:0000660
 is_a: PHIPO:0000016 ! normal single species phenotype
 is_a: PHIPO:0000432 ! catalytic activity phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier
-intersection_of: RO:0000052 GO:0003824
 created_by: alaynecuzick
 creation_date: 2018-12-11T13:54:41Z
 
@@ -4435,9 +4171,6 @@ def: "A single organism (molecular function??) phenotype in which the observed r
 xref: FYPO:0000661
 is_a: PHIPO:0000017 ! abnormal single species phenotype
 is_a: PHIPO:0000432 ! catalytic activity phenotype
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0003824
 created_by: alaynecuzick
 creation_date: 2018-12-11T13:55:08Z
 
@@ -4449,11 +4182,6 @@ def: "A single organism (molecular function??) phenotype in which a specified ca
 synonym: "catalytic activity abolished" EXACT []
 xref: FYPO:0000664
 is_a: PHIPO:0000434 ! abnormal catalytic activity
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: BFO:0000051 PATO:0001558
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0003824
-relationship: BFO:0000051 PATO:0001558
 created_by: alaynecuzick
 creation_date: 2018-12-12T14:40:37Z
 
@@ -4464,11 +4192,6 @@ namespace: single_organism_phenotype
 def: "A single organism (molecular function??) phenotype in which the observed rate of a specified catalytic activity is decreased." []
 xref: FYPO:0000663
 is_a: PHIPO:0000434 ! abnormal catalytic activity
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: BFO:0000051 PATO:0002052
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0003824
-relationship: BFO:0000051 PATO:0002052
 created_by: alaynecuzick
 creation_date: 2018-12-12T14:40:59Z
 
@@ -4479,11 +4202,6 @@ namespace: single_organism_phenotype
 def: "A single organism (molecular function??) phenotype in which the observed rate of a specified catalytic activity is increased." []
 xref: FYPO:0000662
 is_a: PHIPO:0000434 ! abnormal catalytic activity
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: BFO:0000051 PATO:0002051
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 GO:0003824
-relationship: BFO:0000051 PATO:0002051
 created_by: alaynecuzick
 creation_date: 2018-12-12T14:41:15Z
 
@@ -4599,15 +4317,7 @@ namespace: single_organism_phenotype
 def: "A single organism (molecular function??) phenotype in which the observed rate of a peptidase activity is normal (i.e. indistinguishable from wild type)." []
 synonym: "normal protease activity" EXACT []
 xref: FYPO:0000665
-is_a: PATO:0000001
 is_a: PHIPO:0000433 ! normal catalytic activity
-intersection_of: PATO:0000001
-intersection_of: PHIPO:0000002 ! single species phenotype
-intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier
-intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier
-intersection_of: RO:0000052 GO:0008233
-intersection_of: RO:0000052 GO:0008233
-relationship: RO:0000052 GO:0008233
 created_by: alaynecuzick
 creation_date: 2018-12-19T09:51:47Z
 
@@ -4828,10 +4538,6 @@ name: normal pathogen host interaction phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype which is normal (i.e. the same as wild-type)." []
 is_a: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: PHIPO:0000505 ! phenotype
-intersection_of: PHIPO:0000304 PATO:0000461 ! qualifier
-intersection_of: RO:0000052 PHIPO:0000507 ! pathogen host interaction
-relationship: PHIPO:0000304 PATO:0000461 ! qualifier
 created_by: alaynecuzick
 creation_date: 2019-01-14T13:59:00Z
 
@@ -4841,10 +4547,6 @@ name: abnormal pathogen host interaction phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype which is abnormal (i.e. different than wild-type)." []
 is_a: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: PHIPO:0000505 ! phenotype
-intersection_of: PHIPO:0000304 PATO:0000460 ! qualifier
-intersection_of: RO:0000052 PHIPO:0000507 ! pathogen host interaction
-relationship: PHIPO:0000304 PATO:0000460 ! qualifier
 created_by: alaynecuzick
 creation_date: 2019-01-14T13:59:26Z
 
@@ -5024,9 +4726,6 @@ subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 xref: FYPO:0000002
 is_a: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: PHIPO:0000001 ! pathogen host interaction phenotype
-intersection_of: RO:0002314 GO:0005575
-relationship: RO:0002314 GO:0005575
 property_value: created:by "alaynecuzick" xsd:string
 creation_date: 2019-02-11T12:19:47Z
 

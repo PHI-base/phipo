@@ -10,7 +10,7 @@
      xmlns:oboInOWL="http://www.geneontology.org/formats/oboInOWL#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/phipo/phipo-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2019-07-16/phipo-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2019-07-31/phipo-base.owl"/>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-09T13:43:00Z</obo:creation_date>
     </owl:Ontology>
@@ -166,6 +166,12 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/RO_0002573 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002573"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -255,6 +261,12 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0019954 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0019954"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0030246 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0030246"/>
@@ -312,6 +324,12 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PATO_0000499 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000499"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001236 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001236"/>
     
 
 
@@ -754,7 +772,6 @@ Lethal (PATO:0000718) and (inheres_in some AC_organism)</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000025 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000025">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000044"/>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:17:46Z</obo:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -762,7 +779,8 @@ Lethal (PATO:0000718) and (inheres_in some AC_organism)</rdfs:comment>
 should this be with sexual reproduction?
 eg ustilago and rust fungus
 MU agrees REMOVE from penetration</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">normal mating phenotype prior to penetration</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete normal mating phenotype prior to penetration</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -815,13 +833,13 @@ MU agrees REMOVE from penetration</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000029 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000029">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000043"/>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T13:22:14Z</obo:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is this a bit too specific?
 should this be with reproduction?</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal mating phenotype prior to penetration</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete abnormal mating phenotype prior to penetration</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1031,6 +1049,7 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000043">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000161"/>
+        <obo:IAO_0000115>A single species phenotype where reproduction is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T11:57:47Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -1043,6 +1062,7 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000044">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000161"/>
+        <obo:IAO_0000115>A single species phenotype where reproduction is normal (indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T11:58:15Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -1055,10 +1075,11 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000045">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000044"/>
+        <obo:IAO_0000115>A single species phenotype where the asexual reproduction process in which new individuals are produced by either a single cell or a group of cells, in the absence of any sexual process is normal (indistinguishable from wild type)(GO:0019954).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:08:15Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">note: endospores are dormant, tough non-reproductive structures -wikipedia</rdfs:comment>
+        <oboInOwl:hasRelatedSynonym>normal parthenogenesis</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">normal asexual reproduction</rdfs:label>
     </owl:Class>
     
@@ -1068,6 +1089,7 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000046">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000044"/>
+        <obo:IAO_0000115>A single species phenotype where the sexual reproduction process in which new individuals are produced by combining the genetic material of two gametes, which may come from two organisms or from a single organism is normal (indistinguishable from wild type) (GO:0019953).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:09:04Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -1079,10 +1101,32 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000047 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000047">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001236"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0019954"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002573"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000460"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000043"/>
+        <obo:IAO_0000115>A single species phenotype where the asexual reproduction process in which new individuals are produced by either a single cell or a group of cells, in the absence of any sexual process is abnormal (GO:0019954).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:09:49Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>abnormal parthenogenesis</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">abnormal asexual reproduction</rdfs:label>
     </owl:Class>
     
@@ -1092,6 +1136,7 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000048">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000043"/>
+        <obo:IAO_0000115>A single species phenotype where the sexual reproduction process in which new individuals are produced by combining the genetic material of two gametes, which may come from two organisms or from a single organism is abnormal (GO:0019953).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:10:14Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -1155,11 +1200,12 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000053 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000053">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000066"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000078"/>
+        <obo:IAO_0000115>A reproductive phenotype in which the occurence of asexual spore formation happens later than normal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:20:33Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">delayed production of asexual spores</rdfs:label>
+        <rdfs:label xml:lang="en">delayed asexual sporulation</rdfs:label>
     </owl:Class>
     
 
@@ -1167,11 +1213,12 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000054 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000054">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000066"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000078"/>
+        <obo:IAO_0000115>A reproductive phenotype in which the occurence of asexual spore formation happens sooner than normal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:22:31Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">expedited production of asexual spores</rdfs:label>
+        <rdfs:label xml:lang="en">expedited asexual sporulation</rdfs:label>
     </owl:Class>
     
 
@@ -1179,11 +1226,12 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000055 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000055">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000074"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000077"/>
+        <obo:IAO_0000115>A reproductive phenotype in which the occurence of sexual spore formation happens later than normal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:23:43Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">delayed production of sexual spores</rdfs:label>
+        <rdfs:label xml:lang="en">delayed sexual sporulation</rdfs:label>
     </owl:Class>
     
 
@@ -1191,11 +1239,12 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000056 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000056">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000074"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000077"/>
+        <obo:IAO_0000115>A reproductive phenotype in which the occurence of sexual spore formation happens sooner than normal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:24:07Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">expedited production of sexual spores</rdfs:label>
+        <rdfs:label xml:lang="en">expedited sexual sporulation</rdfs:label>
     </owl:Class>
     
 
@@ -1216,11 +1265,11 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000058 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000058">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000079"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:26:14Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal speed in production of sexual spores</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete normal timing in production of sexual spores</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1241,11 +1290,11 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000060 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000060">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000080"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:27:45Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal speed in production of asexual spores</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete normal timing in production of asexual spores</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1254,6 +1303,7 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000061">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000078"/>
+        <obo:IAO_0000115>A reproductive phenotype where asexual spores are absent (FAO:0000023).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:28:57Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -1266,6 +1316,7 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000062">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000130"/>
+        <obo:IAO_0000115>A reproductive phenotype where sexual spores are absent (FAO:0000017).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:29:31Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -1278,6 +1329,7 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000063">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000079"/>
+        <obo:IAO_0000115>A reproductive phenotype where asexual spores are present (FAO:0000017). The product of meiosis.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:29:58Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -1290,6 +1342,7 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000064">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000080"/>
+        <obo:IAO_0000115>A reproductive phenotype where asexual spores are present (FAO:0000023). The product of mitosis.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:30:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -1302,6 +1355,7 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000065">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000081"/>
+        <obo:IAO_0000115>A reproductive morphology phenotype where the size of the asexual spore is increased.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:32:36Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -1313,11 +1367,11 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000066 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000066">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000078"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:33:03Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal timing of asexual spore production</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete abnormal timing of asexual spore production</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1326,6 +1380,7 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000067">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000081"/>
+        <obo:IAO_0000115>A reproductive morphology phenotype where the size of the asexual spore is decreased.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:36:00Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -1338,6 +1393,7 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000068">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000071"/>
+        <obo:IAO_0000115>A reproductive morphology phenotype where the size of the sexual spore is increased.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:37:29Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -1350,6 +1406,7 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000069">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000071"/>
+        <obo:IAO_0000115>A reproductive morphology phenotype where the size of the sexual spore is decreased.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:37:52Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -1374,6 +1431,7 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000071">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000130"/>
+        <obo:IAO_0000115>A reproductive morphology phenotype where the size of the sexual spore is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:39:04Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -1386,6 +1444,7 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000072">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000130"/>
+        <obo:IAO_0000115>A reproductive morphology phenotype where the shape of the sexual spore is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:39:34Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -1410,11 +1469,11 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000074 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000074">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000077"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:42:05Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal timing of sexual spore production</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete abnormal timing of sexual spore production</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1423,6 +1482,7 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000075">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000127"/>
+        <obo:IAO_0000115>A reproductive morphology phenotype where the shape of the asexual spore is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:43:06Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -1447,10 +1507,13 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000077">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000048"/>
+        <obo:IAO_0000115>A reproductive phenotype where the process of sexual sporulation, the formation of spores from the products of meiosis, is abnormal (GO:0034293).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:54:33Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>abnormal meiotic sporulation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>abnormal sexual spore formation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal sexual sporogenesis</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal sexual sporulation</rdfs:label>
     </owl:Class>
     
 
@@ -1459,10 +1522,13 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000078">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000047"/>
+        <obo:IAO_0000115>A reproductive phenotype where the process of asexual sporulation, the formation of spores derived from the products of an asexual cell division, is abnormal (GO:0030436).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:55:38Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>abnormal asexual spore formation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>abnormal mitotic sporulation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal asexual sporogenesis</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal asexual sporulation</rdfs:label>
     </owl:Class>
     
 
@@ -1471,10 +1537,13 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000079">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000046"/>
+        <obo:IAO_0000115>A reproductive phenotype where the process of sexual sporulation, the formation of spores from the products of meiosis, is normal (GO:0034293).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:56:11Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>normal meiotic sporulation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>normal sexual spore formation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal sexual sporogenesis</rdfs:label>
+        <rdfs:label xml:lang="en">normal sexual sporulation</rdfs:label>
     </owl:Class>
     
 
@@ -1483,10 +1552,13 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000080">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000045"/>
+        <obo:IAO_0000115>A reproductive phenotype where the process of asexual sporulation, the formation of spores derived from the products of an asexual cell division, is normal (GO:0030436).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:57:46Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>normal asexual spore formation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>normal mitotic sporulation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal asexual sporogenesis</rdfs:label>
+        <rdfs:label xml:lang="en">normal asexual sporulation</rdfs:label>
     </owl:Class>
     
 
@@ -1495,6 +1567,7 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000081">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000127"/>
+        <obo:IAO_0000115>A reproductive morphology phenotype where the size of the asexual spore is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T13:08:40Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -1519,11 +1592,11 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000083 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000083">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000047"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T13:17:24Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal asexual spore motility</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete abnormal asexual spore motility</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1531,11 +1604,11 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000084 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000084">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000083"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T13:18:20Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">increased asexual spore motility</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete increased asexual spore motility</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1543,11 +1616,11 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000085 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000085">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000083"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T13:18:38Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">decreased asexual spore motility</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete decreased asexual spore motility</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1555,11 +1628,11 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000086 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000086">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000045"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T13:21:21Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal asexual spore motility</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete normal asexual spore motility</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1567,11 +1640,11 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000087 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000087">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000045"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T13:25:48Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal binary fission</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete normal binary fission</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1579,11 +1652,11 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000088 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000088">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000045"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T13:27:00Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal budding</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete normal budding</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1591,11 +1664,11 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000089 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000089">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000045"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T13:27:51Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal fragmentation</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete normal fragmentation</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1603,11 +1676,11 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000090 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000090">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000045"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T13:28:15Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal parthenogenesis</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete normal parthenogenesis</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1615,11 +1688,11 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000091 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000091">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000047"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T13:30:12Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal budding</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete abnormal budding</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1627,11 +1700,11 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000092 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000092">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000047"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T13:30:30Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal binary fission</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete abnormal binary fission</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1639,11 +1712,11 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000093 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000093">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000047"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T13:31:01Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal parthenogenesis</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete abnormal parthenogenesis</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1651,11 +1724,11 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000094 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000094">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000045"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T13:38:56Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal mitosis in asexual reproduction</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete normal mitosis in asexual reproduction</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1663,11 +1736,11 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000095 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000095">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000047"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T13:41:23Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal mitosis in asexual reproduction</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete abnormal mitosis in asexual reproduction</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1675,11 +1748,14 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000096 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000096">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000048"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000981"/>
+        <obo:IAO_0000115>A reproductive process phenotype in which the second meiotic nuclear division is abnormal (GO:0007135).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T13:42:09Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0006526</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>abnormal second meiotic nuclear division</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal mitosis in sexual reproduction</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal meiosis II</rdfs:label>
     </owl:Class>
     
 
@@ -1687,10 +1763,13 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000097 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000097">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000048"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000981"/>
+        <obo:IAO_0000115>A reproductive process phenotype in which the first meiotic nuclear division is abnormal (GO:0007127).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:hasDbXref>FYPO:0003603</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>abnormal first meiotic nuclear division</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal meiosis in sexual reproduction</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal meiosis I</rdfs:label>
     </owl:Class>
     
 
@@ -1698,11 +1777,14 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000098 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000098">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000046"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000982"/>
+        <obo:IAO_0000115>A reproductive process phenotype in which the second meiotic nuclear division is normal (i.e. indistinguishable from wild type)(GO:0007135).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T13:43:09Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0003798</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>normal second meiotic nuclear division</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal mitosis in sexual reproduction</rdfs:label>
+        <rdfs:label xml:lang="en">normal meiosis II</rdfs:label>
     </owl:Class>
     
 
@@ -1710,11 +1792,14 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000099 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000099">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000046"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000982"/>
+        <obo:IAO_0000115>A reproductive process phenotype in which the first meiotic nuclear division is normal (GO:0007127).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T13:43:30Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0003563</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>normal first meiotic nuclear division</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal meiosis in sexual reproduction</rdfs:label>
+        <rdfs:label xml:lang="en">normal meiosis I</rdfs:label>
     </owl:Class>
     
 
@@ -2098,6 +2183,7 @@ absent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000127">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000043"/>
+        <obo:IAO_0000115>A reproductive phenotype where the morphology of the asexual spore is abnormal (FAO:0000023). The product of mitosis.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T13:01:41Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -2110,6 +2196,7 @@ absent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000128">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000045"/>
+        <obo:IAO_0000115>A reproductive phenotype where the morphology of the asexual spore is normal (FAO:0000023). The product of mitosis.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T13:04:52Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -2134,6 +2221,7 @@ absent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000130">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000048"/>
+        <obo:IAO_0000115>A reproductive phenotype where the morphology of the sexual spore is abnormal (FAO:0000017). The product of meiosis.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T13:09:36Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -2966,6 +3054,7 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000161">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+        <obo:IAO_0000115>A single species phenotype which affects the reproductive process. The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms (GO:0000003).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T12:14:40Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -4435,6 +4524,7 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000239"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000245"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism phenotype in which a protein does not localize to, and is therefore absent from, a place where it is normally found.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:17:52Z</oboInOwl:creation_date>
@@ -5314,11 +5404,11 @@ Need import term for &apos;nuclear transport&apos;</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000296 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000296">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000045"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-05T12:56:56Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal dissemination of pathogen asexual product</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete normal dissemination of pathogen asexual product</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -5326,11 +5416,11 @@ Need import term for &apos;nuclear transport&apos;</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000297 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000297">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000046"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-05T12:57:37Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal dissemination of pathogen sexual product</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete normal dissemination of pathogen sexual product</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -5338,11 +5428,11 @@ Need import term for &apos;nuclear transport&apos;</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000298 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000298">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000047"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-05T12:58:29Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal dissemination of pathogen asexual product</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete abnormal dissemination of pathogen asexual product</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -5350,11 +5440,11 @@ Need import term for &apos;nuclear transport&apos;</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000299 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000299">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000048"/>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-05T12:58:58Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal dissemination of pathogen sexual product</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete abnormal dissemination of pathogen sexual product</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -5363,10 +5453,11 @@ Need import term for &apos;nuclear transport&apos;</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000300">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000043"/>
+        <obo:IAO_0000115>A single species phenotype where the dispersal of asexual spores is abnormal (FAO:0000023).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-05T13:00:13Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal dissemination of asexual product</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal dissemination of asexual spore</rdfs:label>
     </owl:Class>
     
 
@@ -5375,10 +5466,11 @@ Need import term for &apos;nuclear transport&apos;</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000301">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000044"/>
+        <obo:IAO_0000115>A single species phenotype where the dispersal of asexual spores is normal (FAO:0000023).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-05T13:00:21Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal dissemination of asexual product</rdfs:label>
+        <rdfs:label xml:lang="en">normal dissemination of asexual spore</rdfs:label>
     </owl:Class>
     
 
@@ -5387,10 +5479,11 @@ Need import term for &apos;nuclear transport&apos;</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000302">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000044"/>
+        <obo:IAO_0000115>A single species phenotype where the dispersal of sexual spores is normal (FAO:0000017).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-05T13:00:34Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal dissemination of sexual product</rdfs:label>
+        <rdfs:label xml:lang="en">normal dissemination of sexual spore</rdfs:label>
     </owl:Class>
     
 
@@ -5399,10 +5492,11 @@ Need import term for &apos;nuclear transport&apos;</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000303">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000043"/>
+        <obo:IAO_0000115>A single species phenotype where the dispersal of sexual spores is abnormal (FAO:0000017).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-05T13:00:37Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal dissemination of sexual product</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal dissemination of sexual spore</rdfs:label>
     </owl:Class>
     
 
@@ -13574,6 +13668,7 @@ Note that avirulence means loss of pathogenicity in medical terminology.</rdfs:c
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000965 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000965">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000009"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000964"/>
         <obo:IAO_0000115>A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is abolished when observed in an interaction with a pathogen mutant which was previously engineered to gain pathogenicity.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
@@ -13637,6 +13732,213 @@ Note that avirulence means loss of pathogenicity in medical terminology.</rdfs:c
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">present pathogen growth after penetration of the barrier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000970 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000970">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000973"/>
+        <obo:IAO_0000115>A single organism phenotype observed in the vegetative growth phase of the life cycle in which cells contain fewer autophagosomes than normal (GO:0005776).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-16T11:41:18Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">autophagosomes present in decreased numbers</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000971 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000971">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000973"/>
+        <obo:IAO_0000115>A single organism phenotype observed in the vegetative growth phase of the life cycle in which the ability of the organism to form autophagosomes is abolished (they were present and are now absent) (GO:0005776).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-16T12:03:12Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abolished formation of autophagosomes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000972 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000972">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000245"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000973"/>
+        <obo:IAO_0000115>A single organism phenotype in which a protein does not localize to, and is therefore absent from the autophagosome (GO:0005776).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-16T13:07:53Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abolished protein localization to autophagosome</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000973 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000973">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000415"/>
+        <obo:IAO_0000115>A single organism phenotype that affects a double-membrane-bounded compartment that engulfs endogenous cellular material as well as invading microorganisms to target them to the lytic vacuole/lysosome for degradation as part of macroautophagy (GO:0005776).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-16T13:22:46Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">autophagosome phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000974 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000974">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000414"/>
+        <obo:IAO_0000115>A single species phenotype in which population growth is decreased relative to normal. Decreased growth may reflect a reduced growth rate (i.e. slower growth), growth that occurs to a lesser extent than normal, or both.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-27T10:55:41Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000046</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>slower growth</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">decreased population growth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000975 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000975">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000414"/>
+        <obo:IAO_0000115>A single species phenotype in which population growth is increased relative to normal. Increased growth may reflect an increased growth rate (i.e. faster growth), growth that occurs to a greater extent than normal, or both.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-27T10:58:04Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0003937</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>faster growth</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">increased population growth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000976 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000976">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000478"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000493"/>
+        <obo:IAO_0000115>A single organism metabolic process phenotype in which the occurrence of lipid droplet degradation (lipolysis) is decreased (GO:0016042 and GO:0005811).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-27T11:17:17Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>decreased lipolysis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased lipid droplet degradation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000977 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000977">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000020"/>
+        <obo:IAO_0000115>A phenotype in which a population of a single-species shows increased sensitivity to sodium dodecyl sulfate (SDS), manifested as an affect on the extent of population growth. (CHEBI:8984).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-27T11:30:10Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">sensitive to sodium dodecyl sulfate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000978 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000978">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000020"/>
+        <obo:IAO_0000115>A phenotype in which a population of a single-species shows increased sensitivity to sodium chloride, manifested as an affect on the extent of population growth. (CHEBI:26710).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-27T11:32:29Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">sensitive to sodium chloride</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000979 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000979">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000020"/>
+        <obo:IAO_0000115>A phenotype in which a population of a single-species shows increased sensitivity to 1,4-dithiothreitol (DTT), manifested as an affect on the extent of population growth. (CHEBI:18320).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-27T11:32:42Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">sensitive to dithiothreitol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000980 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000980">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000046"/>
+        <obo:IAO_0000115>A reproductive phenotype where the morphology of the sexual spore is normal (FAO:0000017). The product of meiosis.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-27T12:17:27Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal sexual spore morphology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000981 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000981">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000983"/>
+        <obo:IAO_0000115>A reproductive process phenotype in which meiosis is abnormal. Meiosis refers specifically to the nuclear division phases of a meiotic cell cycle. (GO:0140013).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-27T13:29:17Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000051</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>abnormal meiotic nuclear division</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal meiosis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000982 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000982">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000984"/>
+        <obo:IAO_0000115>A reproductive process phenotype in which the meiotic nuclear divisions are normal (i.e. indistinguishable from wild type). (GO:0140013).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-27T13:33:11Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000478</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>normal meiotic nuclear division</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal meiosis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000983 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000983">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000048"/>
+        <obo:IAO_0000115>A reproductive process phenotype in which a cell does not proceed normally through a meiotic cell cycle (GO:0051321).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-27T13:48:15Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000052</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal meiotic cell cycle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000984 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000984">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000046"/>
+        <obo:IAO_0000115>A reproductive process phenotype in which a cell proceeds normally through a meiotic cell cycle (GO:0051321).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-27T13:52:11Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal meiotic cell cycle</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
