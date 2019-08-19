@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-08-12/phipo-simple.owl
+data-version: phipo/releases/2019-08-19/phipo-simple.owl
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -694,9 +694,10 @@ creation_date: 2018-07-13T12:37:52Z
 
 [Term]
 id: PHIPO:0000070
-name: sexual spores altered in pigmentation
+name: altered in pigment accumulation in sexual spore
 namespace: single_organism_phenotype
-is_a: PHIPO:0000130 ! abnormal sexual spore morphology
+def: "A single species individual organism phenotype where the accumulation of coloring matter in a sexual spore cell is altered." []
+is_a: PHIPO:0000285 ! abnormal cellular pigment accumulation
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:38:19Z
 
@@ -746,9 +747,10 @@ creation_date: 2018-07-13T12:43:06Z
 
 [Term]
 id: PHIPO:0000076
-name: asexual spores altered in pigmentation
+name: altered in pigment accumulation in asexual spore
 namespace: single_organism_phenotype
-is_a: PHIPO:0000127 ! abnormal asexual spore morphology
+def: "A single species individual organism phenotype where the accumulation of coloring matter in an asexual spore cell is altered." []
+is_a: PHIPO:0000285 ! abnormal cellular pigment accumulation
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:43:42Z
 
@@ -1164,19 +1166,19 @@ creation_date: 2018-07-17T11:31:21Z
 
 [Term]
 id: PHIPO:0000121
-name: abnormal asexual reproduction structure
+name: abnormal asexual reproductive structure development
 namespace: single_organism_phenotype
-comment: sporangiphores\nnematadoes egg to be fertilised\naphids, live young
+def: "A single species phenotype where the asexual reproductive developmental process whose specific outcome is the progression of structures that will be used in the process of creating new individuals, from their formation to the mature structures is abnormal (GO:0048608)." []
 is_a: PHIPO:0000043 ! abnormal reproduction phenotype
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:44:01Z
 
 [Term]
 id: PHIPO:0000122
-name: abnormal asexual resting spore
+name: abnormal endospore formation
 namespace: single_organism_phenotype
-comment: eg bacterial endospore\nfungal chlamydospore\nnematode cysts\n\nincreased\ndecreased\ndelayed\nexpedited\nabsent
-is_a: PHIPO:0000121 ! abnormal asexual reproduction structure
+def: "A reproductive phenotype where the process of endospore formation, in which a cell gives rise to an endospore, a dormant, highly resistant spore with a thick wall that forms within the mother cell is abnormal. Endospores are produced by some low G+C Gram-positive bacteria in response to harsh conditions. (GO:0034301)" []
+is_a: PHIPO:0000078 ! abnormal asexual sporulation
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:46:50Z
 
@@ -1238,8 +1240,9 @@ creation_date: 2018-07-17T13:04:52Z
 
 [Term]
 id: PHIPO:0000129
-name: normal asexual reproduction structure
+name: normal asexual reproductive structure development
 namespace: single_organism_phenotype
+def: "A single species phenotype where the asexual reproductive developmental process whose specific outcome is the progression of structures that will be used in the process of creating new individuals, from their formation to the mature structures is normal (GO:0048608)." []
 is_a: PHIPO:0000045 ! normal asexual reproduction
 created_by: alaynecuzick
 creation_date: 2018-07-17T13:06:10Z
@@ -2293,8 +2296,8 @@ creation_date: 2018-10-02T09:20:17Z
 id: PHIPO:0000235
 name: localization phenotype
 namespace: single_organism_phenotype
-def: "A single organism phenotype that affects the localization of a structure or substance in a cell (QUERY? organism)." []
-comment: possible logical defintion\n'single organism phenotype'\n and ('inheres in part of' some 'cellular localization')\n\nThis is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+def: "A single species phenotype that affects the localization of a structure or substance in a cell." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 xref: FYPO:0000138
@@ -2345,8 +2348,8 @@ creation_date: 2018-10-02T10:13:39Z
 id: PHIPO:0000239
 name: abnormal protein localization
 namespace: single_organism_phenotype
-def: "A single organism phenotype that affects the localization of a protein in a cell." []
-xref: FYPO:0002333
+def: "A single organism phenotype in which the localization of a protein in a cell is abnormal. A protein may be observed in a place where it is not normally found, absent from a place where it is normally found, or both." []
+xref: FYPO:0001370
 is_a: PHIPO:0000017 ! abnormal single species phenotype
 is_a: PHIPO:0000237 ! protein localization phenotype
 created_by: alaynecuzick
@@ -2441,7 +2444,7 @@ creation_date: 2018-10-02T10:19:22Z
 id: PHIPO:0000248
 name: abolished protein localization to nucleus
 namespace: single_organism_phenotype
-def: "A single organism organism phenotype in which the localization of a protein to the nucleus is abolished." []
+def: "A single organism phenotype in which the localization of a protein to the nucleus is abolished (GO:0034504)." []
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 xref: FYPO:0003450
 is_a: PHIPO:0000244 ! abnormal protein localization to nucleus
@@ -2690,7 +2693,7 @@ creation_date: 2018-10-03T11:05:09Z
 id: PHIPO:0000271
 name: normal protein localization to nucleus
 namespace: single_organism_phenotype
-def: "A single organism phenotype in which the localization of a protein to the nucleus is normal (i.e. indistinguishable from wild type)." []
+def: "A single organism phenotype in which the localization of a protein to the nucleus is normal (i.e. indistinguishable from wild type)(GO:0034504)." []
 xref: FYPO:0006553
 is_a: PHIPO:0000269 ! normal protein localization
 created_by: alaynecuzick
@@ -2728,6 +2731,7 @@ creation_date: 2018-10-03T13:38:33Z
 id: PHIPO:0000275
 name: abnormal tissue phenotype
 namespace: single_organism_phenotype
+def: "A phenotype that shows detectable differences from normal at the level of a tissue (eg leaf, inflorescence, ear or kidney)." []
 is_a: PHIPO:0000003 ! tissue phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-03T13:39:04Z
@@ -2736,6 +2740,7 @@ creation_date: 2018-10-03T13:39:04Z
 id: PHIPO:0000276
 name: normal tissue phenotype
 namespace: single_organism_phenotype
+def: "A phenotype that does not show any detectable differences from normal at the level of a tissue (eg leaf, inflorescence, ear or kidney)." []
 is_a: PHIPO:0000003 ! tissue phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-03T13:39:23Z
@@ -3866,6 +3871,7 @@ creation_date: 2018-12-05T11:44:12Z
 id: PHIPO:0000403
 name: normal cell phenotype
 namespace: single_organism_phenotype
+def: "A phenotype that does not show any detectable differences from normal at the level of an individual cell." []
 is_a: PHIPO:0000034 ! cell phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:44:26Z
@@ -3874,6 +3880,8 @@ creation_date: 2018-12-05T11:44:26Z
 id: PHIPO:0000404
 name: abnormal cell phenotype
 namespace: single_organism_phenotype
+def: "A phenotype that shows detectable differences from normal at the level of an individual cell." []
+xref: FYPO:0003037
 is_a: PHIPO:0000034 ! cell phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:44:40Z
@@ -4213,6 +4221,7 @@ creation_date: 2018-12-12T14:41:30Z
 id: PHIPO:0000439
 name: pathogen reproductive phenotype within host
 namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype which affects the pathogen reproductive process within the host. The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms (GO:0000003)." []
 is_a: PHIPO:0000001 ! pathogen host interaction phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-18T11:25:46Z
@@ -4221,6 +4230,7 @@ creation_date: 2018-12-18T11:25:46Z
 id: PHIPO:0000440
 name: normal pathogen reproductive phenotype within host
 namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the pathogen reproductive process within the host is normal (indistinguishable from wild type)." []
 is_a: PHIPO:0000439 ! pathogen reproductive phenotype within host
 created_by: alaynecuzick
 creation_date: 2018-12-18T11:26:40Z
@@ -4229,7 +4239,8 @@ creation_date: 2018-12-18T11:26:40Z
 id: PHIPO:0000441
 name: abnormal pathogen reproductive phenotype within host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000442 ! normal pathogen asexual reproduction within host
+def: "A pathogen host interaction phenotype where the pathogen reproductive process within the host is abnormal." []
+is_a: PHIPO:0000439 ! pathogen reproductive phenotype within host
 created_by: alaynecuzick
 creation_date: 2018-12-18T11:26:59Z
 
@@ -4237,6 +4248,7 @@ creation_date: 2018-12-18T11:26:59Z
 id: PHIPO:0000442
 name: normal pathogen asexual reproduction within host
 namespace: pathogen_host_interaction_phenotype
+def: "A pathogen reproductive phenotype within host where the pathogen asexual reproduction process, in which new individuals are produced by either a single cell or a group of cells, in the absence of any sexual process is normal (indistinguishable from wild type)(GO:0019954)." []
 is_a: PHIPO:0000440 ! normal pathogen reproductive phenotype within host
 created_by: alaynecuzick
 creation_date: 2018-12-18T11:27:55Z
@@ -4245,15 +4257,17 @@ creation_date: 2018-12-18T11:27:55Z
 id: PHIPO:0000443
 name: normal pathogen sexual reproduction within host
 namespace: pathogen_host_interaction_phenotype
+def: "A pathogen reproductive phenotype within host where the pathogen sexual reproduction process, in which new individuals are produced by combining the genetic material of two gametes, which may come from two organisms or from a single organism is normal (indistinguishable from wild type) (GO:0019953)." []
 is_a: PHIPO:0000440 ! normal pathogen reproductive phenotype within host
 created_by: alaynecuzick
 creation_date: 2018-12-18T11:28:13Z
 
 [Term]
 id: PHIPO:0000444
-name: decreased quantity of asexual pathogen spores within host
+name: decreased number of asexual pathogen spores within host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000448 ! abnormal quantity of asexual pathogen spores within host
+def: "A pathogen reproductive phenotype within host in which the frequency of occurence of asexual spores is decreased." []
+is_a: PHIPO:0000448 ! abnormal number of asexual pathogen spores within host
 created_by: alaynecuzick
 creation_date: 2018-12-18T11:34:08Z
 
@@ -4281,16 +4295,18 @@ creation_date: 2018-12-18T12:46:45Z
 
 [Term]
 id: PHIPO:0000447
-name: increased quantity of asexual pathogen spores within host
+name: increased number of asexual pathogen spores within host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000448 ! abnormal quantity of asexual pathogen spores within host
+def: "A pathogen reproductive phenotype within host in which the frequency of occurence of asexual spores is increased." []
+is_a: PHIPO:0000448 ! abnormal number of asexual pathogen spores within host
 created_by: alaynecuzick
 creation_date: 2018-12-18T13:53:43Z
 
 [Term]
 id: PHIPO:0000448
-name: abnormal quantity of asexual pathogen spores within host
+name: abnormal number of asexual pathogen spores within host
 namespace: pathogen_host_interaction_phenotype
+def: "A pathogen reproductive phenotype within host in which the frequency of occurence of asexual spores is abnormal" []
 is_a: PHIPO:0000449 ! abnormal pathogen asexual reproduction within host
 created_by: alaynecuzick
 creation_date: 2018-12-18T14:43:36Z
@@ -4299,7 +4315,8 @@ creation_date: 2018-12-18T14:43:36Z
 id: PHIPO:0000449
 name: abnormal pathogen asexual reproduction within host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000469 ! abnormal pathogen asexual sporogenesis within host
+def: "A pathogen reproductive phenotype within host where the pathogen asexual reproduction process, in which new individuals are produced by either a single cell or a group of cells, in the absence of any sexual process is abnormal (GO:0019954)." []
+is_a: PHIPO:0000469 ! abnormal pathogen asexual sporulation within host
 created_by: alaynecuzick
 creation_date: 2018-12-18T14:44:36Z
 
@@ -4400,14 +4417,16 @@ creation_date: 2018-12-21T13:24:37Z
 id: PHIPO:0000468
 name: pathogen asexual spores absent within host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000469 ! abnormal pathogen asexual sporogenesis within host
+def: "A pathogen reproductive phenotype within host where the pathogen asexual spores are absent (FAO:0000023)." []
+is_a: PHIPO:0000469 ! abnormal pathogen asexual sporulation within host
 created_by: alaynecuzick
 creation_date: 2019-01-11T10:31:18Z
 
 [Term]
 id: PHIPO:0000469
-name: abnormal pathogen asexual sporogenesis within host
+name: abnormal pathogen asexual sporulation within host
 namespace: pathogen_host_interaction_phenotype
+def: "A pathogen reproductive phenotype within host where the process of pathogen asexual sporulation, the formation of spores derived from the products of an asexual cell division, is abnormal (GO:0030436)." []
 is_a: PHIPO:0000441 ! abnormal pathogen reproductive phenotype within host
 created_by: alaynecuzick
 creation_date: 2019-01-11T10:32:18Z
@@ -4430,17 +4449,19 @@ creation_date: 2019-01-11T10:40:34Z
 
 [Term]
 id: PHIPO:0000472
-name: normal pathogen asexual sporogenesis within host
+name: normal pathogen asexual sporulation within host
 namespace: pathogen_host_interaction_phenotype
+def: "A pathogen reproductive phenotype within host where the process of pathogen asexual sporulation, the formation of spores derived from the products of an asexual cell division, is normal (GO:0030436)." []
 is_a: PHIPO:0000442 ! normal pathogen asexual reproduction within host
 created_by: alaynecuzick
 creation_date: 2019-01-11T11:49:51Z
 
 [Term]
 id: PHIPO:0000473
-name: normal quantity of pathogen asexual spores within host
+name: normal number of pathogen asexual spores within host
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000472 ! normal pathogen asexual sporogenesis within host
+def: "A pathogen reproductive phenotype within host in which the frequency of occurence of asexual spores is normal  (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0000472 ! normal pathogen asexual sporulation within host
 created_by: alaynecuzick
 creation_date: 2019-01-11T11:55:09Z
 
@@ -4739,7 +4760,7 @@ creation_date: 2019-02-11T12:28:03Z
 id: PHIPO:0000512
 name: pathogen host interaction tissue phenotype
 namespace: pathogen_host_interaction_phenotype
-def: "A single organism phenotype that is observed at the level of a tissue (eg leaf, inflorescence, ear or kidney)." []
+def: "A pathogen host interaction phenotype that is observed at the level of a tissue (eg leaf, inflorescence, ear or kidney)." []
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
@@ -8245,7 +8266,7 @@ creation_date: 2019-05-21T11:22:31Z
 id: PHIPO:0000940
 name: abnormal germ tube
 namespace: single_organism_phenotype
-def: "A single species phenotype where the slender tubular outgrowth first produced by most spores in germination is abnormal." []
+def: "A single species phenotype where the slender tubular outgrowth first produced by most spores in germination is abnormal. (GO:0032179)" []
 is_a: PHIPO:0000402 ! individual organism phenotype
 created_by: alaynecuzick
 creation_date: 2019-05-21T11:34:47Z
@@ -8254,7 +8275,7 @@ creation_date: 2019-05-21T11:34:47Z
 id: PHIPO:0000941
 name: short germ tube
 namespace: single_organism_phenotype
-def: "A single species phenotype where the slender tubular outgrowth first produced by most spores in germination is shorter than normal." []
+def: "A single species phenotype where the slender tubular outgrowth first produced by most spores in germination is shorter than normal. (GO:0032179)" []
 is_a: PHIPO:0000940 ! abnormal germ tube
 created_by: alaynecuzick
 creation_date: 2019-05-21T11:35:21Z
@@ -8275,7 +8296,7 @@ namespace: single_organism_phenotype
 def: "A single species cell phenotype in which the amount of a specific substance measured in a cell differs from normal." []
 synonym: "abnormal level of substance in cell" EXACT []
 xref: FYPO:0000989
-is_a: PHIPO:0000034 ! cell phenotype
+is_a: PHIPO:0000404 ! abnormal cell phenotype
 created_by: alaynecuzick
 creation_date: 2019-05-21T11:59:04Z
 
@@ -8541,6 +8562,7 @@ id: PHIPO:0000972
 name: abolished protein localization to autophagosome
 namespace: single_organism_phenotype
 def: "A single organism phenotype in which a protein does not localize to, and is therefore absent from the autophagosome (GO:0005776)." []
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 is_a: PHIPO:0000245 ! abolished protein localization
 is_a: PHIPO:0000973 ! autophagosome phenotype
 created_by: alaynecuzick
@@ -8952,6 +8974,153 @@ def: "A pathogen host interaction phenotype where any process in which callose i
 is_a: PHIPO:0001013 ! abnormal pathogen host interaction polysaccharide localization
 created_by: alaynecuzick
 creation_date: 2019-08-10T16:43:59Z
+
+[Term]
+id: PHIPO:0001017
+name: long germ tube
+namespace: single_organism_phenotype
+def: "A single species phenotype where the slender tubular outgrowth first produced by most spores in germination is longer than normal. (GO:0032179)" []
+is_a: PHIPO:0000940 ! abnormal germ tube
+created_by: alaynecuzick
+creation_date: 2019-08-17T12:54:34Z
+
+[Term]
+id: PHIPO:0001018
+name: abnormal asexual spore germination
+namespace: single_organism_phenotype
+def: "A cellular process phenotype in which asexual spore germination is abnormal (GO:0009847)." []
+xref: FYPO:0000305
+is_a: PHIPO:0000930 ! cellular process phenotype
+created_by: alaynecuzick
+creation_date: 2019-08-17T12:59:57Z
+
+[Term]
+id: PHIPO:0001019
+name: decreased rate of asexual spore germination
+namespace: single_organism_phenotype
+def: "A cellular process phenotype in which the rate, or speed, of asexual spore germination is decreased." []
+xref: FYPO:0000582
+is_a: PHIPO:0001018 ! abnormal asexual spore germination
+created_by: alaynecuzick
+creation_date: 2019-08-17T13:01:16Z
+
+[Term]
+id: PHIPO:0001020
+name: sensitive to calcofluor white
+namespace: single_organism_phenotype
+def: "A phenotype in which a population of a single-species shows increased sensitivity to calcofluor white, manifested as an affect on the extent of population growth. (CHEBI:50011)" []
+xref: FYPO:0001188
+is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+created_by: alaynecuzick
+creation_date: 2019-08-17T13:35:49Z
+
+[Term]
+id: PHIPO:0001021
+name: sensitive to congo red
+namespace: single_organism_phenotype
+def: "A phenotype in which a population of a single-species shows increased sensitivity to congo red, manifested as an affect on the extent of population growth. (CHEBI:34653)." []
+xref: FYPO:0005984
+is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+created_by: alaynecuzick
+creation_date: 2019-08-17T13:36:09Z
+
+[Term]
+id: PHIPO:0001022
+name: altered cellular cAMP level
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of cyclic AMP measured in a cell differs from normal." []
+synonym: "abnormal cellular cAMP level" EXACT []
+synonym: "altered cellular cyclic AMP level" EXACT []
+xref: FYPO:0001659
+is_a: PHIPO:0000944 ! altered level of substance in cell
+created_by: alaynecuzick
+creation_date: 2019-08-17T13:47:08Z
+
+[Term]
+id: PHIPO:0001023
+name: decreased cellular cAMP level
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of cyclic AMP measured in a cell is lower than normal." []
+synonym: "altered cellular cyclic AMP level" EXACT []
+synonym: "decreased cellular cAMP accumulation" EXACT []
+synonym: "reduced cellular cAMP level" EXACT []
+xref: FYPO:0001660
+is_a: PHIPO:0001022 ! altered cellular cAMP level
+created_by: alaynecuzick
+creation_date: 2019-08-17T13:47:28Z
+
+[Term]
+id: PHIPO:0001024
+name: increased cellular cAMP level
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of cyclic AMP measured in a cell is higher than normal." []
+synonym: "increased cAMP accumulation" EXACT []
+synonym: "increased cellular cyclic AMP level" EXACT []
+xref: FYPO:0001661
+is_a: PHIPO:0001022 ! altered cellular cAMP level
+created_by: alaynecuzick
+creation_date: 2019-08-17T13:47:39Z
+
+[Term]
+id: PHIPO:0001025
+name: altered protein level
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of protein measured in a cell differs from normal. Total protein or a specific protein may be affected." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+synonym: "abnormal protein level" EXACT []
+synonym: "altered cellular protein level" EXACT []
+xref: FYPO:0000834
+is_a: PHIPO:0000944 ! altered level of substance in cell
+created_by: alaynecuzick
+creation_date: 2019-08-17T14:21:36Z
+
+[Term]
+id: PHIPO:0001026
+name: increased protein level
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of protein measured in a cell is higher than normal. Total protein or a specific protein may be affected." []
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "increased protein accumulation" RELATED []
+xref: FYPO:0000836
+is_a: PHIPO:0001025 ! altered protein level
+created_by: alaynecuzick
+creation_date: 2019-08-17T14:23:48Z
+
+[Term]
+id: PHIPO:0001027
+name: decreased protein level
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of protein measured in a cell is lower than normal. Total protein or a specific protein may be affected." []
+comment: Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.
+synonym: "decreased protein accumulation" RELATED []
+synonym: "reduced protein level" EXACT []
+xref: FYPO:0000835
+is_a: PHIPO:0001025 ! altered protein level
+created_by: alaynecuzick
+creation_date: 2019-08-17T14:23:55Z
+
+[Term]
+id: PHIPO:0001028
+name: abolished protein localization to plasma membrane
+namespace: single_organism_phenotype
+def: "A single organism phenotype in which the localization of a protein to the plasma membrane is abolished (GO:0072659)." []
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+is_a: PHIPO:0000245 ! abolished protein localization
+created_by: alaynecuzick
+creation_date: 2019-08-17T14:51:09Z
+
+[Term]
+id: PHIPO:0001029
+name: abolished protein localization to plasma membrane, with protein mislocalized to cytoplasm
+namespace: single_organism_phenotype
+def: "A single organism phenotype in which the localization of a protein to the plasma membrane is abolished, and the protein is present in the cytoplasm instead." []
+comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
+xref: FYPO:0002126
+is_a: PHIPO:0001028 ! abolished protein localization to plasma membrane
+created_by: alaynecuzick
+creation_date: 2019-08-17T14:55:21Z
 
 [Typedef]
 id: PHIPO:0000304
