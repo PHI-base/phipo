@@ -7633,6 +7633,7 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000497 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000497">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000403"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000496"/>
         <obo:IAO_0000115>A single organism phenotype in which the toxin biosynthetic process is normal (i.e. same as the wild type).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
@@ -7728,8 +7729,8 @@ use fungi specific GO term GO_0106110 ## vomitoxin biosynthetic process??</rdfs:
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000504 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000504">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000500"/>
-        <obo:IAO_0000115>A single organism phenotype where deoxynivalenol is present.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001039"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of deoxynivalenol measured in a cell is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-18T13:07:54Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -14203,6 +14204,33 @@ Note that avirulence means loss of pathogenicity in medical terminology.</rdfs:c
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T11:24:02Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">increased cellular toxin level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001038 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001038">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000403"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of a specific substance measured in a cell is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T11:34:52Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0001076</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal level of substance in cell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001039 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001039">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001038"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of toxin measured in a cell is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T11:55:23Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal cellular toxin level</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
