@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-08-19/phipo-simple.owl
+data-version: phipo/releases/2019-09-10/phipo-simple.owl
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -2143,10 +2143,10 @@ creation_date: 2018-10-01T13:43:40Z
 
 [Term]
 id: PHIPO:0000219
-name: decreased level of pathogen deoxynivalenol produced with host
+name: decreased level of pathogen deoxynivalenol with host
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype where there is a decreased amount of deoxynivalenol." []
-is_a: PHIPO:0000229 ! abnormal pathogen host interaction biosynthesis of deoxynivalenol
+def: "A cell phenotype in which the amount of pathogen deoxynivalenol toxin measured in a host is lower than normal." []
+is_a: PHIPO:0001045 ! decreased toxin level in a pathogen host interaction
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:44:10Z
 
@@ -2267,28 +2267,28 @@ creation_date: 2018-10-02T09:17:44Z
 
 [Term]
 id: PHIPO:0000232
-name: increased level of pathogen deoxynivalenol produced with host
+name: increased level of pathogen deoxynivalenol with host
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype where there is an increased amount of deoxynivalenol." []
-is_a: PHIPO:0000229 ! abnormal pathogen host interaction biosynthesis of deoxynivalenol
+def: "A cell phenotype in which the amount of pathogen deoxynivalenol toxin measured in a host is higher than normal." []
+is_a: PHIPO:0001046 ! increased toxin level in a pathogen host interaction
 created_by: alaynecuzick
 creation_date: 2018-10-02T09:18:35Z
 
 [Term]
 id: PHIPO:0000233
-name: pathogen deoxynivalenol production present with host
+name: pathogen deoxynivalenol present with host
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype where deoxynivalenol is present." []
-is_a: PHIPO:0000229 ! abnormal pathogen host interaction biosynthesis of deoxynivalenol
+def: "A cell phenotype in which the amount of pathogen produced deoxynivalenol measured in the host is normal (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001048 ! normal level of substance phenotype in a pathogen host interaction
 created_by: alaynecuzick
 creation_date: 2018-10-02T09:19:27Z
 
 [Term]
 id: PHIPO:0000234
-name: pathogen deoxynivalenol production absent with host
+name: pathogen deoxynivalenol absent with host
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype where deoxynivalenol is absent." []
-is_a: PHIPO:0000229 ! abnormal pathogen host interaction biosynthesis of deoxynivalenol
+def: "A cell phenotype in which the amount of pathogen deoxynivalenol measured in a host is too low to detect." []
+is_a: PHIPO:0001047 ! toxin absent in a pathogen host interaction
 created_by: alaynecuzick
 creation_date: 2018-10-02T09:20:17Z
 
@@ -4624,6 +4624,7 @@ id: PHIPO:0000497
 name: normal toxin biosynthetic process
 namespace: single_organism_phenotype
 def: "A single organism phenotype in which the toxin biosynthetic process is normal (i.e. same as the wild type)." []
+is_a: PHIPO:0000403 ! normal cell phenotype
 is_a: PHIPO:0000496 ! toxin biosynthetic process phenotype
 created_by: alaynecuzick
 creation_date: 2019-01-18T13:04:39Z
@@ -4660,8 +4661,8 @@ creation_date: 2019-01-18T13:06:19Z
 id: PHIPO:0000501
 name: increased level of deoxynivalenol
 namespace: single_organism_phenotype
-def: "A single organism phenotype where there is an increased amount of deoxynivalenol." []
-is_a: PHIPO:0000500 ! abnormal biosynthesis of deoxynivalenol
+def: "A single species cell phenotype in which the amount of deoxynivalenol measured in a cell is higher than normal." []
+is_a: PHIPO:0001037 ! increased cellular toxin level
 created_by: alaynecuzick
 creation_date: 2019-01-18T13:06:49Z
 
@@ -4669,17 +4670,17 @@ creation_date: 2019-01-18T13:06:49Z
 id: PHIPO:0000502
 name: decreased level of deoxynivalenol
 namespace: single_organism_phenotype
-def: "A single organism phenotype where there is a decreased amount of deoxynivalenol." []
-is_a: PHIPO:0000500 ! abnormal biosynthesis of deoxynivalenol
+def: "A single species cell phenotype in which the amount of deoxynivalenol measured in a cell is lower than normal." []
+is_a: PHIPO:0001031 ! decreased cellular toxin level
 created_by: alaynecuzick
 creation_date: 2019-01-18T13:07:24Z
 
 [Term]
 id: PHIPO:0000503
-name: deoxynivalenol absent
+name: deoxynivalenol absent from cell
 namespace: single_organism_phenotype
-def: "A single organism phenotype where deoxynivalenol is absent." []
-is_a: PHIPO:0000500 ! abnormal biosynthesis of deoxynivalenol
+def: "A single organism cell phenotype in which the amount of deoxynivalenol measured in a cell is too low to detect." []
+is_a: PHIPO:0001034 ! substance absent from cell
 created_by: alaynecuzick
 creation_date: 2019-01-18T13:07:42Z
 
@@ -4687,8 +4688,8 @@ creation_date: 2019-01-18T13:07:42Z
 id: PHIPO:0000504
 name: deoxynivalenol present
 namespace: single_organism_phenotype
-def: "A single organism phenotype where deoxynivalenol is present." []
-is_a: PHIPO:0000500 ! abnormal biosynthesis of deoxynivalenol
+def: "A single species cell phenotype in which the amount of deoxynivalenol measured in a cell is normal (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001039 ! normal cellular toxin level
 created_by: alaynecuzick
 creation_date: 2019-01-18T13:07:54Z
 
@@ -8318,6 +8319,7 @@ name: decreased cellular reactive oxygen species level
 namespace: single_organism_phenotype
 def: "A single species cell phenotype in which the amount of reactive oxygen species (ROS) measured in a cell is lower than normal." []
 is_a: PHIPO:0000945 ! altered cellular reactive oxygen species level
+is_a: PHIPO:0001035 ! decreased level of substance in cell
 created_by: alaynecuzick
 creation_date: 2019-05-21T12:01:32Z
 
@@ -8327,6 +8329,7 @@ name: increased cellular reactive oxygen species level
 namespace: single_organism_phenotype
 def: "A single species cell phenotype in which the amount of reactive oxygen species (ROS) measured in a cell is higher than normal." []
 is_a: PHIPO:0000945 ! altered cellular reactive oxygen species level
+is_a: PHIPO:0001036 ! increased level of substance in cell
 created_by: alaynecuzick
 creation_date: 2019-05-21T12:01:41Z
 
@@ -8732,6 +8735,7 @@ name: decreased protein level in a pathogen host interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A cell phenotype in which the amount of protein measured in a pathogen or host cell is lower than normal. Total protein or a specific protein may be affected." []
 is_a: PHIPO:0000988 ! altered protein level in a pathogen host interaction
+is_a: PHIPO:0001040 ! decreased level of a substance in a pathogen host interaction
 created_by: alaynecuzick
 creation_date: 2019-08-10T12:20:29Z
 
@@ -8740,7 +8744,7 @@ id: PHIPO:0000990
 name: absent expression of a pathogen gene product involved in host interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A cell phenotype in which the amount of pathogen protein measured in an interaction with a host cell is too low to detect. Total protein or a specific protein may be affected." []
-is_a: PHIPO:0000989 ! decreased protein level in a pathogen host interaction
+is_a: PHIPO:0001044 ! protein absent in a pathogen host interaction
 created_by: alaynecuzick
 creation_date: 2019-08-10T12:20:59Z
 
@@ -8750,6 +8754,7 @@ name: increased protein level in a pathogen host interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A cell phenotype in which the amount of protein measured in a pathogen or host cell is higher than normal. Total protein or a specific protein may be affected." []
 is_a: PHIPO:0000988 ! altered protein level in a pathogen host interaction
+is_a: PHIPO:0001041 ! increased level of a substance in a pathogen host interaction
 created_by: alaynecuzick
 creation_date: 2019-08-10T12:22:12Z
 
@@ -8777,6 +8782,7 @@ name: decreased RNA level in a pathogen host interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A cell phenotype in which the amount of RNA measured in a pathogen or host cell is lower than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." []
 is_a: PHIPO:0000993 ! altered RNA level in a pathogen host interaction
+is_a: PHIPO:0001040 ! decreased level of a substance in a pathogen host interaction
 created_by: alaynecuzick
 creation_date: 2019-08-10T12:31:25Z
 
@@ -9046,6 +9052,7 @@ synonym: "decreased cellular cAMP accumulation" EXACT []
 synonym: "reduced cellular cAMP level" EXACT []
 xref: FYPO:0001660
 is_a: PHIPO:0001022 ! altered cellular cAMP level
+is_a: PHIPO:0001035 ! decreased level of substance in cell
 created_by: alaynecuzick
 creation_date: 2019-08-17T13:47:28Z
 
@@ -9058,6 +9065,7 @@ synonym: "increased cAMP accumulation" EXACT []
 synonym: "increased cellular cyclic AMP level" EXACT []
 xref: FYPO:0001661
 is_a: PHIPO:0001022 ! altered cellular cAMP level
+is_a: PHIPO:0001036 ! increased level of substance in cell
 created_by: alaynecuzick
 creation_date: 2019-08-17T13:47:39Z
 
@@ -9085,6 +9093,7 @@ comment: Consider annotating to a term describing abnormal translation or abnorm
 synonym: "increased protein accumulation" RELATED []
 xref: FYPO:0000836
 is_a: PHIPO:0001025 ! altered protein level
+is_a: PHIPO:0001036 ! increased level of substance in cell
 created_by: alaynecuzick
 creation_date: 2019-08-17T14:23:48Z
 
@@ -9098,6 +9107,7 @@ synonym: "decreased protein accumulation" RELATED []
 synonym: "reduced protein level" EXACT []
 xref: FYPO:0000835
 is_a: PHIPO:0001025 ! altered protein level
+is_a: PHIPO:0001035 ! decreased level of substance in cell
 created_by: alaynecuzick
 creation_date: 2019-08-17T14:23:55Z
 
@@ -9121,6 +9131,189 @@ xref: FYPO:0002126
 is_a: PHIPO:0001028 ! abolished protein localization to plasma membrane
 created_by: alaynecuzick
 creation_date: 2019-08-17T14:55:21Z
+
+[Term]
+id: PHIPO:0001030
+name: altered cellular toxin level
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of toxin measured in a cell differs from normal." []
+is_a: PHIPO:0000944 ! altered level of substance in cell
+created_by: alaynecuzick
+creation_date: 2019-09-06T10:49:07Z
+
+[Term]
+id: PHIPO:0001031
+name: decreased cellular toxin level
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of toxin measured in a cell is lower than normal." []
+is_a: PHIPO:0001030 ! altered cellular toxin level
+is_a: PHIPO:0001035 ! decreased level of substance in cell
+created_by: alaynecuzick
+creation_date: 2019-09-06T10:49:58Z
+
+[Term]
+id: PHIPO:0001032
+name: decreased level of pyocyanin
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of pyocyanin measured in a cell is lower than normal." []
+is_a: PHIPO:0001031 ! decreased cellular toxin level
+created_by: alaynecuzick
+creation_date: 2019-09-06T10:50:37Z
+
+[Term]
+id: PHIPO:0001033
+name: pyocyanin absent from cell
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of pyocyanin measured in a cell is too low to detect." []
+is_a: PHIPO:0001034 ! substance absent from cell
+created_by: alaynecuzick
+creation_date: 2019-09-06T10:51:03Z
+
+[Term]
+id: PHIPO:0001034
+name: substance absent from cell
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of a specific substance measured in a cell is too low to detect." []
+xref: FYPO:0001888
+is_a: PHIPO:0001035 ! decreased level of substance in cell
+created_by: alaynecuzick
+creation_date: 2019-09-06T11:00:13Z
+
+[Term]
+id: PHIPO:0001035
+name: decreased level of substance in cell
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of a specific substance measured in a cell is lower than normal." []
+synonym: "reduced level of substance in cell" EXACT []
+xref: FYPO:0000991
+is_a: PHIPO:0000944 ! altered level of substance in cell
+created_by: alaynecuzick
+creation_date: 2019-09-06T11:04:53Z
+
+[Term]
+id: PHIPO:0001036
+name: increased level of substance in cell
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of a specific substance measured in a cell is higher than normal." []
+synonym: "increased accumulation of substance in cell" RELATED []
+xref: FYPO:0000990
+is_a: PHIPO:0000944 ! altered level of substance in cell
+created_by: alaynecuzick
+creation_date: 2019-09-06T11:05:35Z
+
+[Term]
+id: PHIPO:0001037
+name: increased cellular toxin level
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of toxin measured in a cell is higher than normal." []
+is_a: PHIPO:0001030 ! altered cellular toxin level
+is_a: PHIPO:0001036 ! increased level of substance in cell
+created_by: alaynecuzick
+creation_date: 2019-09-06T11:24:02Z
+
+[Term]
+id: PHIPO:0001038
+name: normal level of substance in cell
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of a specific substance measured in a cell is normal (i.e. indistinguishable from wild type)." []
+xref: FYPO:0001076
+is_a: PHIPO:0000403 ! normal cell phenotype
+created_by: alaynecuzick
+creation_date: 2019-09-06T11:34:52Z
+
+[Term]
+id: PHIPO:0001039
+name: normal cellular toxin level
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of toxin measured in a cell is normal (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001038 ! normal level of substance in cell
+created_by: alaynecuzick
+creation_date: 2019-09-06T11:55:23Z
+
+[Term]
+id: PHIPO:0001040
+name: decreased level of a substance in a pathogen host interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A cell phenotype in which the amount of a specific substance measured in a pathogen or host cell is lower than normal." []
+is_a: PHIPO:0000987 ! altered level of substance phenotype in a pathogen host interaction
+created_by: alaynecuzick
+creation_date: 2019-09-06T12:27:07Z
+
+[Term]
+id: PHIPO:0001041
+name: increased level of a substance in a pathogen host interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A cell phenotype in which the amount of a specific substance measured in a pathogen or host cell is higher than normal." []
+is_a: PHIPO:0000987 ! altered level of substance phenotype in a pathogen host interaction
+created_by: alaynecuzick
+creation_date: 2019-09-06T12:27:17Z
+
+[Term]
+id: PHIPO:0001042
+name: substance absent in a pathogen host interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A cell phenotype in which the amount of a specific substance measured in a pathogen or host cell is too low to detect." []
+is_a: PHIPO:0001040 ! decreased level of a substance in a pathogen host interaction
+created_by: alaynecuzick
+creation_date: 2019-09-06T12:27:54Z
+
+[Term]
+id: PHIPO:0001043
+name: altered toxin level in a pathogen host interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A cell phenotype in which the amount of toxin measured in a pathogen or host cell differs from normal." []
+is_a: PHIPO:0000987 ! altered level of substance phenotype in a pathogen host interaction
+created_by: alaynecuzick
+creation_date: 2019-09-06T12:30:03Z
+
+[Term]
+id: PHIPO:0001044
+name: protein absent in a pathogen host interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A cell phenotype in which the amount of protein measured in a pathogen or host cell is too low to detect. Total protein or a specific protein may be affected." []
+xref: FYPO:0001983
+is_a: PHIPO:0000989 ! decreased protein level in a pathogen host interaction
+is_a: PHIPO:0001042 ! substance absent in a pathogen host interaction
+created_by: alaynecuzick
+creation_date: 2019-09-06T12:39:49Z
+
+[Term]
+id: PHIPO:0001045
+name: decreased toxin level in a pathogen host interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A cell phenotype in which the amount of toxin measured in a pathogen or host cell is lower than normal." []
+is_a: PHIPO:0001043 ! altered toxin level in a pathogen host interaction
+created_by: alaynecuzick
+creation_date: 2019-09-06T12:44:12Z
+
+[Term]
+id: PHIPO:0001046
+name: increased toxin level in a pathogen host interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A cell phenotype in which the amount of toxin measured in a pathogen or host cell is higher than normal." []
+is_a: PHIPO:0001043 ! altered toxin level in a pathogen host interaction
+created_by: alaynecuzick
+creation_date: 2019-09-06T12:44:20Z
+
+[Term]
+id: PHIPO:0001047
+name: toxin absent in a pathogen host interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A cell phenotype in which the amount of toxin measured in a pathogen or host cell is too low to detect." []
+is_a: PHIPO:0001042 ! substance absent in a pathogen host interaction
+is_a: PHIPO:0001045 ! decreased toxin level in a pathogen host interaction
+created_by: alaynecuzick
+creation_date: 2019-09-06T12:45:24Z
+
+[Term]
+id: PHIPO:0001048
+name: normal level of substance phenotype in a pathogen host interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A cell phenotype in which the amount of a specific substance measured in a pathogen or host cell is normal (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0000483 ! normal pathogen host interaction phenotype
+is_a: PHIPO:0000510 ! pathogen host interaction cell level phenotype
+created_by: alaynecuzick
+creation_date: 2019-09-06T12:46:32Z
 
 [Typedef]
 id: PHIPO:0000304
