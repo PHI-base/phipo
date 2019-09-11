@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-09-10/phipo-simple.owl
+data-version: phipo/releases/2019-09-11/phipo-simple.owl
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -1768,7 +1768,7 @@ name: increased size of filamentous colony
 namespace: single_organism_phenotype
 def: "A single species hyphal colony morphology phenotype where the size of the colony is decreased." []
 synonym: "increased filamentous growth" EXACT []
-is_a: PHIPO:0000957 ! abnormal size of hyphal colony morphology
+is_a: PHIPO:0000957 ! abnormal size of hyphal colony
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:09:16Z
 
@@ -1788,7 +1788,7 @@ name: decreased size of filamentous colony
 namespace: single_organism_phenotype
 def: "A single species hyphal colony morphology phenotype where the size of the colony is decreased." []
 synonym: "decreased filamentous growth" EXACT []
-is_a: PHIPO:0000957 ! abnormal size of hyphal colony morphology
+is_a: PHIPO:0000957 ! abnormal size of hyphal colony
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:09:27Z
 
@@ -1999,7 +1999,7 @@ id: PHIPO:0000203
 name: increased aerial height of filamentous colony
 namespace: single_organism_phenotype
 def: "A single species hyphal colony morphology phenotype where the aerial height of the filamentous colony is increased." []
-is_a: PHIPO:0000958 ! abnormal shape of hyphal colony morphology
+is_a: PHIPO:0000958 ! abnormal shape of hyphal colony
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:31:34Z
 
@@ -2018,7 +2018,7 @@ id: PHIPO:0000205
 name: decreased aerial height of filamentous colony
 namespace: single_organism_phenotype
 def: "A single species hyphal colony morphology phenotype where the aerial height of the filamentous colony is decreased." []
-is_a: PHIPO:0000958 ! abnormal shape of hyphal colony morphology
+is_a: PHIPO:0000958 ! abnormal shape of hyphal colony
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:32:01Z
 
@@ -2714,7 +2714,7 @@ id: PHIPO:0000273
 name: filamentous colony morphology phenotype
 namespace: single_organism_phenotype
 def: "A single species population phenotype affecting the morphology of a colony growing in filamentous form." []
-is_a: PHIPO:0000509 ! population phenotype
+is_a: PHIPO:0001049 ! colony morphology phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-03T13:38:13Z
 
@@ -2759,6 +2759,7 @@ name: normal hyphal colony morphology
 namespace: single_organism_phenotype
 def: "A single species population phenotype where the morphology of a colony growing in filamentous form is normal." []
 is_a: PHIPO:0000273 ! filamentous colony morphology phenotype
+is_a: PHIPO:0001057 ! normal colony morphology
 created_by: alaynecuzick
 creation_date: 2018-10-03T13:40:03Z
 
@@ -8417,19 +8418,21 @@ creation_date: 2019-06-10T09:09:38Z
 
 [Term]
 id: PHIPO:0000957
-name: abnormal size of hyphal colony morphology
+name: abnormal size of hyphal colony
 namespace: single_organism_phenotype
 def: "A single species hyphal colony morphology phenotype where the size of the colony is abnormal." []
 is_a: PHIPO:0000037 ! abnormal hyphal colony morphology
+is_a: PHIPO:0001054 ! abnormal size of colony
 created_by: alaynecuzick
 creation_date: 2019-06-10T09:31:25Z
 
 [Term]
 id: PHIPO:0000958
-name: abnormal shape of hyphal colony morphology
+name: abnormal shape of hyphal colony
 namespace: single_organism_phenotype
 def: "A single species hyphal colony morphology phenotype where the shape of the colony is abnormal." []
 is_a: PHIPO:0000037 ! abnormal hyphal colony morphology
+is_a: PHIPO:0001051 ! abnormal shape of colony
 created_by: alaynecuzick
 creation_date: 2019-06-10T09:31:56Z
 
@@ -9314,6 +9317,176 @@ is_a: PHIPO:0000483 ! normal pathogen host interaction phenotype
 is_a: PHIPO:0000510 ! pathogen host interaction cell level phenotype
 created_by: alaynecuzick
 creation_date: 2019-09-06T12:46:32Z
+
+[Term]
+id: PHIPO:0001049
+name: colony morphology phenotype
+namespace: single_organism_phenotype
+def: "A single species population phenotype affecting the morphology of a colony." []
+is_a: PHIPO:0000509 ! population phenotype
+created_by: alaynecuzick
+creation_date: 2019-09-10T13:26:05Z
+
+[Term]
+id: PHIPO:0001050
+name: abnormal colony morphology
+namespace: single_organism_phenotype
+def: "A single species population phenotype where the morphology of a colony is abnormal." []
+is_a: PHIPO:0001049 ! colony morphology phenotype
+created_by: alaynecuzick
+creation_date: 2019-09-10T13:29:47Z
+
+[Term]
+id: PHIPO:0001051
+name: abnormal shape of colony
+namespace: single_organism_phenotype
+def: "A single species colony morphology phenotype where the shape of the colony is abnormal." []
+is_a: PHIPO:0001050 ! abnormal colony morphology
+created_by: alaynecuzick
+creation_date: 2019-09-10T13:31:28Z
+
+[Term]
+id: PHIPO:0001052
+name: smooth colony morphology
+namespace: single_organism_phenotype
+def: "A single species colony morphology phenotype where the colony is smoother than normal." []
+is_a: PHIPO:0001051 ! abnormal shape of colony
+created_by: alaynecuzick
+creation_date: 2019-09-10T13:32:18Z
+
+[Term]
+id: PHIPO:0001053
+name: hyper-rugose colony morphology
+namespace: single_organism_phenotype
+def: "A single species colony morphology phenotype where the colony is more rugose (wrinkled; corrugated) than normal." []
+is_a: PHIPO:0001051 ! abnormal shape of colony
+created_by: alaynecuzick
+creation_date: 2019-09-10T13:32:45Z
+
+[Term]
+id: PHIPO:0001054
+name: abnormal size of colony
+namespace: single_organism_phenotype
+def: "A single species colony morphology phenotype where the size of the colony is abnormal." []
+is_a: PHIPO:0001050 ! abnormal colony morphology
+created_by: alaynecuzick
+creation_date: 2019-09-10T13:35:18Z
+
+[Term]
+id: PHIPO:0001055
+name: increased size of colony
+namespace: single_organism_phenotype
+def: "A single species colony morphology phenotype where the size of the colony is increased." []
+is_a: PHIPO:0001054 ! abnormal size of colony
+created_by: alaynecuzick
+creation_date: 2019-09-10T13:37:47Z
+
+[Term]
+id: PHIPO:0001056
+name: decreased size of colony
+namespace: single_organism_phenotype
+def: "A single species colony morphology phenotype where the size of the colony is decreased." []
+is_a: PHIPO:0001054 ! abnormal size of colony
+created_by: alaynecuzick
+creation_date: 2019-09-10T13:38:53Z
+
+[Term]
+id: PHIPO:0001057
+name: normal colony morphology
+namespace: single_organism_phenotype
+def: "A single species population phenotype where the morphology of a colony growing in filamentous form is normal." []
+is_a: PHIPO:0001049 ! colony morphology phenotype
+created_by: alaynecuzick
+creation_date: 2019-09-10T13:40:17Z
+
+[Term]
+id: PHIPO:0001058
+name: rugose colony morphology
+namespace: single_organism_phenotype
+def: "A single species colony morphology phenotype where the colony is as rugose (wrinkled; corrugated) as normal (indistinguishable from wild type)." []
+is_a: PHIPO:0001057 ! normal colony morphology
+created_by: alaynecuzick
+creation_date: 2019-09-10T13:40:49Z
+
+[Term]
+id: PHIPO:0001059
+name: increased level of pyocyanin
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of pyocyanin measured in a cell is higher than normal." []
+is_a: PHIPO:0001037 ! increased cellular toxin level
+created_by: alaynecuzick
+creation_date: 2019-09-11T13:06:36Z
+
+[Term]
+id: PHIPO:0001060
+name: altered RNA level
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of RNA measured in a cell differs from normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+synonym: "abnormal RNA level" EXACT []
+synonym: "altered cellular RNA level" EXACT []
+synonym: "altered transcript level" EXACT []
+xref: FYPO:0000824
+is_a: PHIPO:0000944 ! altered level of substance in cell
+created_by: alaynecuzick
+creation_date: 2019-09-11T13:14:54Z
+
+[Term]
+id: PHIPO:0001061
+name: decreased RNA level
+namespace: single_organism_phenotype
+def: "A singe species cell phenotype in which the amount of RNA measured in a cell is lower than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." []
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.
+synonym: "decreased cellular RNA level" EXACT []
+synonym: "decreased transcript level" EXACT []
+synonym: "reduced RNA level" EXACT []
+xref: FYPO:0000826
+is_a: PHIPO:0001035 ! decreased level of substance in cell
+is_a: PHIPO:0001060 ! altered RNA level
+created_by: alaynecuzick
+creation_date: 2019-09-11T13:18:59Z
+
+[Term]
+id: PHIPO:0001062
+name: increased RNA level
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of RNA measured in a cell is higher than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." []
+comment: Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.
+synonym: "increased cellular RNA level" EXACT []
+synonym: "increased RNA accumulation" RELATED []
+synonym: "increased transcript level" EXACT []
+xref: FYPO:0001890
+is_a: PHIPO:0001036 ! increased level of substance in cell
+is_a: PHIPO:0001060 ! altered RNA level
+created_by: alaynecuzick
+creation_date: 2019-09-11T13:22:53Z
+
+[Term]
+id: PHIPO:0001063
+name: RNA absent from cell
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of RNA measured in a cell is too low to detect. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." []
+synonym: "transcripts absent from cell" EXACT []
+synonym: "undetectable cellular RNA level" EXACT []
+xref: FYPO:0001889
+is_a: PHIPO:0001034 ! substance absent from cell
+created_by: alaynecuzick
+creation_date: 2019-09-11T13:26:30Z
+
+[Term]
+id: PHIPO:0001064
+name: normal RNA level
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of RNA measured in a cell is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." []
+synonym: "normal cellular RNA level" EXACT []
+synonym: "normal mRNA level" NARROW []
+synonym: "normal transcript level" EXACT []
+xref: FYPO:0000840
+is_a: PHIPO:0001038 ! normal level of substance in cell
+created_by: alaynecuzick
+creation_date: 2019-09-11T13:30:41Z
 
 [Typedef]
 id: PHIPO:0000304
