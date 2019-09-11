@@ -117,6 +117,12 @@
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
@@ -14503,6 +14509,97 @@ Note that avirulence means loss of pathogenicity in medical terminology.</rdfs:c
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-11T13:06:36Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">increased level of pyocyanin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001060 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001060">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000944"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of RNA measured in a cell differs from normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-11T13:14:54Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000824</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>abnormal RNA level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>altered cellular RNA level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>altered transcript level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
+        <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
+        <rdfs:comment>This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
+        <rdfs:label xml:lang="en">altered RNA level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001061 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001061">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001035"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001060"/>
+        <obo:IAO_0000115>A singe species cell phenotype in which the amount of RNA measured in a cell is lower than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-11T13:18:59Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000826</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>decreased cellular RNA level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>decreased transcript level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>reduced RNA level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:comment>Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.</rdfs:comment>
+        <rdfs:label xml:lang="en">decreased RNA level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001062 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001062">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001036"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001060"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of RNA measured in a cell is higher than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-11T13:22:53Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0001890</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>increased cellular RNA level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>increased transcript level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>increased RNA accumulation</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment>Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.</rdfs:comment>
+        <rdfs:label xml:lang="en">increased RNA level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001063 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001063">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001034"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of RNA measured in a cell is too low to detect. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-11T13:26:30Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0001889</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>transcripts absent from cell</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>undetectable cellular RNA level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">RNA absent from cell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001064 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001064">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001038"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of RNA measured in a cell is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-11T13:30:41Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000840</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>normal cellular RNA level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>normal transcript level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>normal mRNA level</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal RNA level</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
