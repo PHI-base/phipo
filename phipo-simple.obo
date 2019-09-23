@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-09-11/phipo-simple.owl
+data-version: phipo/releases/2019-09-23/phipo-simple.owl
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -1933,7 +1933,7 @@ creation_date: 2018-10-01T13:26:34Z
 id: PHIPO:0000196
 name: normal aerial height of filamentous colony
 namespace: single_organism_phenotype
-def: "A single species hyphal colony morphology phenotype where the aerial height of the filamentous colony is normal." []
+def: "A single species hyphal colony morphology phenotype where the aerial height of the filamentous colony is normal (indistinguishable from wild type)." []
 is_a: PHIPO:0000278 ! normal hyphal colony morphology
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:27:25Z
@@ -2757,7 +2757,7 @@ creation_date: 2018-10-03T13:39:41Z
 id: PHIPO:0000278
 name: normal hyphal colony morphology
 namespace: single_organism_phenotype
-def: "A single species population phenotype where the morphology of a colony growing in filamentous form is normal." []
+def: "A single species population phenotype where the morphology of a colony growing in filamentous form is normal (indistinguishable from wild type)." []
 is_a: PHIPO:0000273 ! filamentous colony morphology phenotype
 is_a: PHIPO:0001057 ! normal colony morphology
 created_by: alaynecuzick
@@ -8450,7 +8450,7 @@ creation_date: 2019-06-11T09:24:45Z
 id: PHIPO:0000960
 name: normal size of filamentous colony
 namespace: single_organism_phenotype
-def: "A single species hyphal colony morphology phenotype where the size of the colony is normal." []
+def: "A single species hyphal colony morphology phenotype where the size of the colony is normal (indistinguishable from wild type)." []
 is_a: PHIPO:0000278 ! normal hyphal colony morphology
 created_by: alaynecuzick
 creation_date: 2019-06-11T09:57:34Z
@@ -9347,7 +9347,7 @@ creation_date: 2019-09-10T13:31:28Z
 
 [Term]
 id: PHIPO:0001052
-name: smooth colony morphology
+name: hyper-smooth colony morphology
 namespace: single_organism_phenotype
 def: "A single species colony morphology phenotype where the colony is smoother than normal." []
 is_a: PHIPO:0001051 ! abnormal shape of colony
@@ -9394,14 +9394,14 @@ creation_date: 2019-09-10T13:38:53Z
 id: PHIPO:0001057
 name: normal colony morphology
 namespace: single_organism_phenotype
-def: "A single species population phenotype where the morphology of a colony growing in filamentous form is normal." []
+def: "A single species population phenotype where the morphology of a colony growing in filamentous form is normal (indistinguishable from wild type)." []
 is_a: PHIPO:0001049 ! colony morphology phenotype
 created_by: alaynecuzick
 creation_date: 2019-09-10T13:40:17Z
 
 [Term]
 id: PHIPO:0001058
-name: rugose colony morphology
+name: normal rugose colony morphology
 namespace: single_organism_phenotype
 def: "A single species colony morphology phenotype where the colony is as rugose (wrinkled; corrugated) as normal (indistinguishable from wild type)." []
 is_a: PHIPO:0001057 ! normal colony morphology
@@ -9487,6 +9487,82 @@ xref: FYPO:0000840
 is_a: PHIPO:0001038 ! normal level of substance in cell
 created_by: alaynecuzick
 creation_date: 2019-09-11T13:30:41Z
+
+[Term]
+id: PHIPO:0001065
+name: normal shape of colony
+namespace: single_organism_phenotype
+def: "A single species colony morphology phenotype where the shape of the colony is normal (indistinguishable from wild type)." []
+is_a: PHIPO:0001057 ! normal colony morphology
+created_by: alaynecuzick
+creation_date: 2019-09-13T10:53:42Z
+
+[Term]
+id: PHIPO:0001066
+name: normal size of colony
+namespace: single_organism_phenotype
+def: "A single species colony morphology phenotype where the size of the colony is normal (indistinguishable from wild type)." []
+is_a: PHIPO:0001057 ! normal colony morphology
+created_by: alaynecuzick
+creation_date: 2019-09-13T10:53:57Z
+
+[Term]
+id: PHIPO:0001067
+name: pathogen host interaction organism level phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype that is observed at the level of an individual organism (eg a worm host)." []
+is_a: PHIPO:0000001 ! pathogen host interaction phenotype
+created_by: alaynecuzick
+creation_date: 2019-09-20T11:03:58Z
+
+[Term]
+id: PHIPO:0001068
+name: survival of host organism with pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A host organism viability phenotype where the host organism survives in the presence of the pathogen." []
+synonym: "viable host organism with pathogen" RELATED []
+is_a: PHIPO:0001070 ! pathogen host interaction organism viability phenotype
+created_by: alaynecuzick
+creation_date: 2019-09-20T11:06:42Z
+
+[Term]
+id: PHIPO:0001069
+name: death of host organism with pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A host organism viability phenotype where the host organism dies in the presence of the pathogen." []
+synonym: "host kill assay" RELATED []
+synonym: "inviable host organism with pathogen" RELATED []
+synonym: "pathogen induced death of host organism" RELATED []
+is_a: PHIPO:0001070 ! pathogen host interaction organism viability phenotype
+created_by: alaynecuzick
+creation_date: 2019-09-20T11:07:02Z
+
+[Term]
+id: PHIPO:0001070
+name: pathogen host interaction organism viability phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction organism level phenotype which affects the viability of an individual host organism in the presence of a pathogen." []
+is_a: PHIPO:0001067 ! pathogen host interaction organism level phenotype
+created_by: alaynecuzick
+creation_date: 2019-09-20T11:19:37Z
+
+[Term]
+id: PHIPO:0001071
+name: obsolete viable host organism with pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction organism viability phenotype where a host organism is viable in the presence of a pathogen." []
+is_obsolete: true
+created_by: alaynecuzick
+creation_date: 2019-09-20T11:20:10Z
+
+[Term]
+id: PHIPO:0001072
+name: obsolete inviable host organism with pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction organism viability phenotype where a host organism is inviable in the presence of a pathogen." []
+is_obsolete: true
+created_by: alaynecuzick
+creation_date: 2019-09-20T11:20:25Z
 
 [Typedef]
 id: PHIPO:0000304
