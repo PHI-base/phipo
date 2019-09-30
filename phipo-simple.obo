@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-09-23/phipo-simple.owl
+data-version: phipo/releases/2019-09-30/phipo-simple.owl
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -9563,6 +9563,100 @@ def: "A pathogen host interaction organism viability phenotype where a host orga
 is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-09-20T11:20:25Z
+
+[Term]
+id: PHIPO:0001073
+name: sensitive to stress during growth
+namespace: single_organism_phenotype
+def: "A single species population growth phenotype in which cells show increased sensitivity to a stress." []
+xref: FYPO:0000304
+is_a: PHIPO:0000162 ! population growth phenotype
+created_by: alaynecuzick
+creation_date: 2019-09-27T09:48:23Z
+
+[Term]
+id: PHIPO:0001074
+name: sensitive to iron ion starvation
+namespace: single_organism_phenotype
+def: "A population growth phenotype which cells show increased sensitivity to iron ion starvation." []
+xref: FYPO:0002015
+is_a: PHIPO:0001073 ! sensitive to stress during growth
+created_by: alaynecuzick
+creation_date: 2019-09-27T09:51:47Z
+
+[Term]
+id: PHIPO:0001075
+name: auxotrophy phenotype
+namespace: single_organism_phenotype
+def: "A single species population growth phenotype in which a cell requires a particular organic compound, which is not required by a wild-type cell for its growth. Auxotrophy usually results from a cell's inability to synthesize the compound." []
+xref: FYPO:0000128
+is_a: PHIPO:0000162 ! population growth phenotype
+created_by: alaynecuzick
+creation_date: 2019-09-27T10:01:40Z
+
+[Term]
+id: PHIPO:0001076
+name: growth auxotrophic for lysine
+namespace: single_organism_phenotype
+def: "Auxotrophy in which a cell is unable to synthesize lysine, and therefore requires lysine in the medium for vegetative cell growth." []
+xref: FYPO:0000039
+is_a: PHIPO:0001075 ! auxotrophy phenotype
+created_by: alaynecuzick
+creation_date: 2019-09-27T10:02:07Z
+
+[Term]
+id: PHIPO:0001077
+name: decreased cellular melanin accumulation
+namespace: single_organism_phenotype
+def: "A single species individual organism phenotype where the accumulation of melanin in a cell is decreased." []
+is_a: PHIPO:0000288 ! decreased cellular pigment accumulation
+created_by: alaynecuzick
+creation_date: 2019-09-27T10:16:39Z
+
+[Term]
+id: PHIPO:0001078
+name: absence of cellular melanin accumulation
+namespace: single_organism_phenotype
+def: "A single species individual organism phenotype where the accumulation of melanin in a cell is absent." []
+is_a: PHIPO:0001077 ! decreased cellular melanin accumulation
+created_by: alaynecuzick
+creation_date: 2019-09-27T10:17:08Z
+
+[Term]
+id: PHIPO:0001079
+name: pathogen host interaction pigment phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction organism level phenotype affecting the deposition or aggregation of coloring matter in a cell." []
+is_a: PHIPO:0001067 ! pathogen host interaction organism level phenotype
+created_by: alaynecuzick
+creation_date: 2019-09-27T11:17:57Z
+
+[Term]
+id: PHIPO:0001080
+name: altered pigment accumulation in pathogen asexual spore with host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction pigment phenotype where the accumulation of coloring matter in a pathogen asexual spore with a host is altered." []
+is_a: PHIPO:0001079 ! pathogen host interaction pigment phenotype
+created_by: alaynecuzick
+creation_date: 2019-09-27T11:19:13Z
+
+[Term]
+id: PHIPO:0001081
+name: absence of melanin accumulation in pathogen asexual spore with host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction pigment phenotype where the accumulation of melanin in a pathogen asexual spore with a host is absent." []
+is_a: PHIPO:0001080 ! altered pigment accumulation in pathogen asexual spore with host
+created_by: alaynecuzick
+creation_date: 2019-09-27T11:20:21Z
+
+[Term]
+id: PHIPO:0001082
+name: gain of catalytic activity
+namespace: single_organism_phenotype
+def: "A single organism (molecular function??) phenotype in which a specified catalytic activity has been gained (it was absent and is now present)." []
+is_a: PHIPO:0000434 ! abnormal catalytic activity
+created_by: alaynecuzick
+creation_date: 2019-09-30T08:59:36Z
 
 [Typedef]
 id: PHIPO:0000304
