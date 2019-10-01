@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-09-30/phipo-simple.owl
+data-version: phipo/releases/2019-10-01/phipo-simple.owl
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -538,6 +538,7 @@ id: PHIPO:0000052
 name: decreased number of asexual spores
 namespace: single_organism_phenotype
 def: "A population phenotype in which the frequency of occurence of asexual spores is decreased." []
+synonym: "fewer conidia" EXACT []
 is_a: PHIPO:0000082 ! abnormal number of asexual spores
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:18:34Z
@@ -2352,6 +2353,7 @@ def: "A single organism phenotype in which the localization of a protein in a ce
 xref: FYPO:0001370
 is_a: PHIPO:0000017 ! abnormal single species phenotype
 is_a: PHIPO:0000237 ! protein localization phenotype
+is_a: PHIPO:0001094 ! abnormal localization
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:14:02Z
 
@@ -2486,6 +2488,7 @@ def: "A single organism phenotype in which the localization of an RNA in a cell 
 xref: FYPO:0003057
 is_a: PHIPO:0000017 ! abnormal single species phenotype
 is_a: PHIPO:0000249 ! RNA localization phenotype
+is_a: PHIPO:0001094 ! abnormal localization
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:20:49Z
 
@@ -8959,25 +8962,25 @@ creation_date: 2019-08-10T16:36:54Z
 
 [Term]
 id: PHIPO:0001014
-name: increased level of host callose deposition with pathogen
+name: increased level of host callose deposition induced by pathogen
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype where there is an increased amount of host callose deposition." []
-is_a: PHIPO:0001016 ! abnormal level of host callose deposition with pathogen
+is_a: PHIPO:0001016 ! abnormal level of host callose deposition induced by pathogen
 created_by: alaynecuzick
 creation_date: 2019-08-10T16:37:53Z
 
 [Term]
 id: PHIPO:0001015
-name: decreased level of host callose deposition with pathogen
+name: decreased level of host callose deposition induced by pathogen
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype where there is a decreased amount of host callose deposition." []
-is_a: PHIPO:0001016 ! abnormal level of host callose deposition with pathogen
+is_a: PHIPO:0001016 ! abnormal level of host callose deposition induced by pathogen
 created_by: alaynecuzick
 creation_date: 2019-08-10T16:38:36Z
 
 [Term]
 id: PHIPO:0001016
-name: abnormal level of host callose deposition with pathogen
+name: abnormal level of host callose deposition induced by pathogen
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype where any process in which callose is transported to, and/or maintained in, a specific location during the host defense response to a pathogen is abnormal. Callose is a linear 1,3-beta-d-glucan formed from UDP-glucose and is found in certain plant cell walls. (GO:0052542)." []
 is_a: PHIPO:0001013 ! abnormal pathogen host interaction polysaccharide localization
@@ -9657,6 +9660,122 @@ def: "A single organism (molecular function??) phenotype in which a specified ca
 is_a: PHIPO:0000434 ! abnormal catalytic activity
 created_by: alaynecuzick
 creation_date: 2019-09-30T08:59:36Z
+
+[Term]
+id: PHIPO:0001083
+name: normal level of host callose deposition induced by pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where any process in which callose is transported to, and/or maintained in, a specific location during the host defense response to a pathogen is normal (i.e. indistinguishable from wild type). Callose is a linear 1,3-beta-d-glucan formed from UDP-glucose and is found in certain plant cell walls. (GO:0052542)." []
+is_a: PHIPO:0001012 ! pathogen host interaction polysaccharide localization phenotype
+created_by: alaynecuzick
+creation_date: 2019-10-01T09:09:20Z
+
+[Term]
+id: PHIPO:0001084
+name: increased population growth rate
+namespace: single_organism_phenotype
+def: "A single species cell population phenotype in which vegetative cell population growth is faster than normal." []
+xref: FYPO:0000636
+is_a: PHIPO:0000975 ! increased population growth
+created_by: alaynecuzick
+creation_date: 2019-10-01T09:17:27Z
+
+[Term]
+id: PHIPO:0001085
+name: decreased population growth rate
+namespace: single_organism_phenotype
+def: "A single species cell population phenotype in which vegetative cell population growth is slower than normal." []
+xref: FYPO:0001355
+is_a: PHIPO:0000974 ! decreased population growth
+created_by: alaynecuzick
+creation_date: 2019-10-01T09:21:13Z
+
+[Term]
+id: PHIPO:0001086
+name: abnormal cellular component assembly
+namespace: single_organism_phenotype
+def: "A single species cellular process phenotype in which any process of cellular component assembly at the cellular level is abnormal." []
+xref: FYPO:0000336
+is_a: PHIPO:0000407 ! cellular component organization phenotype
+created_by: alaynecuzick
+creation_date: 2019-10-01T09:36:55Z
+
+[Term]
+id: PHIPO:0001087
+name: abnormal hyphae formation
+namespace: single_organism_phenotype
+def: "A single species cellular process phenotype in which hyphae formation is abnormal." []
+is_a: PHIPO:0001086 ! abnormal cellular component assembly
+created_by: alaynecuzick
+creation_date: 2019-10-01T09:40:58Z
+
+[Term]
+id: PHIPO:0001088
+name: decreased rate of hyphae formation
+namespace: single_organism_phenotype
+def: "A single species cellular process phenotype in which the rate, or speed, of hyphae formation is decreased." []
+synonym: "slow hyphae formation" EXACT []
+is_a: PHIPO:0001087 ! abnormal hyphae formation
+created_by: alaynecuzick
+creation_date: 2019-10-01T09:41:16Z
+
+[Term]
+id: PHIPO:0001089
+name: decreased rate of germination tube formation
+namespace: single_organism_phenotype
+def: "A single species cellular process phenotype in which the rate, or speed, of germ tube formation is decreased." []
+synonym: "slow germination tube formation" EXACT []
+is_a: PHIPO:0001087 ! abnormal hyphae formation
+created_by: alaynecuzick
+creation_date: 2019-10-01T09:42:41Z
+
+[Term]
+id: PHIPO:0001090
+name: abolished protein secretion
+namespace: single_organism_phenotype
+def: "A single organism localization phenotype in which a protein is not exported via the secretory pathway." []
+is_a: PHIPO:0000245 ! abolished protein localization
+created_by: alaynecuzick
+creation_date: 2019-10-01T09:56:51Z
+
+[Term]
+id: PHIPO:0001091
+name: abolished chitinase activity
+namespace: single_organism_phenotype
+def: "A single organism (molecular function??) phenotype in which the catalysis of the hydrolysis of (1->4)-beta linkages of N-acetyl-D-glucosamine (GlcNAc) polymers of chitin and chitodextrins (GO:0004568) is abolished (the activity was present and is now absent)." []
+is_a: PHIPO:0000435 ! abolished catalytic activity
+created_by: alaynecuzick
+creation_date: 2019-10-01T13:15:29Z
+
+[Term]
+id: PHIPO:0001092
+name: increased chitin level in asexual spore
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of chitin measured in the spore is higher than normal" []
+is_a: PHIPO:0001036 ! increased level of substance in cell
+is_a: PHIPO:0001094 ! abnormal localization
+created_by: alaynecuzick
+creation_date: 2019-10-01T13:26:59Z
+
+[Term]
+id: PHIPO:0001094
+name: abnormal localization
+namespace: single_organism_phenotype
+def: "A single species phenotype where the localization of a structure or substance in a cell is abnormal." []
+is_a: PHIPO:0000235 ! localization phenotype
+created_by: alaynecuzick
+creation_date: 2019-10-01T13:35:05Z
+
+[Term]
+id: PHIPO:0001095
+name: abnormal localization of chitin in cell
+namespace: single_organism_phenotype
+def: "A single organism phenotype in which the localization of chitin in a cell is abnormal. Chitin may be observed in a place where it is not normally found, absent from a place where it is normally found, or both." []
+synonym: "abnormal chitin deposition" NARROW []
+synonym: "abnormal chitin distribution" EXACT []
+is_a: PHIPO:0001094 ! abnormal localization
+created_by: alaynecuzick
+creation_date: 2019-10-01T13:37:30Z
 
 [Typedef]
 id: PHIPO:0000304
