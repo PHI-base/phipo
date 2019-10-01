@@ -3958,6 +3958,7 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000237"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001094"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism phenotype in which the localization of a protein in a cell is abnormal. A protein may be observed in a place where it is not normally found, absent from a place where it is normally found, or both.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:14:02Z</oboInOwl:creation_date>
@@ -4233,6 +4234,7 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000249"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001094"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism phenotype in which the localization of an RNA in a cell is abnormal. An RNA may be observed in a place where it is not normally found, absent from a place where it is normally found, or both.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:20:49Z</oboInOwl:creation_date>
@@ -14971,11 +14973,40 @@ Note that avirulence means loss of pathogenicity in medical terminology.</rdfs:c
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001092">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001036"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001094"/>
         <obo:IAO_0000115>A single species cell phenotype in which the amount of chitin measured in the spore is higher than normal</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-01T13:26:59Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">increased chitin level in asexual spore</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001094 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001094">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000235"/>
+        <obo:IAO_0000115>A single species phenotype where the localization of a structure or substance in a cell is abnormal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-01T13:35:05Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal localization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001095 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001095">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001094"/>
+        <obo:IAO_0000115>A single organism phenotype in which the localization of chitin in a cell is abnormal. Chitin may be observed in a place where it is not normally found, absent from a place where it is normally found, or both.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-01T13:37:30Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>abnormal chitin distribution</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>abnormal chitin deposition</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal localization of chitin in cell</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
