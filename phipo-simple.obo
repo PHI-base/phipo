@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-10-07/phipo-simple.owl
+data-version: phipo/releases/2019-10-09/phipo-simple.owl
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -9607,6 +9607,8 @@ id: PHIPO:0001078
 name: absence of cellular melanin accumulation
 namespace: single_organism_phenotype
 def: "A single species individual organism phenotype where the accumulation of melanin in a cell is absent." []
+synonym: "albino" RELATED []
+synonym: "non-pigmented" RELATED []
 is_a: PHIPO:0001077 ! decreased cellular melanin accumulation
 created_by: alaynecuzick
 creation_date: 2019-09-27T10:17:08Z
@@ -9802,6 +9804,7 @@ name: increased RNA level in a pathogen host interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A cell phenotype in which the amount of RNA measured in a pathogen or host cell is higher than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." []
 is_a: PHIPO:0000993 ! altered RNA level in a pathogen host interaction
+is_a: PHIPO:0001041 ! increased level of a substance in a pathogen host interaction
 created_by: alaynecuzick
 creation_date: 2019-10-04T12:30:49Z
 
@@ -9833,6 +9836,104 @@ synonym: "normal number of pycnidia" RELATED []
 is_a: PHIPO:0000472 ! normal pathogen asexual sporulation within host
 created_by: alaynecuzick
 creation_date: 2019-10-04T12:43:45Z
+
+[Term]
+id: PHIPO:0001104
+name: increased level of host RNA in a pathogen host interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A cell phenotype in which the amount of cellular host RNA measured in an interaction with a pathogen is higher than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." []
+is_a: PHIPO:0001099 ! increased RNA level in a pathogen host interaction
+created_by: alaynecuzick
+creation_date: 2019-10-07T13:26:33Z
+
+[Term]
+id: PHIPO:0001105
+name: gliotoxin absent from cell
+namespace: single_organism_phenotype
+def: "A single species cell phenotype in which the amount of gliotoxin measured in a cell is too low to detect." []
+is_a: PHIPO:0001034 ! substance absent from cell
+created_by: alaynecuzick
+creation_date: 2019-10-07T13:29:01Z
+
+[Term]
+id: PHIPO:0001106
+name: presence of binding between pathogen protein and host protein
+namespace: pathogen_host_interaction_phenotype
+def: "A molecular function phenotype in which the binding of one pathogen protein to one host protein is present." []
+synonym: "binding present between pathogen protein and host protein" EXACT []
+is_a: PHIPO:0000131 ! pathogen host protein protein interaction phenotype
+created_by: alaynecuzick
+creation_date: 2019-10-09T12:33:57Z
+
+[Term]
+id: PHIPO:0001107
+name: absence of binding between pathogen protein and host protein
+namespace: pathogen_host_interaction_phenotype
+def: "A molecular function phenotype in which the binding of one pathogen protein to one host protein is absent." []
+synonym: "binding absent between pathogen protein and host protein" EXACT []
+is_a: PHIPO:0000131 ! pathogen host protein protein interaction phenotype
+created_by: alaynecuzick
+creation_date: 2019-10-09T12:34:12Z
+
+[Term]
+id: PHIPO:0001108
+name: pathogen host interaction pH phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "pathogen host interaction phenotype that affects the pH in a pathogen or host cell or cellular component." []
+is_a: PHIPO:0000510 ! pathogen host interaction cell level phenotype
+created_by: alaynecuzick
+creation_date: 2019-10-09T12:41:35Z
+
+[Term]
+id: PHIPO:0001109
+name: abnormal pH within a pathogen host interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the pH in a pathogen or host cell or cellular component is abnormal." []
+synonym: "altered pH within a pathogen host interaction" EXACT []
+is_a: PHIPO:0001108 ! pathogen host interaction pH phenotype
+created_by: alaynecuzick
+creation_date: 2019-10-09T12:42:06Z
+
+[Term]
+id: PHIPO:0001110
+name: pathogen induced decrease in host pH
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the pathogen induces a pH decrease within the host cell or cellular component." []
+synonym: "pathogen induced acidification of host" EXACT []
+synonym: "pathogen induced low pH in host" EXACT []
+is_a: PHIPO:0001109 ! abnormal pH within a pathogen host interaction
+created_by: alaynecuzick
+creation_date: 2019-10-09T12:42:51Z
+
+[Term]
+id: PHIPO:0001111
+name: pathogen induced increase in host pH
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the pathogen induces a pH increase within the host cell or cellular component." []
+synonym: "pathogen induced alkalinization of host" EXACT []
+synonym: "pathogen induced high pH in host" EXACT []
+is_a: PHIPO:0001109 ! abnormal pH within a pathogen host interaction
+created_by: alaynecuzick
+creation_date: 2019-10-09T12:43:07Z
+
+[Term]
+id: PHIPO:0001112
+name: normal pH within a pathogen host interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the pH in a pathogen or host cell or cellular component is normal." []
+is_a: PHIPO:0001108 ! pathogen host interaction pH phenotype
+created_by: alaynecuzick
+creation_date: 2019-10-09T12:45:38Z
+
+[Term]
+id: PHIPO:0001113
+name: pathogen induced pH decrease in host phagolysome
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the pathogen induces a pH decrease within the host phagolysome." []
+synonym: "pathogen induced acidification in host phagolysome" EXACT []
+is_a: PHIPO:0001110 ! pathogen induced decrease in host pH
+created_by: alaynecuzick
+creation_date: 2019-10-09T12:49:07Z
 
 [Typedef]
 id: PHIPO:0000304
