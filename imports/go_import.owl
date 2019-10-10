@@ -11,7 +11,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/phipo/imports/go_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2019-07-16/imports/go_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2019-10-10/imports/go_import.owl"/>
     </owl:Ontology>
     
 
@@ -176,6 +176,12 @@
     <!-- http://purl.org/dc/elements/1.1/date -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#consider -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#consider"/>
     
 
 
@@ -1190,6 +1196,7 @@
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enzyme activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0003824</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_agr"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_metagenomics"/>
@@ -1376,7 +1383,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005575">
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome).</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0008372</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NIF_Subcellular:sao-1337158144</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NIF_Subcellular:sao1337158144</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell or subcellular entity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cellular component</oboInOwl:hasExactSynonym>
@@ -1399,7 +1405,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pdt</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NIF_Subcellular:sao-1337158144</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NIF_Subcellular:sao1337158144</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
@@ -1413,7 +1419,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0005622 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005622">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044464"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:Intracellular</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">internal to cell</oboInOwl:hasExactSynonym>
@@ -4264,7 +4270,6 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome:R-HSA-8868783</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0016740</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_agr"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_aspergillus"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_candida"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
@@ -4352,7 +4357,6 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reactome:R-HSA-8952137</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0016787</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_agr"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_aspergillus"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_candida"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
@@ -4423,7 +4427,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0018995 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0018995">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0110165"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any organism in which another organism, especially a parasite or symbiont, spends part or all of its life cycle and from which it obtains nourishment and/or protection.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:Host_(biology)</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">host organism</oboInOwl:hasExactSynonym>
@@ -5950,7 +5954,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0032179 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0032179">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044464"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0110165"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The slender tubular outgrowth first produced by most spores in germination.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:Germ_tube</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cellular_component</oboInOwl:hasOBONamespace>
@@ -7725,7 +7729,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0043226 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043226">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0110165"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organized structure of distinctive morphology and function. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, and prokaryotic structures such as anammoxosomes and pirellulosomes. Excludes the plasma membrane.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NIF_Subcellular:sao1539965131</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:Organelle</oboInOwl:hasDbXref>
@@ -7800,7 +7804,12 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043226"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044424"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005622"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organized structure of distinctive morphology and function, occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton. Excludes the plasma membrane.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0043229</oboInOwl:id>
@@ -8468,25 +8477,8 @@
     <!-- http://purl.obolibrary.org/obo/GO_0044110 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044110">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0040007"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0044403"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0040007"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051704"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0044403"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044419"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The increase in size or mass of an organism occurring when the organism is in a symbiotic interaction.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jane</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009-07-30T02:22:33Z</oboInOwl:creation_date>
@@ -8530,7 +8522,7 @@
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0032502"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0044403"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0044419"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -8540,7 +8532,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0044403"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0044419"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The progression of an organism from an initial condition to a later condition, occurring when the organism is in a symbiotic interaction.</obo:IAO_0000115>
@@ -8932,35 +8924,19 @@
     <!-- http://purl.obolibrary.org/obo/GO_0044422 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044422">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0005575"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0043226"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0043226"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any constituent part of an organelle, an organized structure of distinctive morphology and function. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, but excludes the plasma membrane.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBSOLETE. Any constituent part of an organelle, an organized structure of distinctive morphology and function. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, but excludes the plasma membrane.</obo:IAO_0000115>
+        <oboInOwl:consider rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0043226</oboInOwl:consider>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0044422</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organelle part</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete organelle part</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044422"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any constituent part of an organelle, an organized structure of distinctive morphology and function. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, but excludes the plasma membrane.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBSOLETE. Any constituent part of an organelle, an organized structure of distinctive morphology and function. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, but excludes the plasma membrane.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -8969,35 +8945,19 @@
     <!-- http://purl.obolibrary.org/obo/GO_0044424 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044424">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0005575"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005622"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044464"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005622"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any constituent part of the living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBSOLETE. Any constituent part of the living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm.</obo:IAO_0000115>
+        <oboInOwl:consider rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0005622</oboInOwl:consider>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0044424</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intracellular part</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete intracellular part</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044424"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any constituent part of the living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBSOLETE. Any constituent part of the living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -9006,25 +8966,8 @@
     <!-- http://purl.obolibrary.org/obo/GO_0044428 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044428">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0005575"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005634"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044446"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005634"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any constituent part of the nucleus, a membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBSOLETE. Any constituent part of the nucleus, a membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated.</obo:IAO_0000115>
+        <oboInOwl:consider rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0005634</oboInOwl:consider>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NIF_Subcellular:sao1499850686</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nuclear subcomponent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nucleus component</oboInOwl:hasExactSynonym>
@@ -9032,12 +8975,13 @@
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0044428</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nuclear part</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete nuclear part</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044428"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any constituent part of the nucleus, a membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBSOLETE. Any constituent part of the nucleus, a membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -9052,25 +8996,19 @@
     <!-- http://purl.obolibrary.org/obo/GO_0044446 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044446">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044422"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044424"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0043229"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A constituent part of an intracellular organelle, an organized structure of distinctive morphology and function, occurring within the cell. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton but excludes the plasma membrane.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBSOLETE. A constituent part of an intracellular organelle, an organized structure of distinctive morphology and function, occurring within the cell. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton but excludes the plasma membrane.</obo:IAO_0000115>
+        <oboInOwl:consider rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0043229</oboInOwl:consider>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0044446</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intracellular organelle part</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete intracellular organelle part</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044446"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A constituent part of an intracellular organelle, an organized structure of distinctive morphology and function, occurring within the cell. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton but excludes the plasma membrane.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBSOLETE. A constituent part of an intracellular organelle, an organized structure of distinctive morphology and function, occurring within the cell. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton but excludes the plasma membrane.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -9079,25 +9017,8 @@
     <!-- http://purl.obolibrary.org/obo/GO_0044464 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044464">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0005575"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005623"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005623"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any constituent part of a cell, the basic structural and functional unit of all organisms.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBSOLETE. Any constituent part of a cell, the basic structural and functional unit of all organisms.</obo:IAO_0000115>
+        <oboInOwl:consider rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL:0000000</oboInOwl:consider>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NIF_Subcellular:sao628508602</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cellular subcomponent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cellular_component</oboInOwl:hasOBONamespace>
@@ -9106,12 +9027,13 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell part</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete cell part</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044464"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any constituent part of a cell, the basic structural and functional unit of all organisms.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBSOLETE. Any constituent part of a cell, the basic structural and functional unit of all organisms.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -9256,12 +9178,6 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0045087"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">innate immunity</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pg</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0045087"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Innate immune responses are defense responses mediated by germline encoded components that directly recognize components of potential pathogens.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:add</oboInOwl:hasDbXref>
@@ -9269,6 +9185,12 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_15nov05</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_sensu</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000022</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0045087"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">innate immunity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pg</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9876,7 +9798,6 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006810"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051641"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051649"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
@@ -10407,7 +10328,6 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0050789</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_agr"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_aspergillus"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_candida"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
@@ -11992,13 +11912,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0051701 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051701">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044419"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0044403"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044403"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An interaction between two organisms living together in more or less intimate association. The term host is used for the larger (macro) of the two members of a symbiosis; the various forms of symbiosis include parasitism, commensalism and mutualism.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0051701</oboInOwl:id>
@@ -12216,24 +12130,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0051817 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051817">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0035821"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0044403"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0035821"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0044403"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The process in which an organism effects a change in the structure or processes of a second organism, where the two organisms are in a symbiotic interaction.</obo:IAO_0000115>
         <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of morphology of other organism during symbiotic interaction</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of physiological process in other organism during symbiotic interaction</oboInOwl:hasNarrowSynonym>
@@ -13089,7 +12986,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0052547"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any process that modulates the frequency, rate or extent of peptidase activity, the hydrolysis of peptide bonds within proteins.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EC:3.4</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ai</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -13585,7 +13481,6 @@
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0065009</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_agr"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of molecular function</rdfs:label>
@@ -14317,6 +14212,26 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:8637056</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.inchem.org/documents/jecfa/jecmono/v47je05.htm</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/BF03356188</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0110165 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0110165">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A part of a cellular organism that is either an immaterial entity or a material entity with granularity above the level of a protein complex but below that of an anatomical system. Or, a substance produced by a cellular organism with granularity above the level of a protein complex.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kmv</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-08-12T18:01:37Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cellular_component</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0110165</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cellular anatomical entity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0110165"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A part of a cellular organism that is either an immaterial entity or a material entity with granularity above the level of a protein complex but below that of an anatomical system. Or, a substance produced by a cellular organism with granularity above the level of a protein complex.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:kmv</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 

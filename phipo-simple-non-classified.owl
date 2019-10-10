@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/phipo/phipo-simple-non-classified.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2019-07-31/phipo-simple-non-classified.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2019-10-10/phipo-simple-non-classified.owl"/>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-09T13:43:00Z</obo:creation_date>
     </owl:Ontology>
@@ -69,6 +69,12 @@
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
@@ -125,6 +131,7 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000505"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any of the set of observable disease formation characteristics arising from the interaction of a potentially pathogenic organism with a host organism.</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-02T11:20:17Z</obo:creation_date>
@@ -879,6 +886,7 @@ also hosts</rdfs:comment>
         <obo:IAO_0000115>A population phenotype in which the frequency of occurence of asexual spores is decreased.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:18:34Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>fewer conidia</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">decreased number of asexual spores</rdfs:label>
     </owl:Class>
@@ -1106,11 +1114,12 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000070 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000070">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000130"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000285"/>
+        <obo:IAO_0000115>A single species individual organism phenotype where the accumulation of coloring matter in a sexual spore cell is altered.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:38:19Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">sexual spores altered in pigmentation</rdfs:label>
+        <rdfs:label xml:lang="en">altered in pigment accumulation in sexual spore</rdfs:label>
     </owl:Class>
     
 
@@ -1182,11 +1191,12 @@ also hosts</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000076 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000076">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000127"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000285"/>
+        <obo:IAO_0000115>A single species individual organism phenotype where the accumulation of coloring matter in an asexual spore cell is altered.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:43:42Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">asexual spores altered in pigmentation</rdfs:label>
+        <rdfs:label xml:lang="en">altered in pigment accumulation in asexual spore</rdfs:label>
     </owl:Class>
     
 
@@ -1781,13 +1791,11 @@ also hosts</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000121">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000043"/>
+        <obo:IAO_0000115>A single species phenotype where the asexual reproductive developmental process whose specific outcome is the progression of structures that will be used in the process of creating new individuals, from their formation to the mature structures is abnormal (GO:0048608).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:44:01Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment>sporangiphores
-nematadoes egg to be fertilised
-aphids, live young</rdfs:comment>
-        <rdfs:label xml:lang="en">abnormal asexual reproduction structure</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal asexual reproductive structure development</rdfs:label>
     </owl:Class>
     
 
@@ -1795,20 +1803,12 @@ aphids, live young</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000122 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000122">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000121"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000078"/>
+        <obo:IAO_0000115>A reproductive phenotype where the process of endospore formation, in which a cell gives rise to an endospore, a dormant, highly resistant spore with a thick wall that forms within the mother cell is abnormal. Endospores are produced by some low G+C Gram-positive bacteria in response to harsh conditions. (GO:0034301)</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:46:50Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment>eg bacterial endospore
-fungal chlamydospore
-nematode cysts
-
-increased
-decreased
-delayed
-expedited
-absent</rdfs:comment>
-        <rdfs:label xml:lang="en">abnormal asexual resting spore</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal endospore formation</rdfs:label>
     </owl:Class>
     
 
@@ -1897,10 +1897,11 @@ absent</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000129">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000045"/>
+        <obo:IAO_0000115>A single species phenotype where the asexual reproductive developmental process whose specific outcome is the progression of structures that will be used in the process of creating new individuals, from their formation to the mature structures is normal (GO:0048608).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T13:06:10Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal asexual reproduction structure</rdfs:label>
+        <rdfs:label xml:lang="en">normal asexual reproductive structure development</rdfs:label>
     </owl:Class>
     
 
@@ -2850,7 +2851,7 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000196">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000278"/>
-        <obo:IAO_0000115>A single species hyphal colony morphology phenotype where the aerial height of the filamentous colony is normal.</obo:IAO_0000115>
+        <obo:IAO_0000115>A single species hyphal colony morphology phenotype where the aerial height of the filamentous colony is normal (indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:27:25Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -3153,12 +3154,12 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000219 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000219">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000229"/>
-        <obo:IAO_0000115>A pathogen host interaction phenotype where there is a decreased amount of deoxynivalenol.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001045"/>
+        <obo:IAO_0000115>A cell phenotype in which the amount of pathogen deoxynivalenol toxin measured in a host is lower than normal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:44:10Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">decreased level of pathogen deoxynivalenol produced with host</rdfs:label>
+        <rdfs:label xml:lang="en">decreased level of pathogen deoxynivalenol with host</rdfs:label>
     </owl:Class>
     
 
@@ -3181,7 +3182,7 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000221 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000221">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000445"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000986"/>
         <obo:IAO_0000115>A phenotype where the size of a host tissue lesion induced by the presence of a pathogen is increased.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T08:53:54Z</oboInOwl:creation_date>
@@ -3194,7 +3195,7 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000222 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000222">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000445"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000986"/>
         <obo:IAO_0000115>A phenotype where the number of individual host tissue lesions induced by the presence of a pathogen is increased.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T08:56:00Z</oboInOwl:creation_date>
@@ -3207,7 +3208,7 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000223 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000223">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000445"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000985"/>
         <obo:IAO_0000115>A phenotype where the number of individual host tissue lesions induced by the presence of a pathogen is reduced.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T08:58:26Z</oboInOwl:creation_date>
@@ -3232,7 +3233,7 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000225 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000225">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000445"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000985"/>
         <obo:IAO_0000115>A phenotype where the size of a host tissue lesion induced by the presence of a pathogen is reduced.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T09:00:28Z</oboInOwl:creation_date>
@@ -3329,12 +3330,12 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000232 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000232">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000229"/>
-        <obo:IAO_0000115>A pathogen host interaction phenotype where there is an increased amount of deoxynivalenol.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001046"/>
+        <obo:IAO_0000115>A cell phenotype in which the amount of pathogen deoxynivalenol toxin measured in a host is higher than normal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T09:18:35Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">increased level of pathogen deoxynivalenol produced with host</rdfs:label>
+        <rdfs:label xml:lang="en">increased level of pathogen deoxynivalenol with host</rdfs:label>
     </owl:Class>
     
 
@@ -3342,12 +3343,12 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000233 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000233">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000229"/>
-        <obo:IAO_0000115>A pathogen host interaction phenotype where deoxynivalenol is present.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001048"/>
+        <obo:IAO_0000115>A cell phenotype in which the amount of pathogen produced deoxynivalenol measured in the host is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T09:19:27Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">pathogen deoxynivalenol production present with host</rdfs:label>
+        <rdfs:label xml:lang="en">pathogen deoxynivalenol present with host</rdfs:label>
     </owl:Class>
     
 
@@ -3355,12 +3356,12 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000234 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000234">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000229"/>
-        <obo:IAO_0000115>A pathogen host interaction phenotype where deoxynivalenol is absent.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001047"/>
+        <obo:IAO_0000115>A cell phenotype in which the amount of pathogen deoxynivalenol measured in a host is too low to detect.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T09:20:17Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">pathogen deoxynivalenol production absent with host</rdfs:label>
+        <rdfs:label xml:lang="en">pathogen deoxynivalenol absent with host</rdfs:label>
     </owl:Class>
     
 
@@ -3369,18 +3370,14 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000235">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000034"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism phenotype that affects the localization of a structure or substance in a cell (QUERY? organism).</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single species phenotype that affects the localization of a structure or substance in a cell.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:12:56Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0000138</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_do_not_manually_annotate</oboInOwl:inSubset>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">possible logical defintion
-&apos;single organism phenotype&apos;
- and (&apos;inheres in part of&apos; some &apos;cellular localization&apos;)
-
-This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
         <rdfs:label xml:lang="en">localization phenotype</rdfs:label>
     </owl:Class>
     
@@ -3390,7 +3387,7 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000236">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000510"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen host interaction phenotype that affects the localization of a structure or substance in a cell (QUERY? organism).</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pathogen host interaction phenotype that affects the localization of a structure or substance in a cell.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:13:04Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0000138</oboInOwl:hasDbXref>
@@ -3441,10 +3438,11 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000239">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000237"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism phenotype that affects the localization of a protein in a cell.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001094"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism phenotype in which the localization of a protein in a cell is abnormal. A protein may be observed in a place where it is not normally found, absent from a place where it is normally found, or both.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:14:02Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0002333</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0001370</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">abnormal protein localization</rdfs:label>
     </owl:Class>
@@ -3571,8 +3569,8 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000248 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000248">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000239"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism organism phenotype in which the localization of a protein to the nucleus is abolished.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000245"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism phenotype in which the localization of a protein to the nucleus is abolished (GO:0034504).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:19:27Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0003450</oboInOwl:hasDbXref>
@@ -3621,6 +3619,7 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000251">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000249"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001094"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism phenotype in which the localization of an RNA in a cell is abnormal. An RNA may be observed in a place where it is not normally found, absent from a place where it is normally found, or both.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:20:49Z</oboInOwl:creation_date>
@@ -3694,7 +3693,7 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000256">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000235"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism (cell process???) phenotype that affects a transport process.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism cell phenotype that affects a transport process.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:21:48Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0000149</oboInOwl:hasDbXref>
@@ -3739,7 +3738,7 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000259">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000256"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism (cellular process??) phenotype in which protein transport is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism cellular process phenotype in which protein transport is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:22:37Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0005747</oboInOwl:hasDbXref>
@@ -3767,7 +3766,7 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000261">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000257"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism (cellular process???) phenotype in which endocytosis is abnormal. Endocytosis is a vesicle-mediated transport process in which cells take up external materials or membrane constituents by the invagination of a small region of the plasma membrane to form a new membrane-bounded vesicle. A phenotype may affect endocytosis of all cargoes, or of specific cargo such as a particular protein.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism cellular process phenotype in which endocytosis is abnormal. Endocytosis is a vesicle-mediated transport process in which cells take up external materials or membrane constituents by the invagination of a small region of the plasma membrane to form a new membrane-bounded vesicle. A phenotype may affect endocytosis of all cargoes, or of specific cargo such as a particular protein.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:22:57Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0003886</oboInOwl:hasDbXref>
@@ -3795,16 +3794,11 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000263">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000257"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism (cellular process??) phenotype in which nuclear transport is abnormal.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism cellular process phenotype in which nuclear transport is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:23:27Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0005573</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment>&apos;single organism phenotype&apos;
- and (&apos;inheres in part of&apos; some &apos;nuclear transport&apos;)
- and (qualifier some abnormal)
-
-Need import term for &apos;nuclear transport&apos;</rdfs:comment>
         <rdfs:label xml:lang="en">abnormal nuclear transport</rdfs:label>
     </owl:Class>
     
@@ -3828,7 +3822,7 @@ Need import term for &apos;nuclear transport&apos;</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000265">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000257"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism (cellular process??) phenotype in which protein transport is abnormal.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism cellular process phenotype in which protein transport is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:24:39Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0005744</oboInOwl:hasDbXref>
@@ -3856,7 +3850,7 @@ Need import term for &apos;nuclear transport&apos;</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000267">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000257"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism (cellular process??) phenotype in which vacuolar transport is abnormal.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A single organism cellular process phenotype in which vacuolar transport is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:24:58Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0003578</oboInOwl:hasDbXref>
@@ -3912,7 +3906,7 @@ Need import term for &apos;nuclear transport&apos;</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000271">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000269"/>
-        <obo:IAO_0000115>A single organism phenotype in which the localization of a protein to the nucleus is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <obo:IAO_0000115>A single organism phenotype in which the localization of a protein to the nucleus is normal (i.e. indistinguishable from wild type)(GO:0034504).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-03T11:05:29Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FYPO:0006553</oboInOwl:hasDbXref>
@@ -3939,7 +3933,7 @@ Need import term for &apos;nuclear transport&apos;</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000273 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000273">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000509"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001049"/>
         <obo:IAO_0000115>A single species population phenotype affecting the morphology of a colony growing in filamentous form.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-03T13:38:13Z</oboInOwl:creation_date>
@@ -3966,6 +3960,7 @@ Need import term for &apos;nuclear transport&apos;</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000275">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000003"/>
+        <obo:IAO_0000115>A phenotype that shows detectable differences from normal at the level of a tissue (eg leaf, inflorescence, ear or kidney).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-03T13:39:04Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -3978,6 +3973,7 @@ Need import term for &apos;nuclear transport&apos;</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000276">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000003"/>
+        <obo:IAO_0000115>A phenotype that does not show any detectable differences from normal at the level of a tissue (eg leaf, inflorescence, ear or kidney).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-03T13:39:23Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -4002,7 +3998,8 @@ Need import term for &apos;nuclear transport&apos;</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000278">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000273"/>
-        <obo:IAO_0000115>A single species population phenotype where the morphology of a colony growing in filamentous form is normal.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001057"/>
+        <obo:IAO_0000115>A single species population phenotype where the morphology of a colony growing in filamentous form is normal (indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-03T13:40:03Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -5613,6 +5610,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000403">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000034"/>
+        <obo:IAO_0000115>A phenotype that does not show any detectable differences from normal at the level of an individual cell.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-05T11:44:26Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -5625,8 +5623,10 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000404">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000034"/>
+        <obo:IAO_0000115>A phenotype that shows detectable differences from normal at the level of an individual cell.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-05T11:44:40Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0003037</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single_organism_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label>abnormal cell phenotype</rdfs:label>
     </owl:Class>
@@ -6099,6 +6099,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000439">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype which affects the pathogen reproductive process within the host. The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms (GO:0000003).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-18T11:25:46Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
@@ -6111,6 +6112,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000440">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000439"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype where the pathogen reproductive process within the host is normal (indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-18T11:26:40Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
@@ -6122,7 +6124,8 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000441 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000441">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000442"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000439"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype where the pathogen reproductive process within the host is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-18T11:26:59Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
@@ -6135,6 +6138,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000442">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000440"/>
+        <obo:IAO_0000115>A pathogen reproductive phenotype within host where the pathogen asexual reproduction process, in which new individuals are produced by either a single cell or a group of cells, in the absence of any sexual process is normal (indistinguishable from wild type)(GO:0019954).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-18T11:27:55Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
@@ -6147,6 +6151,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000443">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000440"/>
+        <obo:IAO_0000115>A pathogen reproductive phenotype within host where the pathogen sexual reproduction process, in which new individuals are produced by combining the genetic material of two gametes, which may come from two organisms or from a single organism is normal (indistinguishable from wild type) (GO:0019953).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-18T11:28:13Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
@@ -6159,10 +6164,11 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000444">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000448"/>
+        <obo:IAO_0000115>A pathogen reproductive phenotype within host in which the frequency of occurence of asexual spores is decreased.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-18T11:34:08Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">decreased quantity of asexual pathogen spores within host</rdfs:label>
+        <rdfs:label xml:lang="en">decreased number of asexual pathogen spores within host</rdfs:label>
     </owl:Class>
     
 
@@ -6179,7 +6185,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
         <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
         <rdfs:comment>This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
-        <rdfs:label xml:lang="en">Pathogen host interaction host lesion formation phenotype</rdfs:label>
+        <rdfs:label xml:lang="en">pathogen host interaction host lesion formation phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -6201,10 +6207,11 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000447">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000448"/>
+        <obo:IAO_0000115>A pathogen reproductive phenotype within host in which the frequency of occurence of asexual spores is increased.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-18T13:53:43Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">increased quantity of asexual pathogen spores within host</rdfs:label>
+        <rdfs:label xml:lang="en">increased number of asexual pathogen spores within host</rdfs:label>
     </owl:Class>
     
 
@@ -6213,10 +6220,11 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000448">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000449"/>
+        <obo:IAO_0000115>A pathogen reproductive phenotype within host in which the frequency of occurence of asexual spores is abnormal</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-18T14:43:36Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal quantity of asexual pathogen spores within host</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal number of asexual pathogen spores within host</rdfs:label>
     </owl:Class>
     
 
@@ -6225,6 +6233,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000449">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000469"/>
+        <obo:IAO_0000115>A pathogen reproductive phenotype within host where the pathogen asexual reproduction process, in which new individuals are produced by either a single cell or a group of cells, in the absence of any sexual process is abnormal (GO:0019954).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-18T14:44:36Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
@@ -6363,6 +6372,7 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000468">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000469"/>
+        <obo:IAO_0000115>A pathogen reproductive phenotype within host where the pathogen asexual spores are absent (FAO:0000023).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-11T10:31:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
@@ -6375,10 +6385,11 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000469">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000441"/>
+        <obo:IAO_0000115>A pathogen reproductive phenotype within host where the process of pathogen asexual sporulation, the formation of spores derived from the products of an asexual cell division, is abnormal (GO:0030436).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-11T10:32:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal pathogen asexual sporogenesis within host</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal pathogen asexual sporulation within host</rdfs:label>
     </owl:Class>
     
 
@@ -6411,10 +6422,11 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000472">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000442"/>
+        <obo:IAO_0000115>A pathogen reproductive phenotype within host where the process of pathogen asexual sporulation, the formation of spores derived from the products of an asexual cell division, is normal (GO:0030436).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-11T11:49:51Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal pathogen asexual sporogenesis within host</rdfs:label>
+        <rdfs:label xml:lang="en">normal pathogen asexual sporulation within host</rdfs:label>
     </owl:Class>
     
 
@@ -6423,10 +6435,11 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000473">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000472"/>
+        <obo:IAO_0000115>A pathogen reproductive phenotype within host in which the frequency of occurence of asexual spores is normal  (i.e. indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-11T11:55:09Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal quantity of pathogen asexual spores within host</rdfs:label>
+        <rdfs:label xml:lang="en">normal number of pathogen asexual spores within host</rdfs:label>
     </owl:Class>
     
 
@@ -6648,6 +6661,7 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000497 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000497">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000403"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000496"/>
         <obo:IAO_0000115>A single organism phenotype in which the toxin biosynthetic process is normal (i.e. same as the wild type).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
@@ -6704,8 +6718,8 @@ use fungi specific GO term GO_0106110 ## vomitoxin biosynthetic process??</rdfs:
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000501 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000501">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000500"/>
-        <obo:IAO_0000115>A single organism phenotype where there is an increased amount of deoxynivalenol.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001037"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of deoxynivalenol measured in a cell is higher than normal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-18T13:06:49Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -6717,8 +6731,8 @@ use fungi specific GO term GO_0106110 ## vomitoxin biosynthetic process??</rdfs:
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000502 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000502">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000500"/>
-        <obo:IAO_0000115>A single organism phenotype where there is a decreased amount of deoxynivalenol.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001031"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of deoxynivalenol measured in a cell is lower than normal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-18T13:07:24Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -6730,12 +6744,12 @@ use fungi specific GO term GO_0106110 ## vomitoxin biosynthetic process??</rdfs:
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000503 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000503">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000500"/>
-        <obo:IAO_0000115>A single organism phenotype where deoxynivalenol is absent.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001034"/>
+        <obo:IAO_0000115>A single organism cell phenotype in which the amount of deoxynivalenol measured in a cell is too low to detect.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-18T13:07:42Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">deoxynivalenol absent</rdfs:label>
+        <rdfs:label xml:lang="en">deoxynivalenol absent from cell</rdfs:label>
     </owl:Class>
     
 
@@ -6743,8 +6757,8 @@ use fungi specific GO term GO_0106110 ## vomitoxin biosynthetic process??</rdfs:
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000504 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000504">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000500"/>
-        <obo:IAO_0000115>A single organism phenotype where deoxynivalenol is present.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001039"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of deoxynivalenol measured in a cell is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-18T13:07:54Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -6847,7 +6861,7 @@ no logical definition in FYPO</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000512">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
-        <obo:IAO_0000115>A single organism phenotype that is observed at the level of a tissue (eg leaf, inflorescence, ear or kidney).</obo:IAO_0000115>
+        <obo:IAO_0000115>A pathogen host interaction phenotype that is observed at the level of a tissue (eg leaf, inflorescence, ear or kidney).</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-11T12:41:00Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
@@ -11895,7 +11909,7 @@ A single organism cell population phenotype in which none of the cells in the po
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000940">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000402"/>
-        <obo:IAO_0000115>A single species phenotype where the slender tubular outgrowth first produced by most spores in germination is abnormal.</obo:IAO_0000115>
+        <obo:IAO_0000115>A single species phenotype where the slender tubular outgrowth first produced by most spores in germination is abnormal. (GO:0032179)</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-21T11:34:47Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -11908,7 +11922,7 @@ A single organism cell population phenotype in which none of the cells in the po
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000941">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000940"/>
-        <obo:IAO_0000115>A single species phenotype where the slender tubular outgrowth first produced by most spores in germination is shorter than normal.</obo:IAO_0000115>
+        <obo:IAO_0000115>A single species phenotype where the slender tubular outgrowth first produced by most spores in germination is shorter than normal. (GO:0032179)</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-21T11:35:21Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -11933,7 +11947,7 @@ A single organism cell population phenotype in which none of the cells in the po
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000944 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000944">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000034"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000404"/>
         <obo:IAO_0000115>A single species cell phenotype in which the amount of a specific substance measured in a cell differs from normal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-21T11:59:04Z</oboInOwl:creation_date>
@@ -11965,6 +11979,7 @@ A single organism cell population phenotype in which none of the cells in the po
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000946">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000945"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001035"/>
         <obo:IAO_0000115>A single species cell phenotype in which the amount of reactive oxygen species (ROS) measured in a cell is lower than normal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-21T12:01:32Z</oboInOwl:creation_date>
@@ -11978,6 +11993,7 @@ A single organism cell population phenotype in which none of the cells in the po
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000947">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000945"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001036"/>
         <obo:IAO_0000115>A single species cell phenotype in which the amount of reactive oxygen species (ROS) measured in a cell is higher than normal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-21T12:01:41Z</oboInOwl:creation_date>
@@ -12109,11 +12125,12 @@ A single organism cell population phenotype in which none of the cells in the po
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000957">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000037"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001054"/>
         <obo:IAO_0000115>A single species hyphal colony morphology phenotype where the size of the colony is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-10T09:31:25Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal size of hyphal colony morphology</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal size of hyphal colony</rdfs:label>
     </owl:Class>
     
 
@@ -12122,11 +12139,12 @@ A single organism cell population phenotype in which none of the cells in the po
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000958">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000037"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001051"/>
         <obo:IAO_0000115>A single species hyphal colony morphology phenotype where the shape of the colony is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-10T09:31:56Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal shape of hyphal colony morphology</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal shape of hyphal colony</rdfs:label>
     </owl:Class>
     
 
@@ -12149,7 +12167,7 @@ A single organism cell population phenotype in which none of the cells in the po
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000960">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000278"/>
-        <obo:IAO_0000115>A single species hyphal colony morphology phenotype where the size of the colony is normal.</obo:IAO_0000115>
+        <obo:IAO_0000115>A single species hyphal colony morphology phenotype where the size of the colony is normal (indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-11T09:57:34Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
@@ -12320,6 +12338,7 @@ Note that avirulence means loss of pathogenicity in medical terminology.</rdfs:c
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-16T13:07:53Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:comment>We recommend noting which protein(s) were used in the assay when annotating to this term.</rdfs:comment>
         <rdfs:label xml:lang="en">abolished protein localization to autophagosome</rdfs:label>
     </owl:Class>
     
@@ -12488,6 +12507,1523 @@ Note that avirulence means loss of pathogenicity in medical terminology.</rdfs:c
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-27T13:52:11Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">normal meiotic cell cycle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000985 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000985">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000445"/>
+        <obo:IAO_0000115>A phenotype in which the process of host tissue death causing a host lesion induced by the presence of a pathogen occurs to a lower extent than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T12:06:09Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased extent of pathogen-associated host lesions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000986 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000986">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000445"/>
+        <obo:IAO_0000115>A phenotype in which the process of host tissue death causing a host lesion induced by the presence of a pathogen occurs to a higher extent than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T12:07:56Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased extent of pathogen-associated host lesions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000987 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000987">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000510"/>
+        <obo:IAO_0000115>A cell phenotype in which the amount of a specific substance measured in a cell within a pathogen host interaction differs from normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T12:17:39Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
+        <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
+        <rdfs:comment>This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
+        <rdfs:label xml:lang="en">altered level of substance phenotype in a pathogen host interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000988 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000988">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000987"/>
+        <obo:IAO_0000115>A cell phenotype in which the amount of protein measured in a pathogen or host cell differs from normal. Total protein or a specific protein may be affected.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T12:19:50Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">altered protein level in a pathogen host interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000989 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000989">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000988"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001040"/>
+        <obo:IAO_0000115>A cell phenotype in which the amount of protein measured in a pathogen or host cell is lower than normal. Total protein or a specific protein may be affected.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T12:20:29Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased protein level in a pathogen host interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000990 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000990">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001044"/>
+        <obo:IAO_0000115>A cell phenotype in which the amount of pathogen protein measured in an interaction with a host cell is too low to detect. Total protein or a specific protein may be affected.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T12:20:59Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">absent expression of a pathogen gene product involved in host interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000991 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000991">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000988"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001041"/>
+        <obo:IAO_0000115>A cell phenotype in which the amount of protein measured in a pathogen or host cell is higher than normal. Total protein or a specific protein may be affected.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T12:22:12Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased protein level in a pathogen host interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000992 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000992">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000991"/>
+        <obo:IAO_0000115>A cell phenotype in which the amount of host protein measured in an interaction with a pathogen cell is higher than normal. Total protein or a specific protein may be affected.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T12:23:36Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased expression of a host gene product involved in pathogen interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000993 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000993">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000987"/>
+        <obo:IAO_0000115>A cell phenotype in which the amount of RNA measured in a pathogen or host cell differs from normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T12:30:53Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">altered RNA level in a pathogen host interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000994 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000994">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000993"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001040"/>
+        <obo:IAO_0000115>A cell phenotype in which the amount of RNA measured in a pathogen or host cell is lower than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T12:31:25Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased RNA level in a pathogen host interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000995 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000995">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000994"/>
+        <obo:IAO_0000115>A cell phenotype in which the amount of pathogen RNA measured in an interaction with a host cell is lower than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T12:32:05Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased level of pathogen RNA involved in a host interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000997 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000997">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000985"/>
+        <obo:IAO_0000115>A phenotype where the occurrence of individual host tissue lesions induced by the presence of a pathogen is abolished. (Lesions were present and are now absent).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T13:35:33Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abolished pathogen-associated host lesions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000998 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000998">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001007"/>
+        <obo:IAO_0000115>A pathogen host interaction tissue phenotype which affects the pathogen morphology during host colonization. This relates to the pathogen colonization of the body, tissues, or cells of the host organism.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T13:48:27Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">pathogen morphology phenotype during colonization of host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0000999 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000999">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000998"/>
+        <obo:IAO_0000115>A pathogen host interaction tissue phenotype where the morphology of the pathogen during host colonization is abnormal. This relates to the pathogen colonization of the body, tissues, or cells of the host organism.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T13:49:02Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal pathogen morphology during colonization of host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000999"/>
+        <obo:IAO_0000115>A pathogen host interaction tissue phenotype where the morphology of the pathogen terminal hyphae during host colonization is abnormal. This relates to the pathogen colonization of the body, tissues, or cells of the host organism.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T13:49:58Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal pathogen swollen terminal hyphae during colonization of host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000999"/>
+        <obo:IAO_0000115>A pathogen host interaction tissue phenotype where the morphology of the pathogen septin collar (GO:0032173) during host colonization is abnormal. This relates to the pathogen colonization of the body, tissues, or cells of the host organism.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T13:51:23Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:comment>update Go term when available to &apos;septin collar of invasive fungi&apos;</rdfs:comment>
+        <rdfs:label xml:lang="en">abnormal organization of pathogen septin collar during colonization of host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001007"/>
+        <obo:IAO_0000115>A pathogen host interaction tissue phenotype which affects the host morphology during pathogen invasion. This relates to the pathogen colonization of the body, tissues, or cells of the host organism</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T13:51:57Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">host morphology phenotype during pathogen invasion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001005"/>
+        <obo:IAO_0000115>A pathogen host interaction tissue phenotype where the morphology of the host extra-invasive hyphal membrane (GO:0085039) during pathogen invasion is normal (indistinguishable from wild type). This relates to the pathogen colonization of the body, tissues, or cells of the host organism.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T13:52:53Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>normal formation of BIC (biotrophic interfacial complex)</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal formation of extra-invasive hyphal membrane</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000998"/>
+        <obo:IAO_0000115>A pathogen host interaction tissue phenotype where the morphology of the pathogen during host colonization is normal (indistinguishable from wild type). This relates to the pathogen colonization of the body, tissues, or cells of the host organism.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T13:56:49Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal pathogen morphology during colonization of host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001002"/>
+        <obo:IAO_0000115>A pathogen host interaction tissue phenotype where the morphology of the host during pathogen invasion is normal (indistinguishable from wild type). This relates to the pathogen colonization of the body, tissues, or cells of the host organism.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T13:58:16Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal host morphology during pathogen invasion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001002"/>
+        <obo:IAO_0000115>A pathogen host interaction tissue phenotype where the morphology of the host during pathogen invasion is abnormal. This relates to the pathogen colonization of the body, tissues, or cells of the host organism.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T13:58:30Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal host morphology during pathogen invasion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000332"/>
+        <obo:IAO_0000115>A pathogen host interaction tissue phenotype which affects the morphology of the pathogen or the host during pathogen colonization of the host. This relates to the pathogen colonization of the body, tissues, or cells of the host organism.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T14:19:52Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">pathogen colonization of host morphology phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000257"/>
+        <obo:IAO_0000115>A phenotype in which a specific transport process is abnormal in the vegetative growth phase of the life cycle.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T15:03:45Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0005973</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal transport during vegetative growth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000257"/>
+        <obo:IAO_0000115>A transport phenotype observed in the vegetative growth phase of the life cycle in which vesicle-mediated transport is abnormal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T15:06:50Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000213</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal vesicle-mediated transport during vegetative growth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001011"/>
+        <obo:IAO_0000115>A transport phenotype observed in the vegetative growth phase of the life cycle in which vesicle-mediated transport is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T15:06:57Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0006432</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal vesicle-mediated transport during vegetative growth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000256"/>
+        <obo:IAO_0000115>A single organism cellular process phenotype observed in the vegetative growth phase of the life cycle in which transport is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T15:11:18Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0001071</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal transport</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000236"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype which affects the localization of a polysaccharide in a pathogen or host cell is abnormal. This includes any process in which a polysaccharide is transported to, or maintained in, a specific location. (GO:0033037).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T16:33:27Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">pathogen host interaction polysaccharide localization phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001013 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001013">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001012"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype in which the localization of a polysaccharide in a pathogen or host cell is abnormal. This includes any process in which a polysaccharide is transported to, or maintained in, a specific location. (GO:0033037).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T16:36:54Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal pathogen host interaction polysaccharide localization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001014 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001016"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype where there is an increased amount of host callose deposition.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T16:37:53Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased level of host callose deposition induced by pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001016"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype where there is a decreased amount of host callose deposition.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T16:38:36Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased level of host callose deposition induced by pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001013"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype where any process in which callose is transported to, and/or maintained in, a specific location during the host defense response to a pathogen is abnormal. Callose is a linear 1,3-beta-d-glucan formed from UDP-glucose and is found in certain plant cell walls. (GO:0052542).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T16:43:59Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal level of host callose deposition induced by pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000940"/>
+        <obo:IAO_0000115>A single species phenotype where the slender tubular outgrowth first produced by most spores in germination is longer than normal. (GO:0032179)</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-17T12:54:34Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">long germ tube</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001018 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001018">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000930"/>
+        <obo:IAO_0000115>A cellular process phenotype in which asexual spore germination is abnormal (GO:0009847).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-17T12:59:57Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000305</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal asexual spore germination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001018"/>
+        <obo:IAO_0000115>A cellular process phenotype in which the rate, or speed, of asexual spore germination is decreased.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-17T13:01:16Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000582</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased rate of asexual spore germination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000020"/>
+        <obo:IAO_0000115>A phenotype in which a population of a single-species shows increased sensitivity to calcofluor white, manifested as an affect on the extent of population growth. (CHEBI:50011)</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-17T13:35:49Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0001188</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">sensitive to calcofluor white</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001021 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001021">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000020"/>
+        <obo:IAO_0000115>A phenotype in which a population of a single-species shows increased sensitivity to congo red, manifested as an affect on the extent of population growth. (CHEBI:34653).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-17T13:36:09Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0005984</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">sensitive to congo red</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001022 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001022">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000944"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of cyclic AMP measured in a cell differs from normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-17T13:47:08Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0001659</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>abnormal cellular cAMP level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>altered cellular cyclic AMP level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">altered cellular cAMP level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001023">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001022"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001035"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of cyclic AMP measured in a cell is lower than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-17T13:47:28Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0001660</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>altered cellular cyclic AMP level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>decreased cellular cAMP accumulation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>reduced cellular cAMP level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased cellular cAMP level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001024">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001022"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001036"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of cyclic AMP measured in a cell is higher than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-17T13:47:39Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0001661</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>increased cAMP accumulation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>increased cellular cyclic AMP level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased cellular cAMP level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001025 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001025">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000944"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of protein measured in a cell differs from normal. Total protein or a specific protein may be affected.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-17T14:21:36Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000834</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>abnormal protein level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>altered cellular protein level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
+        <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
+        <rdfs:comment>This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.</rdfs:comment>
+        <rdfs:label xml:lang="en">altered protein level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001026 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001026">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001025"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001036"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of protein measured in a cell is higher than normal. Total protein or a specific protein may be affected.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-17T14:23:48Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000836</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>increased protein accumulation</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment>Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.</rdfs:comment>
+        <rdfs:label xml:lang="en">increased protein level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001027 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001027">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001025"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001035"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of protein measured in a cell is lower than normal. Total protein or a specific protein may be affected.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-17T14:23:55Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000835</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>reduced protein level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>decreased protein accumulation</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment>Consider annotating to a term describing abnormal translation or abnormal regulation of translation, but note that changes in protein levels may result from changes in protein stability or degradation as well as changes in protein synthesis.</rdfs:comment>
+        <rdfs:label xml:lang="en">decreased protein level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001028 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001028">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000245"/>
+        <obo:IAO_0000115>A single organism phenotype in which the localization of a protein to the plasma membrane is abolished (GO:0072659).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-17T14:51:09Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:comment>We recommend noting which protein(s) were used in the assay when annotating to this term.</rdfs:comment>
+        <rdfs:label xml:lang="en">abolished protein localization to plasma membrane</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001029 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001029">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001028"/>
+        <obo:IAO_0000115>A single organism phenotype in which the localization of a protein to the plasma membrane is abolished, and the protein is present in the cytoplasm instead.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-17T14:55:21Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0002126</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:comment>We recommend noting which protein(s) were used in the assay when annotating to this term.</rdfs:comment>
+        <rdfs:label xml:lang="en">abolished protein localization to plasma membrane, with protein mislocalized to cytoplasm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000944"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of toxin measured in a cell differs from normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T10:49:07Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">altered cellular toxin level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001031">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001030"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001035"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of toxin measured in a cell is lower than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T10:49:58Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased cellular toxin level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001032 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001032">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001031"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of pyocyanin measured in a cell is lower than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T10:50:37Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased level of pyocyanin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001033 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001033">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001034"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of pyocyanin measured in a cell is too low to detect.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T10:51:03Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">pyocyanin absent from cell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001034">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001035"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of a specific substance measured in a cell is too low to detect.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T11:00:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0001888</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">substance absent from cell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001035 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001035">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000944"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of a specific substance measured in a cell is lower than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T11:04:53Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000991</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>reduced level of substance in cell</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased level of substance in cell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001036 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001036">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000944"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of a specific substance measured in a cell is higher than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T11:05:35Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000990</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>increased accumulation of substance in cell</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">increased level of substance in cell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001037 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001037">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001030"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001036"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of toxin measured in a cell is higher than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T11:24:02Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased cellular toxin level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001038 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001038">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000403"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of a specific substance measured in a cell is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T11:34:52Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0001076</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal level of substance in cell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001039 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001039">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001038"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of toxin measured in a cell is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T11:55:23Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal cellular toxin level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001040">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000987"/>
+        <obo:IAO_0000115>A cell phenotype in which the amount of a specific substance measured in a pathogen or host cell is lower than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T12:27:07Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased level of a substance in a pathogen host interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001041 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001041">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000987"/>
+        <obo:IAO_0000115>A cell phenotype in which the amount of a specific substance measured in a pathogen or host cell is higher than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T12:27:17Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased level of a substance in a pathogen host interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001042 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001042">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001040"/>
+        <obo:IAO_0000115>A cell phenotype in which the amount of a specific substance measured in a pathogen or host cell is too low to detect.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T12:27:54Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">substance absent in a pathogen host interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001043 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001043">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000987"/>
+        <obo:IAO_0000115>A cell phenotype in which the amount of toxin measured in a pathogen or host cell differs from normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T12:30:03Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">altered toxin level in a pathogen host interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001044 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001044">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000989"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001042"/>
+        <obo:IAO_0000115>A cell phenotype in which the amount of protein measured in a pathogen or host cell is too low to detect. Total protein or a specific protein may be affected.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T12:39:49Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0001983</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">protein absent in a pathogen host interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001045 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001045">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001043"/>
+        <obo:IAO_0000115>A cell phenotype in which the amount of toxin measured in a pathogen or host cell is lower than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T12:44:12Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased toxin level in a pathogen host interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001046 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001046">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001043"/>
+        <obo:IAO_0000115>A cell phenotype in which the amount of toxin measured in a pathogen or host cell is higher than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T12:44:20Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased toxin level in a pathogen host interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001047 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001047">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001042"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001045"/>
+        <obo:IAO_0000115>A cell phenotype in which the amount of toxin measured in a pathogen or host cell is too low to detect.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T12:45:24Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">toxin absent in a pathogen host interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001048 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001048">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000483"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000510"/>
+        <obo:IAO_0000115>A cell phenotype in which the amount of a specific substance measured in a pathogen or host cell is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T12:46:32Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal level of substance phenotype in a pathogen host interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001049 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001049">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000509"/>
+        <obo:IAO_0000115>A single species population phenotype affecting the morphology of a colony.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-10T13:26:05Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">colony morphology phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001050 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001050">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001049"/>
+        <obo:IAO_0000115>A single species population phenotype where the morphology of a colony is abnormal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-10T13:29:47Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal colony morphology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001051 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001051">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001050"/>
+        <obo:IAO_0000115>A single species colony morphology phenotype where the shape of the colony is abnormal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-10T13:31:28Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal shape of colony</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001052 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001052">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001051"/>
+        <obo:IAO_0000115>A single species colony morphology phenotype where the colony is smoother than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-10T13:32:18Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">hyper-smooth colony morphology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001053 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001053">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001051"/>
+        <obo:IAO_0000115>A single species colony morphology phenotype where the colony is more rugose (wrinkled; corrugated) than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-10T13:32:45Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">hyper-rugose colony morphology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001054 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001054">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001050"/>
+        <obo:IAO_0000115>A single species colony morphology phenotype where the size of the colony is abnormal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-10T13:35:18Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal size of colony</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001055 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001055">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001054"/>
+        <obo:IAO_0000115>A single species colony morphology phenotype where the size of the colony is increased.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-10T13:37:47Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased size of colony</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001056 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001056">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001054"/>
+        <obo:IAO_0000115>A single species colony morphology phenotype where the size of the colony is decreased.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-10T13:38:53Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased size of colony</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001057 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001057">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001049"/>
+        <obo:IAO_0000115>A single species population phenotype where the morphology of a colony growing in filamentous form is normal (indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-10T13:40:17Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal colony morphology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001058 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001058">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001057"/>
+        <obo:IAO_0000115>A single species colony morphology phenotype where the colony is as rugose (wrinkled; corrugated) as normal (indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-10T13:40:49Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal rugose colony morphology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001059 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001059">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001037"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of pyocyanin measured in a cell is higher than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-11T13:06:36Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased level of pyocyanin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001060 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001060">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000944"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of RNA measured in a cell differs from normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-11T13:14:54Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000824</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>abnormal RNA level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>altered cellular RNA level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>altered transcript level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
+        <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
+        <rdfs:comment>This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
+        <rdfs:label xml:lang="en">altered RNA level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001061 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001061">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001035"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001060"/>
+        <obo:IAO_0000115>A singe species cell phenotype in which the amount of RNA measured in a cell is lower than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-11T13:18:59Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000826</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>decreased cellular RNA level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>decreased transcript level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>reduced RNA level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:comment>Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription.</rdfs:comment>
+        <rdfs:label xml:lang="en">decreased RNA level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001062 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001062">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001036"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001060"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of RNA measured in a cell is higher than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-11T13:22:53Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0001890</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>increased cellular RNA level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>increased transcript level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>increased RNA accumulation</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment>Consider annotating to a term describing abnormal transcription or abnormal regulation of transcription, but note that changes in RNA levels may result from changes in RNA stability as well as changes in transcription. We recommend noting which RNA(s) were used in the assay when annotating to this term.</rdfs:comment>
+        <rdfs:label xml:lang="en">increased RNA level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001063 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001063">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001034"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of RNA measured in a cell is too low to detect. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-11T13:26:30Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0001889</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>transcripts absent from cell</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>undetectable cellular RNA level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">RNA absent from cell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001064 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001064">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001038"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of RNA measured in a cell is normal (i.e. indistinguishable from wild type). Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-11T13:30:41Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000840</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>normal cellular RNA level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>normal transcript level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>normal mRNA level</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal RNA level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001065 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001065">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001057"/>
+        <obo:IAO_0000115>A single species colony morphology phenotype where the shape of the colony is normal (indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-13T10:53:42Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal shape of colony</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001066 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001066">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001057"/>
+        <obo:IAO_0000115>A single species colony morphology phenotype where the size of the colony is normal (indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-13T10:53:57Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal size of colony</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001067 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001067">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype that is observed at the level of an individual organism (eg a worm host).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-20T11:03:58Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">pathogen host interaction organism level phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001068 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001068">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001070"/>
+        <obo:IAO_0000115>A host organism viability phenotype where the host organism survives in the presence of the pathogen.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-20T11:06:42Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>viable host organism with pathogen</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">survival of host organism with pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001069 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001069">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001070"/>
+        <obo:IAO_0000115>A host organism viability phenotype where the host organism dies in the presence of the pathogen.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-20T11:07:02Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>host kill assay</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>inviable host organism with pathogen</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>pathogen induced death of host organism</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">death of host organism with pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001070 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001070">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001067"/>
+        <obo:IAO_0000115>A pathogen host interaction organism level phenotype which affects the viability of an individual host organism in the presence of a pathogen.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-20T11:19:37Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">pathogen host interaction organism viability phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001071 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001071">
+        <obo:IAO_0000115>A pathogen host interaction organism viability phenotype where a host organism is viable in the presence of a pathogen.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-20T11:20:10Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete viable host organism with pathogen</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001072 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001072">
+        <obo:IAO_0000115>A pathogen host interaction organism viability phenotype where a host organism is inviable in the presence of a pathogen.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-20T11:20:25Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete inviable host organism with pathogen</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001073 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001073">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000162"/>
+        <obo:IAO_0000115>A single species population growth phenotype in which cells show increased sensitivity to a stress.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-27T09:48:23Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000304</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">sensitive to stress during growth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001074 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001074">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001073"/>
+        <obo:IAO_0000115>A population growth phenotype which cells show increased sensitivity to iron ion starvation.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-27T09:51:47Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0002015</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">sensitive to iron ion starvation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001075 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001075">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000162"/>
+        <obo:IAO_0000115>A single species population growth phenotype in which a cell requires a particular organic compound, which is not required by a wild-type cell for its growth. Auxotrophy usually results from a cell&apos;s inability to synthesize the compound.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-27T10:01:40Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000128</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">auxotrophy phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001076 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001076">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001075"/>
+        <obo:IAO_0000115>Auxotrophy in which a cell is unable to synthesize lysine, and therefore requires lysine in the medium for vegetative cell growth.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-27T10:02:07Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000039</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">growth auxotrophic for lysine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001077 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001077">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000288"/>
+        <obo:IAO_0000115>A single species individual organism phenotype where the accumulation of melanin in a cell is decreased.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-27T10:16:39Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased cellular melanin accumulation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001078 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001078">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001077"/>
+        <obo:IAO_0000115>A single species individual organism phenotype where the accumulation of melanin in a cell is absent.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-27T10:17:08Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">absence of cellular melanin accumulation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001079 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001079">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001067"/>
+        <obo:IAO_0000115>A pathogen host interaction organism level phenotype affecting the deposition or aggregation of coloring matter in a cell.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-27T11:17:57Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">pathogen host interaction pigment phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001080 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001080">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001079"/>
+        <obo:IAO_0000115>A pathogen host interaction pigment phenotype where the accumulation of coloring matter in a pathogen asexual spore with a host is altered.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-27T11:19:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">altered pigment accumulation in pathogen asexual spore with host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001081 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001081">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001080"/>
+        <obo:IAO_0000115>A pathogen host interaction pigment phenotype where the accumulation of melanin in a pathogen asexual spore with a host is absent.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-27T11:20:21Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">absence of melanin accumulation in pathogen asexual spore with host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001082 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001082">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000434"/>
+        <obo:IAO_0000115>A single organism (molecular function??) phenotype in which a specified catalytic activity has been gained (it was absent and is now present).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-30T08:59:36Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">gain of catalytic activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001083 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001083">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001012"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype where any process in which callose is transported to, and/or maintained in, a specific location during the host defense response to a pathogen is normal (i.e. indistinguishable from wild type). Callose is a linear 1,3-beta-d-glucan formed from UDP-glucose and is found in certain plant cell walls. (GO:0052542).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-01T09:09:20Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal level of host callose deposition induced by pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001084 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001084">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000975"/>
+        <obo:IAO_0000115>A single species cell population phenotype in which vegetative cell population growth is faster than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-01T09:17:27Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000636</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased population growth rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001085 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001085">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000974"/>
+        <obo:IAO_0000115>A single species cell population phenotype in which vegetative cell population growth is slower than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-01T09:21:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0001355</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased population growth rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001086 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001086">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000407"/>
+        <obo:IAO_0000115>A single species cellular process phenotype in which any process of cellular component assembly at the cellular level is abnormal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-01T09:36:55Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000336</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal cellular component assembly</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001087 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001087">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001086"/>
+        <obo:IAO_0000115>A single species cellular process phenotype in which hyphae formation is abnormal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-01T09:40:58Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal hyphae formation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001088 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001088">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001087"/>
+        <obo:IAO_0000115>A single species cellular process phenotype in which the rate, or speed, of hyphae formation is decreased.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-01T09:41:16Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>slow hyphae formation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased rate of hyphae formation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001089 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001089">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001087"/>
+        <obo:IAO_0000115>A single species cellular process phenotype in which the rate, or speed, of germ tube formation is decreased.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-01T09:42:41Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>slow germination tube formation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased rate of germination tube formation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001090 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001090">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000245"/>
+        <obo:IAO_0000115>A single organism localization phenotype in which a protein is not exported via the secretory pathway.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-01T09:56:51Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abolished protein secretion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001091 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001091">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000435"/>
+        <obo:IAO_0000115>A single organism (molecular function??) phenotype in which the catalysis of the hydrolysis of (1-&gt;4)-beta linkages of N-acetyl-D-glucosamine (GlcNAc) polymers of chitin and chitodextrins (GO:0004568) is abolished (the activity was present and is now absent).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-01T13:15:29Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abolished chitinase activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001092 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001092">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001036"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001094"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of chitin measured in the spore is higher than normal</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-01T13:26:59Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased chitin level in asexual spore</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001094 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001094">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000235"/>
+        <obo:IAO_0000115>A single species phenotype where the localization of a structure or substance in a cell is abnormal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-01T13:35:05Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal localization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001095 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001095">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001094"/>
+        <obo:IAO_0000115>A single organism phenotype in which the localization of chitin in a cell is abnormal. Chitin may be observed in a place where it is not normally found, absent from a place where it is normally found, or both.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-01T13:37:30Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>abnormal chitin distribution</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>abnormal chitin deposition</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>single_organism_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal localization of chitin in cell</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-07-16/imports/chebi_import.owl
+data-version: phipo/releases/2019-10-10/imports/chebi_import.owl
 ontology: phipo/imports/chebi_import
 
 [Term]
@@ -545,6 +545,7 @@ subset: 3_STAR
 synonym: "(1S,4aS,11S,11aR,12S,12aR)-3-carbamoyl-1-(dimethylazaniumyl)-4a,5,7,11,12-pentahydroxy-11-methyl-4,6-dioxo-1,4,4a,6,11,11a,12,12a-octahydrotetracen-2-olate" EXACT IUPAC_NAME [IUPAC]
 synonym: "oxytetracycline" RELATED [UniProt]
 xref: MetaCyc:CPD-19255
+is_a: CHEBI:144644 ! a tetracycline zwittterion
 is_a: CHEBI:27369 ! zwitterion
 relationship: is_tautomer_of CHEBI:27701 ! oxytetracycline
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
@@ -654,6 +655,7 @@ synonym: "doribax" RELATED [DrugCentral]
 synonym: "doripenem hydrate" RELATED [DrugCentral]
 xref: CAS:148016-81-3 "DrugCentral"
 xref: Drug_Central:4149 "DrugCentral"
+xref: HMDB:HMDB0041883
 is_a: CHEBI:46633 ! carbapenems
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C15H24N4O6S2" xsd:string
@@ -1086,7 +1088,7 @@ synonym: "(1S,4aS,11aR,12aS)-8-[2-(tert-butylammonio)acetamido]-3-carbamoyl-10-(
 synonym: "tigecycline" RELATED [UniProt]
 xref: MetaCyc:CPD-19260 "WebElements"
 xref: PMID:16128584 "SUBMITTER"
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:149836 ! tigecycline
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C29H40N5O8" xsd:string
@@ -1095,6 +1097,19 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "FPZLLRFZJZRHSY-HJ
 property_value: http://purl.obolibrary.org/obo/chebi/mass "586.658" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "586.28714" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "C1(C(=C([C@H]([C@@]2(C[C@@]3(CC4=C(C=C(C(=C4C(C3=C([C@]12O)O)=O)O)NC(C[NH2+]C(C)(C)C)=O)N(C)C)[H])[H])[NH+](C)C)[O-])C(=O)N)=O" xsd:string
+
+[Term]
+id: CHEBI:144644
+name: a tetracycline zwittterion
+namespace: chebi_ontology
+subset: 2_STAR
+synonym: "a tetracycline" RELATED [UniProt]
+is_a: CHEBI:26895 ! tetracyclines
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C21H17N2O7R5" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "409.370" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "409.10358" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C12=C(C=C(C(=C1C(C=3[C@]([C@@H]([C@]4([C@@H](C([O-])=C(C([C@@]4(O)C3O)=O)C(N)=O)[NH+](C)C)[H])*)(C2(*)*)[H])=O)O)*)*" xsd:string
 
 [Term]
 id: CHEBI:149836
@@ -1818,6 +1833,7 @@ is_a: CHEBI:24834 ! inorganic anion
 is_a: CHEBI:33482 ! sulfur oxoanion
 is_a: CHEBI:48154 ! sulfur oxide
 is_a: CHEBI:79388 ! divalent inorganic anion
+relationship: has_role CHEBI:23357 ! cofactor
 relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
 relationship: has_role CHEBI:77746 ! human metabolite
 relationship: is_conjugate_base_of CHEBI:45696 ! hydrogensulfate
@@ -3224,6 +3240,7 @@ xref: MetaCyc:HCO3
 xref: PDBeChem:BCT
 xref: PMID:17215880 "Europe PMC"
 xref: PMID:17505962 "Europe PMC"
+xref: PMID:18439416 "Europe PMC"
 xref: PMID:28732801 "Europe PMC"
 xref: PMID:29150416 "Europe PMC"
 xref: PMID:29460248 "Europe PMC"
@@ -3231,6 +3248,7 @@ xref: PMID:29466234 "Europe PMC"
 xref: PMID:4208463 "Europe PMC"
 xref: Wikipedia:Bicarbonate
 is_a: CHEBI:35604 ! carbon oxoanion
+relationship: has_role CHEBI:23357 ! cofactor
 relationship: has_role CHEBI:75771 ! mouse metabolite
 relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
 relationship: has_role CHEBI:76971 ! Escherichia coli metabolite
@@ -3592,6 +3610,7 @@ xref: KEGG:C00716
 xref: KNApSAcK:C00001393
 xref: Reaxys:1721402 "Reaxys"
 xref: Wikipedia:Serine
+is_a: CHEBI:26167 ! polar amino acid
 is_a: CHEBI:33704 ! alpha-amino acid
 relationship: has_part CHEBI:24712 ! hydroxymethyl group
 relationship: has_role CHEBI:78675 ! fundamental metabolite
@@ -4578,8 +4597,8 @@ namespace: chebi_ontology
 subset: 3_STAR
 synonym: ">C=O" RELATED [IUPAC]
 synonym: "carbonyl" EXACT IUPAC_NAME [IUPAC]
-synonym: "carbonyl group" EXACT [ChEBI]
 synonym: "carbonyl group" EXACT [UniProt]
+synonym: "carbonyl group" EXACT [ChEBI]
 is_a: CHEBI:51422 ! organodiyl group
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CO" xsd:string
@@ -4749,6 +4768,7 @@ synonym: "copper cations" RELATED [ChEBI]
 synonym: "Cu cation" RELATED [UniProt]
 is_a: CHEBI:33515 ! transition element cation
 is_a: CHEBI:37404 ! elemental copper
+relationship: has_role CHEBI:23357 ! cofactor
 property_value: http://purl.obolibrary.org/obo/chebi/formula "Cu" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "63.546" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "62.92960" xsd:string
@@ -6327,7 +6347,7 @@ is_a: CHEBI:36360 ! phosphorus oxoacids and derivatives
 id: CHEBI:26078
 name: phosphoric acid
 namespace: chebi_ontology
-def: "A phosphorus oxoacid that consits of one oxo and three hydroxy groups joined covalently to a central phosphorus atom." []
+def: "A phosphorus oxoacid that consists of one oxo and three hydroxy groups joined covalently to a central phosphorus atom." []
 subset: 3_STAR
 synonym: "[PO(OH)3]" RELATED [IUPAC]
 synonym: "acide phosphorique" RELATED [ChEBI]
@@ -6440,6 +6460,27 @@ def: "A chemical, natural or artificial, that can affect the rate of growth of a
 subset: 3_STAR
 synonym: "plant growth regulators" RELATED [ChEBI]
 is_a: CHEBI:39317 ! growth regulator
+
+[Term]
+id: CHEBI:26167
+name: polar amino acid
+namespace: chebi_ontology
+alt_id: CHEBI:8283
+def: "Any amino acid whose side chain is capable of forming one or more hydrogen bonds." []
+subset: 3_STAR
+synonym: "polar amino acid" EXACT [ChEBI]
+synonym: "polar amino acids" RELATED [ChEBI]
+synonym: "polar amino-acid" RELATED [ChEBI]
+synonym: "polar amino-acids" RELATED [ChEBI]
+xref: MetaCyc:Polar-amino-acids
+xref: PMID:12016058 "Europe PMC"
+is_a: CHEBI:33709 ! amino acid
+relationship: is_tautomer_of CHEBI:62031 ! polar amino acid zwitterion
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C2H4NO2R" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "74.059" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "74.02420" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "OC(C(*)N)=O" xsd:string
 
 [Term]
 id: CHEBI:26177
@@ -7028,7 +7069,7 @@ relationship: has_part CHEBI:26833 ! sulfur atom
 id: CHEBI:26836
 name: sulfuric acid
 namespace: chebi_ontology
-def: "A sulfur oxoacid that consits of two oxo and two hydroxy groups joined covalently to a central sulfur atom." []
+def: "A sulfur oxoacid that consists of two oxo and two hydroxy groups joined covalently to a central sulfur atom." []
 subset: 3_STAR
 synonym: "[S(OH)2O2]" RELATED [MolBase]
 synonym: "[SO2(OH)2]" RELATED [IUPAC]
@@ -8970,7 +9011,7 @@ subset: 3_STAR
 synonym: "[NH4](+)" RELATED [MolBase]
 synonym: "ammonium" EXACT IUPAC_NAME [IUPAC]
 synonym: "ammonium" EXACT [ChEBI]
-synonym: "AMMONIUM ION" RELATED [PDBeChem]
+synonym: "ammonium ion" RELATED [PDBeChem]
 synonym: "Ammonium(1+)" RELATED [ChemIDplus]
 synonym: "azanium" EXACT IUPAC_NAME [IUPAC]
 synonym: "NH4(+)" RELATED [UniProt]
@@ -9003,9 +9044,9 @@ xref: PMID:22631217 "Europe PMC"
 xref: Reaxys:16093784 "Reaxys"
 xref: Wikipedia:Ammonium
 is_a: CHEBI:35106 ! nitrogen hydride
-is_a: CHEBI:35274 ! ammonium ion
 is_a: CHEBI:50313 ! onium cation
 is_a: CHEBI:60242 ! monovalent inorganic cation
+relationship: has_role CHEBI:23357 ! cofactor
 relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
 relationship: has_role CHEBI:76971 ! Escherichia coli metabolite
 relationship: has_role CHEBI:77746 ! human metabolite
@@ -9369,6 +9410,7 @@ xref: Reaxys:3587177 "Reaxys"
 is_a: CHEBI:23378 ! copper cation
 is_a: CHEBI:30412 ! monoatomic dication
 is_a: CHEBI:60240 ! divalent metal cation
+relationship: has_role CHEBI:23357 ! cofactor
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+2" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "Cu" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/Cu/q+2" xsd:string
@@ -9393,6 +9435,7 @@ synonym: "carboxylic anions" RELATED [ChEBI]
 is_a: CHEBI:25696 ! organic anion
 is_a: CHEBI:35406 ! oxoanion
 relationship: is_conjugate_base_of CHEBI:33575 ! carboxylic acid
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CO2R" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "44.00950" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "43.98983" xsd:string
@@ -10766,7 +10809,6 @@ xref: KEGG:C00893
 xref: KEGG:C02580
 is_a: CHEBI:32952 ! amine
 is_a: CHEBI:50994 ! primary amino compound
-relationship: is_conjugate_base_of CHEBI:65296 ! primary ammonium ion
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "H2NR" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "16.02260" xsd:string
@@ -13184,7 +13226,7 @@ synonym: "quaternary ammonium ion" EXACT IUPAC_NAME [IUPAC]
 synonym: "quaternary ammonium ions" RELATED [ChEBI]
 xref: KEGG:C06703
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: has_parent_hydride CHEBI:28938 ! ammonium
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "NR4" xsd:string
@@ -13194,14 +13236,18 @@ property_value: http://purl.obolibrary.org/obo/chebi/smiles "[*][N+]([*])([*])[*
 
 [Term]
 id: CHEBI:35274
-name: ammonium ion
+name: ammonium ion derivative
 namespace: chebi_ontology
-def: "Ammonium, NH4(+), and derivatives formed by substitution by univalent groups." []
+def: "A derivative of ammonium, NH4(+), in which one (or more) of the hydrogens bonded to the nitrogen have been replaced with univalent organyl groups. The substituting carbon of the organyl group must not itself be directly attached to a heteroatom (thereby excluding protonated amides, hemiaminals, etc)." []
 subset: 3_STAR
+synonym: "ammonium ion derivatives" RELATED [ChEBI]
 synonym: "ammonium ions" RELATED [ChEBI]
+synonym: "azanium ion derivative" RELATED [ChEBI]
+synonym: "azanium ion derivatives" RELATED [ChEBI]
 synonym: "azanium ions" RELATED [ChEBI]
 is_a: CHEBI:33702 ! polyatomic cation
 is_a: CHEBI:51143 ! nitrogen molecular entity
+relationship: has_parent_hydride CHEBI:28938 ! ammonium
 
 [Term]
 id: CHEBI:35275
@@ -13232,7 +13278,7 @@ synonym: "ammonium compounds" RELATED [ChEBI]
 synonym: "ammonium compounds" RELATED [IUPAC]
 synonym: "azanium compounds" EXACT IUPAC_NAME [IUPAC]
 is_a: CHEBI:51143 ! nitrogen molecular entity
-relationship: has_part CHEBI:35274 ! ammonium ion
+relationship: has_part CHEBI:35274 ! ammonium ion derivative
 
 [Term]
 id: CHEBI:35286
@@ -15162,6 +15208,7 @@ is_a: CHEBI:37734 ! phosphoric ester
 id: CHEBI:36709
 name: aminoquinoline
 namespace: chebi_ontology
+def: "Any member of the class of quinolines in which the quinoline skeleton is substituted by one or more amino or substituted-amino groups." []
 subset: 3_STAR
 synonym: "aminoquinoline" EXACT [ChEBI]
 synonym: "aminoquinolines" RELATED [ChEBI]
@@ -17744,6 +17791,7 @@ xref: PDBeChem:IPS
 xref: PDBeChem:PI
 is_a: CHEBI:35780 ! phosphate ion
 is_a: CHEBI:79388 ! divalent inorganic anion
+relationship: has_role CHEBI:23357 ! cofactor
 relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
 relationship: is_conjugate_acid_of CHEBI:18367 ! phosphate(3-)
 relationship: is_conjugate_base_of CHEBI:39745 ! dihydrogenphosphate
@@ -20683,6 +20731,7 @@ def: "A compound formally derived from ammonia by replacing one hydrogen atom by
 subset: 3_STAR
 synonym: "primary amino compounds" RELATED [ChEBI]
 is_a: CHEBI:50047 ! organic amino compound
+relationship: is_conjugate_base_of CHEBI:65296 ! primary ammonium ion
 
 [Term]
 id: CHEBI:50995
@@ -22209,7 +22258,7 @@ subset: 3_STAR
 synonym: "(1R,2S,3R,5S,6R)-3-azaniumyl-2,6-dihydroxy-5-(methylazaniumyl)cyclohexyl O-6-azaniumyl-6-deoxy-L-glycero-D-galacto-heptopyranosylidene-(1->2-3)-beta-D-talopyranoside" EXACT IUPAC_NAME [IUPAC]
 synonym: "hygromycin B" RELATED [UniProt]
 synonym: "hygromycin B trication" RELATED [ChEBI]
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:16976 ! hygromycin B
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+3" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C20H40N3O13" xsd:string
@@ -22341,7 +22390,7 @@ subset: 3_STAR
 synonym: "(1R,2S,3S,4R,6S)-4,6-diammmonio-3-(3-ammonio-3-deoxy-alpha-D-glucopyranosyloxy)-2-hydroxycyclohexyl 2,6-diammmonio-2,6-dideoxy-alpha-D-glucopyranoside" EXACT IUPAC_NAME [IUPAC]
 synonym: "kanamycin B" RELATED [UniProt]
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:28098 ! kanamycin B
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+5" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C18H42N5O10" xsd:string
@@ -23606,6 +23655,22 @@ is_a: CHEBI:60832 ! tubulin modulator
 is_a: CHEBI:64911 ! antimitotic
 
 [Term]
+id: CHEBI:62031
+name: polar amino acid zwitterion
+namespace: chebi_ontology
+def: "Zwitterionic form of a polar amino acid having an anionic carboxy group and a protonated amino group." []
+subset: 2_STAR
+synonym: "a polar amino acid" RELATED [UniProt]
+xref: MetaCyc:Polar-amino-acids "SUBMITTER"
+is_a: CHEBI:35238 ! amino acid zwitterion
+relationship: is_tautomer_of CHEBI:26167 ! polar amino acid
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C2H4NO2R" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "74.059" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "74.02420" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C(C([O-])=O)(*)[NH3+]" xsd:string
+
+[Term]
 id: CHEBI:62070
 name: nalidixic acid anion
 namespace: chebi_ontology
@@ -24010,7 +24075,7 @@ id: CHEBI:63611
 name: moxifloxacin
 namespace: chebi_ontology
 alt_id: CHEBI:7007
-def: "A quinolone that consits of 4-oxo-1,4-dihydroquinoline-3-carboxylic acid bearing a cyclopropyl substituent at position 1, a fluoro substitiuent at position 6, a (4aS,7aS)-octahydro-6H-pyrrolo[3,4-b]pyridin-6-yl group at position 7 and a methoxy substituent at position 8. A member of the fluoroquinolone class of antibacterial agents." []
+def: "A quinolone that consists of 4-oxo-1,4-dihydroquinoline-3-carboxylic acid bearing a cyclopropyl substituent at position 1, a fluoro substitiuent at position 6, a (4aS,7aS)-octahydro-6H-pyrrolo[3,4-b]pyridin-6-yl group at position 7 and a methoxy substituent at position 8. A member of the fluoroquinolone class of antibacterial agents." []
 subset: 3_STAR
 synonym: "1-Cyclopropyl-6-fluoro-1,4-dihydro-8-methoxy-7-((4aS,7aS)-octahydro-6H-pyrrolo(3,4-b)pyridin-6-yl)-4-oxo-3-quinolinecarboxylic acid" RELATED [ChemIDplus]
 synonym: "1-cyclopropyl-6-fluoro-8-methoxy-7-[(4aS,7aS)-octahydro-6H-pyrrolo[3,4-b]pyridin-6-yl]-4-oxo-1,4-dihydroquinoline-3-carboxylic acid" EXACT IUPAC_NAME [IUPAC]
@@ -24076,7 +24141,7 @@ synonym: "moxifloxacin(1+)" RELATED [ChEBI]
 synonym: "moxifloxacinium" RELATED [ChEBI]
 synonym: "moxifloxacinium cation" RELATED [ChEBI]
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:63611 ! moxifloxacin
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C21H25FN3O4" xsd:string
@@ -24411,7 +24476,7 @@ def: "An organic cation obtained by protonation of any erythromycin." []
 subset: 3_STAR
 synonym: "erythromycin cation" EXACT [ChEBI]
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_base_of CHEBI:48923 ! erythromycin
 
 [Term]
@@ -24800,7 +24865,7 @@ synonym: "neaminium tetracation" RELATED [ChEBI]
 synonym: "neaminium(4+)" RELATED [ChEBI]
 xref: PMID:17206729 "SUBMITTER"
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:7489 ! neamine
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+4" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C12H30N4O6" xsd:string
@@ -24820,7 +24885,7 @@ synonym: "(1R,2R,3S,4R,6S)-4,6-diammmonio-2-{[3-O-(2,6-diammmonio-2,6-dideoxy-al
 synonym: "neomycin C" RELATED [UniProt]
 xref: PMID:17206729 "SUBMITTER"
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:53634 ! neomycin C
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+6" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C23H52N6O13" xsd:string
@@ -24868,13 +24933,13 @@ is_a: CHEBI:51374 ! GABA agent
 id: CHEBI:65296
 name: primary ammonium ion
 namespace: chebi_ontology
-def: "An ammonium ion resulting from the protonation of the nitrogen atom of a primary amine. Major species at pH 7.3." []
+def: "An ammonium ion derivative resulting from the protonation of the nitrogen atom of a primary amino compound. Major species at pH 7.3." []
 subset: 3_STAR
 synonym: "a primary amine" RELATED [UniProt]
 synonym: "substituted ammonium" RELATED [ChEBI]
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
-relationship: is_conjugate_acid_of CHEBI:32877 ! primary amine
+is_a: CHEBI:35274 ! ammonium ion derivative
+relationship: is_conjugate_acid_of CHEBI:50994 ! primary amino compound
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "H3NR" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "17.031" xsd:string
@@ -25150,7 +25215,7 @@ def: "An organic cation obtained by protonation of the amino groups of any alkan
 subset: 3_STAR
 synonym: "an alkane-alpha,omega-diamine" RELATED [UniProt]
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:35411 ! alkane-alpha,omega-diamine
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+2" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "(CH2)n.C2H10N2" xsd:string
@@ -25680,7 +25745,7 @@ synonym: "(1S,2S,3R,4S,6R)-4,6-diazaniumyl-3-[(2,6-diazaniumyl-2,3,6-trideoxy-al
 synonym: "tobramycin" RELATED [UniProt]
 xref: PMID:22383337 "SUBMITTER"
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:28864 ! tobramycin
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+5" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C18H42N5O9" xsd:string
@@ -26116,7 +26181,7 @@ def: "An organic cation obtained by protonation of the five amino groups of any 
 subset: 3_STAR
 synonym: "gentamicin C" RELATED [UniProt]
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:28417 ! gentamycin C
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+5" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C19H42N5O7R2" xsd:string
@@ -26245,7 +26310,7 @@ subset: 3_STAR
 synonym: "(4R)-3-oxo-1,2-oxazolidin-4-aminium" EXACT IUPAC_NAME [IUPAC]
 synonym: "D-cycloserine" RELATED [UniProt]
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:40009 ! D-cycloserine
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C3H7N2O2" xsd:string
@@ -27185,7 +27250,7 @@ subset: 3_STAR
 synonym: "[(2R,3R,4E,6E,9R,11R,12S,13S,14R)-12-{[3,6-dideoxy-4-O-(2,6-dideoxy-3-C-methyl-alpha-L-ribo-hexopyranosyl)-3-(dimethylazaniumyl)-beta-D-glucopyranosyl]oxy}-2-ethyl-14-hydroxy-5,9,13-trimethyl-8,16-dioxo-11-(2-oxoethyl)oxacyclohexadeca-4,6-dien-3-yl]methyl 6-deoxy-2,3-di-O-methyl-beta-D-allopyranoside" EXACT IUPAC_NAME [IUPAC]
 synonym: "tylosin" RELATED [UniProt]
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:17658 ! tylosin
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C46H78NO17" xsd:string
@@ -27417,7 +27482,7 @@ subset: 3_STAR
 synonym: "(2R,4aR,5aR,6S,7S,8R,9S,9aR,10aS)-4a,7,9-trihydroxy-N,N',2-trimethyl-4-oxodecahydro-2H-pyrano[2,3-b][1,4]benzodioxine-6,8-diaminium" EXACT IUPAC_NAME [IUPAC]
 synonym: "spectinomycin dication" RELATED [ChEBI]
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:9215 ! spectinomycin
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+2" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C14H26N2O7" xsd:string
@@ -27448,7 +27513,7 @@ subset: 3_STAR
 synonym: "(1R,5S,6s)-3-[6-carboxy-8-(2,4-difluorophenyl)-3-fluoro-5-oxo-5,8-dihydro-1,8-naphthyridin-2-yl]-3-azabicyclo[3.1.0]hexan-6-aminium" EXACT IUPAC_NAME [IUPAC]
 synonym: "trovafloxacin cation" RELATED [ChEBI]
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:9763 ! trovafloxacin
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C20H16F3N4O3" xsd:string
@@ -27467,7 +27532,7 @@ subset: 3_STAR
 synonym: "(2E)-N,6,6-trimethyl-N-(1-naphthylmethyl)hept-2-en-4-yn-1-aminium" EXACT IUPAC_NAME [IUPAC]
 synonym: "terbinafine cation" RELATED [ChEBI]
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:9448 ! terbinafine
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C21H26N" xsd:string
@@ -27579,7 +27644,7 @@ def: "An ammonium ion resulting from the protonation of the tertiary amino group
 subset: 3_STAR
 synonym: "(4R)-4-cyano-4-(3,4-dimethoxyphenyl)-N-[2-(3,4-dimethoxyphenyl)ethyl]-N,5-dimethylhexan-1-aminium" EXACT IUPAC_NAME [IUPAC]
 synonym: "(R)-verapamil(1+)" RELATED [ChEBI]
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:77734 ! dexverapamil
 relationship: is_enantiomer_of CHEBI:77738 ! (S)-verapamil(1+)
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
@@ -27598,7 +27663,7 @@ def: "An ammonium ion resulting from the protonation of the tertiary amino group
 subset: 3_STAR
 synonym: "(4S)-4-cyano-4-(3,4-dimethoxyphenyl)-N-[2-(3,4-dimethoxyphenyl)ethyl]-N,5-dimethylhexan-1-aminium" EXACT IUPAC_NAME [IUPAC]
 synonym: "(S)-verapamil(1+)" EXACT [ChEBI]
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:77736 ! (S)-verapamil
 relationship: is_enantiomer_of CHEBI:77737 ! dexverapamil(1+)
 
@@ -27751,6 +27816,7 @@ def: "A zwitterion obtained by transfer of a proton from the 2-hydroxy group to 
 subset: 3_STAR
 synonym: "(1S,4aS,11aR,12aS)-3-carbamoyl-10-(dimethylamino)-1-(dimethylazaniumyl)-4a,5,7-trihydroxy-4,6-dioxo-1,4,4a,6,11,11a,12,12a-octahydrotetracen-2-olate" EXACT IUPAC_NAME [IUPAC]
 synonym: "minocycline" RELATED [UniProt]
+is_a: CHEBI:144644 ! a tetracycline zwittterion
 is_a: CHEBI:27369 ! zwitterion
 relationship: is_conjugate_acid_of CHEBI:71337 ! minocycline(1-)
 relationship: is_tautomer_of CHEBI:50694 ! minocycline
@@ -27770,6 +27836,7 @@ def: "A zwitterion obtained by transfer of a proton from the 2-hydroxy group to 
 subset: 3_STAR
 synonym: "(1S,4aS,11S,11aS,12aS)-3-carbamoyl-1-(dimethylazaniumyl)-4a,5,7,11-tetrahydroxy-11-methyl-4,6-dioxo-1,4,4a,6,11,11a,12,12a-octahydrotetracen-2-olate" EXACT IUPAC_NAME [IUPAC]
 synonym: "tetracycline" RELATED [UniProt]
+is_a: CHEBI:144644 ! a tetracycline zwittterion
 is_a: CHEBI:27369 ! zwitterion
 relationship: has_role CHEBI:33281 ! antimicrobial agent
 relationship: has_role CHEBI:35820 ! antiprotozoal drug
@@ -29593,7 +29660,7 @@ synonym: "cationic sphingoids" RELATED [ChEBI]
 synonym: "sphingoid cation" RELATED [ChEBI]
 synonym: "sphingoid cations" RELATED [ChEBI]
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:35785 ! sphingoid
 
 [Term]
@@ -29883,7 +29950,7 @@ def: "An organic cation obtained by protonation of the four free amino groups of
 subset: 3_STAR
 synonym: "(1S,2S,3R,4S,6R)-4-azaniumyl-3-[(6-azaniumyl-6-deoxy-alpha-D-glucopyranosyl)oxy]-6-{[(2S)-4-azaniumyl-2-hydroxybutanoyl]amino}-2-hydroxycyclohexyl 3-azaniumyl-3-deoxy-alpha-D-glucopyranoside" EXACT IUPAC_NAME [IUPAC]
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:2637 ! amikacin
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+4" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C22H47N5O13" xsd:string
@@ -30576,7 +30643,7 @@ synonym: "neomycin B" RELATED [UniProt]
 xref: MetaCyc:CPD-14142 "SUBMITTER"
 xref: PMID:25230155 "SUBMITTER"
 is_a: CHEBI:25697 ! organic cation
-is_a: CHEBI:35274 ! ammonium ion
+is_a: CHEBI:35274 ! ammonium ion derivative
 relationship: is_conjugate_acid_of CHEBI:7508 ! framycetin
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+6" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C23H52N6O13" xsd:string

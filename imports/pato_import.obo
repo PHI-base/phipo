@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-07-16/imports/pato_import.owl
+data-version: phipo/releases/2019-10-10/imports/pato_import.owl
 ontology: phipo/imports/pato_import
 
 [Term]
@@ -8,7 +8,6 @@ name: quality
 namespace: quality
 alt_id: PATO:0000072
 def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
-synonym: "trait" EXACT []
 
 [Term]
 id: PATO:0000033
@@ -56,6 +55,25 @@ namespace: quality
 def: "A quality inhering in a bearer by virtue of the whether the bearer differs from normal or average." [PATOC:GVG]
 subset: attribute_slim
 is_a: PATO:0000068 ! qualitative
+
+[Term]
+id: PATO:0000070
+name: amount
+namespace: quality
+alt_id: PATO:0000053
+alt_id: PATO:0000071
+alt_id: PATO:0001169
+alt_id: PATO:0001226
+def: "The number of entities of this type that are part of the whole organism." [PATOC:GVG]
+comment: This term was originally named "presence". It has been renamed to reduce ambiguity. Consider annotating with the reciprocal relation,PATO:0001555, has_number_of. For example, rather than E=fin ray Q=count in organism C=10, say E=organism Q=has number of E2= fin ray C=10.
+subset: attribute_slim
+synonym: "count in organism" RELATED []
+synonym: "number" RELATED []
+synonym: "presence" RELATED []
+synonym: "presence or absence in organism" EXACT []
+synonym: "quantitative" EXACT []
+is_a: PATO:0000068 ! qualitative
+relationship: reciprocal_of PATO:0001555 ! has number of
 
 [Term]
 id: PATO:0000085
@@ -123,8 +141,56 @@ subset: abnormal_slim
 subset: mpath_slim
 subset: value_slim
 synonym: "average" RELATED []
-is_a: PATO:0000069 ! deviation(from_normal)
+is_a: PATO:0000068 ! qualitative
 relationship: is_opposite_of PATO:0000460 ! abnormal
+
+[Term]
+id: PATO:0000462
+name: absent
+namespace: quality
+alt_id: PATO:0001996
+def: "A quality denoting the lack of an entity." [thefreedictionary.:thefreedictionary.]
+comment: See documentation here: http://code.google.com/p/phenotype-ontologies/wiki/ModelingOfAbsence
+subset: absent_slim
+subset: mpath_slim
+subset: value_slim
+synonym: "absence" EXACT []
+synonym: "absent from organism" EXACT []
+is_a: PATO:0000070 ! amount
+disjoint_from: PATO:0000467 ! present
+relationship: is_opposite_of PATO:0000467 ! present
+relationship: reciprocal_of PATO:0001558 ! lacking processual parts
+relationship: reciprocal_of PATO:0002000 ! lacks all parts of type
+
+[Term]
+id: PATO:0000467
+name: present
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's existence." [PATOC:GVG]
+subset: absent_slim
+subset: value_slim
+synonym: "present in organism" RELATED []
+is_a: PATO:0000070 ! amount
+relationship: is_opposite_of PATO:0000462 ! absent
+
+[Term]
+id: PATO:0000470
+name: increased amount
+namespace: quality
+alt_id: PATO:0000420
+alt_id: PATO:0000650
+def: "An amount which is relatively high." [PATOC:GVG]
+subset: value_slim
+synonym: "accessory" RELATED []
+synonym: "increased" RELATED []
+synonym: "increased number" EXACT []
+synonym: "present in greater numbers in organism" EXACT []
+synonym: "supernumerary" EXACT []
+is_a: PATO:0000467 ! present
+is_a: PATO:0002300 ! increased quality
+intersection_of: PATO:0000070 ! amount
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001997 ! decreased amount
 
 [Term]
 id: PATO:0000498
@@ -432,6 +498,7 @@ synonym: "number" RELATED []
 synonym: "number of" EXACT []
 xref: OBO_REL:has_part
 is_a: PATO:0001241 ! physical object quality
+relationship: reciprocal_of PATO:0000070 ! amount
 
 [Term]
 id: PATO:0001558
@@ -441,6 +508,7 @@ def: "A quality of a process inhering in a bearer by virtue of the bearer's lack
 subset: relational_slim
 subset: value_slim
 is_a: PATO:0001564 ! extra or missing processual parts
+relationship: reciprocal_of PATO:0000462 ! absent
 
 [Term]
 id: PATO:0001564
@@ -490,6 +558,7 @@ def: "The bearer of this quality has_part = n, where n is the normal amount for 
 subset: relational_slim
 synonym: "having physical part" EXACT []
 is_a: PATO:0001555 ! has number of
+relationship: reciprocal_of PATO:0002050 ! normal amount
 
 [Term]
 id: PATO:0001995
@@ -499,6 +568,25 @@ def: "A quality that inheres in an entire organism or part of an organism." [PAT
 is_a: PATO:0001241 ! physical object quality
 
 [Term]
+id: PATO:0001997
+name: decreased amount
+namespace: quality
+alt_id: PATO:0000419
+alt_id: PATO:0000468
+def: "An amount which is relatively low." [PATOC:GVG]
+subset: value_slim
+synonym: "decreased" RELATED []
+synonym: "decreased number" EXACT []
+synonym: "present in fewer numbers in organism" EXACT []
+synonym: "reduced" RELATED []
+synonym: "subnumerary" RELATED []
+is_a: PATO:0000467 ! present
+is_a: PATO:0002301 ! decreased quality
+intersection_of: PATO:0000070 ! amount
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0000470 ! increased amount
+
+[Term]
 id: PATO:0001999
 name: lacks parts or has fewer parts of type
 namespace: quality
@@ -506,6 +594,19 @@ def: "The bearer of this quality has_part < n of the indicated entity type, wher
 subset: relational_slim
 synonym: "loss of" EXACT []
 is_a: PATO:0002083 ! altered number of
+
+[Term]
+id: PATO:0002000
+name: lacks all parts of type
+namespace: quality
+alt_id: PATO:0001557
+def: "A quality of physical entities inhering in a bearer by virtue of the bearer's lacking a physical part as specified by the additional entity." [PATOC:CJM]
+comment: Example: [E=organism Q=lacks_all_parts_of_type E2=Wing] - applies to an organism. A relational quality in which the bearer entity has no parts of the specified type. The bearer of this quality has_part = 0 of the indicated entity type, where a comparable organism usually has at least 1 part of the same type. Note that the bearer of the quality is the whole, not the part. Formally: If a bearer entity e lacks all parts of type X at time t, then there exists no instances x of X at t such that x part_of e that has no wings, where wings are normally present in that organism type. In OWL this is equivalent to a restriction on the OBO_REL:has_part relation with cardinality=0, i.e has_part 0 E2.
+subset: relational_slim
+synonym: "lacks all physical parts of type" EXACT []
+xref: OBO_REL:lacks_part
+is_a: PATO:0001999 ! lacks parts or has fewer parts of type
+relationship: reciprocal_of PATO:0000462 ! absent
 
 [Term]
 id: PATO:0002001
@@ -542,6 +643,17 @@ is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0002083 ! altered number of
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0002001 ! has fewer parts of type
+
+[Term]
+id: PATO:0002050
+name: normal amount
+namespace: quality
+def: "An amount which normal." [PATOC:GVG]
+synonym: "present in normal numbers in organism" EXACT []
+is_a: PATO:0000467 ! present
+relationship: reciprocal_of PATO:0001905 ! has normal numbers of parts of type
+created_by: george
+creation_date: 2009-03-20T11:16:22Z
 
 [Term]
 id: PATO:0002051
@@ -935,6 +1047,13 @@ name: part_of
 namespace: quality
 xref: BFO:0000050
 is_transitive: true
+
+[Typedef]
+id: reciprocal_of
+name: reciprocal_of
+namespace: quality
+def: "q1 reciprocal_of q2 if and only if : q1 and q2 are relational qualities and a phenotype e q1 e2 mutually implies a phenotype e2 q2 e." [PATOC:CJM]
+comment: There are frequently two ways to state the same thing: we can say 'spermatocyte lacks asters' or 'asters absent from spermatocyte'. In this case the quality is 'lacking all parts of type' - it is a (relational) quality of the spermatocyte, and it is with respect to instances of 'aster'. One of the popular requirements of PATO is that it continue to support 'absent', so we need to relate statements which use this quality to the 'lacking all parts of type' quality.
 
 [Typedef]
 id: towards

@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-07-16/imports/go_import.owl
+data-version: phipo/releases/2019-10-10/imports/go_import.owl
 ontology: phipo/imports/go_import
 
 [Term]
@@ -318,6 +318,7 @@ id: GO:0003824
 name: catalytic activity
 namespace: molecular_function
 def: "Catalysis of a biochemical reaction at physiological temperatures. In biologically catalyzed reactions, the reactants are known as substrates, and the catalysts are naturally occurring macromolecular substances known as enzymes. Enzymes possess specific binding sites for substrates, and are usually composed wholly or largely of protein, but RNA that has catalytic activity (ribozyme) is often also regarded as enzymatic." [GOC:vw, ISBN:0198506732]
+subset: goslim_agr
 subset: goslim_chembl
 subset: goslim_flybase_ribbon
 subset: goslim_metagenomics
@@ -406,7 +407,7 @@ id: GO:0005575
 name: cellular_component
 namespace: cellular_component
 alt_id: GO:0008372
-def: "A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome)." [GOC:pdt, NIF_Subcellular:sao-1337158144]
+def: "A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome)." [GOC:pdt, NIF_Subcellular:sao1337158144]
 comment: Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this.
 subset: goslim_aspergillus
 subset: goslim_candida
@@ -419,7 +420,6 @@ subset: goslim_yeast
 synonym: "cell or subcellular entity" EXACT []
 synonym: "cellular component" EXACT []
 synonym: "subcellular entity" RELATED [NIF_Subcellular:nlx_subcell_100315]
-xref: NIF_Subcellular:sao-1337158144
 xref: NIF_Subcellular:sao1337158144
 
 [Term]
@@ -437,7 +437,7 @@ synonym: "nucleocytoplasm" RELATED [GOC:mah]
 synonym: "protoplasm" EXACT []
 synonym: "protoplast" RELATED [GOC:mah]
 xref: Wikipedia:Intracellular
-is_a: GO:0044464 ! cell part
+is_a: GO:0005575 ! cellular_component
 
 [Term]
 id: GO:0005623
@@ -1602,7 +1602,6 @@ id: GO:0016740
 name: transferase activity
 namespace: molecular_function
 def: "Catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from one compound (generally regarded as the donor) to another compound (generally regarded as the acceptor). Transferase is the systematic name for any enzyme of EC class 2." [ISBN:0198506732]
-subset: goslim_agr
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_chembl
@@ -1634,7 +1633,6 @@ id: GO:0016787
 name: hydrolase activity
 namespace: molecular_function
 def: "Catalysis of the hydrolysis of various bonds, e.g. C-O, C-N, C-C, phosphoric anhydride bonds, etc. Hydrolase is the systematic name for any enzyme of EC class 3." [ISBN:0198506732]
-subset: goslim_agr
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_chembl
@@ -1661,7 +1659,7 @@ namespace: cellular_component
 def: "Any organism in which another organism, especially a parasite or symbiont, spends part or all of its life cycle and from which it obtains nourishment and/or protection." [ISBN:0198506732]
 synonym: "host organism" EXACT []
 xref: Wikipedia:Host_(biology)
-is_a: GO:0005575 ! cellular_component
+is_a: GO:0110165 ! cellular anatomical entity
 
 [Term]
 id: GO:0019220
@@ -2257,7 +2255,7 @@ namespace: cellular_component
 def: "The slender tubular outgrowth first produced by most spores in germination." [ISBN:0877799148]
 subset: goslim_pir
 xref: Wikipedia:Germ_tube
-is_a: GO:0044464 ! cell part
+is_a: GO:0110165 ! cellular anatomical entity
 
 [Term]
 id: GO:0032268
@@ -2883,7 +2881,7 @@ subset: goslim_generic
 subset: goslim_pir
 xref: NIF_Subcellular:sao1539965131
 xref: Wikipedia:Organelle
-is_a: GO:0005575 ! cellular_component
+is_a: GO:0110165 ! cellular anatomical entity
 
 [Term]
 id: GO:0043227
@@ -2910,9 +2908,9 @@ namespace: cellular_component
 def: "Organized structure of distinctive morphology and function, occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton. Excludes the plasma membrane." [GOC:go_curators]
 subset: goslim_pir
 is_a: GO:0043226 ! organelle
-is_a: GO:0044424 ! intracellular part
 intersection_of: GO:0043226 ! organelle
 intersection_of: part_of GO:0005622 ! intracellular
+relationship: part_of GO:0005622 ! intracellular
 
 [Term]
 id: GO:0043231
@@ -3160,10 +3158,7 @@ synonym: "growth during symbiotic interaction" RELATED [GOC:dph]
 synonym: "growth on or near surface of other organism during symbiotic interaction" RELATED [GOC:tb]
 synonym: "growth on or near surface of other organism involved in symbiotic interaction" RELATED []
 is_a: GO:0040007 ! growth
-is_a: GO:0051704 ! multi-organism process
-intersection_of: GO:0040007 ! growth
-intersection_of: part_of GO:0044403 ! symbiotic process
-relationship: part_of GO:0044403 ! symbiotic process
+is_a: GO:0044419 ! interspecies interaction between organisms
 created_by: jane
 creation_date: 2009-07-30T02:22:33Z
 
@@ -3180,8 +3175,8 @@ synonym: "development on or near surface of other organism involved in symbiotic
 is_a: GO:0032502 ! developmental process
 is_a: GO:0051704 ! multi-organism process
 intersection_of: GO:0032502 ! developmental process
-intersection_of: part_of GO:0044403 ! symbiotic process
-relationship: part_of GO:0044403 ! symbiotic process
+intersection_of: part_of GO:0044419 ! interspecies interaction between organisms
+relationship: part_of GO:0044419 ! interspecies interaction between organisms
 created_by: jane
 creation_date: 2009-07-30T02:26:46Z
 
@@ -3352,69 +3347,60 @@ is_a: GO:0051704 ! multi-organism process
 
 [Term]
 id: GO:0044422
-name: organelle part
+name: obsolete organelle part
 namespace: cellular_component
-def: "Any constituent part of an organelle, an organized structure of distinctive morphology and function. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, but excludes the plasma membrane." [GOC:jl]
+def: "OBSOLETE. Any constituent part of an organelle, an organized structure of distinctive morphology and function. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, but excludes the plasma membrane." [GOC:jl]
 comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
 subset: gocheck_do_not_annotate
-is_a: GO:0005575 ! cellular_component
-intersection_of: GO:0005575 ! cellular_component
-intersection_of: part_of GO:0043226 ! organelle
-relationship: part_of GO:0043226 ! organelle
+is_obsolete: true
+consider: GO:0043226
 
 [Term]
 id: GO:0044424
-name: intracellular part
+name: obsolete intracellular part
 namespace: cellular_component
-def: "Any constituent part of the living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm." [GOC:jl]
+def: "OBSOLETE. Any constituent part of the living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm." [GOC:jl]
 comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
 subset: gocheck_do_not_annotate
-is_a: GO:0044464 ! cell part
-intersection_of: GO:0005575 ! cellular_component
-intersection_of: part_of GO:0005622 ! intracellular
-relationship: part_of GO:0005622 ! intracellular
+is_obsolete: true
+consider: GO:0005622
 
 [Term]
 id: GO:0044428
-name: nuclear part
+name: obsolete nuclear part
 namespace: cellular_component
-def: "Any constituent part of the nucleus, a membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated." [GOC:jl]
+def: "OBSOLETE. Any constituent part of the nucleus, a membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated." [GOC:jl]
 comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
 subset: gocheck_do_not_annotate
 synonym: "nuclear subcomponent" EXACT [NIF_Subcellular:sao1499850686]
 synonym: "nucleus component" EXACT []
 xref: NIF_Subcellular:sao1499850686
-is_a: GO:0044446 ! intracellular organelle part
-intersection_of: GO:0005575 ! cellular_component
-intersection_of: part_of GO:0005634 ! nucleus
-relationship: part_of GO:0005634 ! nucleus
+is_obsolete: true
+consider: GO:0005634
 
 [Term]
 id: GO:0044446
-name: intracellular organelle part
+name: obsolete intracellular organelle part
 namespace: cellular_component
-def: "A constituent part of an intracellular organelle, an organized structure of distinctive morphology and function, occurring within the cell. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton but excludes the plasma membrane." [GOC:jl]
+def: "OBSOLETE. A constituent part of an intracellular organelle, an organized structure of distinctive morphology and function, occurring within the cell. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton but excludes the plasma membrane." [GOC:jl]
 comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
 subset: gocheck_do_not_annotate
-is_a: GO:0044422 ! organelle part
-is_a: GO:0044424 ! intracellular part
-relationship: part_of GO:0043229 ! intracellular organelle
+is_obsolete: true
+consider: GO:0043229
 
 [Term]
 id: GO:0044464
-name: cell part
+name: obsolete cell part
 namespace: cellular_component
-def: "Any constituent part of a cell, the basic structural and functional unit of all organisms." [GOC:jl]
+def: "OBSOLETE. Any constituent part of a cell, the basic structural and functional unit of all organisms." [GOC:jl]
 comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
 subset: gocheck_do_not_annotate
 subset: goslim_pir
 synonym: "cellular subcomponent" EXACT [NIF_Subcellular:sao628508602]
 synonym: "protoplast" RELATED [GOC:mah]
 xref: NIF_Subcellular:sao628508602
-is_a: GO:0005575 ! cellular_component
-intersection_of: GO:0005575 ! cellular_component
-intersection_of: part_of GO:0005623 ! cell
-relationship: part_of GO:0005623 ! cell
+is_obsolete: true
+consider: CL:0000000
 
 [Term]
 id: GO:0044531
@@ -3728,7 +3714,6 @@ synonym: "single organism intracellular transport" RELATED [GOC:TermGenie]
 synonym: "single-organism intracellular transport" RELATED []
 is_a: GO:0006810 ! transport
 is_a: GO:0051641 ! cellular localization
-is_a: GO:0051649 ! establishment of localization in cell
 intersection_of: GO:0006810 ! transport
 intersection_of: occurs_in GO:0005622 ! intracellular
 relationship: occurs_in GO:0005622 ! intracellular
@@ -3928,7 +3913,6 @@ namespace: biological_process
 alt_id: GO:0050791
 def: "Any process that modulates the frequency, rate or extent of a biological process. Biological processes are regulated by many means; examples include the control of gene expression, protein modification or interaction with a protein or substrate molecule." [GOC:ai, GOC:go_curators]
 subset: gocheck_do_not_annotate
-subset: goslim_agr
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_pir
@@ -4505,8 +4489,7 @@ id: GO:0051701
 name: interaction with host
 namespace: biological_process
 def: "An interaction between two organisms living together in more or less intimate association. The term host is used for the larger (macro) of the two members of a symbiosis; the various forms of symbiosis include parasitism, commensalism and mutualism." [GOC:cc]
-is_a: GO:0044419 ! interspecies interaction between organisms
-relationship: part_of GO:0044403 ! symbiotic process
+is_a: GO:0044403 ! symbiotic process
 
 [Term]
 id: GO:0051704
@@ -4599,9 +4582,6 @@ synonym: "regulation of morphology or physiology of other organism during symbio
 synonym: "regulation of physiological process in other organism during symbiotic interaction" NARROW []
 synonym: "regulation of physiology of other organism during symbiotic interaction" NARROW []
 is_a: GO:0035821 ! modification of morphology or physiology of other organism
-intersection_of: GO:0035821 ! modification of morphology or physiology of other organism
-intersection_of: part_of GO:0044403 ! symbiotic process
-relationship: part_of GO:0044403 ! symbiotic process
 
 [Term]
 id: GO:0051818
@@ -4904,7 +4884,7 @@ relationship: positively_regulates GO:0051883 ! killing of cells in other organi
 id: GO:0052547
 name: regulation of peptidase activity
 namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of peptidase activity, the hydrolysis of peptide bonds within proteins." [EC:3.4, GOC:ai]
+def: "Any process that modulates the frequency, rate or extent of peptidase activity, the hydrolysis of peptide bonds within proteins." [GOC:ai]
 synonym: "peptidase regulator activity" RELATED []
 is_a: GO:0030162 ! regulation of proteolysis
 is_a: GO:0051336 ! regulation of hydrolase activity
@@ -5070,7 +5050,6 @@ name: regulation of molecular function
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding." [GOC:isa_complete]
 subset: gocheck_do_not_annotate
-subset: goslim_agr
 subset: goslim_pir
 subset: goslim_plant
 synonym: "regulation of a molecular function" EXACT []
@@ -5346,6 +5325,15 @@ synonym: "vomitoxin synthesis" EXACT []
 is_a: GO:0043386 ! mycotoxin biosynthetic process
 created_by: hjd
 creation_date: 2018-04-16T19:06:06Z
+
+[Term]
+id: GO:0110165
+name: cellular anatomical entity
+namespace: cellular_component
+def: "A part of a cellular organism that is either an immaterial entity or a material entity with granularity above the level of a protein complex but below that of an anatomical system. Or, a substance produced by a cellular organism with granularity above the level of a protein complex." [GOC:kmv]
+is_a: GO:0005575 ! cellular_component
+created_by: kmv
+creation_date: 2019-08-12T18:01:37Z
 
 [Term]
 id: GO:0140096
