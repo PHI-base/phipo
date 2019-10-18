@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-10-10/phipo-simple.owl
+data-version: phipo/releases/2019-10-18/phipo-simple.owl
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -1261,7 +1261,7 @@ creation_date: 2018-07-17T13:09:36Z
 id: PHIPO:0000131
 name: pathogen host protein protein interaction phenotype
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype that protein affects the binding of one protein to another. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+def: "A pathogen host interaction phenotype which affects the binding of one protein to another. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
 xref: FYPO:0000702
 is_a: PHIPO:0000164 ! pathogen host interaction binding phenotype
 created_by: alaynecuzick
@@ -1659,11 +1659,11 @@ creation_date: 2018-10-01T12:54:51Z
 
 [Term]
 id: PHIPO:0000168
-name: abnormal pathogen host interaction RNA binding
+name: obsolete abnormal pathogen host interaction RNA binding
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of RNA binding by a gene product is abnormal, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0002132
-is_a: PHIPO:0000167 ! pathogen host interaction RNA binding phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:56:01Z
 
@@ -1685,11 +1685,11 @@ creation_date: 2018-10-01T12:57:11Z
 
 [Term]
 id: PHIPO:0000171
-name: normal pathogen host interaction RNA binding
+name: obsolete normal pathogen host interaction RNA binding
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of RNA binding by a gene product is normal (i.e. indistinguishable from wild type). The relevant gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0002357
-is_a: PHIPO:0000167 ! pathogen host interaction RNA binding phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:57:15Z
 
@@ -1699,7 +1699,7 @@ name: abolished pathogen host interaction RNA binding
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which RNA binding by a gene product does not occur, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0002133
-is_a: PHIPO:0000168 ! abnormal pathogen host interaction RNA binding
+is_a: PHIPO:0000167 ! pathogen host interaction RNA binding phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:04:43Z
 
@@ -1718,7 +1718,7 @@ name: decreased pathogen host interaction RNA binding
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of RNA binding by a gene product is decreased, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0002134
-is_a: PHIPO:0000168 ! abnormal pathogen host interaction RNA binding
+is_a: PHIPO:0000167 ! pathogen host interaction RNA binding phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:05:26Z
 
@@ -1737,7 +1737,7 @@ name: increased pathogen host interaction RNA binding
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of RNA binding by a gene product is increased, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0002135
-is_a: PHIPO:0000168 ! abnormal pathogen host interaction RNA binding
+is_a: PHIPO:0000167 ! pathogen host interaction RNA binding phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:05:50Z
 
@@ -1755,9 +1755,6 @@ id: PHIPO:0000178
 name: pathogen host interaction DNA binding phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype that affects DNA binding. The affected gene product may be encoded by the mutated gene, or by a different gene." []
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.\n\nLogical definition\nphenotype (this would need to be PHIPO pathogen phenotype/host phenotype or disease formation phenotype) and (inheres_in some DNA binding (GO:0003677)
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
 xref: FYPO:0000653
 is_a: PHIPO:0000164 ! pathogen host interaction binding phenotype
 created_by: alaynecuzick
@@ -1775,11 +1772,11 @@ creation_date: 2018-10-01T13:09:16Z
 
 [Term]
 id: PHIPO:0000180
-name: abnormal pathogen host interaction DNA binding
+name: obsolete abnormal pathogen host interaction DNA binding
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of DNA binding by a gene product is abnormal, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0000656
-is_a: PHIPO:0000178 ! pathogen host interaction DNA binding phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:09:23Z
 
@@ -1808,12 +1805,12 @@ creation_date: 2018-10-01T13:09:35Z
 
 [Term]
 id: PHIPO:0000183
-name: normal pathogen host interaction DNA binding
+name: obsolete normal pathogen host interaction DNA binding
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of DNA binding by a gene product is normal (i.e. indistinguishable from wild type). The relevant gene product may be encoded by the mutated gene, or by a different gene." []
 comment: Logical defintion\nquality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (qualifier (??) some normal PATO:0000461)
 xref: FYPO:0000655
-is_a: PHIPO:0000178 ! pathogen host interaction DNA binding phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:09:42Z
 
@@ -1827,11 +1824,11 @@ creation_date: 2018-10-01T13:12:32Z
 
 [Term]
 id: PHIPO:0000185
-name: abnormal pathogen host interaction multiple protein binding to DNA
+name: obsolete abnormal pathogen host interaction multiple protein binding to DNA
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which the binding of two or more proteins to DNA is abnormal. The proteins may bind simultaneously or sequentially, but both or all would normally be present together on DNA at some time. One affected gene product may be encoded by the mutated gene, or all may be encoded by different genes." []
 xref: FYPO:0006555
-is_a: PHIPO:0000180 ! abnormal pathogen host interaction DNA binding
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:12:43Z
 
@@ -1853,7 +1850,7 @@ name: abolished pathogen host interaction DNA binding
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which DNA binding by a gene product does not occur, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0000659
-is_a: PHIPO:0000180 ! abnormal pathogen host interaction DNA binding
+is_a: PHIPO:0000178 ! pathogen host interaction DNA binding phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:13:16Z
 
@@ -1872,7 +1869,7 @@ name: altered pathogen host interaction DNA binding specificity
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which a gene product that normally binds to a specific DNA sequence instead binds to a different sequence when a gene is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0003735
-is_a: PHIPO:0000180 ! abnormal pathogen host interaction DNA binding
+is_a: PHIPO:0000178 ! pathogen host interaction DNA binding phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:13:36Z
 
@@ -1894,7 +1891,7 @@ name: decreased pathogen host interaction DNA binding
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of DNA binding by a gene product is decreased, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0000658
-is_a: PHIPO:0000180 ! abnormal pathogen host interaction DNA binding
+is_a: PHIPO:0000178 ! pathogen host interaction DNA binding phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:14:20Z
 
@@ -1918,7 +1915,7 @@ name: increased pathogen host interaction DNA binding
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of DNA binding by a gene product is increased, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0000657
-is_a: PHIPO:0000180 ! abnormal pathogen host interaction DNA binding
+is_a: PHIPO:0000178 ! pathogen host interaction DNA binding phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:14:39Z
 
@@ -1941,11 +1938,11 @@ creation_date: 2018-10-01T13:27:25Z
 
 [Term]
 id: PHIPO:0000197
-name: abnormal pathogen host protein protein interaction
+name: obsolete abnormal pathogen host protein protein interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which the binding of one protein to another is abnormal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
 xref: FYPO:0000704
-is_a: PHIPO:0000131 ! pathogen host protein protein interaction phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:27:34Z
 
@@ -1953,17 +1950,18 @@ creation_date: 2018-10-01T13:27:34Z
 id: PHIPO:0000198
 name: pathogen host interaction transporter phenotype
 namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype which affects a transporter activity." []
 is_a: PHIPO:0000347 ! pathogen host interaction molecular function phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:27:49Z
 
 [Term]
 id: PHIPO:0000199
-name: normal pathogen host protein protein interaction
+name: obsolete normal pathogen host protein protein interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which the binding of one protein to another is normal (i.e. indistinguishable from wild type). The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
 xref: FYPO:0000703
-is_a: PHIPO:0000131 ! pathogen host protein protein interaction phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:27:56Z
 
@@ -1977,21 +1975,21 @@ creation_date: 2018-10-01T13:28:13Z
 
 [Term]
 id: PHIPO:0000201
-name: normal pathogen host protein complex binding
+name: obsolete normal pathogen host protein complex binding
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen (molecular function??) phenotype in which the binding of one protein to a protein complex is normal (i.e. indistinguishable from wild type). The protein whose binding to the protein complex is assayed may be encoded by the mutated gene, or may be encoded by a different gene." []
 xref: FYPO:0005232
-is_a: PHIPO:0000199 ! normal pathogen host protein protein interaction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:28:22Z
 
 [Term]
 id: PHIPO:0000202
-name: abnormal pathogen host protein complex binding
+name: obsolete abnormal pathogen host protein complex binding
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which the binding of one protein to a protein complex is abnormal. The protein whose binding to the protein complex is affected may be encoded by the mutated gene, or may be encoded by a different gene." []
 xref: FYPO:0003591
-is_a: PHIPO:0000197 ! abnormal pathogen host protein protein interaction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:31:30Z
 
@@ -2006,11 +2004,11 @@ creation_date: 2018-10-01T13:31:34Z
 
 [Term]
 id: PHIPO:0000204
-name: abolished pathogen host protein protein interaction
+name: protein protein interaction between pathogen and host protein abolished
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction (molecular function??) phenotype in which the binding of one protein to another does not occur. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+def: "A molecular function phenotype in which the binding of one pathogen protein to one host protein does not occur (binding was present as is now absent)." []
 xref: FYPO:0000705
-is_a: PHIPO:0000197 ! abnormal pathogen host protein protein interaction
+is_a: PHIPO:0001107 ! protein protein interaction between pathogen and host protein absent
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:31:59Z
 
@@ -2025,11 +2023,11 @@ creation_date: 2018-10-01T13:32:01Z
 
 [Term]
 id: PHIPO:0000206
-name: altered pathogen host protein binding specificity
+name: altered pathogen and host protein binding specificity
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction (molecular function??) phenotype in which a mutation causes a gene product to bind to one or more proteins with different specificity from normal. For example, a protein may bind to a protein in a mutant that it does not bind in wild type. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+def: "A molecular function phenotype in which the binding of one pathogen protein to one host protein occurs with a different specificity than normal." []
 xref: FYPO:0005119
-is_a: PHIPO:0000197 ! abnormal pathogen host protein protein interaction
+is_a: PHIPO:0001106 ! protein protein interaction between pathogen and host protein present
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:32:15Z
 
@@ -2044,11 +2042,11 @@ creation_date: 2018-10-01T13:32:18Z
 
 [Term]
 id: PHIPO:0000208
-name: decreased duration of pathogen host protein protein interaction
+name: decreased duration of pathogen and host protein protein interaction
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction (molecular function??) phenotype in which the binding of one protein to another occurs for a shorter time than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+def: "A molecular function phenotype in which the binding of one pathogen protein to one host protein occurs for a shorter time than normal." []
 xref: FYPO:0005785
-is_a: PHIPO:0000197 ! abnormal pathogen host protein protein interaction
+is_a: PHIPO:0001106 ! protein protein interaction between pathogen and host protein present
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:32:28Z
 
@@ -2064,9 +2062,9 @@ creation_date: 2018-10-01T13:32:31Z
 id: PHIPO:0000210
 name: decreased extent and duration of pathogen host protein protein interaction
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction (molecular function??) phenotype in which the binding of one protein to another occurs to a lower extent, and for a shorter time, than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+def: "A molecular function phenotype in which the binding of one pathogen protein to one host protein occurs to a lower extent, and for a shorter time, than normal." []
 xref: FYPO:0005784
-is_a: PHIPO:0000197 ! abnormal pathogen host protein protein interaction
+is_a: PHIPO:0001106 ! protein protein interaction between pathogen and host protein present
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:32:42Z
 
@@ -2082,9 +2080,9 @@ creation_date: 2018-10-01T13:32:46Z
 id: PHIPO:0000212
 name: decreased pathogen host protein protein interaction
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction (molecular function??) phenotype in which the binding of one protein to another occurs to a lower extent than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+def: "A molecular function phenotype in which the binding of one pathogen protein to one host protein occurs to a lesser extent than normal." []
 xref: FYPO:0001645
-is_a: PHIPO:0000197 ! abnormal pathogen host protein protein interaction
+is_a: PHIPO:0001106 ! protein protein interaction between pathogen and host protein present
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:33:00Z
 
@@ -2100,9 +2098,9 @@ creation_date: 2018-10-01T13:33:03Z
 id: PHIPO:0000214
 name: increased pathogen host protein protein interaction
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction (molecular function??) phenotype in which the binding of one protein to another occurs to a greater extent than normal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
+def: "A molecular function phenotype in which the binding of one pathogen protein to one host protein occurs to a greater extent than normal." []
 xref: FYPO:0001571
-is_a: PHIPO:0000197 ! abnormal pathogen host protein protein interaction
+is_a: PHIPO:0001106 ! protein protein interaction between pathogen and host protein present
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:33:15Z
 
@@ -3336,17 +3334,17 @@ creation_date: 2018-10-29T16:19:20Z
 
 [Term]
 id: PHIPO:0000344
-name: normal pathogen host interaction molecular function
+name: obsolete normal pathogen host interaction molecular function
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000347 ! pathogen host interaction molecular function phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:23:29Z
 
 [Term]
 id: PHIPO:0000345
-name: abnormal pathogen host interaction molecular function
+name: obsolete abnormal pathogen host interaction molecular function
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000347 ! pathogen host interaction molecular function phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:32:47Z
 
@@ -3362,6 +3360,7 @@ creation_date: 2018-10-29T16:33:27Z
 id: PHIPO:0000347
 name: pathogen host interaction molecular function phenotype
 namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype that affects a molecular function such as binding or catalytic activity." []
 is_a: PHIPO:0000001 ! pathogen host interaction phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:34:09Z
@@ -3370,6 +3369,7 @@ creation_date: 2018-10-29T16:34:09Z
 id: PHIPO:0000348
 name: pathogen host interaction catalytic activity phenotype
 namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype which affects a catalytic activity." []
 is_a: PHIPO:0000347 ! pathogen host interaction molecular function phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-29T17:04:57Z
@@ -4009,9 +4009,9 @@ creation_date: 2018-12-05T11:48:08Z
 
 [Term]
 id: PHIPO:0000417
-name: abnormal pathogen host interaction pathogen carbohydrate binding phenotype
+name: obsolete abnormal pathogen host interaction pathogen carbohydrate binding phenotype
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000425 ! pathogen host interaction pathogen carbohydrate binding phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:12:15Z
 
@@ -4039,8 +4039,7 @@ creation_date: 2018-12-10T14:13:02Z
 id: PHIPO:0000420
 name: normal pathogen chitin fragment binding
 namespace: single_organism_phenotype
-def: "A pathogen (molecular function??) phenotype in which occurrence of chitin fragment binding by a gene product is normal (i.e. indistinguishable from wild type). The relevant gene product may be encoded by the mutated gene, or by a different gene." []
-comment: this term may need changing to be non-pathogen specific
+def: "A molecular function phenotype in which occurrence of pathogen chitin fragment binding by a pathogen gene product is normal (i.e. indistinguishable from wild type)." []
 is_a: PHIPO:0000016 ! normal single species phenotype
 is_a: PHIPO:0000430 ! carbohydrate binding phenotype
 created_by: alaynecuzick
@@ -4087,40 +4086,42 @@ creation_date: 2018-12-10T14:18:04Z
 id: PHIPO:0000425
 name: pathogen host interaction pathogen carbohydrate binding phenotype
 namespace: pathogen_host_interaction_phenotype
-comment: These terms will need some thought. How to differentiate between pathogen protein (chitinase) binding pathogen chitin (polysaccharide) and host chitinase binding pathogen chitin? Both options possible in pathogen host interaction. (in pathogen only pathogen chitinase binding pathogen chitin, in host only .... what happens)
+def: "A pathogen host interaction phenotype which affects the binding of carbohydrate to protein." []
 is_a: PHIPO:0000164 ! pathogen host interaction binding phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:23:58Z
 
 [Term]
 id: PHIPO:0000426
-name: normal pathogen chitinase binds pathogen chitin fragments within host interaction
+name: presence of pathogen chitinase binding to pathogen chitin fragments within host interaction
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000428 ! normal pathogen host interaction pathogen carbohydrate binding phenotype
+def: "A molecular function phenotype in which the binding of pathogen chitinase to pathogen chitin fragments generated within a host interaction is present." []
+is_a: PHIPO:0000425 ! pathogen host interaction pathogen carbohydrate binding phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:30:09Z
 
 [Term]
 id: PHIPO:0000427
-name: normal host chitinase binds pathogen chitin
+name: pathogen chitin binding to host chitinase present
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000428 ! normal pathogen host interaction pathogen carbohydrate binding phenotype
+def: "A molecular function phenotype in which the binding of pathogen chitin to host chitinase is present." []
+is_a: PHIPO:0000425 ! pathogen host interaction pathogen carbohydrate binding phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:31:18Z
 
 [Term]
 id: PHIPO:0000428
-name: normal pathogen host interaction pathogen carbohydrate binding phenotype
+name: obsolete normal pathogen host interaction pathogen carbohydrate binding phenotype
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000425 ! pathogen host interaction pathogen carbohydrate binding phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:32:15Z
 
 [Term]
 id: PHIPO:0000429
-name: normal pathogen and host chitinases bind pathogen chitin and chitin fragments
+name: obsolete normal pathogen and host chitinases bind pathogen chitin and chitin fragments
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000428 ! normal pathogen host interaction pathogen carbohydrate binding phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:32:50Z
 
@@ -4140,8 +4141,7 @@ creation_date: 2018-12-10T14:37:34Z
 id: PHIPO:0000431
 name: abolished pathogen chitin fragment binding
 namespace: single_organism_phenotype
-def: "A pathogen (molecular function??) phenotype in which chitin fragment binding by a gene product does not occur, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
-comment: this term may need changing to be non-pathogen specific
+def: "A pathogen molecular function phenotype in which pathogen chitin fragment binding by a pathogen gene product does not occur. (It was present and is now absent)." []
 is_a: PHIPO:0000421 ! abolished carbohydrate binding
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:39:51Z
@@ -9822,7 +9822,7 @@ id: PHIPO:0001101
 name: pathogen asexual sporulation structures absent within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen reproductive phenotype within host where the pathogen asexual sporulation structures are absent." []
-synonym: "pycnidia absent" RELATED []
+synonym: "pycnidia absent within host" RELATED []
 is_a: PHIPO:0000469 ! abnormal pathogen asexual sporulation within host
 created_by: alaynecuzick
 creation_date: 2019-10-04T12:39:32Z
@@ -9832,14 +9832,14 @@ id: PHIPO:0001102
 name: normal number of pathogen asexual sporulation structures within host lesion
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen reproductive phenotype within host in which the frequency of occurence of asexual sporulation structures within a host lesion is normal (i.e. indistinguishable from wild type)." []
-synonym: "normal number of pycnidia" RELATED []
+synonym: "normal number of pycnidia within host" RELATED []
 is_a: PHIPO:0000472 ! normal pathogen asexual sporulation within host
 created_by: alaynecuzick
 creation_date: 2019-10-04T12:43:45Z
 
 [Term]
 id: PHIPO:0001104
-name: increased level of host RNA in a pathogen host interaction
+name: increased level of host RNA involved in a pathogen host interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A cell phenotype in which the amount of cellular host RNA measured in an interaction with a pathogen is higher than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." []
 is_a: PHIPO:0001099 ! increased RNA level in a pathogen host interaction
@@ -9857,7 +9857,7 @@ creation_date: 2019-10-07T13:29:01Z
 
 [Term]
 id: PHIPO:0001106
-name: presence of binding between pathogen protein and host protein
+name: protein protein interaction between pathogen and host protein present
 namespace: pathogen_host_interaction_phenotype
 def: "A molecular function phenotype in which the binding of one pathogen protein to one host protein is present." []
 synonym: "binding present between pathogen protein and host protein" EXACT []
@@ -9867,7 +9867,7 @@ creation_date: 2019-10-09T12:33:57Z
 
 [Term]
 id: PHIPO:0001107
-name: absence of binding between pathogen protein and host protein
+name: protein protein interaction between pathogen and host protein absent
 namespace: pathogen_host_interaction_phenotype
 def: "A molecular function phenotype in which the binding of one pathogen protein to one host protein is absent." []
 synonym: "binding absent between pathogen protein and host protein" EXACT []
@@ -9935,9 +9935,29 @@ is_a: PHIPO:0001110 ! pathogen induced decrease in host pH
 created_by: alaynecuzick
 creation_date: 2019-10-09T12:49:07Z
 
+[Term]
+id: PHIPO:0001114
+name: decreased number of pathogen asexual sporulation structures within host lesion
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen reproductive phenotype within host in which the frequency of occurence of asexual sporulation structures within a host lesion is fewer than normal." []
+synonym: "reduced number of pycnidia within host" RELATED []
+is_a: PHIPO:0000469 ! abnormal pathogen asexual sporulation within host
+created_by: alaynecuzick
+creation_date: 2019-10-11T10:55:28Z
+
+[Term]
+id: PHIPO:0001115
+name: decreased phosphopantetheinyl transferase activity
+namespace: single_organism_phenotype
+def: "A single species molecular function phenotype in which the observed rate of phosphopantetheinyl transferase activity is decreased." []
+is_a: PHIPO:0000436 ! decreased catalytic activity
+created_by: alaynecuzick
+creation_date: 2019-10-18T09:13:50Z
+
 [Typedef]
 id: PHIPO:0000304
 name: qualifier
 comment: Used in FYPO as described in PATO best practices; placeholder relation to indicate normality/abnormality.\n\nwhich namespace? do we need all 3 triplicated again?
 created_by: alaynecuzick
 creation_date: 2018-10-12T13:24:02Z
+
