@@ -1152,7 +1152,7 @@ AnnotationAssertion(oboInOwl:inSubset obo:PHIPO_0000002 "qc_do_not_annotate"^^xs
 AnnotationAssertion(oboInOwl:inSubset obo:PHIPO_0000002 "qc_do_not_manually_annotate"^^xsd:string)
 AnnotationAssertion(rdfs:comment obo:PHIPO_0000002 "This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype."^^xsd:string)
 AnnotationAssertion(rdfs:label obo:PHIPO_0000002 "single species phenotype"^^xsd:string)
-EquivalentClasses(obo:PHIPO_0000002 ObjectIntersectionOf(obo:PHIPO_0000505 ObjectSomeValuesFrom(obo:RO_0000052 obo:PHIPO_0000506)))
+SubClassOf(obo:PHIPO_0000002 obo:PHIPO_0000505)
 
 # Class: obo:PHIPO_0000003 (tissue phenotype)
 
@@ -5894,12 +5894,13 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0000505 "phipo")
 AnnotationAssertion(rdfs:comment obo:PHIPO_0000505 "Definition from FYPO. Unclear which namespace to enter under so currently 'floating'")
 AnnotationAssertion(rdfs:label obo:PHIPO_0000505 "phenotype"@en)
 
-# Class: obo:PHIPO_0000506 (single species)
+# Class: obo:PHIPO_0000506 (obsolete single species)
 
 AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0000506 "alaynecuzick"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0000506 "2019-01-23T11:16:14Z"^^xsd:dateTime)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0000506 "single_organism_phenotype")
-AnnotationAssertion(rdfs:label obo:PHIPO_0000506 "single species"@en)
+AnnotationAssertion(rdfs:label obo:PHIPO_0000506 "obsolete single species"^^xsd:string)
+AnnotationAssertion(owl:deprecated obo:PHIPO_0000506 "true"^^xsd:boolean)
 
 # Class: obo:PHIPO_0000507 (obsolete pathogen host interaction)
 
