@@ -1082,6 +1082,7 @@ Declaration(Class(obo:PHIPO_0001119))
 Declaration(Class(obo:PHIPO_0001120))
 Declaration(Class(obo:PHIPO_0001121))
 Declaration(Class(obo:PHIPO_0001122))
+Declaration(Class(obo:PHIPO_0001123))
 Declaration(ObjectProperty(obo:PHIPO_0000304))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:created_by))
@@ -5938,20 +5939,18 @@ AnnotationAssertion(rdfs:comment obo:PHIPO_0000512 "This is a high-level term wh
 AnnotationAssertion(rdfs:label obo:PHIPO_0000512 "pathogen host interaction tissue phenotype"@en)
 SubClassOf(obo:PHIPO_0000512 obo:PHIPO_0000001)
 
-# Class: obo:PHIPO_0000513 (inviable cell population)
+# Class: obo:PHIPO_0000513 (inviable population)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0000513 "A lethal single organism cell population phenotype resulting from altering a gene product that is essential for the life of the organism.
-
-A single organism cell population phenotype in which none of the cells in the population are viable."^^xsd:string)
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0000513 "An organism population phenotype in which no organisms in the population are viable."^^xsd:string)
 AnnotationAssertion(obo:created_by obo:PHIPO_0000513 "alaynecuzick"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0000513 "2019-02-11T13:01:17Z"^^xsd:dateTime)
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PHIPO_0000513 "lethal in cell population")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PHIPO_0000513 "lethal")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0000513 "single_organism_phenotype"^^xsd:string)
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PHIPO_0000513 "essential")
-AnnotationAssertion(rdfs:label obo:PHIPO_0000513 "inviable cell population"@en)
+AnnotationAssertion(rdfs:label obo:PHIPO_0000513 "inviable population"@en)
 SubClassOf(obo:PHIPO_0000513 obo:PHIPO_0000514)
 
-# Class: obo:PHIPO_0000514 (single organism cell population viability phenotype)
+# Class: obo:PHIPO_0000514 (population viability phenotype)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0000514 "A single organism cell population phenotype that reflects the proportion of the population that survive and develop normally.")
 AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0000514 "alaynecuzick"^^xsd:string)
@@ -5961,7 +5960,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0000514 "single_organism_
 AnnotationAssertion(oboInOwl:inSubset obo:PHIPO_0000514 "qc_do_not_annotate")
 AnnotationAssertion(oboInOwl:inSubset obo:PHIPO_0000514 "qc_do_not_manually_annotate")
 AnnotationAssertion(rdfs:comment obo:PHIPO_0000514 "This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.")
-AnnotationAssertion(rdfs:label obo:PHIPO_0000514 "single organism cell population viability phenotype"@en)
+AnnotationAssertion(rdfs:label obo:PHIPO_0000514 "population viability phenotype"@en)
 SubClassOf(obo:PHIPO_0000514 obo:PHIPO_0000509)
 
 # Class: obo:PHIPO_0000516 (gain of host HR induced by pathogen during biotrophic lifestyle)
@@ -11192,6 +11191,17 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001122 "single_organism_
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PHIPO_0001122 "decreased perithecium formation")
 AnnotationAssertion(rdfs:label obo:PHIPO_0001122 "decreased number of sexual sporulation structures"@en)
 SubClassOf(obo:PHIPO_0001122 obo:PHIPO_0001121)
+
+# Class: obo:PHIPO_0001123 (viable population)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001123 "An organism population phenotype in which some organisms in the population are viable.")
+AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001123 "alaynecuzick"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001123 "2019-12-03T10:47:11Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PHIPO_0001123 "non-lethal")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001123 "single_organism_phenotype")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PHIPO_0001123 "non-essential")
+AnnotationAssertion(rdfs:label obo:PHIPO_0001123 "viable population"@en)
+SubClassOf(obo:PHIPO_0001123 obo:PHIPO_0000514)
 
 
 )
