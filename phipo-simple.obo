@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-12-03/phipo-simple.owl
+data-version: phipo/releases/2019-12-04/phipo-simple.owl
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -2702,7 +2702,7 @@ id: PHIPO:0000273
 name: filamentous colony morphology phenotype
 namespace: single_organism_phenotype
 def: "A single species population phenotype affecting the morphology of a colony growing in filamentous form." []
-is_a: PHIPO:0001049 ! colony morphology phenotype
+is_a: PHIPO:0001049 ! colony shape phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-03T13:38:13Z
 
@@ -2746,8 +2746,9 @@ id: PHIPO:0000278
 name: normal hyphal colony morphology
 namespace: single_organism_phenotype
 def: "A single species population phenotype where the morphology of a colony growing in filamentous form is normal (indistinguishable from wild type)." []
+synonym: "normal colony morphology" BROAD []
 is_a: PHIPO:0000273 ! filamentous colony morphology phenotype
-is_a: PHIPO:0001057 ! normal colony morphology
+is_a: PHIPO:0001057 ! normal colony shape
 created_by: alaynecuzick
 creation_date: 2018-10-03T13:40:03Z
 
@@ -8389,9 +8390,10 @@ creation_date: 2019-06-10T09:09:38Z
 id: PHIPO:0000958
 name: abnormal shape of hyphal colony
 namespace: single_organism_phenotype
-def: "A single species hyphal colony morphology phenotype where the shape of the colony is abnormal." []
+def: "A single species hyphal colony phenotype where the shape of the colony is abnormal." []
+synonym: "abnormal colony morphology" BROAD []
 is_a: PHIPO:0000037 ! abnormal hyphal colony morphology
-is_a: PHIPO:0001051 ! abnormal shape of colony
+is_a: PHIPO:0001051 ! abnormal colony shape
 created_by: alaynecuzick
 creation_date: 2019-06-10T09:31:56Z
 
@@ -9280,37 +9282,30 @@ creation_date: 2019-09-06T12:46:32Z
 
 [Term]
 id: PHIPO:0001049
-name: colony morphology phenotype
+name: colony shape phenotype
 namespace: single_organism_phenotype
-def: "A single species population phenotype affecting the morphology of a colony." []
+def: "A single species population phenotype affecting the shape of a colony." []
+synonym: "colony morphology phenotype" BROAD []
 is_a: PHIPO:0000509 ! population phenotype
 created_by: alaynecuzick
 creation_date: 2019-09-10T13:26:05Z
 
 [Term]
-id: PHIPO:0001050
-name: abnormal colony morphology
+id: PHIPO:0001051
+name: abnormal colony shape
 namespace: single_organism_phenotype
-def: "A single species population phenotype where the morphology of a colony is abnormal." []
-is_a: PHIPO:0001049 ! colony morphology phenotype
+def: "A single species phenotype where the shape of the colony is abnormal." []
+synonym: "abnormal colony morphology" BROAD []
+is_a: PHIPO:0001049 ! colony shape phenotype
 created_by: alaynecuzick
 creation_date: 2019-09-10T13:29:47Z
-
-[Term]
-id: PHIPO:0001051
-name: abnormal shape of colony
-namespace: single_organism_phenotype
-def: "A single species colony morphology phenotype where the shape of the colony is abnormal." []
-is_a: PHIPO:0001050 ! abnormal colony morphology
-created_by: alaynecuzick
-creation_date: 2019-09-10T13:31:28Z
 
 [Term]
 id: PHIPO:0001052
 name: hyper-smooth colony morphology
 namespace: single_organism_phenotype
 def: "A single species colony morphology phenotype where the colony is smoother than normal." []
-is_a: PHIPO:0001051 ! abnormal shape of colony
+is_a: PHIPO:0001051 ! abnormal colony shape
 created_by: alaynecuzick
 creation_date: 2019-09-10T13:32:18Z
 
@@ -9319,7 +9314,7 @@ id: PHIPO:0001053
 name: hyper-rugose colony morphology
 namespace: single_organism_phenotype
 def: "A single species colony morphology phenotype where the colony is more rugose (wrinkled; corrugated) than normal." []
-is_a: PHIPO:0001051 ! abnormal shape of colony
+is_a: PHIPO:0001051 ! abnormal colony shape
 created_by: alaynecuzick
 creation_date: 2019-09-10T13:32:45Z
 
@@ -9328,6 +9323,7 @@ id: PHIPO:0001054
 name: abnormal size of colony
 namespace: single_organism_phenotype
 def: "A single species colony morphology phenotype where the size of the population is abnormal." []
+synonym: "abnormal colony morphology" BROAD []
 synonym: "abnormal size of hyphal colony" RELATED []
 is_a: PHIPO:0000162 ! population growth phenotype
 created_by: alaynecuzick
@@ -9359,19 +9355,20 @@ creation_date: 2019-09-10T13:38:53Z
 
 [Term]
 id: PHIPO:0001057
-name: normal colony morphology
+name: normal colony shape
 namespace: single_organism_phenotype
-def: "A single species population phenotype where the morphology of a colony growing in filamentous form is normal (indistinguishable from wild type)." []
-is_a: PHIPO:0001049 ! colony morphology phenotype
+def: "A single species phenotype where the shape of the colony is normal (indistinguishable from wild type)." []
+synonym: "normal colony morphology" BROAD []
+is_a: PHIPO:0001049 ! colony shape phenotype
 created_by: alaynecuzick
-creation_date: 2019-09-10T13:40:17Z
+creation_date: 2019-09-13T10:53:42Z
 
 [Term]
 id: PHIPO:0001058
 name: normal rugose colony morphology
 namespace: single_organism_phenotype
 def: "A single species colony morphology phenotype where the colony is as rugose (wrinkled; corrugated) as normal (indistinguishable from wild type)." []
-is_a: PHIPO:0001057 ! normal colony morphology
+is_a: PHIPO:0001057 ! normal colony shape
 created_by: alaynecuzick
 creation_date: 2019-09-10T13:40:49Z
 
@@ -9456,19 +9453,11 @@ created_by: alaynecuzick
 creation_date: 2019-09-11T13:30:41Z
 
 [Term]
-id: PHIPO:0001065
-name: normal shape of colony
-namespace: single_organism_phenotype
-def: "A single species colony morphology phenotype where the shape of the colony is normal (indistinguishable from wild type)." []
-is_a: PHIPO:0001057 ! normal colony morphology
-created_by: alaynecuzick
-creation_date: 2019-09-13T10:53:42Z
-
-[Term]
 id: PHIPO:0001066
 name: normal size of colony
 namespace: single_organism_phenotype
 def: "A single species colony morphology phenotype where the size of the population is normal (indistinguishable from wild type)." []
+synonym: "normal colony morphology" BROAD []
 synonym: "normal size of filamentous colony" RELATED []
 is_a: PHIPO:0000405 ! normal population growth
 created_by: alaynecuzick
