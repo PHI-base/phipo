@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-12-04/phipo-simple.owl
+data-version: phipo/releases/2019-12-09/phipo-simple.owl
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -1245,7 +1245,7 @@ id: PHIPO:0000127
 name: abnormal asexual spore morphology
 namespace: single_organism_phenotype
 def: "A reproductive phenotype where the morphology of the asexual spore is abnormal (FAO:0000023). The product of mitosis." []
-is_a: PHIPO:0000043 ! abnormal reproduction phenotype
+is_a: PHIPO:0000047 ! abnormal asexual reproduction
 created_by: alaynecuzick
 creation_date: 2018-07-17T13:01:41Z
 
@@ -3217,9 +3217,9 @@ creation_date: 2018-10-29T15:59:22Z
 id: PHIPO:0000332
 name: pathogen colonization of host phenotype
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction tissue phenotype which affects the pathogen colonization of the body, tissues, or cells of the host organism." []
+def: "A pathogen host interaction phenotype which affects the pathogen colonization of the body, tissues, or cells of the host organism." []
 comment: Colonization of host is the action of a pathogen establishing itself in a host. (Covers adhesion, penetration, surface growth).
-is_a: PHIPO:0000512 ! pathogen host interaction tissue phenotype
+is_a: PHIPO:0000001 ! pathogen host interaction phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:06:31Z
 
@@ -3227,7 +3227,7 @@ creation_date: 2018-10-29T16:06:31Z
 id: PHIPO:0000333
 name: pathogen cell to cell migration in host phenotype
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction tissue colonization phenotype which affects the directional movement of the pathogen within the host organism (GO:0044001)." []
+def: "A pathogen host interaction colonization phenotype which affects the directional movement of the pathogen within the host organism (GO:0044001)." []
 is_a: PHIPO:0000332 ! pathogen colonization of host phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:08:18Z
@@ -8767,7 +8767,7 @@ creation_date: 2019-08-10T13:35:33Z
 id: PHIPO:0000998
 name: pathogen morphology phenotype during colonization of host
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction tissue phenotype which affects the pathogen morphology during host colonization. This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
+def: "A pathogen host interaction phenotype which affects the pathogen morphology during host colonization. This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
 is_a: PHIPO:0001007 ! pathogen colonization of host morphology phenotype
 created_by: alaynecuzick
 creation_date: 2019-08-10T13:48:27Z
@@ -8776,7 +8776,7 @@ creation_date: 2019-08-10T13:48:27Z
 id: PHIPO:0000999
 name: abnormal pathogen morphology during colonization of host
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction tissue phenotype where the morphology of the pathogen during host colonization is abnormal. This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
+def: "A pathogen host interaction phenotype where the morphology of the pathogen during host colonization is abnormal. This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
 is_a: PHIPO:0000998 ! pathogen morphology phenotype during colonization of host
 created_by: alaynecuzick
 creation_date: 2019-08-10T13:49:02Z
@@ -8785,7 +8785,7 @@ creation_date: 2019-08-10T13:49:02Z
 id: PHIPO:0001000
 name: abnormal pathogen swollen terminal hyphae during cell to cell migration
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction tissue phenotype where the morphology of the pathogen terminal hyphae during host colonization is abnormal. This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
+def: "A pathogen host interaction phenotype where the morphology of the pathogen terminal hyphae during host colonization is abnormal. This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
 synonym: "abnormal pathogen swollen terminal hyphae during colonization of host" EXACT []
 is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration in host
 is_a: PHIPO:0000999 ! abnormal pathogen morphology during colonization of host
@@ -8796,7 +8796,7 @@ creation_date: 2019-08-10T13:49:58Z
 id: PHIPO:0001001
 name: abnormal organization of pathogen septin collar during cell to cell migration
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction tissue phenotype where the morphology of the pathogen septin collar (GO:0032173) during host colonization is abnormal. This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
+def: "A pathogen host interaction phenotype where the morphology of the pathogen septin collar (GO:0032173) during host colonization is abnormal. This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
 comment: update Go term when available to 'septin collar of invasive fungi'
 synonym: "abnormal organization of pathogen septin collar during colonization of host" RELATED []
 is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration in host
@@ -8808,7 +8808,7 @@ creation_date: 2019-08-10T13:51:23Z
 id: PHIPO:0001002
 name: host morphology phenotype during pathogen invasion
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction tissue phenotype which affects the host morphology during pathogen invasion. This relates to the pathogen colonization of the body, tissues, or cells of the host organism" []
+def: "A pathogen host interaction phenotype which affects the host morphology during pathogen invasion. This relates to the pathogen colonization of the body, tissues, or cells of the host organism" []
 is_a: PHIPO:0001007 ! pathogen colonization of host morphology phenotype
 created_by: alaynecuzick
 creation_date: 2019-08-10T13:51:57Z
@@ -8817,7 +8817,7 @@ creation_date: 2019-08-10T13:51:57Z
 id: PHIPO:0001003
 name: normal formation of extra-invasive hyphal membrane
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction tissue phenotype where the morphology of the host extra-invasive hyphal membrane (GO:0085039) during pathogen invasion is normal (indistinguishable from wild type). This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
+def: "A pathogen host interaction phenotype where the morphology of the host extra-invasive hyphal membrane (GO:0085039) during pathogen invasion is normal (indistinguishable from wild type). This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
 synonym: "normal formation of BIC (biotrophic interfacial complex)" EXACT []
 is_a: PHIPO:0001005 ! normal host morphology during pathogen invasion
 created_by: alaynecuzick
@@ -8827,7 +8827,7 @@ creation_date: 2019-08-10T13:52:53Z
 id: PHIPO:0001004
 name: normal pathogen morphology during colonization of host
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction tissue phenotype where the morphology of the pathogen during host colonization is normal (indistinguishable from wild type). This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
+def: "A pathogen host interaction phenotype where the morphology of the pathogen during host colonization is normal (indistinguishable from wild type). This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
 is_a: PHIPO:0000998 ! pathogen morphology phenotype during colonization of host
 created_by: alaynecuzick
 creation_date: 2019-08-10T13:56:49Z
@@ -8836,7 +8836,7 @@ creation_date: 2019-08-10T13:56:49Z
 id: PHIPO:0001005
 name: normal host morphology during pathogen invasion
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction tissue phenotype where the morphology of the host during pathogen invasion is normal (indistinguishable from wild type). This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
+def: "A pathogen host interaction phenotype where the morphology of the host during pathogen invasion is normal (indistinguishable from wild type). This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
 is_a: PHIPO:0001002 ! host morphology phenotype during pathogen invasion
 created_by: alaynecuzick
 creation_date: 2019-08-10T13:58:16Z
@@ -8845,7 +8845,7 @@ creation_date: 2019-08-10T13:58:16Z
 id: PHIPO:0001006
 name: abnormal host morphology during pathogen invasion
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction tissue phenotype where the morphology of the host during pathogen invasion is abnormal. This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
+def: "A pathogen host interaction phenotype where the morphology of the host during pathogen invasion is abnormal. This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
 is_a: PHIPO:0001002 ! host morphology phenotype during pathogen invasion
 created_by: alaynecuzick
 creation_date: 2019-08-10T13:58:30Z
@@ -8854,7 +8854,7 @@ creation_date: 2019-08-10T13:58:30Z
 id: PHIPO:0001007
 name: pathogen colonization of host morphology phenotype
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction tissue phenotype which affects the morphology of the pathogen or the host during pathogen colonization of the host. This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
+def: "A pathogen host interaction phenotype which affects the morphology of the pathogen or the host during pathogen colonization of the host. This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
 is_a: PHIPO:0000332 ! pathogen colonization of host phenotype
 created_by: alaynecuzick
 creation_date: 2019-08-10T14:19:52Z
@@ -9486,7 +9486,7 @@ creation_date: 2019-09-20T11:06:42Z
 id: PHIPO:0001069
 name: death of host organism with pathogen
 namespace: pathogen_host_interaction_phenotype
-def: "A host organism viability phenotype where the host organism dies in the presence of the pathogen." []
+def: "A host organism viability phenotype where the host organism death is accelerated by the pathogen." []
 synonym: "host kill assay" RELATED []
 synonym: "inviable host organism with pathogen" RELATED []
 synonym: "pathogen induced death of host organism" RELATED []
@@ -10064,6 +10064,36 @@ synonym: "abolished suppression of host PTI" EXACT []
 is_a: PHIPO:0001116 ! pathogen host interaction signaling pathway phenotype
 created_by: alaynecuzick
 creation_date: 2019-12-03T11:09:29Z
+
+[Term]
+id: PHIPO:0001130
+name: stunted host growth during pathogen colonization
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the presence of a pathogen (or symbiont) has resulted in a decreased size of the host organism." []
+synonym: "decreased host growth with pathogen" EXACT []
+synonym: "decreased host size with pathogen" EXACT []
+is_a: PHIPO:0001006 ! abnormal host morphology during pathogen invasion
+created_by: alaynecuzick
+creation_date: 2019-12-09T13:45:59Z
+
+[Term]
+id: PHIPO:0001131
+name: increased number of host side shoots during pathogen colonization
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the presence of a pathogen (or symbiont) has resulted in an increased number of side shoots produced by the host organism." []
+synonym: "increased number of host tillers during pathogen colonization" NARROW []
+is_a: PHIPO:0001006 ! abnormal host morphology during pathogen invasion
+created_by: alaynecuzick
+creation_date: 2019-12-09T13:51:02Z
+
+[Term]
+id: PHIPO:0001132
+name: increased size of pathogen vacuoles during host colonization
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the size of the pathogen vacuoles are larger than normal during host colonization. This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
+is_a: PHIPO:0000999 ! abnormal pathogen morphology during colonization of host
+created_by: alaynecuzick
+creation_date: 2019-12-09T14:04:10Z
 
 [Typedef]
 id: PHIPO:0000304
