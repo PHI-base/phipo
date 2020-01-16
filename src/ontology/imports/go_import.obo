@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-10-10/imports/go_import.owl
+data-version: phipo/releases/2020-01-16/imports/go_import.owl
 ontology: phipo/imports/go_import
 
 [Term]
@@ -18,6 +18,17 @@ subset: goslim_plant
 synonym: "reproductive physiological process" EXACT []
 xref: Wikipedia:Reproduction
 is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0000280
+name: nuclear division
+namespace: biological_process
+def: "The division of a cell nucleus into two nuclei, with DNA and other nuclear contents distributed between the daughter nuclei." [GOC:mah]
+subset: goslim_pir
+synonym: "karyokinesis" RELATED []
+xref: MIPS_funcat:10.03.04
+xref: MIPS_funcat:10.03.04.07
+is_a: GO:0048285 ! organelle fission
 
 [Term]
 id: GO:0001402
@@ -277,6 +288,7 @@ subset: goslim_agr
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_chembl
+subset: goslim_drosophila
 subset: goslim_flybase_ribbon
 subset: goslim_generic
 subset: goslim_mouse
@@ -300,6 +312,7 @@ subset: goslim_agr
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_chembl
+subset: goslim_drosophila
 subset: goslim_flybase_ribbon
 subset: goslim_generic
 subset: goslim_mouse
@@ -461,6 +474,7 @@ subset: goslim_agr
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_chembl
+subset: goslim_drosophila
 subset: goslim_flybase_ribbon
 subset: goslim_generic
 subset: goslim_metagenomics
@@ -493,6 +507,7 @@ id: GO:0006403
 name: RNA localization
 namespace: biological_process
 def: "A process in which RNA is transported to, or maintained in, a specific location." [GOC:ai]
+subset: goslim_drosophila
 synonym: "establishment and maintenance of RNA localization" EXACT []
 synonym: "RNA localisation" EXACT [GOC:mah]
 is_a: GO:0033036 ! macromolecule localization
@@ -534,7 +549,7 @@ is_a: GO:0006793 ! phosphorus metabolic process
 id: GO:0006807
 name: nitrogen compound metabolic process
 namespace: biological_process
-def: "The chemical reactions and pathways involving organic or inorganic compounds that contain nitrogen." [CHEBI:51143, GOC:go_curators, GOC:jl, ISBN:0198506732]
+def: "The chemical reactions and pathways involving organic or inorganic compounds that contain nitrogen." [GOC:jl, ISBN:0198506732]
 subset: goslim_metagenomics
 subset: goslim_pir
 synonym: "nitrogen compound metabolism" EXACT []
@@ -614,12 +629,28 @@ namespace: biological_process
 alt_id: GO:0016238
 def: "The cellular catabolic process in which cells digest parts of their own cytoplasm; allows for both recycling of macromolecular constituents under conditions of cellular stress and remodeling the intracellular structure for cell differentiation." [GOC:autophagy, ISBN:0198547684, PMID:11099404, PMID:9412464]
 subset: goslim_chembl
+subset: goslim_drosophila
 subset: goslim_generic
 subset: goslim_pir
 subset: goslim_pombe
 xref: Wikipedia:Autophagy_(cellular)
 is_a: GO:0044248 ! cellular catabolic process
 is_a: GO:0061919 ! process utilizing autophagic mechanism
+
+[Term]
+id: GO:0006928
+name: movement of cell or subcellular component
+namespace: biological_process
+def: "The directed, self-propelled movement of a cell or subcellular component without the involvement of an external agent such as a transporter or a pore." [GOC:dgh, GOC:dph, GOC:jl, GOC:mlg]
+comment: Note that in GO cellular components include whole cells (cell is_a cellular component).
+subset: gocheck_do_not_annotate
+subset: goslim_pir
+synonym: "cell movement" RELATED []
+synonym: "cellular component motion" EXACT [GOC:dph, GOC:jl]
+synonym: "cellular component movement" EXACT []
+xref: MIPS_funcat:02.45.11
+xref: MIPS_funcat:34.05
+is_a: GO:0009987 ! cellular process
 
 [Term]
 id: GO:0006950
@@ -631,6 +662,7 @@ subset: gocheck_do_not_manually_annotate
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_chembl
+subset: goslim_drosophila
 subset: goslim_generic
 subset: goslim_metagenomics
 subset: goslim_plant
@@ -658,6 +690,7 @@ name: immune response
 namespace: biological_process
 def: "Any immune system process that functions in the calibrated response of an organism to a potential internal or invasive threat." [GO_REF:0000022, GOC:add, GOC:mtg_15nov05]
 comment: This term was improved by GO_REF:0000022. It was redefined and moved.
+subset: goslim_drosophila
 xref: MIPS_funcat:36.25.16
 is_a: GO:0002376 ! immune system process
 is_a: GO:0050896 ! response to stimulus
@@ -682,7 +715,7 @@ def: "A process that is carried out at the cellular level which results in the a
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_pir
-synonym: "organelle organisation" EXACT [GOC:curators]
+synonym: "organelle organisation" EXACT []
 synonym: "organelle organization and biogenesis" RELATED [GOC:dph, GOC:jl, GOC:mah]
 synonym: "single organism organelle organization" EXACT [GOC:TermGenie]
 synonym: "single-organism organelle organization" RELATED []
@@ -699,6 +732,26 @@ subset: goslim_chembl
 subset: goslim_generic
 xref: MIPS_funcat:20.09.13
 is_a: GO:0006810 ! transport
+
+[Term]
+id: GO:0007049
+name: cell cycle
+namespace: biological_process
+def: "The progression of biochemical and morphological phases and events that occur in a cell during successive cell replication or nuclear replication events. Canonically, the cell cycle comprises the replication and segregation of genetic material followed by the division of the cell, but in endocycles or syncytial cells nuclear replication or nuclear division may not be followed by cell division." [GOC:go_curators, GOC:mtg_cell_cycle]
+subset: gocheck_do_not_manually_annotate
+subset: goslim_agr
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_flybase_ribbon
+subset: goslim_generic
+subset: goslim_pir
+subset: goslim_plant
+synonym: "cell-division cycle" EXACT []
+xref: MIPS_funcat:10
+xref: MIPS_funcat:10.03
+xref: Wikipedia:Cell_cycle
+is_a: GO:0009987 ! cellular process
 
 [Term]
 id: GO:0007154
@@ -740,6 +793,7 @@ id: GO:0008061
 name: chitin binding
 namespace: molecular_function
 def: "Interacting selectively and non-covalently with chitin, a linear polysaccharide consisting of beta-(1->4)-linked N-acetyl-D-glucosamine residues." [GOC:jl, ISBN:0198506732]
+subset: goslim_drosophila
 is_a: GO:0008144 ! drug binding
 is_a: GO:0097367 ! carbohydrate derivative binding
 
@@ -823,6 +877,7 @@ def: "Any biological process that results in permanent cessation of all vital fu
 comment: This term should not be used for direct annotation. The only exception should be when experimental data (e.g., staining with trypan blue or propidium iodide) show that cell death has occurred, but fail to provide details on death modality (accidental versus programmed). When information is provided on the cell death mechanism, annotations should be made to the appropriate descendant of 'cell death' (such as, but not limited to, GO:0097300 'programmed necrotic cell death' or GO:0006915 'apoptotic process'). Also, if experimental data suggest that a gene product influences cell death indirectly, rather than being involved in the death process directly, consider annotating to a 'regulation' term.
 subset: goslim_agr
 subset: goslim_chembl
+subset: goslim_drosophila
 subset: goslim_generic
 subset: goslim_mouse
 subset: goslim_plant
@@ -839,6 +894,7 @@ def: "Catalysis of the hydrolysis of a peptide bond. A peptide bond is a covalen
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_chembl
+subset: goslim_drosophila
 subset: goslim_generic
 subset: goslim_metagenomics
 subset: goslim_pir
@@ -936,6 +992,7 @@ namespace: biological_process
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an external stimulus." [GOC:hb]
 comment: Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation QC.
 subset: gocheck_do_not_manually_annotate
+subset: goslim_drosophila
 subset: goslim_plant
 synonym: "response to environmental stimulus" EXACT []
 xref: MIPS_funcat:36.20.35
@@ -1329,6 +1386,16 @@ intersection_of: negatively_regulates GO:0006793 ! phosphorus metabolic process
 relationship: negatively_regulates GO:0006793 ! phosphorus metabolic process
 
 [Term]
+id: GO:0010564
+name: regulation of cell cycle process
+namespace: biological_process
+def: "Any process that modulates a cellular process that is involved in the progression of biochemical and morphological phases and events that occur in a cell during successive cell replication or nuclear replication events." [GOC:dph, GOC:tb]
+is_a: GO:0051726 ! regulation of cell cycle
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0022402 ! cell cycle process
+relationship: regulates GO:0022402 ! cell cycle process
+
+[Term]
 id: GO:0010570
 name: regulation of filamentous growth
 namespace: biological_process
@@ -1461,6 +1528,19 @@ intersection_of: positively_regulates GO:0008219 ! cell death
 relationship: positively_regulates GO:0008219 ! cell death
 
 [Term]
+id: GO:0010948
+name: negative regulation of cell cycle process
+namespace: biological_process
+def: "Any process that decreases the rate, frequency or extent of a cellular process that is involved in the progression of biochemical and morphological phases and events that occur in a cell during successive cell replication or nuclear replication events." [GOC:dph, GOC:tb]
+is_a: GO:0010564 ! regulation of cell cycle process
+is_a: GO:0045786 ! negative regulation of cell cycle
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0022402 ! cell cycle process
+relationship: negatively_regulates GO:0022402 ! cell cycle process
+created_by: tanyaberardini
+creation_date: 2009-04-27T09:53:22Z
+
+[Term]
 id: GO:0010952
 name: positive regulation of peptidase activity
 namespace: biological_process
@@ -1546,7 +1626,7 @@ namespace: biological_process
 def: "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of a vesicle." [GOC:mah]
 subset: goslim_pir
 subset: goslim_yeast
-synonym: "vesicle organisation" EXACT [GOC:curators]
+synonym: "vesicle organisation" EXACT []
 synonym: "vesicle organization and biogenesis" RELATED [GOC:mah]
 is_a: GO:0006996 ! organelle organization
 
@@ -1559,6 +1639,7 @@ def: "A cellular transport process in which transported substances are moved in 
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_chembl
+subset: goslim_drosophila
 subset: goslim_generic
 subset: goslim_pir
 subset: goslim_pombe
@@ -1577,6 +1658,7 @@ namespace: molecular_function
 def: "Catalysis of the transfer of a phosphate group, usually from ATP, to a substrate molecule." [ISBN:0198506732]
 comment: Note that this term encompasses all activities that transfer a single phosphate group; although ATP is by far the most common phosphate donor, reactions using other phosphate donors are included in this term.
 subset: goslim_chembl
+subset: goslim_drosophila
 subset: goslim_generic
 subset: goslim_metagenomics
 subset: goslim_plant
@@ -1761,6 +1843,17 @@ xref: Wikipedia:Asexual_reproduction
 is_a: GO:0000003 ! reproduction
 
 [Term]
+id: GO:0022402
+name: cell cycle process
+namespace: biological_process
+def: "The cellular process that ensures successive accurate and complete genome replication and chromosome segregation." [GOC:isa_complete, GOC:mtg_cell_cycle]
+subset: gocheck_do_not_annotate
+is_a: GO:0009987 ! cellular process
+intersection_of: GO:0009987 ! cellular process
+intersection_of: part_of GO:0007049 ! cell cycle
+relationship: part_of GO:0007049 ! cell cycle
+
+[Term]
 id: GO:0022414
 name: reproductive process
 namespace: biological_process
@@ -1773,6 +1866,20 @@ intersection_of: part_of GO:0000003 ! reproduction
 relationship: part_of GO:0000003 ! reproduction
 created_by: janelomax
 creation_date: 2012-09-19T15:56:06Z
+
+[Term]
+id: GO:0022607
+name: cellular component assembly
+namespace: biological_process
+alt_id: GO:0071844
+def: "The aggregation, arrangement and bonding together of a cellular component." [GOC:isa_complete]
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_pir
+synonym: "cell structure assembly" EXACT []
+synonym: "cellular component assembly at cellular level" EXACT []
+is_a: GO:0016043 ! cellular component organization
+relationship: part_of GO:0044085 ! cellular component biogenesis
 
 [Term]
 id: GO:0023051
@@ -1864,9 +1971,10 @@ id: GO:0030246
 name: carbohydrate binding
 namespace: molecular_function
 alt_id: GO:0005529
-def: "Interacting selectively and non-covalently with any carbohydrate, which includes monosaccharides, oligosaccharides and polysaccharides as well as substances derived from monosaccharides by reduction of the carbonyl group (alditols), by oxidation of one or more hydroxy groups to afford the corresponding aldehydes, ketones, or carboxylic acids, or by replacement of one or more hydroxy group(s) by a hydrogen atom. Cyclitols are generally not regarded as carbohydrates." [CHEBI:16646, GOC:mah]
+def: "Interacting selectively and non-covalently with any carbohydrate, which includes monosaccharides, oligosaccharides and polysaccharides as well as substances derived from monosaccharides by reduction of the carbonyl group (alditols), by oxidation of one or more hydroxy groups to afford the corresponding aldehydes, ketones, or carboxylic acids, or by replacement of one or more hydroxy group(s) by a hydrogen atom. Cyclitols are generally not regarded as carbohydrates." [GOC:mah]
 subset: goslim_agr
 subset: goslim_chembl
+subset: goslim_drosophila
 subset: goslim_flybase_ribbon
 subset: goslim_metagenomics
 subset: goslim_pir
@@ -1880,10 +1988,24 @@ id: GO:0030247
 name: polysaccharide binding
 namespace: molecular_function
 alt_id: GO:0002506
-def: "Interacting selectively and non-covalently with any polysaccharide, a polymer of many (typically more than 10) monosaccharide residues linked glycosidically." [CHEBI:18154, GOC:mah]
+def: "Interacting selectively and non-covalently with any polysaccharide, a polymer of many (typically more than 10) monosaccharide residues linked glycosidically." [GOC:mah]
 synonym: "polysaccharide assembly with MHC class II protein complex" NARROW []
 xref: MIPS_funcat:16.05
 is_a: GO:0030246 ! carbohydrate binding
+
+[Term]
+id: GO:0030436
+name: asexual sporulation
+namespace: biological_process
+def: "The formation of spores derived from the products of an asexual cell division. Examples of this process are found in bacteria and fungi." [GOC:mah, PMID:9529886]
+subset: goslim_aspergillus
+synonym: "asexual reproductive sporulation" EXACT []
+synonym: "asexual spore formation" EXACT []
+synonym: "mitotic spore formation" EXACT []
+synonym: "mitotic sporulation" EXACT []
+xref: MIPS_funcat:43.01.02.05.01
+is_a: GO:0019954 ! asexual reproduction
+is_a: GO:0043934 ! sporulation
 
 [Term]
 id: GO:0030447
@@ -1893,6 +2015,16 @@ def: "The process in which a multicellular organism, a unicellular organism or a
 subset: goslim_aspergillus
 subset: goslim_candida
 is_a: GO:0040007 ! growth
+
+[Term]
+id: GO:0030448
+name: hyphal growth
+namespace: biological_process
+def: "Growth of fungi as threadlike, tubular structures that may contain multiple nuclei and may or may not be divided internally by septa, or cross-walls." [GOC:mcc, ISBN:0471522295]
+subset: goslim_candida
+xref: MIPS_funcat:43.01.03.06
+xref: MIPS_funcat:47.01.01
+is_a: GO:0030447 ! filamentous growth
 
 [Term]
 id: GO:0030545
@@ -2451,6 +2583,14 @@ intersection_of: regulates GO:0006996 ! organelle organization
 relationship: regulates GO:0006996 ! organelle organization
 
 [Term]
+id: GO:0033059
+name: cellular pigmentation
+namespace: biological_process
+def: "The deposition or aggregation of coloring matter in a cell." [GOC:mtg_MIT_16mar07]
+is_a: GO:0009987 ! cellular process
+is_a: GO:0043473 ! pigmentation
+
+[Term]
 id: GO:0033365
 name: protein localization to organelle
 namespace: biological_process
@@ -2551,6 +2691,52 @@ intersection_of: positively_regulates GO:0009626 ! plant-type hypersensitive res
 relationship: positively_regulates GO:0009626 ! plant-type hypersensitive response
 
 [Term]
+id: GO:0034293
+name: sexual sporulation
+namespace: biological_process
+def: "The formation of spores derived from the products of meiosis." [GOC:mah]
+subset: goslim_aspergillus
+synonym: "meiotic spore formation" EXACT []
+synonym: "meiotic sporulation" EXACT []
+synonym: "sexual spore formation" EXACT []
+is_a: GO:0003006 ! developmental process involved in reproduction
+is_a: GO:0043934 ! sporulation
+intersection_of: GO:0043934 ! sporulation
+intersection_of: part_of GO:0051321 ! meiotic cell cycle
+relationship: part_of GO:0019953 ! sexual reproduction
+relationship: part_of GO:0051321 ! meiotic cell cycle
+
+[Term]
+id: GO:0034305
+name: regulation of asexual sporulation
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of spore formation from the products of mitosis." [GOC:mah]
+synonym: "regulation of asexual spore formation" EXACT []
+synonym: "regulation of mitotic spore formation" EXACT []
+synonym: "regulation of mitotic sporulation" EXACT []
+is_a: GO:0043937 ! regulation of sporulation
+is_a: GO:1903664 ! regulation of asexual reproduction
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0030436 ! asexual sporulation
+relationship: regulates GO:0030436 ! asexual sporulation
+
+[Term]
+id: GO:0034306
+name: regulation of sexual sporulation
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of spore formation from the products of meiosis. An example of this is found in Saccharomyces cerevisiae." [GOC:mah]
+synonym: "MAPKKK cascade during sporulation" RELATED []
+synonym: "regulation of meiotic spore formation" EXACT []
+synonym: "regulation of meiotic sporulation" EXACT []
+synonym: "regulation of sexual spore formation" EXACT []
+is_a: GO:0043900 ! regulation of multi-organism process
+is_a: GO:0043937 ! regulation of sporulation
+is_a: GO:0051445 ! regulation of meiotic cell cycle
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0034293 ! sexual sporulation
+relationship: regulates GO:0034293 ! sexual sporulation
+
+[Term]
 id: GO:0034504
 name: protein localization to nucleus
 namespace: biological_process
@@ -2569,6 +2755,7 @@ name: cellular protein localization
 namespace: biological_process
 alt_id: GO:0016249
 def: "Any process in which a protein is transported to, and/or maintained in, a specific location at the level of a cell. Localization at the cellular level encompasses movement within the cell, from within the cell to the cell surface, or from one location to another at the surface of a cell." [GOC:mah]
+subset: goslim_drosophila
 synonym: "cellular protein localisation" EXACT [GOC:mah]
 synonym: "channel localizer activity" NARROW [GOC:mah]
 is_a: GO:0008104 ! protein localization
@@ -2594,6 +2781,7 @@ alt_id: GO:0007243
 alt_id: GO:0023013
 alt_id: GO:0023034
 def: "The process in which a signal is passed on to downstream components within the cell, which become activated themselves to further propagate the signal and finally trigger a change in the function or state of the cell." [GOC:bf, GOC:jl, GOC:signaling, ISBN:3527303782]
+subset: goslim_drosophila
 synonym: "intracellular protein kinase cascade" NARROW [GOC:signaling]
 synonym: "intracellular signal transduction pathway" NARROW []
 synonym: "intracellular signaling cascade" RELATED [GOC:signaling]
@@ -2650,6 +2838,17 @@ created_by: rfoulger
 creation_date: 2012-01-17T04:20:34Z
 
 [Term]
+id: GO:0036211
+name: protein modification process
+namespace: biological_process
+def: "The covalent alteration of one or more amino acids occurring in proteins, peptides and nascent polypeptides (co-translational, post-translational modifications). Includes the modification of charged tRNAs that are destined to occur in a protein (pre-translation modification)." [GOC:bf, GOC:jl]
+synonym: "protein modification" EXACT [GOC:bf]
+is_a: GO:0019538 ! protein metabolic process
+is_a: GO:0043412 ! macromolecule modification
+created_by: rfoulger
+creation_date: 2012-04-26T01:47:12Z
+
+[Term]
 id: GO:0038023
 name: signaling receptor activity
 namespace: molecular_function
@@ -2658,6 +2857,7 @@ alt_id: GO:0019041
 def: "Receiving a signal and transmitting it in the cell to initiate a change in cell activity. A signal is a physical entity or change in state that is used to transfer information in order to trigger a response." [GOC:bf, GOC:signaling]
 subset: goslim_agr
 subset: goslim_chembl
+subset: goslim_drosophila
 subset: goslim_flybase_ribbon
 subset: goslim_metagenomics
 subset: goslim_mouse
@@ -2694,6 +2894,71 @@ is_a: GO:0050789 ! regulation of biological process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0040007 ! growth
 relationship: regulates GO:0040007 ! growth
+
+[Term]
+id: GO:0040011
+name: locomotion
+namespace: biological_process
+def: "Self-propelled movement of a cell or organism from one location to another." [GOC:dgh]
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_pir
+xref: MIPS_funcat:02.45.11
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0040012
+name: regulation of locomotion
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of locomotion of a cell or organism." [GOC:ems]
+is_a: GO:0050789 ! regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0040011 ! locomotion
+relationship: regulates GO:0040011 ! locomotion
+
+[Term]
+id: GO:0040013
+name: negative regulation of locomotion
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of locomotion of a cell or organism." [GOC:go_curators]
+synonym: "down regulation of locomotion" EXACT []
+synonym: "down-regulation of locomotion" EXACT []
+synonym: "downregulation of locomotion" EXACT []
+synonym: "inhibition of locomotion" NARROW []
+is_a: GO:0040012 ! regulation of locomotion
+is_a: GO:0048519 ! negative regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0040011 ! locomotion
+relationship: negatively_regulates GO:0040011 ! locomotion
+
+[Term]
+id: GO:0040017
+name: positive regulation of locomotion
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of locomotion of a cell or organism." [GOC:go_curators]
+synonym: "activation of locomotion" NARROW []
+synonym: "stimulation of locomotion" NARROW []
+synonym: "up regulation of locomotion" EXACT []
+synonym: "up-regulation of locomotion" EXACT []
+synonym: "upregulation of locomotion" EXACT []
+is_a: GO:0040012 ! regulation of locomotion
+is_a: GO:0048518 ! positive regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0040011 ! locomotion
+relationship: positively_regulates GO:0040011 ! locomotion
+
+[Term]
+id: GO:0040020
+name: regulation of meiotic nuclear division
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of meiotic nuclear division, the process in which the nucleus of a diploid cell divides twice forming four haploid cells, one or more of which usually function as gametes." [GOC:ems, GOC:ma]
+synonym: "regulation of meiosis" BROAD [GOC:vw]
+is_a: GO:0010564 ! regulation of cell cycle process
+is_a: GO:0051445 ! regulation of meiotic cell cycle
+is_a: GO:0051783 ! regulation of nuclear division
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0140013 ! meiotic nuclear division
+relationship: regulates GO:0140013 ! meiotic nuclear division
 
 [Term]
 id: GO:0042268
@@ -2855,7 +3120,7 @@ name: macromolecule metabolic process
 namespace: biological_process
 alt_id: GO:0043283
 alt_id: GO:0044259
-def: "The chemical reactions and pathways involving macromolecules, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass." [CHEBI:33694, GOC:mah]
+def: "The chemical reactions and pathways involving macromolecules, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass." [GOC:mah]
 subset: goslim_pir
 synonym: "biopolymer metabolic process" EXACT [GOC:mtg_chebi_dec09]
 synonym: "macromolecule metabolism" EXACT []
@@ -2939,7 +3204,7 @@ intersection_of: part_of GO:0005622 ! intracellular
 id: GO:0043385
 name: mycotoxin metabolic process
 namespace: biological_process
-def: "The chemical reactions and pathways involving a mycotoxin, any poisonous substance produced by a fungus." [CHEBI:25442, GOC:jl]
+def: "The chemical reactions and pathways involving a mycotoxin, any poisonous substance produced by a fungus." [GOC:jl]
 synonym: "mycotoxin metabolism" EXACT []
 is_a: GO:0009404 ! toxin metabolic process
 
@@ -2947,7 +3212,7 @@ is_a: GO:0009404 ! toxin metabolic process
 id: GO:0043386
 name: mycotoxin biosynthetic process
 namespace: biological_process
-def: "The chemical reactions and pathways resulting in the formation of a mycotoxin, any poisonous substance produced by a fungus." [CHEBI:25442, GOC:jl]
+def: "The chemical reactions and pathways resulting in the formation of a mycotoxin, any poisonous substance produced by a fungus." [GOC:jl]
 synonym: "mycotoxin anabolism" EXACT []
 synonym: "mycotoxin biosynthesis" EXACT []
 synonym: "mycotoxin formation" EXACT []
@@ -2997,6 +3262,14 @@ intersection_of: regulates GO:0005515 ! protein binding
 relationship: regulates GO:0005515 ! protein binding
 
 [Term]
+id: GO:0043412
+name: macromolecule modification
+namespace: biological_process
+def: "The covalent alteration of one or more monomeric units in a polypeptide, polynucleotide, polysaccharide, or other biological macromolecule, resulting in a change in its properties." [GOC:go_curators]
+subset: goslim_pir
+is_a: GO:0043170 ! macromolecule metabolic process
+
+[Term]
 id: GO:0043455
 name: regulation of secondary metabolic process
 namespace: biological_process
@@ -3007,6 +3280,34 @@ is_a: GO:0019222 ! regulation of metabolic process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0019748 ! secondary metabolic process
 relationship: regulates GO:0019748 ! secondary metabolic process
+
+[Term]
+id: GO:0043473
+name: pigmentation
+namespace: biological_process
+def: "The accumulation of pigment in an organism, tissue or cell, either by increased deposition or by increased number of cells." [GOC:jl]
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_pir
+is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0043476
+name: pigment accumulation
+namespace: biological_process
+def: "The aggregation of coloring matter in a particular location in an organism, tissue or cell, occurring in response to some external stimulus." [GOC:jl]
+synonym: "pigment accumulation in response to external stimulus" EXACT []
+is_a: GO:0009605 ! response to external stimulus
+is_a: GO:0043473 ! pigmentation
+
+[Term]
+id: GO:0043482
+name: cellular pigment accumulation
+namespace: biological_process
+def: "The aggregation of coloring matter in a particular location in a cell, occurring in response to some external stimulus." [GOC:jl]
+is_a: GO:0033059 ! cellular pigmentation
+is_a: GO:0043476 ! pigment accumulation
+is_a: GO:0051716 ! cellular response to stimulus
 
 [Term]
 id: GO:0043549
@@ -3062,6 +3363,48 @@ intersection_of: regulates GO:0044403 ! symbiotic process
 relationship: regulates GO:0044403 ! symbiotic process
 
 [Term]
+id: GO:0043934
+name: sporulation
+namespace: biological_process
+def: "The process whose specific outcome is the progression of a spore over time, from its initiation to the mature structure. A spore is a structure that can be used for dissemination, for survival of adverse conditions because of its heat and dessication resistance, and/or for reproduction." [GOC:pamgo_curators]
+subset: goslim_metagenomics
+subset: goslim_yeast
+xref: Wikipedia:Spore
+is_a: GO:0032502 ! developmental process
+
+[Term]
+id: GO:0043937
+name: regulation of sporulation
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of sporulation, the process whose specific outcome is the progression of a spore over time, from its initiation to the mature structure." [GOC:pamgo_curators]
+is_a: GO:0050793 ! regulation of developmental process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0043934 ! sporulation
+relationship: regulates GO:0043934 ! sporulation
+
+[Term]
+id: GO:0043938
+name: positive regulation of sporulation
+namespace: biological_process
+def: "Any process that activates, maintains or increases the frequency, rate or extent of sporulation, the process whose specific outcome is the progression of a spore over time, from its initiation to the mature structure." [GOC:pamgo_curators]
+is_a: GO:0043937 ! regulation of sporulation
+is_a: GO:0051094 ! positive regulation of developmental process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0043934 ! sporulation
+relationship: positively_regulates GO:0043934 ! sporulation
+
+[Term]
+id: GO:0043939
+name: negative regulation of sporulation
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of sporulation, the process whose specific outcome is the progression of a spore over time, from its initiation to the mature structure." [GOC:pamgo_curators]
+is_a: GO:0043937 ! regulation of sporulation
+is_a: GO:0051093 ! negative regulation of developmental process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0043934 ! sporulation
+relationship: negatively_regulates GO:0043934 ! sporulation
+
+[Term]
 id: GO:0043946
 name: positive regulation of catalytic activity in other organism involved in symbiotic interaction
 namespace: biological_process
@@ -3076,11 +3419,12 @@ is_a: GO:0052203 ! modulation of catalytic activity in other organism involved i
 
 [Term]
 id: GO:0043948
-name: positive regulation by symbiont of host catalytic activity
+name: induction by symbiont of host catalytic activity
 namespace: biological_process
 def: "Any process in which the symbiont activates, maintains or increases the frequency, rate or extent of host enzyme activity. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:mtg_pamgo_17jul06]
 synonym: "activation by symbiont of host enzyme activity" NARROW []
 synonym: "activation of host enzyme activity" NARROW []
+synonym: "positive regulation by symbiont of host catalytic activity" EXACT []
 synonym: "positive regulation by symbiont of host enzyme activity" EXACT []
 synonym: "up regulation by symbiont of host enzyme activity" EXACT []
 synonym: "up-regulation by symbiont of host enzyme activity" EXACT []
@@ -3122,6 +3466,60 @@ is_a: GO:0044003 ! modification by symbiont of host morphology or physiology
 is_a: GO:0050794 ! regulation of cellular process
 intersection_of: GO:0044003 ! modification by symbiont of host morphology or physiology
 intersection_of: regulates GO:0009987 ! cellular process
+
+[Term]
+id: GO:0044071
+name: modulation by symbiont of host cell cycle
+namespace: biological_process
+def: "The process in which a symbiont organism effects a change in its host's cell cycle through direct interactions with the host cell macromolecular machinery." [MITRE:tk]
+synonym: "modification by symbiont of host cell cycle" EXACT []
+synonym: "modulation of host cell cycle by symbiont" EXACT []
+synonym: "regulation by symbiont of host cell cycle" EXACT []
+is_a: GO:0010564 ! regulation of cell cycle process
+is_a: GO:0044068 ! modulation by symbiont of host cellular process
+intersection_of: GO:0044003 ! modification by symbiont of host morphology or physiology
+intersection_of: regulates GO:0022402 ! cell cycle process
+
+[Term]
+id: GO:0044072
+name: negative regulation by symbiont of host cell cycle
+namespace: biological_process
+def: "The process in which a symbiont organism stops, prevents or reduces the rate or extent of its host's progression through its cell cycle via direct interactions with the host cell macromolecular machinery." [MITRE:tk]
+is_a: GO:0010948 ! negative regulation of cell cycle process
+is_a: GO:0044071 ! modulation by symbiont of host cell cycle
+intersection_of: GO:0044003 ! modification by symbiont of host morphology or physiology
+intersection_of: negatively_regulates GO:0022402 ! cell cycle process
+
+[Term]
+id: GO:0044085
+name: cellular component biogenesis
+namespace: biological_process
+alt_id: GO:0071843
+def: "A process that results in the biosynthesis of constituent macromolecules, assembly, and arrangement of constituent parts of a cellular component. Includes biosynthesis of constituent macromolecules, and those macromolecular modifications that are involved in synthesis or assembly of the cellular component." [GOC:jl, GOC:mah]
+subset: goslim_pir
+synonym: "cellular component biogenesis at cellular level" EXACT []
+is_a: GO:0071840 ! cellular component organization or biogenesis
+
+[Term]
+id: GO:0044087
+name: regulation of cellular component biogenesis
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of cellular component biogenesis, a process that results in the biosynthesis of constituent macromolecules, assembly, and arrangement of constituent parts of a cellular component." [GOC:jl]
+is_a: GO:0050789 ! regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0044085 ! cellular component biogenesis
+relationship: regulates GO:0044085 ! cellular component biogenesis
+
+[Term]
+id: GO:0044089
+name: positive regulation of cellular component biogenesis
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of cellular component biogenesis, a process that results in the biosynthesis of constituent macromolecules, assembly, and arrangement of constituent parts of a cellular component." [GOC:jl]
+is_a: GO:0044087 ! regulation of cellular component biogenesis
+is_a: GO:0048518 ! positive regulation of biological process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0044085 ! cellular component biogenesis
+relationship: positively_regulates GO:0044085 ! cellular component biogenesis
 
 [Term]
 id: GO:0044092
@@ -3179,6 +3577,128 @@ intersection_of: part_of GO:0044419 ! interspecies interaction between organisms
 relationship: part_of GO:0044419 ! interspecies interaction between organisms
 created_by: jane
 creation_date: 2009-07-30T02:26:46Z
+
+[Term]
+id: GO:0044115
+name: development of symbiont involved in interaction with host
+namespace: biological_process
+def: "The progression of an organism from an initial condition to a later condition, occurring in, on or near the exterior of its host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:jl, GOC:pamgo_curators]
+comment: This term partially replaces the obsolete term 'growth or development of symbiont during interaction with host ; GO:0052108'. See also 'growth of symbiont in host ; GO:0044117'.
+synonym: "development of symbiont during interaction with host" RELATED [GOC:dph]
+is_a: GO:0044111 ! development involved in symbiotic interaction
+created_by: jane
+creation_date: 2009-07-30T03:26:36Z
+
+[Term]
+id: GO:0044117
+name: growth of symbiont in host
+namespace: biological_process
+alt_id: GO:0044112
+alt_id: GO:0044116
+alt_id: GO:0044123
+alt_id: GO:0044125
+def: "The increase in size or mass of an organism, occurring within the cells or tissues of the host organism. This may (but not necessarily) include a filamentous growth form, and also can include secretion of proteases and lipases to break down host tissue. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:jl, GOC:pamgo_curators]
+comment: This term partially replaces the obsolete term 'growth or development of symbiont in host ; GO:0044412'. See also 'development of symbiont in host ; GO:0044114'.
+synonym: "growth in other organism during symbiotic interaction" RELATED [GOC:tb]
+synonym: "growth in other organism involved in symbiotic interaction" RELATED []
+synonym: "growth of symbiont during interaction with host" RELATED [GOC:tb]
+synonym: "growth of symbiont in host intercellular space" BROAD []
+synonym: "growth of symbiont in host vascular tissue" NARROW []
+synonym: "growth of symbiont involved in interaction with host" RELATED []
+is_a: GO:0044110 ! growth involved in symbiotic interaction
+is_a: GO:0044403 ! symbiotic process
+created_by: jane
+creation_date: 2009-07-30T02:32:14Z
+
+[Term]
+id: GO:0044132
+name: development of symbiont on or near host
+namespace: biological_process
+def: "The progression of a symbiont from an initial condition to a later condition, within the cells or tissues of its host organism." [GOC:jl, GOC:pamgo_curators]
+comment: This term partially replaces the obsolete term 'growth or development of symbiont on or near host ; GO:0044408'. See also 'growth of symbiont on or near host ; GO:0044133'.
+is_a: GO:0044115 ! development of symbiont involved in interaction with host
+created_by: jane
+creation_date: 2009-08-04T03:36:02Z
+
+[Term]
+id: GO:0044138
+name: modulation of development of symbiont on or near host
+namespace: biological_process
+def: "Any process in which the symbiont regulates its progression from an initial condition to a later condition, on or near the cells or tissues of the host organism." [GOC:jl, GOC:pamgo_curators]
+comment: This term partially replaces the obsolete term 'modulation of growth or development of symbiont on or near host ; GO:0075305'. See also 'modulation of growth of symbiont on or near host ; GO:0044139'.
+is_a: GO:0044145 ! modulation of development of symbiont involved in interaction with host
+relationship: regulates GO:0044132 ! development of symbiont on or near host
+created_by: jane
+creation_date: 2009-08-04T04:24:25Z
+
+[Term]
+id: GO:0044141
+name: negative regulation of development of symbiont on or near host surface
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the symbiont's progression from an initial condition to a later condition, on or near the cells or tissues of the host organism." [GOC:jl, GOC:pamgo_curators]
+comment: This term partially replaces the obsolete term 'negative regulation of growth or development of symbiont on or near host surface ; GO:0075309'. See also 'negative regulation of growth of symbiont on or near host surface ; GO:0044140'.
+is_a: GO:0044138 ! modulation of development of symbiont on or near host
+is_a: GO:0044147 ! negative regulation of development of symbiont involved in interaction with host
+relationship: negatively_regulates GO:0044132 ! development of symbiont on or near host
+created_by: jane
+creation_date: 2009-08-04T04:32:18Z
+
+[Term]
+id: GO:0044143
+name: positive regulation of development of symbiont on or near host surface
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of the symbiont's progression from an initial condition to a later condition, on or near the cells or tissues of the host organism." [GOC:jl, GOC:pamgo_curators]
+comment: This term partially replaces the obsolete term 'positive regulation of growth or development of symbiont on or near host surface ; GO:0075337'. See also 'positive regulation of growth of symbiont on or near host surface ; GO:0044142'.
+is_a: GO:0044138 ! modulation of development of symbiont on or near host
+is_a: GO:0044149 ! positive regulation of development of symbiont involved in interaction with host
+relationship: positively_regulates GO:0044132 ! development of symbiont on or near host
+created_by: jane
+creation_date: 2009-08-06T01:35:48Z
+
+[Term]
+id: GO:0044145
+name: modulation of development of symbiont involved in interaction with host
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of the progression of an organism from an initial condition to a later condition, occurring in, on or near the exterior of its host organism." [GOC:jl, GOC:pamgo_curators]
+comment: This term partially replaces the obsolete term 'modulation of growth or development of symbiont during interaction with host ; GO:0075338'. See also 'modulation of growth of symbiont during interaction with host ; GO:0044144'.
+synonym: "modulation of development of symbiont during interaction with host" RELATED [GOC:dph]
+is_a: GO:0043903 ! regulation of symbiosis, encompassing mutualism through parasitism
+is_a: GO:0050793 ! regulation of developmental process
+relationship: regulates GO:0044115 ! development of symbiont involved in interaction with host
+created_by: jane
+creation_date: 2009-08-06T01:57:38Z
+
+[Term]
+id: GO:0044147
+name: negative regulation of development of symbiont involved in interaction with host
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the progression of an organism from an initial condition to a later condition, occurring in, on or near the exterior of its host organism." [GOC:jl, GOC:pamgo_curators]
+comment: This term partially replaces the obsolete term 'negative regulation of growth or development of symbiont during interaction with host ; GO:0075340'.
+synonym: "negative regulation of development of symbiont during interaction with host" RELATED [GOC:dph]
+is_a: GO:0043901 ! negative regulation of multi-organism process
+is_a: GO:0044145 ! modulation of development of symbiont involved in interaction with host
+is_a: GO:0051093 ! negative regulation of developmental process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0044115 ! development of symbiont involved in interaction with host
+relationship: negatively_regulates GO:0044115 ! development of symbiont involved in interaction with host
+created_by: jane
+creation_date: 2009-08-06T02:04:59Z
+
+[Term]
+id: GO:0044149
+name: positive regulation of development of symbiont involved in interaction with host
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of the progression of an organism from an initial condition to a later condition, occurring in, on or near the exterior of its host organism." [GOC:jl, GOC:pamgo_curators]
+comment: This term partially replaces the obsolete term 'positive regulation of growth or development of symbiont during interaction with host ; GO:0075339'. See also 'positive regulation of growth of symbiont during interaction with host ; GO:0044148'.
+synonym: "positive regulation of development of symbiont during interaction with host" RELATED [GOC:dph]
+is_a: GO:0043902 ! positive regulation of multi-organism process
+is_a: GO:0044145 ! modulation of development of symbiont involved in interaction with host
+is_a: GO:0051094 ! positive regulation of developmental process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0044115 ! development of symbiont involved in interaction with host
+relationship: positively_regulates GO:0044115 ! development of symbiont involved in interaction with host
+created_by: jane
+creation_date: 2009-08-06T02:20:55Z
 
 [Term]
 id: GO:0044215
@@ -3248,7 +3768,7 @@ id: GO:0044260
 name: cellular macromolecule metabolic process
 namespace: biological_process
 alt_id: GO:0034960
-def: "The chemical reactions and pathways involving macromolecules, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass, as carried out by individual cells." [CHEBI:33694, GOC:mah]
+def: "The chemical reactions and pathways involving macromolecules, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass, as carried out by individual cells." [GOC:mah]
 synonym: "cellular biopolymer metabolic process" EXACT [GOC:mtg_chebi_dec09]
 synonym: "cellular macromolecule metabolism" EXACT []
 is_a: GO:0043170 ! macromolecule metabolic process
@@ -3299,7 +3819,7 @@ alt_id: GO:0043298
 alt_id: GO:0044404
 alt_id: GO:0072519
 alt_id: GO:0085031
-def: "A process carried out by symbiont gene products that enables the interaction between two organisms living together in more or less intimate association. The various forms of symbiosis include parasitism, in which the association is disadvantageous or destructive to one of the organisms; mutualism, in which the association is advantageous, or often necessary to one or both and not harmful to either; and commensalism, in which one member of the association benefits while the other is not affected. However, mutualism, parasitism, and commensalism are often not discrete categories of interactions and should rather be perceived as a continuum of interaction ranging from parasitism to mutualism. In fact, the direction of a symbiotic interaction can change during the lifetime of the symbionts due to developmental changes as well as changes in the biotic/abiotic environment in which the interaction occurs. Microscopic symbionts are often referred to as endosymbionts." [GOC:cc, https://study.com/academy/lesson/symbiont-definition-lesson-quiz.html]
+def: "A process carried out by gene products in an organism that enable the organism to engage in a symbiotic relationship, a more or less intimate association, with another organism. The various forms of symbiosis include parasitism, in which the association is disadvantageous or destructive to one of the organisms; mutualism, in which the association is advantageous, or often necessary to one or both and not harmful to either; and commensalism, in which one member of the association benefits while the other is not affected. However, mutualism, parasitism, and commensalism are often not discrete categories of interactions and should rather be perceived as a continuum of interaction ranging from parasitism to mutualism. In fact, the direction of a symbiotic interaction can change during the lifetime of the symbionts due to developmental changes as well as changes in the biotic/abiotic environment in which the interaction occurs. Microscopic symbionts are often referred to as endosymbionts." [GOC:cc, https://study.com/academy/lesson/symbiont-definition-lesson-quiz.html]
 comment: Changed term, definition see https://github.com/geneontology/go-ontology/issues/14807
 subset: goslim_chembl
 subset: goslim_generic
@@ -3515,6 +4035,16 @@ is_a: GO:0008104 ! protein localization
 is_a: GO:0051234 ! establishment of localization
 
 [Term]
+id: GO:0045229
+name: external encapsulating structure organization
+namespace: biological_process
+def: "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of external structures that lie outside the plasma membrane and surround the entire cell." [GOC:ai, GOC:dph, GOC:jl, GOC:mah]
+subset: goslim_pir
+synonym: "external encapsulating structure organisation" EXACT []
+synonym: "external encapsulating structure organization and biogenesis" EXACT [GOC:dph, GOC:jl, GOC:mah]
+is_a: GO:0016043 ! cellular component organization
+
+[Term]
 id: GO:0045730
 name: respiratory burst
 namespace: biological_process
@@ -3523,6 +4053,41 @@ synonym: "metabolic burst" EXACT []
 synonym: "oxidative burst" EXACT []
 xref: Wikipedia:Respiratory_burst
 is_a: GO:0008152 ! metabolic process
+
+[Term]
+id: GO:0045786
+name: negative regulation of cell cycle
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the rate or extent of progression through the cell cycle." [GOC:dph, GOC:go_curators, GOC:tb]
+synonym: "down regulation of progression through cell cycle" EXACT []
+synonym: "down-regulation of progression through cell cycle" EXACT []
+synonym: "downregulation of progression through cell cycle" EXACT []
+synonym: "inhibition of progression through cell cycle" NARROW []
+synonym: "negative regulation of cell cycle progression" EXACT []
+synonym: "negative regulation of progression through cell cycle" EXACT []
+is_a: GO:0048523 ! negative regulation of cellular process
+is_a: GO:0051726 ! regulation of cell cycle
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0007049 ! cell cycle
+relationship: negatively_regulates GO:0007049 ! cell cycle
+
+[Term]
+id: GO:0045787
+name: positive regulation of cell cycle
+namespace: biological_process
+def: "Any process that activates or increases the rate or extent of progression through the cell cycle." [GOC:go_curators]
+synonym: "activation of progression through cell cycle" NARROW []
+synonym: "positive regulation of cell cycle progression" EXACT []
+synonym: "positive regulation of progression through cell cycle" EXACT [GOC:dph, GOC:tb]
+synonym: "stimulation of progression through cell cycle" NARROW []
+synonym: "up regulation of progression through cell cycle" EXACT []
+synonym: "up-regulation of progression through cell cycle" EXACT []
+synonym: "upregulation of progression through cell cycle" EXACT []
+is_a: GO:0048522 ! positive regulation of cellular process
+is_a: GO:0051726 ! regulation of cell cycle
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0007049 ! cell cycle
+relationship: positively_regulates GO:0007049 ! cell cycle
 
 [Term]
 id: GO:0045806
@@ -3575,6 +4140,43 @@ is_a: GO:0050777 ! negative regulation of immune response
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0045087 ! innate immune response
 relationship: negatively_regulates GO:0045087 ! innate immune response
+
+[Term]
+id: GO:0045835
+name: negative regulation of meiotic nuclear division
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of meiosis." [GOC:go_curators]
+synonym: "down regulation of meiosis" EXACT []
+synonym: "down-regulation of meiosis" EXACT []
+synonym: "downregulation of meiosis" EXACT []
+synonym: "inhibition of meiosis" NARROW []
+synonym: "negative regulation of meiosis" EXACT []
+is_a: GO:0010948 ! negative regulation of cell cycle process
+is_a: GO:0040020 ! regulation of meiotic nuclear division
+is_a: GO:0051447 ! negative regulation of meiotic cell cycle
+is_a: GO:0051784 ! negative regulation of nuclear division
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0140013 ! meiotic nuclear division
+relationship: negatively_regulates GO:0140013 ! meiotic nuclear division
+
+[Term]
+id: GO:0045836
+name: positive regulation of meiotic nuclear division
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of meiosis." [GOC:go_curators]
+synonym: "activation of meiosis" NARROW []
+synonym: "positive regulation of meiosis" EXACT []
+synonym: "stimulation of meiosis" NARROW []
+synonym: "up regulation of meiosis" EXACT []
+synonym: "up-regulation of meiosis" EXACT []
+synonym: "upregulation of meiosis" EXACT []
+is_a: GO:0040020 ! regulation of meiotic nuclear division
+is_a: GO:0051446 ! positive regulation of meiotic cell cycle
+is_a: GO:0051785 ! positive regulation of nuclear division
+is_a: GO:0090068 ! positive regulation of cell cycle process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0140013 ! meiotic nuclear division
+relationship: positively_regulates GO:0140013 ! meiotic nuclear division
 
 [Term]
 id: GO:0045861
@@ -3728,6 +4330,7 @@ alt_id: GO:0071884
 def: "The activity of a gene product that interacts with a receptor to effect a change in the activity of the receptor. Ligands may be produced by the same, or different, cell that expresses the receptor. Ligands may diffuse extracellularly from their point of origin to the receiving cell, or remain attached to an adjacent cell surface (e.g. Notch ligands)." [GOC:kv, GOC:molecular_function_refactoring, GOC:pdt]
 comment: Definition discussed in https://github.com/geneontology/go-ontology/issues/14220
 subset: goslim_chembl
+subset: goslim_drosophila
 synonym: "receptor agonist activity" BROAD [GOC:molecular_function_refactoring]
 synonym: "signaling molecule" EXACT []
 synonym: "signaling receptor ligand activity" EXACT []
@@ -3742,9 +4345,18 @@ creation_date: 2010-09-13T04:51:59Z
 id: GO:0048029
 name: monosaccharide binding
 namespace: molecular_function
-def: "Interacting selectively and non-covalently with any monosaccharide. Monosaccharides are the simplest carbohydrates; they are polyhydroxy aldehydes H[CH(OH)]nC(=O)H or polyhydroxy ketones H[CHOH]nC(=O)[CHOH]mH with three or more carbon atoms. They form the constitutional repeating units of oligo- and polysaccharides." [CHEBI:35381, GOC:jid]
+def: "Interacting selectively and non-covalently with any monosaccharide. Monosaccharides are the simplest carbohydrates; they are polyhydroxy aldehydes H[CH(OH)]nC(=O)H or polyhydroxy ketones H[CHOH]nC(=O)[CHOH]mH with three or more carbon atoms. They form the constitutional repeating units of oligo- and polysaccharides." [GOC:jid]
 is_a: GO:0030246 ! carbohydrate binding
 is_a: GO:0036094 ! small molecule binding
+
+[Term]
+id: GO:0048285
+name: organelle fission
+namespace: biological_process
+def: "The creation of two or more organelles by division of one organelle." [GOC:jid]
+subset: goslim_pir
+subset: goslim_yeast
+is_a: GO:0006996 ! organelle organization
 
 [Term]
 id: GO:0048518
@@ -3795,7 +4407,7 @@ synonym: "up-regulation of cellular process" EXACT []
 synonym: "upregulation of cellular process" EXACT []
 is_a: GO:0048518 ! positive regulation of biological process
 is_a: GO:0050794 ! regulation of cellular process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0009987 ! cellular process
 relationship: positively_regulates GO:0009987 ! cellular process
 
@@ -3862,6 +4474,21 @@ is_a: GO:0048583 ! regulation of response to stimulus
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0050896 ! response to stimulus
 relationship: negatively_regulates GO:0050896 ! response to stimulus
+
+[Term]
+id: GO:0048870
+name: cell motility
+namespace: biological_process
+def: "Any process involved in the controlled self-propelled movement of a cell that results in translocation of the cell from one place to another." [GOC:dgh, GOC:dph, GOC:isa_complete, GOC:mlg]
+subset: goslim_chembl
+subset: goslim_drosophila
+subset: goslim_generic
+synonym: "cell locomotion" EXACT []
+synonym: "cell movement" RELATED []
+synonym: "movement of a cell" EXACT []
+is_a: GO:0006928 ! movement of cell or subcellular component
+is_a: GO:0040011 ! locomotion
+relationship: part_of GO:0051674 ! localization of cell
 
 [Term]
 id: GO:0050776
@@ -3955,7 +4582,7 @@ alt_id: GO:0051244
 def: "Any process that modulates the frequency, rate or extent of a cellular process, any of those that are carried out at the cellular level, but are not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level." [GOC:go_curators]
 synonym: "regulation of cellular physiological process" EXACT []
 is_a: GO:0050789 ! regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0009987 ! cellular process
 relationship: regulates GO:0009987 ! cellular process
 
@@ -4106,7 +4733,7 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of a process involved in the formation, arrangement of constituent parts, or disassembly of cell structures, including the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope." [GOC:ai]
 synonym: "regulation of cell organisation" RELATED [GOC:mah]
 synonym: "regulation of cell organization" RELATED [GOC:mah]
-synonym: "regulation of cellular component organisation" EXACT [GOC:curators]
+synonym: "regulation of cellular component organisation" EXACT []
 synonym: "regulation of cellular component organization and biogenesis" RELATED [GOC:mah]
 is_a: GO:0050794 ! regulation of cellular process
 intersection_of: GO:0008150 ! biological_process
@@ -4357,6 +4984,59 @@ intersection_of: negatively_regulates GO:0019538 ! protein metabolic process
 relationship: negatively_regulates GO:0019538 ! protein metabolic process
 
 [Term]
+id: GO:0051270
+name: regulation of cellular component movement
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of the movement of a cellular component." [GOC:ai, GOC:dph, GOC:jl]
+synonym: "regulation of cell movement" RELATED []
+synonym: "regulation of cellular component motion" EXACT [GOC:mah]
+is_a: GO:0032879 ! regulation of localization
+is_a: GO:0050794 ! regulation of cellular process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0006928 ! movement of cell or subcellular component
+relationship: regulates GO:0006928 ! movement of cell or subcellular component
+
+[Term]
+id: GO:0051271
+name: negative regulation of cellular component movement
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the movement of a cellular component." [GOC:ai, GOC:dph, GOC:jl]
+synonym: "negative regulation of cellular component motion" EXACT [GOC:mah]
+is_a: GO:0048523 ! negative regulation of cellular process
+is_a: GO:0051270 ! regulation of cellular component movement
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0006928 ! movement of cell or subcellular component
+relationship: negatively_regulates GO:0006928 ! movement of cell or subcellular component
+
+[Term]
+id: GO:0051272
+name: positive regulation of cellular component movement
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of the movement of a cellular component." [GOC:ai, GOC:dph, GOC:jl]
+synonym: "positive regulation of cellular component motion" EXACT [GOC:mah]
+is_a: GO:0048522 ! positive regulation of cellular process
+is_a: GO:0051270 ! regulation of cellular component movement
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0006928 ! movement of cell or subcellular component
+relationship: positively_regulates GO:0006928 ! movement of cell or subcellular component
+
+[Term]
+id: GO:0051321
+name: meiotic cell cycle
+namespace: biological_process
+alt_id: GO:0007126
+def: "Progression through the phases of the meiotic cell cycle, in which canonically a cell replicates to produce four offspring with half the chromosomal content of the progenitor cell via two nuclear divisions." [GOC:ai]
+subset: goslim_drosophila
+subset: goslim_yeast
+synonym: "meiosis" RELATED []
+xref: Wikipedia:Meiosis
+is_a: GO:0007049 ! cell cycle
+is_a: GO:0022414 ! reproductive process
+intersection_of: GO:0007049 ! cell cycle
+intersection_of: has_part GO:0140013 ! meiotic nuclear division
+relationship: has_part GO:0140013 ! meiotic nuclear division
+
+[Term]
 id: GO:0051336
 name: regulation of hydrolase activity
 namespace: biological_process
@@ -4451,6 +5131,60 @@ intersection_of: negatively_regulates GO:0016740 ! transferase activity
 relationship: negatively_regulates GO:0016740 ! transferase activity
 
 [Term]
+id: GO:0051445
+name: regulation of meiotic cell cycle
+namespace: biological_process
+def: "Any process that modulates the rate or extent of progression through the meiotic cell cycle." [GOC:ai, GOC:dph, GOC:tb]
+synonym: "meiotic cell cycle modulation" EXACT []
+synonym: "meiotic cell cycle regulation" EXACT []
+synonym: "meiotic cell cycle regulator" RELATED []
+synonym: "modulation of meiotic cell cycle progression" EXACT []
+synonym: "regulation of meiotic cell cycle progression" EXACT []
+synonym: "regulation of progression through meiotic cell cycle" EXACT [GOC:dph, GOC:tb]
+is_a: GO:0051726 ! regulation of cell cycle
+is_a: GO:2000241 ! regulation of reproductive process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0051321 ! meiotic cell cycle
+relationship: regulates GO:0051321 ! meiotic cell cycle
+
+[Term]
+id: GO:0051446
+name: positive regulation of meiotic cell cycle
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of progression through the meiotic cell cycle." [GOC:ai, GOC:dph, GOC:tb]
+synonym: "activation of progression through meiotic cell cycle" NARROW []
+synonym: "positive regulation of meiotic cell cycle progression" EXACT []
+synonym: "positive regulation of progression through meiotic cell cycle" EXACT [GOC:dph, GOC:tb]
+synonym: "stimulation of progression through meiotic cell cycle" NARROW []
+synonym: "up regulation of progression through meiotic cell cycle" EXACT []
+synonym: "up-regulation of progression through meiotic cell cycle" EXACT []
+synonym: "upregulation of progression through meiotic cell cycle" EXACT []
+is_a: GO:0045787 ! positive regulation of cell cycle
+is_a: GO:0051445 ! regulation of meiotic cell cycle
+is_a: GO:2000243 ! positive regulation of reproductive process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0051321 ! meiotic cell cycle
+relationship: positively_regulates GO:0051321 ! meiotic cell cycle
+
+[Term]
+id: GO:0051447
+name: negative regulation of meiotic cell cycle
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the rate or extent of progression through the meiotic cell cycle." [GOC:ai, GOC:dph, GOC:tb]
+synonym: "down regulation of progression through meiotic cell cycle" EXACT []
+synonym: "down-regulation of progression through meiotic cell cycle" EXACT []
+synonym: "downregulation of progression through meiotic cell cycle" EXACT []
+synonym: "inhibition of progression through meiotic cell cycle" NARROW []
+synonym: "negative regulation of meiotic cell cycle progression" EXACT []
+synonym: "negative regulation of progression through meiotic cell cycle" EXACT [GOC:dph, GOC:tb]
+is_a: GO:0045786 ! negative regulation of cell cycle
+is_a: GO:0051445 ! regulation of meiotic cell cycle
+is_a: GO:2000242 ! negative regulation of reproductive process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0051321 ! meiotic cell cycle
+relationship: negatively_regulates GO:0051321 ! meiotic cell cycle
+
+[Term]
 id: GO:0051641
 name: cellular localization
 namespace: biological_process
@@ -4483,6 +5217,17 @@ intersection_of: GO:0051234 ! establishment of localization
 intersection_of: occurs_in GO:0005623 ! cell
 relationship: occurs_in GO:0005623 ! cell
 relationship: part_of GO:0051641 ! cellular localization
+
+[Term]
+id: GO:0051674
+name: localization of cell
+namespace: biological_process
+def: "Any process in which a cell is transported to, and/or maintained in, a specific location." [GOC:ai]
+synonym: "cell localization" EXACT []
+synonym: "establishment and maintenance of cell localization" EXACT []
+synonym: "establishment and maintenance of localization of cell" EXACT []
+synonym: "localisation of cell" EXACT [GOC:mah]
+is_a: GO:0051179 ! localization
 
 [Term]
 id: GO:0051701
@@ -4571,6 +5316,67 @@ is_a: GO:0009987 ! cellular process
 is_a: GO:0050896 ! response to stimulus
 
 [Term]
+id: GO:0051726
+name: regulation of cell cycle
+namespace: biological_process
+alt_id: GO:0000074
+def: "Any process that modulates the rate or extent of progression through the cell cycle." [GOC:ai, GOC:dph, GOC:tb]
+subset: goslim_yeast
+synonym: "cell cycle modulation" EXACT []
+synonym: "cell cycle regulation" EXACT []
+synonym: "cell cycle regulator" RELATED []
+synonym: "control of cell cycle progression" EXACT []
+synonym: "modulation of cell cycle progression" EXACT []
+synonym: "regulation of cell cycle progression" EXACT []
+synonym: "regulation of progression through cell cycle" EXACT []
+synonym: "tumor suppressor" RELATED []
+is_a: GO:0050794 ! regulation of cellular process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0007049 ! cell cycle
+relationship: regulates GO:0007049 ! cell cycle
+
+[Term]
+id: GO:0051783
+name: regulation of nuclear division
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of nuclear division, the partitioning of the nucleus and its genetic information." [GOC:ai]
+is_a: GO:0033043 ! regulation of organelle organization
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0000280 ! nuclear division
+relationship: regulates GO:0000280 ! nuclear division
+
+[Term]
+id: GO:0051784
+name: negative regulation of nuclear division
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of nuclear division, the partitioning of the nucleus and its genetic information." [GOC:ai]
+synonym: "down regulation of nuclear division" EXACT []
+synonym: "down-regulation of nuclear division" EXACT []
+synonym: "downregulation of nuclear division" EXACT []
+synonym: "inhibition of nuclear division" NARROW []
+is_a: GO:0010639 ! negative regulation of organelle organization
+is_a: GO:0051783 ! regulation of nuclear division
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0000280 ! nuclear division
+relationship: negatively_regulates GO:0000280 ! nuclear division
+
+[Term]
+id: GO:0051785
+name: positive regulation of nuclear division
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of nuclear division, the partitioning of the nucleus and its genetic information." [GOC:ai]
+synonym: "activation of nuclear division" NARROW []
+synonym: "stimulation of nuclear division" NARROW []
+synonym: "up regulation of nuclear division" EXACT []
+synonym: "up-regulation of nuclear division" EXACT []
+synonym: "upregulation of nuclear division" EXACT []
+is_a: GO:0010638 ! positive regulation of organelle organization
+is_a: GO:0051783 ! regulation of nuclear division
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0000280 ! nuclear division
+relationship: positively_regulates GO:0000280 ! nuclear division
+
+[Term]
 id: GO:0051817
 name: modification of morphology or physiology of other organism involved in symbiotic interaction
 namespace: biological_process
@@ -4618,7 +5424,6 @@ name: modulation by symbiont of host programmed cell death
 namespace: biological_process
 alt_id: GO:0052152
 def: "Any process in which an organism modulates the frequency, rate or extent of programmed cell death in the host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:mtg_pamgo_17jul06]
-synonym: "effector-triggered necrosis" NARROW [PMID:22241993, PMID:27641772]
 synonym: "modulation by symbiont of host non-apoptotic programmed cell death" NARROW []
 synonym: "modulation of host PCD" EXACT []
 is_a: GO:0043067 ! regulation of programmed cell death
@@ -5012,10 +5817,11 @@ alt_id: GO:0016044
 alt_id: GO:0044802
 def: "A process which results in the assembly, arrangement of constituent parts, or disassembly of a membrane. A membrane is a double layer of lipid molecules that encloses all cells, and, in eukaryotes, many organelles; may be a single or double lipid bilayer; also includes associated proteins." [GOC:dph, GOC:tb]
 subset: goslim_chembl
+subset: goslim_drosophila
 subset: goslim_generic
 subset: goslim_pir
 subset: goslim_pombe
-synonym: "cellular membrane organisation" EXACT [GOC:curators]
+synonym: "cellular membrane organisation" EXACT []
 synonym: "cellular membrane organization" EXACT []
 synonym: "membrane organisation" EXACT [GOC:mah]
 synonym: "membrane organization and biogenesis" RELATED [GOC:mah]
@@ -5109,6 +5915,27 @@ created_by: midori
 creation_date: 2010-01-13T03:19:38Z
 
 [Term]
+id: GO:0071555
+name: cell wall organization
+namespace: biological_process
+alt_id: GO:0007047
+alt_id: GO:0044234
+def: "A process that results in the assembly, arrangement of constituent parts, or disassembly of the cell wall, the rigid or semi-rigid envelope lying outside the cell membrane of plant, fungal and most prokaryotic cells, maintaining their shape and protecting them from osmotic lysis." [GOC:mah]
+subset: goslim_candida
+subset: goslim_pir
+synonym: "cell wall organisation" EXACT []
+synonym: "cell wall organisation in other organism" EXACT [GOC:mah]
+synonym: "cell wall organization and biogenesis" RELATED [GOC:mah]
+synonym: "cell wall organization at cellular level" EXACT [GOC:mah]
+synonym: "cell wall organization in other organism" EXACT []
+synonym: "cellular cell wall organisation" EXACT []
+synonym: "cellular cell wall organization" EXACT []
+is_a: GO:0045229 ! external encapsulating structure organization
+is_a: GO:0071554 ! cell wall organization or biogenesis
+created_by: midori
+creation_date: 2010-01-13T03:33:07Z
+
+[Term]
 id: GO:0071702
 name: organic substance transport
 namespace: biological_process
@@ -5154,6 +5981,94 @@ created_by: midori
 creation_date: 2010-09-10T01:39:16Z
 
 [Term]
+id: GO:0075005
+name: spore germination on or near host
+namespace: biological_process
+def: "The physiological, developmental and morphological changes that occur in a symbiont spore following release from dormancy up to the earliest signs of growth occurring on or near its host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
+comment: Note that this term should not be used to annotate gene products of the host. It should only be used to annotate those gene products from the symbiont involved in this process.
+is_a: GO:0009847 ! spore germination
+is_a: GO:0044132 ! development of symbiont on or near host
+is_a: GO:0051701 ! interaction with host
+
+[Term]
+id: GO:0075006
+name: modulation of spore germination on or near host
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of spore germination on or near host, which is the physiological, developmental and morphological changes that occur in a symbiont spore following release from dormancy up to the earliest signs of growth occurring on or near its host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
+comment: Note that this term should not be used to annotate gene products of the host. It should only be used to annotate those gene products from the symbiont involved in this process.
+is_a: GO:0044138 ! modulation of development of symbiont on or near host
+is_a: GO:1904359 ! regulation of spore germination
+relationship: regulates GO:0075005 ! spore germination on or near host
+
+[Term]
+id: GO:0075007
+name: positive regulation of spore germination on or near host
+namespace: biological_process
+def: "Any process that activates, maintains or increases the frequency, rate or extent of spore germination on or near host, which is the physiological, developmental and morphological changes that occur in a symbiont spore following release from dormancy up to the earliest signs of growth occurring on or near its host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
+comment: Note that this term should not be used to annotate gene products of the host. It should only be used to annotate those gene products from the symbiont involved in this process.
+is_a: GO:0044143 ! positive regulation of development of symbiont on or near host surface
+is_a: GO:0075006 ! modulation of spore germination on or near host
+is_a: GO:1904361 ! positive regulation of spore germination
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0075005 ! spore germination on or near host
+relationship: positively_regulates GO:0075005 ! spore germination on or near host
+
+[Term]
+id: GO:0075008
+name: negative regulation of spore germination on or near host
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of spore germination on or near host, which is the physiological, developmental and morphological changes that occur in a symbiont spore following release from dormancy up to the earliest signs of growth occurring on or near its host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
+comment: Note that this term should not be used to annotate gene products of the host. It should only be used to annotate those gene products from the symbiont involved in this process.
+is_a: GO:0044141 ! negative regulation of development of symbiont on or near host surface
+is_a: GO:0075006 ! modulation of spore germination on or near host
+is_a: GO:1904360 ! negative regulation of spore germination
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0075005 ! spore germination on or near host
+relationship: negatively_regulates GO:0075005 ! spore germination on or near host
+
+[Term]
+id: GO:0075009
+name: germ tube formation on or near host
+namespace: biological_process
+def: "Development of slender tubular outgrowth first produced by most symbiont spores immediately following germination on or near its host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
+comment: Note that this term should not be used to annotate gene products of the host. It should only be used to annotate those gene products from the symbiont involved in this process.
+is_a: GO:0044132 ! development of symbiont on or near host
+relationship: part_of GO:0075005 ! spore germination on or near host
+
+[Term]
+id: GO:0075010
+name: modulation of germ tube formation on or near host
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of germ tube formation on or near host. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
+comment: Note that this term should not be used to annotate gene products of the host. It should only be used to annotate those gene products from the symbiont involved in this process.
+is_a: GO:0075006 ! modulation of spore germination on or near host
+relationship: regulates GO:0075009 ! germ tube formation on or near host
+
+[Term]
+id: GO:0075011
+name: positive regulation of germ tube formation on or near host
+namespace: biological_process
+def: "Any process that activates, maintains or increases the frequency, rate or extent of germ tube formation on or near host. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
+comment: Note that this term should not be used to annotate gene products of the host. It should only be used to annotate those gene products from the symbiont involved in this process.
+is_a: GO:0075007 ! positive regulation of spore germination on or near host
+is_a: GO:0075010 ! modulation of germ tube formation on or near host
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0075009 ! germ tube formation on or near host
+relationship: positively_regulates GO:0075009 ! germ tube formation on or near host
+
+[Term]
+id: GO:0075012
+name: negative regulation of germ tube formation on or near host
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of germ tube formation on or near host. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
+comment: Note that this term should not be used to annotate gene products of the host. It should only be used to annotate those gene products from the symbiont involved in this process.
+is_a: GO:0075008 ! negative regulation of spore germination on or near host
+is_a: GO:0075010 ! modulation of germ tube formation on or near host
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0075009 ! germ tube formation on or near host
+relationship: negatively_regulates GO:0075009 ! germ tube formation on or near host
+
+[Term]
 id: GO:0075044
 name: positive regulation by symbiont of host autophagy
 namespace: biological_process
@@ -5168,9 +6083,9 @@ intersection_of: positively_regulates GO:0006914 ! autophagy
 
 [Term]
 id: GO:0075052
-name: entry into host via a specialized structure
+name: entry into host cell via penetration peg
 namespace: biological_process
-def: "Penetration of a symbiont into the body, tissues, or cells of a host organism via a specialized structure. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
+def: "Penetration of a symbiont into the body, tissues, or cells of a host organism via a peg-like structure for the purpose of penetration into its host organism, which penetrates through the host cuticle and epidermal cell wall. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
 comment: Note that this term should not be used to annotate gene products of the host. It should only be used to annotate those gene products from the symbiont involved in this process.
 synonym: "entry into host via a specialized structure during symbiotic interaction" EXACT []
 synonym: "penetration into host via a specialized structure" EXACT [GOC:vw]
@@ -5251,6 +6166,19 @@ intersection_of: positively_regulates GO:0030447 ! filamentous growth
 relationship: positively_regulates GO:0030447 ! filamentous growth
 created_by: tanyaberardini
 creation_date: 2009-08-03T11:04:21Z
+
+[Term]
+id: GO:0090068
+name: positive regulation of cell cycle process
+namespace: biological_process
+def: "Any process that increases the rate, frequency or extent of a cellular process that is involved in the progression of biochemical and morphological phases and events that occur in a cell during successive cell replication or nuclear replication events." [GOC:dph, GOC:tb]
+is_a: GO:0010564 ! regulation of cell cycle process
+is_a: GO:0045787 ! positive regulation of cell cycle
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0022402 ! cell cycle process
+relationship: positively_regulates GO:0022402 ! cell cycle process
+created_by: tanyaberardini
+creation_date: 2009-09-09T11:39:52Z
 
 [Term]
 id: GO:0090087
@@ -5334,6 +6262,18 @@ def: "A part of a cellular organism that is either an immaterial entity or a mat
 is_a: GO:0005575 ! cellular_component
 created_by: kmv
 creation_date: 2019-08-12T18:01:37Z
+
+[Term]
+id: GO:0140013
+name: meiotic nuclear division
+namespace: biological_process
+def: "One of the two nuclear divisions that occur as part of the meiotic cell cycle." [PMID:9334324]
+is_a: GO:0000280 ! nuclear division
+is_a: GO:1903046 ! meiotic cell cycle process
+intersection_of: GO:0000280 ! nuclear division
+intersection_of: part_of GO:0051321 ! meiotic cell cycle
+created_by: pg
+creation_date: 2017-03-23T09:40:00Z
 
 [Term]
 id: GO:0140096
@@ -5691,6 +6631,21 @@ created_by: bf
 creation_date: 2013-12-02T11:33:10Z
 
 [Term]
+id: GO:1903046
+name: meiotic cell cycle process
+namespace: biological_process
+def: "A process that is part of the meiotic cell cycle." [GO_REF:0000060, GOC:mtg_cell_cycle, GOC:TermGenie]
+subset: gocheck_do_not_annotate
+subset: goslim_pombe
+is_a: GO:0022402 ! cell cycle process
+is_a: GO:0022414 ! reproductive process
+intersection_of: GO:0009987 ! cellular process
+intersection_of: part_of GO:0051321 ! meiotic cell cycle
+relationship: part_of GO:0051321 ! meiotic cell cycle
+created_by: jl
+creation_date: 2014-05-22T14:22:28Z
+
+[Term]
 id: GO:1903335
 name: regulation of vacuolar transport
 namespace: biological_process
@@ -5825,6 +6780,21 @@ intersection_of: positively_regulates GO:0071554 ! cell wall organization or bio
 relationship: positively_regulates GO:0071554 ! cell wall organization or biogenesis
 created_by: vw
 creation_date: 2014-08-18T13:21:06Z
+
+[Term]
+id: GO:1903653
+name: modulation by symbiont of host cell motility
+namespace: biological_process
+def: "Modulation of host cell motility by a symbiont of that host." [GO_REF:0000063, GOC:TermGenie, PMID:25049409]
+synonym: "modulation by symbiont of host cell locomotion" EXACT []
+synonym: "modulation by symbiont of host cell movement" RELATED []
+synonym: "regulation by symbiont of host cell motility" EXACT []
+is_a: GO:0044068 ! modulation by symbiont of host cellular process
+is_a: GO:2000145 ! regulation of cell motility
+intersection_of: GO:0044068 ! modulation by symbiont of host cellular process
+intersection_of: regulates GO:0048870 ! cell motility
+created_by: jl
+creation_date: 2014-11-24T17:37:56Z
 
 [Term]
 id: GO:1903664
@@ -6154,6 +7124,56 @@ intersection_of: GO:0044068 ! modulation by symbiont of host cellular process
 intersection_of: negatively_regulates GO:0046907 ! intracellular transport
 created_by: ml
 creation_date: 2013-10-10T15:42:22Z
+
+[Term]
+id: GO:2000145
+name: regulation of cell motility
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of cell motility." [GOC:mah]
+synonym: "regulation of cell locomotion" EXACT [GOC:obol]
+synonym: "regulation of cell movement" RELATED [GOC:obol]
+synonym: "regulation of movement of a cell" EXACT [GOC:obol]
+is_a: GO:0040012 ! regulation of locomotion
+is_a: GO:0051270 ! regulation of cellular component movement
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0048870 ! cell motility
+relationship: regulates GO:0048870 ! cell motility
+created_by: midori
+creation_date: 2010-10-01T09:41:21Z
+
+[Term]
+id: GO:2000146
+name: negative regulation of cell motility
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of cell motility." [GOC:mah]
+synonym: "negative regulation of cell locomotion" EXACT [GOC:obol]
+synonym: "negative regulation of cell movement" RELATED [GOC:obol]
+synonym: "negative regulation of movement of a cell" EXACT [GOC:obol]
+is_a: GO:0040013 ! negative regulation of locomotion
+is_a: GO:0051271 ! negative regulation of cellular component movement
+is_a: GO:2000145 ! regulation of cell motility
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0048870 ! cell motility
+relationship: negatively_regulates GO:0048870 ! cell motility
+created_by: midori
+creation_date: 2010-10-01T09:41:26Z
+
+[Term]
+id: GO:2000147
+name: positive regulation of cell motility
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of cell motility." [GOC:mah]
+synonym: "positive regulation of cell locomotion" EXACT [GOC:obol]
+synonym: "positive regulation of cell movement" RELATED [GOC:obol]
+synonym: "positive regulation of movement of a cell" EXACT [GOC:obol]
+is_a: GO:0040017 ! positive regulation of locomotion
+is_a: GO:0051272 ! positive regulation of cellular component movement
+is_a: GO:2000145 ! regulation of cell motility
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0048870 ! cell motility
+relationship: positively_regulates GO:0048870 ! cell motility
+created_by: midori
+creation_date: 2010-10-01T09:41:30Z
 
 [Term]
 id: GO:2000241

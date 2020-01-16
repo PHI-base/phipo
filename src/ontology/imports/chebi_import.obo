@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2019-10-10/imports/chebi_import.owl
+data-version: phipo/releases/2020-01-16/imports/chebi_import.owl
 ontology: phipo/imports/chebi_import
 
 [Term]
@@ -117,6 +117,7 @@ synonym: "(R-(R*,S*))-alpha-(2,4-difluorophenyl)-5-fluoro-beta-methyl-alpha-(1H-
 synonym: "VCZ" RELATED [DrugBank]
 synonym: "Vfend" RELATED BRAND_NAME [ChEBI]
 synonym: "voriconazol" RELATED INN [WHO_MedNet]
+synonym: "voriconazole" EXACT [UniProt]
 synonym: "voriconazole" RELATED INN [WHO_MedNet]
 synonym: "voriconazole" RELATED INN [ChemIDplus]
 synonym: "voriconazolum" RELATED INN [WHO_MedNet]
@@ -666,6 +667,16 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "420.11373
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "C[C@@H](O)[C@@H]1[C@H]2[C@@H](C)C(S[C@@H]3CN[C@@H](C3)CNS(N)(=O)=O)=C(N2C1=O)C(O)=O" xsd:string
 
 [Term]
+id: CHEBI:13643
+name: glycol
+namespace: chebi_ontology
+def: "A diol in which the two hydroxy groups are on different carbon atoms, usually but not necessarily adjacent." []
+subset: 3_STAR
+synonym: "glycols" EXACT IUPAC_NAME [IUPAC]
+synonym: "Glykol" RELATED [ChEBI]
+is_a: CHEBI:23824 ! diol
+
+[Term]
 id: CHEBI:136622
 name: aci-nitro compound
 namespace: chebi_ontology
@@ -781,6 +792,21 @@ xref: Wikipedia:Mineral_acid
 is_a: CHEBI:39141 ! Bronsted acid
 
 [Term]
+id: CHEBI:138264
+name: D-sorbitol-(13)C6
+namespace: chebi_ontology
+subset: 2_STAR
+is_a: CHEBI:139357 ! (13)C-modified compound
+is_a: CHEBI:17924 ! D-glucitol
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "[13C]6H14O6" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C6H14O6/c7-1-3(9)5(11)6(12)4(10)2-8/h3-12H,1-2H2/t3-,4+,5-,6+/i1+1,2+1,3+1,4+1,5+1,6+1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "FBPFZTCFMRRESA-ZJKSLYJDSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "188.126" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "188.09917" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[13CH2]([13C@H]([13C@H]([13C@H]([13C@H]([13CH2]O)O)O)O)O)O" xsd:string
+
+[Term]
 id: CHEBI:138675
 name: gas molecular entity
 namespace: chebi_ontology
@@ -852,6 +878,30 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "KYGZCKSPAKDVKC-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "261.23010" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "261.06372" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "CCn1cc(C(O)=O)c(=O)c2cc3OCOc3cc12" xsd:string
+
+[Term]
+id: CHEBI:139357
+name: (13)C-modified compound
+namespace: chebi_ontology
+def: "An isotopically modified compound in which the abundance of a (13)C isotope at one or more positions has been increased above that of the naturally occurring level." []
+subset: 3_STAR
+synonym: "(13)C-enriched compound" RELATED [ChEBI]
+synonym: "(13)C-enriched compounds" RELATED [ChEBI]
+synonym: "(13)C-labeled compound" RELATED [ChEBI]
+synonym: "(13)C-labeled compounds" RELATED [ChEBI]
+synonym: "(13)C-labelled compound" RELATED [ChEBI]
+synonym: "(13)C-labelled compounds" RELATED [ChEBI]
+synonym: "(13)C-modified compounds" RELATED [ChEBI]
+is_a: CHEBI:139358 ! isotopically modified compound
+
+[Term]
+id: CHEBI:139358
+name: isotopically modified compound
+namespace: chebi_ontology
+def: "Any molecular entity in which the isotopic ratio of nuclides for at least one element deviates measurably from that occurring in nature. The term includes both isotopically substituted compounds (in which essentially all the molecules of the compound have only the indicated nuclide(s) at each designated position) and isotopically labeled compounds (a formal mixture of an isotopically unmodified compound with one or more analogous isotopically substituted compound(s)." []
+subset: 3_STAR
+synonym: "isotopically modified compounds" RELATED [ChEBI]
+is_a: CHEBI:23367 ! molecular entity
 
 [Term]
 id: CHEBI:13941
@@ -1112,6 +1162,21 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "409.10358
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "C12=C(C=C(C(=C1C(C=3[C@]([C@@H]([C@]4([C@@H](C([O-])=C(C([C@@]4(O)C3O)=O)C(N)=O)[NH+](C)C)[H])*)(C2(*)*)[H])=O)O)*)*" xsd:string
 
 [Term]
+id: CHEBI:145565
+name: macrolide lactam
+namespace: chebi_ontology
+def: "A macrolide in which the macrocyclic lactone ring includes an amide group." []
+subset: 3_STAR
+synonym: "macrolide lactams" RELATED [ChEBI]
+xref: PMID:11678663 "Europe PMC"
+xref: PMID:12227772 "Europe PMC"
+xref: PMID:15248618 "Europe PMC"
+xref: PMID:17378533 "Europe PMC"
+xref: PMID:31226284 "Europe PMC"
+is_a: CHEBI:24995 ! lactam
+is_a: CHEBI:25106 ! macrolide
+
+[Term]
 id: CHEBI:149836
 name: tigecycline
 namespace: chebi_ontology
@@ -1155,6 +1220,29 @@ synonym: "donneur d'electron" RELATED [IUPAC]
 synonym: "electron donor" EXACT IUPAC_NAME [IUPAC]
 synonym: "Elektronendonator" RELATED [ChEBI]
 is_a: CHEBI:17891 ! donor
+
+[Term]
+id: CHEBI:15138
+name: sulfide(2-)
+namespace: chebi_ontology
+def: "A divalent inorganic anion obtained by removal of both protons from hydrogen sulfide." []
+subset: 3_STAR
+synonym: "S(2-)" RELATED [IUPAC]
+synonym: "sulfanediide" EXACT IUPAC_NAME [IUPAC]
+synonym: "Sulfide" RELATED [ChemIDplus]
+synonym: "sulfide(2-)" EXACT IUPAC_NAME [IUPAC]
+synonym: "sulphide" RELATED [ChEBI]
+xref: CAS:18496-25-8 "ChemIDplus"
+xref: UM-BBD_compID:c0569 "UM-BBD"
+is_a: CHEBI:79388 ! divalent inorganic anion
+relationship: is_conjugate_base_of CHEBI:29919 ! hydrosulfide
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/S/q-2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "UCKMPCXJQFINFW-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "32.06600" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "31.97317" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[S--]" xsd:string
 
 [Term]
 id: CHEBI:15339
@@ -1585,6 +1673,31 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "111.04326
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "Nc1cc[nH]c(=O)n1" xsd:string
 
 [Term]
+id: CHEBI:16042
+name: halide anion
+namespace: chebi_ontology
+alt_id: CHEBI:14384
+alt_id: CHEBI:5605
+def: "A monoatomic monoanion resulting from the addition of an electron to any halogen atom." []
+subset: 3_STAR
+synonym: "a halide anion" RELATED [UniProt]
+synonym: "Halide" RELATED [KEGG_COMPOUND]
+synonym: "halide anions" RELATED [ChEBI]
+synonym: "halide ions" EXACT IUPAC_NAME [IUPAC]
+synonym: "halide(1-)" RELATED [ChEBI]
+synonym: "halides" RELATED [ChEBI]
+synonym: "halogen anion" RELATED [ChEBI]
+synonym: "HX" RELATED [KEGG_COMPOUND]
+xref: KEGG:C00462
+is_a: CHEBI:33429 ! monoatomic monoanion
+is_a: CHEBI:79389 ! monovalent inorganic anion
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "X" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "0.0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "0.0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[*-]" xsd:string
+
+[Term]
 id: CHEBI:16134
 name: ammonia
 namespace: chebi_ontology
@@ -1678,6 +1791,83 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "QGZKDVFQNNGYKY-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "17.03056" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "17.02655" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H]N([H])[H]" xsd:string
+
+[Term]
+id: CHEBI:16136
+name: hydrogen sulfide
+namespace: chebi_ontology
+alt_id: CHEBI:13356
+alt_id: CHEBI:14414
+alt_id: CHEBI:24639
+alt_id: CHEBI:43058
+alt_id: CHEBI:45489
+alt_id: CHEBI:5787
+def: "A sulfur hydride consisting of a single sulfur atom bonded to two hydrogen atoms. A highly poisonous, flammable gas with a characteristic odour of rotten eggs, it is often produced by bacterial decomposition of organic matter in the absence of oxygen." []
+subset: 3_STAR
+synonym: "[SH2]" RELATED [MolBase]
+synonym: "acide sulfhydrique" RELATED [ChemIDplus]
+synonym: "dihydridosulfur" EXACT IUPAC_NAME [IUPAC]
+synonym: "dihydrogen monosulfide" RELATED [NIST_Chemistry_WebBook]
+synonym: "dihydrogen sulfide" RELATED [NIST_Chemistry_WebBook]
+synonym: "dihydrogen(sulfide)" EXACT IUPAC_NAME [IUPAC]
+synonym: "H2S" RELATED [IUPAC]
+synonym: "H2S" RELATED [KEGG_COMPOUND]
+synonym: "hydrogen monosulfide" RELATED [NIST_Chemistry_WebBook]
+synonym: "Hydrogen sulfide" EXACT [KEGG_COMPOUND]
+synonym: "hydrogen sulfide" EXACT IUPAC_NAME [IUPAC]
+synonym: "hydrogen sulphide" RELATED [ChemIDplus]
+synonym: "Hydrogen-sulfide" RELATED [KEGG_COMPOUND]
+synonym: "hydrogene sulfure" RELATED [ChemIDplus]
+synonym: "HYDROSULFURIC ACID" RELATED [PDBeChem]
+synonym: "Schwefelwasserstoff" RELATED [ChemIDplus]
+synonym: "sulfane" EXACT IUPAC_NAME [IUPAC]
+synonym: "Sulfide" RELATED [KEGG_COMPOUND]
+synonym: "sulfure d'hydrogene" RELATED [ChEBI]
+xref: Beilstein:3535004 "Beilstein"
+xref: CAS:7783-06-4 "KEGG COMPOUND"
+xref: Drug_Central:4260 "DrugCentral"
+xref: Gmelin:303 "Gmelin"
+xref: KEGG:C00283
+xref: KNApSAcK:C00007266
+xref: MolBase:1709
+xref: PDBeChem:H2S
+xref: PMID:11788560 "Europe PMC"
+xref: PMID:14654297 "Europe PMC"
+xref: PMID:15003943 "Europe PMC"
+xref: PMID:15607739 "Europe PMC"
+xref: PMID:16446402 "Europe PMC"
+xref: PMID:18098324 "Europe PMC"
+xref: PMID:18524810 "Europe PMC"
+xref: PMID:18948540 "Europe PMC"
+xref: PMID:19695225 "Europe PMC"
+xref: PMID:22004989 "Europe PMC"
+xref: PMID:22378060 "Europe PMC"
+xref: PMID:22448627 "Europe PMC"
+xref: PMID:22473176 "Europe PMC"
+xref: PMID:22486842 "Europe PMC"
+xref: PMID:22520971 "Europe PMC"
+xref: PMID:22787557 "Europe PMC"
+xref: UM-BBD_compID:c0239 "UM-BBD"
+xref: Wikipedia:Hydrogen_sulfide
+is_a: CHEBI:138675 ! gas molecular entity
+is_a: CHEBI:33405 ! hydracid
+is_a: CHEBI:33535 ! sulfur hydride
+is_a: CHEBI:37176 ! mononuclear parent hydride
+relationship: has_role CHEBI:25212 ! metabolite
+relationship: has_role CHEBI:27026 ! toxin
+relationship: has_role CHEBI:35620 ! vasodilator agent
+relationship: has_role CHEBI:50902 ! genotoxin
+relationship: has_role CHEBI:62488 ! signalling molecule
+relationship: has_role CHEBI:76971 ! Escherichia coli metabolite
+relationship: is_conjugate_acid_of CHEBI:29919 ! hydrosulfide
+relationship: is_conjugate_base_of CHEBI:30488 ! sulfonium
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "H2S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/H2S/h1H2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "RWSOTUBLDIXVET-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "34.08188" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "33.98772" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H]S[H]" xsd:string
 
 [Term]
 id: CHEBI:16150
@@ -2398,9 +2588,9 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C8H12N2O3S" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C8H12N2O3S/c1-8(2)4(7(12)13)10-5(11)3(9)6(10)14-8/h3-4,6H,9H2,1-2H3,(H,12,13)/t3-,4+,6-/m1/s1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchikey "NGHVIOIJCVXTGV-ALEPSDHESA-N" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "216.25856" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "216.260" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "216.05686" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H][C@]12SC(C)(C)[C@@H](N1C(=O)[C@H]2N)C(O)=O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C([C@H]1C(S[C@@]2([C@@H](C(N12)=O)N)[H])(C)C)(O)=O" xsd:string
 
 [Term]
 id: CHEBI:16716
@@ -2538,7 +2728,7 @@ relationship: has_role CHEBI:35441 ! antiinfective agent
 relationship: has_role CHEBI:35718 ! antifungal agent
 relationship: has_role CHEBI:37848 ! plant hormone
 relationship: has_role CHEBI:50176 ! keratolytic drug
-relationship: has_role CHEBI:73181 ! EC 1.11.1.11 (L-ascorbate peroxidase) inhibitors
+relationship: has_role CHEBI:73181 ! EC 1.11.1.11 (L-ascorbate peroxidase) inhibitor
 relationship: has_role CHEBI:76924 ! plant metabolite
 relationship: has_role CHEBI:84735 ! algal metabolite
 relationship: is_conjugate_acid_of CHEBI:30762 ! salicylate
@@ -3024,7 +3214,7 @@ name: sulfite
 namespace: chebi_ontology
 alt_id: CHEBI:15139
 alt_id: CHEBI:45548
-def: "Sulfite is an inorganic anion, which is the conjugate base of hydrogen sulfite." []
+def: "A sulfur oxoanion that is the conjugate base of hydrogen sulfite (H2SO3)." []
 subset: 3_STAR
 synonym: "[SO3](2-)" RELATED [IUPAC]
 synonym: "SO3" RELATED [ChEBI]
@@ -3091,7 +3281,6 @@ xref: KEGG:C00803
 xref: KNApSAcK:C00001208
 xref: LIPID_MAPS_instance:LMFA01010005 "LIPID MAPS"
 xref: PDBeChem:LEA
-xref: PDBeChem:PEI
 xref: PMID:20507156 "Europe PMC"
 xref: PPDB:3130
 xref: Reaxys:969454 "Reaxys"
@@ -3205,6 +3394,27 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "XFXPMWWXUTWYJX-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "26.01740" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "26.00362" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[C-]#N" xsd:string
+
+[Term]
+id: CHEBI:17522
+name: alditol
+namespace: chebi_ontology
+alt_id: CHEBI:13754
+alt_id: CHEBI:22298
+alt_id: CHEBI:2556
+def: "A carbohydrate that is an acyclic polyol having the general formula HOCH2[CH(OH)]nCH2OH (formally derivable from an aldose by reduction of the carbonyl group)." []
+subset: 3_STAR
+synonym: "Alditol" EXACT [KEGG_COMPOUND]
+synonym: "alditol" EXACT [UniProt]
+synonym: "alditols" RELATED [ChEBI]
+synonym: "Glycitol" RELATED [KEGG_COMPOUND]
+synonym: "Sugar alcohol" RELATED [KEGG_COMPOUND]
+xref: KEGG:C00717
+xref: Wikipedia:Glycerin
+is_a: CHEBI:16646 ! carbohydrate
+is_a: CHEBI:26191 ! polyol
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "(CH2O)nC2H6O2" xsd:string
 
 [Term]
 id: CHEBI:17544
@@ -3645,6 +3855,57 @@ is_a: CHEBI:22479 ! amino cyclitol glycoside
 is_a: CHEBI:22507 ! aminoglycoside antibiotic
 
 [Term]
+id: CHEBI:17883
+name: hydrogen chloride
+namespace: chebi_ontology
+alt_id: CHEBI:13364
+alt_id: CHEBI:24635
+alt_id: CHEBI:5590
+def: "A mononuclear parent hydride consisting of covalently bonded hydrogen and chlorine atoms." []
+subset: 3_STAR
+synonym: "[HCl]" RELATED [IUPAC]
+synonym: "chlorane" EXACT IUPAC_NAME [IUPAC]
+synonym: "chloridohydrogen" EXACT IUPAC_NAME [IUPAC]
+synonym: "chlorure d'hydrogene" RELATED [ChEBI]
+synonym: "Chlorwasserstoff" RELATED [ChEBI]
+synonym: "cloruro de hidrogeno" RELATED [ChEBI]
+synonym: "HCl" RELATED [KEGG_COMPOUND]
+synonym: "hydrochloric acid" RELATED [ChemIDplus]
+synonym: "Hydrochloride" RELATED [KEGG_COMPOUND]
+synonym: "Hydrogen chloride" EXACT [KEGG_COMPOUND]
+synonym: "hydrogen chloride" EXACT IUPAC_NAME [IUPAC]
+synonym: "Hydrogenchlorid" RELATED [ChEBI]
+synonym: "Wasserstoffchlorid" RELATED [ChEBI]
+xref: CAS:7647-01-0 "KEGG COMPOUND"
+xref: Drug_Central:4568 "DrugCentral"
+xref: Gmelin:322 "Gmelin"
+xref: HMDB:HMDB0002306
+xref: KEGG:C01327
+xref: KEGG:D02057
+xref: MetaCyc:HCL
+xref: PMID:15823700 "Europe PMC"
+xref: PMID:17492841 "Europe PMC"
+xref: PMID:22804993 "Europe PMC"
+xref: Reaxys:1098214 "Reaxys"
+xref: Wikipedia:HCl
+xref: Wikipedia:Hydrochloric_acid
+is_a: CHEBI:138675 ! gas molecular entity
+is_a: CHEBI:18140 ! hydrogen halide
+is_a: CHEBI:23117 ! chlorine molecular entity
+is_a: CHEBI:37176 ! mononuclear parent hydride
+relationship: has_role CHEBI:75771 ! mouse metabolite
+relationship: is_conjugate_acid_of CHEBI:17996 ! chloride
+relationship: is_conjugate_base_of CHEBI:50315 ! chloronium
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "ClH" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "HCl" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/ClH/h1H" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "VEXZGXHMUGYJMC-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "36.46064" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "35.97668" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "Cl[H]" xsd:string
+
+[Term]
 id: CHEBI:17891
 name: donor
 namespace: chebi_ontology
@@ -3659,6 +3920,118 @@ xref: KEGG:C01351
 is_a: CHEBI:51086 ! chemical role
 
 [Term]
+id: CHEBI:17924
+name: D-glucitol
+namespace: chebi_ontology
+alt_id: CHEBI:12954
+alt_id: CHEBI:13020
+alt_id: CHEBI:21091
+alt_id: CHEBI:4246
+alt_id: CHEBI:45559
+def: "The D-enantiomer of glucitol (also known as D-sorbitol)." []
+subset: 3_STAR
+synonym: "(-)-sorbitol" RELATED [ChemIDplus]
+synonym: "(2R,3R,4R,5S)-hexane-1,2,3,4,5,6-hexol" RELATED [IUPAC]
+synonym: "D-(-)-sorbitol" RELATED [ChemIDplus]
+synonym: "D-Glucitol" EXACT [KEGG_COMPOUND]
+synonym: "D-glucitol" EXACT IUPAC_NAME [IUPAC]
+synonym: "D-Sorbit" RELATED [NIST_Chemistry_WebBook]
+synonym: "D-SORBITOL" RELATED [PDBeChem]
+synonym: "D-Sorbitol" RELATED [KEGG_COMPOUND]
+synonym: "D-sorbitol" RELATED [UniProt]
+synonym: "E 420" RELATED [ChEBI]
+synonym: "E-420" RELATED [ChEBI]
+synonym: "E420" RELATED [ChEBI]
+synonym: "G-ol" RELATED [ChEBI]
+synonym: "Glc-ol" RELATED [ChEBI]
+synonym: "L-Gulitol" RELATED [KEGG_COMPOUND]
+xref: Beilstein:1721899 "Beilstein"
+xref: Beilstein:4656395 "Beilstein"
+xref: CAS:50-70-4 "ChemIDplus"
+xref: Drug_Central:2462 "DrugCentral"
+xref: DrugBank:DB01638
+xref: Gmelin:83162 "Gmelin"
+xref: HMDB:HMDB0000247
+xref: KEGG:C00794
+xref: KEGG:D00096
+xref: KNApSAcK:C00001173
+xref: PDBeChem:SOR
+xref: PMID:16901854 "Europe PMC"
+xref: PMID:17336832 "Europe PMC"
+xref: PMID:17979222 "Europe PMC"
+xref: PMID:19443021 "Europe PMC"
+xref: PMID:19695255 "Europe PMC"
+xref: PMID:22735334 "Europe PMC"
+xref: PMID:22878210 "Europe PMC"
+xref: PMID:23683321 "Europe PMC"
+xref: PMID:24643482 "Europe PMC"
+xref: PMID:25108762 "Europe PMC"
+xref: PMID:25568069 "Europe PMC"
+xref: PPDB:1320
+xref: Reaxys:1721899 "Reaxys"
+xref: Wikipedia:Sorbitol
+is_a: CHEBI:30911 ! glucitol
+relationship: has_role CHEBI:25212 ! metabolite
+relationship: has_role CHEBI:50503 ! laxative
+relationship: has_role CHEBI:50505 ! sweetening agent
+relationship: has_role CHEBI:75325 ! cathartic
+relationship: has_role CHEBI:75771 ! mouse metabolite
+relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
+relationship: has_role CHEBI:76971 ! Escherichia coli metabolite
+relationship: has_role CHEBI:77746 ! human metabolite
+relationship: has_role CHEBI:77969 ! food humectant
+relationship: is_enantiomer_of CHEBI:28789 ! L-glucitol
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C6H14O6" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C6H14O6/c7-1-3(9)5(11)6(12)4(10)2-8/h3-12H,1-2H2/t3-,4+,5-,6-/m1/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "FBPFZTCFMRRESA-JGWLITMVSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "182.17176" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "182.07904" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "OC[C@H](O)[C@@H](O)[C@H](O)[C@H](O)CO" xsd:string
+
+[Term]
+id: CHEBI:17996
+name: chloride
+namespace: chebi_ontology
+alt_id: CHEBI:13291
+alt_id: CHEBI:13970
+alt_id: CHEBI:3616
+alt_id: CHEBI:3731
+alt_id: CHEBI:48804
+def: "A halide anion formed when chlorine picks up an electron to form an an anion." []
+subset: 3_STAR
+synonym: "Chloride" EXACT [KEGG_COMPOUND]
+synonym: "chloride" EXACT [UniProt]
+synonym: "chloride" EXACT IUPAC_NAME [IUPAC]
+synonym: "CHLORIDE ION" RELATED [PDBeChem]
+synonym: "Chloride ion" RELATED [KEGG_COMPOUND]
+synonym: "Chloride(1-)" RELATED [ChemIDplus]
+synonym: "chloride(1-)" EXACT IUPAC_NAME [IUPAC]
+synonym: "Chlorine anion" RELATED [NIST_Chemistry_WebBook]
+synonym: "Cl(-)" RELATED [IUPAC]
+synonym: "Cl-" RELATED [KEGG_COMPOUND]
+xref: Beilstein:3587171 "Beilstein"
+xref: CAS:16887-00-6 "KEGG COMPOUND"
+xref: Gmelin:14910 "Gmelin"
+xref: KEGG:C00115
+xref: KEGG:C00698
+xref: PDBeChem:CL
+xref: UM-BBD_compID:c0884 "UM-BBD"
+is_a: CHEBI:16042 ! halide anion
+is_a: CHEBI:33432 ! monoatomic chlorine
+relationship: has_role CHEBI:23357 ! cofactor
+relationship: has_role CHEBI:76971 ! Escherichia coli metabolite
+relationship: has_role CHEBI:77746 ! human metabolite
+relationship: is_conjugate_base_of CHEBI:17883 ! hydrogen chloride
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "Cl" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/ClH/h1H/p-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "VEXZGXHMUGYJMC-UHFFFAOYSA-M" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "35.45270" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "34.96940" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[Cl-]" xsd:string
+
+[Term]
 id: CHEBI:18059
 name: lipid
 namespace: chebi_ontology
@@ -3671,6 +4044,26 @@ synonym: "Lipid" EXACT [KEGG_COMPOUND]
 synonym: "lipids" EXACT IUPAC_NAME [IUPAC]
 xref: KEGG:C01356
 is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:18140
+name: hydrogen halide
+namespace: chebi_ontology
+alt_id: CHEBI:13368
+alt_id: CHEBI:37140
+alt_id: CHEBI:5599
+subset: 3_STAR
+synonym: "HX" RELATED [UniProt]
+synonym: "hydrogen halide" EXACT [IUPAC]
+synonym: "hydrogen halides" EXACT IUPAC_NAME [IUPAC]
+synonym: "hydrogen halides" RELATED [ChEBI]
+is_a: CHEBI:33405 ! hydracid
+relationship: has_role CHEBI:138103 ! inorganic acid
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "HX" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "1.008" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "1.00783" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[F,Cl,Br,I]" xsd:string
 
 [Term]
 id: CHEBI:18208
@@ -3878,6 +4271,50 @@ property_value: http://purl.obolibrary.org/obo/chebi/formula "CH3R" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "15.035" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "15.02348" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "C[*]" xsd:string
+
+[Term]
+id: CHEBI:18320
+name: 1,4-dithiothreitol
+namespace: chebi_ontology
+alt_id: CHEBI:11174
+alt_id: CHEBI:23854
+alt_id: CHEBI:4664
+def: "The threo-diastereomer of 1,4-dimercaptobutane-2,3-diol." []
+subset: 3_STAR
+synonym: "(R*,R*)-1,4-dimercapto-2,3-butanediol" RELATED [NIST_Chemistry_WebBook]
+synonym: "1,4-Dithiothreitol" EXACT [KEGG_COMPOUND]
+synonym: "1,4-dithiothreitol" EXACT [UniProt]
+synonym: "Cleland's reagent" RELATED [NIST_Chemistry_WebBook]
+synonym: "Dithiothreitol" RELATED [KEGG_COMPOUND]
+synonym: "Dithiotreitol" RELATED [ChemIDplus]
+synonym: "DL-threo-1,4-Dimercapto-2,3-butanediol" RELATED [ChemIDplus]
+synonym: "DTL" RELATED [ChEBI]
+synonym: "DTT" RELATED [ChEBI]
+synonym: "rac-Dithiothreitol" RELATED [ChemIDplus]
+synonym: "rel-(2R,3R)-1,4-disulfanylbutane-2,3-diol" EXACT IUPAC_NAME [IUPAC]
+synonym: "threo-1,4-Dimercapto-2,3-butanediol" RELATED [KEGG_COMPOUND]
+xref: Beilstein:8144556 "Beilstein"
+xref: CAS:3483-12-3 "KEGG COMPOUND"
+xref: DrugBank:DB04447
+xref: KEGG:C00265
+xref: LINCS:LSM-36870
+xref: PMID:16901854 "Europe PMC"
+xref: PMID:18022205 "Europe PMC"
+xref: PMID:23673948 "Europe PMC"
+xref: PMID:24124079 "Europe PMC"
+xref: PMID:7592847 "Europe PMC"
+is_a: CHEBI:23853 ! dithiol
+is_a: CHEBI:25189 ! 1,4-dimercaptobutane-2,3-diol
+relationship: has_role CHEBI:38161 ! chelator
+relationship: has_role CHEBI:63247 ! reducing agent
+relationship: has_role CHEBI:77746 ! human metabolite
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C4H10O2S2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C4H10O2S2/c5-3(1-7)4(6)2-8/h3-8H,1-2H2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "VHJLVAABSRFDPM-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "154.25100" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "154.01222" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "OC(CS)C(O)CS" xsd:string
 
 [Term]
 id: CHEBI:18367
@@ -4197,6 +4634,23 @@ synonym: "groupe acyle" RELATED [IUPAC]
 is_a: CHEBI:33247 ! organic group
 
 [Term]
+id: CHEBI:22314
+name: alkali metal atom
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "alkali metal" RELATED [ChEBI]
+synonym: "alkali metals" EXACT IUPAC_NAME [IUPAC]
+synonym: "Alkalimetall" RELATED [ChEBI]
+synonym: "Alkalimetalle" RELATED [ChEBI]
+synonym: "metal alcalin" RELATED [ChEBI]
+synonym: "metal alcalino" RELATED [ChEBI]
+synonym: "metales alcalinos" RELATED [ChEBI]
+synonym: "metaux alcalins" RELATED [ChEBI]
+is_a: CHEBI:33318 ! main group element atom
+is_a: CHEBI:33521 ! metal atom
+is_a: CHEBI:33559 ! s-block element atom
+
+[Term]
 id: CHEBI:22315
 name: alkaloid
 namespace: chebi_ontology
@@ -4323,36 +4777,6 @@ is_a: CHEBI:26188 ! polyketide
 is_a: CHEBI:51026 ! macrocycle
 
 [Term]
-id: CHEBI:22584
-name: antimycin A
-namespace: chebi_ontology
-def: "A nine-membered bis-lactone having methyl substituents at the 2- and 6-positions, an n-hexyl substituent at the 8-position, an acyloxy substituent at the 7-position and an aroylamido substituent at the 3-position. It is produced by Streptomyces bacteria and has found commercial use as a fish poison." []
-subset: 3_STAR
-synonym: "(2R,3S,6S,7R,8R)-3-[(3-formamido-2-hydroxybenzoyl)amino]-8-hexyl-2,6-dimethyl-4,9-dioxo-1,5-dioxonan-7-yl 3-methylbutanoate" EXACT IUPAC_NAME [IUPAC]
-synonym: "Antimycin A1" RELATED [KEGG_COMPOUND]
-synonym: "antimycin A1b" RELATED [ChEBI]
-synonym: "Antipiricullin" RELATED [ChemIDplus]
-synonym: "Fintrol" RELATED [ChemIDplus]
-synonym: "Virosin" RELATED [ChemIDplus]
-xref: Beilstein:72665 "Beilstein"
-xref: CAS:1397-94-0 "ChemIDplus"
-xref: CAS:642-15-9 "ChemIDplus"
-xref: KEGG:C11339
-is_a: CHEBI:22702 ! benzamides
-is_a: CHEBI:24079 ! formamides
-is_a: CHEBI:25000 ! lactone
-is_a: CHEBI:33853 ! phenols
-relationship: has_role CHEBI:25355 ! mitochondrial respiratory-chain inhibitor
-relationship: has_role CHEBI:35718 ! antifungal agent
-property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/formula "C28H40N2O9" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C28H40N2O9/c1-6-7-8-9-11-20-25(39-22(32)14-16(2)3)18(5)38-28(36)23(17(4)37-27(20)35)30-26(34)19-12-10-13-21(24(19)33)29-15-31/h10,12-13,15-18,20,23,25,33H,6-9,11,14H2,1-5H3,(H,29,31)(H,30,34)/t17-,18+,20-,23+,25+/m1/s1" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/inchikey "UIFFUZWRFRDZJC-SBOOETFBSA-N" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "548.62520" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "548.27338" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H]C(=O)Nc1cccc(C(=O)N[C@H]2[C@@H](C)OC(=O)[C@H](CCCCCC)[C@@H](OC(=O)CC(C)C)[C@H](C)OC2=O)c1O" xsd:string
-
-[Term]
 id: CHEBI:22586
 name: antioxidant
 namespace: chebi_ontology
@@ -4426,6 +4850,15 @@ namespace: chebi_ontology
 def: "Any benzenoid aromatic compound consisting of the benzene skeleton and its substituted derivatives." []
 subset: 3_STAR
 is_a: CHEBI:33836 ! benzenoid aromatic compound
+
+[Term]
+id: CHEBI:22713
+name: arenesulfonate oxoanion
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "arenesulfonates" RELATED [ChEBI]
+is_a: CHEBI:33554 ! organosulfonate oxoanion
+relationship: is_conjugate_base_of CHEBI:33555 ! arenesulfonic acid
 
 [Term]
 id: CHEBI:22715
@@ -4507,6 +4940,14 @@ synonym: "botanical insecticide" RELATED [ChEBI]
 synonym: "botanical insecticides" RELATED [ChEBI]
 synonym: "phytogenic insecticides" RELATED [ChEBI]
 is_a: CHEBI:24852 ! insecticide
+
+[Term]
+id: CHEBI:22944
+name: butanediols
+namespace: chebi_ontology
+def: "A diol that is a butanediol or a derivative of a butanediol." []
+subset: 3_STAR
+is_a: CHEBI:23824 ! diol
 
 [Term]
 id: CHEBI:22986
@@ -4640,6 +5081,17 @@ namespace: chebi_ontology
 subset: 1_STAR
 is_a: CHEBI:25903 ! peptide antibiotic
 relationship: has_role CHEBI:38161 ! chelator
+
+[Term]
+id: CHEBI:23114
+name: chloride salt
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "chloride salts" RELATED [ChEBI]
+synonym: "chlorides" RELATED [ChEBI]
+is_a: CHEBI:23117 ! chlorine molecular entity
+is_a: CHEBI:33958 ! halide salt
+relationship: has_part CHEBI:17996 ! chloride
 
 [Term]
 id: CHEBI:23116
@@ -4978,6 +5430,14 @@ is_a: CHEBI:26873 ! terpenoid
 relationship: has_parent_hydride CHEBI:35190 ! diterpene
 
 [Term]
+id: CHEBI:23853
+name: dithiol
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "dithiols" RELATED [ChEBI]
+is_a: CHEBI:29256 ! thiol
+
+[Term]
 id: CHEBI:23870
 name: dodecyl group
 namespace: chebi_ontology
@@ -4995,6 +5455,27 @@ property_value: http://purl.obolibrary.org/obo/chebi/mass "169.32690" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "169.19563" xsd:string
 
 [Term]
+id: CHEBI:23872
+name: dodecyl sulfate
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "dodecyl sulfate" EXACT IUPAC_NAME [IUPAC]
+xref: Beilstein:1820003 "Beilstein"
+xref: DrugBank:DB03967
+xref: Gmelin:336103 "Gmelin"
+xref: UM-BBD_compID:c0563 "UM-BBD"
+is_a: CHEBI:58958 ! organosulfate oxoanion
+relationship: has_role CHEBI:35703 ! xenobiotic
+relationship: is_conjugate_base_of CHEBI:45599 ! dodecyl hydrogen sulfate
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C12H25O4S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C12H26O4S/c1-2-3-4-5-6-7-8-9-10-11-12-16-17(13,14)15/h2-12H2,1H3,(H,13,14,15)/p-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "MOTZDAYCYVMXPC-UHFFFAOYSA-M" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "265.39050" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "265.14790" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "CCCCCCCCCCCCOS([O-])(=O)=O" xsd:string
+
+[Term]
 id: CHEBI:23888
 name: drug
 namespace: chebi_ontology
@@ -5003,6 +5484,15 @@ subset: 3_STAR
 synonym: "drugs" RELATED [ChEBI]
 synonym: "medicine" RELATED [ChEBI]
 is_a: CHEBI:52217 ! pharmaceutical
+
+[Term]
+id: CHEBI:23905
+name: monoatomic anion
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "monoatomic anions" RELATED [ChEBI]
+is_a: CHEBI:22563 ! anion
+is_a: CHEBI:24867 ! monoatomic ion
 
 [Term]
 id: CHEBI:23906
@@ -5276,6 +5766,15 @@ synonym: "heterodetic cyclic peptides" RELATED [ChEBI]
 synonym: "peptide cyclique heterodetique" RELATED [IUPAC]
 synonym: "peptido ciclico heterodetico" RELATED [IUPAC]
 is_a: CHEBI:23449 ! cyclic peptide
+
+[Term]
+id: CHEBI:24583
+name: hexitol
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "hexitol" EXACT [ChEBI]
+synonym: "hexitols" RELATED [ChEBI]
+is_a: CHEBI:17522 ! alditol
 
 [Term]
 id: CHEBI:24613
@@ -5561,6 +6060,16 @@ is_a: CHEBI:24836 ! inorganic oxide
 is_a: CHEBI:25940 ! peroxides
 
 [Term]
+id: CHEBI:24839
+name: inorganic salt
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "anorganisches Salz" RELATED [ChEBI]
+synonym: "inorganic salts" RELATED [ChEBI]
+is_a: CHEBI:24835 ! inorganic molecular entity
+is_a: CHEBI:24866 ! salt
+
+[Term]
 id: CHEBI:24840
 name: inorganic sulfate salt
 namespace: chebi_ontology
@@ -5817,6 +6326,28 @@ is_a: CHEBI:33743 ! manganese group molecular entity
 relationship: has_part CHEBI:18291 ! manganese atom
 
 [Term]
+id: CHEBI:25189
+name: 1,4-dimercaptobutane-2,3-diol
+namespace: chebi_ontology
+def: "A glycol that is butane-2,3-diol in which a hydrogen from each of the methyl groups is replaced by a thiol group." []
+subset: 3_STAR
+synonym: "1,4-dimercapto-2,3-butanediol" RELATED [ChemIDplus]
+synonym: "1,4-dimercaptobutane-2,3-diol" EXACT [ChemIDplus]
+synonym: "1,4-disulfanylbutane-2,3-diol" EXACT IUPAC_NAME [IUPAC]
+xref: Beilstein:8141671 "Beilstein"
+xref: CAS:7634-42-6 "ChemIDplus"
+is_a: CHEBI:13643 ! glycol
+is_a: CHEBI:22944 ! butanediols
+is_a: CHEBI:29256 ! thiol
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C4H10O2S2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C4H10O2S2/c5-3(1-7)4(6)2-8/h3-8H,1-2H2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "VHJLVAABSRFDPM-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "154.25300" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "154.01222" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "OC(CS)C(O)CS" xsd:string
+
+[Term]
 id: CHEBI:25212
 name: metabolite
 namespace: chebi_ontology
@@ -5908,6 +6439,18 @@ synonym: "monohydroxybenzoic acids" RELATED [ChEBI]
 is_a: CHEBI:24676 ! hydroxybenzoic acid
 
 [Term]
+id: CHEBI:25414
+name: monoatomic monocation
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "monoatomic monocations" RELATED [ChEBI]
+synonym: "monovalent inorganic cations" RELATED [ChEBI]
+is_a: CHEBI:23906 ! monoatomic cation
+property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "0.00000" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[*+]" xsd:string
+
+[Term]
 id: CHEBI:25435
 name: mutagen
 namespace: chebi_ontology
@@ -5934,6 +6477,13 @@ is_a: CHEBI:27026 ! toxin
 is_a: CHEBI:76946 ! fungal metabolite
 
 [Term]
+id: CHEBI:25471
+name: naphthalenemonosulfonate
+namespace: chebi_ontology
+subset: 1_STAR
+is_a: CHEBI:25478 ! naphthalenesulfonate
+
+[Term]
 id: CHEBI:25477
 name: naphthalenes
 namespace: chebi_ontology
@@ -5941,6 +6491,13 @@ def: "Any benzenoid aromatic compound having a skeleton composed of two ortho-fu
 subset: 3_STAR
 is_a: CHEBI:33836 ! benzenoid aromatic compound
 is_a: CHEBI:36785 ! carbobicyclic compound
+
+[Term]
+id: CHEBI:25478
+name: naphthalenesulfonate
+namespace: chebi_ontology
+subset: 1_STAR
+is_a: CHEBI:22713 ! arenesulfonate oxoanion
 
 [Term]
 id: CHEBI:25481
@@ -6124,6 +6681,17 @@ synonym: "organophosphate esters" RELATED [ChEBI]
 is_a: CHEBI:25710 ! organophosphorus compound
 is_a: CHEBI:26020 ! phosphate
 is_a: CHEBI:26079 ! phosphoric acid derivative
+
+[Term]
+id: CHEBI:25704
+name: organic sulfate
+namespace: chebi_ontology
+def: "Compounds of the general formula SO3HOR where R is an organyl group" []
+subset: 3_STAR
+synonym: "organic sulfates" RELATED [ChEBI]
+is_a: CHEBI:26820 ! sulfates
+is_a: CHEBI:37826 ! sulfuric acid derivative
+relationship: is_conjugate_acid_of CHEBI:58958 ! organosulfate oxoanion
 
 [Term]
 id: CHEBI:2571
@@ -6550,6 +7118,56 @@ is_a: CHEBI:27208 ! unsaturated fatty acid
 relationship: is_conjugate_acid_of CHEBI:76567 ! polyunsaturated fatty acid anion
 
 [Term]
+id: CHEBI:26216
+name: potassium atom
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "19K" RELATED [IUPAC]
+synonym: "K" RELATED [IUPAC]
+synonym: "Kalium" RELATED [ChemIDplus]
+synonym: "kalium" RELATED [IUPAC]
+synonym: "potasio" RELATED [ChEBI]
+synonym: "potassium" EXACT IUPAC_NAME [IUPAC]
+synonym: "potassium" RELATED [ChEBI]
+xref: CAS:7440-09-7 "ChemIDplus"
+xref: DrugBank:DB01345
+xref: KEGG:C00238
+xref: WebElements:K
+is_a: CHEBI:22314 ! alkali metal atom
+relationship: has_role CHEBI:33937 ! macronutrient
+relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "K" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/K" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "ZLMJMSJWJFRBEC-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "39.09830" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "38.96371" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[K]" xsd:string
+
+[Term]
+id: CHEBI:26217
+name: potassium molecular entity
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "potassium molecular entities" RELATED [ChEBI]
+synonym: "potassium molecular entity" EXACT [ChEBI]
+is_a: CHEBI:33296 ! alkali metal molecular entity
+relationship: has_part CHEBI:26216 ! potassium atom
+
+[Term]
+id: CHEBI:26218
+name: potassium salt
+namespace: chebi_ontology
+def: "Any alkali metal salt having potassium(1+) as the cation." []
+subset: 3_STAR
+synonym: "Kaliumsalz" RELATED [ChEBI]
+synonym: "Kaliumsalze" RELATED [ChEBI]
+synonym: "potassium salts" RELATED [ChEBI]
+is_a: CHEBI:26217 ! potassium molecular entity
+is_a: CHEBI:35479 ! alkali metal salt
+relationship: has_part CHEBI:29103 ! potassium(1+)
+
+[Term]
 id: CHEBI:26244
 name: prenols
 namespace: chebi_ontology
@@ -6795,6 +7413,15 @@ is_a: CHEBI:22565 ! ansamycin
 is_a: CHEBI:39270 ! naphthofuran
 
 [Term]
+id: CHEBI:26588
+name: 1,3,5-triazines
+namespace: chebi_ontology
+def: "Any compound with a 1,3,5-triazine skeleton, in which nitrogen atoms replace carbon at positions 1, 3 and 5 of the core benzene ring structure." []
+subset: 3_STAR
+synonym: "s-triazines" RELATED [ChEBI]
+is_a: CHEBI:38102 ! triazines
+
+[Term]
 id: CHEBI:26607
 name: saturated fatty acid
 namespace: chebi_ontology
@@ -6851,6 +7478,93 @@ property_value: http://purl.obolibrary.org/obo/chebi/formula "CH2OR" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "45.017" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "44.99765" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "OC([*])=O" xsd:string
+
+[Term]
+id: CHEBI:26708
+name: sodium atom
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "11Na" RELATED [IUPAC]
+synonym: "Na" RELATED [IUPAC]
+synonym: "Natrium" RELATED [ChemIDplus]
+synonym: "natrium" RELATED [IUPAC]
+synonym: "sodio" RELATED [ChemIDplus]
+synonym: "sodium" EXACT IUPAC_NAME [IUPAC]
+synonym: "sodium" RELATED [ChEBI]
+xref: CAS:7440-23-5 "ChemIDplus"
+xref: Gmelin:16221 "Gmelin"
+xref: KEGG:C01330
+xref: WebElements:Na
+is_a: CHEBI:22314 ! alkali metal atom
+relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "Na" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/Na" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "KEAYESYHFKHZAL-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "22.98977" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "22.98977" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[Na]" xsd:string
+
+[Term]
+id: CHEBI:26710
+name: sodium chloride
+namespace: chebi_ontology
+def: "An inorganic chloride salt having sodium(1+) as the counterion." []
+subset: 3_STAR
+synonym: "chlorure de sodium" RELATED [ChEBI]
+synonym: "cloruro sodico" RELATED [ChEBI]
+synonym: "common salt" RELATED [ChemIDplus]
+synonym: "halite" RELATED [NIST_Chemistry_WebBook]
+synonym: "Kochsalz" RELATED [ChEBI]
+synonym: "NaCl" RELATED [IUPAC]
+synonym: "natrii chloridum" RELATED [ChEBI]
+synonym: "Natriumchlorid" RELATED [NIST_Chemistry_WebBook]
+synonym: "rock salt" RELATED [ChemIDplus]
+synonym: "salt" RELATED [ChemIDplus]
+synonym: "sodium chloride" EXACT [ChEBI]
+synonym: "sodium chloride" EXACT IUPAC_NAME [IUPAC]
+synonym: "table salt" RELATED [ChemIDplus]
+xref: Beilstein:3534976 "Beilstein"
+xref: CAS:7647-14-5 "KEGG COMPOUND"
+xref: Gmelin:13673 "Gmelin"
+xref: KEGG:C13563
+xref: KEGG:D02056
+xref: MetaCyc:NACL
+xref: PPDB:595
+xref: Reaxys:3534976 "Reaxys"
+xref: Wikipedia:Sodium_Chloride
+is_a: CHEBI:36093 ! inorganic chloride
+is_a: CHEBI:38702 ! inorganic sodium salt
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "ClNa" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/ClH.Na/h1H;/q;+1/p-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "FAPWRFPIFSIZLT-UHFFFAOYSA-M" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "58.44247" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "57.95862" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[Na+].[Cl-]" xsd:string
+
+[Term]
+id: CHEBI:26712
+name: sodium molecular entity
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "sodium compounds" RELATED [ChEBI]
+synonym: "sodium molecular entities" RELATED [ChEBI]
+is_a: CHEBI:33296 ! alkali metal molecular entity
+relationship: has_part CHEBI:26708 ! sodium atom
+
+[Term]
+id: CHEBI:26714
+name: sodium salt
+namespace: chebi_ontology
+def: "Any alkali metal salt having sodium(1+) as the cation." []
+subset: 3_STAR
+synonym: "Natriumsalz" RELATED [ChEBI]
+synonym: "Natriumsalze" RELATED [ChEBI]
+synonym: "sodium salts" RELATED [ChEBI]
+is_a: CHEBI:26712 ! sodium molecular entity
+is_a: CHEBI:35479 ! alkali metal salt
+relationship: has_part CHEBI:29101 ! sodium(1+)
 
 [Term]
 id: CHEBI:26739
@@ -6940,6 +7654,32 @@ is_a: CHEBI:35341 ! steroid
 is_a: CHEBI:49319 ! carbocyclic antibiotic
 
 [Term]
+id: CHEBI:26775
+name: stilbene
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "1,1'-(1,2-ethenediyl)bis[benzene]" RELATED [NIST_Chemistry_WebBook]
+synonym: "1,1'-(1,2-ethenediyl)bisbenzene" RELATED [ChemIDplus]
+synonym: "1,1'-(1,2-ethenediyl)dibenzene" RELATED [ChemIDplus]
+synonym: "1,1'-(ethene-1,2-diyl)dibenzene" EXACT IUPAC_NAME [IUPAC]
+synonym: "1,1'-ethene-1,2-diyldibenzene" RELATED [ChEBI]
+synonym: "1,2-diphenylethylene" RELATED [NIST_Chemistry_WebBook]
+synonym: "alpha,beta-diphenylethylene" RELATED [NIST_Chemistry_WebBook]
+synonym: "stilbene" EXACT [ChemIDplus]
+xref: Beilstein:1904445 "ChemIDplus"
+xref: CAS:588-59-0 "NIST Chemistry WebBook"
+xref: Gmelin:67845 "Gmelin"
+is_a: CHEBI:26776 ! stilbenoid
+is_a: CHEBI:33645 ! acyclic olefin
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C14H12" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C14H12/c1-3-7-13(8-4-1)11-12-14-9-5-2-6-10-14/h1-12H" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "PJANXHGTPQOBST-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "180.24508" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "180.09390" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H]C(=C([H])c1ccccc1)c1ccccc1" xsd:string
+
+[Term]
 id: CHEBI:26776
 name: stilbenoid
 namespace: chebi_ontology
@@ -6957,6 +7697,23 @@ namespace: chebi_ontology
 subset: 3_STAR
 is_a: CHEBI:22479 ! amino cyclitol glycoside
 is_a: CHEBI:22507 ! aminoglycoside antibiotic
+
+[Term]
+id: CHEBI:26819
+name: sulfuric ester
+namespace: chebi_ontology
+def: "An ester of an alcohol and sulfuric acid." []
+subset: 3_STAR
+synonym: "sulfate ester" RELATED [ChEBI]
+synonym: "sulfuric acid ester" RELATED [ChEBI]
+synonym: "sulfuric acid esters" RELATED [ChEBI]
+is_a: CHEBI:35701 ! ester
+is_a: CHEBI:37826 ! sulfuric acid derivative
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "O4SR2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "96.06300" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "95.95173" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[*]OS(=O)(=O)O[*]" xsd:string
 
 [Term]
 id: CHEBI:2682
@@ -7020,6 +7777,13 @@ namespace: chebi_ontology
 def: "Any sulfur molecular entity that involves either covalently bonded or anionic sulfur." []
 subset: 3_STAR
 synonym: "sulphides" RELATED [ChEBI]
+is_a: CHEBI:26835 ! sulfur molecular entity
+
+[Term]
+id: CHEBI:26830
+name: sulfonium compound
+namespace: chebi_ontology
+subset: 1_STAR
 is_a: CHEBI:26835 ! sulfur molecular entity
 
 [Term]
@@ -7624,6 +8388,10 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "12.00000"
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[C]" xsd:string
 
 [Term]
+id: CHEBI:2762
+alt_id: CHEBI:22584
+
+[Term]
 id: CHEBI:27641
 name: cycloheximide
 namespace: chebi_ontology
@@ -7638,6 +8406,7 @@ synonym: "cicloheximide" RELATED INN [WHO_MedNet]
 synonym: "cicloheximidum" RELATED INN [ChemIDplus]
 synonym: "Cycloheximid" RELATED [ChEBI]
 synonym: "Cycloheximide" EXACT [KEGG_COMPOUND]
+synonym: "cycloheximide" EXACT [UniProt]
 synonym: "naramycin" RELATED [ChemIDplus]
 synonym: "naramycin A" RELATED [ChemIDplus]
 synonym: "Zykloheximid" RELATED [ChEBI]
@@ -7866,6 +8635,20 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "IWVCMVBTMGNXQD-PX
 property_value: http://purl.obolibrary.org/obo/chebi/mass "460.43400" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "460.14818" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H][C@@]12[C@@H](O)[C@@]3([H])C(C(=O)c4c(O)cccc4[C@@]3(C)O)=C(O)[C@]1(O)C(=O)C(C(N)=O)=C(O)[C@H]2N(C)C" xsd:string
+
+[Term]
+id: CHEBI:27780
+name: detergent
+namespace: chebi_ontology
+alt_id: CHEBI:23648
+alt_id: CHEBI:4456
+def: "A surfactant (or a mixture containing one or more surfactants) having cleaning properties in dilute solutions." []
+subset: 3_STAR
+synonym: "detergent" EXACT IUPAC_NAME [IUPAC]
+synonym: "Detergents" RELATED [KEGG_COMPOUND]
+xref: KEGG:C01689
+is_a: CHEBI:33232 ! application
+is_a: CHEBI:35195 ! surfactant
 
 [Term]
 id: CHEBI:27822
@@ -8694,13 +9477,49 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "62.92960"
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[Cu]" xsd:string
 
 [Term]
+id: CHEBI:28789
+name: L-glucitol
+namespace: chebi_ontology
+alt_id: CHEBI:21394
+alt_id: CHEBI:6223
+def: "The L-enantiomer of glucitol." []
+subset: 3_STAR
+synonym: "(2R,3S,4S,5S)-hexane-1,2,3,4,5,6-hexol" RELATED [IUPAC]
+synonym: "D-Gulitol" RELATED [KEGG_COMPOUND]
+synonym: "D-gulitol" RELATED [ChEBI]
+synonym: "L-Glucitol" EXACT [KEGG_COMPOUND]
+synonym: "L-glucitol" EXACT [ChEBI]
+synonym: "L-glucitol" EXACT IUPAC_NAME [IUPAC]
+synonym: "L-Sorbitol" RELATED [KEGG_COMPOUND]
+synonym: "L-sorbitol" RELATED [ChEBI]
+xref: Beilstein:1721906 "Beilstein"
+xref: CAS:6706-59-8 "KEGG COMPOUND"
+xref: ECMDB:ECMDB00247
+xref: Gmelin:648560 "Gmelin"
+xref: KEGG:C01722
+xref: MetaCyc:CPD-12810
+xref: PMID:19695255 "Europe PMC"
+xref: Reaxys:1721906 "Reaxys"
+xref: YMDB:YMDB00724
+is_a: CHEBI:30911 ! glucitol
+relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
+relationship: is_enantiomer_of CHEBI:17924 ! D-glucitol
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C6H14O6" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C6H14O6/c7-1-3(9)5(11)6(12)4(10)2-8/h3-12H,1-2H2/t3-,4+,5-,6-/m0/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "FBPFZTCFMRRESA-FSIIMWSLSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "182.17176" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "182.07904" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "OC[C@H](O)[C@H](O)[C@@H](O)[C@H](O)CO" xsd:string
+
+[Term]
 id: CHEBI:28817
 name: dodecane
 namespace: chebi_ontology
 alt_id: CHEBI:25464
 alt_id: CHEBI:41713
 alt_id: CHEBI:4675
-def: "A straight-chain alkane with 12 carbon atoms. It has been form the essential oils of various plants including Zingiber officinale (ginger)." []
+def: "A straight-chain alkane with 12 carbon atoms. It has been isolated from the essential oils of various plants including Zingiber officinale (ginger)." []
 subset: 3_STAR
 synonym: "Bihexyl" RELATED [HMDB]
 synonym: "CH3-[CH2]10-CH3" RELATED [IUPAC]
@@ -9442,6 +10261,77 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "43.98983"
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[O-]C([*])=O" xsd:string
 
 [Term]
+id: CHEBI:29101
+name: sodium(1+)
+namespace: chebi_ontology
+alt_id: CHEBI:26717
+alt_id: CHEBI:49766
+alt_id: CHEBI:9175
+def: "A monoatomic monocation obtained from sodium." []
+subset: 3_STAR
+synonym: "Na(+)" RELATED [UniProt]
+synonym: "Na(+)" RELATED [IUPAC]
+synonym: "Na+" RELATED [KEGG_COMPOUND]
+synonym: "sodium cation" EXACT IUPAC_NAME [IUPAC]
+synonym: "SODIUM ION" RELATED [PDBeChem]
+synonym: "sodium(1+)" EXACT IUPAC_NAME [IUPAC]
+synonym: "sodium(1+) ion" EXACT IUPAC_NAME [IUPAC]
+synonym: "sodium(I) cation" EXACT IUPAC_NAME [IUPAC]
+xref: CAS:17341-25-2 "ChemIDplus"
+xref: Gmelin:15196 "Gmelin"
+xref: KEGG:C01330
+xref: PDBeChem:NA
+is_a: CHEBI:25414 ! monoatomic monocation
+is_a: CHEBI:33504 ! alkali metal cation
+is_a: CHEBI:37246 ! elemental sodium
+is_a: CHEBI:60242 ! monovalent inorganic cation
+relationship: has_role CHEBI:23357 ! cofactor
+relationship: has_role CHEBI:77746 ! human metabolite
+property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "Na" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/Na/q+1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "FKNQFGJONOIPTF-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "22.98977" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "22.98922" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[Na+]" xsd:string
+
+[Term]
+id: CHEBI:29103
+name: potassium(1+)
+namespace: chebi_ontology
+alt_id: CHEBI:26219
+alt_id: CHEBI:49685
+alt_id: CHEBI:8345
+def: "A monoatomic monocation obtained from potassium." []
+subset: 3_STAR
+synonym: "K(+)" RELATED [UniProt]
+synonym: "K(+)" RELATED [IUPAC]
+synonym: "K+" RELATED [KEGG_COMPOUND]
+synonym: "potassium cation" EXACT IUPAC_NAME [IUPAC]
+synonym: "POTASSIUM ION" RELATED [PDBeChem]
+synonym: "potassium(1+)" EXACT IUPAC_NAME [IUPAC]
+synonym: "potassium(1+) ion" EXACT IUPAC_NAME [IUPAC]
+synonym: "potassium(I) cation" EXACT IUPAC_NAME [IUPAC]
+xref: CAS:24203-36-9 "NIST Chemistry WebBook"
+xref: Gmelin:15203 "Gmelin"
+xref: KEGG:C00238
+xref: KEGG:D08403
+xref: PDBeChem:K
+is_a: CHEBI:25414 ! monoatomic monocation
+is_a: CHEBI:33504 ! alkali metal cation
+is_a: CHEBI:37247 ! elemental potassium
+is_a: CHEBI:60242 ! monovalent inorganic cation
+relationship: has_role CHEBI:23357 ! cofactor
+relationship: has_role CHEBI:77746 ! human metabolite
+property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "K" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/K/q+1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "NPYPAHLBTDXSSS-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "39.09830" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "38.96316" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[K+]" xsd:string
+
+[Term]
 id: CHEBI:29192
 name: hydrogenperoxide(1-)
 namespace: chebi_ontology
@@ -9489,6 +10379,36 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "BDHFUVZGWQCTTF-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "82.08008" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "81.97247" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H]S(O)(=O)=O" xsd:string
+
+[Term]
+id: CHEBI:29256
+name: thiol
+namespace: chebi_ontology
+alt_id: CHEBI:13443
+alt_id: CHEBI:13696
+alt_id: CHEBI:17366
+alt_id: CHEBI:26969
+alt_id: CHEBI:8766
+alt_id: CHEBI:9556
+def: "An organosulfur compound in which a thiol group, -SH, is attached to a carbon atom of any aliphatic or aromatic moiety." []
+subset: 3_STAR
+synonym: "a thiol" RELATED [UniProt]
+synonym: "Mercaptan" RELATED [KEGG_COMPOUND]
+synonym: "mercaptans" RELATED [ChEBI]
+synonym: "Merkaptan" RELATED [ChEBI]
+synonym: "RSH" RELATED [IUPAC]
+synonym: "Thiol" EXACT [KEGG_COMPOUND]
+synonym: "thiols" EXACT IUPAC_NAME [IUPAC]
+synonym: "thiols" RELATED [ChEBI]
+xref: KEGG:C00145
+xref: Wikipedia:Thiol
+is_a: CHEBI:33261 ! organosulfur compound
+relationship: has_part CHEBI:29917 ! thiol group
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "HSR" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "33.07300" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "32.97990" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "S[*]" xsd:string
 
 [Term]
 id: CHEBI:29258
@@ -9539,6 +10459,38 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "GBHRVZIGDIUCJB-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "79.97990" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "79.96743" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H]OP([O-])[O-]" xsd:string
+
+[Term]
+id: CHEBI:29277
+name: dinitride(2-)
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "diazenediide" EXACT IUPAC_NAME [IUPAC]
+synonym: "dinitride(2-)" EXACT IUPAC_NAME [IUPAC]
+synonym: "N2(2-)" RELATED [IUPAC]
+xref: Gmelin:1565041 "Gmelin"
+is_a: CHEBI:33266 ! diatomic nitrogen
+relationship: is_conjugate_base_of CHEBI:30103 ! diazenide
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "N2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/N2/c1-2/q-2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "BZZJUZUZJRQHLZ-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "28.01348" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "28.00725" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[N-]=[N-]" xsd:string
+
+[Term]
+id: CHEBI:29281
+name: alkyl sulfate
+namespace: chebi_ontology
+alt_id: CHEBI:13810
+alt_id: CHEBI:22325
+alt_id: CHEBI:2583
+subset: 3_STAR
+synonym: "alkyl sulfates" RELATED [ChEBI]
+is_a: CHEBI:25704 ! organic sulfate
+is_a: CHEBI:26819 ! sulfuric ester
+relationship: is_conjugate_acid_of CHEBI:83414 ! alkyl sulfate(1-)
 
 [Term]
 id: CHEBI:29337
@@ -9881,6 +10833,76 @@ property_value: http://purl.obolibrary.org/obo/chebi/mass "46.00550" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "45.99290" xsd:string
 
 [Term]
+id: CHEBI:29917
+name: thiol group
+namespace: chebi_ontology
+alt_id: CHEBI:26821
+alt_id: CHEBI:29916
+subset: 3_STAR
+synonym: "-SH" RELATED [IUPAC]
+synonym: "HS-" RELATED [IUPAC]
+synonym: "mercapto group" RELATED [ChEBI]
+synonym: "Mercaptogruppe" RELATED [ChEBI]
+synonym: "Merkaptogruppe" RELATED [ChEBI]
+synonym: "sulfanyl" EXACT IUPAC_NAME [IUPAC]
+synonym: "sulfhydryl group" RELATED [ChEBI]
+synonym: "Sulfhydrylgruppe" RELATED [ChEBI]
+synonym: "sulphydryl group" RELATED [ChEBI]
+synonym: "thiol" EXACT IUPAC_NAME [IUPAC]
+synonym: "thiol group" EXACT [UniProt]
+synonym: "Thiolgruppe" RELATED [ChEBI]
+is_a: CHEBI:33246 ! inorganic group
+relationship: is_substituent_group_from CHEBI:16136 ! hydrogen sulfide
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "HS" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "33.07394" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "32.97990" xsd:string
+
+[Term]
+id: CHEBI:29919
+name: hydrosulfide
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "HS anion" RELATED [NIST_Chemistry_WebBook]
+synonym: "HS(-)" RELATED [IUPAC]
+synonym: "hydrogen sulfide" RELATED [UniProt]
+synonym: "hydrogen(sulfide)(1-)" EXACT IUPAC_NAME [IUPAC]
+synonym: "hydrosulfide" EXACT [IUPAC]
+synonym: "sulfanide" EXACT IUPAC_NAME [IUPAC]
+xref: CAS:15035-72-0 "ChemIDplus"
+xref: Gmelin:24766 "Gmelin"
+is_a: CHEBI:33535 ! sulfur hydride
+relationship: has_role CHEBI:75772 ! Saccharomyces cerevisiae metabolite
+relationship: has_role CHEBI:77746 ! human metabolite
+relationship: is_conjugate_acid_of CHEBI:15138 ! sulfide(2-)
+relationship: is_conjugate_base_of CHEBI:16136 ! hydrogen sulfide
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "HS" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/H2S/h1H2/p-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "RWSOTUBLDIXVET-UHFFFAOYSA-M" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "33.07394" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "32.98044" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[S-][H]" xsd:string
+
+[Term]
+id: CHEBI:29922
+name: sulfo group
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "-S(O)2(OH)" RELATED [IUPAC]
+synonym: "hydroxydioxo-lambda(6)-sulfanyl" EXACT IUPAC_NAME [IUPAC]
+synonym: "hydroxysulfonyl" EXACT IUPAC_NAME [IUPAC]
+synonym: "sulfo" EXACT IUPAC_NAME [IUPAC]
+synonym: "SULFO GROUP" EXACT [PDBeChem]
+xref: PDBeChem:SFO
+is_a: CHEBI:33246 ! inorganic group
+relationship: is_substituent_group_from CHEBI:29214 ! sulfonic acid
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "HO3S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "81.07214" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "80.96464" xsd:string
+
+[Term]
 id: CHEBI:30089
 name: acetate
 namespace: chebi_ontology
@@ -9922,6 +10944,60 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "QTBSBXVTEAMEQO-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "59.04402" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "59.01385" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "CC([O-])=O" xsd:string
+
+[Term]
+id: CHEBI:30096
+name: diazene
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "diazene" EXACT IUPAC_NAME [IUPAC]
+synonym: "Diimide" RELATED [NIST_Chemistry_WebBook]
+synonym: "HN=NH" RELATED [IUPAC]
+xref: CAS:3618-05-1 "ChemIDplus"
+xref: KEGG:C05360
+is_a: CHEBI:35106 ! nitrogen hydride
+relationship: is_conjugate_acid_of CHEBI:30103 ! diazenide
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "H2N2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/H2N2/c1-2/h1-2H" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "RAABOESOVLLHRU-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "30.02936" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "30.02180" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "N=N" xsd:string
+
+[Term]
+id: CHEBI:30103
+name: diazenide
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "diazenide" EXACT IUPAC_NAME [IUPAC]
+synonym: "N=NH(-)" RELATED [IUPAC]
+is_a: CHEBI:35106 ! nitrogen hydride
+relationship: is_conjugate_acid_of CHEBI:29277 ! dinitride(2-)
+relationship: is_conjugate_base_of CHEBI:30096 ! diazene
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "HN2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/HN2/c1-2/h1H/q-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "XSCXGOPPNHTWEF-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "29.02142" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "29.01452" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "N=[N-]" xsd:string
+
+[Term]
+id: CHEBI:30106
+name: azo group
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "-N=N-" RELATED [IUPAC]
+synonym: "azo" RELATED [IUPAC]
+synonym: "diazene-1,2-diyl" RELATED [IUPAC]
+synonym: "diazenediyl" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:33246 ! inorganic group
+relationship: is_substituent_group_from CHEBI:30096 ! diazene
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "N2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "28.01348" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "28.00615" xsd:string
 
 [Term]
 id: CHEBI:3015
@@ -10034,6 +11110,32 @@ is_a: CHEBI:23906 ! monoatomic cation
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+2" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "0.00000" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[*++]" xsd:string
+
+[Term]
+id: CHEBI:30488
+name: sulfonium
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "[SH3](+)" RELATED [ChEBI]
+synonym: "H3S(+)" RELATED [IUPAC]
+synonym: "H3S+" RELATED [NIST_Chemistry_WebBook]
+synonym: "sulfanium" EXACT IUPAC_NAME [IUPAC]
+synonym: "sulfonium" EXACT IUPAC_NAME [IUPAC]
+synonym: "sulphonium" RELATED [ChEBI]
+synonym: "trihydridosulfur(1+)" EXACT IUPAC_NAME [IUPAC]
+xref: CAS:18155-21-0 "NIST Chemistry WebBook"
+xref: Gmelin:307 "Gmelin"
+is_a: CHEBI:26830 ! sulfonium compound
+is_a: CHEBI:33535 ! sulfur hydride
+is_a: CHEBI:50313 ! onium cation
+relationship: is_conjugate_acid_of CHEBI:16136 ! hydrogen sulfide
+property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "H3S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/H2S/h1H2/p+1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "RWSOTUBLDIXVET-UHFFFAOYSA-O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "35.08982" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "34.99500" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H][S+]([H])[H]" xsd:string
 
 [Term]
 id: CHEBI:30746
@@ -10290,6 +11392,31 @@ property_value: http://purl.obolibrary.org/obo/chebi/formula "HOR" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "17.007" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "17.00274" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "O[*]" xsd:string
+
+[Term]
+id: CHEBI:30911
+name: glucitol
+namespace: chebi_ontology
+alt_id: CHEBI:15093
+alt_id: CHEBI:26724
+alt_id: CHEBI:26726
+alt_id: CHEBI:33795
+alt_id: CHEBI:33796
+alt_id: CHEBI:9201
+subset: 3_STAR
+synonym: "glucitol" EXACT IUPAC_NAME [IUPAC]
+synonym: "gulitol" RELATED [ChEBI]
+synonym: "rel-(2R,3R,4R,5S)-hexane-1,2,3,4,5,6-hexol" RELATED [IUPAC]
+synonym: "Sorbitol" RELATED [KEGG_COMPOUND]
+xref: Beilstein:1721909 "Beilstein"
+xref: Gmelin:83165 "Gmelin"
+xref: Wikipedia:Sorbitol
+is_a: CHEBI:24583 ! hexitol
+relationship: has_role CHEBI:76924 ! plant metabolite
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C6H14O6" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "182.172" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "182.07904" xsd:string
 
 [Term]
 id: CHEBI:30938
@@ -10562,6 +11689,40 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "PVNIIMVLHYAWGP-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "122.10150" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "122.02475" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[O-]C(=O)c1cccnc1" xsd:string
+
+[Term]
+id: CHEBI:32588
+name: potassium chloride
+namespace: chebi_ontology
+def: "A metal chloride salt with a K(+) counterion." []
+subset: 3_STAR
+synonym: "[KCl]" RELATED [MolBase]
+synonym: "Kaliumchlorid" RELATED [ChEBI]
+synonym: "Kaon-Cl 10" RELATED BRAND_NAME [KEGG_DRUG]
+synonym: "KCl" RELATED [IUPAC]
+synonym: "Klor-con" RELATED BRAND_NAME [KEGG_DRUG]
+synonym: "Klotrix" RELATED BRAND_NAME [KEGG_DRUG]
+synonym: "Monopotassium chloride" RELATED [DrugBank]
+synonym: "muriate of potash" RELATED [NIST_Chemistry_WebBook]
+synonym: "potassium chloride" EXACT IUPAC_NAME [IUPAC]
+synonym: "sylvite" RELATED [ChEBI]
+xref: CAS:7447-40-7 "NIST Chemistry WebBook"
+xref: DrugBank:DB00761
+xref: KEGG:D02060
+xref: MetaCyc:KCL
+xref: MolBase:881
+xref: Reaxys:3534978 "Reaxys"
+xref: Wikipedia:Potassium_Chloride
+is_a: CHEBI:26218 ! potassium salt
+is_a: CHEBI:36093 ! inorganic chloride
+relationship: has_role CHEBI:33287 ! fertilizer
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "ClK" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/ClH.K/h1H;/q;+1/p-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "WCUXLLCKKVVCTQ-UHFFFAOYSA-M" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "74.55100" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "73.93256" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[Cl-].[K+]" xsd:string
 
 [Term]
 id: CHEBI:32600
@@ -11155,6 +12316,25 @@ is_a: CHEBI:26835 ! sulfur molecular entity
 is_a: CHEBI:36962 ! organochalcogen compound
 
 [Term]
+id: CHEBI:33266
+name: diatomic nitrogen
+namespace: chebi_ontology
+subset: 3_STAR
+is_a: CHEBI:33267 ! elemental nitrogen
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "N2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "28.013" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "28.00615" xsd:string
+
+[Term]
+id: CHEBI:33267
+name: elemental nitrogen
+namespace: chebi_ontology
+subset: 3_STAR
+is_a: CHEBI:33465 ! elemental pnictogen
+is_a: CHEBI:51143 ! nitrogen molecular entity
+
+[Term]
 id: CHEBI:33273
 name: polyatomic anion
 namespace: chebi_ontology
@@ -11258,6 +12438,16 @@ namespace: chebi_ontology
 def: "An energy-rich substance that can be transformed with release of usable energy." []
 subset: 3_STAR
 is_a: CHEBI:33232 ! application
+
+[Term]
+id: CHEBI:33296
+name: alkali metal molecular entity
+namespace: chebi_ontology
+def: "A molecular entity containing one or more atoms of an alkali metal." []
+subset: 3_STAR
+synonym: "alkali metal molecular entities" RELATED [ChEBI]
+is_a: CHEBI:33674 ! s-block molecular entity
+relationship: has_part CHEBI:22314 ! alkali metal atom
 
 [Term]
 id: CHEBI:33300
@@ -11368,6 +12558,19 @@ synonym: "main group elements" EXACT IUPAC_NAME [IUPAC]
 is_a: CHEBI:33250 ! atom
 
 [Term]
+id: CHEBI:33338
+name: aryl group
+namespace: chebi_ontology
+def: "A group derived from an arene by removal of a hydrogen atom from a ring carbon atom." []
+subset: 3_STAR
+synonym: "aryl groups" EXACT IUPAC_NAME [IUPAC]
+synonym: "Arylgruppe" RELATED [ChEBI]
+synonym: "groupe aryle" RELATED [IUPAC]
+synonym: "grupos arilo" RELATED [IUPAC]
+is_a: CHEBI:33248 ! hydrocarbyl group
+relationship: is_substituent_group_from CHEBI:33658 ! arene
+
+[Term]
 id: CHEBI:33340
 name: zinc group element atom
 namespace: chebi_ontology
@@ -11442,6 +12645,56 @@ is_a: CHEBI:26835 ! sulfur molecular entity
 is_a: CHEBI:33241 ! oxoacid derivative
 
 [Term]
+id: CHEBI:33429
+name: monoatomic monoanion
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "monoatomic monoanions" RELATED [ChEBI]
+is_a: CHEBI:23905 ! monoatomic anion
+is_a: CHEBI:36830 ! monoanion
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "0.00000" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[*-]" xsd:string
+
+[Term]
+id: CHEBI:33431
+name: elemental chlorine
+namespace: chebi_ontology
+subset: 3_STAR
+is_a: CHEBI:23117 ! chlorine molecular entity
+is_a: CHEBI:33434 ! elemental halogen
+
+[Term]
+id: CHEBI:33432
+name: monoatomic chlorine
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "atomic chlorine" RELATED [ChEBI]
+is_a: CHEBI:33431 ! elemental chlorine
+is_a: CHEBI:33433 ! monoatomic halogen
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "Cl" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "35.453" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "34.96885" xsd:string
+
+[Term]
+id: CHEBI:33433
+name: monoatomic halogen
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "monoatomic halogens" RELATED [ChEBI]
+is_a: CHEBI:33238 ! monoatomic entity
+
+[Term]
+id: CHEBI:33434
+name: elemental halogen
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "elemental halogen" EXACT [ChEBI]
+synonym: "elemental halogens" RELATED [ChEBI]
+is_a: CHEBI:33259 ! elemental molecular entity
+
+[Term]
 id: CHEBI:33457
 name: phosphorus oxoacid
 namespace: chebi_ontology
@@ -11484,8 +12737,9 @@ def: "A monovalent inorganic anion obtained by deprotonation of one of the two O
 subset: 3_STAR
 synonym: "[PHO2(OH)](-)" RELATED [IUPAC]
 synonym: "hydridohydroxidodioxidophosphate(1-)" EXACT IUPAC_NAME [IUPAC]
-synonym: "hydrogen phosphonate" RELATED [IUPAC]
-synonym: "hydrogenphosphonate" EXACT IUPAC_NAME [IUPAC]
+synonym: "hydrogen phosphonate" EXACT IUPAC_NAME [IUPAC]
+synonym: "hydrogenphosphonate" RELATED [IUPAC]
+xref: PDBeChem:78T
 is_a: CHEBI:33461 ! phosphorus oxoanion
 is_a: CHEBI:79389 ! monovalent inorganic anion
 relationship: is_conjugate_acid_of CHEBI:16215 ! phosphonate(2-)
@@ -11494,9 +12748,20 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "H2O3P" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/H3O3P/c1-4(2)3/h4H,(H2,1,2,3)/p-1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchikey "ABLZXFCXXLZCGV-UHFFFAOYSA-M" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "80.98784" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "80.987" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "80.97470" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H]OP([H])([O-])=O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H]P([O-])(O[H])=O" xsd:string
+
+[Term]
+id: CHEBI:33465
+name: elemental pnictogen
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "elemental pnictogen" EXACT [ChEBI]
+synonym: "elemental pnictogens" RELATED [ChEBI]
+is_a: CHEBI:24835 ! inorganic molecular entity
+is_a: CHEBI:33259 ! elemental molecular entity
+is_a: CHEBI:33302 ! pnictogen molecular entity
 
 [Term]
 id: CHEBI:33482
@@ -11542,6 +12807,14 @@ is_a: CHEBI:23367 ! molecular entity
 relationship: has_part CHEBI:27081 ! transition element atom
 
 [Term]
+id: CHEBI:33504
+name: alkali metal cation
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "alkali metal cations" RELATED [ChEBI]
+is_a: CHEBI:25213 ! metal cation
+
+[Term]
 id: CHEBI:33515
 name: transition element cation
 namespace: chebi_ontology
@@ -11569,6 +12842,18 @@ xref: Wikipedia:Metal
 is_a: CHEBI:33250 ! atom
 
 [Term]
+id: CHEBI:33535
+name: sulfur hydride
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "hydrides of sulfur" RELATED [ChEBI]
+synonym: "sulfur hydride" EXACT [ChEBI]
+synonym: "sulfur hydrides" RELATED [ChEBI]
+synonym: "sulphur hydrides" RELATED [ChEBI]
+is_a: CHEBI:26835 ! sulfur molecular entity
+is_a: CHEBI:36902 ! chalcogen hydride
+
+[Term]
 id: CHEBI:33543
 name: sulfonate
 namespace: chebi_ontology
@@ -11590,6 +12875,26 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "80.96519"
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H]S([O-])(=O)=O" xsd:string
 
 [Term]
+id: CHEBI:33551
+name: organosulfonic acid
+namespace: chebi_ontology
+def: "An organic derivative of sulfonic acid in which the sulfo group is linked directly to carbon." []
+subset: 3_STAR
+synonym: "organosulfonic acids" RELATED [ChEBI]
+synonym: "sulfonic acids" RELATED [ChEBI]
+is_a: CHEBI:33261 ! organosulfur compound
+is_a: CHEBI:33552 ! sulfonic acid derivative
+is_a: CHEBI:64709 ! organic acid
+relationship: has_part CHEBI:29922 ! sulfo group
+relationship: has_part CHEBI:33249 ! organyl group
+relationship: is_conjugate_acid_of CHEBI:33554 ! organosulfonate oxoanion
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "HO3SR" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "81.07100" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "80.96464" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "OS([*])(=O)=O" xsd:string
+
+[Term]
 id: CHEBI:33552
 name: sulfonic acid derivative
 namespace: chebi_ontology
@@ -11599,6 +12904,37 @@ synonym: "sulfonic acid derivative" EXACT [ChEBI]
 synonym: "sulfonic acid derivatives" RELATED [ChEBI]
 is_a: CHEBI:33424 ! sulfur oxoacid derivative
 relationship: has_functional_parent CHEBI:29214 ! sulfonic acid
+
+[Term]
+id: CHEBI:33554
+name: organosulfonate oxoanion
+namespace: chebi_ontology
+def: "An organic anion obtained by deprotonation of the sufonate group(s) of any organosulfonic acid." []
+subset: 3_STAR
+synonym: "organosulfonate" RELATED [ChEBI]
+synonym: "organosulfonate oxoanions" RELATED [ChEBI]
+synonym: "organosulfonates" RELATED [ChEBI]
+is_a: CHEBI:25696 ! organic anion
+relationship: has_functional_parent CHEBI:33543 ! sulfonate
+relationship: is_conjugate_base_of CHEBI:33551 ! organosulfonic acid
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "O3SR" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "80.064" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "79.95681" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "*S([O-])(=O)=O" xsd:string
+
+[Term]
+id: CHEBI:33555
+name: arenesulfonic acid
+namespace: chebi_ontology
+def: "Organic derivatives of sulfonic acid in which the sulfo group is linked directly to carbon of an aryl group." []
+subset: 3_STAR
+synonym: "arenesulfonic acids" RELATED [ChEBI]
+synonym: "arylsulfonic acid" RELATED [ChEBI]
+synonym: "arylsulfonic acids" RELATED [ChEBI]
+is_a: CHEBI:33551 ! organosulfonic acid
+relationship: has_part CHEBI:33338 ! aryl group
+relationship: is_conjugate_acid_of CHEBI:22713 ! arenesulfonate oxoanion
 
 [Term]
 id: CHEBI:33558
@@ -11797,6 +13133,27 @@ subset: 3_STAR
 synonym: "ortho-fused compounds" RELATED [ChEBI]
 synonym: "ortho-fused polycyclic compounds" EXACT IUPAC_NAME [IUPAC]
 is_a: CHEBI:35293 ! fused compound
+
+[Term]
+id: CHEBI:33641
+name: olefin
+namespace: chebi_ontology
+def: "Acyclic and cyclic hydrocarbons having one or more carbon-carbon double bonds, apart from the formal ones in aromatic compounds. The class olefins subsumes alkenes and cycloalkenes and the corresponding polyenes." []
+subset: 3_STAR
+synonym: "olefin" EXACT IUPAC_NAME [IUPAC]
+synonym: "olefins" EXACT IUPAC_NAME [IUPAC]
+synonym: "olefins" RELATED [ChEBI]
+is_a: CHEBI:24632 ! hydrocarbon
+is_a: CHEBI:78840 ! olefinic compound
+
+[Term]
+id: CHEBI:33645
+name: acyclic olefin
+namespace: chebi_ontology
+def: "Acyclic branched or unbranched hydrocarbons having one or more carbon-carbon double bond." []
+subset: 3_STAR
+synonym: "acyclic olefins" RELATED [ChEBI]
+is_a: CHEBI:33641 ! olefin
 
 [Term]
 id: CHEBI:33653
@@ -12427,6 +13784,17 @@ subset: 1_STAR
 is_a: CHEBI:33284 ! nutrient
 
 [Term]
+id: CHEBI:33958
+name: halide salt
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "halide salts" RELATED [ChEBI]
+synonym: "halides" RELATED [ChEBI]
+is_a: CHEBI:24866 ! salt
+is_a: CHEBI:37578 ! halide
+relationship: has_part CHEBI:16042 ! halide anion
+
+[Term]
 id: CHEBI:34043
 name: 1,2-phenylenediamine
 namespace: chebi_ontology
@@ -12579,6 +13947,35 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "LDVVMCZRFWMZSG-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "300.58900" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "298.93413" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "ClC(Cl)(Cl)SN1C(=O)C2CC=CCC2C1=O" xsd:string
+
+[Term]
+id: CHEBI:34653
+name: Congo Red
+namespace: chebi_ontology
+def: "An indicator dye that is blue-violet at pH 3.0 and red at pH 5.0." []
+subset: 3_STAR
+synonym: "Congo red" EXACT [KEGG_COMPOUND]
+synonym: "Direct red 28" RELATED [KEGG_COMPOUND]
+synonym: "disodium 3,3'-((1,1'-biphenyl)-4,4'-diylbis(azo))bis(4-aminonaphthalene-1-sulphonate)" RELATED [ChemIDplus]
+synonym: "disodium 3,3'-(biphenyl-4,4'-diyldidiazene-2,1-diyl)bis(4-aminonaphthalene-1-sulfonate)" EXACT IUPAC_NAME [IUPAC]
+synonym: "Kongorot" RELATED [ChemIDplus]
+synonym: "Sodium diphenyldiazo-bis-alpha-naphthylaminesulfonate" RELATED [KEGG_COMPOUND]
+xref: Beilstein:3894858 "Beilstein"
+xref: Beilstein:741468 "Beilstein"
+xref: CAS:573-58-0 "ChemIDplus"
+xref: Gmelin:135213 "Gmelin"
+xref: KEGG:C14078
+is_a: CHEBI:37533 ! azo compound
+relationship: has_functional_parent CHEBI:38217 ! 3,3'-(biphenyl-4,4'-diyldidiazene-2,1-diyl)bis(4-aminonaphthalene-1-sulfonic acid)
+relationship: has_part CHEBI:38216 ! 3,3'-(biphenyl-4,4'-diyldidiazene-2,1-diyl)bis(4-aminonaphthalene-1-sulfonate)
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C32H22N6Na2O6S2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C32H22N6O6S2.2Na" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C32H24N6O6S2.2Na/c33-31-25-7-3-1-5-23(25)29(45(39,40)41)17-27(31)37-35-21-13-9-19(10-14-21)20-11-15-22(16-12-20)36-38-28-18-30(46(42,43)44)24-6-2-4-8-26(24)32(28)34;;/h1-18H,33-34H2,(H,39,40,41)(H,42,43,44);;/q;2*+1/p-2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "IQFVPQOLBLOTPF-UHFFFAOYSA-L" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "696.667" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "696.08376" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C1=CC(C2=CC=C(N=NC3=CC(=C4C(=C3N)C=CC=C4)S([O-])(=O)=O)C=C2)=CC=C1N=NC5=CC(=C6C(=C5N)C=CC=C6)S([O-])(=O)=O.[Na+].[Na+]" xsd:string
 
 [Term]
 id: CHEBI:3478
@@ -13137,6 +14534,17 @@ synonym: "diterpenos" RELATED [IUPAC]
 is_a: CHEBI:35186 ! terpene
 
 [Term]
+id: CHEBI:35195
+name: surfactant
+namespace: chebi_ontology
+def: "A substance which lowers the surface tension of the medium in which it is dissolved, and/or the interfacial tension with other phases, and, accordingly, is positively adsorbed at the liquid/vapour and/or at other interfaces." []
+subset: 3_STAR
+synonym: "surface active agent" RELATED [IUPAC]
+synonym: "surfactant" EXACT IUPAC_NAME [IUPAC]
+synonym: "surfactants" RELATED [ChEBI]
+is_a: CHEBI:63046 ! emulsifier
+
+[Term]
 id: CHEBI:35213
 name: cyclodepsipeptide
 namespace: chebi_ontology
@@ -13668,7 +15076,9 @@ name: D-glucoside
 namespace: chebi_ontology
 alt_id: CHEBI:21009
 alt_id: CHEBI:4173
+def: "Any glucoside in which the glycoside group is derived from D-glucose." []
 subset: 3_STAR
+synonym: "a D-glucoside" RELATED [UniProt]
 synonym: "D-Glucoside" EXACT [KEGG_COMPOUND]
 synonym: "D-glucosides" RELATED [ChEBI]
 xref: KEGG:C01798
@@ -13677,6 +15087,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C6H11O6R" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "179.148" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "179.05556" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[C@@H]1(OC([C@H](O)[C@H]([C@@H]1O)O)O*)CO" xsd:string
 
 [Term]
 id: CHEBI:35441
@@ -13766,6 +15177,15 @@ synonym: "NSAIDs" RELATED [ChEBI]
 xref: Wikipedia:Non-steroidal_anti-inflammatory_drug
 is_a: CHEBI:35472 ! anti-inflammatory drug
 is_a: CHEBI:35842 ! antirheumatic drug
+
+[Term]
+id: CHEBI:35479
+name: alkali metal salt
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "alkali metal salts" RELATED [ChEBI]
+is_a: CHEBI:24866 ! salt
+is_a: CHEBI:33296 ! alkali metal molecular entity
 
 [Term]
 id: CHEBI:35488
@@ -14045,6 +15465,19 @@ synonym: "cytostatic" RELATED [ChEBI]
 is_a: CHEBI:23888 ! drug
 
 [Term]
+id: CHEBI:35617
+name: flavouring agent
+namespace: chebi_ontology
+def: "A food additive that is used to added improve the taste or odour of a food." []
+subset: 3_STAR
+synonym: "flavoring agent" RELATED [ChEBI]
+synonym: "flavoring agents" RELATED [ChEBI]
+synonym: "flavour enhancer" RELATED [ChEBI]
+synonym: "flavour enhancers" RELATED [ChEBI]
+synonym: "flavouring agents" RELATED [ChEBI]
+is_a: CHEBI:64047 ! food additive
+
+[Term]
 id: CHEBI:35618
 name: aromatic ether
 namespace: chebi_ontology
@@ -14214,10 +15647,9 @@ xref: KEGG:C01612
 is_a: CHEBI:30879 ! alcohol
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CH2OR2" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "30.02600" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "58.07910" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "30.026" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "30.01056" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "OC([*])[*]" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "*C(*)O" xsd:string
 
 [Term]
 id: CHEBI:35689
@@ -14713,6 +16145,17 @@ synonym: "hydroxymonocarboxylic acid anions" RELATED [ChEBI]
 is_a: CHEBI:35757 ! monocarboxylic acid anion
 
 [Term]
+id: CHEBI:36093
+name: inorganic chloride
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "inorganic chloride salt" RELATED [ChEBI]
+synonym: "inorganic chloride salts" RELATED [ChEBI]
+synonym: "inorganic chlorides" RELATED [ChEBI]
+is_a: CHEBI:23114 ! chloride salt
+is_a: CHEBI:24839 ! inorganic salt
+
+[Term]
 id: CHEBI:36141
 name: quinone
 namespace: chebi_ontology
@@ -14758,6 +16201,15 @@ synonym: "trypanocidal drugs" RELATED [ChEBI]
 synonym: "trypanocide" RELATED [ChEBI]
 synonym: "trypanosomicidal agents" RELATED [ChEBI]
 is_a: CHEBI:35820 ! antiprotozoal drug
+
+[Term]
+id: CHEBI:36336
+name: naphthalenesulfonic acid
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "naphthalenesulfonic acids" RELATED [ChEBI]
+is_a: CHEBI:25477 ! naphthalenes
+is_a: CHEBI:33555 ! arenesulfonic acid
 
 [Term]
 id: CHEBI:36338
@@ -15627,6 +17079,20 @@ synonym: "hexols" RELATED [ChEBI]
 is_a: CHEBI:26191 ! polyol
 
 [Term]
+id: CHEBI:37246
+name: elemental sodium
+namespace: chebi_ontology
+subset: 3_STAR
+is_a: CHEBI:26712 ! sodium molecular entity
+
+[Term]
+id: CHEBI:37247
+name: elemental potassium
+namespace: chebi_ontology
+subset: 3_STAR
+is_a: CHEBI:26217 ! potassium molecular entity
+
+[Term]
 id: CHEBI:3732
 name: clarithromycin
 namespace: chebi_ontology
@@ -15855,6 +17321,18 @@ xref: KEGG:C00174
 is_a: CHEBI:51086 ! chemical role
 
 [Term]
+id: CHEBI:37533
+name: azo compound
+namespace: chebi_ontology
+def: "Derivatives of diazene with the general structure R-N=N-R'." []
+subset: 3_STAR
+synonym: "azo compounds" EXACT IUPAC_NAME [IUPAC]
+synonym: "azo compounds" RELATED [ChEBI]
+is_a: CHEBI:51143 ! nitrogen molecular entity
+relationship: has_parent_hydride CHEBI:30096 ! diazene
+relationship: has_part CHEBI:30106 ! azo group
+
+[Term]
 id: CHEBI:37577
 name: heteroatomic molecular entity
 namespace: chebi_ontology
@@ -16072,9 +17550,9 @@ relationship: has_part CHEBI:59673 ! colistin B
 relationship: has_role CHEBI:50909 ! nephrotoxic agent
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C52H97N16O13R" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "1169.46050" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "1154.428" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "1153.74210" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "CC[C@@H](C)CCCCC(=O)N[C@@H](CCN)C(=O)N[C@@H]([C@@H](C)O)C(=O)N[C@@H](CCN)C(=O)N[C@H]1CCNC(=O)[C@@H](NC(=O)[C@H](CCN)NC(=O)[C@H](CCN)NC(=O)[C@H](CC(C)C)NC(=O)[C@@H](CC(C)C)NC(=O)[C@H](CCN)NC1=O)[C@@H](C)O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C(C(N[C@H](C(N[C@H](C(N[C@H](C(N[C@@H]1C(N[C@H](C(N[C@@H](C(N[C@H](C(N[C@H](C(N[C@H](C(N[C@H](C(=O)NCC1)[C@@H](C)O)=O)CCN)=O)CCN)=O)CC(C)C)=O)CC(C)C)=O)CCN)=O)=O)CCN)=O)[C@@H](C)O)=O)CCN)=O)CCC[C@@H](C*)C" xsd:string
 
 [Term]
 id: CHEBI:37948
@@ -16323,6 +17801,44 @@ synonym: "calcium channel antagonist" RELATED [ChEBI]
 synonym: "calcium channel antagonists" RELATED [ChEBI]
 synonym: "calcium channel blockers" RELATED [ChEBI]
 is_a: CHEBI:38808 ! calcium channel modulator
+
+[Term]
+id: CHEBI:38216
+name: 3,3'-(biphenyl-4,4'-diyldidiazene-2,1-diyl)bis(4-aminonaphthalene-1-sulfonate)
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "3,3'-(biphenyl-4,4'-diyldidiazene-2,1-diyl)bis(4-aminonaphthalene-1-sulfonate)" EXACT IUPAC_NAME [IUPAC]
+xref: Beilstein:1838279 "Beilstein"
+xref: Gmelin:340935 "Gmelin"
+is_a: CHEBI:25471 ! naphthalenemonosulfonate
+relationship: is_conjugate_base_of CHEBI:38217 ! 3,3'-(biphenyl-4,4'-diyldidiazene-2,1-diyl)bis(4-aminonaphthalene-1-sulfonic acid)
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C32H22N6O6S2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C32H24N6O6S2/c33-31-25-7-3-1-5-23(25)29(45(39,40)41)17-27(31)37-35-21-13-9-19(10-14-21)20-11-15-22(16-12-20)36-38-28-18-30(46(42,43)44)24-6-2-4-8-26(24)32(28)34/h1-18H,33-34H2,(H,39,40,41)(H,42,43,44)/p-2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "HFHIDKQMGIGARX-UHFFFAOYSA-L" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "650.68592" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "650.10532" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "Nc1c(cc(c2ccccc12)S([O-])(=O)=O)N=Nc1ccc(cc1)-c1ccc(cc1)N=Nc1cc(c2ccccc2c1N)S([O-])(=O)=O" xsd:string
+
+[Term]
+id: CHEBI:38217
+name: 3,3'-(biphenyl-4,4'-diyldidiazene-2,1-diyl)bis(4-aminonaphthalene-1-sulfonic acid)
+namespace: chebi_ontology
+alt_id: CHEBI:291121
+subset: 3_STAR
+synonym: "3,3'-(biphenyl-4,4'-diyldidiazene-2,1-diyl)bis(4-aminonaphthalene-1-sulfonic acid)" EXACT IUPAC_NAME [IUPAC]
+synonym: "congo red" RELATED [ChEMBL]
+xref: Beilstein:741249 "Beilstein"
+xref: Gmelin:287844 "Gmelin"
+is_a: CHEBI:36336 ! naphthalenesulfonic acid
+relationship: is_conjugate_acid_of CHEBI:38216 ! 3,3'-(biphenyl-4,4'-diyldidiazene-2,1-diyl)bis(4-aminonaphthalene-1-sulfonate)
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C32H24N6O6S2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C32H24N6O6S2/c33-31-25-7-3-1-5-23(25)29(45(39,40)41)17-27(31)37-35-21-13-9-19(10-14-21)20-11-15-22(16-12-20)36-38-28-18-30(46(42,43)44)24-6-2-4-8-26(24)32(28)34/h1-18H,33-34H2,(H,39,40,41)(H,42,43,44)" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "HFHIDKQMGIGARX-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "652.70180" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "652.11987" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "Nc1c(cc(c2ccccc12)S(O)(=O)=O)N=Nc1ccc(cc1)-c1ccc(cc1)N=Nc1cc(c2ccccc2c1N)S(O)(=O)=O" xsd:string
 
 [Term]
 id: CHEBI:38218
@@ -16757,6 +18273,25 @@ def: "Any agent that affects the transport of molecular entities across a biolog
 subset: 3_STAR
 synonym: "membrane transport modulators" RELATED [ChEBI]
 is_a: CHEBI:52208 ! biophysical role
+
+[Term]
+id: CHEBI:38700
+name: organic sodium salt
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "organic sodium salt" EXACT [ChEBI]
+synonym: "organic sodium salts" RELATED [ChEBI]
+is_a: CHEBI:24868 ! organic salt
+is_a: CHEBI:26714 ! sodium salt
+
+[Term]
+id: CHEBI:38702
+name: inorganic sodium salt
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "inorganic sodium salts" RELATED [ChEBI]
+is_a: CHEBI:24839 ! inorganic salt
+is_a: CHEBI:26714 ! sodium salt
 
 [Term]
 id: CHEBI:38716
@@ -17639,7 +19174,6 @@ synonym: "R-170" RELATED [ChEBI]
 xref: Beilstein:1730716 "Beilstein"
 xref: CAS:74-84-0 "NIST Chemistry WebBook"
 xref: Gmelin:212 "Gmelin"
-xref: PDBeChem:EHN
 xref: PMID:12826252 "Europe PMC"
 xref: PMID:14664856 "Europe PMC"
 xref: PMID:16236899 "Europe PMC"
@@ -17749,8 +19283,7 @@ synonym: "HYDROXY GROUP" EXACT [PDBeChem]
 synonym: "hydroxy group" EXACT [UniProt]
 synonym: "hydroxyl" RELATED [ChEBI]
 synonym: "hydroxyl group" RELATED [ChEBI]
-synonym: "oxidanyl" EXACT IUPAC_NAME [IUPAC]
-xref: PDBeChem:HYD
+xref: PDBeChem:OH
 is_a: CHEBI:33246 ! inorganic group
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "HO" xsd:string
@@ -17787,8 +19320,8 @@ synonym: "INORGANIC PHOSPHATE GROUP" RELATED [PDBeChem]
 synonym: "phosphate" RELATED [UniProt]
 xref: Gmelin:1998 "Gmelin"
 xref: MolBase:1628
-xref: PDBeChem:IPS
 xref: PDBeChem:PI
+xref: PDBeChem:PO4
 is_a: CHEBI:35780 ! phosphate ion
 is_a: CHEBI:79388 ! divalent inorganic anion
 relationship: has_role CHEBI:23357 ! cofactor
@@ -18283,6 +19816,32 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "172.03065
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "Nc1ccc(cc1)S(N)(=O)=O" xsd:string
 
 [Term]
+id: CHEBI:45599
+name: dodecyl hydrogen sulfate
+namespace: chebi_ontology
+alt_id: CHEBI:32953
+alt_id: CHEBI:45595
+subset: 3_STAR
+synonym: "dodecyl hydrogen sulfate" EXACT IUPAC_NAME [IUPAC]
+synonym: "DODECYL SULFATE" RELATED [PDBeChem]
+synonym: "lauryl sulfuric acid" RELATED [ChemIDplus]
+synonym: "monododecyl hydrogen sulfate" RELATED [ChemIDplus]
+synonym: "sulfuric acid, monododecyl ester" RELATED [ChemIDplus]
+xref: Beilstein:1710530 "ChemIDplus"
+xref: CAS:151-41-7 "ChemIDplus"
+xref: Gmelin:220505 "Gmelin"
+xref: PDBeChem:SDS
+is_a: CHEBI:29281 ! alkyl sulfate
+relationship: is_conjugate_acid_of CHEBI:23872 ! dodecyl sulfate
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C12H26O4S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C12H26O4S/c1-2-3-4-5-6-7-8-9-10-11-12-16-17(13,14)15/h2-12H2,1H3,(H,13,14,15)" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "MOTZDAYCYVMXPC-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "266.39844" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "266.15518" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "CCCCCCCCCCCCOS(O)(=O)=O" xsd:string
+
+[Term]
 id: CHEBI:45615
 name: salicylhydroxamic acid
 namespace: chebi_ontology
@@ -18341,7 +19900,6 @@ synonym: "hydrogentetraoxosulfate(1-)" EXACT IUPAC_NAME [IUPAC]
 synonym: "hydrogentetraoxosulfate(VI)" EXACT IUPAC_NAME [IUPAC]
 synonym: "hydroxidotrioxidosulfate(1-)" EXACT IUPAC_NAME [IUPAC]
 xref: Gmelin:2121 "Gmelin"
-xref: PDBeChem:SOH
 is_a: CHEBI:33482 ! sulfur oxoanion
 relationship: is_conjugate_acid_of CHEBI:16189 ! sulfate
 relationship: is_conjugate_base_of CHEBI:26836 ! sulfuric acid
@@ -18532,6 +20090,7 @@ synonym: "Biozole" RELATED BRAND_NAME [ChEBI]
 synonym: "Diflucan" RELATED BRAND_NAME [ChEBI]
 synonym: "Elazor" RELATED [ChemIDplus]
 synonym: "fluconazol" RELATED INN [ChemIDplus]
+synonym: "fluconazole" EXACT [UniProt]
 synonym: "fluconazole" RELATED INN [ChemIDplus]
 synonym: "fluconazole" RELATED INN [WHO_MedNet]
 synonym: "fluconazolum" RELATED INN [ChemIDplus]
@@ -18614,7 +20173,7 @@ subset: 3_STAR
 synonym: "=O" RELATED [IUPAC]
 synonym: "oxo" EXACT IUPAC_NAME [IUPAC]
 synonym: "OXO GROUP" EXACT [PDBeChem]
-xref: PDBeChem:OXO
+xref: PDBeChem:O
 is_a: CHEBI:33246 ! inorganic group
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "O" xsd:string
@@ -18784,7 +20343,7 @@ synonym: "-COOH" RELATED [IUPAC]
 synonym: "carboxy" EXACT IUPAC_NAME [IUPAC]
 synonym: "CARBOXY GROUP" EXACT [PDBeChem]
 synonym: "carboxyl group" RELATED [ChEBI]
-xref: PDBeChem:CBX
+xref: PDBeChem:FMT
 is_a: CHEBI:33249 ! organyl group
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CHO2" xsd:string
@@ -19068,6 +20627,7 @@ namespace: chebi_ontology
 def: "A cis-1-acetyl-4-(4-{[2-(2,4-dichlorophenyl)-2-(1H-imidazol-1-ylmethyl)-1,3-dioxolan-4-yl]methoxy}phenyl)piperazine which dioxolane moiety has (2S,4R)-configuration." []
 subset: 3_STAR
 synonym: "(2S,4R)-1-acetyl-4-(4-{[2-(2,4-dichlorophenyl)-2-(1H-imidazol-1-ylmethyl)-1,3-dioxolan-4-yl]methoxy}phenyl)piperazine" RELATED [ChEBI]
+synonym: "(2S,4R)-ketoconazole" EXACT [UniProt]
 synonym: "1-ACETYL-4-(4-{[(2S,4R)-2-(2,4-DICHLOROPHENYL)-2-(1H-IMIDAZOL-1-YLMETHYL)-1,3-DIOXOLAN-4-YL]METHOXY}PHENYL)PIPERAZINE" RELATED [PDBeChem]
 synonym: "1-acetyl-4-(4-{[(2S,4R)-2-(2,4-dichlorophenyl)-2-(1H-imidazol-1-ylmethyl)-1,3-dioxolan-4-yl]methoxy}phenyl)piperazine" EXACT IUPAC_NAME [IUPAC]
 xref: Beilstein:5488107 "Beilstein"
@@ -19308,6 +20868,7 @@ subset: 3_STAR
 synonym: "steroid acids" RELATED [ChEBI]
 is_a: CHEBI:35341 ! steroid
 is_a: CHEBI:64709 ! organic acid
+relationship: is_conjugate_acid_of CHEBI:50160 ! steroid acid anion
 
 [Term]
 id: CHEBI:47956
@@ -19443,6 +21004,7 @@ namespace: chebi_ontology
 def: "A cis-1-acetyl-4-(4-{[2-(2,4-dichlorophenyl)-2-(1H-imidazol-1-ylmethyl)-1,3-dioxolan-4-yl]methoxy}phenyl)piperazine which dioxolane moiety has (2R,4S)-configuration." []
 subset: 3_STAR
 synonym: "(2R,4S)-1-acetyl-4-(4-{[2-(2,4-dichlorophenyl)-2-(1H-imidazol-1-ylmethyl)-1,3-dioxolan-4-yl]methoxy}phenyl)piperazine" RELATED [ChEBI]
+synonym: "(2R,4S)-ketoconazole" EXACT [UniProt]
 synonym: "1-acetyl-4-(4-{[(2R,4S)-2-(2,4-dichlorophenyl)-2-(1H-imidazol-1-ylmethyl)-1,3-dioxolan-4-yl]methoxy}phenyl)piperazine" EXACT IUPAC_NAME [IUPAC]
 xref: Beilstein:4241048 "Beilstein"
 xref: LINCS:LSM-5430
@@ -19729,7 +21291,7 @@ synonym: "CYANIDE GROUP" RELATED [PDBeChem]
 synonym: "cyanido" EXACT IUPAC_NAME [IUPAC]
 synonym: "cyano" EXACT IUPAC_NAME [IUPAC]
 synonym: "NC-" RELATED [IUPAC]
-xref: PDBeChem:CN
+xref: PDBeChem:CYN
 is_a: CHEBI:36823 ! pseudohalo group
 relationship: is_substituent_group_from CHEBI:18407 ! hydrogen cyanide
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
@@ -20019,6 +21581,87 @@ property_value: http://purl.obolibrary.org/obo/chebi/mass "331.19600" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "330.03267" xsd:string
 
 [Term]
+id: CHEBI:50010
+name: 4,4'-bis(\{4-anilino-6-[bis(2-hydroxyethyl)amino]-1,3,5-triazin-2-yl}amino)stilbene-2,2'-disulfonic acid
+namespace: chebi_ontology
+def: "An organosulfonic acid comprising stilbene having 4-anilino-6-[bis(2-hydroxyethyl)amino]-1,3,5-triazin-2-yl}amino groups at the 4 and 4'-positions and sulfo groups at the 2- and 2'-positions." []
+subset: 3_STAR
+synonym: "2,2'-ethene-1,2-diylbis[5-({4-anilino-6-[bis(2-hydroxyethyl)amino]-1,3,5-triazin-2-yl}amino)benzenesulfonic acid]" EXACT IUPAC_NAME [IUPAC]
+synonym: "4,4'-bis((4-(bis(2-hydroxyethyl)amino)-6-anilino-1,3,5-triazin-2-yl)amino)stilbene-2,2'-disulphonic acid" RELATED [ChemIDplus]
+synonym: "4,4'-bis((4-anilino-6-(bis(2-hydroxyethyl)amino)-1,3,5-triazin-2-yl)amino)stilbene-2,2'-disulfonic acid" RELATED [ChemIDplus]
+synonym: "4,4'-bis((4-anilino-6-(bis(2-hydroxyethyl)amino)-s-triazin-2-yl)amino)-2,2'-stilbenedisulfonic acid" RELATED [ChemIDplus]
+synonym: "C.I. Fluorescent brightening agent 28" RELATED [ChemIDplus]
+synonym: "Calcofluor M2R" RELATED [ChemIDplus]
+synonym: "Calcofluor White M2R" RELATED [ChemIDplus]
+xref: Beilstein:604239 "Beilstein"
+xref: CAS:4404-43-7 "ChemIDplus"
+xref: PMID:11015407 "Europe PMC"
+xref: PMID:15038150 "Europe PMC"
+xref: PMID:17252623 "Europe PMC"
+xref: PMID:2580370 "Europe PMC"
+xref: PMID:3061981 "Europe PMC"
+xref: PMID:7181601 "Europe PMC"
+xref: Reaxys:8385272 "Reaxys"
+is_a: CHEBI:26588 ! 1,3,5-triazines
+is_a: CHEBI:33551 ! organosulfonic acid
+relationship: has_parent_hydride CHEBI:26775 ! stilbene
+relationship: has_role CHEBI:51217 ! fluorochrome
+relationship: is_conjugate_acid_of CHEBI:50012 ! 4,4'-bis({4-anilino-6-[bis(2-hydroxyethyl)amino]-1,3,5-triazin-2-yl}amino)stilbene-2,2'-disulfonate
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C40H44N12O10S2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C40H44N12O10S2/c53-21-17-51(18-22-54)39-47-35(41-29-7-3-1-4-8-29)45-37(49-39)43-31-15-13-27(33(25-31)63(57,58)59)11-12-28-14-16-32(26-34(28)64(60,61)62)44-38-46-36(42-30-9-5-2-6-10-30)48-40(50-38)52(19-23-55)20-24-56/h1-16,25-26,53-56H,17-24H2,(H,57,58,59)(H,60,61,62)(H2,41,43,45,47,49)(H2,42,44,46,48,50)" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "CNGYZEMWVAWWOB-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "916.98424" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "916.27448" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H]C(=C([H])c1ccc(Nc2nc(Nc3ccccc3)nc(n2)N(CCO)CCO)cc1S(O)(=O)=O)c1ccc(Nc2nc(Nc3ccccc3)nc(n2)N(CCO)CCO)cc1S(O)(=O)=O" xsd:string
+
+[Term]
+id: CHEBI:50011
+name: Calcofluor White
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "4,4'-bis((2-anilino-4-(bis(2-hydroxyethyl)amino)-1,3,5-triazin-6-yl)amino)stilbene-2,2'-disulfonic acid, disodium salt" RELATED [ChemIDplus]
+synonym: "4,4'-bis((4-anilino-6-bis(2-hydroxyethyl)amino-s-triazin-2-yl)amino)-2,2'-stilbenedisulfonic acid, disodium salt" RELATED [ChemIDplus]
+synonym: "C.I. 40622" RELATED [ChEBI]
+synonym: "C.I. Fluorescent Brightening Agent 28, disodium salt" RELATED [ChemIDplus]
+synonym: "Calcofluor White LRP" RELATED [ChemIDplus]
+synonym: "Calcofluor White M 2R" RELATED [ChemIDplus]
+synonym: "Calcofluor White ST" RELATED [ChemIDplus]
+synonym: "Cellufluor" RELATED [ChemIDplus]
+synonym: "disodium 2,2'-ethene-1,2-diylbis[5-({4-anilino-6-[bis(2-hydroxyethyl)amino]-1,3,5-triazin-2-yl}amino)benzenesulfonate]" EXACT IUPAC_NAME [IUPAC]
+synonym: "disodium 4,4'-bis(6-anilino-(4-(bis(2-hydroxyethyl)amino)-1,3,5-triazin-2-yl)amino)stilbene-2,2'-disulphonate" RELATED [ChemIDplus]
+synonym: "Fluorescent Brightener 28" RELATED [ChemIDplus]
+xref: Beilstein:8385272 "Beilstein"
+xref: CAS:4193-55-9 "ChemIDplus"
+is_a: CHEBI:38700 ! organic sodium salt
+relationship: has_part CHEBI:50012 ! 4,4'-bis({4-anilino-6-[bis(2-hydroxyethyl)amino]-1,3,5-triazin-2-yl}amino)stilbene-2,2'-disulfonate
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C40H42N12Na2O10S2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C40H44N12O10S2.2Na/c53-21-17-51(18-22-54)39-47-35(41-29-7-3-1-4-8-29)45-37(49-39)43-31-15-13-27(33(25-31)63(57,58)59)11-12-28-14-16-32(26-34(28)64(60,61)62)44-38-46-36(42-30-9-5-2-6-10-30)48-40(50-38)52(19-23-55)20-24-56;;/h1-16,25-26,53-56H,17-24H2,(H,57,58,59)(H,60,61,62)(H2,41,43,45,47,49)(H2,42,44,46,48,50);;/q;2*+1/p-2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "YJHDFAAFYNRKQE-UHFFFAOYSA-L" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "960.94790" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "960.23837" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[Na+].[Na+].[H]C(=C([H])c1ccc(Nc2nc(Nc3ccccc3)nc(n2)N(CCO)CCO)cc1S([O-])(=O)=O)c1ccc(Nc2nc(Nc3ccccc3)nc(n2)N(CCO)CCO)cc1S([O-])(=O)=O" xsd:string
+
+[Term]
+id: CHEBI:50012
+name: 4,4'-bis(\{4-anilino-6-[bis(2-hydroxyethyl)amino]-1,3,5-triazin-2-yl}amino)stilbene-2,2'-disulfonate
+namespace: chebi_ontology
+def: "An arenesulfonate arising from deprotonation of the sulfo groups of 4,4'-bis({4-anilino-6-[bis(2-hydroxyethyl)amino]-1,3,5-triazin-2-yl}amino)stilbene-2,2'-disulfonic acid." []
+subset: 3_STAR
+synonym: "2,2'-ethene-1,2-diylbis[5-({4-anilino-6-[bis(2-hydroxyethyl)amino]-1,3,5-triazin-2-yl}amino)benzenesulfonate]" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:22713 ! arenesulfonate oxoanion
+relationship: has_parent_hydride CHEBI:26775 ! stilbene
+relationship: is_conjugate_base_of CHEBI:50010 ! 4,4'-bis({4-anilino-6-[bis(2-hydroxyethyl)amino]-1,3,5-triazin-2-yl}amino)stilbene-2,2'-disulfonic acid
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C40H42N12O10S2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C40H44N12O10S2/c53-21-17-51(18-22-54)39-47-35(41-29-7-3-1-4-8-29)45-37(49-39)43-31-15-13-27(33(25-31)63(57,58)59)11-12-28-14-16-32(26-34(28)64(60,61)62)44-38-46-36(42-30-9-5-2-6-10-30)48-40(50-38)52(19-23-55)20-24-56/h1-16,25-26,53-56H,17-24H2,(H,57,58,59)(H,60,61,62)(H2,41,43,45,47,49)(H2,42,44,46,48,50)/p-2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "CNGYZEMWVAWWOB-UHFFFAOYSA-L" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "914.96836" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "914.25993" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H]C(=C([H])c1ccc(Nc2nc(Nc3ccccc3)nc(n2)N(CCO)CCO)cc1S([O-])(=O)=O)c1ccc(Nc2nc(Nc3ccccc3)nc(n2)N(CCO)CCO)cc1S([O-])(=O)=O" xsd:string
+
+[Term]
 id: CHEBI:50047
 name: organic amino compound
 namespace: chebi_ontology
@@ -20049,6 +21692,7 @@ def: "Any anion formed by loss of a proton from a steroid acid." []
 subset: 3_STAR
 synonym: "steroid acid anions" RELATED [ChEBI]
 is_a: CHEBI:29067 ! carboxylic acid anion
+relationship: is_conjugate_base_of CHEBI:47891 ! steroid acid
 
 [Term]
 id: CHEBI:50176
@@ -20209,6 +21853,26 @@ synonym: "onium ions" RELATED [ChEBI]
 is_a: CHEBI:50312 ! onium compound
 
 [Term]
+id: CHEBI:50315
+name: chloronium
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "[ClH2](+)" RELATED [IUPAC]
+synonym: "chloranium" EXACT IUPAC_NAME [IUPAC]
+synonym: "chloronium" EXACT IUPAC_NAME [IUPAC]
+synonym: "H2Cl(+)" RELATED [IUPAC]
+xref: Gmelin:331 "Gmelin"
+is_a: CHEBI:50313 ! onium cation
+relationship: is_conjugate_acid_of CHEBI:17883 ! hydrogen chloride
+property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "ClH2" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/ClH2/h1H2/q+1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "IGJWHVUMEJASKV-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "37.46858" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "36.98395" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H][Cl+][H]" xsd:string
+
+[Term]
 id: CHEBI:50325
 name: proteinogenic amino-acid side-chain group
 namespace: chebi_ontology
@@ -20292,6 +21956,30 @@ is_a: CHEBI:33261 ! organosulfur compound
 relationship: has_part CHEBI:30256 ! thiocarbonyl group
 
 [Term]
+id: CHEBI:50503
+name: laxative
+namespace: chebi_ontology
+def: "An agent that produces a soft formed stool, and relaxes and loosens the bowels, typically used over a protracted period, to relieve constipation. Compare with cathartic, which is a substance that accelerates defecation. A substances can be both a laxative and a cathartic." []
+subset: 3_STAR
+synonym: "aperient" RELATED [ChEBI]
+synonym: "aperients" RELATED [ChEBI]
+synonym: "laxante" RELATED [ChEBI]
+synonym: "laxatives" RELATED [ChEBI]
+synonym: "purgative" RELATED [ChEBI]
+synonym: "purgatives" RELATED [ChEBI]
+is_a: CHEBI:23888 ! drug
+
+[Term]
+id: CHEBI:50505
+name: sweetening agent
+namespace: chebi_ontology
+def: "Substance that sweeten food, beverages, medications, etc." []
+subset: 3_STAR
+synonym: "sweetener" RELATED [ChEBI]
+synonym: "sweeteners" RELATED [ChEBI]
+is_a: CHEBI:35617 ! flavouring agent
+
+[Term]
 id: CHEBI:50525
 name: phenolate anion
 namespace: chebi_ontology
@@ -20299,6 +21987,13 @@ def: "An organic anion arising from deprotonation of the OH function of a phenol
 subset: 3_STAR
 synonym: "phenolate anions" RELATED [ChEBI]
 is_a: CHEBI:25696 ! organic anion
+
+[Term]
+id: CHEBI:50533
+name: protein denaturant
+namespace: chebi_ontology
+subset: 1_STAR
+is_a: CHEBI:33232 ! application
 
 [Term]
 id: CHEBI:50584
@@ -20418,6 +22113,10 @@ xref: LIPID_MAPS_instance:LMPK07000002 "LIPID MAPS"
 xref: Patent:US3226436
 xref: Patent:WO2008104734
 xref: PDBeChem:MIY
+xref: PMID:28709717 "Europe PMC"
+xref: PMID:31630007 "Europe PMC"
+xref: PMID:31719236 "Europe PMC"
+xref: PMID:31733348 "Europe PMC"
 xref: Reaxys:3077644 "Reaxys"
 is_a: CHEBI:139592 ! tertiary alpha-hydroxy ketone
 is_a: CHEBI:26895 ! tetracyclines
@@ -20833,6 +22532,14 @@ subset: 3_STAR
 is_a: CHEBI:50906 ! role
 
 [Term]
+id: CHEBI:51121
+name: fluorescent dye
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "fluorescent dyes" RELATED [ChEBI]
+is_a: CHEBI:37958 ! dye
+
+[Term]
 id: CHEBI:51143
 name: nitrogen molecular entity
 namespace: chebi_ontology
@@ -20897,6 +22604,15 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "BWWVAEOLVKTZFQ-NT
 property_value: http://purl.obolibrary.org/obo/chebi/mass "325.42754" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "325.14601" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H]C(=N[C@@H]1C(=O)N2[C@@H](C(O)=O)C(C)(C)S[C@]12[H])N1CCCCCC1" xsd:string
+
+[Term]
+id: CHEBI:51217
+name: fluorochrome
+namespace: chebi_ontology
+def: "A fluorescent dye used to stain biological specimens." []
+subset: 3_STAR
+synonym: "fluorochromes" RELATED [ChEBI]
+is_a: CHEBI:51121 ! fluorescent dye
 
 [Term]
 id: CHEBI:51256
@@ -22148,10 +23864,8 @@ synonym: "cephamycins" RELATED [ChEBI]
 xref: PMID:1107228 "Europe PMC"
 is_a: CHEBI:38311 ! cephem
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/formula "C8H7NO4S" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C8H7NO4SR2" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "213.212" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "243.28000" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "213.00958" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "N12C([C@](*)(C1=O)OC)SCC(=C2C(O)=O)*" xsd:string
 
@@ -22470,6 +24184,23 @@ subset: 3_STAR
 synonym: "branched-chain fatty acid anions" RELATED [ChEBI]
 is_a: CHEBI:28868 ! fatty acid anion
 relationship: is_conjugate_base_of CHEBI:35819 ! branched-chain fatty acid
+
+[Term]
+id: CHEBI:58958
+name: organosulfate oxoanion
+namespace: chebi_ontology
+def: "An organic anion of general formula RS(=O)2O(-) where R is an organyl group." []
+subset: 3_STAR
+synonym: "organosulfate oxoanions" RELATED [ChEBI]
+is_a: CHEBI:25696 ! organic anion
+is_a: CHEBI:33482 ! sulfur oxoanion
+relationship: has_functional_parent CHEBI:16189 ! sulfate
+relationship: is_conjugate_base_of CHEBI:25704 ! organic sulfate
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "O4SR" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "96.06300" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "95.95173" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[O-]S(=O)(=O)O[*]" xsd:string
 
 [Term]
 id: CHEBI:59062
@@ -22955,9 +24686,9 @@ is_a: CHEBI:33558 ! alpha-amino-acid anion
 relationship: is_conjugate_base_of CHEBI:15705 ! L-alpha-amino acid
 property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C2H3NO2R" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "88.08520" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "73.051" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "73.01638" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "C[C@H](N)C([O-])=O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[C@H](C(=O)[O-])(N)*" xsd:string
 
 [Term]
 id: CHEBI:59831
@@ -23220,9 +24951,9 @@ synonym: "guanidinium ions" RELATED [ChEBI]
 is_a: CHEBI:35286 ! iminium ion
 property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CHN3R5" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "130.21130" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "55.039" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "55.01705" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H][N+](C)=C(N(C)C)N(C)C" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C(=[N+]([H])*)(N(*)*)N(*)*" xsd:string
 
 [Term]
 id: CHEBI:60258
@@ -23390,6 +25121,7 @@ def: "An N-arylpiperazine that is cis-ketoconazole in which the imidazol-1-yl gr
 subset: 3_STAR
 synonym: "2-(butan-2-yl)-4-{4-[4-(4-{[(2R,4S)-2-(2,4-dichlorophenyl)-2-(1H-1,2,4-triazol-1-ylmethyl)-1,3-dioxolan-4-yl]methoxy}phenyl)piperazin-1-yl]phenyl}-2,4-dihydro-3H-1,2,4-triazol-3-one" EXACT IUPAC_NAME [IUPAC]
 synonym: "Itraconazole" EXACT [KEGG_DRUG]
+synonym: "itraconazole" EXACT [UniProt]
 synonym: "Itrizole (TN)" RELATED [KEGG_DRUG]
 synonym: "Oriconazole" RELATED [ChemIDplus]
 synonym: "Sporanox (TN)" RELATED [KEGG_DRUG]
@@ -23478,9 +25210,9 @@ is_a: CHEBI:33558 ! alpha-amino-acid anion
 relationship: is_conjugate_base_of CHEBI:16733 ! D-alpha-amino acid
 property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C2H3NO2R" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "88.08520" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "73.051" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "73.01638" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "C[C@@H](N)C([O-])=O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[C@@H](C(=O)[O-])(N)*" xsd:string
 
 [Term]
 id: CHEBI:60911
@@ -23790,6 +25522,19 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "135.99364
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "C[C@@H]1O[C@@H]1P([O-])([O-])=O" xsd:string
 
 [Term]
+id: CHEBI:62488
+name: signalling molecule
+namespace: chebi_ontology
+def: "A molecular messenger in which the molecule is specifically involved in transmitting information between cells. Such molecules are released from the cell sending the signal, cross over the gap between cells by diffusion, and interact with specific receptors in another cell, triggering a response in that cell by activating a series of enzyme controlled reactions which lead to changes inside the cell." []
+subset: 3_STAR
+synonym: "signal molecule" RELATED [ChEBI]
+synonym: "signal molecules" RELATED [ChEBI]
+synonym: "signaling molecule" RELATED [ChEBI]
+synonym: "signaling molecules" RELATED [ChEBI]
+synonym: "signalling molecules" RELATED [ChEBI]
+is_a: CHEBI:33280 ! molecular messenger
+
+[Term]
 id: CHEBI:62643
 name: anionic phospholipid
 namespace: chebi_ontology
@@ -23890,6 +25635,17 @@ xref: Wikipedia:PARP_inhibitor
 is_a: CHEBI:76790 ! EC 2.4.2.* (pentosyltransferase) inhibitor
 
 [Term]
+id: CHEBI:63046
+name: emulsifier
+namespace: chebi_ontology
+def: "The chemical role played by a substance that stabilizes an emulsion by increasing its kinetic stability." []
+subset: 3_STAR
+synonym: "emulgent" RELATED [ChEBI]
+synonym: "emulgents" RELATED [ChEBI]
+synonym: "emulsifiers" RELATED [ChEBI]
+is_a: CHEBI:51086 ! chemical role
+
+[Term]
 id: CHEBI:63161
 name: glycosyl compound
 namespace: chebi_ontology
@@ -23897,6 +25653,20 @@ def: "A carbohydrate derivative arising formally from the elimination of water f
 subset: 3_STAR
 synonym: "glycosyl compounds" RELATED [ChEBI]
 is_a: CHEBI:63299 ! carbohydrate derivative
+
+[Term]
+id: CHEBI:63247
+name: reducing agent
+namespace: chebi_ontology
+def: "The element or compound in a reduction-oxidation (redox) reaction that donates an electron to another species." []
+subset: 3_STAR
+synonym: "reducer" RELATED [ChEBI]
+synonym: "reducers" RELATED [ChEBI]
+synonym: "reducing agents" RELATED [ChEBI]
+synonym: "reductant" RELATED [ChEBI]
+synonym: "reductants" RELATED [ChEBI]
+xref: Wikipedia:Reducing_agent
+is_a: CHEBI:51086 ! chemical role
 
 [Term]
 id: CHEBI:63248
@@ -25652,7 +27422,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/smiles "OC([*])([*])N([*])[
 
 [Term]
 id: CHEBI:73181
-name: EC 1.11.1.11 (L-ascorbate peroxidase) inhibitors
+name: EC 1.11.1.11 (L-ascorbate peroxidase) inhibitor
 namespace: chebi_ontology
 def: "An  EC 1.11.1.* (peroxidases) inhibitor that inhibits the action of L-ascorbate peroxidase (EC 1.11.1.11)." []
 subset: 3_STAR
@@ -25660,7 +27430,7 @@ synonym: "ascorbate peroxidase inhibitor" RELATED [ChEBI]
 synonym: "ascorbate peroxidase inhibitors" RELATED [ChEBI]
 synonym: "ascorbic acid peroxidase inhibitor" RELATED [ChEBI]
 synonym: "ascorbic acid peroxidase inhibitors" RELATED [ChEBI]
-synonym: "EC 1.11.1.11 (L-ascorbate peroxidase) inhibitors" EXACT [ChEBI]
+synonym: "EC 1.11.1.11 (L-ascorbate peroxidase) inhibitors" RELATED [ChEBI]
 synonym: "EC 1.11.1.11 inhibitor" RELATED [ChEBI]
 synonym: "EC 1.11.1.11 inhibitors" RELATED [ChEBI]
 synonym: "L-ascorbate peroxidase (EC 1.11.1.11) inhibitor" RELATED [ChEBI]
@@ -26067,6 +27837,16 @@ property_value: http://purl.obolibrary.org/obo/chebi/inchikey "PQLXHQMOHUQAKB-UH
 property_value: http://purl.obolibrary.org/obo/chebi/mass "407.56800" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "407.31645" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "CCCCCCCCCCCCCCCCOP([O-])(=O)OCC[N+](C)(C)C" xsd:string
+
+[Term]
+id: CHEBI:75325
+name: cathartic
+namespace: chebi_ontology
+def: "Any substance that accelerates defecation. Compare with laxatives, which are substances that ease defecation (usually by softening faeces). A substance can be both a laxative and a cathartic." []
+subset: 3_STAR
+synonym: "cathartics" RELATED [ChEBI]
+xref: Wikipedia:Cathartic
+is_a: CHEBI:52208 ! biophysical role
 
 [Term]
 id: CHEBI:75381
@@ -27881,6 +29661,26 @@ xref: Wikipedia:Amidase
 is_a: CHEBI:76807 ! EC 3.5.1.* (non-peptide linear amide C-N hydrolase) inhibitor
 
 [Term]
+id: CHEBI:77968
+name: humectant
+namespace: chebi_ontology
+def: "A compound that is used to keep a substance moist." []
+subset: 3_STAR
+synonym: "humectants" RELATED [ChEBI]
+xref: Wikipedia:humectant
+is_a: CHEBI:33232 ! application
+
+[Term]
+id: CHEBI:77969
+name: food humectant
+namespace: chebi_ontology
+def: "A humectant that is used as a food additive to prevent foodstuffs from drying out." []
+subset: 3_STAR
+synonym: "food humectants" RELATED [ChEBI]
+is_a: CHEBI:64047 ! food additive
+is_a: CHEBI:77968 ! humectant
+
+[Term]
 id: CHEBI:77981
 name: vancomycin aglycone(1-)
 namespace: chebi_ontology
@@ -28629,6 +30429,7 @@ xref: PMID:23056532 "Europe PMC"
 xref: PMID:24009183 "Europe PMC"
 xref: PMID:24009189 "Europe PMC"
 xref: PMID:24211030 "Europe PMC"
+xref: PPDB:247
 xref: Reaxys:9202976 "Reaxys"
 is_a: CHEBI:60911 ! racemate
 is_a: CHEBI:87067 ! conazole fungicide
@@ -28637,6 +30438,10 @@ relationship: has_part CHEBI:83906 ! (S)-diniconazole
 relationship: has_part CHEBI:83911 ! diniconazole-M
 relationship: has_role CHEBI:77884 ! EC 1.14.13.70 (sterol 14alpha-demethylase) inhibitor
 relationship: has_role CHEBI:86328 ! antifungal agrochemical
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C15H17Cl2N3O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "326.220" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "325.07487" xsd:string
 
 [Term]
 id: CHEBI:81917
@@ -28863,6 +30668,7 @@ name: (R)-miconazole
 namespace: chebi_ontology
 def: "A 1-[2-(2,4-dichlorobenzyloxy)-2-(2,4-dichlorophenyl)ethyl]imidazole that has R configuration." []
 subset: 3_STAR
+synonym: "(R)-miconazole" EXACT [UniProt]
 synonym: "1-[(2R)-2-[(2,4-dichlorobenzyl)oxy]-2-(2,4-dichlorophenyl)ethyl]-1H-imidazole" EXACT IUPAC_NAME [IUPAC]
 xref: Reaxys:9651217 "Reaxys"
 is_a: CHEBI:82892 ! 1-[2-(2,4-dichlorobenzyloxy)-2-(2,4-dichlorophenyl)ethyl]imidazole
@@ -28881,6 +30687,7 @@ name: (S)-miconazole
 namespace: chebi_ontology
 def: "A 1-[2-(2,4-dichlorobenzyloxy)-2-(2,4-dichlorophenyl)ethyl]imidazole that has S) configuration." []
 subset: 3_STAR
+synonym: "(S)-miconazole" EXACT [UniProt]
 synonym: "1-[(2S)-2-[(2,4-dichlorobenzyl)oxy]-2-(2,4-dichlorophenyl)ethyl]-1H-imidazole" EXACT IUPAC_NAME [IUPAC]
 xref: Reaxys:9651216 "Reaxys"
 is_a: CHEBI:82892 ! 1-[2-(2,4-dichlorobenzyloxy)-2-(2,4-dichlorophenyl)ethyl]imidazole
@@ -29183,6 +30990,23 @@ namespace: chebi_ontology
 def: "Any member of the class of chlorobenzenes containing a mono- or poly-substituted benzene ring in which only one substituent is chlorine." []
 subset: 3_STAR
 is_a: CHEBI:23132 ! chlorobenzenes
+
+[Term]
+id: CHEBI:83414
+name: alkyl sulfate(1-)
+namespace: chebi_ontology
+def: "An organosulfate oxoanion obtained by deprotonation of the sulfo group of any alkyl sulfate; major species at pH 7.3." []
+subset: 3_STAR
+synonym: "alkyl sulfate anion" RELATED [ChEBI]
+synonym: "an alkyl sulfate" RELATED [UniProt]
+xref: MetaCyc:Organo-Sulfates "SUBMITTER"
+is_a: CHEBI:58958 ! organosulfate oxoanion
+relationship: is_conjugate_base_of CHEBI:29281 ! alkyl sulfate
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "O4SR" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "96.064" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "95.95173" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[O-]S(=O)(=O)O[*]" xsd:string
 
 [Term]
 id: CHEBI:83575
@@ -29669,9 +31493,14 @@ name: (S)-diniconazole
 namespace: chebi_ontology
 def: "A (1E)-1-(2,4-dichlorophenyl)-4,4-dimethyl-2-(1,2,4-triazol-1-yl)pent-1-en-3-ol that is the (S)-enantiomer of diniconazole." []
 subset: 3_STAR
+synonym: "(+)-diniconazole" RELATED [ChEBI]
 synonym: "(1E,3S)-1-(2,4-dichlorophenyl)-4,4-dimethyl-2-(1H-1,2,4-triazol-1-yl)pent-1-en-3-ol" EXACT IUPAC_NAME [IUPAC]
-synonym: "Diniconazole (+)-form" RELATED [ChemIDplus]
+synonym: "diniconazole (+)-form" RELATED [ChemIDplus]
+synonym: "S-(+)-diniconazole" RELATED [ChEBI]
 xref: CAS:83657-19-6 "ChemIDplus"
+xref: PMID:24009183 "Europe PMC"
+xref: PMID:24211030 "Europe PMC"
+xref: PMID:30401538 "Europe PMC"
 xref: Reaxys:9634907 "Reaxys"
 is_a: CHEBI:83909 ! (1E)-1-(2,4-dichlorophenyl)-4,4-dimethyl-2-(1,2,4-triazol-1-yl)pent-1-en-3-ol
 relationship: is_enantiomer_of CHEBI:83911 ! diniconazole-M
@@ -29707,13 +31536,18 @@ property_value: http://purl.obolibrary.org/obo/chebi/smiles "CC(C)(C)C(O)C(=C/c1
 id: CHEBI:83911
 name: diniconazole-M
 namespace: chebi_ontology
-def: "A (1E)-1-(2,4-dichlorophenyl)-4,4-dimethyl-2-(1,2,4-triazol-1-yl)pent-1-en-3-ol that is the active S-enantiomer of diniconazole. A fungicide used to control a range of diseases including mildew, bunts and smuts." []
+def: "A (1E)-1-(2,4-dichlorophenyl)-4,4-dimethyl-2-(1,2,4-triazol-1-yl)pent-1-en-3-ol that is the active R-enantiomer of diniconazole. A fungicide used to control a range of diseases including mildew, bunts and smuts." []
 subset: 3_STAR
+synonym: "(-)-diniconazole" RELATED [ChEBI]
 synonym: "(1E,3R)-1-(2,4-dichlorophenyl)-4,4-dimethyl-2-(1H-1,2,4-triazol-1-yl)pent-1-en-3-ol" EXACT IUPAC_NAME [IUPAC]
+synonym: "(E)-(R)-1-(2,4-dichlorophenyl)-4,4-dimethyl-2-(1H-1,2,4-triazol-1-yl)pent-1-en-3-ol" RELATED [Alan_Wood's_Pesticides]
 synonym: "(R)-diniconazole" RELATED [ChEBI]
-synonym: "Diniconazole (-)" RELATED [ChemIDplus]
+synonym: "diniconazole (-)" RELATED [ChemIDplus]
+synonym: "R-(-)-diniconazole" RELATED [ChEBI]
 xref: CAS:83657-18-5 "ChemIDplus"
 xref: Pesticides:diniconazole-m "Alan Wood's Pesticides"
+xref: PMID:23056532 "Europe PMC"
+xref: PMID:30401538 "Europe PMC"
 xref: PPDB:2907
 xref: Reaxys:7381524 "Reaxys"
 is_a: CHEBI:83909 ! (1E)-1-(2,4-dichlorophenyl)-4,4-dimethyl-2-(1,2,4-triazol-1-yl)pent-1-en-3-ol
@@ -30722,6 +32556,38 @@ xref: PMID:11841304 "Europe PMC"
 is_a: CHEBI:24869 ! ionophore
 
 [Term]
+id: CHEBI:8984
+name: sodium dodecyl sulfate
+namespace: chebi_ontology
+def: "An organic sodium salt that is the sodium salt of dodecyl hydrogen sulfate." []
+subset: 3_STAR
+synonym: "SDS" RELATED [KEGG_COMPOUND]
+synonym: "SLS" RELATED [ChemIDplus]
+synonym: "Sodium dodecyl sulfate" EXACT [KEGG_COMPOUND]
+synonym: "sodium dodecyl sulphate" RELATED [ChemIDplus]
+synonym: "sodium dodecylsulfate" RELATED [ChemIDplus]
+synonym: "Sodium lauryl sulfate" RELATED [KEGG_COMPOUND]
+synonym: "sodium lauryl sulphate" RELATED [ChemIDplus]
+xref: Beilstein:3599286 "Beilstein"
+xref: CAS:151-21-3 "KEGG COMPOUND"
+xref: DrugBank:DB00815
+xref: Gmelin:117722 "Gmelin"
+xref: KEGG:C11166
+xref: KEGG:D01045
+xref: PMID:29079364 "Europe PMC"
+is_a: CHEBI:38700 ! organic sodium salt
+relationship: has_part CHEBI:23872 ! dodecyl sulfate
+relationship: has_role CHEBI:27780 ! detergent
+relationship: has_role CHEBI:50533 ! protein denaturant
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C12H25NaO4S" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C12H26O4S.Na/c1-2-3-4-5-6-7-8-9-10-11-12-16-17(13,14)15;/h2-12H2,1H3,(H,13,14,15);/q;+1/p-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "DBMJMQXJHONAFJ-UHFFFAOYSA-M" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "288.38027" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "288.13712" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[Na+].CCCCCCCCCCCCOS([O-])(=O)=O" xsd:string
+
+[Term]
 id: CHEBI:90710
 name: receptor modulator
 namespace: chebi_ontology
@@ -30751,7 +32617,7 @@ name: sirolimus
 namespace: chebi_ontology
 alt_id: CHEBI:45276
 alt_id: CHEBI:67812
-def: "A macrolide isolated from Streptomyces hygroscopicus consisting of a 29-membered ring containing 4 trans double bonds, three of which are conjugated. It is an antibiotic, immunosupressive and antineoplastic agent." []
+def: "A macrolide lactam isolated from Streptomyces hygroscopicus consisting of a 29-membered ring containing 4 trans double bonds, three of which are conjugated. It is an antibiotic, immunosupressive and antineoplastic agent." []
 subset: 3_STAR
 synonym: "(-)-Rapamycin" RELATED [ChemIDplus]
 synonym: "(1R,9S,12S,15R,16E,18R,19R,21R,23S,24E,26E,28E,30S,32S,35R)-1,18-dihydroxy-12-{(2S)-1-[(1S,3R,4R)-4-hydroxy-3-methoxycyclohexyl]propan-2-yl}-19,30-dimethoxy-15,17,21,23,29,35-hexamethyl-11,36-dioxa-4-azatricyclo[30.3.1.0(4,9)]hexatriaconta-16,24,26,28-tetraene-2,3,10,14,20-pentone" RELATED [IUPAC]
@@ -30776,8 +32642,7 @@ xref: PMID:22981852 "Europe PMC"
 xref: PMID:22984623 "Europe PMC"
 xref: Reaxys:5848501 "Reaxys"
 xref: Wikipedia:Rapamycin
-is_a: CHEBI:24995 ! lactam
-is_a: CHEBI:25106 ! macrolide
+is_a: CHEBI:145565 ! macrolide lactam
 is_a: CHEBI:25698 ! ether
 is_a: CHEBI:26979 ! organic heterotricyclic compound
 is_a: CHEBI:35681 ! secondary alcohol

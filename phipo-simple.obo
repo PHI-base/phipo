@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2020-01-10/phipo-simple.owl
+data-version: phipo/releases/2020-01-16/phipo-simple.owl
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -237,7 +237,7 @@ def: "A lethal single organism cell level phenotype resulting from altering a ge
 comment: Logical definition\nLethal (PATO:0000718) and (inheres_in some AC_organism)
 synonym: "essential" RELATED []
 synonym: "lethal" EXACT []
-is_a: PHIPO:0000034 ! cell phenotype
+is_a: PHIPO:0000929 ! abnormal cellular process
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:12:47Z xsd:string
 
@@ -579,6 +579,7 @@ name: expedited asexual sporulation
 namespace: single_organism_phenotype
 def: "A reproductive phenotype in which the occurrence of asexual spore formation happens sooner than normal." []
 is_a: PHIPO:0000078 ! abnormal asexual sporulation
+is_a: PHIPO:0000469 ! abnormal pathogen asexual sporulation within host
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:22:31Z
 
@@ -999,6 +1000,7 @@ id: PHIPO:0000100
 name: increased motility
 namespace: single_organism_phenotype
 is_a: PHIPO:0000042 ! abnormal motility phenotype
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2018-07-17T10:24:59Z
 
@@ -1007,6 +1009,7 @@ id: PHIPO:0000101
 name: decreased motility
 namespace: single_organism_phenotype
 is_a: PHIPO:0000042 ! abnormal motility phenotype
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2018-07-17T10:25:07Z
 
@@ -2142,6 +2145,8 @@ name: abnormal pathogen host interaction toxin biosynthetic process
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype in which the toxin biosynthetic process is abnormal (i.e. different than the wild type)." []
 is_a: PHIPO:0000231 ! pathogen host interaction toxin biosynthetic process phenotype
+is_a: PHIPO:0000496 ! toxin biosynthetic process phenotype
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:43:40Z
 
@@ -2245,7 +2250,9 @@ id: PHIPO:0000229
 name: abnormal pathogen host interaction biosynthesis of deoxynivalenol
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype in which the pathogen biosynthesis of deoxynivalenol is abnormal (i.e. different than the wild type)." []
-is_a: PHIPO:0000218 ! abnormal pathogen host interaction toxin biosynthetic process
+is_a: PHIPO:0000231 ! pathogen host interaction toxin biosynthetic process phenotype
+is_a: PHIPO:0000496 ! toxin biosynthetic process phenotype
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2018-10-02T09:12:59Z
 
@@ -2366,6 +2373,7 @@ namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype that affects the localization of a protein in a cell." []
 xref: FYPO:0002333
 is_a: PHIPO:0000238 ! pathogen host interaction protein localization phenotype
+is_a: PHIPO:0001094 ! abnormal localization
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:14:05Z
 
@@ -2499,6 +2507,7 @@ namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype in which the localization of an RNA in a cell is abnormal. An RNA may be observed in a place where it is not normally found, absent from a place where it is normally found, or both." []
 xref: FYPO:0003057
 is_a: PHIPO:0000250 ! pathogen host interaction RNA localization phenotype
+is_a: PHIPO:0001094 ! abnormal localization
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:20:53Z
 
@@ -2554,7 +2563,9 @@ name: abnormal transport
 namespace: single_organism_phenotype
 def: "A single organism phenotype in which a specific transport process is abnormal." []
 xref: FYPO:0001720
+is_a: PHIPO:0000255 ! pathogen host interaction transport phenotype
 is_a: PHIPO:0000256 ! transport phenotype
+is_a: PHIPO:0001094 ! abnormal localization
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:22:11Z
 
@@ -2565,6 +2576,8 @@ namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype in which a specific transport process is abnormal." []
 xref: FYPO:0001720
 is_a: PHIPO:0000255 ! pathogen host interaction transport phenotype
+is_a: PHIPO:0000256 ! transport phenotype
+is_a: PHIPO:0001094 ! abnormal localization
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:22:15Z
 
@@ -2595,6 +2608,7 @@ namespace: single_organism_phenotype
 def: "A single organism cellular process phenotype in which endocytosis is abnormal. Endocytosis is a vesicle-mediated transport process in which cells take up external materials or membrane constituents by the invagination of a small region of the plasma membrane to form a new membrane-bounded vesicle. A phenotype may affect endocytosis of all cargoes, or of specific cargo such as a particular protein." []
 xref: FYPO:0003886
 is_a: PHIPO:0000257 ! abnormal transport
+is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:22:57Z
 
@@ -2604,6 +2618,7 @@ name: abnormal pathogen host interaction endocytosis
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (cellular process???) phenotype in which endocytosis is abnormal. Endocytosis is a vesicle-mediated transport process in which cells take up external materials or membrane constituents by the invagination of a small region of the plasma membrane to form a new membrane-bounded vesicle. A phenotype may affect endocytosis of all cargoes, or of specific cargo such as a particular protein." []
 xref: FYPO:0003886
+is_a: PHIPO:0000257 ! abnormal transport
 is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:23:00Z
@@ -2615,6 +2630,7 @@ namespace: single_organism_phenotype
 def: "A single organism cellular process phenotype in which nuclear transport is abnormal." []
 xref: FYPO:0005573
 is_a: PHIPO:0000257 ! abnormal transport
+is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:23:27Z
 
@@ -2624,6 +2640,7 @@ name: abnormal pathogen host interaction nuclear transport
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (cellular process??) phenotype in which nuclear transport is abnormal." []
 xref: FYPO:0005573
+is_a: PHIPO:0000257 ! abnormal transport
 is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:23:30Z
@@ -2634,7 +2651,9 @@ name: abnormal protein transport
 namespace: single_organism_phenotype
 def: "A single organism cellular process phenotype in which protein transport is abnormal." []
 xref: FYPO:0005744
+is_a: PHIPO:0000240 ! abnormal pathogen host interaction protein localization
 is_a: PHIPO:0000257 ! abnormal transport
+is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:24:39Z
 
@@ -2644,6 +2663,8 @@ name: abnormal pathogen host interaction protein transport
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (cellular process??) phenotype in which protein transport is abnormal." []
 xref: FYPO:0005744
+is_a: PHIPO:0000240 ! abnormal pathogen host interaction protein localization
+is_a: PHIPO:0000257 ! abnormal transport
 is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:24:41Z
@@ -2655,6 +2676,7 @@ namespace: single_organism_phenotype
 def: "A single organism cellular process phenotype in which vacuolar transport is abnormal." []
 xref: FYPO:0003578
 is_a: PHIPO:0000257 ! abnormal transport
+is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:24:58Z
 
@@ -2664,6 +2686,7 @@ name: abnormal pathogen host interaction vacuolar transport
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (cellular process??) phenotype in which vacuolar transport is abnormal." []
 xref: FYPO:0003578
+is_a: PHIPO:0000257 ! abnormal transport
 is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:25:00Z
@@ -2724,6 +2747,7 @@ namespace: single_organism_phenotype
 def: "A population phenotype in which the frequency of occurrence of asexual spore germination is increased." []
 synonym: "increased conidia germination frequency" EXACT []
 is_a: PHIPO:0000509 ! population phenotype
+is_a: PHIPO:0001018 ! abnormal asexual spore germination
 created_by: alaynecuzick
 creation_date: 2018-10-03T13:38:33Z
 
@@ -2839,6 +2863,7 @@ name: increased cellular pigment accumulation
 namespace: single_organism_phenotype
 def: "A single species individual organism phenotype where the accumulation of coloring matter in a cell is increased." []
 is_a: PHIPO:0000285 ! abnormal cellular pigment accumulation
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2018-10-05T12:38:26Z
 
@@ -2848,6 +2873,7 @@ name: decreased cellular pigment accumulation
 namespace: single_organism_phenotype
 def: "A single species individual organism phenotype where the accumulation of coloring matter in a cell is decreased." []
 is_a: PHIPO:0000285 ! abnormal cellular pigment accumulation
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2018-10-05T12:38:39Z
 
@@ -3667,6 +3693,8 @@ namespace: single_organism_phenotype
 def: "A cellular process phenotype in which cell wall organization is abnormal. Cell wall organization results in the assembly, arrangement of constituent parts, or disassembly of the fungal-type cell wall." []
 xref: FYPO:0004805
 is_a: PHIPO:0000400 ! abnormal cellular component organization
+is_a: PHIPO:0000449 ! abnormal pathogen asexual reproduction within host
+is_a: PHIPO:0000931 ! cell wall organization or biogenesis phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:33:32Z
 
@@ -3748,7 +3776,7 @@ id: PHIPO:0000388
 name: resistance to azoxystrobin
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased resistance to azoxystrobin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000412 ! increased resistance to chemical during growth
+is_a: PHIPO:0000576 ! resistance to strobilurin A
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:37:46Z
 
@@ -3820,7 +3848,7 @@ id: PHIPO:0000396
 name: sensitive to azoxystrobin
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased sensitivity to azoxystrobin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+is_a: PHIPO:0000804 ! sensitive to strobilurin A
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:41:17Z
 
@@ -3857,6 +3885,8 @@ namespace: single_organism_phenotype
 def: "A cellular process phenotype in which any process of cellular component organization at the cellular level is abnormal." []
 xref: FYPO:0000335
 is_a: PHIPO:0000407 ! cellular component organization phenotype
+is_a: PHIPO:0000469 ! abnormal pathogen asexual sporulation within host
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:43:39Z
 
@@ -3953,6 +3983,7 @@ namespace: single_organism_phenotype
 def: "A population phenotype in which the frequency of occurrence of asexual spore germination is decreased." []
 synonym: "decreased conidia germination frequency" EXACT []
 is_a: PHIPO:0000509 ! population phenotype
+is_a: PHIPO:0001018 ! abnormal asexual spore germination
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:46:43Z
 
@@ -4316,6 +4347,7 @@ name: abnormal number of asexual pathogen spores within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen reproductive phenotype within host in which the frequency of occurrence of asexual spores is abnormal" []
 synonym: "abnormal number of pathogen conidia within host" EXACT []
+is_a: PHIPO:0000400 ! abnormal cellular component organization
 is_a: PHIPO:0000449 ! abnormal pathogen asexual reproduction within host
 created_by: alaynecuzick
 creation_date: 2018-12-18T14:43:36Z
@@ -4325,7 +4357,9 @@ id: PHIPO:0000449
 name: abnormal pathogen asexual reproduction within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen reproductive phenotype within host where the pathogen asexual reproduction process, in which new individuals are produced by either a single cell or a group of cells, in the absence of any sexual process is abnormal (GO:0019954)." []
+is_a: PHIPO:0000407 ! cellular component organization phenotype
 is_a: PHIPO:0000469 ! abnormal pathogen asexual sporulation within host
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2018-12-18T14:44:36Z
 
@@ -4437,6 +4471,7 @@ id: PHIPO:0000469
 name: abnormal pathogen asexual sporulation within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen reproductive phenotype within host where the process of pathogen asexual sporulation, the formation of spores derived from the products of an asexual cell division, is abnormal (GO:0030436)." []
+is_a: PHIPO:0000047 ! abnormal asexual reproduction
 is_a: PHIPO:0000441 ! abnormal pathogen reproductive phenotype within host
 created_by: alaynecuzick
 creation_date: 2019-01-11T10:32:18Z
@@ -4638,7 +4673,9 @@ name: abnormal toxin biosynthetic process
 namespace: single_organism_phenotype
 def: "A single organism phenotype in which the toxin biosynthetic process is abnormal (i.e. different than the wild type)." []
 comment: For logical defintions\nDo we want to make this species neutral and just add in DON at lowest child level and use CHEBI id CHEBI_10022 ## vomitoxin\nOR\nuse fungi specific GO term GO_0106110 ## vomitoxin biosynthetic process??
+is_a: PHIPO:0000231 ! pathogen host interaction toxin biosynthetic process phenotype
 is_a: PHIPO:0000496 ! toxin biosynthetic process phenotype
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2019-01-18T13:04:53Z
 
@@ -4656,7 +4693,9 @@ id: PHIPO:0000500
 name: abnormal biosynthesis of deoxynivalenol
 namespace: single_organism_phenotype
 def: "A single organism phenotype in which the biosynthesis of deoxynivalenol is abnormal (i.e. different than the wild type)." []
-is_a: PHIPO:0000498 ! abnormal toxin biosynthetic process
+is_a: PHIPO:0000231 ! pathogen host interaction toxin biosynthetic process phenotype
+is_a: PHIPO:0000496 ! toxin biosynthetic process phenotype
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2019-01-18T13:06:19Z
 
@@ -4834,7 +4873,7 @@ id: PHIPO:0000519
 name: resistance to piperacillin
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased resistance to piperacillin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000412 ! increased resistance to chemical during growth
+is_a: PHIPO:0000692 ! resistance to penicillin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -4879,7 +4918,7 @@ id: PHIPO:0000526
 name: resistance to carbenicillin
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased resistance to carbenicillin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000412 ! increased resistance to chemical during growth
+is_a: PHIPO:0000692 ! resistance to penicillin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -5086,7 +5125,7 @@ id: PHIPO:0000550
 name: resistance to ampicillin
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased resistance to ampicillin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000412 ! increased resistance to chemical during growth
+is_a: PHIPO:0000692 ! resistance to penicillin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -5158,7 +5197,7 @@ id: PHIPO:0000558
 name: resistance to benzylpenicillin
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased resistance to benzylpenicillin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000412 ! increased resistance to chemical during growth
+is_a: PHIPO:0000692 ! resistance to penicillin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -5212,7 +5251,7 @@ id: PHIPO:0000564
 name: resistance to mecillinam
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased resistance to mecillinam, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000412 ! increased resistance to chemical during growth
+is_a: PHIPO:0000692 ! resistance to penicillin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -5284,7 +5323,7 @@ id: PHIPO:0000573
 name: resistance to gentamycin C1
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased resistance to gentamycin C1, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000412 ! increased resistance to chemical during growth
+is_a: PHIPO:0000659 ! resistance to gentamicin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -5455,7 +5494,7 @@ id: PHIPO:0000593
 name: resistance to oxacillin
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased resistance to oxacillin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000412 ! increased resistance to chemical during growth
+is_a: PHIPO:0000692 ! resistance to penicillin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -5545,7 +5584,7 @@ id: PHIPO:0000604
 name: resistance to meropenem
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased resistance to meropenem, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000412 ! increased resistance to chemical during growth
+is_a: PHIPO:0000693 ! resistance to carbapenems
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -5869,7 +5908,7 @@ id: PHIPO:0000643
 name: resistance to imipenem
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased resistance to imipenem, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000412 ! increased resistance to chemical during growth
+is_a: PHIPO:0000693 ! resistance to carbapenems
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -5887,7 +5926,7 @@ id: PHIPO:0000645
 name: resistance to ticarcillin
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased resistance to ticarcillin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000412 ! increased resistance to chemical during growth
+is_a: PHIPO:0000692 ! resistance to penicillin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -5923,7 +5962,7 @@ id: PHIPO:0000649
 name: resistance to methicillin
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased resistance to methicillin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000412 ! increased resistance to chemical during growth
+is_a: PHIPO:0000692 ! resistance to penicillin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -5932,7 +5971,7 @@ id: PHIPO:0000650
 name: resistance to ertapenem
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased resistance to ertapenem, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000412 ! increased resistance to chemical during growth
+is_a: PHIPO:0000693 ! resistance to carbapenems
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -6004,7 +6043,7 @@ id: PHIPO:0000658
 name: resistance to amoxicillin
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased resistance to amoxicillin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000412 ! increased resistance to chemical during growth
+is_a: PHIPO:0000692 ! resistance to penicillin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -6112,7 +6151,7 @@ id: PHIPO:0000670
 name: resistance to levofloxacin
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased resistance to levofloxacin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000412 ! increased resistance to chemical during growth
+is_a: PHIPO:0000665 ! resistance to ofloxacin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -6346,7 +6385,7 @@ id: PHIPO:0000699
 name: resistance to doripenem
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased resistance to doripenem, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000412 ! increased resistance to chemical during growth
+is_a: PHIPO:0000693 ! resistance to carbapenems
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -6445,7 +6484,7 @@ id: PHIPO:0000710
 name: resistance to dicloxacillin
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased resistance to dicloxacillin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000412 ! increased resistance to chemical during growth
+is_a: PHIPO:0000692 ! resistance to penicillin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -6607,7 +6646,7 @@ id: PHIPO:0000732
 name: sensitive to doripenem
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased sensitivity to doripenem, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+is_a: PHIPO:0000819 ! sensitive to carbapenems
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -6679,7 +6718,7 @@ id: PHIPO:0000740
 name: sensitive to oxacillin
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased sensitivity to oxacillin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+is_a: PHIPO:0000815 ! sensitive to penicillin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -6895,7 +6934,7 @@ id: PHIPO:0000765
 name: sensitive to methicillin
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased sensitivity to methicillin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+is_a: PHIPO:0000815 ! sensitive to penicillin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -6913,7 +6952,7 @@ id: PHIPO:0000767
 name: sensitive to gentamycin C1
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased sensitivity to gentamycin C1, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+is_a: PHIPO:0000760 ! sensitive to gentamicin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -6940,7 +6979,7 @@ id: PHIPO:0000770
 name: sensitive to mecillinam
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased sensitivity to mecillinam, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+is_a: PHIPO:0000815 ! sensitive to penicillin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -6949,7 +6988,7 @@ id: PHIPO:0000771
 name: sensitive to ampicillin
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased sensitivity to ampicillin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+is_a: PHIPO:0000815 ! sensitive to penicillin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -7147,7 +7186,7 @@ id: PHIPO:0000795
 name: sensitive to carbenicillin
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased sensitivity to carbenicillin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+is_a: PHIPO:0000815 ! sensitive to penicillin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -7417,7 +7456,7 @@ id: PHIPO:0000826
 name: sensitive to ticarcillin
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased sensitivity to ticarcillin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+is_a: PHIPO:0000815 ! sensitive to penicillin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -7480,7 +7519,7 @@ id: PHIPO:0000833
 name: sensitive to imipenem
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased sensitivity to imipenem, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+is_a: PHIPO:0000819 ! sensitive to carbapenems
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -7543,7 +7582,7 @@ id: PHIPO:0000840
 name: sensitive to dicloxacillin
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased sensitivity to dicloxacillin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+is_a: PHIPO:0000815 ! sensitive to penicillin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -7561,7 +7600,7 @@ id: PHIPO:0000842
 name: sensitive to piperacillin
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased sensitivity to piperacillin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+is_a: PHIPO:0000815 ! sensitive to penicillin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -7588,7 +7627,7 @@ id: PHIPO:0000845
 name: sensitive to meropenem
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased sensitivity to meropenem, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+is_a: PHIPO:0000819 ! sensitive to carbapenems
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -7618,6 +7657,10 @@ def: "A phenotype in which a population of a single-species shows increased sens
 is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
+
+[Term]
+id: PHIPO:0000849
+is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
 
 [Term]
 id: PHIPO:0000850
@@ -7705,7 +7748,7 @@ id: PHIPO:0000860
 name: sensitive to ertapenem
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased sensitivity to ertapenem, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+is_a: PHIPO:0000819 ! sensitive to carbapenems
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -7750,7 +7793,7 @@ id: PHIPO:0000865
 name: sensitive to benzylpenicillin
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased sensitivity to benzylpenicillin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+is_a: PHIPO:0000815 ! sensitive to penicillin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -7912,7 +7955,7 @@ id: PHIPO:0000883
 name: sensitive to levofloxacin
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased sensitivity to levofloxacin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+is_a: PHIPO:0000830 ! sensitive to ofloxacin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -7939,7 +7982,7 @@ id: PHIPO:0000886
 name: sensitive to amoxicillin
 namespace: single_organism_phenotype
 def: "A phenotype in which a population of a single-species shows increased sensitivity to amoxicillin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
+is_a: PHIPO:0000815 ! sensitive to penicillin
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
@@ -8114,7 +8157,8 @@ name: abnormal cell wall organization or biogenesis
 namespace: single_organism_phenotype
 def: "A cellular process phenotype in which the biosynthesis of constituent macromolecules, assembly, arrangement of constituent parts, or disassembly of a cell wall is abnormal." []
 synonym: "abnormal cell wall integrity" EXACT []
-is_a: PHIPO:0000929 ! abnormal cellular process
+is_a: PHIPO:0000400 ! abnormal cellular component organization
+is_a: PHIPO:0000449 ! abnormal pathogen asexual reproduction within host
 is_a: PHIPO:0000931 ! cell wall organization or biogenesis phenotype
 created_by: alaynecuzick
 creation_date: 2019-05-01T10:52:19Z
@@ -8207,6 +8251,7 @@ name: decreased cell wall integrity
 namespace: single_organism_phenotype
 def: "A cellular process phenotype in which the biosynthesis of constituent macromolecules, assembly, arrangement of constituent parts, or disassembly of a cell wall is decreased." []
 synonym: "decreased cell wall organization or biogenesis" EXACT []
+is_a: PHIPO:0000379 ! abnormal cell wall organization
 is_a: PHIPO:0000925 ! abnormal cell wall organization or biogenesis
 created_by: alaynecuzick
 creation_date: 2019-05-17T10:49:13Z
@@ -8640,6 +8685,8 @@ namespace: single_organism_phenotype
 def: "A reproductive process phenotype in which meiosis is abnormal. Meiosis refers specifically to the nuclear division phases of a meiotic cell cycle. (GO:0140013)." []
 synonym: "abnormal meiotic nuclear division" EXACT []
 xref: FYPO:0000051
+is_a: PHIPO:0000400 ! abnormal cellular component organization
+is_a: PHIPO:0000449 ! abnormal pathogen asexual reproduction within host
 is_a: PHIPO:0000983 ! abnormal meiotic cell cycle
 created_by: alaynecuzick
 creation_date: 2019-07-27T13:29:17Z
@@ -8662,6 +8709,7 @@ namespace: single_organism_phenotype
 def: "A reproductive process phenotype in which a cell does not proceed normally through a meiotic cell cycle (GO:0051321)." []
 xref: FYPO:0000052
 is_a: PHIPO:0000048 ! abnormal sexual reproduction
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2019-07-27T13:48:15Z
 
@@ -8891,6 +8939,7 @@ namespace: single_organism_phenotype
 def: "A phenotype in which a specific transport process is abnormal in the vegetative growth phase of the life cycle." []
 xref: FYPO:0005973
 is_a: PHIPO:0000257 ! abnormal transport
+is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
 created_by: alaynecuzick
 creation_date: 2019-08-10T15:03:45Z
 
@@ -8901,6 +8950,7 @@ namespace: single_organism_phenotype
 def: "A transport phenotype observed in the vegetative growth phase of the life cycle in which vesicle-mediated transport is abnormal." []
 xref: FYPO:0000213
 is_a: PHIPO:0000257 ! abnormal transport
+is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
 created_by: alaynecuzick
 creation_date: 2019-08-10T15:06:50Z
 
@@ -8998,6 +9048,7 @@ namespace: single_organism_phenotype
 def: "A cellular process phenotype in which the rate, or speed, of asexual spore germination is decreased." []
 synonym: "decreased rate of conidia germination" EXACT []
 xref: FYPO:0000582
+is_a: PHIPO:0000509 ! population phenotype
 is_a: PHIPO:0001018 ! abnormal asexual spore germination
 created_by: alaynecuzick
 creation_date: 2019-08-17T13:01:16Z
@@ -9690,7 +9741,8 @@ name: abnormal cellular component assembly
 namespace: single_organism_phenotype
 def: "A single species cellular process phenotype in which any process of cellular component assembly at the cellular level is abnormal." []
 xref: FYPO:0000336
-is_a: PHIPO:0000407 ! cellular component organization phenotype
+is_a: PHIPO:0000400 ! abnormal cellular component organization
+is_a: PHIPO:0000449 ! abnormal pathogen asexual reproduction within host
 created_by: alaynecuzick
 creation_date: 2019-10-01T09:36:55Z
 
@@ -9709,6 +9761,7 @@ name: decreased rate of hyphae formation
 namespace: single_organism_phenotype
 def: "A single species cellular process phenotype in which the rate, or speed, of hyphae formation is decreased." []
 synonym: "slow hyphae formation" EXACT []
+is_a: PHIPO:0000962 ! decreased filamentous growth on host surface
 is_a: PHIPO:0001087 ! abnormal hyphae formation
 created_by: alaynecuzick
 creation_date: 2019-10-01T09:41:16Z
