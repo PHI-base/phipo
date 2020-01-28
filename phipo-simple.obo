@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2020-01-23/phipo-simple.owl
+data-version: phipo/releases/2020-01-28/phipo-simple.owl
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -2389,22 +2389,24 @@ creation_date: 2018-10-02T10:14:50Z
 
 [Term]
 id: PHIPO:0000242
-name: abnormal pathogen host interaction protein complex localization
+name: obsolete abnormal pathogen host interaction protein complex localization
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein complex is abnormal." []
 xref: FYPO:0001440
 is_a: PHIPO:0000240 ! abnormal pathogen host interaction protein localization
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:14:53Z
 
 [Term]
 id: PHIPO:0000243
-name: abnormal pathogen host interaction protein localization to nucleus
+name: obsolete abnormal pathogen host interaction protein localization to nucleus
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype in which the localization of a protein to the nucleus is abnormal. (Which nucleus? pathogen or host?)" []
 comment: Encompasses both presence of proteins not normally found in the nucleus and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
 xref: FYPO:0002956
 is_a: PHIPO:0000240 ! abnormal pathogen host interaction protein localization
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:16:31Z
 
@@ -2443,12 +2445,12 @@ creation_date: 2018-10-02T10:17:55Z
 
 [Term]
 id: PHIPO:0000247
-name: abolished pathogen host interaction protein localization to nucleus
+name: abolished pathogen protein localization to host nucleus
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype in which the localization of a protein to the nucleus is abolished." []
+def: "A pathogen host interaction phenotype in which the localization of a pathogen protein to the host nucleus is abolished." []
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 xref: FYPO:0003450
-is_a: PHIPO:0000240 ! abnormal pathogen host interaction protein localization
+is_a: PHIPO:0000246 ! abolished pathogen host interaction protein localization
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:19:22Z
 
@@ -2723,9 +2725,9 @@ creation_date: 2018-10-03T11:05:29Z
 
 [Term]
 id: PHIPO:0000272
-name: normal pathogen host interaction protein localization to nucleus
+name: normal pathogen protein localization to host nucleus
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype in which the localization of a protein to the nucleus is normal (i.e. indistinguishable from wild type)." []
+def: "A pathogen host interaction phenotype in which the localization of a pathogen protein to the host nucleus is normal (i.e. indistinguishable from wild type)." []
 xref: FYPO:0006553
 is_a: PHIPO:0000270 ! normal pathogen host interaction protein localization
 created_by: alaynecuzick
@@ -4305,6 +4307,7 @@ name: decreased number of asexual pathogen spores within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen reproductive phenotype within host in which the frequency of occurrence of asexual spores is decreased." []
 synonym: "decreased number of pathogen conidia within host" EXACT []
+synonym: "decreased number of pathogen uredinia within host" EXACT []
 is_a: PHIPO:0000448 ! abnormal number of asexual pathogen spores within host
 created_by: alaynecuzick
 creation_date: 2018-12-18T11:34:08Z
@@ -4337,6 +4340,7 @@ name: increased number of asexual pathogen spores within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen reproductive phenotype within host in which the frequency of occurrence of asexual spores is increased." []
 synonym: "increased number of pathogen conidia within host" EXACT []
+synonym: "increased number of pathogen uredinia within host" EXACT []
 is_a: PHIPO:0000448 ! abnormal number of asexual pathogen spores within host
 created_by: alaynecuzick
 creation_date: 2018-12-18T13:53:43Z
@@ -4462,6 +4466,7 @@ name: pathogen asexual spores absent within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen reproductive phenotype within host where the pathogen asexual spores are absent (FAO:0000023)." []
 synonym: "pathogen conidia absent within host" EXACT []
+synonym: "pathogen uredinia absent within host" EXACT []
 is_a: PHIPO:0000469 ! abnormal pathogen asexual sporulation within host
 created_by: alaynecuzick
 creation_date: 2019-01-11T10:31:18Z
@@ -4499,6 +4504,7 @@ name: normal number of pathogen asexual spores within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen reproductive phenotype within host in which the frequency of occurrence of asexual spores is normal  (i.e. indistinguishable from wild type)." []
 synonym: "normal number of pathogen conidia within host" EXACT []
+synonym: "normal number of pathogen uredinia within host" EXACT []
 is_a: PHIPO:0000472 ! normal pathogen asexual sporulation within host
 created_by: alaynecuzick
 creation_date: 2019-01-11T11:55:09Z
@@ -10025,10 +10031,9 @@ creation_date: 2019-10-22T12:26:26Z
 
 [Term]
 id: PHIPO:0001117
-name: host immune signalling pathway induced by pathogen
+name: host immune signalling pathway activated by pathogen
 namespace: pathogen_host_interaction_phenotype
 def: "A cell signaling pathway phenotype where the host immune signaling pathway is induced by a pathogen." []
-synonym: "pathogen induced host MAP kinase activity" RELATED []
 is_a: PHIPO:0001116 ! pathogen host interaction signaling pathway phenotype
 created_by: alaynecuzick
 creation_date: 2019-10-22T12:26:58Z
@@ -10131,11 +10136,11 @@ creation_date: 2019-12-03T10:59:32Z
 
 [Term]
 id: PHIPO:0001128
-name: suppression of host microbe-triggered immunity
+name: pathogen suppression of host PTI
 namespace: pathogen_host_interaction_phenotype
 def: "A cell signaling pathway phenotype where the molecular pattern-induced host innate immune response signaling pathway is suppressed by a pathogen. (GO:0052034)" []
 synonym: "suppression of host MAMP-triggered immunity" EXACT []
-synonym: "suppression of host pathogen-triggered immunity" EXACT []
+synonym: "suppression of host PAMP-triggered immunity" EXACT []
 synonym: "suppression of host PTI" EXACT []
 is_a: PHIPO:0001116 ! pathogen host interaction signaling pathway phenotype
 created_by: alaynecuzick
@@ -10143,11 +10148,11 @@ creation_date: 2019-12-03T11:08:34Z
 
 [Term]
 id: PHIPO:0001129
-name: abolished suppression of host microbe-triggered immunity
+name: abolished pathogen suppression of host PTI
 namespace: pathogen_host_interaction_phenotype
 def: "A cell signaling pathway phenotype where the molecular pattern-induced host innate immune response signaling pathway that was suppressed by a pathogen is no longer suppressed (suppression was present and is now absent). (GO:0052034)" []
 synonym: "abolished suppression of host MAMP-triggered immunity" EXACT []
-synonym: "abolished suppression of host pathogen-triggered immunity" EXACT []
+synonym: "abolished suppression of host PAMP-triggered immunity" EXACT []
 synonym: "abolished suppression of host PTI" EXACT []
 is_a: PHIPO:0001116 ! pathogen host interaction signaling pathway phenotype
 created_by: alaynecuzick
@@ -10251,6 +10256,61 @@ synonym: "decreased number of septum in conidia" EXACT []
 is_a: PHIPO:0000127 ! abnormal asexual spore morphology
 created_by: alaynecuzick
 creation_date: 2020-01-07T13:11:13Z
+
+[Term]
+id: PHIPO:0001140
+name: host PTI signaling activated by pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A cell signalling pathway phenotype where the host pattern recognition receptor signalling pathway is directly induced by a pathogen. This can include any series of molecular signals generated as a consequence of a pattern recognition receptor (PRR) binding to a pathogen-derived physiological ligand. PRR ligands are usually referred to as pathogen-associated molecular pattern (PAMPs) or microbe-associated molecular pattern (MAMPs), structures conserved among microbial species (GO:0002221)." []
+synonym: "activation of host MAMP-triggered immunity" EXACT []
+synonym: "activation of host PAMP-triggered immunity" EXACT []
+synonym: "activation of host PRR signalling pathway" BROAD []
+synonym: "activation of host PTI" EXACT []
+synonym: "pathogen induced host MAP kinase activity" RELATED []
+is_a: PHIPO:0001117 ! host immune signalling pathway activated by pathogen
+created_by: alaynecuzick
+creation_date: 2020-01-28T11:29:52Z
+
+[Term]
+id: PHIPO:0001141
+name: host ETI signalling induced HR activated by pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A cell signalling pathway phenotype where the host effector-triggered immunity signalling pathway is induced by a pathogen to activate a plant hypersensitive response (HR) and induce necrosis." []
+synonym: "activation of host effector-triggered immunity inducing HR" EXACT []
+synonym: "activation of host ETI" BROAD []
+synonym: "activation of host ETI inducing HR" EXACT []
+synonym: "activation of host ETI inducing PCD" BROAD []
+synonym: "activation of host ETI signalling pathway inducing HR" EXACT []
+is_a: PHIPO:0001117 ! host immune signalling pathway activated by pathogen
+created_by: alaynecuzick
+creation_date: 2020-01-28T11:36:13Z
+
+[Term]
+id: PHIPO:0001142
+name: normal pathogen protein localization to host chloroplast
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which the localization of a pathogen protein to the host chloroplast is normal (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0000270 ! normal pathogen host interaction protein localization
+created_by: alaynecuzick
+creation_date: 2020-01-28T12:05:46Z
+
+[Term]
+id: PHIPO:0001143
+name: abolished pathogen protein localization to host chloroplast
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which the localization of a pathogen protein to the host chloroplast is abolished (i.e.the protein was localized to the host chloroplast and now is not)." []
+is_a: PHIPO:0000246 ! abolished pathogen host interaction protein localization
+created_by: alaynecuzick
+creation_date: 2020-01-28T12:13:25Z
+
+[Term]
+id: PHIPO:0001144
+name: decreased level of RNA from host defense related marker gene involved in pathogen interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A cell phenotype in which the amount of host defence-related RNA measured in an interaction with a pathogen is lower than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." []
+is_a: PHIPO:0000995 ! decreased level of pathogen RNA involved in a host interaction
+created_by: alaynecuzick
+creation_date: 2020-01-28T12:40:16Z
 
 [Typedef]
 id: PHIPO:0000304
