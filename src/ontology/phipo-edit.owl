@@ -1097,6 +1097,7 @@ Declaration(Class(obo:PHIPO_0001136))
 Declaration(Class(obo:PHIPO_0001137))
 Declaration(Class(obo:PHIPO_0001138))
 Declaration(Class(obo:PHIPO_0001139))
+Declaration(Class(obo:PHIPO_0001140))
 Declaration(ObjectProperty(obo:PHIPO_0000304))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:created_by))
@@ -11154,7 +11155,6 @@ AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001117 "A cell signaling pathway 
 AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001117 "alaynecuzick"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001117 "2019-10-22T12:26:58Z"^^xsd:dateTime)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001117 "pathogen_host_interaction_phenotype")
-AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PHIPO_0001117 "pathogen induced host MAP kinase activity")
 AnnotationAssertion(rdfs:label obo:PHIPO_0001117 "host immune signalling pathway induced by pathogen"@en)
 SubClassOf(obo:PHIPO_0001117 obo:PHIPO_0001116)
 
@@ -11376,6 +11376,20 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:PHIPO_0001139 "decreased number
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001139 "single_species_phenotype")
 AnnotationAssertion(rdfs:label obo:PHIPO_0001139 "decreased number of septum in asexual spore"@en)
 SubClassOf(obo:PHIPO_0001139 obo:PHIPO_0000127)
+
+# Class: obo:PHIPO_0001140 (host PTI signaling activated by pathogen)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001140 "A cell signalling pathway phenotype where the host pattern recognition receptor signalling pathway is directly induced by a pathogen. This can include any series of molecular signals generated as a consequence of a pattern recognition receptor (PRR) binding to a pathogen-derived physiological ligand. PRR ligands are usually referred to as pathogen-associated molecular pattern (PAMPs) or microbe-associated molecular pattern (MAMPs), structures conserved among microbial species (GO:0002221).")
+AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001140 "alaynecuzick"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001140 "2020-01-28T11:29:52Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PHIPO_0001140 "activation of host PRR signalling pathway")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PHIPO_0001140 "activation of host MAMP-triggered immunity")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PHIPO_0001140 "activation of host PAMP-triggered immunity")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PHIPO_0001140 "activation of host PTI")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001140 "pathogen_host_interaction_phenotype")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PHIPO_0001140 "pathogen induced host MAP kinase activity")
+AnnotationAssertion(rdfs:label obo:PHIPO_0001140 "host PTI signaling activated by pathogen"@en)
+SubClassOf(obo:PHIPO_0001140 obo:PHIPO_0001117)
 
 
 )
