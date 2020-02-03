@@ -1,0 +1,12 @@
+prefix oio: <http://www.geneontology.org/formats/oboInOwl#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?cls WHERE {
+  ?cls a owl:Class .
+  FILTER(isIRI(?cls) && regex(
+      str(?cls), "http://purl.obolibrary.org/obo/PHIPO_")
+  ) .
+  FILTER NOT EXISTS {
+    ?cls oio:hasOBONamespace ?ns .
+  }
+}

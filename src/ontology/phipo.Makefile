@@ -3,6 +3,8 @@
 ## If you need to customize your Makefile, make
 ## changes here rather than in the main Makefile
 
+# SPARQL_VALIDATION_CHECKS:=$(SPARQL_VALIDATION_CHECKS) missing-namespace
+
 # $(ONT).owl: $(SRC)
 #	 $(ROBOT)  reason -i $< -r ELK relax reduce -r ELK annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
 
