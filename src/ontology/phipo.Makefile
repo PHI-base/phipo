@@ -11,6 +11,7 @@ tmp/phipo_deprecated.txt: $(SRC)
 	$(ROBOT) query -i $(SRC) -q ../sparql/phipo_obsoletes.sparql $@
 	sed -i -r -e '1d' -e 's/^.+?PHIPO_([[:digit:]]{7})/PHIPO:\1/g' $@
 
+.PHONY: tmp/pattern_terms.txt
 tmp/pattern_terms.txt:
 	grep -E 'PHIPO_[[:digit:]]{7}' ../patterns/all_pattern_terms.txt |\
 	sed -r 's/^.+?PHIPO_([[:digit:]]{7})/PHIPO:\1/g' > tmp/pattern_terms.txt
