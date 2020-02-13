@@ -1,0 +1,10 @@
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?cls
+WHERE {
+  ?cls a owl:Class ;
+       owl:deprecated "true"^^xsd:boolean .
+  FILTER(isIRI(?cls) && regex(str(?cls), "PHIPO_"))
+}
+ORDER BY ?cls
