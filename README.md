@@ -3,7 +3,7 @@
 
 # PHI-base Phenotype Ontology
 
-**CAUTION:** This ontology is in the draft phase, and is under active development. Term names may be liable to change without warning.
+**Caution:** This ontology is in a draft phase, and is under active development; ontology terms may be deprecated at a higher rate than usual.
 
 - - -
 
