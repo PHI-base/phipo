@@ -1,5 +1,6 @@
 format-version: 1.2
-data-version: phipo/releases/2020-01-28/phipo-simple.owl
+data-version: phipo/releases/2020-03-05/phipo-simple.owl
+subsetdef: ro-eco ""
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -2393,7 +2394,6 @@ name: obsolete abnormal pathogen host interaction protein complex localization
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype observed in the vegetative growth phase of the life cycle in which the localization of a protein complex is abnormal." []
 xref: FYPO:0001440
-is_a: PHIPO:0000240 ! abnormal pathogen host interaction protein localization
 is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:14:53Z
@@ -2405,7 +2405,6 @@ namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype in which the localization of a protein to the nucleus is abnormal. (Which nucleus? pathogen or host?)" []
 comment: Encompasses both presence of proteins not normally found in the nucleus and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
 xref: FYPO:0002956
-is_a: PHIPO:0000240 ! abnormal pathogen host interaction protein localization
 is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:16:31Z
@@ -7665,10 +7664,6 @@ property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
 [Term]
-id: PHIPO:0000849
-is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
-
-[Term]
 id: PHIPO:0000850
 name: sensitive to 4-aminosalicylic acid
 namespace: single_species_phenotype
@@ -10312,10 +10307,152 @@ is_a: PHIPO:0000995 ! decreased level of pathogen RNA involved in a host interac
 created_by: alaynecuzick
 creation_date: 2020-01-28T12:40:16Z
 
+[Term]
+id: PHIPO:0001145
+name: pathogen suppression of host ETI
+namespace: pathogen_host_interaction_phenotype
+def: "A cell signaling pathway phenotype where the host effector-triggered immunity innate immune response signaling pathway is suppressed by a pathogen. (GO:0140404)" []
+synonym: "suppression of host effector triggered immunity" EXACT []
+synonym: "suppression of host ETI" EXACT []
+is_a: PHIPO:0000186 ! abolished host HR induced by pathogen during biotrophic lifestyle
+is_a: PHIPO:0001116 ! pathogen host interaction signaling pathway phenotype
+created_by: alaynecuzick
+creation_date: 2020-03-04T12:47:38Z
+
+[Term]
+id: PHIPO:0001146
+name: decreased size of filamentous colony
+namespace: single_species_phenotype
+def: "A single species population growth phenotype where the size of the filamentous colony is decreased." []
+is_a: PHIPO:0001056 ! decreased size of colony
+created_by: alaynecuzick
+creation_date: 2020-03-04T13:23:17Z
+
+[Term]
+id: PHIPO:0001147
+name: cellular metabolic process phenotype
+namespace: single_species_phenotype
+def: "A single organism phenotype that affects the chemical reactions and pathways by which individual cells transform chemical substances. (GO:0044237)" []
+synonym: "cellular metabolism phenotype" EXACT []
+is_a: PHIPO:0000492 ! metabolic process phenotype
+created_by: alaynecuzick
+creation_date: 2020-03-04T13:53:21Z
+
+[Term]
+id: PHIPO:0001148
+name: unaltered ROS production
+namespace: single_species_phenotype
+def: "A single species metabolic cellular process phenotype in which the formation of reactive oxygen species (any molecules or ions formed by the incomplete one-electron reduction of oxygen) is unaltered.(GO:1903409)" []
+synonym: "normal reactive oxygen species production" EXACT []
+is_a: PHIPO:0001147 ! cellular metabolic process phenotype
+created_by: alaynecuzick
+creation_date: 2020-03-04T13:57:18Z
+
+[Term]
+id: PHIPO:0001149
+name: decreased ROS production
+namespace: single_species_phenotype
+def: "A single species metabolic cellular process phenotype in which the formation of reactive oxygen species (any molecules or ions formed by the incomplete one-electron reduction of oxygen) is decreased.(GO:1903409)" []
+synonym: "decreased reactive oxygen species production" EXACT []
+synonym: "reduced reactive oxygen species production" EXACT []
+is_a: PHIPO:0001147 ! cellular metabolic process phenotype
+created_by: alaynecuzick
+creation_date: 2020-03-04T14:03:31Z
+
+[Term]
+id: PHIPO:0001150
+name: abnormal spatial extent of ROS production
+namespace: single_species_phenotype
+def: "A single species localization phenotype in which ROS are produced over a different portion of the cell than normal." []
+is_a: PHIPO:0001094 ! abnormal localization
+created_by: alaynecuzick
+creation_date: 2020-03-04T14:11:20Z
+
+[Term]
+id: PHIPO:0001151
+name: normal host size during pathogen invasion
+namespace: pathogen_host_interaction_phenotype
+def: "A host morphology phenotype where the size of the host is normal (indistinguishable from wild type) during pathogen invasion." []
+is_a: PHIPO:0001005 ! normal host morphology during pathogen invasion
+created_by: alaynecuzick
+creation_date: 2020-03-04T14:21:48Z
+
+[Term]
+id: PHIPO:0001152
+name: increased host membrane blebbing during pathogen invasion
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the morphology of the host plasma membrane has increased blebbing during pathogen invasion." []
+synonym: "increased host membrane blebbing during symbiont invasion" EXACT []
+is_a: PHIPO:0001006 ! abnormal host morphology during pathogen invasion
+created_by: alaynecuzick
+creation_date: 2020-03-04T14:27:03Z
+
+[Term]
+id: PHIPO:0001153
+name: hyphal hyper branching
+namespace: single_species_phenotype
+def: "A single species cell phenotype in which fungal hyphae form an increased number of branches." []
+synonym: "increased branching of hyphae" EXACT []
+synonym: "increased hyphal branching" EXACT []
+is_a: PHIPO:0000961 ! cell morphology phenotype
+created_by: alaynecuzick
+creation_date: 2020-03-04T14:33:49Z
+
 [Typedef]
 id: PHIPO:0000304
 name: qualifier
 comment: Used in FYPO as described in PATO best practices; placeholder relation to indicate normality/abnormality.\n\nwhich namespace? do we need all 3 triplicated again?
 created_by: alaynecuzick
 creation_date: 2018-10-12T13:24:02Z
+
+[Typedef]
+id: RO:0000052
+name: inheres in
+def: "a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence" []
+property_value: IAO:0000111 "inheres in" xsd:string
+property_value: IAO:0000112 "this fragility inheres in this vase" xsd:string
+property_value: IAO:0000112 "this red color inheres in this apple" xsd:string
+property_value: IAO:0000116 "A dependent inheres in its bearer at all times for which the dependent exists." xsd:string
+property_value: IAO:0000118 "inheres_in" xsd:string
+property_value: RO:0001900 RO:0001901
+
+[Typedef]
+id: RO:0002503
+name: towards
+def: "q towards e2 if and only if q is a relational quality such that q inheres-in some e, and e != e2 and q is dependent on e2" []
+property_value: IAO:0000116 "This relation is provided in order to support the use of relational qualities such as 'concentration of'; for example, the concentration of C in V is a quality that inheres in V, but pertains to C." xsd:string
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20064205
+
+[Typedef]
+id: RO:0002573
+name: has modifier
+def: "A relation that holds between an attribute or a qualifier and another attribute." []
+subset: ro-eco
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20064205
+property_value: IAO:0000232 "This relation is intended to be used in combination with PATO, to be able to refine PATO quality classes using modifiers such as 'abnormal' and 'normal'. It has yet to be formally aligned into an ontological framework; it's not clear what the ontological status of the \"modifiers\" are." xsd:string
+
+[Typedef]
+id: has_part
+name: has part
+name: has_part
+namespace: chebi_ontology
+namespace: external
+namespace: quality
+def: "a core relation that holds between a whole and its part" []
+def: "Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2." [PATOC:CJM]
+comment: We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'.
+xref: BFO:0000051
+property_value: IAO:0000111 "has part" xsd:string
+property_value: IAO:0000112 "my body has part my brain (continuant parthood, two material entities)" xsd:string
+property_value: IAO:0000112 "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)" xsd:string
+property_value: IAO:0000112 "this year has part this day (occurrent parthood)" xsd:string
+property_value: IAO:0000116 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part." xsd:string
+property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
+property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)\n\nA continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'." xsd:string
+property_value: IAO:0000118 "has_part" xsd:string
+property_value: RO:0001900 RO:0001901
+is_cyclic: false
+is_transitive: true
 

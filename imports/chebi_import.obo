@@ -1,5 +1,8 @@
 format-version: 1.2
-data-version: phipo/releases/2020-01-16/imports/chebi_import.owl
+data-version: phipo/releases/2020-03-05/imports/chebi_import.owl
+subsetdef: 1_STAR "Preliminary entries"
+subsetdef: 2_STAR "Annotated by 3rd party"
+subsetdef: 3_STAR "Manually annotated by ChEBI Team"
 ontology: phipo/imports/chebi_import
 
 [Term]
@@ -1162,6 +1165,28 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "409.10358
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "C12=C(C=C(C(=C1C(C=3[C@]([C@@H]([C@]4([C@@H](C([O-])=C(C([C@@]4(O)C3O)=O)C(N)=O)[NH+](C)C)[H])*)(C2(*)*)[H])=O)O)*)*" xsd:string
 
 [Term]
+id: CHEBI:145555
+name: macropolylide
+namespace: chebi_ontology
+def: "Macrolides (macrocyclic lactones) in which the macrocyclic ring contains more than one ester linkage. Macropolylides include macrodiolides, macrotriolides, macrotetrolides and macropentolides, each containing di-, tri-, tetra-, and penta- ester linkages, respectively, in one macrocyclic ring. Macrocyclic lactones containing nitrogen in their skeletons (azamacrolides and macrolide lactams) and also containing oxazole or thiazole in their skeletons are known in nature." []
+subset: 3_STAR
+synonym: "macropolylides" RELATED [ChEBI]
+is_a: CHEBI:25106 ! macrolide
+
+[Term]
+id: CHEBI:145556
+name: macrodiolide
+namespace: chebi_ontology
+def: "A macropolylide which contains two ester linkages in one macrocyclic ring." []
+subset: 3_STAR
+synonym: "macrodiolides" RELATED [ChEBI]
+xref: PMID:17446696 "Europe PMC"
+xref: PMID:29624065 "Europe PMC"
+xref: PMID:29671776 "Europe PMC"
+xref: PMID:31247219 "Europe PMC"
+is_a: CHEBI:145555 ! macropolylide
+
+[Term]
 id: CHEBI:145565
 name: macrolide lactam
 namespace: chebi_ontology
@@ -1175,6 +1200,23 @@ xref: PMID:17378533 "Europe PMC"
 xref: PMID:31226284 "Europe PMC"
 is_a: CHEBI:24995 ! lactam
 is_a: CHEBI:25106 ! macrolide
+
+[Term]
+id: CHEBI:145790
+name: mupirocin(1-)
+namespace: chebi_ontology
+def: "A monocarboxylic acid anion that is the conjugate base of mupirocin obtained by the deprotonation of the carboxy group; major microspecies at pH 7.3." []
+subset: 3_STAR
+synonym: "9-({(2E)-4-[(2S,3R,4R,5S)-3,4-dihydroxy-5-({(2S,3S)-3-[(2S,3S)-3-hydroxybutan-2-yl]oxiran-2-yl}methyl)tetrahydro-2H-pyran-2-yl]-3-methylbut-2-enoyl}oxy)nonanoate" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:35757 ! monocarboxylic acid anion
+relationship: is_conjugate_base_of CHEBI:7025 ! mupirocin
+property_value: http://purl.obolibrary.org/obo/chebi/charge "-1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C26H43O9" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C26H44O9/c1-16(13-23(30)33-11-9-7-5-4-6-8-10-22(28)29)12-20-25(32)24(31)19(15-34-20)14-21-26(35-21)17(2)18(3)27/h13,17-21,24-27,31-32H,4-12,14-15H2,1-3H3,(H,28,29)/p-1/b16-13+/t17-,18-,19-,20-,21-,24+,25-,26-/m0/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "MINDHVHHQZYEEK-HBBNESRFSA-M" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "499.622" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "499.29126" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[C@H]1([C@@H]([C@H](CO[C@H]1C\\C(=C\\C(OCCCCCCCCC([O-])=O)=O)\\C)C[C@]2([C@](O2)([H])[C@@H](C)[C@H](C)O)[H])O)O" xsd:string
 
 [Term]
 id: CHEBI:149836
@@ -3967,6 +4009,7 @@ xref: PMID:23683321 "Europe PMC"
 xref: PMID:24643482 "Europe PMC"
 xref: PMID:25108762 "Europe PMC"
 xref: PMID:25568069 "Europe PMC"
+xref: PMID:31537530 "Europe PMC"
 xref: PPDB:1320
 xref: Reaxys:1721899 "Reaxys"
 xref: Wikipedia:Sorbitol
@@ -5038,8 +5081,8 @@ namespace: chebi_ontology
 subset: 3_STAR
 synonym: ">C=O" RELATED [IUPAC]
 synonym: "carbonyl" EXACT IUPAC_NAME [IUPAC]
-synonym: "carbonyl group" EXACT [UniProt]
 synonym: "carbonyl group" EXACT [ChEBI]
+synonym: "carbonyl group" EXACT [UniProt]
 is_a: CHEBI:51422 ! organodiyl group
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CO" xsd:string
@@ -8389,7 +8432,38 @@ property_value: http://purl.obolibrary.org/obo/chebi/smiles "[C]" xsd:string
 
 [Term]
 id: CHEBI:2762
+name: antimycin A
+namespace: chebi_ontology
 alt_id: CHEBI:22584
+alt_id: CHEBI:40908
+def: "A nine-membered bis-lactone having methyl substituents at the 2- and 6-positions, an n-hexyl substituent at the 8-position, an acyloxy substituent at the 7-position and an aroylamido substituent at the 3-position. It is produced by Streptomyces bacteria and has found commercial use as a fish poison." []
+subset: 3_STAR
+synonym: "(2R,3S,6S,7R,8R)-3-[(3-formamido-2-hydroxybenzoyl)amino]-8-hexyl-2,6-dimethyl-4,9-dioxo-1,5-dioxonan-7-yl 3-methylbutanoate" EXACT IUPAC_NAME [IUPAC]
+synonym: "Antimycin A1" RELATED [KEGG_COMPOUND]
+synonym: "antimycin A1b" RELATED [ChEBI]
+synonym: "Antipiricullin" RELATED [ChemIDplus]
+synonym: "Fintrol" RELATED [ChemIDplus]
+synonym: "Virosin" RELATED [ChemIDplus]
+xref: Beilstein:72665 "Beilstein"
+xref: CAS:1397-94-0 "ChemIDplus"
+xref: CAS:642-15-9 "KEGG COMPOUND"
+xref: KEGG:C11339
+xref: MetaCyc:CPD-5744
+xref: PDBeChem:AY1
+xref: PMID:16819166 "Europe PMC"
+is_a: CHEBI:145556 ! macrodiolide
+is_a: CHEBI:22702 ! benzamides
+is_a: CHEBI:24079 ! formamides
+is_a: CHEBI:33853 ! phenols
+relationship: has_role CHEBI:25355 ! mitochondrial respiratory-chain inhibitor
+relationship: has_role CHEBI:35718 ! antifungal agent
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C28H40N2O9" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C28H40N2O9/c1-6-7-8-9-11-20-25(39-22(32)14-16(2)3)18(5)38-28(36)23(17(4)37-27(20)35)30-26(34)19-12-10-13-21(24(19)33)29-15-31/h10,12-13,15-18,20,23,25,33H,6-9,11,14H2,1-5H3,(H,29,31)(H,30,34)/t17-,18+,20-,23+,25+/m1/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "UIFFUZWRFRDZJC-SBOOETFBSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "548.633" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "548.27338" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "C1([C@H]([C@H](OC([C@@H]([C@H]([C@@H](O1)C)OC(CC(C)C)=O)CCCCCC)=O)C)NC(C2=C(C(=CC=C2)NC(=O)[H])O)=O)=O" xsd:string
 
 [Term]
 id: CHEBI:27641
@@ -15612,6 +15686,10 @@ def: "A substance used to treat hyperlipidemia (an excess of lipids in the blood
 subset: 3_STAR
 synonym: "antihyperlipemic" RELATED [ChEBI]
 synonym: "antihyperlipemics" RELATED [ChEBI]
+synonym: "antihyperlipidaemic agent" RELATED [ChEBI]
+synonym: "antihyperlipidaemic agents" RELATED [ChEBI]
+synonym: "antihyperlipidaemic drug" RELATED [ChEBI]
+synonym: "antihyperlipidaemic drugs" RELATED [ChEBI]
 synonym: "antihyperlipidemic" RELATED [ChEBI]
 synonym: "antihyperlipidemic agent" RELATED [ChEBI]
 synonym: "antihyperlipidemic agents" RELATED [ChEBI]
@@ -15623,6 +15701,10 @@ synonym: "antilipemic drugs" RELATED [ChEBI]
 synonym: "antilipemics" RELATED [ChEBI]
 synonym: "hypolipidemic agent" RELATED [ChEBI]
 synonym: "hypolipidemic agents" RELATED [ChEBI]
+synonym: "lipid-lowering agent" RELATED [ChEBI]
+synonym: "lipid-lowering agents" RELATED [ChEBI]
+synonym: "lipid-lowering drug" RELATED [ChEBI]
+synonym: "lipid-lowering drugs" RELATED [ChEBI]
 xref: Wikipedia:Hypolipidemic_agent
 is_a: CHEBI:23888 ! drug
 
@@ -17610,6 +17692,7 @@ name: anti-arrhythmia drug
 namespace: chebi_ontology
 def: "A drug used for the treatment or prevention of cardiac arrhythmias. Anti-arrhythmia drugs may affect the polarisation-repolarisation phase of the action potential, its excitability or refractoriness, or impulse conduction or membrane responsiveness within cardiac fibres." []
 subset: 3_STAR
+synonym: "anti-arrhythmia agent" RELATED [ChEBI]
 synonym: "antiarrhythmic agent" RELATED [ChEBI]
 is_a: CHEBI:35554 ! cardiovascular drug
 
@@ -26948,6 +27031,7 @@ is_a: CHEBI:51737 ! alpha,beta-unsaturated carboxylic ester
 relationship: has_role CHEBI:36047 ! antibacterial drug
 relationship: has_role CHEBI:48001 ! protein synthesis inhibitor
 relationship: has_role CHEBI:76969 ! bacterial metabolite
+relationship: is_conjugate_acid_of CHEBI:145790 ! mupirocin(1-)
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C26H44O9" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C26H44O9/c1-16(13-23(30)33-11-9-7-5-4-6-8-10-22(28)29)12-20-25(32)24(31)19(15-34-20)14-21-26(35-21)17(2)18(3)27/h13,17-21,24-27,31-32H,4-12,14-15H2,1-3H3,(H,28,29)/b16-13+/t17-,18-,19-,20-,21-,24+,25-,26-/m0/s1" xsd:string
