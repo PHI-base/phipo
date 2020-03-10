@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2020-03-05/phipo-simple.owl
+data-version: phipo/releases/2020-03-10/phipo-simple.owl
 subsetdef: ro-eco ""
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
@@ -1162,7 +1162,7 @@ creation_date: 2018-07-17T11:30:36Z
 
 [Term]
 id: PHIPO:0000117
-name: increased pathogen growth after penetraton of the barrier
+name: increased pathogen growth after penetration of the barrier
 namespace: single_species_phenotype
 def: "A single species phenotype in which the frequency of occurrence of pathogen growth after penetration of a given experimental substance/membrane in an in vitro assay is increased." []
 subset: pathogen_phenotype
@@ -1172,7 +1172,7 @@ creation_date: 2018-07-17T11:30:56Z
 
 [Term]
 id: PHIPO:0000118
-name: increased pathogen growth after penetraton of the barrier
+name: decreased pathogen growth after penetration of the barrier
 namespace: single_species_phenotype
 def: "A single species phenotype in which the frequency of occurrence of pathogen growth after penetration of a given experimental substance/membrane in an in vitro assay is decreased." []
 subset: pathogen_phenotype
@@ -1583,7 +1583,7 @@ creation_date: 2018-10-01T12:11:36Z
 id: PHIPO:0000158
 name: binding phenotype
 namespace: single_species_phenotype
-def: "A single organism phenotype that affects the binding of a gene product to another substance. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+def: "A single species phenotype that affects the binding of a gene product to another substance. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
@@ -2371,7 +2371,7 @@ creation_date: 2018-10-02T10:14:02Z
 id: PHIPO:0000240
 name: abnormal pathogen host interaction protein localization
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype that affects the localization of a protein in a cell." []
+def: "A pathogen host interaction phenotype in which the localization of a protein in a cell is abnormal." []
 xref: FYPO:0002333
 is_a: PHIPO:0000238 ! pathogen host interaction protein localization phenotype
 is_a: PHIPO:0001094 ! abnormal localization
@@ -2433,9 +2433,9 @@ creation_date: 2018-10-02T10:17:52Z
 
 [Term]
 id: PHIPO:0000246
-name: abolished pathogen host interaction protein localization
+name: abolished pathogen protein localization within host
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype in which a protein does not localize to, and is therefore absent from, a place where it is normally found." []
+def: "A pathogen host interaction phenotype in which the localization of a pathogen protein to a host structure or compartment is abolished (i.e. the protein was localized to the host structure or compartment and now is not)." []
 comment: If this term is used, we recommend noting which protein(s) were used in the assay.
 xref: FYPO:0001375
 is_a: PHIPO:0000240 ! abnormal pathogen host interaction protein localization
@@ -2449,7 +2449,7 @@ namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype in which the localization of a pathogen protein to the host nucleus is abolished." []
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 xref: FYPO:0003450
-is_a: PHIPO:0000246 ! abolished pathogen host interaction protein localization
+is_a: PHIPO:0000246 ! abolished pathogen protein localization within host
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:19:22Z
 
@@ -2802,7 +2802,9 @@ id: PHIPO:0000280
 name: effector phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "An effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defences or other host responses." []
-comment: This is only to be used when there is manipulation of the host.
+comment: To annotate a metagenotype containing a pathogen effector use 'GO:0140418 effector-mediated modulation of host process by symbiont' or a descendant. This is only to be used when there is manipulation of the host.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 is_a: PHIPO:0000510 ! pathogen host interaction cell level phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-05T11:00:39Z
@@ -4056,7 +4058,7 @@ creation_date: 2018-12-10T14:12:15Z
 id: PHIPO:0000418
 name: normal carbohydrate binding
 namespace: single_species_phenotype
-def: "A single organism (molecular function??) phenotype in which occurrence of carbohydrate binding by a gene product is normal (i.e. indistinguishable from wild type). The relevant gene product may be encoded by the mutated gene, or by a different gene." []
+def: "A single species molecular function phenotype in which occurrence of carbohydrate binding by a gene product is normal (i.e. indistinguishable from wild type). The relevant gene product may be encoded by the mutated gene, or by a different gene." []
 is_a: PHIPO:0000430 ! carbohydrate binding phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:12:55Z
@@ -4065,7 +4067,7 @@ creation_date: 2018-12-10T14:12:55Z
 id: PHIPO:0000419
 name: abnormal carbohydrate binding
 namespace: single_species_phenotype
-def: "A single organism  (molecular function??) phenotype in which occurrence of carbohydrate binding by a gene product (usually a protein) in a mutant is abnormal. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+def: "A single species molecular function phenotype in which occurrence of carbohydrate binding by a gene product (usually a protein) in a mutant is abnormal. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 is_a: PHIPO:0000430 ! carbohydrate binding phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:13:02Z
@@ -4074,7 +4076,7 @@ creation_date: 2018-12-10T14:13:02Z
 id: PHIPO:0000420
 name: normal pathogen chitin fragment binding
 namespace: single_species_phenotype
-def: "A molecular function phenotype in which occurrence of pathogen chitin fragment binding by a pathogen gene product is normal (i.e. indistinguishable from wild type)." []
+def: "A single species molecular function phenotype in which occurrence of pathogen chitin fragment binding by a pathogen gene product is normal (i.e. indistinguishable from wild type)." []
 is_a: PHIPO:0000418 ! normal carbohydrate binding
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:14:16Z
@@ -4083,7 +4085,7 @@ creation_date: 2018-12-10T14:14:16Z
 id: PHIPO:0000421
 name: abolished carbohydrate binding
 namespace: single_species_phenotype
-def: "A single organism (molecular function??) phenotype in which carbohydrate binding by a gene product does not occur, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+def: "A single species molecular function phenotype in which carbohydrate binding by a gene product does not occur, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 is_a: PHIPO:0000419 ! abnormal carbohydrate binding
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:16:24Z
@@ -4092,7 +4094,7 @@ creation_date: 2018-12-10T14:16:24Z
 id: PHIPO:0000422
 name: altered carbohydrate binding specificity
 namespace: single_species_phenotype
-def: "A single organism phenotype in which a gene product that normally binds to a specific carbohydrate instead binds to a different carbohydrate when a gene is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+def: "A single species phenotype in which a gene product that normally binds to a specific carbohydrate instead binds to a different carbohydrate when a gene is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 comment: no logical definition for 'altered ? binding specificity' in FYPO
 is_a: PHIPO:0000419 ! abnormal carbohydrate binding
 created_by: alaynecuzick
@@ -4102,7 +4104,7 @@ creation_date: 2018-12-10T14:17:21Z
 id: PHIPO:0000423
 name: decreased carbohydrate binding
 namespace: single_species_phenotype
-def: "A single organism (molecular function??) phenotype in which occurrence of carbohydrate binding by a gene product (usually a protein) in a mutant is decreased. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+def: "A single species molecular function phenotype in which occurrence of carbohydrate binding by a gene product (usually a protein) in a mutant is decreased. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 is_a: PHIPO:0000419 ! abnormal carbohydrate binding
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:17:46Z
@@ -4111,7 +4113,7 @@ creation_date: 2018-12-10T14:17:46Z
 id: PHIPO:0000424
 name: increased carbohydrate binding
 namespace: single_species_phenotype
-def: "A single organism (molecular function??) phenotype in which occurrence of carbohydrate binding by a gene product (usually a protein) in a mutant is increased. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+def: "A single species molecular function phenotype in which occurrence of carbohydrate binding by a gene product (usually a protein) in a mutant is increased. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 is_a: PHIPO:0000419 ! abnormal carbohydrate binding
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:18:04Z
@@ -4163,7 +4165,7 @@ creation_date: 2018-12-10T14:32:50Z
 id: PHIPO:0000430
 name: carbohydrate binding phenotype
 namespace: single_species_phenotype
-def: "A single organism  phenotype (molecular function??) that affects carbohydrate binding. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+def: "A single species molecular function phenotype that affects carbohydrate binding. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
@@ -4175,7 +4177,7 @@ creation_date: 2018-12-10T14:37:34Z
 id: PHIPO:0000431
 name: abolished pathogen chitin fragment binding
 namespace: single_species_phenotype
-def: "A pathogen molecular function phenotype in which pathogen chitin fragment binding by a pathogen gene product does not occur. (It was present and is now absent)." []
+def: "A single species pathogen molecular function phenotype in which pathogen chitin fragment binding by a pathogen gene product does not occur. (It was present and is now absent)." []
 is_a: PHIPO:0000421 ! abolished carbohydrate binding
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:39:51Z
@@ -9574,6 +9576,7 @@ def: "A host organism viability phenotype where the host organism death is accel
 synonym: "host kill assay" RELATED []
 synonym: "inviable host organism with pathogen" RELATED []
 synonym: "pathogen induced death of host organism" RELATED []
+synonym: "precocious senescence" RELATED []
 is_a: PHIPO:0001070 ! pathogen host interaction organism viability phenotype
 created_by: alaynecuzick
 creation_date: 2019-09-20T11:07:02Z
@@ -10294,7 +10297,7 @@ id: PHIPO:0001143
 name: abolished pathogen protein localization to host chloroplast
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype in which the localization of a pathogen protein to the host chloroplast is abolished (i.e.the protein was localized to the host chloroplast and now is not)." []
-is_a: PHIPO:0000246 ! abolished pathogen host interaction protein localization
+is_a: PHIPO:0000246 ! abolished pathogen protein localization within host
 created_by: alaynecuzick
 creation_date: 2020-01-28T12:13:25Z
 
@@ -10397,6 +10400,43 @@ synonym: "increased hyphal branching" EXACT []
 is_a: PHIPO:0000961 ! cell morphology phenotype
 created_by: alaynecuzick
 creation_date: 2020-03-04T14:33:49Z
+
+[Term]
+id: PHIPO:0001154
+name: decreased pathogen chitin fragment binding
+namespace: single_species_phenotype
+def: "A single species pathogen molecular function phenotype in which pathogen chitin fragment binding by a pathogen gene product is decreased." []
+is_a: PHIPO:0000423 ! decreased carbohydrate binding
+created_by: alaynecuzick
+creation_date: 2020-03-10T09:51:20Z
+
+[Term]
+id: PHIPO:0001155
+name: decreased pathogen ROS production within host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction metabolic cellular process phenotype in which the formation of reactive oxygen species (any molecules or ions formed by the incomplete one-electron reduction of oxygen) by the pathogen is decreased within the host.(GO:1903409)" []
+is_a: PHIPO:0000220 ! pathogen host interaction metabolic process phenotype
+created_by: alaynecuzick
+creation_date: 2020-03-10T11:33:08Z
+
+[Term]
+id: PHIPO:0001156
+name: increased pathogen ROS production within host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction metabolic cellular process phenotype in which the formation of reactive oxygen species (any molecules or ions formed by the incomplete one-electron reduction of oxygen) by the pathogen is increased within the host.(GO:1903409)" []
+is_a: PHIPO:0000924 ! pathogen host interaction oxidative burst phenotype
+created_by: alaynecuzick
+creation_date: 2020-03-10T11:35:08Z
+
+[Term]
+id: PHIPO:0001157
+name: unaltered pathogen ROS production within host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction metabolic cellular process phenotype in which the formation of reactive oxygen species (any molecules or ions formed by the incomplete one-electron reduction of oxygen) by the pathogen is unaltered within the host.(GO:1903409)" []
+synonym: "normal pathogen ROS production within host" EXACT []
+is_a: PHIPO:0000220 ! pathogen host interaction metabolic process phenotype
+created_by: alaynecuzick
+creation_date: 2020-03-10T11:35:41Z
 
 [Typedef]
 id: PHIPO:0000304
