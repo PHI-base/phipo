@@ -1118,6 +1118,11 @@ Declaration(Class(obo:PHIPO_0001157))
 Declaration(Class(obo:PHIPO_0001159))
 Declaration(Class(obo:PHIPO_0001160))
 Declaration(Class(obo:PHIPO_0001161))
+Declaration(Class(obo:PHIPO_0001162))
+Declaration(Class(obo:PHIPO_0001163))
+Declaration(Class(obo:PHIPO_0001164))
+Declaration(Class(obo:PHIPO_0001165))
+Declaration(Class(obo:PHIPO_0001166))
 Declaration(ObjectProperty(obo:PHIPO_0000304))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:created_by))
@@ -5419,7 +5424,7 @@ AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0000439 "alaynecuzick"^^xsd:st
 AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0000439 "2018-12-18T11:25:46Z"^^xsd:dateTime)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0000439 "pathogen_host_interaction_phenotype"^^xsd:string)
 AnnotationAssertion(rdfs:label obo:PHIPO_0000439 "pathogen reproductive phenotype within host"@en)
-SubClassOf(obo:PHIPO_0000439 obo:PHIPO_0000001)
+SubClassOf(obo:PHIPO_0000439 obo:PHIPO_0001163)
 
 # Class: obo:PHIPO_0000440 (normal pathogen reproductive phenotype within host)
 
@@ -11613,6 +11618,56 @@ AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001161 "2020-03-27T18:36:5
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001161 "pathogen_host_interaction_phenotype")
 AnnotationAssertion(rdfs:label obo:PHIPO_0001161 "host phenolic compounds absent with pathogen"@en)
 SubClassOf(obo:PHIPO_0001161 obo:PHIPO_0001047)
+
+# Class: obo:PHIPO_0001162 (host reproductive phenotype with pathogen)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001162 "A pathogen host interaction phenotype which affects the host reproductive process within the host when a pathogen is present. The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms (GO:0000003).")
+AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001162 "alaynecuzick"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001162 "2020-03-30T15:14:51Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001162 "pathogen_host_interaction_phenotype")
+AnnotationAssertion(rdfs:label obo:PHIPO_0001162 "host reproductive phenotype with pathogen"@en)
+SubClassOf(obo:PHIPO_0001162 obo:PHIPO_0001163)
+
+# Class: obo:PHIPO_0001163 (pathogen host interaction reproductive phenotype)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001163 "A pathogen host interaction phenotype which affects either the pathogen or host reproductive process. The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms (GO:0000003).")
+AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001163 "alaynecuzick"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001163 "2020-03-30T15:16:04Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001163 "pathogen_host_interaction_phenotype")
+AnnotationAssertion(oboInOwl:inSubset obo:PHIPO_0001163 "qc_do_not_annotate")
+AnnotationAssertion(oboInOwl:inSubset obo:PHIPO_0001163 "qc_do_not_manually_annotate")
+AnnotationAssertion(rdfs:comment obo:PHIPO_0001163 "This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.")
+AnnotationAssertion(rdfs:label obo:PHIPO_0001163 "pathogen host interaction reproductive phenotype"@en)
+SubClassOf(obo:PHIPO_0001163 obo:PHIPO_0000001)
+
+# Class: obo:PHIPO_0001164 (abnormal host reproductive structure development with pathogen)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001164 "A host reproductive phenotype with pathogen where the process of host reproductive development is abnormal (GO:0048608).")
+AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001164 "alaynecuzick"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001164 "2020-03-30T15:17:25Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001164 "pathogen_host_interaction_phenotype")
+AnnotationAssertion(rdfs:label obo:PHIPO_0001164 "abnormal host reproductive structure development with pathogen"@en)
+SubClassOf(obo:PHIPO_0001164 obo:PHIPO_0001162)
+
+# Class: obo:PHIPO_0001165 (abnormal host seed development with pathogen)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001165 "A host reproductive phenotype with pathogen where the process of host seed development is abnormal (GO:0048316).")
+AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001165 "alaynecuzick"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001165 "2020-03-30T15:17:44Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PHIPO_0001165 "abnormal host grain development with pathogen")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001165 "pathogen_host_interaction_phenotype")
+AnnotationAssertion(rdfs:label obo:PHIPO_0001165 "abnormal host seed development with pathogen"@en)
+SubClassOf(obo:PHIPO_0001165 obo:PHIPO_0001164)
+
+# Class: obo:PHIPO_0001166 (host seed development absent with pathogen)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001166 "A host reproductive phenotype with pathogen where the process of host seed development is absent (GO:0048316).")
+AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001166 "alaynecuzick"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001166 "2020-03-30T15:18:09Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PHIPO_0001166 "host grain development absent with pathogen")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001166 "pathogen_host_interaction_phenotype")
+AnnotationAssertion(rdfs:label obo:PHIPO_0001166 "host seed development absent with pathogen"@en)
+SubClassOf(obo:PHIPO_0001166 obo:PHIPO_0001165)
 
 
 )
