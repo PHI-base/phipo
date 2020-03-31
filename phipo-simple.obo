@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2020-03-23/phipo-simple.owl
+data-version: phipo/releases/2020-03-31/phipo-simple.owl
 subsetdef: ro-eco ""
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
@@ -235,9 +235,8 @@ id: PHIPO:0000019
 name: inviable cell
 namespace: single_species_phenotype
 def: "A lethal single organism cell level phenotype resulting from altering a gene product that is essential for the life of the organism." []
-comment: Logical definition\nLethal (PATO:0000718) and (inheres_in some AC_organism)
 synonym: "essential" RELATED []
-synonym: "lethal" EXACT []
+synonym: "lethal" RELATED []
 is_a: PHIPO:0000929 ! abnormal cellular process
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:12:47Z xsd:string
@@ -2610,6 +2609,7 @@ def: "A single organism cellular process phenotype in which endocytosis is abnor
 xref: FYPO:0003886
 is_a: PHIPO:0000257 ! abnormal transport
 is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:22:57Z
 
@@ -2621,6 +2621,7 @@ def: "A pathogen host interaction (cellular process???) phenotype in which endoc
 xref: FYPO:0003886
 is_a: PHIPO:0000257 ! abnormal transport
 is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:23:00Z
 
@@ -2632,6 +2633,7 @@ def: "A single organism cellular process phenotype in which nuclear transport is
 xref: FYPO:0005573
 is_a: PHIPO:0000257 ! abnormal transport
 is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:23:27Z
 
@@ -2643,6 +2645,7 @@ def: "A pathogen host interaction (cellular process??) phenotype in which nuclea
 xref: FYPO:0005573
 is_a: PHIPO:0000257 ! abnormal transport
 is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:23:30Z
 
@@ -2678,6 +2681,7 @@ def: "A single organism cellular process phenotype in which vacuolar transport i
 xref: FYPO:0003578
 is_a: PHIPO:0000257 ! abnormal transport
 is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:24:58Z
 
@@ -2689,6 +2693,7 @@ def: "A pathogen host interaction (cellular process??) phenotype in which vacuol
 xref: FYPO:0003578
 is_a: PHIPO:0000257 ! abnormal transport
 is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:25:00Z
 
@@ -4262,7 +4267,7 @@ id: PHIPO:0000439
 name: pathogen reproductive phenotype within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype which affects the pathogen reproductive process within the host. The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms (GO:0000003)." []
-is_a: PHIPO:0000001 ! pathogen host interaction phenotype
+is_a: PHIPO:0001163 ! pathogen host interaction reproductive phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-18T11:25:46Z
 
@@ -4826,7 +4831,7 @@ name: inviable population
 namespace: single_species_phenotype
 def: "An organism population phenotype in which no organisms in the population are viable." []
 synonym: "essential" RELATED []
-synonym: "lethal" EXACT []
+synonym: "lethal" RELATED []
 is_a: PHIPO:0000514 ! population viability phenotype
 property_value: created:by "alaynecuzick" xsd:string
 creation_date: 2019-02-11T13:01:17Z
@@ -8168,7 +8173,7 @@ creation_date: 2019-05-01T10:52:19Z
 
 [Term]
 id: PHIPO:0000927
-name: pathogen induced host ROS production
+name: pathogen induced host ROS production present
 namespace: pathogen_host_interaction_phenotype
 alt_id: PHIPO:0000926
 def: "A pathogen host interaction phenotype which is present in the host where a phase of elevated metabolic activity, during which oxygen consumption increases made as part of a defense response elicited by the host; this leads to the production, by an NADH dependent system, of hydrogen peroxide (H2O2), superoxide anions and hydroxyl radicals." []
@@ -9093,7 +9098,6 @@ id: PHIPO:0001023
 name: decreased cellular cAMP level
 namespace: single_species_phenotype
 def: "A single species cell phenotype in which the amount of cyclic AMP measured in a cell is lower than normal." []
-synonym: "altered cellular cyclic AMP level" EXACT []
 synonym: "decreased cellular cAMP accumulation" EXACT []
 synonym: "reduced cellular cAMP level" EXACT []
 xref: FYPO:0001660
@@ -10437,6 +10441,84 @@ synonym: "normal pathogen ROS production within host" EXACT []
 is_a: PHIPO:0000220 ! pathogen host interaction metabolic process phenotype
 created_by: alaynecuzick
 creation_date: 2020-03-10T11:35:41Z
+
+[Term]
+id: PHIPO:0001159
+name: pathogen tissue to tissue migration in host phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction colonization phenotype which affects the directional tissue to tissue movement of the pathogen within the host organism (GO:0044001)." []
+is_a: PHIPO:0000332 ! pathogen colonization of host phenotype
+is_a: PHIPO:0000512 ! pathogen host interaction tissue phenotype
+created_by: alaynecuzick
+creation_date: 2020-03-27T18:25:20Z
+
+[Term]
+id: PHIPO:0001160
+name: abolished pathogen tissue to tissue migration in host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction colonization phenotype in which the ability of the pathogen to move directionally from tissue to tissue within the host organism is abolished (pathogen migration was present within the host and is now absent)." []
+is_a: PHIPO:0001159 ! pathogen tissue to tissue migration in host phenotype
+created_by: alaynecuzick
+creation_date: 2020-03-27T18:30:00Z
+
+[Term]
+id: PHIPO:0001161
+name: host phenolic compounds absent with pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A cell phenotype in which the amount of host phenolic compound measured in the presence of a pathogen is too low to detect." []
+is_a: PHIPO:0001047 ! toxin absent in a pathogen host interaction
+created_by: alaynecuzick
+creation_date: 2020-03-27T18:36:56Z
+
+[Term]
+id: PHIPO:0001162
+name: host reproductive phenotype with pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype which affects the host reproductive process within the host when a pathogen is present. The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms (GO:0000003)." []
+is_a: PHIPO:0001163 ! pathogen host interaction reproductive phenotype
+created_by: alaynecuzick
+creation_date: 2020-03-30T15:14:51Z
+
+[Term]
+id: PHIPO:0001163
+name: pathogen host interaction reproductive phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype which affects either the pathogen or host reproductive process. The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms (GO:0000003)." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0000001 ! pathogen host interaction phenotype
+created_by: alaynecuzick
+creation_date: 2020-03-30T15:16:04Z
+
+[Term]
+id: PHIPO:0001164
+name: abnormal host reproductive structure development with pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A host reproductive phenotype with pathogen where the process of host reproductive development is abnormal (GO:0048608)." []
+is_a: PHIPO:0001162 ! host reproductive phenotype with pathogen
+created_by: alaynecuzick
+creation_date: 2020-03-30T15:17:25Z
+
+[Term]
+id: PHIPO:0001165
+name: abnormal host seed development with pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A host reproductive phenotype with pathogen where the process of host seed development is abnormal (GO:0048316)." []
+synonym: "abnormal host grain development with pathogen" EXACT []
+is_a: PHIPO:0001164 ! abnormal host reproductive structure development with pathogen
+created_by: alaynecuzick
+creation_date: 2020-03-30T15:17:44Z
+
+[Term]
+id: PHIPO:0001166
+name: host seed development absent with pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A host reproductive phenotype with pathogen where the process of host seed development is absent (GO:0048316)." []
+synonym: "host grain development absent with pathogen" EXACT []
+is_a: PHIPO:0001165 ! abnormal host seed development with pathogen
+created_by: alaynecuzick
+creation_date: 2020-03-30T15:18:09Z
 
 [Typedef]
 id: PHIPO:0000304
