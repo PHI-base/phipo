@@ -1126,6 +1126,8 @@ Declaration(Class(obo:PHIPO_0001174))
 Declaration(Class(obo:PHIPO_0001175))
 Declaration(Class(obo:PHIPO_0001176))
 Declaration(Class(obo:PHIPO_0001179))
+Declaration(Class(obo:PHIPO_0001180))
+Declaration(Class(obo:PHIPO_0001181))
 Declaration(ObjectProperty(obo:PHIPO_0000304))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:created_by))
@@ -5483,6 +5485,7 @@ SubClassOf(obo:PHIPO_0000445 obo:PHIPO_0000512)
 
 # Class: obo:PHIPO_0000446 (host cell death phenotype)
 
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0000446 "A single species phenotype that affects the cell death within a host.")
 AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0000446 "alaynecuzick"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0000446 "2018-12-18T12:46:45Z"^^xsd:dateTime)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0000446 "single_species_phenotype")
@@ -5605,13 +5608,14 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
 AnnotationAssertion(rdfs:label obo:PHIPO_0000466 "host necrotic cell death by pathogen induced hypersensitive response"@en)
 SubClassOf(obo:PHIPO_0000466 obo:PHIPO_0000461)
 
-# Class: obo:PHIPO_0000467 (host hypersensitive response)
+# Class: obo:PHIPO_0000467 (presence of effector-independent host hypersensitive response)
 
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0000467 "A single species phenotype where the immune system process of host tissue hypersensitive response is present in a pathogen effector-independant manner. (i.e. an alteration within the host is responsible for the activation of the hypersensitive response in the absence of a pathogen).")
 AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0000467 "alaynecuzick"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0000467 "2018-12-21T13:24:37Z"^^xsd:dateTime)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0000467 "single_species_phenotype")
 AnnotationAssertion(oboInOwl:inSubset obo:PHIPO_0000467 "host_phenotype")
-AnnotationAssertion(rdfs:label obo:PHIPO_0000467 "host hypersensitive response"@en)
+AnnotationAssertion(rdfs:label obo:PHIPO_0000467 "presence of effector-independent host hypersensitive response"@en)
 SubClassOf(obo:PHIPO_0000467 obo:PHIPO_0000446)
 
 # Class: obo:PHIPO_0000468 (absence of pathogen asexual spores within host)
@@ -11724,6 +11728,26 @@ AnnotationAssertion(oboInOwl:inSubset obo:PHIPO_0001179 "qc_do_not_manually_anno
 AnnotationAssertion(rdfs:comment obo:PHIPO_0001179 "For use in the annotation extension infective ability.")
 AnnotationAssertion(rdfs:label obo:PHIPO_0001179 "infective ability phenotype"@en)
 SubClassOf(obo:PHIPO_0001179 obo:PHIPO_0000001)
+
+# Class: obo:PHIPO_0001180 (absence of effector-independent host hypersensitive response)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001180 "A single species phenotype where the immune system process of host tissue hypersensitive response is absent in a pathogen effector-independant manner. (i.e. an alteration within the host does not activate the hypersensitive response in the absence of a pathogen).")
+AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001180 "alaynecuzick"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001180 "2020-06-09T11:25:32Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001180 "single_species_phenotype")
+AnnotationAssertion(oboInOwl:inSubset obo:PHIPO_0001180 "host_phenotype")
+AnnotationAssertion(rdfs:label obo:PHIPO_0001180 "absence of effector-independent host hypersensitive response"@en)
+SubClassOf(obo:PHIPO_0001180 obo:PHIPO_0000446)
+
+# Class: obo:PHIPO_0001181 (abolished effector-independent host hypersensitive response)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001181 "A single species phenotype where the immune system process of host tissue hypersensitive response is abolished in a pathogen effector-independant manner. (i.e. an alteration within the host did activate the hypersensitive response in the absence of a pathogen and now does not).")
+AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001181 "alaynecuzick"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001181 "2020-06-09T11:33:36Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001181 "single_species_phenotype")
+AnnotationAssertion(oboInOwl:inSubset obo:PHIPO_0001181 "host_phenotype")
+AnnotationAssertion(rdfs:label obo:PHIPO_0001181 "abolished effector-independent host hypersensitive response"@en)
+SubClassOf(obo:PHIPO_0001181 obo:PHIPO_0001180)
 
 
 )
