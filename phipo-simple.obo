@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2020-06-11/phipo-simple.owl
+data-version: phipo/releases/2020-06-23/phipo-simple.owl
 subsetdef: ro-eco ""
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
@@ -77,6 +77,7 @@ def: "A phenotype that is relevant to pathogenicity. Pathogenicity is the abilit
 comment: Can only apply to changes in the pathogen.\nPathogenicity is a qualitative concept.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
+subset: qc_no_extension
 synonym: "disease causing ability" EXACT []
 synonym: "pathogenesis (related)" RELATED []
 is_a: PHIPO:0001179 ! infective ability phenotype
@@ -428,6 +429,7 @@ name: mutualism phenotype
 namespace: pathogen_host_interaction_phenotype
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
+subset: qc_no_extension
 is_a: PHIPO:0001179 ! infective ability phenotype
 created_by: alaynecuzick
 creation_date: 2018-07-10T11:52:04Z
@@ -438,6 +440,7 @@ name: normal mutualism
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype in which the interaction is the same as the wild-type, no asymptomatic colonisation or disease formation symptoms are visible." []
 comment: Logical definition\nmutualism (GO:0085030) and (has_relative_magnitude some normal (PATO:0000461))
+subset: qc_no_extension
 is_a: PHIPO:0000038 ! mutualism phenotype
 created_by: alaynecuzick
 creation_date: 2018-07-10T11:52:33Z
@@ -448,6 +451,7 @@ name: abnormal mutualism
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype in which the balance of symbiotic mutualism has been disrupted compared to the normal interaction." []
 comment: Logical definition\nmutualism (GO:0085030) and (has_relative_magnitude some abnormal (PATO:0000460))\n\nneed to choose correct language for term name
+subset: qc_no_extension
 is_a: PHIPO:0000038 ! mutualism phenotype
 created_by: alaynecuzick
 creation_date: 2018-07-10T11:53:05Z
@@ -10572,6 +10576,62 @@ synonym: "normal level of DON" EXACT []
 is_a: PHIPO:0001039 ! normal cellular toxin level
 created_by: alaynecuzick
 creation_date: 2020-06-10T15:09:01Z
+
+[Term]
+id: PHIPO:0001183
+name: host resistance to pathogen phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype that is relevant to host resistance to a given pathogen." []
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+subset: qc_no_extension
+is_a: PHIPO:0001179 ! infective ability phenotype
+created_by: alaynecuzick
+creation_date: 2020-06-22T15:25:30Z
+
+[Term]
+id: PHIPO:0001184
+name: loss of host resistance
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the ability of a host, to be resistant to a given pathogenic organism is abolished (resistance was present and is now absent)." []
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0001187 ! host resistance absent
+created_by: alaynecuzick
+creation_date: 2020-06-22T15:26:41Z
+
+[Term]
+id: PHIPO:0001185
+name: gain of host resistance
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the ability of a host, to be resistant to a given pathogenic organism is obtained (resistance was absent and is now present).." []
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0001186 ! host resistance present
+created_by: alaynecuzick
+creation_date: 2020-06-22T15:26:51Z
+
+[Term]
+id: PHIPO:0001186
+name: host resistance present
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the ability of a host, to be resistant to a given pathogenic organism is present." []
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0001183 ! host resistance to pathogen phenotype
+created_by: alaynecuzick
+creation_date: 2020-06-22T15:27:22Z
+
+[Term]
+id: PHIPO:0001187
+name: host resistance absent
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the ability of a host, to be resistant to a given pathogenic organism is absent." []
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0001183 ! host resistance to pathogen phenotype
+created_by: alaynecuzick
+creation_date: 2020-06-22T15:27:41Z
 
 [Typedef]
 id: PHIPO:0000304
