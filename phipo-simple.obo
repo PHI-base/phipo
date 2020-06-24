@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2020-06-23/phipo-simple.owl
+data-version: phipo/releases/2020-06-24/phipo-simple.owl
 subsetdef: ro-eco ""
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
@@ -50,8 +50,7 @@ name: unaffected pathogenicity
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is unaffected (i.e the same as wild-type, this could be pathogenicity present or pathogenicity absent)." []
 comment: For use in the annotation extension infective ability.\nCan only apply to changes in the pathogen.
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 synonym: "normal pathogenicity" EXACT []
 synonym: "unaffected disease causing ability" EXACT []
 synonym: "unaltered pathogenicity" EXACT []
@@ -77,7 +76,6 @@ def: "A phenotype that is relevant to pathogenicity. Pathogenicity is the abilit
 comment: Can only apply to changes in the pathogen.\nPathogenicity is a qualitative concept.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
-subset: qc_no_extension
 synonym: "disease causing ability" EXACT []
 synonym: "pathogenesis (related)" RELATED []
 is_a: PHIPO:0001179 ! infective ability phenotype
@@ -90,8 +88,7 @@ name: pathogenicity absent
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is absent." []
 comment: For use in the annotation extension infective ability.\nCan only apply to changes in the pathogen.
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 synonym: "disease causing ability absent" EXACT []
 is_a: PHIPO:0000006 ! pathogenicity phenotype
 property_value: created:by "alaynecuzick" xsd:string
@@ -103,8 +100,7 @@ name: pathogenicity present
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is present." []
 comment: For use in the annotation extension infective ability.\nCan only apply to changes in the pathogen.
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 synonym: "disease causing ability present" EXACT []
 is_a: PHIPO:0000006 ! pathogenicity phenotype
 property_value: created:by "alaynecuzick" xsd:string
@@ -116,8 +112,7 @@ name: gain of pathogenicity
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is obtained (pathogenicity was absent and is now present)." []
 comment: For use in the annotation extension infective ability.\nCan only apply to changes in the pathogen. Note that this ability to cause pathogenicity is a feature of the pathogen. Therefore gain/loss of pathogenicity should never be dependent on changes to the host genotype, only on changes to the pathogen genotype. If you are annotating changes in disease presence or absence dependent on the changes to the host consider increased/decreased virulence phenotypes.
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 synonym: "gain of disease causing ability" EXACT []
 is_a: PHIPO:0000014 ! increased virulence
 property_value: created:by "alaynecuzick" xsd:string
@@ -129,8 +124,7 @@ name: loss of pathogenicity
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is abolished (pathogenicity was present and is now absent)." []
 comment: For use in the annotation extension infective ability.\nCan only apply to changes in the pathogen. Note that this ability to cause pathogenicity is a feature of the pathogen. Therefore gain/loss of pathogenicity should never be dependent on changes to the host genotype, only on changes to the pathogen genotype. If you are annotating changes in disease presence or absence dependent on the changes to the host consider increased/decreased virulence phenotypes.\nNote that avirulence means loss of/abolished virulence in plant pathology terminology.
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 synonym: "abolished pathogenicity" EXACT []
 synonym: "loss of disease causing ability" EXACT []
 is_a: PHIPO:0000007 ! pathogenicity absent
@@ -156,8 +150,7 @@ name: unaffected virulence
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is unchanged (i.e. the same degree of infectious disease as wild-type interaction)." []
 comment: For use in the annotation extension infective ability.\nCan apply to changes in the pathogen or the host.
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 synonym: "normal virulence" EXACT []
 synonym: "unaffected disease severity" EXACT []
 is_a: PHIPO:0000011 ! virulence phenotype
@@ -179,8 +172,7 @@ name: increased virulence
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is increased (i.e. more symptoms than normal)." []
 comment: For use in the annotation extension infective ability.\nCan apply to changes in the pathogen or the host.
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 synonym: "hypervirulence" EXACT []
 synonym: "increased disease severity" EXACT []
 is_a: PHIPO:0000011 ! virulence phenotype
@@ -193,8 +185,7 @@ name: reduced virulence
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is decreased (i.e. fewer symptoms than normal)." []
 comment: For use in the annotation extension infective ability.\nCan apply to changes in the pathogen or the host.
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 synonym: "decreased virulence" EXACT []
 synonym: "reduced disease severity" EXACT []
 is_a: PHIPO:0000011 ! virulence phenotype
@@ -400,6 +391,7 @@ id: PHIPO:0000035
 name: mutualism present
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host phenotype where the mutualism phenotype is normal (i.e. the same as wild-type), and the wild-type interaction exhibits mutualism." []
+subset: qc_extension_only
 is_a: PHIPO:0000039 ! normal mutualism
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:41:47Z xsd:string
@@ -429,7 +421,6 @@ name: mutualism phenotype
 namespace: pathogen_host_interaction_phenotype
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
-subset: qc_no_extension
 is_a: PHIPO:0001179 ! infective ability phenotype
 created_by: alaynecuzick
 creation_date: 2018-07-10T11:52:04Z
@@ -440,7 +431,8 @@ name: normal mutualism
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype in which the interaction is the same as the wild-type, no asymptomatic colonisation or disease formation symptoms are visible." []
 comment: Logical definition\nmutualism (GO:0085030) and (has_relative_magnitude some normal (PATO:0000461))
-subset: qc_no_extension
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 is_a: PHIPO:0000038 ! mutualism phenotype
 created_by: alaynecuzick
 creation_date: 2018-07-10T11:52:33Z
@@ -451,7 +443,8 @@ name: abnormal mutualism
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype in which the balance of symbiotic mutualism has been disrupted compared to the normal interaction." []
 comment: Logical definition\nmutualism (GO:0085030) and (has_relative_magnitude some abnormal (PATO:0000460))\n\nneed to choose correct language for term name
-subset: qc_no_extension
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 is_a: PHIPO:0000038 ! mutualism phenotype
 created_by: alaynecuzick
 creation_date: 2018-07-10T11:53:05Z
@@ -2047,6 +2040,7 @@ id: PHIPO:0000207
 name: loss of mutualism
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype in which the balance of symbiotic mutualism has been disrupted compared to the normal interaction and the endosymbiont organism is able to show greater biomass within the host and/or the formation of visible disease formation symptoms compared to the normal interaction." []
+subset: qc_extension_only
 is_a: PHIPO:0000040 ! abnormal mutualism
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:32:18Z
@@ -8299,6 +8293,7 @@ id: PHIPO:0000948
 name: mutualism absent
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction where the mutualism phenotype is normal (i.e. the same as wild-type), and the wild-type interaction does not exhibit mutualism." []
+subset: qc_extension_only
 is_a: PHIPO:0000039 ! normal mutualism
 created_by: alaynecuzick
 creation_date: 2019-05-24T11:02:11Z
@@ -8433,8 +8428,7 @@ name: loss of virulence
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is abolished on a specific host genotype." []
 comment: For use in the annotation extension infective ability.\nNote this pathogen may still be pathogenic on an alternate host genotype. \nNote that avirulence means loss of pathogenicity in medical terminology.
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 synonym: "abolished virulence" EXACT []
 synonym: "avirulence" RELATED []
 is_a: PHIPO:0000015 ! reduced virulence
@@ -8447,8 +8441,7 @@ name: loss of virulence of gain of pathogenicity mutant
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is abolished when observed in an interaction with a pathogen mutant which was previously engineered to gain pathogenicity." []
 comment: For use in the annotation extension infective ability.\nNote this pathogen may still be pathogenic on an alternate host genotype.
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 is_a: PHIPO:0000009 ! gain of pathogenicity
 is_a: PHIPO:0000964 ! loss of virulence
 created_by: alaynecuzick
@@ -10584,7 +10577,6 @@ namespace: pathogen_host_interaction_phenotype
 def: "A phenotype that is relevant to host resistance to a given pathogen." []
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
-subset: qc_no_extension
 is_a: PHIPO:0001179 ! infective ability phenotype
 created_by: alaynecuzick
 creation_date: 2020-06-22T15:25:30Z
@@ -10594,8 +10586,7 @@ id: PHIPO:0001184
 name: loss of host resistance
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a host, to be resistant to a given pathogenic organism is abolished (resistance was present and is now absent)." []
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 is_a: PHIPO:0001187 ! host resistance absent
 created_by: alaynecuzick
 creation_date: 2020-06-22T15:26:41Z
@@ -10605,8 +10596,7 @@ id: PHIPO:0001185
 name: gain of host resistance
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a host, to be resistant to a given pathogenic organism is obtained (resistance was absent and is now present).." []
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 is_a: PHIPO:0001186 ! host resistance present
 created_by: alaynecuzick
 creation_date: 2020-06-22T15:26:51Z
@@ -10616,8 +10606,7 @@ id: PHIPO:0001186
 name: host resistance present
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a host, to be resistant to a given pathogenic organism is present." []
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 is_a: PHIPO:0001183 ! host resistance to pathogen phenotype
 created_by: alaynecuzick
 creation_date: 2020-06-22T15:27:22Z
@@ -10627,8 +10616,7 @@ id: PHIPO:0001187
 name: host resistance absent
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a host, to be resistant to a given pathogenic organism is absent." []
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 is_a: PHIPO:0001183 ! host resistance to pathogen phenotype
 created_by: alaynecuzick
 creation_date: 2020-06-22T15:27:41Z
@@ -10650,6 +10638,7 @@ id: PHIPO:0001189
 name: compatible interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype where the gene-for-gene relationship between the pathogen and plant host results in disease susceptibility." []
+subset: qc_extension_only
 is_a: PHIPO:0001188 ! gene-for-gene interaction phenotype
 created_by: alaynecuzick
 creation_date: 2020-06-23T10:49:18Z
@@ -10659,6 +10648,7 @@ id: PHIPO:0001190
 name: incompatible interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype where the gene-for-gene relationship between the pathogen and plant host results in disease resistance." []
+subset: qc_extension_only
 is_a: PHIPO:0001188 ! gene-for-gene interaction phenotype
 created_by: alaynecuzick
 creation_date: 2020-06-23T10:49:48Z
