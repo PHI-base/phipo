@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2020-06-24/phipo-simple.owl
+data-version: phipo/releases/2020-07-07/phipo-simple.owl
 subsetdef: ro-eco ""
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
@@ -84,7 +84,7 @@ property_value: creation:date 2018-05-04T12:39:55Z xsd:string
 
 [Term]
 id: PHIPO:0000007
-name: pathogenicity absent
+name: pathogenic ability absent
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is absent." []
 comment: For use in the annotation extension infective ability.\nCan only apply to changes in the pathogen.
@@ -96,7 +96,7 @@ property_value: creation:date 2018-05-04T12:42:00Z xsd:string
 
 [Term]
 id: PHIPO:0000008
-name: pathogenicity present
+name: pathogenic ability present
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is present." []
 comment: For use in the annotation extension infective ability.\nCan only apply to changes in the pathogen.
@@ -127,7 +127,7 @@ comment: For use in the annotation extension infective ability.\nCan only apply 
 subset: qc_extension_only
 synonym: "abolished pathogenicity" EXACT []
 synonym: "loss of disease causing ability" EXACT []
-is_a: PHIPO:0000007 ! pathogenicity absent
+is_a: PHIPO:0000007 ! pathogenic ability absent
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T12:45:31Z xsd:string
 
@@ -140,7 +140,7 @@ comment: Can apply to changes in the pathogen or the host.\nVirulence is a quant
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "disease severity" EXACT []
-is_a: PHIPO:0000008 ! pathogenicity present
+is_a: PHIPO:0000008 ! pathogenic ability present
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:02:03Z xsd:string
 
@@ -10607,6 +10607,7 @@ name: host resistance present
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a host, to be resistant to a given pathogenic organism is present." []
 subset: qc_extension_only
+synonym: "host susceptibility absent" EXACT []
 is_a: PHIPO:0001183 ! host resistance to pathogen phenotype
 created_by: alaynecuzick
 creation_date: 2020-06-22T15:27:22Z
@@ -10617,6 +10618,7 @@ name: host resistance absent
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a host, to be resistant to a given pathogenic organism is absent." []
 subset: qc_extension_only
+synonym: "host susceptibility present" EXACT []
 is_a: PHIPO:0001183 ! host resistance to pathogen phenotype
 created_by: alaynecuzick
 creation_date: 2020-06-22T15:27:41Z
