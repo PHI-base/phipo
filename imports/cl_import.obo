@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2020-03-05/imports/cl_import.owl
+data-version: phipo/releases/2020-07-28/imports/cl_import.owl
 subsetdef: 1_STAR "Preliminary entries"
 subsetdef: 3_STAR "Manually annotated by ChEBI Team"
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -2227,7 +2227,7 @@ subset: goslim_mouse
 subset: goslim_pir
 xref: Wikipedia:Immune_system
 is_a: GO:0008150 ! biological_process
-property_value: RO:0002161 NCBITaxon:4895
+relationship: never_in_taxon NCBITaxon:4895
 
 [Term]
 id: GO:0002679
@@ -2621,6 +2621,29 @@ xref: Wikipedia:Proteolysis
 is_a: GO:0019538 ! protein metabolic process
 
 [Term]
+id: GO:0006629
+name: lipid metabolic process
+namespace: biological_process
+def: "The chemical reactions and pathways involving lipids, compounds soluble in an organic solvent but not, or sparingly, in an aqueous solvent. Includes fatty acids; neutral fats, other fatty-acid esters, and soaps; long-chain (fatty) alcohols and waxes; sphingoids and other long-chain bases; glycolipids, phospholipids and sphingolipids; and carotenes, polyprenols, sterols, terpenes and other isoprenoids." [GOC:ma]
+subset: goslim_agr
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_drosophila
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_mouse
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_pombe
+subset: goslim_yeast
+synonym: "lipid metabolism" EXACT []
+xref: MIPS_funcat:01.06
+xref: Wikipedia:Lipid_metabolism
+is_a: GO:0044238 ! primary metabolic process
+is_a: GO:0071704 ! organic substance metabolic process
+
+[Term]
 id: GO:0006793
 name: phosphorus metabolic process
 namespace: biological_process
@@ -2941,6 +2964,58 @@ xref: MIPS_funcat:40.10
 is_a: GO:0009987 ! cellular process
 
 [Term]
+id: GO:0008283
+name: cell population proliferation
+namespace: biological_process
+def: "The multiplication or reproduction of cells, resulting in the expansion of a cell population." [GOC:mah, GOC:mb]
+comment: This term was moved out from being a child of 'cellular process' because it is a cell population-level process, and cellular processes are restricted to those processes that involve individual cells. Also note that this term is intended to be used for the proliferation of cells within a multicellular organism, not for the expansion of a population of single-celled organisms.
+subset: goslim_agr
+subset: goslim_chembl
+subset: goslim_drosophila
+subset: goslim_flybase_ribbon
+subset: goslim_generic
+subset: goslim_mouse
+subset: goslim_pir
+synonym: "cell proliferation" RELATED []
+is_a: GO:0008150 ! biological_process
+relationship: never_in_taxon NCBITaxon:4751
+
+[Term]
+id: GO:0008284
+name: positive regulation of cell population proliferation
+namespace: biological_process
+def: "Any process that activates or increases the rate or extent of cell proliferation." [GOC:go_curators]
+synonym: "activation of cell proliferation" NARROW []
+synonym: "positive regulation of cell proliferation" RELATED []
+synonym: "stimulation of cell proliferation" NARROW []
+synonym: "up regulation of cell proliferation" EXACT []
+synonym: "up-regulation of cell proliferation" EXACT []
+synonym: "upregulation of cell proliferation" EXACT []
+is_a: GO:0042127 ! regulation of cell population proliferation
+is_a: GO:0048522 ! positive regulation of cellular process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0008283 ! cell population proliferation
+relationship: never_in_taxon NCBITaxon:4751
+relationship: positively_regulates GO:0008283 ! cell population proliferation
+
+[Term]
+id: GO:0008285
+name: negative regulation of cell population proliferation
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the rate or extent of cell proliferation." [GOC:go_curators]
+synonym: "down regulation of cell proliferation" EXACT []
+synonym: "down-regulation of cell proliferation" EXACT []
+synonym: "downregulation of cell proliferation" EXACT []
+synonym: "inhibition of cell proliferation" NARROW []
+synonym: "negative regulation of cell proliferation" RELATED []
+is_a: GO:0042127 ! regulation of cell population proliferation
+is_a: GO:0048523 ! negative regulation of cellular process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0008283 ! cell population proliferation
+relationship: negatively_regulates GO:0008283 ! cell population proliferation
+relationship: never_in_taxon NCBITaxon:4751
+
+[Term]
 id: GO:0009056
 name: catabolic process
 namespace: biological_process
@@ -3007,6 +3082,18 @@ subset: goslim_metagenomics
 subset: goslim_plant
 synonym: "response to biotic stress" NARROW []
 is_a: GO:0050896 ! response to stimulus
+
+[Term]
+id: GO:0009653
+name: anatomical structure morphogenesis
+namespace: biological_process
+def: "The process in which anatomical structures are generated and organized. Morphogenesis pertains to the creation of form." [GOC:go_curators, ISBN:0521436125]
+synonym: "anatomical structure organization" EXACT []
+synonym: "embryogenesis and morphogenesis" BROAD []
+synonym: "morphogenesis" EXACT []
+xref: Wikipedia:Morphogenesis
+is_a: GO:0032502 ! developmental process
+relationship: part_of GO:0048856 ! anatomical structure development
 
 [Term]
 id: GO:0009889
@@ -3391,6 +3478,17 @@ intersection_of: negatively_regulates GO:0007154 ! cell communication
 relationship: negatively_regulates GO:0007154 ! cell communication
 
 [Term]
+id: GO:0010927
+name: cellular component assembly involved in morphogenesis
+namespace: biological_process
+def: "The cellular component assembly that is part of the initial shaping of the component during its developmental progression." [GOC:dph, GOC:tb]
+is_a: GO:0022607 ! cellular component assembly
+is_a: GO:0048646 ! anatomical structure formation involved in morphogenesis
+intersection_of: GO:0022607 ! cellular component assembly
+intersection_of: part_of GO:0009653 ! anatomical structure morphogenesis
+relationship: part_of GO:0032989 ! cellular component morphogenesis
+
+[Term]
 id: GO:0010941
 name: regulation of cell death
 namespace: biological_process
@@ -3581,6 +3679,18 @@ xref: EC:2.7
 is_a: GO:0016740 ! transferase activity
 
 [Term]
+id: GO:0019216
+name: regulation of lipid metabolic process
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways involving lipids." [GOC:go_curators]
+synonym: "regulation of lipid metabolism" EXACT []
+xref: MIPS_funcat:01.06.10
+is_a: GO:0080090 ! regulation of primary metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0006629 ! lipid metabolic process
+relationship: regulates GO:0006629 ! lipid metabolic process
+
+[Term]
 id: GO:0019220
 name: regulation of phosphate metabolic process
 namespace: biological_process
@@ -3661,6 +3771,17 @@ intersection_of: part_of GO:0000003 ! reproduction
 relationship: part_of GO:0000003 ! reproduction
 created_by: janelomax
 creation_date: 2012-09-19T15:56:06Z
+
+[Term]
+id: GO:0022603
+name: regulation of anatomical structure morphogenesis
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of anatomical structure morphogenesis." [GOC:mah]
+synonym: "regulation of morphogenesis" EXACT []
+is_a: GO:0050793 ! regulation of developmental process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0009653 ! anatomical structure morphogenesis
+relationship: regulates GO:0009653 ! anatomical structure morphogenesis
 
 [Term]
 id: GO:0022607
@@ -3749,6 +3870,21 @@ is_a: GO:0060627 ! regulation of vesicle-mediated transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0006897 ! endocytosis
 relationship: regulates GO:0006897 ! endocytosis
+
+[Term]
+id: GO:0030154
+name: cell differentiation
+namespace: biological_process
+def: "The process in which relatively unspecialized cells, e.g. embryonic or regenerative cells, acquire specialized structural and/or functional features that characterize the cells, tissues, or organs of the mature organism or some other relatively stable phase of the organism's life history. Differentiation includes the processes involved in commitment of a cell to a specific fate and its subsequent development to the mature state." [ISBN:0198506732]
+subset: goslim_agr
+subset: goslim_chembl
+subset: goslim_drosophila
+subset: goslim_generic
+subset: goslim_mouse
+subset: goslim_plant
+xref: MIPS_funcat:40.02
+xref: Wikipedia:Cellular_differentiation
+is_a: GO:0048869 ! cellular developmental process
 
 [Term]
 id: GO:0030162
@@ -4275,6 +4411,17 @@ intersection_of: regulates GO:0008104 ! protein localization
 relationship: regulates GO:0008104 ! protein localization
 
 [Term]
+id: GO:0032989
+name: cellular component morphogenesis
+namespace: biological_process
+def: "The process in which cellular structures, including whole cells or cell parts, are generated and organized." [GOC:dph, GOC:mah, GOC:tb]
+subset: goslim_pir
+synonym: "cellular structure morphogenesis" EXACT [GOC:dph, GOC:tb]
+is_a: GO:0009653 ! anatomical structure morphogenesis
+is_a: GO:0016043 ! cellular component organization
+is_a: GO:0048869 ! cellular developmental process
+
+[Term]
 id: GO:0033036
 name: macromolecule localization
 namespace: biological_process
@@ -4417,7 +4564,7 @@ subset: goslim_generic
 subset: goslim_pir
 xref: MIPS_funcat:02.45.11
 is_a: GO:0008150 ! biological_process
-property_value: RO:0002161 NCBITaxon:451864
+relationship: never_in_taxon NCBITaxon:451864
 
 [Term]
 id: GO:0040012
@@ -4472,6 +4619,18 @@ is_a: GO:0051783 ! regulation of nuclear division
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0140013 ! meiotic nuclear division
 relationship: regulates GO:0140013 ! meiotic nuclear division
+
+[Term]
+id: GO:0042127
+name: regulation of cell population proliferation
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of cell proliferation." [GOC:jl]
+synonym: "regulation of cell proliferation" RELATED []
+is_a: GO:0050794 ! regulation of cellular process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0008283 ! cell population proliferation
+relationship: never_in_taxon NCBITaxon:4751
+relationship: regulates GO:0008283 ! cell population proliferation
 
 [Term]
 id: GO:0042325
@@ -4933,7 +5092,7 @@ synonym: "interaction with another species" EXACT []
 synonym: "interspecies interaction" EXACT []
 synonym: "interspecies interaction with other organisms" EXACT []
 is_a: GO:0051704 ! multi-organism process
-property_value: RO:0002161 NCBITaxon:4895
+relationship: never_in_taxon NCBITaxon:4895
 
 [Term]
 id: GO:0044422
@@ -5017,7 +5176,7 @@ xref: MIPS_funcat:36.25.16.01
 xref: Wikipedia:Innate_immune_system
 is_a: GO:0006955 ! immune response
 is_a: GO:0098542 ! defense response to other organism
-property_value: RO:0002161 NCBITaxon_Union:0000023
+relationship: never_in_taxon NCBITaxon_Union:0000023
 
 [Term]
 id: GO:0045088
@@ -5062,6 +5221,50 @@ synonym: "protein positioning" EXACT []
 synonym: "protein recruitment" EXACT []
 is_a: GO:0008104 ! protein localization
 is_a: GO:0051234 ! establishment of localization
+
+[Term]
+id: GO:0045595
+name: regulation of cell differentiation
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of cell differentiation, the process in which relatively unspecialized cells acquire specialized structural and functional features." [GOC:go_curators]
+is_a: GO:0050793 ! regulation of developmental process
+is_a: GO:0050794 ! regulation of cellular process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0030154 ! cell differentiation
+relationship: regulates GO:0030154 ! cell differentiation
+
+[Term]
+id: GO:0045596
+name: negative regulation of cell differentiation
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of cell differentiation." [GOC:go_curators]
+synonym: "down regulation of cell differentiation" EXACT []
+synonym: "down-regulation of cell differentiation" EXACT []
+synonym: "downregulation of cell differentiation" EXACT []
+synonym: "inhibition of cell differentiation" NARROW []
+is_a: GO:0045595 ! regulation of cell differentiation
+is_a: GO:0048523 ! negative regulation of cellular process
+is_a: GO:0051093 ! negative regulation of developmental process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0030154 ! cell differentiation
+relationship: negatively_regulates GO:0030154 ! cell differentiation
+
+[Term]
+id: GO:0045597
+name: positive regulation of cell differentiation
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of cell differentiation." [GOC:go_curators]
+synonym: "activation of cell differentiation" NARROW []
+synonym: "stimulation of cell differentiation" NARROW []
+synonym: "up regulation of cell differentiation" EXACT []
+synonym: "up-regulation of cell differentiation" EXACT []
+synonym: "upregulation of cell differentiation" EXACT []
+is_a: GO:0045595 ! regulation of cell differentiation
+is_a: GO:0048522 ! positive regulation of cellular process
+is_a: GO:0051094 ! positive regulation of developmental process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0030154 ! cell differentiation
+relationship: positively_regulates GO:0030154 ! cell differentiation
 
 [Term]
 id: GO:0045730
@@ -5159,6 +5362,39 @@ is_a: GO:0050777 ! negative regulation of immune response
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0045087 ! innate immune response
 relationship: negatively_regulates GO:0045087 ! innate immune response
+
+[Term]
+id: GO:0045833
+name: negative regulation of lipid metabolic process
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the chemical reactions and pathways involving lipids." [GOC:go_curators]
+synonym: "down regulation of lipid metabolic process" EXACT []
+synonym: "down-regulation of lipid metabolic process" EXACT []
+synonym: "downregulation of lipid metabolic process" EXACT []
+synonym: "inhibition of lipid metabolic process" NARROW []
+synonym: "negative regulation of lipid metabolism" EXACT []
+is_a: GO:0009892 ! negative regulation of metabolic process
+is_a: GO:0019216 ! regulation of lipid metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0006629 ! lipid metabolic process
+relationship: negatively_regulates GO:0006629 ! lipid metabolic process
+
+[Term]
+id: GO:0045834
+name: positive regulation of lipid metabolic process
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways involving lipids." [GOC:go_curators]
+synonym: "activation of lipid metabolic process" NARROW []
+synonym: "positive regulation of lipid metabolism" EXACT []
+synonym: "stimulation of lipid metabolic process" NARROW []
+synonym: "up regulation of lipid metabolic process" EXACT []
+synonym: "up-regulation of lipid metabolic process" EXACT []
+synonym: "upregulation of lipid metabolic process" EXACT []
+is_a: GO:0009893 ! positive regulation of metabolic process
+is_a: GO:0019216 ! regulation of lipid metabolic process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0006629 ! lipid metabolic process
+relationship: positively_regulates GO:0006629 ! lipid metabolic process
 
 [Term]
 id: GO:0045835
@@ -5423,6 +5659,37 @@ is_a: GO:0048583 ! regulation of response to stimulus
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0050896 ! response to stimulus
 relationship: negatively_regulates GO:0050896 ! response to stimulus
+
+[Term]
+id: GO:0048646
+name: anatomical structure formation involved in morphogenesis
+namespace: biological_process
+def: "The developmental process pertaining to the initial formation of an anatomical structure from unspecified parts. This process begins with the specific processes that contribute to the appearance of the discrete structure and ends when the structural rudiment is recognizable. An anatomical structure is any biological entity that occupies space and is distinguished from its surroundings. Anatomical structures can be macroscopic such as a carpel, or microscopic such as an acrosome." [GOC:dph, GOC:jid, GOC:tb]
+comment: Note that, for example, the formation of a pseudopod in an amoeba would not be considered formation involved in morphogenesis because it would not be thought of as the formation of an anatomical structure that was part of the shaping of the amoeba during its development. The formation of an axon from a neuron would be considered the formation of an anatomical structure involved in morphogenesis because it contributes to the creation of the form of the neuron in a developmental sense.
+subset: goslim_chembl
+subset: goslim_generic
+synonym: "formation of an anatomical structure involved in morphogenesis" EXACT [GOC:dph, GOC:tb]
+is_a: GO:0032502 ! developmental process
+relationship: part_of GO:0009653 ! anatomical structure morphogenesis
+
+[Term]
+id: GO:0048856
+name: anatomical structure development
+namespace: biological_process
+def: "The biological process whose specific outcome is the progression of an anatomical structure from an initial condition to its mature state. This process begins with the formation of the structure and ends with the mature structure, whatever form that may be including its natural destruction. An anatomical structure is any biological entity that occupies space and is distinguished from its surroundings. Anatomical structures can be macroscopic such as a carpel, or microscopic such as an acrosome." [GO_REF:0000021]
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_plant
+synonym: "development of an anatomical structure" EXACT []
+is_a: GO:0032502 ! developmental process
+
+[Term]
+id: GO:0048869
+name: cellular developmental process
+namespace: biological_process
+def: "A biological process whose specific outcome is the progression of a cell over time from an initial condition to a later condition." [GOC:isa_complete]
+is_a: GO:0009987 ! cellular process
+is_a: GO:0032502 ! developmental process
 
 [Term]
 id: GO:0048870
@@ -6618,6 +6885,23 @@ created_by: pr
 creation_date: 2012-11-04T15:17:52Z
 
 [Term]
+id: GO:1901575
+name: organic substance catabolic process
+namespace: biological_process
+def: "The chemical reactions and pathways resulting in the breakdown of an organic substance, any molecular entity containing carbon." [GOC:pr, GOC:TermGenie]
+synonym: "organic molecular entity breakdown" EXACT [GOC:TermGenie]
+synonym: "organic molecular entity catabolic process" EXACT []
+synonym: "organic molecular entity catabolism" EXACT [GOC:TermGenie]
+synonym: "organic molecular entity degradation" EXACT [GOC:TermGenie]
+synonym: "organic substance breakdown" EXACT []
+synonym: "organic substance catabolism" EXACT []
+synonym: "organic substance degradation" EXACT []
+is_a: GO:0009056 ! catabolic process
+is_a: GO:0071704 ! organic substance metabolic process
+created_by: pr
+creation_date: 2012-11-05T11:04:36Z
+
+[Term]
 id: GO:1902531
 name: regulation of intracellular signal transduction
 namespace: biological_process
@@ -7557,7 +7841,7 @@ def: "x actively participates in y if and only if x participates in y and x real
 comment: Obsoleted as the inverse property was obsoleted.
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000118 "agent in" xsd:string
-is_a: participates_in ! participates_in
+is_a: participates_in ! participates in
 inverse_of: RO:0002218 ! obsolete has active participant
 is_obsolete: true
 
@@ -8500,7 +8784,7 @@ subset: RO:0002259
 xref: RO:0002352
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 is_a: functionally_related_to ! functionally related to
-is_a: participates_in ! participates_in
+is_a: participates_in ! participates in
 
 [Typedef]
 id: involved_in
@@ -8515,7 +8799,7 @@ property_value: IAO:0000118 "enables part of" xsd:string
 property_value: seeAlso Involved:in
 holds_over_chain: RO:0002327 part_of
 is_transitive: false
-is_a: participates_in ! participates_in
+is_a: participates_in ! participates in
 is_a: RO:0002217 ! obsolete actively participates in
 is_a: RO:0002431 ! involved in or involved in regulation of
 transitive_over: part_of ! part_of
@@ -8569,6 +8853,24 @@ is_a: RO:0002305 ! causally upstream of, negative effect
 inverse_of: RO:0002335 ! negatively regulated by
 
 [Typedef]
+id: never_in_taxon
+name: never in taxon
+name: never_in_taxon
+namespace: uberon
+def: "S never_in_taxon T iff: S SubClassOf in_taxon only not T" [http://www.ncbi.nlm.nih.gov/pubmed/20973947]
+def: "x never in taxon T if and only if T is a class, and x does not instantiate the class expression \"in taxon some T\". Note that this is a shortcut relation, and should be used as a hasValue restriction in OWL." []
+xref: RO:0002161
+property_value: example_of_usage "tooth SubClassOf 'never in taxon' value 'Aves'" xsd:string
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/17921072
+property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20973947
+property_value: seeAlso https://github.com/obophenotype/uberon/wiki/Taxon-constraints
+expand_assertion_to: "?X DisjointWith RO_0002162 some ?Y " []
+expand_assertion_to: "Class: <http://www.w3.org/2002/07/owl#Nothing> EquivalentTo: ?X and (RO_0002162 some ?Y)" []
+is_metadata_tag: true
+is_class_level: true
+
+[Typedef]
 id: occurs_in
 name: occurs in
 namespace: external
@@ -8599,7 +8901,7 @@ xref: RO:0002353
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 is_transitive: false
 is_a: functionally_related_to ! functionally related to
-is_a: participates_in ! participates_in
+is_a: participates_in ! participates in
 
 [Typedef]
 id: overlaps

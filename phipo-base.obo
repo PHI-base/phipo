@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2020-03-05/phipo-base.owl
+data-version: phipo/releases/2020-07-28/phipo-base.owl
 ontology: phipo/phipo-base
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -50,8 +50,7 @@ name: unaffected pathogenicity
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is unaffected (i.e the same as wild-type, this could be pathogenicity present or pathogenicity absent)." []
 comment: For use in the annotation extension infective ability.\nCan only apply to changes in the pathogen.
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 synonym: "normal pathogenicity" EXACT []
 synonym: "unaffected disease causing ability" EXACT []
 synonym: "unaltered pathogenicity" EXACT []
@@ -79,18 +78,17 @@ subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "disease causing ability" EXACT []
 synonym: "pathogenesis (related)" RELATED []
-is_a: PHIPO:0000512 ! pathogen host interaction tissue phenotype
+is_a: PHIPO:0001179 ! infective ability phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T12:39:55Z xsd:string
 
 [Term]
 id: PHIPO:0000007
-name: pathogenicity absent
+name: pathogenic ability absent
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is absent." []
 comment: For use in the annotation extension infective ability.\nCan only apply to changes in the pathogen.
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 synonym: "disease causing ability absent" EXACT []
 is_a: PHIPO:0000006 ! pathogenicity phenotype
 property_value: created:by "alaynecuzick" xsd:string
@@ -98,12 +96,11 @@ property_value: creation:date 2018-05-04T12:42:00Z xsd:string
 
 [Term]
 id: PHIPO:0000008
-name: pathogenicity present
+name: pathogenic ability present
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is present." []
 comment: For use in the annotation extension infective ability.\nCan only apply to changes in the pathogen.
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 synonym: "disease causing ability present" EXACT []
 is_a: PHIPO:0000006 ! pathogenicity phenotype
 property_value: created:by "alaynecuzick" xsd:string
@@ -115,10 +112,9 @@ name: gain of pathogenicity
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is obtained (pathogenicity was absent and is now present)." []
 comment: For use in the annotation extension infective ability.\nCan only apply to changes in the pathogen. Note that this ability to cause pathogenicity is a feature of the pathogen. Therefore gain/loss of pathogenicity should never be dependent on changes to the host genotype, only on changes to the pathogen genotype. If you are annotating changes in disease presence or absence dependent on the changes to the host consider increased/decreased virulence phenotypes.
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 synonym: "gain of disease causing ability" EXACT []
-is_a: PHIPO:0000014 ! increased virulence
+is_a: PHIPO:0000008 ! pathogenic ability present
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T12:45:12Z xsd:string
 
@@ -128,11 +124,10 @@ name: loss of pathogenicity
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is abolished (pathogenicity was present and is now absent)." []
 comment: For use in the annotation extension infective ability.\nCan only apply to changes in the pathogen. Note that this ability to cause pathogenicity is a feature of the pathogen. Therefore gain/loss of pathogenicity should never be dependent on changes to the host genotype, only on changes to the pathogen genotype. If you are annotating changes in disease presence or absence dependent on the changes to the host consider increased/decreased virulence phenotypes.\nNote that avirulence means loss of/abolished virulence in plant pathology terminology.
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 synonym: "abolished pathogenicity" EXACT []
 synonym: "loss of disease causing ability" EXACT []
-is_a: PHIPO:0000007 ! pathogenicity absent
+is_a: PHIPO:0000007 ! pathogenic ability absent
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T12:45:31Z xsd:string
 
@@ -145,7 +140,7 @@ comment: Can apply to changes in the pathogen or the host.\nVirulence is a quant
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "disease severity" EXACT []
-is_a: PHIPO:0000008 ! pathogenicity present
+is_a: PHIPO:0001179 ! infective ability phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:02:03Z xsd:string
 
@@ -155,8 +150,7 @@ name: unaffected virulence
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is unchanged (i.e. the same degree of infectious disease as wild-type interaction)." []
 comment: For use in the annotation extension infective ability.\nCan apply to changes in the pathogen or the host.
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 synonym: "normal virulence" EXACT []
 synonym: "unaffected disease severity" EXACT []
 is_a: PHIPO:0000011 ! virulence phenotype
@@ -178,8 +172,7 @@ name: increased virulence
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is increased (i.e. more symptoms than normal)." []
 comment: For use in the annotation extension infective ability.\nCan apply to changes in the pathogen or the host.
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 synonym: "hypervirulence" EXACT []
 synonym: "increased disease severity" EXACT []
 is_a: PHIPO:0000011 ! virulence phenotype
@@ -192,8 +185,7 @@ name: reduced virulence
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is decreased (i.e. fewer symptoms than normal)." []
 comment: For use in the annotation extension infective ability.\nCan apply to changes in the pathogen or the host.
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 synonym: "decreased virulence" EXACT []
 synonym: "reduced disease severity" EXACT []
 is_a: PHIPO:0000011 ! virulence phenotype
@@ -235,9 +227,8 @@ id: PHIPO:0000019
 name: inviable cell
 namespace: single_species_phenotype
 def: "A lethal single organism cell level phenotype resulting from altering a gene product that is essential for the life of the organism." []
-comment: Logical definition\nLethal (PATO:0000718) and (inheres_in some AC_organism)
 synonym: "essential" RELATED []
-synonym: "lethal" EXACT []
+synonym: "lethal" RELATED []
 is_a: PHIPO:0000034 ! cell phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:12:47Z xsd:string
@@ -400,6 +391,7 @@ id: PHIPO:0000035
 name: mutualism present
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host phenotype where the mutualism phenotype is normal (i.e. the same as wild-type), and the wild-type interaction exhibits mutualism." []
+subset: qc_extension_only
 is_a: PHIPO:0000039 ! normal mutualism
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:41:47Z xsd:string
@@ -429,7 +421,7 @@ name: mutualism phenotype
 namespace: pathogen_host_interaction_phenotype
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
-is_a: PHIPO:0000512 ! pathogen host interaction tissue phenotype
+is_a: PHIPO:0001179 ! infective ability phenotype
 created_by: alaynecuzick
 creation_date: 2018-07-10T11:52:04Z
 
@@ -439,6 +431,8 @@ name: normal mutualism
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype in which the interaction is the same as the wild-type, no asymptomatic colonisation or disease formation symptoms are visible." []
 comment: Logical definition\nmutualism (GO:0085030) and (has_relative_magnitude some normal (PATO:0000461))
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 is_a: PHIPO:0000038 ! mutualism phenotype
 created_by: alaynecuzick
 creation_date: 2018-07-10T11:52:33Z
@@ -449,6 +443,8 @@ name: abnormal mutualism
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype in which the balance of symbiotic mutualism has been disrupted compared to the normal interaction." []
 comment: Logical definition\nmutualism (GO:0085030) and (has_relative_magnitude some abnormal (PATO:0000460))\n\nneed to choose correct language for term name
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
 is_a: PHIPO:0000038 ! mutualism phenotype
 created_by: alaynecuzick
 creation_date: 2018-07-10T11:53:05Z
@@ -651,7 +647,7 @@ id: PHIPO:0000062
 name: sexual spores absent
 namespace: single_species_phenotype
 def: "A reproductive phenotype where sexual spores are absent (FAO:0000017)." []
-is_a: PHIPO:0000130 ! abnormal sexual spore morphology
+is_a: PHIPO:0000077 ! abnormal sexual sporulation
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:29:31Z
 
@@ -1159,7 +1155,7 @@ creation_date: 2018-07-17T11:30:36Z
 
 [Term]
 id: PHIPO:0000117
-name: increased pathogen growth after penetraton of the barrier
+name: increased pathogen growth after penetration of the barrier
 namespace: single_species_phenotype
 def: "A single species phenotype in which the frequency of occurrence of pathogen growth after penetration of a given experimental substance/membrane in an in vitro assay is increased." []
 subset: pathogen_phenotype
@@ -1169,7 +1165,7 @@ creation_date: 2018-07-17T11:30:56Z
 
 [Term]
 id: PHIPO:0000118
-name: increased pathogen growth after penetraton of the barrier
+name: decreased pathogen growth after penetration of the barrier
 namespace: single_species_phenotype
 def: "A single species phenotype in which the frequency of occurrence of pathogen growth after penetration of a given experimental substance/membrane in an in vitro assay is decreased." []
 subset: pathogen_phenotype
@@ -1295,8 +1291,7 @@ creation_date: 2018-07-17T13:09:36Z
 id: PHIPO:0000131
 name: pathogen host protein-protein interaction phenotype
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype which affects the binding of one protein to another. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
-xref: FYPO:0000702
+def: "A pathogen host interaction phenotype which affects the binding of one pathogen protein to one host protein. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
 is_a: PHIPO:0000164 ! pathogen host interaction binding phenotype
 created_by: alaynecuzick
 creation_date: 2018-09-13T13:31:00Z
@@ -1580,7 +1575,7 @@ creation_date: 2018-10-01T12:11:36Z
 id: PHIPO:0000158
 name: binding phenotype
 namespace: single_species_phenotype
-def: "A single organism phenotype that affects the binding of a gene product to another substance. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+def: "A single species phenotype that affects the binding of a gene product to another substance. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
@@ -1651,8 +1646,6 @@ id: PHIPO:0000164
 name: pathogen host interaction binding phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype that affects the binding of a gene product to another substance. The affected gene product may be encoded by the mutated gene, or by a different gene." []
-comment: These terms need to be thought about further. Need to capture whether source of DNA, RNA, Protein, carbohydrate is from the pathogen or the host???\nPerhaps duplication is required to capture source from both.
-xref: FYPO:0001092
 is_a: PHIPO:0000347 ! pathogen host interaction molecular function phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:21:51Z
@@ -1675,11 +1668,11 @@ creation_date: 2018-10-01T12:46:24Z
 
 [Term]
 id: PHIPO:0000167
-name: pathogen host interaction RNA binding phenotype
+name: obsolete pathogen host interaction RNA binding phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype that affects RNA binding. The relevant gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0002131
-is_a: PHIPO:0000164 ! pathogen host interaction binding phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:54:51Z
 
@@ -1721,11 +1714,11 @@ creation_date: 2018-10-01T12:57:15Z
 
 [Term]
 id: PHIPO:0000172
-name: abolished pathogen host interaction RNA binding
+name: obsolete abolished pathogen host interaction RNA binding
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which RNA binding by a gene product does not occur, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0002133
-is_a: PHIPO:0000167 ! pathogen host interaction RNA binding phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:04:43Z
 
@@ -1740,11 +1733,11 @@ creation_date: 2018-10-01T13:04:47Z
 
 [Term]
 id: PHIPO:0000174
-name: decreased pathogen host interaction RNA binding
+name: obsolete decreased pathogen host interaction RNA binding
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of RNA binding by a gene product is decreased, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0002134
-is_a: PHIPO:0000167 ! pathogen host interaction RNA binding phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:05:26Z
 
@@ -1759,11 +1752,11 @@ creation_date: 2018-10-01T13:05:29Z
 
 [Term]
 id: PHIPO:0000176
-name: increased pathogen host interaction RNA binding
+name: obsolete increased pathogen host interaction RNA binding
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of RNA binding by a gene product is increased, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0002135
-is_a: PHIPO:0000167 ! pathogen host interaction RNA binding phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:05:50Z
 
@@ -1778,11 +1771,11 @@ creation_date: 2018-10-01T13:05:53Z
 
 [Term]
 id: PHIPO:0000178
-name: pathogen host interaction DNA binding phenotype
+name: obsolete pathogen host interaction DNA binding phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype that affects DNA binding. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0000653
-is_a: PHIPO:0000164 ! pathogen host interaction binding phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:09:13Z
 
@@ -1798,13 +1791,14 @@ creation_date: 2018-10-01T13:09:23Z
 
 [Term]
 id: PHIPO:0000182
-name: absence of host HR induced by pathogen during biotrophic lifestyle
+name: absence of effector-mediated host hypersensitive response during biotrophy
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the immune system process of host tissue HR modulated by the pathogen is absent (GO:0009626)." []
+def: "A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen is absent (GO:0009626)." []
 comment: Comment: this term is to be used for host protection against the pathogen.
+synonym: "absence of host HR induced by pathogen during biotrophy" EXACT []
 synonym: "absence of host lesion" RELATED []
 synonym: "absence of host necrotic cell death" RELATED []
-is_a: PHIPO:0000280 ! effector phenotype
+is_a: PHIPO:0000280 ! pathogen effector mediated modulation of host immune system process
 is_a: PHIPO:0000466 ! host necrotic cell death by pathogen induced hypersensitive response
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:09:35Z
@@ -1822,9 +1816,9 @@ creation_date: 2018-10-01T13:09:42Z
 
 [Term]
 id: PHIPO:0000184
-name: pathogen adhesion to host phenotype
+name: obsolete pathogen adhesion to host phenotype
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000332 ! pathogen colonization of host phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:12:32Z
 
@@ -1840,23 +1834,24 @@ creation_date: 2018-10-01T13:12:43Z
 
 [Term]
 id: PHIPO:0000186
-name: abolished host HR induced by pathogen during biotrophic lifestyle
+name: abolished effector-mediated host hypersensitive response during biotrophy
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the immune system process of host tissue HR modulated by the pathogen is abolished (GO:0009626)." []
+def: "A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen is abolished (GO:0009626)." []
 comment: This term is to be used for host protection against the pathogen.
+synonym: "abolished host HR induced by pathogen during biotrophy" EXACT []
 synonym: "abolished host lesion" RELATED []
 synonym: "abolished host necrotic cell death" RELATED []
-is_a: PHIPO:0000182 ! absence of host HR induced by pathogen during biotrophic lifestyle
+is_a: PHIPO:0000182 ! absence of effector-mediated host hypersensitive response during biotrophy
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:12:57Z
 
 [Term]
 id: PHIPO:0000187
-name: abolished pathogen host interaction DNA binding
+name: obsolete abolished pathogen host interaction DNA binding
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which DNA binding by a gene product does not occur, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0000659
-is_a: PHIPO:0000178 ! pathogen host interaction DNA binding phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:13:16Z
 
@@ -1871,45 +1866,45 @@ creation_date: 2018-10-01T13:13:27Z
 
 [Term]
 id: PHIPO:0000189
-name: altered pathogen host interaction DNA binding specificity
+name: obsolete altered pathogen host interaction DNA binding specificity
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which a gene product that normally binds to a specific DNA sequence instead binds to a different sequence when a gene is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0003735
-is_a: PHIPO:0000178 ! pathogen host interaction DNA binding phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:13:36Z
 
 [Term]
 id: PHIPO:0000190
-name: delayed host HR induced by pathogen during biotrophic lifestyle
+name: delayed effector-mediated host hypersensitive response during biotrophy
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the immune system process of host tissue HR modulated by the pathogen is delayed (GO:0009626)." []
+def: "A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen is delayed (GO:0009626)." []
 comment: This term is to be used for host protection against the pathogen.
 synonym: "delayed host necrotic cell death" RELATED []
 synonym: "delayed presence of host lesion" RELATED []
-is_a: PHIPO:0000192 ! presence of host HR induced by pathogen during biotrophic lifestyle
+is_a: PHIPO:0000192 ! presence of effector-mediated host hypersensitive response during biotrophy
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:14:10Z
 
 [Term]
 id: PHIPO:0000191
-name: decreased pathogen host interaction DNA binding
+name: obsolete decreased pathogen host interaction DNA binding
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of DNA binding by a gene product is decreased, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0000658
-is_a: PHIPO:0000178 ! pathogen host interaction DNA binding phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:14:20Z
 
 [Term]
 id: PHIPO:0000192
-name: presence of host HR induced by pathogen during biotrophic lifestyle
+name: presence of effector-mediated host hypersensitive response during biotrophy
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the immune system process of host tissue HR modulated by the pathogen is present (GO:0009626)." []
+def: "A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen is present (GO:0009626)." []
 comment: This term is to be used for host protection against the pathogen.
 synonym: "presence of host lesion" RELATED []
 synonym: "presence of host necrotic cell death" RELATED []
-is_a: PHIPO:0000280 ! effector phenotype
+is_a: PHIPO:0000280 ! pathogen effector mediated modulation of host immune system process
 is_a: PHIPO:0000466 ! host necrotic cell death by pathogen induced hypersensitive response
 is_a: PHIPO:0000480 ! presence of host necrotic cell death by pathogen
 created_by: alaynecuzick
@@ -1917,11 +1912,11 @@ creation_date: 2018-10-01T13:14:29Z
 
 [Term]
 id: PHIPO:0000193
-name: increased pathogen host interaction DNA binding
+name: obsolete increased pathogen host interaction DNA binding
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (molecular function??) phenotype in which occurrence of DNA binding by a gene product is increased, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0000657
-is_a: PHIPO:0000178 ! pathogen host interaction DNA binding phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:14:39Z
 
@@ -1954,10 +1949,10 @@ creation_date: 2018-10-01T13:27:34Z
 
 [Term]
 id: PHIPO:0000198
-name: pathogen host interaction transporter phenotype
+name: obsolete pathogen host interaction transporter phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype which affects a transporter activity." []
-is_a: PHIPO:0000347 ! pathogen host interaction molecular function phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:27:49Z
 
@@ -2010,11 +2005,11 @@ creation_date: 2018-10-01T13:31:34Z
 
 [Term]
 id: PHIPO:0000204
-name: pathogen host protein-protein interaction abolished
+name: abolished pathogen host protein-protein interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A molecular function phenotype in which the binding of one pathogen protein to one host protein does not occur (binding was present as is now absent)." []
 xref: FYPO:0000705
-is_a: PHIPO:0001107 ! pathogen host protein-protein interaction absent
+is_a: PHIPO:0001107 ! absence of pathogen host protein-protein interaction
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:31:59Z
 
@@ -2029,11 +2024,11 @@ creation_date: 2018-10-01T13:32:01Z
 
 [Term]
 id: PHIPO:0000206
-name: altered pathogen and host protein binding specificity
+name: obsolete altered pathogen and host protein binding specificity
 namespace: pathogen_host_interaction_phenotype
 def: "A molecular function phenotype in which the binding of one pathogen protein to one host protein occurs with a different specificity than normal." []
 xref: FYPO:0005119
-is_a: PHIPO:0001106 ! pathogen host protein-protein interaction present
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:32:15Z
 
@@ -2042,17 +2037,18 @@ id: PHIPO:0000207
 name: loss of mutualism
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype in which the balance of symbiotic mutualism has been disrupted compared to the normal interaction and the endosymbiont organism is able to show greater biomass within the host and/or the formation of visible disease formation symptoms compared to the normal interaction." []
+subset: qc_extension_only
 is_a: PHIPO:0000040 ! abnormal mutualism
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:32:18Z
 
 [Term]
 id: PHIPO:0000208
-name: decreased duration of pathogen host protein-protein interaction
+name: obsolete decreased duration of pathogen host protein-protein interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A molecular function phenotype in which the binding of one pathogen protein to one host protein occurs for a shorter time than normal." []
 xref: FYPO:0005785
-is_a: PHIPO:0001106 ! pathogen host protein-protein interaction present
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:32:28Z
 
@@ -2066,11 +2062,11 @@ creation_date: 2018-10-01T13:32:31Z
 
 [Term]
 id: PHIPO:0000210
-name: decreased extent and duration of pathogen host protein-protein interaction
+name: obsolete decreased extent and duration of pathogen host protein-protein interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A molecular function phenotype in which the binding of one pathogen protein to one host protein occurs to a lower extent, and for a shorter time, than normal." []
 xref: FYPO:0005784
-is_a: PHIPO:0001106 ! pathogen host protein-protein interaction present
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:32:42Z
 
@@ -2084,11 +2080,11 @@ creation_date: 2018-10-01T13:32:46Z
 
 [Term]
 id: PHIPO:0000212
-name: pathogen host protein-protein interaction decreased
+name: decreased pathogen host protein-protein interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A molecular function phenotype in which the binding of one pathogen protein to one host protein occurs to a lesser extent than normal." []
 xref: FYPO:0001645
-is_a: PHIPO:0001106 ! pathogen host protein-protein interaction present
+is_a: PHIPO:0001106 ! presence of pathogen host protein-protein interaction
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:33:00Z
 
@@ -2102,11 +2098,11 @@ creation_date: 2018-10-01T13:33:03Z
 
 [Term]
 id: PHIPO:0000214
-name: pathogen host protein-protein interaction increased
+name: increased pathogen host protein-protein interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A molecular function phenotype in which the binding of one pathogen protein to one host protein occurs to a greater extent than normal." []
 xref: FYPO:0001571
-is_a: PHIPO:0001106 ! pathogen host protein-protein interaction present
+is_a: PHIPO:0001106 ! presence of pathogen host protein-protein interaction
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:33:15Z
 
@@ -2128,41 +2124,41 @@ creation_date: 2018-10-01T13:42:29Z
 
 [Term]
 id: PHIPO:0000217
-name: pathogen host interaction primary metabolic process phenotype
+name: obsolete pathogen host interaction primary metabolic process phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype that affects the chemical reactions and pathways involving those compounds which are formed as a part of the normal anabolic and catabolic processes. These processes take place in most, if not all, cells of the organism." []
 comment: Definition adapted from GO:0044238 primary metabolic process
 xref: GO:0044238
-is_a: PHIPO:0000220 ! pathogen host interaction metabolic process phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:43:20Z
 
 [Term]
 id: PHIPO:0000218
-name: abnormal pathogen host interaction toxin biosynthetic process
+name: obsolete abnormal pathogen host interaction toxin biosynthetic process
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype in which the toxin biosynthetic process is abnormal (i.e. different than the wild type)." []
-is_a: PHIPO:0000231 ! pathogen host interaction toxin biosynthetic process phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:43:40Z
 
 [Term]
 id: PHIPO:0000219
-name: decreased level of pathogen deoxynivalenol with host
+name: decreased level of pathogen deoxynivalenol within host
 namespace: pathogen_host_interaction_phenotype
-def: "A cell phenotype in which the amount of pathogen deoxynivalenol toxin measured in a host is lower than normal." []
-is_a: PHIPO:0001045 ! decreased toxin level in a pathogen host interaction
+def: "A pathogen host interaction phenotype, in which the level of pathogen produced deoxynivalenol usually present during infection is lower than normal." []
+is_a: PHIPO:0001045 ! decreased level of pathogen toxin within host
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:44:10Z
 
 [Term]
 id: PHIPO:0000220
-name: pathogen host interaction metabolic process phenotype
+name: obsolete pathogen host interaction metabolic process phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype that affects the chemical reactions and pathways, including anabolism and catabolism, by which living organisms transform chemical substances. Metabolic processes typically transform small molecules, but also include macromolecular processes such as DNA repair and replication, and protein synthesis and degradation." []
 comment: Definition adapted from GO_0008152 metabolic process
 xref: GO_0008152
-is_a: PHIPO:0000510 ! pathogen host interaction cell level phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T08:53:44Z
 
@@ -2212,88 +2208,88 @@ creation_date: 2018-10-02T09:00:28Z
 
 [Term]
 id: PHIPO:0000226
-name: pathogen host interaction secondary metabolite biosynthetic process phenotype
+name: obsolete pathogen host interaction secondary metabolite biosynthetic process phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype that affects the chemical reactions and pathways resulting in the formation of secondary metabolites, the compounds that are not necessarily required for growth and maintenance of cells, and are often unique to a taxon." []
 comment: Definition adapted from GO:0044550 secondary metabolite biosynthetic process
 xref: GO:0044550
-is_a: PHIPO:0000227 ! pathogen host interaction secondary metabolic process phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T09:09:52Z
 
 [Term]
 id: PHIPO:0000227
-name: pathogen host interaction secondary metabolic process phenotype
+name: obsolete pathogen host interaction secondary metabolic process phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype that affects the chemical reactions and pathways resulting in many of the chemical changes of compounds that are not necessarily required for growth and maintenance of cells, and are often unique to a taxon. In multicellular organisms secondary metabolism is generally carried out in specific cell types, and may be useful for the organism as a whole. In unicellular organisms, secondary metabolism is often used for the production of antibiotics or for the utilization and acquisition of unusual nutrients." []
 comment: Definition adapted from GO:0019748 secondary metabolic process
 xref: GO:0019748
-is_a: PHIPO:0000220 ! pathogen host interaction metabolic process phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T09:10:09Z
 
 [Term]
 id: PHIPO:0000228
-name: normal pathogen host interaction biosynthesis of deoxynivalenol
+name: obsolete normal pathogen host interaction biosynthesis of deoxynivalenol
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype in which the pathogen biosynthesis of deoxynivalenol is normal (i.e. same as the wild type)." []
-is_a: PHIPO:0000230 ! normal pathogen host interaction toxin biosynthetic process
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T09:12:44Z
 
 [Term]
 id: PHIPO:0000229
-name: abnormal pathogen host interaction biosynthesis of deoxynivalenol
+name: obsolete abnormal pathogen host interaction biosynthesis of deoxynivalenol
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype in which the pathogen biosynthesis of deoxynivalenol is abnormal (i.e. different than the wild type)." []
-is_a: PHIPO:0000218 ! abnormal pathogen host interaction toxin biosynthetic process
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T09:12:59Z
 
 [Term]
 id: PHIPO:0000230
-name: normal pathogen host interaction toxin biosynthetic process
+name: obsolete normal pathogen host interaction toxin biosynthetic process
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype in which the toxin biosynthetic process is normal (i.e. same as the wild type)." []
-is_a: PHIPO:0000231 ! pathogen host interaction toxin biosynthetic process phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T09:15:34Z
 
 [Term]
 id: PHIPO:0000231
-name: pathogen host interaction toxin biosynthetic process phenotype
+name: obsolete pathogen host interaction toxin biosynthetic process phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype that affects the chemical reactions and pathways resulting in the formation of toxin, a poisonous compound (typically a protein) that is produced by cells or organisms and that can cause disease when introduced into the body or tissues of an organism." []
 comment: Definition adapted fromo GO:0009403 toxin biosynthetic process
 xref: GO:0009403
-is_a: PHIPO:0000226 ! pathogen host interaction secondary metabolite biosynthetic process phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T09:17:44Z
 
 [Term]
 id: PHIPO:0000232
-name: increased level of pathogen deoxynivalenol with host
+name: increased level of pathogen deoxynivalenol within host
 namespace: pathogen_host_interaction_phenotype
-def: "A cell phenotype in which the amount of pathogen deoxynivalenol toxin measured in a host is higher than normal." []
-is_a: PHIPO:0001046 ! increased toxin level in a pathogen host interaction
+def: "A pathogen host interaction phenotype, in which the level of pathogen produced deoxynivalenol usually present during infection is higher than normal." []
+is_a: PHIPO:0001046 ! increased level of pathogen toxin within host
 created_by: alaynecuzick
 creation_date: 2018-10-02T09:18:35Z
 
 [Term]
 id: PHIPO:0000233
-name: pathogen deoxynivalenol present with host
+name: presence of pathogen deoxynivalenol within host
 namespace: pathogen_host_interaction_phenotype
-def: "A cell phenotype in which the amount of pathogen produced deoxynivalenol measured in the host is normal (i.e. indistinguishable from wild type)." []
-is_a: PHIPO:0001048 ! normal level of substance phenotype in a pathogen host interaction
+def: "A pathogen host interaction phenotype, in which the pathogen produced deoxynivalenol usually present during infection is present as normal (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001171 ! normal level of pathogen substance within host
 created_by: alaynecuzick
 creation_date: 2018-10-02T09:19:27Z
 
 [Term]
 id: PHIPO:0000234
-name: pathogen deoxynivalenol absent with host
+name: absence of pathogen deoxynivalenol within host
 namespace: pathogen_host_interaction_phenotype
-def: "A cell phenotype in which the amount of pathogen deoxynivalenol measured in a host is too low to detect." []
-is_a: PHIPO:0001047 ! toxin absent in a pathogen host interaction
+def: "A pathogen host interaction phenotype, in which the pathogen produced deoxynivalenol usually present during infection is absent." []
+is_a: PHIPO:0001047 ! absence of pathogen toxin within host
 created_by: alaynecuzick
 creation_date: 2018-10-02T09:20:17Z
 
@@ -2312,14 +2308,14 @@ creation_date: 2018-10-02T10:12:56Z
 
 [Term]
 id: PHIPO:0000236
-name: pathogen host interaction localization phenotype
+name: obsolete pathogen host interaction localization phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype that affects the localization of a structure or substance in a cell." []
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 xref: FYPO:0000138
-is_a: PHIPO:0000510 ! pathogen host interaction cell level phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:13:04Z
 
@@ -2338,14 +2334,14 @@ creation_date: 2018-10-02T10:13:36Z
 
 [Term]
 id: PHIPO:0000238
-name: pathogen host interaction protein localization phenotype
+name: obsolete pathogen host interaction protein localization phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype that affects the localization of a protein in a cell." []
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 xref: FYPO:0002333
-is_a: PHIPO:0000236 ! pathogen host interaction localization phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:13:39Z
 
@@ -2362,11 +2358,10 @@ creation_date: 2018-10-02T10:14:02Z
 
 [Term]
 id: PHIPO:0000240
-name: abnormal pathogen host interaction protein localization
+name: abnormal pathogen protein localization within host
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype that affects the localization of a protein in a cell." []
-xref: FYPO:0002333
-is_a: PHIPO:0000238 ! pathogen host interaction protein localization phenotype
+def: "A pathogen host interaction phenotype, in which the localization of a pathogen protein in a host cell differs from normal." []
+is_a: PHIPO:0000510 ! pathogen host interaction cell phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:14:05Z
 
@@ -2426,12 +2421,12 @@ creation_date: 2018-10-02T10:17:52Z
 
 [Term]
 id: PHIPO:0000246
-name: abolished pathogen host interaction protein localization
+name: abolished pathogen protein localization within host
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype in which a protein does not localize to, and is therefore absent from, a place where it is normally found." []
+def: "A pathogen host interaction phenotype in which the localization of a pathogen protein to a host structure or compartment is abolished (i.e. the protein was localized to the host structure or compartment and now is not)." []
 comment: If this term is used, we recommend noting which protein(s) were used in the assay.
 xref: FYPO:0001375
-is_a: PHIPO:0000240 ! abnormal pathogen host interaction protein localization
+is_a: PHIPO:0000240 ! abnormal pathogen protein localization within host
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:17:55Z
 
@@ -2442,7 +2437,7 @@ namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype in which the localization of a pathogen protein to the host nucleus is abolished." []
 comment: We recommend noting which protein(s) were used in the assay when annotating to this term.
 xref: FYPO:0003450
-is_a: PHIPO:0000246 ! abolished pathogen host interaction protein localization
+is_a: PHIPO:0000246 ! abolished pathogen protein localization within host
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:19:22Z
 
@@ -2472,14 +2467,14 @@ creation_date: 2018-10-02T10:20:15Z
 
 [Term]
 id: PHIPO:0000250
-name: pathogen host interaction RNA localization phenotype
+name: obsolete pathogen host interaction RNA localization phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype that affects the localization of an RNA in a cell." []
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 xref: FYPO:0004853
-is_a: PHIPO:0000236 ! pathogen host interaction localization phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:20:17Z
 
@@ -2496,11 +2491,11 @@ creation_date: 2018-10-02T10:20:49Z
 
 [Term]
 id: PHIPO:0000252
-name: abnormal pathogen host interaction RNA localization
+name: obsolete abnormal pathogen host interaction RNA localization
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype in which the localization of an RNA in a cell is abnormal. An RNA may be observed in a place where it is not normally found, absent from a place where it is normally found, or both." []
 xref: FYPO:0003057
-is_a: PHIPO:0000250 ! pathogen host interaction RNA localization phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:20:53Z
 
@@ -2516,24 +2511,24 @@ creation_date: 2018-10-02T10:21:19Z
 
 [Term]
 id: PHIPO:0000254
-name: normal pathogen host interaction RNA localization
+name: obsolete normal pathogen host interaction RNA localization
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype in which the localization of an RNA in a cell is normal (i.e. indistinguishable from wild type)." []
 xref: FYPO:0003058
-is_a: PHIPO:0000250 ! pathogen host interaction RNA localization phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:21:22Z
 
 [Term]
 id: PHIPO:0000255
-name: pathogen host interaction transport phenotype
+name: obsolete pathogen host interaction transport phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (cell process???) phenotype that affects a transport process." []
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 xref: FYPO:0000149
-is_a: PHIPO:0000236 ! pathogen host interaction localization phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:21:45Z
 
@@ -2562,11 +2557,11 @@ creation_date: 2018-10-02T10:22:11Z
 
 [Term]
 id: PHIPO:0000258
-name: abnormal pathogen host interaction transport
+name: obsolete abnormal pathogen host interaction transport
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype in which a specific transport process is abnormal." []
 xref: FYPO:0001720
-is_a: PHIPO:0000255 ! pathogen host interaction transport phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:22:15Z
 
@@ -2582,11 +2577,11 @@ creation_date: 2018-10-02T10:22:37Z
 
 [Term]
 id: PHIPO:0000260
-name: normal pathogen host interaction protein transport
+name: obsolete normal pathogen host interaction protein transport
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (cellular process??) phenotype in which protein transport is normal (i.e. indistinguishable from wild type)." []
 xref: FYPO:0005747
-is_a: PHIPO:0000255 ! pathogen host interaction transport phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:22:40Z
 
@@ -2602,11 +2597,11 @@ creation_date: 2018-10-02T10:22:57Z
 
 [Term]
 id: PHIPO:0000262
-name: abnormal pathogen host interaction endocytosis
+name: obsolete abnormal pathogen host interaction endocytosis
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (cellular process???) phenotype in which endocytosis is abnormal. Endocytosis is a vesicle-mediated transport process in which cells take up external materials or membrane constituents by the invagination of a small region of the plasma membrane to form a new membrane-bounded vesicle. A phenotype may affect endocytosis of all cargoes, or of specific cargo such as a particular protein." []
 xref: FYPO:0003886
-is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:23:00Z
 
@@ -2622,11 +2617,11 @@ creation_date: 2018-10-02T10:23:27Z
 
 [Term]
 id: PHIPO:0000264
-name: abnormal pathogen host interaction nuclear transport
+name: obsolete abnormal pathogen host interaction nuclear transport
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (cellular process??) phenotype in which nuclear transport is abnormal." []
 xref: FYPO:0005573
-is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:23:30Z
 
@@ -2642,11 +2637,11 @@ creation_date: 2018-10-02T10:24:39Z
 
 [Term]
 id: PHIPO:0000266
-name: abnormal pathogen host interaction protein transport
+name: obsolete abnormal pathogen host interaction protein transport
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (cellular process??) phenotype in which protein transport is abnormal." []
 xref: FYPO:0005744
-is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:24:41Z
 
@@ -2662,11 +2657,11 @@ creation_date: 2018-10-02T10:24:58Z
 
 [Term]
 id: PHIPO:0000268
-name: abnormal pathogen host interaction vacuolar transport
+name: obsolete abnormal pathogen host interaction vacuolar transport
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction (cellular process??) phenotype in which vacuolar transport is abnormal." []
 xref: FYPO:0003578
-is_a: PHIPO:0000258 ! abnormal pathogen host interaction transport
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:25:00Z
 
@@ -2682,11 +2677,10 @@ creation_date: 2018-10-03T11:05:06Z
 
 [Term]
 id: PHIPO:0000270
-name: normal pathogen host interaction protein localization
+name: normal pathogen protein and host protein colocalization within host
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype in which the localization of a protein in a cell is normal (i.e. indistinguishable from wild type)." []
-xref: FYPO:0003627
-is_a: PHIPO:0000238 ! pathogen host interaction protein localization phenotype
+def: "A pathogen host interaction phenotype, in which the colocalization of a pathogen protein and a host protein within a host cell is normal (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0000510 ! pathogen host interaction cell phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-03T11:05:09Z
 
@@ -2706,7 +2700,7 @@ name: normal pathogen protein localization to host nucleus
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype in which the localization of a pathogen protein to the host nucleus is normal (i.e. indistinguishable from wild type)." []
 xref: FYPO:0006553
-is_a: PHIPO:0000270 ! normal pathogen host interaction protein localization
+is_a: PHIPO:0001175 ! normal pathogen protein localization within host
 created_by: alaynecuzick
 creation_date: 2018-10-03T11:05:31Z
 
@@ -2776,11 +2770,13 @@ creation_date: 2018-10-03T13:43:37Z
 
 [Term]
 id: PHIPO:0000280
-name: effector phenotype
+name: pathogen effector mediated modulation of host immune system process
 namespace: pathogen_host_interaction_phenotype
-def: "An effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defences or other host responses." []
-comment: This is only to be used when there is manipulation of the host.
-is_a: PHIPO:0000510 ! pathogen host interaction cell level phenotype
+def: "A phenotype dependent on an interaction between a pathogen effector and a host process in order for the pathogen to activate or suppress the host immune system. An effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defences or other host responses." []
+comment: To annotate a metagenotype containing a pathogen effector use 'GO:0140418 effector-mediated modulation of host process by symbiont' or a descendant. This is only to be used when there is manipulation of the host.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0001167 ! pathogen modulation of host immune system process phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-05T11:00:39Z
 
@@ -3241,7 +3237,7 @@ creation_date: 2018-10-29T16:06:31Z
 
 [Term]
 id: PHIPO:0000333
-name: pathogen cell to cell migration in host phenotype
+name: pathogen cell to cell migration within host phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction colonization phenotype which affects the directional movement of the pathogen within the host organism (GO:0044001)." []
 is_a: PHIPO:0000332 ! pathogen colonization of host phenotype
@@ -3250,19 +3246,19 @@ creation_date: 2018-10-29T16:08:18Z
 
 [Term]
 id: PHIPO:0000334
-name: abnormal pathogen cell to cell migration in host
+name: abnormal pathogen cell to cell migration within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction colonization phenotype in which the occurrence of the directional movement of the pathogen within the host organism is abnormal." []
-is_a: PHIPO:0000333 ! pathogen cell to cell migration in host phenotype
+is_a: PHIPO:0000333 ! pathogen cell to cell migration within host phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:09:56Z
 
 [Term]
 id: PHIPO:0000335
-name: normal pathogen cell to cell migration in host
+name: normal pathogen cell to cell migration within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction colonization phenotype in which the occurrence of the directional movement of the pathogen within the host organism is normal." []
-is_a: PHIPO:0000333 ! pathogen cell to cell migration in host phenotype
+is_a: PHIPO:0000333 ! pathogen cell to cell migration within host phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:10:17Z
 
@@ -3284,55 +3280,55 @@ creation_date: 2018-10-29T16:17:02Z
 
 [Term]
 id: PHIPO:0000338
-name: increased pathogen cell to cell migration in host
+name: increased pathogen cell to cell migration within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction colonization phenotype in which the occurrence of the directional movement of the pathogen within the host organism is increased compared to normal." []
-is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration in host
+is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration within host
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:17:55Z
 
 [Term]
 id: PHIPO:0000339
-name: decreased pathogen cell to cell migration in host
+name: decreased pathogen cell to cell migration within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction colonization phenotype in which the occurrence of the directional movement of the pathogen within the host organism is decreased compared to normal." []
-is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration in host
+is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration within host
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:18:09Z
 
 [Term]
 id: PHIPO:0000340
-name: abolished pathogen cell to cell migration in host
+name: abolished pathogen cell to cell migration within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction colonization phenotype in which the ability of the pathogen to move directionally within the host organism is abolished (pathogen migration was present within the host and is now absent)." []
-is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration in host
+is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration within host
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:18:22Z
 
 [Term]
 id: PHIPO:0000341
-name: gain of pathogen cell to cell migration in host
+name: gain of pathogen cell to cell migration within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction colonization phenotype in which the ability of the pathogen to move directionally within the host organism is gained (pathogen migration was absent within the host and is now present)." []
-is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration in host
+is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration within host
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:18:44Z
 
 [Term]
 id: PHIPO:0000342
-name: expedited pathogen cell to cell migration in host
+name: expedited pathogen cell to cell migration within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction colonization phenotype in which the occurrence of the directional movement of the pathogen within the host organism happens sooner than normal." []
-is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration in host
+is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration within host
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:19:03Z
 
 [Term]
 id: PHIPO:0000343
-name: delayed pathogen cell to cell migration in host
+name: delayed pathogen cell to cell migration within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction colonization phenotype in which the occurrence of the directional movement of the pathogen within the host organism happens later than normal." []
-is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration in host
+is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration within host
 created_by: alaynecuzick
 creation_date: 2018-10-29T16:19:20Z
 
@@ -3371,10 +3367,10 @@ creation_date: 2018-10-29T16:34:09Z
 
 [Term]
 id: PHIPO:0000348
-name: pathogen host interaction catalytic activity phenotype
+name: obsolete pathogen host interaction catalytic activity phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype which affects a catalytic activity." []
-is_a: PHIPO:0000347 ! pathogen host interaction molecular function phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-29T17:04:57Z
 
@@ -3427,7 +3423,7 @@ creation_date: 2018-11-05T13:25:01Z
 
 [Term]
 id: PHIPO:0000354
-name: normal pathogen growth in host
+name: normal pathogen growth within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is normal (i.e indistinguishable from wild type)." []
 synonym: "normal post penetration of host by pathogen" EXACT []
@@ -3515,16 +3511,16 @@ creation_date: 2018-11-05T13:33:34Z
 
 [Term]
 id: PHIPO:0000363
-name: absent pathogen growth in host
+name: absent pathogen growth within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is absent." []
-is_a: PHIPO:0000354 ! normal pathogen growth in host
+is_a: PHIPO:0000354 ! normal pathogen growth within host
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:35:05Z
 
 [Term]
 id: PHIPO:0000364
-name: abnormal pathogen growth in host
+name: abnormal pathogen growth within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is abnormal (i.e different than wild type)." []
 is_a: PHIPO:0000951 ! pathogen growth within host phenotype
@@ -3533,41 +3529,41 @@ creation_date: 2018-11-05T13:37:31Z
 
 [Term]
 id: PHIPO:0000365
-name: decreased pathogen growth in host
+name: decreased pathogen growth within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host phenotype in which the frequency of occurrence of vegetative growth or proliferation of the pathogen inside the host is decreased." []
 synonym: "decreased branching of invasive hyphae in host" NARROW []
 synonym: "decreased number of invasive hyphae in host" NARROW []
 synonym: "reduced pathogen biomass within host tissue" RELATED []
-is_a: PHIPO:0000364 ! abnormal pathogen growth in host
+is_a: PHIPO:0000364 ! abnormal pathogen growth within host
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:39:00Z
 
 [Term]
 id: PHIPO:0000366
-name: delayed timing of pathogen growth in host
+name: delayed timing of pathogen growth within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host phenotype in which the frequency of occurrence of vegetative growth or proliferation of the pathogen inside the host begins later than normal." []
-is_a: PHIPO:0000364 ! abnormal pathogen growth in host
+is_a: PHIPO:0000364 ! abnormal pathogen growth within host
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:39:34Z
 
 [Term]
 id: PHIPO:0000367
-name: expedited timing of pathogen growth in host
+name: expedited timing of pathogen growth within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host phenotype in which the frequency of occurrence of vegetative growth or proliferation of the pathogen inside the host begins sooner than normal." []
-is_a: PHIPO:0000364 ! abnormal pathogen growth in host
+is_a: PHIPO:0000364 ! abnormal pathogen growth within host
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:40:14Z
 
 [Term]
 id: PHIPO:0000368
-name: increased pathogen growth in host
+name: increased pathogen growth within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host phenotype in which the frequency of occurrence of vegetative growth or proliferation of the pathogen inside the host is increased." []
 synonym: "increased pathogen biomass within host tissue" RELATED []
-is_a: PHIPO:0000364 ! abnormal pathogen growth in host
+is_a: PHIPO:0000364 ! abnormal pathogen growth within host
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:41:05Z
 
@@ -4026,7 +4022,7 @@ creation_date: 2018-12-10T14:12:15Z
 id: PHIPO:0000418
 name: normal carbohydrate binding
 namespace: single_species_phenotype
-def: "A single organism (molecular function??) phenotype in which occurrence of carbohydrate binding by a gene product is normal (i.e. indistinguishable from wild type). The relevant gene product may be encoded by the mutated gene, or by a different gene." []
+def: "A single species molecular function phenotype in which occurrence of carbohydrate binding by a gene product is normal (i.e. indistinguishable from wild type). The relevant gene product may be encoded by the mutated gene, or by a different gene." []
 is_a: PHIPO:0000430 ! carbohydrate binding phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:12:55Z
@@ -4035,7 +4031,7 @@ creation_date: 2018-12-10T14:12:55Z
 id: PHIPO:0000419
 name: abnormal carbohydrate binding
 namespace: single_species_phenotype
-def: "A single organism  (molecular function??) phenotype in which occurrence of carbohydrate binding by a gene product (usually a protein) in a mutant is abnormal. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+def: "A single species molecular function phenotype in which occurrence of carbohydrate binding by a gene product (usually a protein) in a mutant is abnormal. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 is_a: PHIPO:0000430 ! carbohydrate binding phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:13:02Z
@@ -4044,7 +4040,7 @@ creation_date: 2018-12-10T14:13:02Z
 id: PHIPO:0000420
 name: normal pathogen chitin fragment binding
 namespace: single_species_phenotype
-def: "A molecular function phenotype in which occurrence of pathogen chitin fragment binding by a pathogen gene product is normal (i.e. indistinguishable from wild type)." []
+def: "A single species molecular function phenotype in which occurrence of pathogen chitin fragment binding by a pathogen gene product is normal (i.e. indistinguishable from wild type)." []
 is_a: PHIPO:0000418 ! normal carbohydrate binding
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:14:16Z
@@ -4053,7 +4049,7 @@ creation_date: 2018-12-10T14:14:16Z
 id: PHIPO:0000421
 name: abolished carbohydrate binding
 namespace: single_species_phenotype
-def: "A single organism (molecular function??) phenotype in which carbohydrate binding by a gene product does not occur, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+def: "A single species molecular function phenotype in which carbohydrate binding by a gene product does not occur, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 is_a: PHIPO:0000419 ! abnormal carbohydrate binding
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:16:24Z
@@ -4062,7 +4058,7 @@ creation_date: 2018-12-10T14:16:24Z
 id: PHIPO:0000422
 name: altered carbohydrate binding specificity
 namespace: single_species_phenotype
-def: "A single organism phenotype in which a gene product that normally binds to a specific carbohydrate instead binds to a different carbohydrate when a gene is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+def: "A single species phenotype in which a gene product that normally binds to a specific carbohydrate instead binds to a different carbohydrate when a gene is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 comment: no logical definition for 'altered ? binding specificity' in FYPO
 is_a: PHIPO:0000419 ! abnormal carbohydrate binding
 created_by: alaynecuzick
@@ -4072,7 +4068,7 @@ creation_date: 2018-12-10T14:17:21Z
 id: PHIPO:0000423
 name: decreased carbohydrate binding
 namespace: single_species_phenotype
-def: "A single organism (molecular function??) phenotype in which occurrence of carbohydrate binding by a gene product (usually a protein) in a mutant is decreased. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+def: "A single species molecular function phenotype in which occurrence of carbohydrate binding by a gene product (usually a protein) in a mutant is decreased. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 is_a: PHIPO:0000419 ! abnormal carbohydrate binding
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:17:46Z
@@ -4081,35 +4077,35 @@ creation_date: 2018-12-10T14:17:46Z
 id: PHIPO:0000424
 name: increased carbohydrate binding
 namespace: single_species_phenotype
-def: "A single organism (molecular function??) phenotype in which occurrence of carbohydrate binding by a gene product (usually a protein) in a mutant is increased. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+def: "A single species molecular function phenotype in which occurrence of carbohydrate binding by a gene product (usually a protein) in a mutant is increased. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 is_a: PHIPO:0000419 ! abnormal carbohydrate binding
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:18:04Z
 
 [Term]
 id: PHIPO:0000425
-name: pathogen host interaction pathogen carbohydrate binding phenotype
+name: obsolete pathogen host interaction pathogen carbohydrate binding phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype which affects the binding of carbohydrate to protein." []
-is_a: PHIPO:0000164 ! pathogen host interaction binding phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:23:58Z
 
 [Term]
 id: PHIPO:0000426
-name: presence of pathogen chitinase binding to pathogen chitin fragments within host interaction
+name: obsolete presence of pathogen chitinase binding to pathogen chitin fragments within host interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A molecular function phenotype in which the binding of pathogen chitinase to pathogen chitin fragments generated within a host interaction is present." []
-is_a: PHIPO:0000425 ! pathogen host interaction pathogen carbohydrate binding phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:30:09Z
 
 [Term]
 id: PHIPO:0000427
-name: pathogen chitin binding to host chitinase present
+name: obsolete pathogen chitin binding to host chitinase present
 namespace: pathogen_host_interaction_phenotype
 def: "A molecular function phenotype in which the binding of pathogen chitin to host chitinase is present." []
-is_a: PHIPO:0000425 ! pathogen host interaction pathogen carbohydrate binding phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:31:18Z
 
@@ -4133,7 +4129,7 @@ creation_date: 2018-12-10T14:32:50Z
 id: PHIPO:0000430
 name: carbohydrate binding phenotype
 namespace: single_species_phenotype
-def: "A single organism  phenotype (molecular function??) that affects carbohydrate binding. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+def: "A single species molecular function phenotype that affects carbohydrate binding. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
@@ -4145,7 +4141,7 @@ creation_date: 2018-12-10T14:37:34Z
 id: PHIPO:0000431
 name: abolished pathogen chitin fragment binding
 namespace: single_species_phenotype
-def: "A pathogen molecular function phenotype in which pathogen chitin fragment binding by a pathogen gene product does not occur. (It was present and is now absent)." []
+def: "A single species pathogen molecular function phenotype in which pathogen chitin fragment binding by a pathogen gene product does not occur. (It was present and is now absent)." []
 is_a: PHIPO:0000421 ! abolished carbohydrate binding
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:39:51Z
@@ -4230,7 +4226,7 @@ id: PHIPO:0000439
 name: pathogen reproductive phenotype within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype which affects the pathogen reproductive process within the host. The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms (GO:0000003)." []
-is_a: PHIPO:0000001 ! pathogen host interaction phenotype
+is_a: PHIPO:0001163 ! pathogen host interaction reproductive phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-18T11:25:46Z
 
@@ -4298,6 +4294,7 @@ creation_date: 2018-12-18T12:46:14Z
 id: PHIPO:0000446
 name: host cell death phenotype
 namespace: single_species_phenotype
+def: "A single species phenotype that affects the cell death within a host." []
 subset: host_phenotype
 is_a: PHIPO:0000034 ! cell phenotype
 created_by: alaynecuzick
@@ -4360,13 +4357,13 @@ creation_date: 2018-12-21T12:55:04Z
 
 [Term]
 id: PHIPO:0000462
-name: abolished host PCD induced by pathogen during necrotrophic lifestyle
+name: abolished effector-mediated host programmed cell death during necrotrophy
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the process of host tissue PCD modulated by the pathogen is abolished (GO:0034053)." []
+def: "A phenotype where the process of host tissue programmed cell death modulated by the pathogen is abolished (GO:0034053)." []
 comment: This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen.
 synonym: "abolished host lesion" RELATED []
 synonym: "abolished host necrotic cell death" RELATED []
-is_a: PHIPO:0000465 ! absence of host PCD induced by pathogen during necrotrophic lifestyle
+is_a: PHIPO:0000465 ! absence of effector-mediated host programmed cell death during necrotrophy
 created_by: alaynecuzick
 creation_date: 2018-12-21T12:55:59Z
 
@@ -4393,13 +4390,13 @@ creation_date: 2018-12-21T13:01:44Z
 
 [Term]
 id: PHIPO:0000465
-name: absence of host PCD induced by pathogen during necrotrophic lifestyle
+name: absence of effector-mediated host programmed cell death during necrotrophy
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the process of host tissue PCD modulated by the pathogen is absent (GO:0034053)." []
+def: "A phenotype where the process of host tissue programmed cell death modulated by the pathogen is absent (GO:0034053)." []
 comment: This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen.
 synonym: "absence of host lesion" RELATED []
 synonym: "absence of host necrotic cell death" RELATED []
-is_a: PHIPO:0000280 ! effector phenotype
+is_a: PHIPO:0000280 ! pathogen effector mediated modulation of host immune system process
 is_a: PHIPO:0000461 ! host programmed cell death phenotype induced by pathogen presence
 is_a: PHIPO:0000481 ! absence of host necrotic cell death by pathogen
 created_by: alaynecuzick
@@ -4409,7 +4406,7 @@ creation_date: 2018-12-21T13:03:50Z
 id: PHIPO:0000466
 name: host necrotic cell death by pathogen induced hypersensitive response
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype that affects the immune system process of host necrotic cell death by pathogen induced hypersensitive response. Pathogen induced HR is the rapid, localized death of plant cells in response to invasion by a pathogen (GO:0009626)." []
+def: "A phenotype that affects the immune system process of host necrotic cell death by pathogen induced hypersensitive response. Pathogen induced hypersensitive response is the rapid, localized death of plant cells in response to invasion by a pathogen (GO:0009626)." []
 comment: This term is to be used for host protection against the pathogen.\nThis is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
@@ -4419,8 +4416,9 @@ creation_date: 2018-12-21T13:09:35Z
 
 [Term]
 id: PHIPO:0000467
-name: host hypersensitive response
+name: presence of effector-independent host hypersensitive response
 namespace: single_species_phenotype
+def: "A single species phenotype where the immune system process of host tissue hypersensitive response is present in a pathogen effector-independant manner. (i.e. an alteration within the host is responsible for the activation of the hypersensitive response in the absence of a pathogen)." []
 subset: host_phenotype
 is_a: PHIPO:0000446 ! host cell death phenotype
 created_by: alaynecuzick
@@ -4428,7 +4426,7 @@ creation_date: 2018-12-21T13:24:37Z
 
 [Term]
 id: PHIPO:0000468
-name: pathogen asexual spores absent within host
+name: absence of pathogen asexual spores within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen reproductive phenotype within host where the pathogen asexual spores are absent (FAO:0000023)." []
 synonym: "pathogen conidia absent within host" EXACT []
@@ -4494,25 +4492,25 @@ creation_date: 2019-01-14T12:21:13Z
 
 [Term]
 id: PHIPO:0000476
-name: gain of host PCD induced by pathogen during necrotrophic lifestyle
+name: gain of effector-mediated host programmed cell death during necrotrophy
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the process of host tissue PCD modulated by the pathogen has been gained (host PCD was absent and is now present) (GO:0034053)." []
+def: "A phenotype where the process of host tissue programmed cell death modulated by the pathogen has been gained (host programmed cell death was absent and is now present) (GO:0034053)." []
 comment: This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen.
 synonym: "gain of host necrotic cell death" RELATED []
 synonym: "gain of presence of host lesion" RELATED []
-is_a: PHIPO:0000477 ! presence of host PCD induced by pathogen during necrotrophic lifestyle
+is_a: PHIPO:0000477 ! presence of effector-mediated host programmed cell death during necrotrophy
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:22:36Z
 
 [Term]
 id: PHIPO:0000477
-name: presence of host PCD induced by pathogen during necrotrophic lifestyle
+name: presence of effector-mediated host programmed cell death during necrotrophy
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the process of host tissue PCD modulated by the pathogen is present (GO:0034053)." []
+def: "A phenotype where the process of host tissue programmed cell death modulated by the pathogen is present (GO:0034053)." []
 comment: This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen.
 synonym: "presence of host lesion" RELATED []
 synonym: "presence of host necrotic cell death" RELATED []
-is_a: PHIPO:0000280 ! effector phenotype
+is_a: PHIPO:0000280 ! pathogen effector mediated modulation of host immune system process
 is_a: PHIPO:0000461 ! host programmed cell death phenotype induced by pathogen presence
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:23:06Z
@@ -4557,19 +4555,19 @@ creation_date: 2019-01-14T12:25:11Z
 
 [Term]
 id: PHIPO:0000483
-name: normal pathogen host interaction phenotype
+name: obsolete normal pathogen host interaction phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype which is normal (i.e. the same as wild-type)." []
-is_a: PHIPO:0000001 ! pathogen host interaction phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-01-14T13:59:00Z
 
 [Term]
 id: PHIPO:0000484
-name: abnormal pathogen host interaction phenotype
+name: obsolete abnormal pathogen host interaction phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype which is abnormal (i.e. different than wild-type)." []
-is_a: PHIPO:0000001 ! pathogen host interaction phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-01-14T13:59:26Z
 
@@ -4650,55 +4648,55 @@ creation_date: 2019-01-18T13:04:53Z
 
 [Term]
 id: PHIPO:0000499
-name: normal synthesis of deoxynivalenol
+name: obsolete normal synthesis of deoxynivalenol
 namespace: single_species_phenotype
 def: "A single organism phenotype in which the biosynthesis of deoxynivalenol is normal (i.e. same as the wild type)." []
-is_a: PHIPO:0000497 ! normal toxin biosynthetic process
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-01-18T13:05:54Z
 
 [Term]
 id: PHIPO:0000500
-name: abnormal biosynthesis of deoxynivalenol
+name: obsolete abnormal biosynthesis of deoxynivalenol
 namespace: single_species_phenotype
 def: "A single organism phenotype in which the biosynthesis of deoxynivalenol is abnormal (i.e. different than the wild type)." []
-is_a: PHIPO:0000498 ! abnormal toxin biosynthetic process
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-01-18T13:06:19Z
 
 [Term]
 id: PHIPO:0000501
-name: increased level of deoxynivalenol
+name: obsolete increased level of deoxynivalenol
 namespace: single_species_phenotype
 def: "A single species cell phenotype in which the amount of deoxynivalenol measured in a cell is higher than normal." []
-is_a: PHIPO:0001037 ! increased cellular toxin level
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-01-18T13:06:49Z
 
 [Term]
 id: PHIPO:0000502
-name: decreased level of deoxynivalenol
+name: obsolete decreased level of deoxynivalenol
 namespace: single_species_phenotype
 def: "A single species cell phenotype in which the amount of deoxynivalenol measured in a cell is lower than normal." []
-is_a: PHIPO:0001031 ! decreased cellular toxin level
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-01-18T13:07:24Z
 
 [Term]
 id: PHIPO:0000503
-name: deoxynivalenol absent from cell
+name: obsolete deoxynivalenol absent from cell
 namespace: single_species_phenotype
 def: "A single organism cell phenotype in which the amount of deoxynivalenol measured in a cell is too low to detect." []
-is_a: PHIPO:0001034 ! substance absent from cell
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-01-18T13:07:42Z
 
 [Term]
 id: PHIPO:0000504
-name: deoxynivalenol present
+name: obsolete deoxynivalenol present
 namespace: single_species_phenotype
 def: "A single species cell phenotype in which the amount of deoxynivalenol measured in a cell is normal (i.e. indistinguishable from wild type)." []
-is_a: PHIPO:0001039 ! normal cellular toxin level
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-01-18T13:07:54Z
 
@@ -4744,7 +4742,7 @@ creation_date: 2019-02-11T12:07:38Z
 
 [Term]
 id: PHIPO:0000510
-name: pathogen host interaction cell level phenotype
+name: pathogen host interaction cell phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype that is observed at the level of an individual cell." []
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
@@ -4786,7 +4784,7 @@ name: inviable population
 namespace: single_species_phenotype
 def: "An organism population phenotype in which no organisms in the population are viable." []
 synonym: "essential" RELATED []
-synonym: "lethal" EXACT []
+synonym: "lethal" RELATED []
 is_a: PHIPO:0000514 ! population viability phenotype
 property_value: created:by "alaynecuzick" xsd:string
 creation_date: 2019-02-11T13:01:17Z
@@ -4806,13 +4804,13 @@ creation_date: 2019-02-11T13:07:36Z
 
 [Term]
 id: PHIPO:0000516
-name: gain of host HR induced by pathogen during biotrophic lifestyle
+name: gain of effector-mediated host hypersensitive response during biotrophy
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the process of host tissue HR modulated by the pathogen has been gained (host HR was absent and is now present) (GO:0009626)." []
+def: "A phenotype where the process of host tissue hypersensitive response modulated by the pathogen has been gained (host hypersensitive response was absent and is now present) (GO:0009626)." []
 comment: This term is to be used for host protection against the pathogen.
 synonym: "gain of host necrotic cell death" RELATED []
 synonym: "gain of presence of host lesion" RELATED []
-is_a: PHIPO:0000192 ! presence of host HR induced by pathogen during biotrophic lifestyle
+is_a: PHIPO:0000192 ! presence of effector-mediated host hypersensitive response during biotrophy
 created_by: alaynecuzick
 creation_date: 2019-03-05T13:46:52Z
 
@@ -4962,15 +4960,6 @@ property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
 [Term]
-id: PHIPO:0000535
-name: resistance to rifampin
-namespace: single_species_phenotype
-def: "A phenotype in which a population of a single-species shows increased resistance to rifampin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000412 ! increased resistance to chemical during growth
-property_value: created:by "alaynecuzick" xsd:string
-property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
-
-[Term]
 id: PHIPO:0000536
 name: resistance to triclosan
 namespace: single_species_phenotype
@@ -5002,15 +4991,6 @@ id: PHIPO:0000539
 name: resistance to ciprofloxacin
 namespace: single_species_phenotype
 def: "A phenotype in which a population of a single-species shows increased resistance to ciprofloxacin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000412 ! increased resistance to chemical during growth
-property_value: created:by "alaynecuzick" xsd:string
-property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
-
-[Term]
-id: PHIPO:0000540
-name: resistance to polymyxin B
-namespace: single_species_phenotype
-def: "A phenotype in which a population of a single-species shows increased resistance to polymyxin B, manifested as an affect on the extent of population growth." []
 is_a: PHIPO:0000412 ! increased resistance to chemical during growth
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
@@ -5101,15 +5081,6 @@ id: PHIPO:0000551
 name: resistance to brassinin
 namespace: single_species_phenotype
 def: "A phenotype in which a population of a single-species shows increased resistance to brassinin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000412 ! increased resistance to chemical during growth
-property_value: created:by "alaynecuzick" xsd:string
-property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
-
-[Term]
-id: PHIPO:0000552
-name: resistance to cefuroximel
-namespace: single_species_phenotype
-def: "A phenotype in which a population of a single-species shows increased resistance to cefuroximel, manifested as an affect on the extent of population growth." []
 is_a: PHIPO:0000412 ! increased resistance to chemical during growth
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
@@ -5370,6 +5341,7 @@ property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 id: PHIPO:0000582
 name: resistance to cefuroxime
 namespace: single_species_phenotype
+alt_id: PHIPO:0000552
 def: "A phenotype in which a population of a single-species shows increased resistance to cefuroxime, manifested as an affect on the extent of population growth." []
 is_a: PHIPO:0000412 ! increased resistance to chemical during growth
 property_value: created:by "alaynecuzick" xsd:string
@@ -5487,7 +5459,9 @@ property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 id: PHIPO:0000597
 name: resistance to polymyxin B1
 namespace: single_species_phenotype
+alt_id: PHIPO:0000540
 def: "A phenotype in which a population of a single-species shows increased resistance to polymyxin B1, manifested as an affect on the extent of population growth." []
+synonym: "resistance to polymyxin B" RELATED []
 is_a: PHIPO:0000412 ! increased resistance to chemical during growth
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
@@ -5568,7 +5542,9 @@ property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 id: PHIPO:0000606
 name: resistance to rifampicin
 namespace: single_species_phenotype
+alt_id: PHIPO:0000535
 def: "A phenotype in which a population of a single-species shows increased resistance to rifampicin, manifested as an affect on the extent of population growth." []
+synonym: "resistance to rifampin" RELATED []
 is_a: PHIPO:0000412 ! increased resistance to chemical during growth
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
@@ -6333,7 +6309,9 @@ property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 id: PHIPO:0000697
 name: resistance to fosfomycin
 namespace: single_species_phenotype
+alt_id: PHIPO:0000702
 def: "A phenotype in which a population of a single-species shows increased resistance to fosfomycin, manifested as an affect on the extent of population growth." []
+synonym: "resistance to phosphomycin" RELATED []
 is_a: PHIPO:0000412 ! increased resistance to chemical during growth
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
@@ -6370,15 +6348,6 @@ id: PHIPO:0000701
 name: resistance to vancomycin
 namespace: single_species_phenotype
 def: "A phenotype in which a population of a single-species shows increased resistance to vancomycin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000412 ! increased resistance to chemical during growth
-property_value: created:by "alaynecuzick" xsd:string
-property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
-
-[Term]
-id: PHIPO:0000702
-name: resistance to phosphomycin
-namespace: single_species_phenotype
-def: "A phenotype in which a population of a single-species shows increased resistance to phosphomycin, manifested as an affect on the extent of population growth." []
 is_a: PHIPO:0000412 ! increased resistance to chemical during growth
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
@@ -6504,7 +6473,9 @@ property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 id: PHIPO:0000718
 name: sensitive to polymyxin B1
 namespace: single_species_phenotype
+alt_id: PHIPO:0000857
 def: "A phenotype in which a population of a single-species shows increased sensitivity to polymyxin B1, manifested as an affect on the extent of population growth." []
+synonym: "sensitive to polymyxin B" RELATED []
 is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
@@ -7095,19 +7066,12 @@ property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
 [Term]
-id: PHIPO:0000787
-name: sensitive to phosphomycin
-namespace: single_species_phenotype
-def: "A phenotype in which a population of a single-species shows increased sensitivity to phosphomycin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
-property_value: created:by "alaynecuzick" xsd:string
-property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
-
-[Term]
 id: PHIPO:0000788
 name: sensitive to fosfomycin
 namespace: single_species_phenotype
+alt_id: PHIPO:0000787
 def: "A phenotype in which a population of a single-species shows increased sensitivity to fosfomycin, manifested as an affect on the extent of population growth." []
+synonym: "sensitive to phosphomycin" RELATED []
 is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
@@ -7374,15 +7338,6 @@ property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
 [Term]
-id: PHIPO:0000821
-name: sensitive to cefuroximel
-namespace: single_species_phenotype
-def: "A phenotype in which a population of a single-species shows increased sensitivity to cefuroximel, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
-property_value: created:by "alaynecuzick" xsd:string
-property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
-
-[Term]
 id: PHIPO:0000822
 name: sensitive to antimycin A
 namespace: single_species_phenotype
@@ -7512,7 +7467,9 @@ property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 id: PHIPO:0000836
 name: sensitive to rifampicin
 namespace: single_species_phenotype
+alt_id: PHIPO:0000856
 def: "A phenotype in which a population of a single-species shows increased sensitivity to rifampicin, manifested as an affect on the extent of population growth." []
+synonym: "sensitive to rifampin" RELATED []
 is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
@@ -7557,6 +7514,7 @@ property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 id: PHIPO:0000841
 name: sensitive to cefuroxime
 namespace: single_species_phenotype
+alt_id: PHIPO:0000821
 def: "A phenotype in which a population of a single-species shows increased sensitivity to cefuroxime, manifested as an affect on the extent of population growth." []
 is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
 property_value: created:by "alaynecuzick" xsd:string
@@ -7666,24 +7624,6 @@ id: PHIPO:0000855
 name: sensitive to doxycycline
 namespace: single_species_phenotype
 def: "A phenotype in which a population of a single-species shows increased sensitivity to doxycycline, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
-property_value: created:by "alaynecuzick" xsd:string
-property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
-
-[Term]
-id: PHIPO:0000856
-name: sensitive to rifampin
-namespace: single_species_phenotype
-def: "A phenotype in which a population of a single-species shows increased sensitivity to rifampin, manifested as an affect on the extent of population growth." []
-is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
-property_value: created:by "alaynecuzick" xsd:string
-property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
-
-[Term]
-id: PHIPO:0000857
-name: sensitive to polymyxin B
-namespace: single_species_phenotype
-def: "A phenotype in which a population of a single-species shows increased sensitivity to polymyxin B, manifested as an affect on the extent of population growth." []
 is_a: PHIPO:0000020 ! increased sensitivity to chemical during growth
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
@@ -8104,13 +8044,13 @@ property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
 [Term]
 id: PHIPO:0000924
-name: pathogen host interaction oxidative burst phenotype
+name: pathogen induced host oxidative burst phenotype
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype where a phase of elevated metabolic activity, during which oxygen consumption increases made as part of a defense response elicited by the host; this leads to the production, by an NADH dependent system, of hydrogen peroxide (H2O2), superoxide anions and hydroxyl radicals." []
+def: "A pathogen host interaction phenotype, which affects a pathogen induced host oxidative burst (GO:0002679)." []
 comment: Definition adapted from GO:0002679 respiratory burst involved in defense response.
 synonym: "pathogen host interaction respiratory burst phenotype" EXACT []
 xref: GO:0002679
-is_a: PHIPO:0000220 ! pathogen host interaction metabolic process phenotype
+is_a: PHIPO:0001173 ! pathogen modulation of host process phenotype
 created_by: alaynecuzick
 creation_date: 2019-05-01T09:18:19Z
 
@@ -8127,24 +8067,26 @@ creation_date: 2019-05-01T10:52:19Z
 
 [Term]
 id: PHIPO:0000927
-name: pathogen induced host ROS production
+name: presence of pathogen induced host reactive oxygen species production
 namespace: pathogen_host_interaction_phenotype
 alt_id: PHIPO:0000926
-def: "A pathogen host interaction phenotype which is present in the host where a phase of elevated metabolic activity, during which oxygen consumption increases made as part of a defense response elicited by the host; this leads to the production, by an NADH dependent system, of hydrogen peroxide (H2O2), superoxide anions and hydroxyl radicals." []
+def: "A pathogen host interaction phenotype, in which the host reactive oxygen species species (ROS) usually present during infection are present." []
 synonym: "host H202 production resulting from oxidative burst" EXACT []
 synonym: "increased host H202 production resulting from oxidative burst" EXACT []
-synonym: "pathogen host interaction respiratory burst present in host" EXACT []
-is_a: PHIPO:0000924 ! pathogen host interaction oxidative burst phenotype
+synonym: "pathogen induced host oxidative burst present" EXACT []
+synonym: "pathogen induced host respiratory burst present" EXACT []
+is_a: PHIPO:0000924 ! pathogen induced host oxidative burst phenotype
 created_by: alaynecuzick
 creation_date: 2019-05-01T10:52:28Z
 
 [Term]
 id: PHIPO:0000928
-name: pathogen induced host ROS production absent
+name: absence of pathogen induced host reactive oxygen species production
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype which is absent in the host where a phase of elevated metabolic activity, during which oxygen consumption increases made as part of a defense response elicited by the host; this leads to the production, by an NADH dependent system, of hydrogen peroxide (H2O2), superoxide anions and hydroxyl radicals." []
-synonym: "pathogen host interaction respiratory burst absent in host" EXACT []
-is_a: PHIPO:0000924 ! pathogen host interaction oxidative burst phenotype
+def: "A pathogen host interaction phenotype, in which the host reactive oxygen species species (ROS) usually present during infection are absent." []
+synonym: "pathogen induced host oxidative burst absent" EXACT []
+synonym: "pathogen induced host respiratory burst absent" EXACT []
+is_a: PHIPO:0000924 ! pathogen induced host oxidative burst phenotype
 created_by: alaynecuzick
 creation_date: 2019-05-01T10:53:36Z
 
@@ -8338,6 +8280,7 @@ id: PHIPO:0000948
 name: mutualism absent
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction where the mutualism phenotype is normal (i.e. the same as wild-type), and the wild-type interaction does not exhibit mutualism." []
+subset: qc_extension_only
 is_a: PHIPO:0000039 ! normal mutualism
 created_by: alaynecuzick
 creation_date: 2019-05-24T11:02:11Z
@@ -8374,10 +8317,10 @@ creation_date: 2019-05-24T12:07:04Z
 
 [Term]
 id: PHIPO:0000952
-name: abolished pathogen growth in host
+name: abolished pathogen growth within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is abolished (it was present as is now absent)." []
-is_a: PHIPO:0000364 ! abnormal pathogen growth in host
+is_a: PHIPO:0000364 ! abnormal pathogen growth within host
 created_by: alaynecuzick
 creation_date: 2019-05-24T12:21:58Z
 
@@ -8392,10 +8335,10 @@ creation_date: 2019-05-24T12:23:57Z
 
 [Term]
 id: PHIPO:0000954
-name: pathogen growth present in host
+name: pathogen growth present within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is present." []
-is_a: PHIPO:0000354 ! normal pathogen growth in host
+is_a: PHIPO:0000354 ! normal pathogen growth within host
 created_by: alaynecuzick
 creation_date: 2019-05-24T12:25:01Z
 
@@ -8472,8 +8415,7 @@ name: loss of virulence
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is abolished on a specific host genotype." []
 comment: For use in the annotation extension infective ability.\nNote this pathogen may still be pathogenic on an alternate host genotype. \nNote that avirulence means loss of pathogenicity in medical terminology.
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
+subset: qc_extension_only
 synonym: "abolished virulence" EXACT []
 synonym: "avirulence" RELATED []
 is_a: PHIPO:0000015 ! reduced virulence
@@ -8482,14 +8424,12 @@ creation_date: 2019-06-26T11:54:44Z
 
 [Term]
 id: PHIPO:0000965
-name: loss of virulence of gain of pathogenicity mutant
+name: obsolete loss of virulence of gain of pathogenicity mutant
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is abolished when observed in an interaction with a pathogen mutant which was previously engineered to gain pathogenicity." []
 comment: For use in the annotation extension infective ability.\nNote this pathogen may still be pathogenic on an alternate host genotype.
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
-is_a: PHIPO:0000009 ! gain of pathogenicity
-is_a: PHIPO:0000964 ! loss of virulence
+subset: qc_extension_only
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-06-26T12:27:44Z
 
@@ -8701,51 +8641,49 @@ creation_date: 2019-08-10T12:07:56Z
 
 [Term]
 id: PHIPO:0000987
-name: altered level of substance phenotype in a pathogen host interaction
+name: obsolete altered level of substance phenotype in a pathogen host interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A cell phenotype in which the amount of a specific substance measured in a cell within a pathogen host interaction differs from normal." []
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
-is_a: PHIPO:0000510 ! pathogen host interaction cell level phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-08-10T12:17:39Z
 
 [Term]
 id: PHIPO:0000988
-name: altered protein level in a pathogen host interaction
+name: obsolete altered protein level in a pathogen host interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A cell phenotype in which the amount of protein measured in a pathogen or host cell differs from normal. Total protein or a specific protein may be affected." []
-is_a: PHIPO:0000987 ! altered level of substance phenotype in a pathogen host interaction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-08-10T12:19:50Z
 
 [Term]
 id: PHIPO:0000989
-name: decreased protein level in a pathogen host interaction
+name: decreased level of pathogen protein within host
 namespace: pathogen_host_interaction_phenotype
-def: "A cell phenotype in which the amount of protein measured in a pathogen or host cell is lower than normal. Total protein or a specific protein may be affected." []
-is_a: PHIPO:0000988 ! altered protein level in a pathogen host interaction
-is_a: PHIPO:0001040 ! decreased level of a substance in a pathogen host interaction
+def: "A pathogen host interaction phenotype, in which the level of pathogen protein usually present during infection is lower than normal." []
+is_a: PHIPO:0001170 ! altered level of pathogen substance within host
 created_by: alaynecuzick
 creation_date: 2019-08-10T12:20:29Z
 
 [Term]
 id: PHIPO:0000990
-name: absent expression of a pathogen gene product involved in host interaction
+name: obsolete absence of pathogen protein with host
 namespace: pathogen_host_interaction_phenotype
-def: "A cell phenotype in which the amount of pathogen protein measured in an interaction with a host cell is too low to detect. Total protein or a specific protein may be affected." []
-is_a: PHIPO:0001044 ! protein absent in a pathogen host interaction
+def: "A pathogen host interaction phenotype, in which the pathogen produced protein usually present during infection is absent." []
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-08-10T12:20:59Z
 
 [Term]
 id: PHIPO:0000991
-name: increased protein level in a pathogen host interaction
+name: increased level of host protein involved in a pathogen host interaction
 namespace: pathogen_host_interaction_phenotype
-def: "A cell phenotype in which the amount of protein measured in a pathogen or host cell is higher than normal. Total protein or a specific protein may be affected." []
-is_a: PHIPO:0000988 ! altered protein level in a pathogen host interaction
-is_a: PHIPO:0001041 ! increased level of a substance in a pathogen host interaction
+def: "A pathogen host interaction phenotype, in which the level of host protein usually present during infection is higher than normal." []
+is_a: PHIPO:0001169 ! altered level of pathogen induced host substance
 created_by: alaynecuzick
 creation_date: 2019-08-10T12:22:12Z
 
@@ -8753,36 +8691,35 @@ creation_date: 2019-08-10T12:22:12Z
 id: PHIPO:0000992
 name: increased expression of a host defense related marker gene involved in pathogen interaction
 namespace: pathogen_host_interaction_phenotype
-def: "A cell phenotype in which the amount of host defence-related protein measured in an interaction with a pathogen cell is higher than normal. Total protein or a specific protein may be affected." []
-is_a: PHIPO:0000991 ! increased protein level in a pathogen host interaction
+def: "A pathogen host interaction phenotype, in which the level of host defence-related protein usually present during infection is higher than normal." []
+is_a: PHIPO:0000991 ! increased level of host protein involved in a pathogen host interaction
 created_by: alaynecuzick
 creation_date: 2019-08-10T12:23:36Z
 
 [Term]
 id: PHIPO:0000993
-name: altered RNA level in a pathogen host interaction
+name: obsolete altered RNA level in a pathogen host interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A cell phenotype in which the amount of RNA measured in a pathogen or host cell differs from normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." []
-is_a: PHIPO:0000987 ! altered level of substance phenotype in a pathogen host interaction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-08-10T12:30:53Z
 
 [Term]
 id: PHIPO:0000994
-name: decreased RNA level in a pathogen host interaction
+name: obsolete decreased RNA level in a pathogen host interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A cell phenotype in which the amount of RNA measured in a pathogen or host cell is lower than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." []
-is_a: PHIPO:0000993 ! altered RNA level in a pathogen host interaction
-is_a: PHIPO:0001040 ! decreased level of a substance in a pathogen host interaction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-08-10T12:31:25Z
 
 [Term]
 id: PHIPO:0000995
-name: decreased level of pathogen RNA involved in a host interaction
+name: decreased level of pathogen RNA within host
 namespace: pathogen_host_interaction_phenotype
-def: "A cell phenotype in which the amount of pathogen RNA measured in an interaction with a host cell is lower than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." []
-is_a: PHIPO:0000994 ! decreased RNA level in a pathogen host interaction
+def: "A pathogen host interaction phenotype, in which the level of pathogen RNA usually present during infection is lower than normal." []
+is_a: PHIPO:0001170 ! altered level of pathogen substance within host
 created_by: alaynecuzick
 creation_date: 2019-08-10T12:32:05Z
 
@@ -8819,7 +8756,7 @@ name: abnormal pathogen swollen terminal hyphae during cell to cell migration
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype where the morphology of the pathogen terminal hyphae during host colonization is abnormal. This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
 synonym: "abnormal pathogen swollen terminal hyphae during colonization of host" EXACT []
-is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration in host
+is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration within host
 is_a: PHIPO:0000999 ! abnormal pathogen morphology during colonization of host
 created_by: alaynecuzick
 creation_date: 2019-08-10T13:49:58Z
@@ -8831,7 +8768,7 @@ namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype where the morphology of the pathogen septin collar (GO:0032173) during host colonization is abnormal. This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
 comment: update Go term when available to 'septin collar of invasive fungi'
 synonym: "abnormal organization of pathogen septin collar during colonization of host" RELATED []
-is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration in host
+is_a: PHIPO:0000334 ! abnormal pathogen cell to cell migration within host
 is_a: PHIPO:0000999 ! abnormal pathogen morphology during colonization of host
 created_by: alaynecuzick
 creation_date: 2019-08-10T13:51:23Z
@@ -8933,19 +8870,19 @@ creation_date: 2019-08-10T15:11:18Z
 
 [Term]
 id: PHIPO:0001012
-name: pathogen host interaction polysaccharide localization phenotype
+name: obsolete pathogen host interaction polysaccharide localization phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype which affects the localization of a polysaccharide in a pathogen or host cell is abnormal. This includes any process in which a polysaccharide is transported to, or maintained in, a specific location. (GO:0033037)." []
-is_a: PHIPO:0000236 ! pathogen host interaction localization phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-08-10T16:33:27Z
 
 [Term]
 id: PHIPO:0001013
-name: abnormal pathogen host interaction polysaccharide localization
+name: obsolete abnormal pathogen host interaction polysaccharide localization
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype in which the localization of a polysaccharide in a pathogen or host cell is abnormal. This includes any process in which a polysaccharide is transported to, or maintained in, a specific location. (GO:0033037)." []
-is_a: PHIPO:0001012 ! pathogen host interaction polysaccharide localization phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-08-10T16:36:54Z
 
@@ -8953,9 +8890,9 @@ creation_date: 2019-08-10T16:36:54Z
 id: PHIPO:0001014
 name: increased level of host callose deposition induced by pathogen
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype where there is an increased amount of host callose deposition." []
-is_a: PHIPO:0001016 ! altered level of host callose deposition induced by pathogen
-is_a: PHIPO:0001041 ! increased level of a substance in a pathogen host interaction
+def: "A pathogen host interaction phenotype, in which the level of host produced callose deposition usually present during infection is higher than normal." []
+comment: GO:0052542
+is_a: PHIPO:0001169 ! altered level of pathogen induced host substance
 created_by: alaynecuzick
 creation_date: 2019-08-10T16:37:53Z
 
@@ -8963,18 +8900,18 @@ creation_date: 2019-08-10T16:37:53Z
 id: PHIPO:0001015
 name: decreased level of host callose deposition induced by pathogen
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype where there is a decreased amount of host callose deposition." []
-is_a: PHIPO:0001016 ! altered level of host callose deposition induced by pathogen
-is_a: PHIPO:0001040 ! decreased level of a substance in a pathogen host interaction
+def: "A pathogen host interaction phenotype, in which the level of host produced callose deposition usually present during infection is lower than normal." []
+comment: GO:0052542
+is_a: PHIPO:0001169 ! altered level of pathogen induced host substance
 created_by: alaynecuzick
 creation_date: 2019-08-10T16:38:36Z
 
 [Term]
 id: PHIPO:0001016
-name: altered level of host callose deposition induced by pathogen
+name: obsolete altered level of host callose deposition induced by pathogen
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype where any process in which callose is transported to, and/or maintained in, a specific location during the host defense response to a pathogen is abnormal. Callose is a linear 1,3-beta-d-glucan formed from UDP-glucose and is found in certain plant cell walls. (GO:0052542)." []
-is_a: PHIPO:0000987 ! altered level of substance phenotype in a pathogen host interaction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-08-10T16:43:59Z
 
@@ -9046,7 +8983,6 @@ id: PHIPO:0001023
 name: decreased cellular cAMP level
 namespace: single_species_phenotype
 def: "A single species cell phenotype in which the amount of cyclic AMP measured in a cell is lower than normal." []
-synonym: "altered cellular cyclic AMP level" EXACT []
 synonym: "decreased cellular cAMP accumulation" EXACT []
 synonym: "reduced cellular cAMP level" EXACT []
 xref: FYPO:0001660
@@ -9231,86 +9167,83 @@ creation_date: 2019-09-06T11:55:23Z
 
 [Term]
 id: PHIPO:0001040
-name: decreased level of a substance in a pathogen host interaction
+name: obsolete decreased level of a substance in a pathogen host interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A cell phenotype in which the amount of a specific substance measured in a pathogen or host cell is lower than normal." []
-is_a: PHIPO:0000987 ! altered level of substance phenotype in a pathogen host interaction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-09-06T12:27:07Z
 
 [Term]
 id: PHIPO:0001041
-name: increased level of a substance in a pathogen host interaction
+name: obsolete increased level of a substance in a pathogen host interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A cell phenotype in which the amount of a specific substance measured in a pathogen or host cell is higher than normal." []
-is_a: PHIPO:0000987 ! altered level of substance phenotype in a pathogen host interaction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-09-06T12:27:17Z
 
 [Term]
 id: PHIPO:0001042
-name: substance absent in a pathogen host interaction
+name: obsolete substance absent in a pathogen host interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A cell phenotype in which the amount of a specific substance measured in a pathogen or host cell is too low to detect." []
-is_a: PHIPO:0001040 ! decreased level of a substance in a pathogen host interaction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-09-06T12:27:54Z
 
 [Term]
 id: PHIPO:0001043
-name: altered toxin level in a pathogen host interaction
+name: altered level of pathogen toxin within host
 namespace: pathogen_host_interaction_phenotype
-def: "A cell phenotype in which the amount of toxin measured in a pathogen or host cell differs from normal." []
-is_a: PHIPO:0000987 ! altered level of substance phenotype in a pathogen host interaction
+def: "A pathogen host interaction phenotype, in which the level of pathogen produced toxin usually present during infection differs from normal." []
+is_a: PHIPO:0001170 ! altered level of pathogen substance within host
 created_by: alaynecuzick
 creation_date: 2019-09-06T12:30:03Z
 
 [Term]
 id: PHIPO:0001044
-name: protein absent in a pathogen host interaction
+name: obsolete protein absent in a pathogen host interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A cell phenotype in which the amount of protein measured in a pathogen or host cell is too low to detect. Total protein or a specific protein may be affected." []
 xref: FYPO:0001983
-is_a: PHIPO:0000989 ! decreased protein level in a pathogen host interaction
-is_a: PHIPO:0001042 ! substance absent in a pathogen host interaction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-09-06T12:39:49Z
 
 [Term]
 id: PHIPO:0001045
-name: decreased toxin level in a pathogen host interaction
+name: decreased level of pathogen toxin within host
 namespace: pathogen_host_interaction_phenotype
-def: "A cell phenotype in which the amount of toxin measured in a pathogen or host cell is lower than normal." []
-is_a: PHIPO:0001043 ! altered toxin level in a pathogen host interaction
+def: "A pathogen host interaction phenotype, in which the level of pathogen produced toxin usually present during infection is lower than normal." []
+is_a: PHIPO:0001043 ! altered level of pathogen toxin within host
 created_by: alaynecuzick
 creation_date: 2019-09-06T12:44:12Z
 
 [Term]
 id: PHIPO:0001046
-name: increased toxin level in a pathogen host interaction
+name: increased level of pathogen toxin within host
 namespace: pathogen_host_interaction_phenotype
-def: "A cell phenotype in which the amount of toxin measured in a pathogen or host cell is higher than normal." []
-is_a: PHIPO:0001043 ! altered toxin level in a pathogen host interaction
+def: "A pathogen host interaction phenotype, in which the level of pathogen produced toxin usually present during infection is higher than normal." []
+is_a: PHIPO:0001043 ! altered level of pathogen toxin within host
 created_by: alaynecuzick
 creation_date: 2019-09-06T12:44:20Z
 
 [Term]
 id: PHIPO:0001047
-name: toxin absent in a pathogen host interaction
+name: absence of pathogen toxin within host
 namespace: pathogen_host_interaction_phenotype
-def: "A cell phenotype in which the amount of toxin measured in a pathogen or host cell is too low to detect." []
-is_a: PHIPO:0001042 ! substance absent in a pathogen host interaction
-is_a: PHIPO:0001045 ! decreased toxin level in a pathogen host interaction
+def: "A pathogen host interaction phenotype, in which the pathogen produced toxin usually present during infection is absent or at a level too low to detect." []
+is_a: PHIPO:0001045 ! decreased level of pathogen toxin within host
 created_by: alaynecuzick
 creation_date: 2019-09-06T12:45:24Z
 
 [Term]
 id: PHIPO:0001048
-name: normal level of substance phenotype in a pathogen host interaction
+name: obsolete normal level of substance phenotype in a pathogen host interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A cell phenotype in which the amount of a specific substance measured in a pathogen or host cell is normal (i.e. indistinguishable from wild type)." []
-is_a: PHIPO:0000483 ! normal pathogen host interaction phenotype
-is_a: PHIPO:0000510 ! pathogen host interaction cell level phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-09-06T12:46:32Z
 
@@ -9396,8 +9329,10 @@ creation_date: 2019-09-10T13:38:53Z
 id: PHIPO:0001057
 name: normal colony shape
 namespace: single_species_phenotype
+alt_id: PHIPO:0001065
 def: "A single species phenotype where the shape of the colony is normal (indistinguishable from wild type)." []
 synonym: "normal colony morphology" BROAD []
+synonym: "normal shape of colony" EXACT []
 is_a: PHIPO:0001049 ! colony shape phenotype
 is_a: PHIPO:0001057 ! normal colony shape
 created_by: alaynecuzick
@@ -9519,7 +9454,7 @@ name: survival of host organism with pathogen
 namespace: pathogen_host_interaction_phenotype
 def: "A host organism viability phenotype where the host organism survives in the presence of the pathogen." []
 synonym: "viable host organism with pathogen" RELATED []
-is_a: PHIPO:0001070 ! pathogen host interaction organism viability phenotype
+is_a: PHIPO:0001070 ! host organism viability with pathogen phenotype
 created_by: alaynecuzick
 creation_date: 2019-09-20T11:06:42Z
 
@@ -9531,13 +9466,14 @@ def: "A host organism viability phenotype where the host organism death is accel
 synonym: "host kill assay" RELATED []
 synonym: "inviable host organism with pathogen" RELATED []
 synonym: "pathogen induced death of host organism" RELATED []
-is_a: PHIPO:0001070 ! pathogen host interaction organism viability phenotype
+synonym: "precocious senescence" RELATED []
+is_a: PHIPO:0001070 ! host organism viability with pathogen phenotype
 created_by: alaynecuzick
 creation_date: 2019-09-20T11:07:02Z
 
 [Term]
 id: PHIPO:0001070
-name: pathogen host interaction organism viability phenotype
+name: host organism viability with pathogen phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction organism level phenotype which affects the viability of an individual host organism in the presence of a pathogen." []
 is_a: PHIPO:0001067 ! pathogen host interaction organism level phenotype
@@ -9628,30 +9564,29 @@ creation_date: 2019-09-27T10:17:08Z
 
 [Term]
 id: PHIPO:0001079
-name: pathogen host interaction pigment phenotype
+name: obsolete pathogen host interaction pigment phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction organism level phenotype affecting the deposition or aggregation of coloring matter in a cell." []
-is_a: PHIPO:0001067 ! pathogen host interaction organism level phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-09-27T11:17:57Z
 
 [Term]
 id: PHIPO:0001080
-name: altered pigment accumulation in pathogen asexual spore with host
+name: altered pathogen pigment accumulation within host
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction pigment phenotype where the accumulation of coloring matter in a pathogen asexual spore with a host is altered." []
-synonym: "altered pigment accumulation in pathogen conidia with host" EXACT []
-is_a: PHIPO:0001079 ! pathogen host interaction pigment phenotype
+def: "A pathogen host interaction phenotype, in which the accumulation of pathogen pigmentation (coloring matter) usually present during infection differs from normal." []
+is_a: PHIPO:0001067 ! pathogen host interaction organism level phenotype
 created_by: alaynecuzick
 creation_date: 2019-09-27T11:19:13Z
 
 [Term]
 id: PHIPO:0001081
-name: absence of melanin accumulation in pathogen asexual spore with host
+name: absence of melanin accumulation in pathogen asexual spore within host
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction pigment phenotype where the accumulation of melanin in a pathogen asexual spore with a host is absent." []
+def: "A pathogen host interaction, in which the accumulation of melanin within a pathogen asexual spore, usually present during infection, is absent." []
 synonym: "absence of melanin accumulation in pathogen conidia with host" EXACT []
-is_a: PHIPO:0001080 ! altered pigment accumulation in pathogen asexual spore with host
+is_a: PHIPO:0001080 ! altered pathogen pigment accumulation within host
 created_by: alaynecuzick
 creation_date: 2019-09-27T11:20:21Z
 
@@ -9666,10 +9601,11 @@ creation_date: 2019-09-30T08:59:36Z
 
 [Term]
 id: PHIPO:0001083
-name: pathogen induced callose deposition in host
+name: presence of pathogen induced callose deposition in host
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype where any process in which callose is transported to, and/or maintained in, a specific location during the host defense response to a pathogen is normal (i.e. indistinguishable from wild type). Callose is a linear 1,3-beta-d-glucan formed from UDP-glucose and is found in certain plant cell walls. (GO:0052542)." []
-is_a: PHIPO:0001048 ! normal level of substance phenotype in a pathogen host interaction
+def: "A pathogen host interaction phenotype, in which the level of host produced callose deposition usually present during infection is normal (i.e. indistinguishable from wild type)." []
+comment: GO:0052542
+is_a: PHIPO:0001172 ! normal level of pathogen induced host substance
 created_by: alaynecuzick
 creation_date: 2019-10-01T09:09:20Z
 
@@ -9816,26 +9752,25 @@ creation_date: 2019-10-04T09:25:47Z
 
 [Term]
 id: PHIPO:0001099
-name: increased RNA level in a pathogen host interaction
+name: obsolete increased RNA level in a pathogen host interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A cell phenotype in which the amount of RNA measured in a pathogen or host cell is higher than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." []
-is_a: PHIPO:0000993 ! altered RNA level in a pathogen host interaction
-is_a: PHIPO:0001041 ! increased level of a substance in a pathogen host interaction
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-10-04T12:30:49Z
 
 [Term]
 id: PHIPO:0001100
-name: increased level of pathogen RNA involved in a host interaction
+name: increased level of pathogen RNA within host
 namespace: pathogen_host_interaction_phenotype
-def: "A cell phenotype in which the amount of pathogen RNA measured in an interaction with a host cell is higher than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." []
-is_a: PHIPO:0001099 ! increased RNA level in a pathogen host interaction
+def: "A pathogen host interaction phenotype, in which the level of pathogen RNA usually present during infection is higher than normal." []
+is_a: PHIPO:0001170 ! altered level of pathogen substance within host
 created_by: alaynecuzick
 creation_date: 2019-10-04T12:31:14Z
 
 [Term]
 id: PHIPO:0001101
-name: pathogen asexual sporulation structures absent within host
+name: absence of pathogen asexual sporulation structures within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen reproductive phenotype within host where the pathogen asexual sporulation structures are absent." []
 synonym: "pycnidia absent within host" RELATED []
@@ -9855,10 +9790,10 @@ creation_date: 2019-10-04T12:43:45Z
 
 [Term]
 id: PHIPO:0001104
-name: increased level of host RNA involved in a pathogen host interaction
+name: increased level of host RNA involved in a pathogen interaction
 namespace: pathogen_host_interaction_phenotype
-def: "A cell phenotype in which the amount of cellular host RNA measured in an interaction with a pathogen is higher than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." []
-is_a: PHIPO:0001099 ! increased RNA level in a pathogen host interaction
+def: "A pathogen host interaction phenotype, in which the level of host RNA usually present during infection is higher than normal." []
+is_a: PHIPO:0001169 ! altered level of pathogen induced host substance
 created_by: alaynecuzick
 creation_date: 2019-10-07T13:26:33Z
 
@@ -9873,7 +9808,7 @@ creation_date: 2019-10-07T13:29:01Z
 
 [Term]
 id: PHIPO:0001106
-name: pathogen host protein-protein interaction present
+name: presence of pathogen host protein-protein interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A molecular function phenotype in which the binding of one pathogen protein to one host protein is present." []
 synonym: "binding present between pathogen protein and host protein" EXACT []
@@ -9883,7 +9818,7 @@ creation_date: 2019-10-09T12:33:57Z
 
 [Term]
 id: PHIPO:0001107
-name: pathogen host protein-protein interaction absent
+name: absence of pathogen host protein-protein interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A molecular function phenotype in which the binding of one pathogen protein to one host protein is absent." []
 synonym: "binding absent between pathogen protein and host protein" EXACT []
@@ -9893,20 +9828,20 @@ creation_date: 2019-10-09T12:34:12Z
 
 [Term]
 id: PHIPO:0001108
-name: pathogen host interaction pH phenotype
+name: obsolete pathogen host interaction pH phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype that affects the pH in a pathogen or host cell or cellular component." []
-is_a: PHIPO:0000510 ! pathogen host interaction cell level phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-10-09T12:41:35Z
 
 [Term]
 id: PHIPO:0001109
-name: abnormal pH within a pathogen host interaction
+name: abnormal pathogen induced host pH
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype where the pH in a pathogen or host cell or cellular component is abnormal." []
-synonym: "altered pH within a pathogen host interaction" EXACT []
-is_a: PHIPO:0001108 ! pathogen host interaction pH phenotype
+def: "A pathogen host interaction phenotype, in which the host pH value during infection differs from normal." []
+synonym: "altered pathogen induced host pH" EXACT []
+is_a: PHIPO:0000510 ! pathogen host interaction cell phenotype
 created_by: alaynecuzick
 creation_date: 2019-10-09T12:42:06Z
 
@@ -9917,7 +9852,7 @@ namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype where the pathogen induces a pH decrease within the host cell or cellular component." []
 synonym: "pathogen induced acidification of host" EXACT []
 synonym: "pathogen induced low pH in host" EXACT []
-is_a: PHIPO:0001109 ! abnormal pH within a pathogen host interaction
+is_a: PHIPO:0001109 ! abnormal pathogen induced host pH
 created_by: alaynecuzick
 creation_date: 2019-10-09T12:42:51Z
 
@@ -9928,16 +9863,16 @@ namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype where the pathogen induces a pH increase within the host cell or cellular component." []
 synonym: "pathogen induced alkalinization of host" EXACT []
 synonym: "pathogen induced high pH in host" EXACT []
-is_a: PHIPO:0001109 ! abnormal pH within a pathogen host interaction
+is_a: PHIPO:0001109 ! abnormal pathogen induced host pH
 created_by: alaynecuzick
 creation_date: 2019-10-09T12:43:07Z
 
 [Term]
 id: PHIPO:0001112
-name: normal pH within a pathogen host interaction
+name: obsolete normal pH within a pathogen host interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype where the pH in a pathogen or host cell or cellular component is normal." []
-is_a: PHIPO:0001108 ! pathogen host interaction pH phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-10-09T12:45:38Z
 
@@ -9972,19 +9907,21 @@ creation_date: 2019-10-18T09:13:50Z
 
 [Term]
 id: PHIPO:0001116
-name: pathogen host interaction signaling pathway phenotype
+name: pathogen modulation of host immune system signaling pathway phenotype
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype that affects a signaling pathway in either a pathogen or host cell during a pathogen host interaction." []
-is_a: PHIPO:0000510 ! pathogen host interaction cell level phenotype
+def: "A pathogen host interaction phenotype that affects a host immune system signaling pathway during pathogen infection." []
+synonym: "pathogen modulation of host immune system signalling pathway phenotype" EXACT []
+is_a: PHIPO:0001167 ! pathogen modulation of host immune system process phenotype
 created_by: alaynecuzick
 creation_date: 2019-10-22T12:26:26Z
 
 [Term]
 id: PHIPO:0001117
-name: host immune signalling pathway activated by pathogen
+name: host immune signaling pathway activated by pathogen
 namespace: pathogen_host_interaction_phenotype
-def: "A cell signaling pathway phenotype where the host immune signaling pathway is induced by a pathogen." []
-is_a: PHIPO:0001116 ! pathogen host interaction signaling pathway phenotype
+def: "A pathogen host interaction phenotype, in which the host immune signaling pathway is induced by a pathogen." []
+synonym: "host immune signalling pathway activated by pathogen" EXACT []
+is_a: PHIPO:0001116 ! pathogen modulation of host immune system signaling pathway phenotype
 created_by: alaynecuzick
 creation_date: 2019-10-22T12:26:58Z
 
@@ -10086,25 +10023,27 @@ creation_date: 2019-12-03T10:59:32Z
 
 [Term]
 id: PHIPO:0001128
-name: pathogen suppression of host PTI
+name: effector-mediated suppression of host PAMP-triggered immunity
 namespace: pathogen_host_interaction_phenotype
 def: "A cell signaling pathway phenotype where the molecular pattern-induced host innate immune response signaling pathway is suppressed by a pathogen. (GO:0052034)" []
+synonym: "pathogen suppression of host PAMP-triggered immunity" EXACT []
 synonym: "suppression of host MAMP-triggered immunity" EXACT []
 synonym: "suppression of host PAMP-triggered immunity" EXACT []
 synonym: "suppression of host PTI" EXACT []
-is_a: PHIPO:0001116 ! pathogen host interaction signaling pathway phenotype
+is_a: PHIPO:0001176 ! effector-mediated immune suppression phenotype
 created_by: alaynecuzick
 creation_date: 2019-12-03T11:08:34Z
 
 [Term]
 id: PHIPO:0001129
-name: abolished pathogen suppression of host PTI
+name: abolished pathogen suppression of host PAMP-triggered immunity
 namespace: pathogen_host_interaction_phenotype
 def: "A cell signaling pathway phenotype where the molecular pattern-induced host innate immune response signaling pathway that was suppressed by a pathogen is no longer suppressed (suppression was present and is now absent). (GO:0052034)" []
+synonym: "abolished pathogen suppression of host PTI" EXACT []
 synonym: "abolished suppression of host MAMP-triggered immunity" EXACT []
 synonym: "abolished suppression of host PAMP-triggered immunity" EXACT []
 synonym: "abolished suppression of host PTI" EXACT []
-is_a: PHIPO:0001116 ! pathogen host interaction signaling pathway phenotype
+is_a: PHIPO:0001116 ! pathogen modulation of host immune system signaling pathway phenotype
 created_by: alaynecuzick
 creation_date: 2019-12-03T11:09:29Z
 
@@ -10209,29 +10148,33 @@ creation_date: 2020-01-07T13:11:13Z
 
 [Term]
 id: PHIPO:0001140
-name: host PTI signaling activated by pathogen
+name: host PAMP-triggered immunity signaling activated by pathogen
 namespace: pathogen_host_interaction_phenotype
-def: "A cell signalling pathway phenotype where the host pattern recognition receptor signalling pathway is directly induced by a pathogen. This can include any series of molecular signals generated as a consequence of a pattern recognition receptor (PRR) binding to a pathogen-derived physiological ligand. PRR ligands are usually referred to as pathogen-associated molecular pattern (PAMPs) or microbe-associated molecular pattern (MAMPs), structures conserved among microbial species (GO:0002221)." []
+def: "A cell signaling pathway phenotype where the host pattern recognition receptor signaling pathway is directly induced by a pathogen. This can include any series of molecular signals generated as a consequence of a pattern recognition receptor (PRR) binding to a pathogen-derived physiological ligand. PRR ligands are usually referred to as pathogen-associated molecular pattern (PAMPs) or microbe-associated molecular pattern (MAMPs), structures conserved among microbial species (GO:0002221)." []
 synonym: "activation of host MAMP-triggered immunity" EXACT []
 synonym: "activation of host PAMP-triggered immunity" EXACT []
 synonym: "activation of host PRR signalling pathway" BROAD []
 synonym: "activation of host PTI" EXACT []
+synonym: "host PAMP-triggered immunity signalling activated by pathogen" EXACT []
+synonym: "host PTI signaling activated by pathogen" EXACT []
 synonym: "pathogen induced host MAP kinase activity" RELATED []
-is_a: PHIPO:0001117 ! host immune signalling pathway activated by pathogen
+is_a: PHIPO:0001117 ! host immune signaling pathway activated by pathogen
 created_by: alaynecuzick
 creation_date: 2020-01-28T11:29:52Z
 
 [Term]
 id: PHIPO:0001141
-name: host ETI signalling induced HR activated by pathogen
+name: obsolete host effector triggered immunity signaling induced hypersensitive response activated by pathogen
 namespace: pathogen_host_interaction_phenotype
-def: "A cell signalling pathway phenotype where the host effector-triggered immunity signalling pathway is induced by a pathogen to activate a plant hypersensitive response (HR) and induce necrosis." []
+def: "A cell signaling pathway phenotype where the host effector-triggered immunity signaling pathway is induced by a pathogen to activate a plant hypersensitive response and induce necrosis." []
 synonym: "activation of host effector-triggered immunity inducing HR" EXACT []
 synonym: "activation of host ETI" BROAD []
 synonym: "activation of host ETI inducing HR" EXACT []
 synonym: "activation of host ETI inducing PCD" BROAD []
 synonym: "activation of host ETI signalling pathway inducing HR" EXACT []
-is_a: PHIPO:0001117 ! host immune signalling pathway activated by pathogen
+synonym: "host effector triggered immunity signalling induced hypersensitive response activated by pathogen" EXACT []
+synonym: "host ETI signalling induced HR activated by pathogen" EXACT []
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2020-01-28T11:36:13Z
 
@@ -10240,7 +10183,7 @@ id: PHIPO:0001142
 name: normal pathogen protein localization to host chloroplast
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype in which the localization of a pathogen protein to the host chloroplast is normal (i.e. indistinguishable from wild type)." []
-is_a: PHIPO:0000270 ! normal pathogen host interaction protein localization
+is_a: PHIPO:0001175 ! normal pathogen protein localization within host
 created_by: alaynecuzick
 creation_date: 2020-01-28T12:05:46Z
 
@@ -10249,28 +10192,30 @@ id: PHIPO:0001143
 name: abolished pathogen protein localization to host chloroplast
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype in which the localization of a pathogen protein to the host chloroplast is abolished (i.e.the protein was localized to the host chloroplast and now is not)." []
-is_a: PHIPO:0000246 ! abolished pathogen host interaction protein localization
+is_a: PHIPO:0000246 ! abolished pathogen protein localization within host
 created_by: alaynecuzick
 creation_date: 2020-01-28T12:13:25Z
 
 [Term]
 id: PHIPO:0001144
-name: decreased level of RNA from host defense related marker gene involved in pathogen interaction
+name: decreased level of host defense related marker gene RNA involved in a pathogen interaction
 namespace: pathogen_host_interaction_phenotype
-def: "A cell phenotype in which the amount of host defence-related RNA measured in an interaction with a pathogen is lower than normal. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected." []
-is_a: PHIPO:0000995 ! decreased level of pathogen RNA involved in a host interaction
+def: "A pathogen host interaction phenotype, in which the level of host defence-related RNA usually present during infection is lower than normal." []
+is_a: PHIPO:0001174 ! decreased level of host RNA involved in a pathogen interaction
 created_by: alaynecuzick
 creation_date: 2020-01-28T12:40:16Z
 
 [Term]
 id: PHIPO:0001145
-name: pathogen suppression of host ETI
+name: effector-mediated suppression of host effector triggered immunity
 namespace: pathogen_host_interaction_phenotype
 def: "A cell signaling pathway phenotype where the host effector-triggered immunity innate immune response signaling pathway is suppressed by a pathogen. (GO:0140404)" []
+synonym: "pathogen suppression of host effector triggered immunity" EXACT []
+synonym: "pathogen suppression of host ETI" EXACT []
 synonym: "suppression of host effector triggered immunity" EXACT []
 synonym: "suppression of host ETI" EXACT []
-is_a: PHIPO:0000186 ! abolished host HR induced by pathogen during biotrophic lifestyle
-is_a: PHIPO:0001116 ! pathogen host interaction signaling pathway phenotype
+is_a: PHIPO:0000186 ! abolished effector-mediated host hypersensitive response during biotrophy
+is_a: PHIPO:0001176 ! effector-mediated immune suppression phenotype
 created_by: alaynecuzick
 creation_date: 2020-03-04T12:47:38Z
 
@@ -10295,7 +10240,7 @@ creation_date: 2020-03-04T13:53:21Z
 
 [Term]
 id: PHIPO:0001148
-name: unaltered ROS production
+name: unaltered reactive oxygen species production
 namespace: single_species_phenotype
 def: "A single species metabolic cellular process phenotype in which the formation of reactive oxygen species (any molecules or ions formed by the incomplete one-electron reduction of oxygen) is unaltered.(GO:1903409)" []
 synonym: "normal reactive oxygen species production" EXACT []
@@ -10305,7 +10250,7 @@ creation_date: 2020-03-04T13:57:18Z
 
 [Term]
 id: PHIPO:0001149
-name: decreased ROS production
+name: decreased reactive oxygen species production
 namespace: single_species_phenotype
 def: "A single species metabolic cellular process phenotype in which the formation of reactive oxygen species (any molecules or ions formed by the incomplete one-electron reduction of oxygen) is decreased.(GO:1903409)" []
 synonym: "decreased reactive oxygen species production" EXACT []
@@ -10316,7 +10261,7 @@ creation_date: 2020-03-04T14:03:31Z
 
 [Term]
 id: PHIPO:0001150
-name: abnormal spatial extent of ROS production
+name: abnormal spatial extent of reactive oxygen species production
 namespace: single_species_phenotype
 def: "A single species localization phenotype in which ROS are produced over a different portion of the cell than normal." []
 is_a: PHIPO:0001094 ! abnormal localization
@@ -10352,6 +10297,357 @@ synonym: "increased hyphal branching" EXACT []
 is_a: PHIPO:0000961 ! cell morphology phenotype
 created_by: alaynecuzick
 creation_date: 2020-03-04T14:33:49Z
+
+[Term]
+id: PHIPO:0001154
+name: decreased pathogen chitin fragment binding
+namespace: single_species_phenotype
+def: "A single species pathogen molecular function phenotype in which pathogen chitin fragment binding by a pathogen gene product is decreased." []
+is_a: PHIPO:0000423 ! decreased carbohydrate binding
+created_by: alaynecuzick
+creation_date: 2020-03-10T09:51:20Z
+
+[Term]
+id: PHIPO:0001155
+name: decreased level of pathogen reactive oxygen species production within host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the level of pathogen produced reactive oxygen species (ROS) usually present during infection is lower than normal." []
+synonym: "decreased level of pathogen ROS production with host" EXACT []
+is_a: PHIPO:0001170 ! altered level of pathogen substance within host
+created_by: alaynecuzick
+creation_date: 2020-03-10T11:33:08Z
+
+[Term]
+id: PHIPO:0001156
+name: increased level of pathogen reactive oxygen species production within host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the level of pathogen produced reactive oxygen species (ROS) usually present during infection is higher than normal." []
+synonym: "increased level of pathogen ROS production with host" EXACT []
+is_a: PHIPO:0001170 ! altered level of pathogen substance within host
+created_by: alaynecuzick
+creation_date: 2020-03-10T11:35:08Z
+
+[Term]
+id: PHIPO:0001157
+name: obsolete unaltered pathogen reactive oxygen species production within host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction metabolic cellular process phenotype in which the formation of reactive oxygen species (any molecules or ions formed by the incomplete one-electron reduction of oxygen) by the pathogen is unaltered within the host.(GO:1903409)" []
+synonym: "normal pathogen ROS production within host" EXACT []
+is_obsolete: true
+created_by: alaynecuzick
+creation_date: 2020-03-10T11:35:41Z
+
+[Term]
+id: PHIPO:0001159
+name: pathogen tissue to tissue migration within host phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction colonization phenotype which affects the directional tissue to tissue movement of the pathogen within the host organism (GO:0044001)." []
+is_a: PHIPO:0000332 ! pathogen colonization of host phenotype
+is_a: PHIPO:0000512 ! pathogen host interaction tissue phenotype
+created_by: alaynecuzick
+creation_date: 2020-03-27T18:25:20Z
+
+[Term]
+id: PHIPO:0001160
+name: abolished pathogen tissue to tissue migration within host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction colonization phenotype in which the ability of the pathogen to move directionally from tissue to tissue within the host organism is abolished (pathogen migration was present within the host and is now absent)." []
+is_a: PHIPO:0001159 ! pathogen tissue to tissue migration within host phenotype
+created_by: alaynecuzick
+creation_date: 2020-03-27T18:30:00Z
+
+[Term]
+id: PHIPO:0001161
+name: absence of pathogen induced host phenolic compound
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the host phenolic compounds usually present during infection are absent." []
+comment: decreased level of CHEBI:33853 in host\nduring GO:051702 interaction with symbiont
+is_a: PHIPO:0001169 ! altered level of pathogen induced host substance
+created_by: alaynecuzick
+creation_date: 2020-03-27T18:36:56Z
+
+[Term]
+id: PHIPO:0001162
+name: host reproductive phenotype affected by pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype which affects the host reproductive process within the host when a pathogen is present. The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms (GO:0000003)." []
+is_a: PHIPO:0001163 ! pathogen host interaction reproductive phenotype
+created_by: alaynecuzick
+creation_date: 2020-03-30T15:14:51Z
+
+[Term]
+id: PHIPO:0001163
+name: pathogen host interaction reproductive phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype which affects either the pathogen or host reproductive process. The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms (GO:0000003)." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0000001 ! pathogen host interaction phenotype
+created_by: alaynecuzick
+creation_date: 2020-03-30T15:16:04Z
+
+[Term]
+id: PHIPO:0001164
+name: abnormal host reproductive structure development affected by pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A host reproductive phenotype with pathogen where the process of host reproductive development is abnormal (GO:0048608)." []
+is_a: PHIPO:0001162 ! host reproductive phenotype affected by pathogen
+created_by: alaynecuzick
+creation_date: 2020-03-30T15:17:25Z
+
+[Term]
+id: PHIPO:0001165
+name: abnormal host seed development affected by pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A host reproductive phenotype with pathogen where the process of host seed development is abnormal (GO:0048316)." []
+synonym: "abnormal host grain development with pathogen" EXACT []
+is_a: PHIPO:0001164 ! abnormal host reproductive structure development affected by pathogen
+created_by: alaynecuzick
+creation_date: 2020-03-30T15:17:44Z
+
+[Term]
+id: PHIPO:0001166
+name: host seed development absent affected by pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A host reproductive phenotype with pathogen where the process of host seed development is absent (GO:0048316)." []
+synonym: "host grain development absent with pathogen" EXACT []
+is_a: PHIPO:0001165 ! abnormal host seed development affected by pathogen
+created_by: alaynecuzick
+creation_date: 2020-03-30T15:18:09Z
+
+[Term]
+id: PHIPO:0001167
+name: pathogen modulation of host immune system process phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype that affects a host immune system process during pathogen infection (GO:0002376)." []
+comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0001173 ! pathogen modulation of host process phenotype
+created_by: alaynecuzick
+creation_date: 2020-04-27T16:23:38Z
+
+[Term]
+id: PHIPO:0001168
+name: presence of pathogen inhibition of host immune response protease
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the host immune response protease activity is inhibited by the pathogen." []
+synonym: "inhibition of host immune response serine-type peptidase activity present" EXACT []
+is_a: PHIPO:0001167 ! pathogen modulation of host immune system process phenotype
+created_by: alaynecuzick
+creation_date: 2020-04-27T16:38:17Z
+
+[Term]
+id: PHIPO:0001169
+name: altered level of pathogen induced host substance
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the level of a host produced substance usually present during infection differs from normal." []
+is_a: PHIPO:0000510 ! pathogen host interaction cell phenotype
+created_by: alaynecuzick
+creation_date: 2020-05-07T09:49:08Z
+
+[Term]
+id: PHIPO:0001170
+name: altered level of pathogen substance within host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the level of a pathogen produced substance usually present during infection differs from normal." []
+is_a: PHIPO:0000510 ! pathogen host interaction cell phenotype
+created_by: alaynecuzick
+creation_date: 2020-05-07T09:49:43Z
+
+[Term]
+id: PHIPO:0001171
+name: normal level of pathogen substance within host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the level of a pathogen produced substance usually present during infection is normal (i.e. indistinguishable from wild type)." []
+synonym: "unaltered level of host induced pathogen substance" EXACT []
+is_a: PHIPO:0000510 ! pathogen host interaction cell phenotype
+created_by: alaynecuzick
+creation_date: 2020-05-11T11:44:27Z
+
+[Term]
+id: PHIPO:0001172
+name: normal level of pathogen induced host substance
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the level of a host produced substance usually present during infection is normal (i.e. indistinguishable from wild type)." []
+synonym: "unaltered level of pathogen induced host substance" EXACT []
+is_a: PHIPO:0000510 ! pathogen host interaction cell phenotype
+created_by: alaynecuzick
+creation_date: 2020-05-11T11:45:22Z
+
+[Term]
+id: PHIPO:0001173
+name: pathogen modulation of host process phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which a pathogen effects a change in the structure or processes of its host organism (GO:0044003)." []
+is_a: PHIPO:0000510 ! pathogen host interaction cell phenotype
+created_by: alaynecuzick
+creation_date: 2020-05-12T11:06:22Z
+
+[Term]
+id: PHIPO:0001174
+name: decreased level of host RNA involved in a pathogen interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the level of host RNA usually present during infection is lower than normal." []
+is_a: PHIPO:0001169 ! altered level of pathogen induced host substance
+created_by: alaynecuzick
+creation_date: 2020-05-12T13:21:58Z
+
+[Term]
+id: PHIPO:0001175
+name: normal pathogen protein localization within host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the localization of a pathogen protein in a host cell is normal." []
+is_a: PHIPO:0000510 ! pathogen host interaction cell phenotype
+created_by: alaynecuzick
+creation_date: 2020-05-13T13:50:08Z
+
+[Term]
+id: PHIPO:0001176
+name: effector-mediated immune suppression phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype dependent on an interaction between a pathogen effector and a host process in order for the pathogen to suppress the host immune system. An effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defences or other host responses." []
+is_a: PHIPO:0000280 ! pathogen effector mediated modulation of host immune system process
+created_by: alaynecuzick
+creation_date: 2020-05-13T15:00:47Z
+
+[Term]
+id: PHIPO:0001179
+name: infective ability phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype that affects the infective ability of a pathogen during attempted colonization of a host." []
+comment: For use in the annotation extension infective ability.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0000001 ! pathogen host interaction phenotype
+created_by: alaynecuzick
+creation_date: 2020-06-01T13:19:23Z
+
+[Term]
+id: PHIPO:0001180
+name: absence of effector-independent host hypersensitive response
+namespace: single_species_phenotype
+def: "A single species phenotype where the immune system process of host tissue hypersensitive response is absent in a pathogen effector-independant manner. (i.e. an alteration within the host does not activate the hypersensitive response in the absence of a pathogen)." []
+subset: host_phenotype
+is_a: PHIPO:0000446 ! host cell death phenotype
+created_by: alaynecuzick
+creation_date: 2020-06-09T11:25:32Z
+
+[Term]
+id: PHIPO:0001181
+name: abolished effector-independent host hypersensitive response
+namespace: single_species_phenotype
+def: "A single species phenotype where the immune system process of host tissue hypersensitive response is abolished in a pathogen effector-independant manner. (i.e. an alteration within the host did activate the hypersensitive response in the absence of a pathogen and now does not)." []
+subset: host_phenotype
+is_a: PHIPO:0001180 ! absence of effector-independent host hypersensitive response
+created_by: alaynecuzick
+creation_date: 2020-06-09T11:33:36Z
+
+[Term]
+id: PHIPO:0001182
+name: normal level of deoxynivalenol
+namespace: single_species_phenotype
+def: "A single species cell phenotype in which the amount of deoxynivalenol measured in a cell is normal (i.e. indistinguishable from wild type)." []
+synonym: "normal level of DON" EXACT []
+is_a: PHIPO:0001039 ! normal cellular toxin level
+created_by: alaynecuzick
+creation_date: 2020-06-10T15:09:01Z
+
+[Term]
+id: PHIPO:0001183
+name: host resistance to pathogen phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype that is relevant to host resistance to a given pathogen." []
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0001179 ! infective ability phenotype
+created_by: alaynecuzick
+creation_date: 2020-06-22T15:25:30Z
+
+[Term]
+id: PHIPO:0001184
+name: loss of host resistance
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the ability of a host, to be resistant to a given pathogenic organism is abolished (resistance was present and is now absent)." []
+subset: qc_extension_only
+is_a: PHIPO:0001187 ! host resistance absent
+created_by: alaynecuzick
+creation_date: 2020-06-22T15:26:41Z
+
+[Term]
+id: PHIPO:0001185
+name: gain of host resistance
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the ability of a host, to be resistant to a given pathogenic organism is obtained (resistance was absent and is now present).." []
+subset: qc_extension_only
+is_a: PHIPO:0001186 ! host resistance present
+created_by: alaynecuzick
+creation_date: 2020-06-22T15:26:51Z
+
+[Term]
+id: PHIPO:0001186
+name: host resistance present
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the ability of a host, to be resistant to a given pathogenic organism is present." []
+subset: qc_extension_only
+synonym: "host susceptibility absent" EXACT []
+is_a: PHIPO:0001183 ! host resistance to pathogen phenotype
+created_by: alaynecuzick
+creation_date: 2020-06-22T15:27:22Z
+
+[Term]
+id: PHIPO:0001187
+name: host resistance absent
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the ability of a host, to be resistant to a given pathogenic organism is absent." []
+subset: qc_extension_only
+synonym: "host susceptibility present" EXACT []
+is_a: PHIPO:0001183 ! host resistance to pathogen phenotype
+created_by: alaynecuzick
+creation_date: 2020-06-22T15:27:41Z
+
+[Term]
+id: PHIPO:0001188
+name: gene-for-gene interaction phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype that affects the outcome of a gene-for-gene relationship in plant pathogen interactions. The gene-for-gene hypothesis follows that for each gene controlling resistance (R) in the host there is a corresponding gene controlling avirulence (avr) in the pathogen." []
+comment: For use in the annotation extension gene-for-gene interaction.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0000001 ! pathogen host interaction phenotype
+created_by: alaynecuzick
+creation_date: 2020-06-23T10:48:16Z
+
+[Term]
+id: PHIPO:0001189
+name: compatible interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the gene-for-gene relationship between the pathogen and plant host results in disease susceptibility." []
+subset: qc_extension_only
+is_a: PHIPO:0001188 ! gene-for-gene interaction phenotype
+created_by: alaynecuzick
+creation_date: 2020-06-23T10:49:18Z
+
+[Term]
+id: PHIPO:0001190
+name: incompatible interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the gene-for-gene relationship between the pathogen and plant host results in disease resistance." []
+subset: qc_extension_only
+is_a: PHIPO:0001188 ! gene-for-gene interaction phenotype
+created_by: alaynecuzick
+creation_date: 2020-06-23T10:49:48Z
+
+[Term]
+id: PHIPO:0001191
+name: presence of melanin accumulation in pathogen asexual spore within host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction, in which the accumulation of melanin within a pathogen asexual spore, usually present during infection, is present." []
+synonym: "presence of melanin accumulation in pathogen conidia with host" EXACT []
+is_a: PHIPO:0001080 ! altered pathogen pigment accumulation within host
+created_by: alaynecuzick
+creation_date: 2020-07-20T11:19:37Z
 
 [Typedef]
 id: PHIPO:0000304

@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2020-07-20/phipo-simple.owl
+data-version: phipo/releases/2020-07-28/phipo-simple.owl
 subsetdef: ro-eco ""
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
@@ -114,7 +114,7 @@ def: "A phenotype where the ability of a pathogen, to produce an infectious dise
 comment: For use in the annotation extension infective ability.\nCan only apply to changes in the pathogen. Note that this ability to cause pathogenicity is a feature of the pathogen. Therefore gain/loss of pathogenicity should never be dependent on changes to the host genotype, only on changes to the pathogen genotype. If you are annotating changes in disease presence or absence dependent on the changes to the host consider increased/decreased virulence phenotypes.
 subset: qc_extension_only
 synonym: "gain of disease causing ability" EXACT []
-is_a: PHIPO:0000014 ! increased virulence
+is_a: PHIPO:0000008 ! pathogenic ability present
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T12:45:12Z xsd:string
 
@@ -140,7 +140,7 @@ comment: Can apply to changes in the pathogen or the host.\nVirulence is a quant
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "disease severity" EXACT []
-is_a: PHIPO:0000008 ! pathogenic ability present
+is_a: PHIPO:0001179 ! infective ability phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:02:03Z xsd:string
 
@@ -4674,6 +4674,7 @@ id: PHIPO:0000500
 name: obsolete abnormal biosynthesis of deoxynivalenol
 namespace: single_species_phenotype
 def: "A single organism phenotype in which the biosynthesis of deoxynivalenol is abnormal (i.e. different than the wild type)." []
+is_a: PHIPO:0000498 ! abnormal toxin biosynthetic process
 is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-01-18T13:06:19Z
@@ -8437,13 +8438,12 @@ creation_date: 2019-06-26T11:54:44Z
 
 [Term]
 id: PHIPO:0000965
-name: loss of virulence of gain of pathogenicity mutant
+name: obsolete loss of virulence of gain of pathogenicity mutant
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is abolished when observed in an interaction with a pathogen mutant which was previously engineered to gain pathogenicity." []
 comment: For use in the annotation extension infective ability.\nNote this pathogen may still be pathogenic on an alternate host genotype.
 subset: qc_extension_only
-is_a: PHIPO:0000009 ! gain of pathogenicity
-is_a: PHIPO:0000964 ! loss of virulence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-06-26T12:27:44Z
 
