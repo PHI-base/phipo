@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/phipo/imports/go_import.owl#"
      xml:base="http://purl.obolibrary.org/obo/phipo/imports/go_import.owl"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:go="http://purl.obolibrary.org/obo/go#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -11,7 +10,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/phipo/imports/go_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2020-05-28/imports/go_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2020-07-28/imports/go_import.owl"/>
     </owl:Ontology>
     
 
@@ -207,18 +206,6 @@
         <rdfs:comment>Yeast GO slim</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/creator -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/date -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
     
 
 
@@ -1524,8 +1511,6 @@
         <obo:IAO_0000115>Interacting selectively and non-covalently with any protein or protein complex (a complex of two or more proteins that may include other nonprotein molecules).</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0001948</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0045308</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-170835</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-170846</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>protein amino acid binding</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>glycoprotein binding</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
@@ -1543,18 +1528,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Interacting selectively and non-covalently with any protein or protein complex (a complex of two or more proteins that may include other nonprotein molecules).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005515"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-170835</owl:annotatedTarget>
-        <rdfs:label>An anchoring protein, ZFYVE9 (SARA), recruits SMAD2/3</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005515"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-170846</owl:annotatedTarget>
-        <rdfs:label>TGFBR2 recruits TGFBR1</rdfs:label>
     </owl:Axiom>
     
 
@@ -1640,22 +1613,20 @@
     <!-- http://purl.obolibrary.org/obo/GO_0005623 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005623">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <obo:IAO_0000115>The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope.</obo:IAO_0000115>
+        <obo:IAO_0000115>OBSOLETE. The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope.</obo:IAO_0000115>
         <obo:IAO_0000589>cell and encapsulating structures</obo:IAO_0000589>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao1813327414</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Cell_(biology)</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0005623</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
-        <rdfs:label>cell</rdfs:label>
+        <rdfs:comment>This term was obsoleted because it was redundant with the root class of the cell ontology, CL:0000000.</rdfs:comment>
+        <rdfs:label>obsolete cell</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005623"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope.</owl:annotatedTarget>
+        <owl:annotatedTarget>OBSOLETE. The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:go_curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2403,7 +2374,6 @@
     <!-- http://purl.obolibrary.org/obo/GO_0008061 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008061">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008144"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0097367"/>
         <obo:IAO_0000115>Interacting selectively and non-covalently with chitin, a linear polysaccharide consisting of beta-(1-&gt;4)-linked N-acetyl-D-glucosamine residues.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
@@ -2590,19 +2560,27 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Catalysis of the hydrolysis of a peptide bond. A peptide bond is a covalent bond formed when the carbon atom from the carboxyl group of one amino acid shares electrons with the nitrogen atom from the amino group of a second amino acid.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>GO:0070010</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0070011</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>EC:3.4</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-205112</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-3000243</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-3065958</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-3065959</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-3139027</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-376149</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-4167501</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-448678</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-5655483</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-5684864</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-5685902</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-5693319</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-6803060</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>hydrolase, acting on peptide bonds</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>peptide hydrolase activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>protease activity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>peptidase activity, acting on D-amino acid peptides</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>peptidase activity, acting on L-amino acid peptides</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>proteinase activity</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0008233</oboInOwl:id>
@@ -2621,7 +2599,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Catalysis of the hydrolysis of a peptide bond. A peptide bond is a covalent bond formed when the carbon atom from the carboxyl group of one amino acid shares electrons with the nitrogen atom from the amino group of a second amino acid.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:0815332181</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0815332181</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008233"/>
@@ -2638,6 +2616,18 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008233"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-3065958</owl:annotatedTarget>
+        <rdfs:label>An unknown protease degrades ACACA</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008233"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-3065959</owl:annotatedTarget>
+        <rdfs:label>An unknown protease degrades hCBXs</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008233"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-3139027</owl:annotatedTarget>
         <rdfs:label>Maturation of HIV Virion</rdfs:label>
     </owl:Axiom>
@@ -2646,6 +2636,12 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-376149</owl:annotatedTarget>
         <rdfs:label>Proteolytic processing of SLIT</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008233"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-4167501</owl:annotatedTarget>
+        <rdfs:label>An unknown protease degrades ACACB</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008233"/>
@@ -2676,6 +2672,12 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-5693319</owl:annotatedTarget>
         <rdfs:label>CTRC hydrolyses PRSS1</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008233"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-6803060</owl:annotatedTarget>
+        <rdfs:label>DCD(63-110) is processed to DCD(63-109)</rdfs:label>
     </owl:Axiom>
     
 
@@ -4864,7 +4866,6 @@
         <oboInOwl:hasDbXref>Reactome:R-HSA-1483089</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-1483186</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-5668414</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:R-HSA-6787403</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-8868783</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0016740</oboInOwl:id>
@@ -4901,12 +4902,6 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>Reactome:R-HSA-5668414</owl:annotatedTarget>
         <rdfs:label>TRAF2 ubiquitinates cIAP1,2 in cIAP1,2:TRAF1:TRAF2:TRAF3:NIK</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016740"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>Reactome:R-HSA-6787403</owl:annotatedTarget>
-        <rdfs:label>GTPBP3 and MTO1 transform uridine-34 yielding 5-taurinomethyluridine-34 in tRNA</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016740"/>
@@ -5208,6 +5203,7 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pombe"/>
         <rdfs:label>secondary metabolic process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -6689,6 +6685,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0031640">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0001906"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044419"/>
         <obo:IAO_0000115>Any process in an organism that results in the killing of cells of another organism, including in some cases the death of the other organism. Killing here refers to the induction of death in one cell by another cell, not cell-autonomous death due to internal or other environmental conditions.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0001908</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym>killing of cells of another organism</oboInOwl:hasExactSynonym>
@@ -9188,15 +9185,15 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043170"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>biopolymer metabolic process</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:mtg_chebi_dec09</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043170"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The chemical reactions and pathways involving macromolecules, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043170"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>biopolymer metabolic process</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>GOC:mtg_chebi_dec09</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9816,11 +9813,13 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of symbiosis, an interaction between two organisms living together in more or less intimate association.</obo:IAO_0000115>
-        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/19222</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/19028</obo:IAO_0000233>
+        <oboInOwl:hasBroadSynonym>regulation of interspecies interactions between organisms</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>regulation of symbiosis, encompassing mutualism through parasitism</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0043903</oboInOwl:id>
-        <rdfs:label>regulation of interspecies interactions between organisms</rdfs:label>
+        <rdfs:comment>regulation of interspecies interactions between organisms</rdfs:comment>
+        <rdfs:label>regulation of symbiotic process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043903"/>
@@ -10382,7 +10381,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044068"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process in which a symbiont organism modulates the frequency, rate or extent of a cellular process, any process that is carried out at the cellular level, but not necessarily restricted to a single cell, in its host organism.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MITRE:tk</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MITRE:tk</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10415,7 +10414,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044071"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The process in which a symbiont organism effects a change in its host&apos;s cell cycle through direct interactions with the host cell macromolecular machinery.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MITRE:tk</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MITRE:tk</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10445,7 +10444,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044072"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The process in which a symbiont organism stops, prevents or reduces the rate or extent of its host&apos;s progression through its cell cycle via direct interactions with the host cell macromolecular machinery.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MITRE:tk</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MITRE:tk</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -15905,7 +15904,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0051883">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031640"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044419"/>
         <obo:IAO_0000115>Any process mediated by an organism that results in the death of cells in a second organism, where the two organisms are in a symbiotic interaction.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>killing of cells in other organism during symbiotic interaction</oboInOwl:hasRelatedSynonym>
@@ -17316,7 +17314,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A type of cell death that is morphologically characterized by an increasingly translucent cytoplasm, swelling of organelles, minor ultrastructural modifications of the nucleus (specifically, dilatation of the nuclear membrane and condensation of chromatin into small, irregular, circumscribed patches) and increased cell volume (oncosis), culminating in the disruption of the plasma membrane and subsequent loss of intracellular contents. Necrotic cells do not fragment into discrete corpses as their apoptotic counterparts do. Moreover, their nuclei remain intact and can aggregate and accumulate in necrotic tissues.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_apoptosis</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:18846107</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:18846107</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:20823910</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -18020,7 +18018,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0080134"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that modulates the frequency, rate or extent of a response to stress. Response to stress is a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a disturbance in organismal or cellular homeostasis, usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dhl</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:dhl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -18058,7 +18056,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0080135"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that modulates the frequency, rate or extent of a cellular response to stress. Cellular response to stress is a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating the organism is under stress. The stress is usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dhl</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:dhl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -20780,7 +20778,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Modulation of host cell motility by a symbiont of that host.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO_REF:0000063</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GO_REF:0000063</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:25049409</oboInOwl:hasDbXref>
     </owl:Axiom>
     

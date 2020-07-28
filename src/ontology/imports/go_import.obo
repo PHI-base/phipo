@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2020-05-28/imports/go_import.owl
+data-version: phipo/releases/2020-07-28/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
@@ -454,8 +454,6 @@ subset: goslim_pir
 subset: goslim_plant
 synonym: "glycoprotein binding" NARROW []
 synonym: "protein amino acid binding" EXACT []
-xref: Reactome:R-HSA-170835 "An anchoring protein, ZFYVE9 (SARA), recruits SMAD2/3"
-xref: Reactome:R-HSA-170846 "TGFBR2 recruits TGFBR1"
 is_a: GO:0005488 ! binding
 
 [Term]
@@ -497,16 +495,14 @@ is_a: GO:0005575 ! cellular_component
 
 [Term]
 id: GO:0005623
-name: cell
+name: obsolete cell
 namespace: cellular_component
-def: "The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope." [GOC:go_curators]
-subset: goslim_chembl
-subset: goslim_generic
-subset: goslim_plant
+def: "OBSOLETE. The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope." [GOC:go_curators]
+comment: This term was obsoleted because it was redundant with the root class of the cell ontology, CL:0000000.
 xref: NIF_Subcellular:sao1813327414
 xref: Wikipedia:Cell_(biology)
-is_a: GO:0005575 ! cellular_component
 property_value: IAO:0000589 "cell and encapsulating structures" xsd:string
+is_obsolete: true
 
 [Term]
 id: GO:0005634
@@ -874,7 +870,6 @@ name: chitin binding
 namespace: molecular_function
 def: "Interacting selectively and non-covalently with chitin, a linear polysaccharide consisting of beta-(1->4)-linked N-acetyl-D-glucosamine residues." [GOC:jl, ISBN:0198506732]
 subset: goslim_drosophila
-is_a: GO:0008144 ! drug binding
 is_a: GO:0097367 ! carbohydrate derivative binding
 
 [Term]
@@ -967,6 +962,8 @@ is_a: GO:0009987 ! cellular process
 id: GO:0008233
 name: peptidase activity
 namespace: molecular_function
+alt_id: GO:0070010
+alt_id: GO:0070011
 def: "Catalysis of the hydrolysis of a peptide bond. A peptide bond is a covalent bond formed when the carbon atom from the carboxyl group of one amino acid shares electrons with the nitrogen atom from the amino group of a second amino acid." [GOC:jl, ISBN:0815332181]
 subset: goslim_aspergillus
 subset: goslim_candida
@@ -977,19 +974,25 @@ subset: goslim_metagenomics
 subset: goslim_pir
 subset: goslim_yeast
 synonym: "hydrolase, acting on peptide bonds" EXACT []
+synonym: "peptidase activity, acting on D-amino acid peptides" NARROW []
+synonym: "peptidase activity, acting on L-amino acid peptides" NARROW []
 synonym: "peptide hydrolase activity" EXACT []
 synonym: "protease activity" EXACT []
 synonym: "proteinase activity" NARROW []
 xref: EC:3.4
 xref: Reactome:R-HSA-205112 "gamma-secretase cleaves p75NTR, releasing NRIF and TRAF6"
 xref: Reactome:R-HSA-3000243 "Unknown protease degrades GIF:Cbl to release Cbl"
+xref: Reactome:R-HSA-3065958 "An unknown protease degrades ACACA"
+xref: Reactome:R-HSA-3065959 "An unknown protease degrades hCBXs"
 xref: Reactome:R-HSA-3139027 "Maturation of HIV Virion"
 xref: Reactome:R-HSA-376149 "Proteolytic processing of SLIT"
+xref: Reactome:R-HSA-4167501 "An unknown protease degrades ACACB"
 xref: Reactome:R-HSA-448678 "CTSG cleaves CASP1(1-404)"
 xref: Reactome:R-HSA-5655483 "USP1 autocleavage"
 xref: Reactome:R-HSA-5684864 "NAPSA, CTSH, PGA3-5 cleave pro-SFTPB"
 xref: Reactome:R-HSA-5685902 "NAPSA, CTSH, PGA3-5 cleave pro-SFTPC"
 xref: Reactome:R-HSA-5693319 "CTRC hydrolyses PRSS1"
+xref: Reactome:R-HSA-6803060 "DCD(63-110) is processed to DCD(63-109)"
 is_a: GO:0016787 ! hydrolase activity
 is_a: GO:0140096 ! catalytic activity, acting on a protein
 relationship: part_of GO:0006508 ! proteolysis
@@ -1855,7 +1858,6 @@ xref: EC:2
 xref: Reactome:R-HSA-1483089 "PE is converted to PS by PTDSS2"
 xref: Reactome:R-HSA-1483186 "PC is converted to PS by PTDSS1"
 xref: Reactome:R-HSA-5668414 "TRAF2 ubiquitinates cIAP1,2 in cIAP1,2:TRAF1:TRAF2:TRAF3:NIK"
-xref: Reactome:R-HSA-6787403 "GTPBP3 and MTO1 transform uridine-34 yielding 5-taurinomethyluridine-34 in tRNA"
 xref: Reactome:R-HSA-8868783 "TSR3 transfers aminocarboxypropyl group from S-adenosylmethionine to N(1)-methylpseudouridine-1248 of 18SE rRNA yielding N(1)-methyl-N(3)-aminocarboxypropylpseudouridine-1248"
 is_a: GO:0003824 ! catalytic activity
 
@@ -1970,6 +1972,7 @@ subset: goslim_chembl
 subset: goslim_generic
 subset: goslim_pir
 subset: goslim_plant
+subset: goslim_pombe
 synonym: "secondary metabolism" EXACT []
 synonym: "secondary metabolite metabolic process" EXACT []
 synonym: "secondary metabolite metabolism" EXACT []
@@ -2554,6 +2557,7 @@ subset: goslim_pir
 synonym: "killing of cells of another organism" EXACT [GOC:bf]
 synonym: "killing of cells of another, non-host, organism" NARROW []
 is_a: GO:0001906 ! cell killing
+is_a: GO:0044419 ! interspecies interaction between organisms
 
 [Term]
 id: GO:0032091
@@ -3668,15 +3672,17 @@ relationship: positively_regulates GO:0051704 ! multi-organism process
 
 [Term]
 id: GO:0043903
-name: regulation of interspecies interactions between organisms
+name: regulation of symbiotic process
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of symbiosis, an interaction between two organisms living together in more or less intimate association." [GOC:jl]
+comment: regulation of interspecies interactions between organisms
+synonym: "regulation of interspecies interactions between organisms" BROAD []
 synonym: "regulation of symbiosis, encompassing mutualism through parasitism" RELATED []
 is_a: GO:0050789 ! regulation of biological process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0044403 ! symbiotic process
 relationship: regulates GO:0044403 ! symbiotic process
-property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/19222 xsd:anyURI
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/19028 xsd:anyURI
 
 [Term]
 id: GO:0043934
@@ -4071,7 +4077,7 @@ def: "Any process that modulates the frequency, rate or extent of the progressio
 comment: This term partially replaces the obsolete term 'modulation of growth or development of symbiont during interaction with host ; GO:0075338'. See also 'modulation of growth of symbiont during interaction with host ; GO:0044144'.
 synonym: "modulation of development of symbiont during interaction with host" RELATED [GOC:dph]
 is_a: GO:0043900 ! regulation of multi-organism process
-is_a: GO:0043903 ! regulation of interspecies interactions between organisms
+is_a: GO:0043903 ! regulation of symbiotic process
 is_a: GO:0050793 ! regulation of developmental process
 relationship: regulates GO:0044115 ! development of symbiont involved in interaction with host
 created_by: jl
@@ -6006,7 +6012,6 @@ namespace: biological_process
 def: "Any process mediated by an organism that results in the death of cells in a second organism, where the two organisms are in a symbiotic interaction." [GOC:add]
 synonym: "killing of cells in other organism during symbiotic interaction" RELATED [GOC:tb]
 is_a: GO:0031640 ! killing of cells of other organism
-is_a: GO:0044419 ! interspecies interaction between organisms
 
 [Term]
 id: GO:0052038
@@ -6289,7 +6294,7 @@ synonym: "stimulation by organism of programmed cell death in other organism dur
 synonym: "upregulation by organism of programmed cell death in other organism during symbiotic interaction" RELATED [GOC:tb]
 synonym: "upregulation by organism of programmed cell death in other organism involved in symbiotic interaction" EXACT []
 is_a: GO:0043068 ! positive regulation of programmed cell death
-is_a: GO:0043903 ! regulation of interspecies interactions between organisms
+is_a: GO:0043903 ! regulation of symbiotic process
 is_a: GO:0051712 ! positive regulation of killing of cells of other organism
 is_a: GO:0052248 ! modulation of programmed cell death in other organism involved in symbiotic interaction
 relationship: positively_regulates GO:0051883 ! killing of cells in other organism involved in symbiotic interaction
@@ -6304,7 +6309,7 @@ synonym: "modulation by organism of entry into other organism during symbiotic i
 synonym: "modulation by symbiont of entry into host" RELATED []
 synonym: "regulation by organism of entry into other organism during symbiotic interaction" RELATED [GOC:tb]
 synonym: "regulation by organism of entry into other organism involved in symbiotic interaction" RELATED []
-is_a: GO:0043903 ! regulation of interspecies interactions between organisms
+is_a: GO:0043903 ! regulation of symbiotic process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0044409 ! entry into host
 relationship: regulates GO:0044409 ! entry into host
