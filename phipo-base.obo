@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2020-07-28/phipo-base.owl
+data-version: phipo/releases/2020-08-06/phipo-base.owl
 ontology: phipo/phipo-base
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
@@ -2280,7 +2280,7 @@ id: PHIPO:0000233
 name: presence of pathogen deoxynivalenol within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the pathogen produced deoxynivalenol usually present during infection is present as normal (i.e. indistinguishable from wild type)." []
-is_a: PHIPO:0001171 ! normal level of pathogen substance within host
+is_a: PHIPO:0001197 ! level of pathogen substance within host phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-02T09:19:27Z
 
@@ -8044,13 +8044,13 @@ property_value: creation:date 2018-03-20T14:29:00Z xsd:dateTime
 
 [Term]
 id: PHIPO:0000924
-name: pathogen induced host oxidative burst phenotype
+name: pathogen induced host oxidative burst level phenotype
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype, which affects a pathogen induced host oxidative burst (GO:0002679)." []
+def: "A pathogen host interaction phenotype, which affects a pathogen induced host oxidative burst level (GO:0002679)." []
 comment: Definition adapted from GO:0002679 respiratory burst involved in defense response.
 synonym: "pathogen host interaction respiratory burst phenotype" EXACT []
 xref: GO:0002679
-is_a: PHIPO:0001173 ! pathogen modulation of host process phenotype
+is_a: PHIPO:0001196 ! pathogen induced host substance level phenotype
 created_by: alaynecuzick
 creation_date: 2019-05-01T09:18:19Z
 
@@ -8067,26 +8067,26 @@ creation_date: 2019-05-01T10:52:19Z
 
 [Term]
 id: PHIPO:0000927
-name: presence of pathogen induced host reactive oxygen species production
+name: presence of pathogen induced host reactive oxygen species
 namespace: pathogen_host_interaction_phenotype
 alt_id: PHIPO:0000926
-def: "A pathogen host interaction phenotype, in which the host reactive oxygen species species (ROS) usually present during infection are present." []
+def: "A pathogen host interaction phenotype, in which the level of host reactive oxygen species (ROS) often associated with an oxidative burst response during infection is present." []
 synonym: "host H202 production resulting from oxidative burst" EXACT []
 synonym: "increased host H202 production resulting from oxidative burst" EXACT []
 synonym: "pathogen induced host oxidative burst present" EXACT []
 synonym: "pathogen induced host respiratory burst present" EXACT []
-is_a: PHIPO:0000924 ! pathogen induced host oxidative burst phenotype
+is_a: PHIPO:0000924 ! pathogen induced host oxidative burst level phenotype
 created_by: alaynecuzick
 creation_date: 2019-05-01T10:52:28Z
 
 [Term]
 id: PHIPO:0000928
-name: absence of pathogen induced host reactive oxygen species production
+name: absence of pathogen induced host reactive oxygen species
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype, in which the host reactive oxygen species species (ROS) usually present during infection are absent." []
+def: "A pathogen host interaction phenotype, in which the level of host reactive oxygen species (ROS) often associated with an oxidative burst response during infection is absent." []
 synonym: "pathogen induced host oxidative burst absent" EXACT []
 synonym: "pathogen induced host respiratory burst absent" EXACT []
-is_a: PHIPO:0000924 ! pathogen induced host oxidative burst phenotype
+is_a: PHIPO:0000924 ! pathogen induced host oxidative burst level phenotype
 created_by: alaynecuzick
 creation_date: 2019-05-01T10:53:36Z
 
@@ -8665,7 +8665,7 @@ id: PHIPO:0000989
 name: decreased level of pathogen protein within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the level of pathogen protein usually present during infection is lower than normal." []
-is_a: PHIPO:0001170 ! altered level of pathogen substance within host
+is_a: PHIPO:0001197 ! level of pathogen substance within host phenotype
 created_by: alaynecuzick
 creation_date: 2019-08-10T12:20:29Z
 
@@ -8683,7 +8683,7 @@ id: PHIPO:0000991
 name: increased level of host protein involved in a pathogen host interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the level of host protein usually present during infection is higher than normal." []
-is_a: PHIPO:0001169 ! altered level of pathogen induced host substance
+is_a: PHIPO:0001196 ! pathogen induced host substance level phenotype
 created_by: alaynecuzick
 creation_date: 2019-08-10T12:22:12Z
 
@@ -8719,7 +8719,7 @@ id: PHIPO:0000995
 name: decreased level of pathogen RNA within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the level of pathogen RNA usually present during infection is lower than normal." []
-is_a: PHIPO:0001170 ! altered level of pathogen substance within host
+is_a: PHIPO:0001197 ! level of pathogen substance within host phenotype
 created_by: alaynecuzick
 creation_date: 2019-08-10T12:32:05Z
 
@@ -8892,7 +8892,7 @@ name: increased level of host callose deposition induced by pathogen
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the level of host produced callose deposition usually present during infection is higher than normal." []
 comment: GO:0052542
-is_a: PHIPO:0001169 ! altered level of pathogen induced host substance
+is_a: PHIPO:0001196 ! pathogen induced host substance level phenotype
 created_by: alaynecuzick
 creation_date: 2019-08-10T16:37:53Z
 
@@ -8902,7 +8902,7 @@ name: decreased level of host callose deposition induced by pathogen
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the level of host produced callose deposition usually present during infection is lower than normal." []
 comment: GO:0052542
-is_a: PHIPO:0001169 ! altered level of pathogen induced host substance
+is_a: PHIPO:0001196 ! pathogen induced host substance level phenotype
 created_by: alaynecuzick
 creation_date: 2019-08-10T16:38:36Z
 
@@ -9194,10 +9194,10 @@ creation_date: 2019-09-06T12:27:54Z
 
 [Term]
 id: PHIPO:0001043
-name: altered level of pathogen toxin within host
+name: level of pathogen toxin within host phenotype
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype, in which the level of pathogen produced toxin usually present during infection differs from normal." []
-is_a: PHIPO:0001170 ! altered level of pathogen substance within host
+def: "A pathogen host interaction phenotype, which affects the level of pathogen produced toxin during host infection." []
+is_a: PHIPO:0001197 ! level of pathogen substance within host phenotype
 created_by: alaynecuzick
 creation_date: 2019-09-06T12:30:03Z
 
@@ -9216,7 +9216,7 @@ id: PHIPO:0001045
 name: decreased level of pathogen toxin within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the level of pathogen produced toxin usually present during infection is lower than normal." []
-is_a: PHIPO:0001043 ! altered level of pathogen toxin within host
+is_a: PHIPO:0001043 ! level of pathogen toxin within host phenotype
 created_by: alaynecuzick
 creation_date: 2019-09-06T12:44:12Z
 
@@ -9225,7 +9225,7 @@ id: PHIPO:0001046
 name: increased level of pathogen toxin within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the level of pathogen produced toxin usually present during infection is higher than normal." []
-is_a: PHIPO:0001043 ! altered level of pathogen toxin within host
+is_a: PHIPO:0001043 ! level of pathogen toxin within host phenotype
 created_by: alaynecuzick
 creation_date: 2019-09-06T12:44:20Z
 
@@ -9605,7 +9605,7 @@ name: presence of pathogen induced callose deposition in host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the level of host produced callose deposition usually present during infection is normal (i.e. indistinguishable from wild type)." []
 comment: GO:0052542
-is_a: PHIPO:0001172 ! normal level of pathogen induced host substance
+is_a: PHIPO:0001196 ! pathogen induced host substance level phenotype
 created_by: alaynecuzick
 creation_date: 2019-10-01T09:09:20Z
 
@@ -9764,7 +9764,7 @@ id: PHIPO:0001100
 name: increased level of pathogen RNA within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the level of pathogen RNA usually present during infection is higher than normal." []
-is_a: PHIPO:0001170 ! altered level of pathogen substance within host
+is_a: PHIPO:0001197 ! level of pathogen substance within host phenotype
 created_by: alaynecuzick
 creation_date: 2019-10-04T12:31:14Z
 
@@ -9793,7 +9793,7 @@ id: PHIPO:0001104
 name: increased level of host RNA involved in a pathogen interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the level of host RNA usually present during infection is higher than normal." []
-is_a: PHIPO:0001169 ! altered level of pathogen induced host substance
+is_a: PHIPO:0001196 ! pathogen induced host substance level phenotype
 created_by: alaynecuzick
 creation_date: 2019-10-07T13:26:33Z
 
@@ -10313,7 +10313,7 @@ name: decreased level of pathogen reactive oxygen species production within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the level of pathogen produced reactive oxygen species (ROS) usually present during infection is lower than normal." []
 synonym: "decreased level of pathogen ROS production with host" EXACT []
-is_a: PHIPO:0001170 ! altered level of pathogen substance within host
+is_a: PHIPO:0001197 ! level of pathogen substance within host phenotype
 created_by: alaynecuzick
 creation_date: 2020-03-10T11:33:08Z
 
@@ -10323,7 +10323,7 @@ name: increased level of pathogen reactive oxygen species production within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the level of pathogen produced reactive oxygen species (ROS) usually present during infection is higher than normal." []
 synonym: "increased level of pathogen ROS production with host" EXACT []
-is_a: PHIPO:0001170 ! altered level of pathogen substance within host
+is_a: PHIPO:0001197 ! level of pathogen substance within host phenotype
 created_by: alaynecuzick
 creation_date: 2020-03-10T11:35:08Z
 
@@ -10362,13 +10362,13 @@ name: absence of pathogen induced host phenolic compound
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the host phenolic compounds usually present during infection are absent." []
 comment: decreased level of CHEBI:33853 in host\nduring GO:051702 interaction with symbiont
-is_a: PHIPO:0001169 ! altered level of pathogen induced host substance
+is_a: PHIPO:0001196 ! pathogen induced host substance level phenotype
 created_by: alaynecuzick
 creation_date: 2020-03-27T18:36:56Z
 
 [Term]
 id: PHIPO:0001162
-name: host reproductive phenotype affected by pathogen
+name: host reproductive phenotype induced by pathogen
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype which affects the host reproductive process within the host when a pathogen is present. The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms (GO:0000003)." []
 is_a: PHIPO:0001163 ! pathogen host interaction reproductive phenotype
@@ -10389,30 +10389,30 @@ creation_date: 2020-03-30T15:16:04Z
 
 [Term]
 id: PHIPO:0001164
-name: abnormal host reproductive structure development affected by pathogen
+name: abnormal host reproductive structure development induced by pathogen
 namespace: pathogen_host_interaction_phenotype
 def: "A host reproductive phenotype with pathogen where the process of host reproductive development is abnormal (GO:0048608)." []
-is_a: PHIPO:0001162 ! host reproductive phenotype affected by pathogen
+is_a: PHIPO:0001162 ! host reproductive phenotype induced by pathogen
 created_by: alaynecuzick
 creation_date: 2020-03-30T15:17:25Z
 
 [Term]
 id: PHIPO:0001165
-name: abnormal host seed development affected by pathogen
+name: abnormal host seed development induced by pathogen
 namespace: pathogen_host_interaction_phenotype
 def: "A host reproductive phenotype with pathogen where the process of host seed development is abnormal (GO:0048316)." []
 synonym: "abnormal host grain development with pathogen" EXACT []
-is_a: PHIPO:0001164 ! abnormal host reproductive structure development affected by pathogen
+is_a: PHIPO:0001164 ! abnormal host reproductive structure development induced by pathogen
 created_by: alaynecuzick
 creation_date: 2020-03-30T15:17:44Z
 
 [Term]
 id: PHIPO:0001166
-name: host seed development absent affected by pathogen
+name: absence of host seed development induced by pathogen
 namespace: pathogen_host_interaction_phenotype
 def: "A host reproductive phenotype with pathogen where the process of host seed development is absent (GO:0048316)." []
 synonym: "host grain development absent with pathogen" EXACT []
-is_a: PHIPO:0001165 ! abnormal host seed development affected by pathogen
+is_a: PHIPO:0001165 ! abnormal host seed development induced by pathogen
 created_by: alaynecuzick
 creation_date: 2020-03-30T15:18:09Z
 
@@ -10439,44 +10439,6 @@ created_by: alaynecuzick
 creation_date: 2020-04-27T16:38:17Z
 
 [Term]
-id: PHIPO:0001169
-name: altered level of pathogen induced host substance
-namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype, in which the level of a host produced substance usually present during infection differs from normal." []
-is_a: PHIPO:0000510 ! pathogen host interaction cell phenotype
-created_by: alaynecuzick
-creation_date: 2020-05-07T09:49:08Z
-
-[Term]
-id: PHIPO:0001170
-name: altered level of pathogen substance within host
-namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype, in which the level of a pathogen produced substance usually present during infection differs from normal." []
-is_a: PHIPO:0000510 ! pathogen host interaction cell phenotype
-created_by: alaynecuzick
-creation_date: 2020-05-07T09:49:43Z
-
-[Term]
-id: PHIPO:0001171
-name: normal level of pathogen substance within host
-namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype, in which the level of a pathogen produced substance usually present during infection is normal (i.e. indistinguishable from wild type)." []
-synonym: "unaltered level of host induced pathogen substance" EXACT []
-is_a: PHIPO:0000510 ! pathogen host interaction cell phenotype
-created_by: alaynecuzick
-creation_date: 2020-05-11T11:44:27Z
-
-[Term]
-id: PHIPO:0001172
-name: normal level of pathogen induced host substance
-namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype, in which the level of a host produced substance usually present during infection is normal (i.e. indistinguishable from wild type)." []
-synonym: "unaltered level of pathogen induced host substance" EXACT []
-is_a: PHIPO:0000510 ! pathogen host interaction cell phenotype
-created_by: alaynecuzick
-creation_date: 2020-05-11T11:45:22Z
-
-[Term]
 id: PHIPO:0001173
 name: pathogen modulation of host process phenotype
 namespace: pathogen_host_interaction_phenotype
@@ -10490,7 +10452,7 @@ id: PHIPO:0001174
 name: decreased level of host RNA involved in a pathogen interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the level of host RNA usually present during infection is lower than normal." []
-is_a: PHIPO:0001169 ! altered level of pathogen induced host substance
+is_a: PHIPO:0001196 ! pathogen induced host substance level phenotype
 created_by: alaynecuzick
 creation_date: 2020-05-12T13:21:58Z
 
@@ -10648,6 +10610,68 @@ synonym: "presence of melanin accumulation in pathogen conidia with host" EXACT 
 is_a: PHIPO:0001080 ! altered pathogen pigment accumulation within host
 created_by: alaynecuzick
 creation_date: 2020-07-20T11:19:37Z
+
+[Term]
+id: PHIPO:0001192
+name: decreased level of pathogen induced host reactive oxygen species
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the level of host produced reactive oxygen species (ROS), often associated with an oxidative burst response  during infection is lower than normal." []
+synonym: "decreased pathogen host interaction oxidative burst" EXACT []
+synonym: "decreased pathogen host interaction respiratory burst" EXACT []
+is_a: PHIPO:0000924 ! pathogen induced host oxidative burst level phenotype
+created_by: alaynecuzick
+creation_date: 2020-07-31T09:49:14Z
+
+[Term]
+id: PHIPO:0001193
+name: increased level of pathogen induced host reactive oxygen species
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the level of host produced reactive oxygen species (ROS), often associated with an oxidative burst response  during infection is higher than normal." []
+synonym: "increased pathogen host interaction oxidative burst" EXACT []
+synonym: "increased pathogen host interaction respiratory burst" EXACT []
+is_a: PHIPO:0000924 ! pathogen induced host oxidative burst level phenotype
+created_by: alaynecuzick
+creation_date: 2020-07-31T09:49:30Z
+
+[Term]
+id: PHIPO:0001194
+name: abolished inhibition of pathogen chorismate mutase by host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction molecular function phenotype in which host-mediated inhibition of a pathogen chorismate mutase is abolished (inhibition was present and is now absent)." []
+is_a: PHIPO:0000347 ! pathogen host interaction molecular function phenotype
+created_by: alaynecuzick
+creation_date: 2020-07-31T15:28:52Z
+
+[Term]
+id: PHIPO:0001195
+name: inhibition of pathogen chorismate mutase by host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction molecular function phenotype in which host-mediated inhibition of a pathogen chorismate mutase is present." []
+is_a: PHIPO:0000347 ! pathogen host interaction molecular function phenotype
+created_by: alaynecuzick
+creation_date: 2020-07-31T15:29:07Z
+
+[Term]
+id: PHIPO:0001196
+name: pathogen induced host substance level phenotype
+namespace: pathogen_host_interaction_phenotype
+alt_id: PHIPO:0001169
+alt_id: PHIPO:0001172
+def: "A pathogen host interaction phenotype, which affects the level of a host produced substance during infection." []
+is_a: PHIPO:0000510 ! pathogen host interaction cell phenotype
+created_by: alaynecuzick
+creation_date: 2020-08-03T15:04:15Z
+
+[Term]
+id: PHIPO:0001197
+name: level of pathogen substance within host phenotype
+namespace: pathogen_host_interaction_phenotype
+alt_id: PHIPO:0001170
+alt_id: PHIPO:0001171
+def: "A pathogen host interaction phenotype, which affects the level of a pathogen produced substance during host infection." []
+is_a: PHIPO:0000510 ! pathogen host interaction cell phenotype
+created_by: alaynecuzick
+creation_date: 2020-08-03T15:40:26Z
 
 [Typedef]
 id: PHIPO:0000304
