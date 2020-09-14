@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2020-08-27/phipo-simple.owl
+data-version: phipo/releases/2020-09-14/phipo-simple.owl
 subsetdef: ro-eco ""
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
@@ -12,7 +12,7 @@ property_value: http://purl.org/dc/terms/license https://creativecommons.org/lic
 id: PHIPO:0000001
 name: pathogen host interaction phenotype
 namespace: pathogen_host_interaction_phenotype
-def: "Any of the set of observable disease formation characteristics arising from the interaction of a potentially pathogenic organism with a host organism." []
+def: "Any of the set of observable characteristics arising from the interaction of a potentially pathogenic organism with a host organism." []
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
@@ -10688,6 +10688,38 @@ def: "A pathogen host interaction phenotype, which affects the level of a pathog
 is_a: PHIPO:0000510 ! pathogen host interaction cell phenotype
 created_by: alaynecuzick
 creation_date: 2020-08-03T15:40:26Z
+
+[Term]
+id: PHIPO:0001198
+name: outcome of interaction phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype that affects the disease outcome of a pathogen host interaction." []
+comment: For use in the annotation extension outcome of interaction.
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0000001 ! pathogen host interaction phenotype
+created_by: alaynecuzick
+creation_date: 2020-09-14T12:39:58Z
+
+[Term]
+id: PHIPO:0001199
+name: disease absent
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where disease is absent." []
+subset: qc_extension_only
+is_a: PHIPO:0001198 ! outcome of interaction phenotype
+created_by: alaynecuzick
+creation_date: 2020-09-14T12:42:47Z
+
+[Term]
+id: PHIPO:0001200
+name: disease present
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where disease is present." []
+subset: qc_extension_only
+is_a: PHIPO:0001198 ! outcome of interaction phenotype
+created_by: alaynecuzick
+creation_date: 2020-09-14T12:42:57Z
 
 [Typedef]
 id: PHIPO:0000304
