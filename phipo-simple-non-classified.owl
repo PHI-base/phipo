@@ -11,7 +11,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/phipo/phipo-simple-non-classified.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2020-08-27/phipo-simple-non-classified.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2020-10-01/phipo-simple-non-classified.owl"/>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-09T13:43:00Z</obo:creation_date>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology of species-neutral phenotypes observed in pathogen-host interactions.</dc:description>
@@ -149,7 +149,7 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000001">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000505"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any of the set of observable disease formation characteristics arising from the interaction of a potentially pathogenic organism with a host organism.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any of the set of observable characteristics arising from the interaction of a potentially pathogenic organism with a host organism.</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-02T11:20:17Z</obo:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
@@ -248,16 +248,17 @@ Pathogenicity is a qualitative concept.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000007 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000007">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000006"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is absent.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001201"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where the ability of a pathogen effector to produce an infectious disease is absent.</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T12:42:00Z</obo:creation_date>
+        <oboInOwl:hasBroadSynonym>pathogenic ability absent</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasExactSynonym>disease causing ability absent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_extension_only</oboInOwl:inSubset>
         <rdfs:comment>For use in the annotation extension infective ability.
 Can only apply to changes in the pathogen.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogenic ability absent</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">functional pathogen effector absent</rdfs:label>
     </owl:Class>
     
 
@@ -265,16 +266,17 @@ Can only apply to changes in the pathogen.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000008 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000008">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000006"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is present.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001201"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where the ability of a pathogen effector to produce an infectious disease is present.</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T12:42:16Z</obo:creation_date>
+        <oboInOwl:hasBroadSynonym>pathogenic ability present</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasExactSynonym>disease causing ability present</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_extension_only</oboInOwl:inSubset>
         <rdfs:comment>For use in the annotation extension infective ability.
 Can only apply to changes in the pathogen.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogenic ability present</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">functional pathogen effector present</rdfs:label>
     </owl:Class>
     
 
@@ -282,7 +284,7 @@ Can only apply to changes in the pathogen.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000009 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000009">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000008"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000006"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is obtained (pathogenicity was absent and is now present).</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T12:45:12Z</obo:creation_date>
@@ -299,7 +301,7 @@ Can only apply to changes in the pathogen. Note that this ability to cause patho
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000010 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000010">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000007"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000006"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is abolished (pathogenicity was present and is now absent).</obo:IAO_0000115>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-05-04T12:45:31Z</obo:creation_date>
@@ -15066,12 +15068,13 @@ during GO:051702 interaction with symbiont</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001184">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001187"/>
-        <obo:IAO_0000115>A phenotype where the ability of a host, to be resistant to a given pathogenic organism is abolished (resistance was present and is now absent).</obo:IAO_0000115>
+        <obo:IAO_0000115>A phenotype where the ability of a host to be resistant to a pathogen, via the recognition of a pathogen effector by a specific host resistance gene is abolished (resistance was present and is now absent).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-22T15:26:41Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>loss of host resistance</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_extension_only</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">loss of host resistance</rdfs:label>
+        <rdfs:label xml:lang="en">loss of functional host resistance gene</rdfs:label>
     </owl:Class>
     
 
@@ -15080,12 +15083,14 @@ during GO:051702 interaction with symbiont</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001185">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001186"/>
-        <obo:IAO_0000115>A phenotype where the ability of a host, to be resistant to a given pathogenic organism is obtained (resistance was absent and is now present)..</obo:IAO_0000115>
+        <obo:IAO_0000115>A phenotype where the ability of a host, to be resistant to a pathogen, via the recognition of a pathogen effector by a specific host resistance gene is acquired (resistance was absent and is now present).</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-22T15:26:51Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>gain of host resistance</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_extension_only</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">gain of host resistance</rdfs:label>
+        <rdfs:comment>Gain of function may result from engineering of a natural variant or transformation</rdfs:comment>
+        <rdfs:label xml:lang="en">gain of functional host resistance gene</rdfs:label>
     </owl:Class>
     
 
@@ -15094,13 +15099,14 @@ during GO:051702 interaction with symbiont</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001186">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001183"/>
-        <obo:IAO_0000115>A phenotype where the ability of a host, to be resistant to a given pathogenic organism is present.</obo:IAO_0000115>
+        <obo:IAO_0000115>A phenotype where ability of a host to be resistant to a pathogen, via the recognition of a pathogen effector by a specific host resistance gene, is present.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-22T15:27:22Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>host resistance present</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasExactSynonym>host susceptibility absent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_extension_only</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">host resistance present</rdfs:label>
+        <rdfs:label xml:lang="en">functional host resistance gene present</rdfs:label>
     </owl:Class>
     
 
@@ -15109,13 +15115,14 @@ during GO:051702 interaction with symbiont</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001187">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001183"/>
-        <obo:IAO_0000115>A phenotype where the ability of a host, to be resistant to a given pathogenic organism is absent.</obo:IAO_0000115>
+        <obo:IAO_0000115>A phenotype where ability of a host to be resistant to a pathogen, via the recognition of a pathogen effector by a specific host resistance gene, is absent.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-22T15:27:41Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>host resistance absent</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasExactSynonym>host susceptibility present</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qc_extension_only</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">host resistance absent</rdfs:label>
+        <rdfs:label xml:lang="en">functional host resistance gene absent</rdfs:label>
     </owl:Class>
     
 
@@ -15260,6 +15267,93 @@ during GO:051702 interaction with symbiont</rdfs:comment>
         <oboInOwl:hasAlternativeId>PHIPO:0001171</oboInOwl:hasAlternativeId>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">level of pathogen substance within host phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001198 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001198">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype that affects the disease outcome of a pathogen host interaction.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-14T12:39:58Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
+        <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
+        <rdfs:comment>For use in the annotation extension outcome of interaction.</rdfs:comment>
+        <rdfs:label xml:lang="en">outcome of interaction phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001199 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001199">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001198"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype where disease is absent.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-14T12:42:47Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>qc_extension_only</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">disease absent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001200 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001200">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001198"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype where disease is present.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-14T12:42:57Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>qc_extension_only</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">disease present</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001201 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001201">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001179"/>
+        <obo:IAO_0000115>A phenotype that is relevant to pathogen effectors.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-28T12:53:46Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
+        <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">pathogen effector phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001202 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001202">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000007"/>
+        <obo:IAO_0000115>A phenotype where the ability of a pathogen effector to produce an infectious disease is abolished.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-29T08:11:20Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>qc_extension_only</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">loss of functional pathogen effector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001203 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001203">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000008"/>
+        <obo:IAO_0000115>A phenotype where the ability of a pathogen effector to produce an infectious disease is acquired.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-29T08:11:34Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>qc_extension_only</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">gain of functional pathogen effector</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2020-08-25/imports/go_import.owl
+data-version: phipo/releases/2020-10-01/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
@@ -1170,7 +1170,9 @@ relationship: part_of GO:0048856 ! anatomical structure development
 id: GO:0009847
 name: spore germination
 namespace: biological_process
+alt_id: GO:0075005
 def: "The physiological and developmental changes that occur in a spore following release from dormancy up to the earliest signs of growth (e.g. emergence from a spore wall)." [GOC:lr]
+synonym: "spore germination on or near host" NARROW []
 is_a: GO:0032502 ! developmental process
 
 [Term]
@@ -3986,7 +3988,6 @@ synonym: "development during symbiotic interaction" RELATED [gOC:dph]
 synonym: "development on or near surface of other organism during symbiotic interaction" RELATED [GOC:dph]
 synonym: "development on or near surface of other organism involved in symbiotic interaction" NARROW []
 is_a: GO:0032502 ! developmental process
-is_a: GO:0051704 ! multi-organism process
 intersection_of: GO:0032502 ! developmental process
 intersection_of: part_of GO:0044419 ! interspecies interaction between organisms
 relationship: part_of GO:0044419 ! interspecies interaction between organisms
@@ -4027,45 +4028,41 @@ creation_date: 2009-07-30T02:32:14Z
 
 [Term]
 id: GO:0044132
-name: development of symbiont on or near host
+name: obsolete development of symbiont on or near host
 namespace: biological_process
-def: "The progression of a symbiont from an initial condition to a later condition, within the cells or tissues of its host organism." [GOC:jl, GOC:pamgo_curators]
-is_a: GO:0044115 ! development of symbiont involved in interaction with host
+def: "OBSOLETE. The progression of a symbiont from an initial condition to a later condition, within the cells or tissues of its host organism." [GOC:jl, GOC:pamgo_curators]
+comment: The reason for obsoletion is this term represents both a process and a component.
+is_obsolete: true
 created_by: jl
 creation_date: 2009-08-04T03:36:02Z
 
 [Term]
 id: GO:0044138
-name: modulation of development of symbiont on or near host
+name: obsolete modulation of development of symbiont on or near host
 namespace: biological_process
-def: "Any process in which the symbiont regulates its progression from an initial condition to a later condition, on or near the cells or tissues of the host organism." [GOC:jl, GOC:pamgo_curators]
-comment: This term partially replaces the obsolete term 'modulation of growth or development of symbiont on or near host ; GO:0075305'. See also 'modulation of growth of symbiont on or near host ; GO:0044139'.
-is_a: GO:0044145 ! modulation of development of symbiont involved in interaction with host
-relationship: regulates GO:0044132 ! development of symbiont on or near host
+def: "OBSOLETE. Any process in which the symbiont regulates its progression from an initial condition to a later condition, on or near the cells or tissues of the host organism." [GOC:jl, GOC:pamgo_curators]
+comment: The reason for obsoletion is this term represents both a process and a component.
+is_obsolete: true
 created_by: jl
 creation_date: 2009-08-04T04:24:25Z
 
 [Term]
 id: GO:0044141
-name: negative regulation of development of symbiont on or near host surface
+name: obsolete negative regulation of development of symbiont on or near host surface
 namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the symbiont's progression from an initial condition to a later condition, on or near the cells or tissues of the host organism." [GOC:jl, GOC:pamgo_curators]
-comment: This term partially replaces the obsolete term 'negative regulation of growth or development of symbiont on or near host surface ; GO:0075309'. See also 'negative regulation of growth of symbiont on or near host surface ; GO:0044140'.
-is_a: GO:0044138 ! modulation of development of symbiont on or near host
-is_a: GO:0044147 ! negative regulation of development of symbiont involved in interaction with host
-relationship: negatively_regulates GO:0044132 ! development of symbiont on or near host
+def: "OBSOLETE. Any process that stops, prevents, or reduces the frequency, rate or extent of the symbiont's progression from an initial condition to a later condition, on or near the cells or tissues of the host organism." [GOC:jl, GOC:pamgo_curators]
+comment: The reason for obsoletion is this term represents both a process and a component.
+is_obsolete: true
 created_by: jl
 creation_date: 2009-08-04T04:32:18Z
 
 [Term]
 id: GO:0044143
-name: positive regulation of development of symbiont on or near host surface
+name: obsolete positive regulation of development of symbiont on or near host surface
 namespace: biological_process
-def: "Any process that activates or increases the frequency, rate or extent of the symbiont's progression from an initial condition to a later condition, on or near the cells or tissues of the host organism." [GOC:jl, GOC:pamgo_curators]
-comment: This term partially replaces the obsolete term 'positive regulation of growth or development of symbiont on or near host surface ; GO:0075337'. See also 'positive regulation of growth of symbiont on or near host surface ; GO:0044142'.
-is_a: GO:0044138 ! modulation of development of symbiont on or near host
-is_a: GO:0044149 ! positive regulation of development of symbiont involved in interaction with host
-relationship: positively_regulates GO:0044132 ! development of symbiont on or near host
+def: "OBSOLETE. Any process that activates or increases the frequency, rate or extent of the symbiont's progression from an initial condition to a later condition, on or near the cells or tissues of the host organism." [GOC:jl, GOC:pamgo_curators]
+comment: The reason for obsoletion is this term represents both a process and a component.
+is_obsolete: true
 created_by: jl
 creation_date: 2009-08-06T01:35:48Z
 
@@ -4076,9 +4073,9 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the progression of an organism from an initial condition to a later condition, occurring in, on or near the exterior of its host organism." [GOC:jl, GOC:pamgo_curators]
 comment: This term partially replaces the obsolete term 'modulation of growth or development of symbiont during interaction with host ; GO:0075338'. See also 'modulation of growth of symbiont during interaction with host ; GO:0044144'.
 synonym: "modulation of development of symbiont during interaction with host" RELATED [GOC:dph]
-is_a: GO:0043900 ! regulation of multi-organism process
-is_a: GO:0043903 ! regulation of symbiotic process
 is_a: GO:0050793 ! regulation of developmental process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: regulates GO:0044115 ! development of symbiont involved in interaction with host
 relationship: regulates GO:0044115 ! development of symbiont involved in interaction with host
 created_by: jl
 creation_date: 2009-08-06T01:57:38Z
@@ -4090,10 +4087,9 @@ namespace: biological_process
 def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the progression of an organism from an initial condition to a later condition, occurring in, on or near the exterior of its host organism." [GOC:jl, GOC:pamgo_curators]
 comment: This term partially replaces the obsolete term 'negative regulation of growth or development of symbiont during interaction with host ; GO:0075340'.
 synonym: "negative regulation of development of symbiont during interaction with host" RELATED [GOC:dph]
-is_a: GO:0043901 ! negative regulation of multi-organism process
 is_a: GO:0044145 ! modulation of development of symbiont involved in interaction with host
 is_a: GO:0051093 ! negative regulation of developmental process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0044115 ! development of symbiont involved in interaction with host
 relationship: negatively_regulates GO:0044115 ! development of symbiont involved in interaction with host
 created_by: jl
@@ -4106,10 +4102,9 @@ namespace: biological_process
 def: "Any process that activates or increases the frequency, rate or extent of the progression of an organism from an initial condition to a later condition, occurring in, on or near the exterior of its host organism." [GOC:jl, GOC:pamgo_curators]
 comment: This term partially replaces the obsolete term 'positive regulation of growth or development of symbiont during interaction with host ; GO:0075339'. See also 'positive regulation of growth of symbiont during interaction with host ; GO:0044148'.
 synonym: "positive regulation of development of symbiont during interaction with host" RELATED [GOC:dph]
-is_a: GO:0043902 ! positive regulation of multi-organism process
 is_a: GO:0044145 ! modulation of development of symbiont involved in interaction with host
 is_a: GO:0051094 ! positive regulation of developmental process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0044115 ! development of symbiont involved in interaction with host
 relationship: positively_regulates GO:0044115 ! development of symbiont involved in interaction with host
 created_by: jl
@@ -5634,6 +5629,7 @@ name: meiotic cell cycle
 namespace: biological_process
 alt_id: GO:0007126
 def: "Progression through the phases of the meiotic cell cycle, in which canonically a cell replicates to produce four offspring with half the chromosomal content of the progenitor cell via two nuclear divisions." [GOC:ai]
+comment: Note that this term should not be confused with 'GO:0140013 ; meiotic nuclear division'. 'GO:0051321 ; meiotic cell cycle represents the entire mitotic cell cycle, while 'GO:0140013 meiotic nuclear division' specifically represents the actual nuclear division step of the mitotic cell cycle.
 subset: goslim_drosophila
 subset: goslim_yeast
 synonym: "meiosis" RELATED []
@@ -6612,92 +6608,48 @@ created_by: mah
 creation_date: 2010-09-10T01:39:16Z
 
 [Term]
-id: GO:0075005
-name: spore germination on or near host
-namespace: biological_process
-def: "The physiological, developmental and morphological changes that occur in a symbiont spore following release from dormancy up to the earliest signs of growth occurring on or near its host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
-comment: Note that this term should not be used to annotate gene products of the host. It should only be used to annotate those gene products from the symbiont involved in this process.
-is_a: GO:0009847 ! spore germination
-is_a: GO:0044132 ! development of symbiont on or near host
-is_a: GO:0051701 ! interaction with host
-
-[Term]
-id: GO:0075006
-name: modulation of spore germination on or near host
-namespace: biological_process
-def: "Any process that modulates the frequency, rate or extent of spore germination on or near host, which is the physiological, developmental and morphological changes that occur in a symbiont spore following release from dormancy up to the earliest signs of growth occurring on or near its host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
-comment: Note that this term should not be used to annotate gene products of the host. It should only be used to annotate those gene products from the symbiont involved in this process.
-is_a: GO:0044138 ! modulation of development of symbiont on or near host
-is_a: GO:1904359 ! regulation of spore germination
-relationship: regulates GO:0075005 ! spore germination on or near host
-
-[Term]
-id: GO:0075007
-name: positive regulation of spore germination on or near host
-namespace: biological_process
-def: "Any process that activates, maintains or increases the frequency, rate or extent of spore germination on or near host, which is the physiological, developmental and morphological changes that occur in a symbiont spore following release from dormancy up to the earliest signs of growth occurring on or near its host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
-comment: Note that this term should not be used to annotate gene products of the host. It should only be used to annotate those gene products from the symbiont involved in this process.
-is_a: GO:0044143 ! positive regulation of development of symbiont on or near host surface
-is_a: GO:0075006 ! modulation of spore germination on or near host
-is_a: GO:1904361 ! positive regulation of spore germination
-intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0075005 ! spore germination on or near host
-relationship: positively_regulates GO:0075005 ! spore germination on or near host
-
-[Term]
-id: GO:0075008
-name: negative regulation of spore germination on or near host
-namespace: biological_process
-def: "Any process that stops, prevents, or reduces the frequency, rate or extent of spore germination on or near host, which is the physiological, developmental and morphological changes that occur in a symbiont spore following release from dormancy up to the earliest signs of growth occurring on or near its host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
-comment: Note that this term should not be used to annotate gene products of the host. It should only be used to annotate those gene products from the symbiont involved in this process.
-is_a: GO:0044141 ! negative regulation of development of symbiont on or near host surface
-is_a: GO:0075006 ! modulation of spore germination on or near host
-is_a: GO:1904360 ! negative regulation of spore germination
-intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0075005 ! spore germination on or near host
-relationship: negatively_regulates GO:0075005 ! spore germination on or near host
-
-[Term]
 id: GO:0075009
-name: germ tube formation on or near host
+name: germ tube formation
 namespace: biological_process
 def: "Development of slender tubular outgrowth first produced by most symbiont spores immediately following germination on or near its host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
-comment: Note that this term should not be used to annotate gene products of the host. It should only be used to annotate those gene products from the symbiont involved in this process.
-is_a: GO:0044132 ! development of symbiont on or near host
-relationship: part_of GO:0075005 ! spore germination on or near host
+synonym: "germ tube formation on or near host" EXACT []
+is_a: GO:0044111 ! development involved in symbiotic interaction
+relationship: part_of GO:0009847 ! spore germination
 
 [Term]
 id: GO:0075010
-name: modulation of germ tube formation on or near host
+name: regulation of germ tube formation
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of germ tube formation on or near host. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
 comment: Note that this term should not be used to annotate gene products of the host. It should only be used to annotate those gene products from the symbiont involved in this process.
-is_a: GO:0075006 ! modulation of spore germination on or near host
-relationship: regulates GO:0075009 ! germ tube formation on or near host
+is_a: GO:1904359 ! regulation of spore germination
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: regulates GO:0075009 ! germ tube formation
+relationship: regulates GO:0075009 ! germ tube formation
 
 [Term]
 id: GO:0075011
-name: positive regulation of germ tube formation on or near host
+name: positive regulation of germ tube formation
 namespace: biological_process
 def: "Any process that activates, maintains or increases the frequency, rate or extent of germ tube formation on or near host. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
-comment: Note that this term should not be used to annotate gene products of the host. It should only be used to annotate those gene products from the symbiont involved in this process.
-is_a: GO:0075007 ! positive regulation of spore germination on or near host
-is_a: GO:0075010 ! modulation of germ tube formation on or near host
+synonym: "positive regulation of germ tube formation on or near host" EXACT []
+is_a: GO:0075010 ! regulation of germ tube formation
+is_a: GO:1904361 ! positive regulation of spore germination
 intersection_of: GO:0008150 ! biological_process
-intersection_of: positively_regulates GO:0075009 ! germ tube formation on or near host
-relationship: positively_regulates GO:0075009 ! germ tube formation on or near host
+intersection_of: positively_regulates GO:0075009 ! germ tube formation
+relationship: positively_regulates GO:0075009 ! germ tube formation
 
 [Term]
 id: GO:0075012
-name: negative regulation of germ tube formation on or near host
+name: negative regulation of germ tube formation
 namespace: biological_process
 def: "Any process that stops, prevents, or reduces the frequency, rate or extent of germ tube formation on or near host. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
-comment: Note that this term should not be used to annotate gene products of the host. It should only be used to annotate those gene products from the symbiont involved in this process.
-is_a: GO:0075008 ! negative regulation of spore germination on or near host
-is_a: GO:0075010 ! modulation of germ tube formation on or near host
+synonym: "negative regulation of germ tube formation on or near host" EXACT []
+is_a: GO:0075010 ! regulation of germ tube formation
+is_a: GO:1904360 ! negative regulation of spore germination
 intersection_of: GO:0008150 ! biological_process
-intersection_of: negatively_regulates GO:0075009 ! germ tube formation on or near host
-relationship: negatively_regulates GO:0075009 ! germ tube formation on or near host
+intersection_of: negatively_regulates GO:0075009 ! germ tube formation
+relationship: negatively_regulates GO:0075009 ! germ tube formation
 
 [Term]
 id: GO:0075044
@@ -6911,10 +6863,12 @@ id: GO:0140013
 name: meiotic nuclear division
 namespace: biological_process
 def: "One of the two nuclear divisions that occur as part of the meiotic cell cycle." [PMID:9334324]
+synonym: "meiosis" EXACT []
 is_a: GO:0000280 ! nuclear division
 is_a: GO:1903046 ! meiotic cell cycle process
 intersection_of: GO:0000280 ! nuclear division
 intersection_of: part_of GO:0051321 ! meiotic cell cycle
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/19910 xsd:anyURI
 created_by: pg
 creation_date: 2017-03-23T09:40:00Z
 
@@ -7578,7 +7532,9 @@ creation_date: 2015-01-20T14:32:33Z
 id: GO:1904359
 name: regulation of spore germination
 namespace: biological_process
+alt_id: GO:0075006
 def: "Any process that modulates the frequency, rate or extent of spore germination." [GO_REF:0000058, GOC:TermGenie, PMID:14718564, PMID:8798577]
+synonym: "modulation of spore germination on or near host" NARROW []
 is_a: GO:0050793 ! regulation of developmental process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0009847 ! spore germination
@@ -7590,11 +7546,13 @@ creation_date: 2015-06-12T19:46:06Z
 id: GO:1904360
 name: negative regulation of spore germination
 namespace: biological_process
+alt_id: GO:0075008
 def: "Any process that stops, prevents or reduces the frequency, rate or extent of spore germination." [GO_REF:0000058, GOC:TermGenie, PMID:14718564, PMID:8798577]
 synonym: "down regulation of spore germination" EXACT [GOC:TermGenie]
 synonym: "down-regulation of spore germination" EXACT [GOC:TermGenie]
 synonym: "downregulation of spore germination" EXACT [GOC:TermGenie]
 synonym: "inhibition of spore germination" NARROW [GOC:TermGenie]
+synonym: "negative regulation of spore germination on or near host" NARROW []
 is_a: GO:0051093 ! negative regulation of developmental process
 is_a: GO:1904359 ! regulation of spore germination
 intersection_of: GO:0008150 ! biological_process
@@ -7607,8 +7565,10 @@ creation_date: 2015-06-12T19:46:12Z
 id: GO:1904361
 name: positive regulation of spore germination
 namespace: biological_process
+alt_id: GO:0075007
 def: "Any process that activates or increases the frequency, rate or extent of spore germination." [GO_REF:0000058, GOC:TermGenie, PMID:14718564, PMID:8798577]
 synonym: "activation of spore germination" NARROW [GOC:TermGenie]
+synonym: "positive regulation of spore germination on or near host" NARROW []
 synonym: "up regulation of spore germination" EXACT [GOC:TermGenie]
 synonym: "up-regulation of spore germination" EXACT [GOC:TermGenie]
 synonym: "upregulation of spore germination" EXACT [GOC:TermGenie]

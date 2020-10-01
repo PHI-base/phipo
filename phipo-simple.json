@@ -5645,7 +5645,7 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000001",
       "meta" : {
         "definition" : {
-          "val" : "Any of the set of observable disease formation characteristics arising from the interaction of a potentially pathogenic organism with a host organism.",
+          "val" : "Any of the set of observable characteristics arising from the interaction of a potentially pathogenic organism with a host organism.",
           "xrefs" : [ ]
         },
         "subsets" : [ "\"qc_do_not_annotate\"", "\"qc_do_not_manually_annotate\"" ],
@@ -6097,13 +6097,17 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000007",
       "meta" : {
         "definition" : {
-          "val" : "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is absent.",
+          "val" : "A phenotype where the ability of a pathogen effector to produce an infectious disease is absent.",
           "xrefs" : [ ]
         },
         "subsets" : [ "\"qc_extension_only\"" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "disease causing ability absent",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasBroadSynonym",
+          "val" : "pathogenic ability absent",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
@@ -6121,7 +6125,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "pathogenic ability absent"
+      "lbl" : "functional pathogen effector absent"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000249",
       "meta" : {
@@ -6153,11 +6157,15 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000008",
       "meta" : {
         "definition" : {
-          "val" : "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is present.",
+          "val" : "A phenotype where the ability of a pathogen effector to produce an infectious disease is present.",
           "xrefs" : [ ]
         },
         "subsets" : [ "\"qc_extension_only\"" ],
         "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "pathogenic ability present",
+          "xrefs" : [ ]
+        }, {
           "pred" : "hasExactSynonym",
           "val" : "disease causing ability present",
           "xrefs" : [ ]
@@ -6177,7 +6185,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "pathogenic ability present"
+      "lbl" : "functional pathogen effector present"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000492",
       "meta" : {
@@ -17853,6 +17861,27 @@
       "type" : "CLASS",
       "lbl" : "resistance to voriconazole"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001201",
+      "meta" : {
+        "definition" : {
+          "val" : "A phenotype that is relevant to pathogen effectors.",
+          "xrefs" : [ ]
+        },
+        "subsets" : [ "\"qc_do_not_manually_annotate\"", "\"qc_do_not_annotate\"" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "pathogen_host_interaction_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2020-09-28T12:53:46Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "pathogen effector phenotype"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000111",
       "meta" : {
         "definition" : {
@@ -17941,6 +17970,27 @@
       },
       "type" : "CLASS",
       "lbl" : "obsolete non-functional penetration structure present"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001200",
+      "meta" : {
+        "definition" : {
+          "val" : "A pathogen host interaction phenotype where disease is present.",
+          "xrefs" : [ ]
+        },
+        "subsets" : [ "\"qc_extension_only\"" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "pathogen_host_interaction_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2020-09-14T12:42:57Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "disease present"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000354",
       "meta" : {
@@ -18258,6 +18308,27 @@
       "type" : "CLASS",
       "lbl" : "pathogen penetration into host absent"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001203",
+      "meta" : {
+        "definition" : {
+          "val" : "A phenotype where the ability of a pathogen effector to produce an infectious disease is acquired.",
+          "xrefs" : [ ]
+        },
+        "subsets" : [ "\"qc_extension_only\"" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2020-09-29T08:11:34Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "pathogen_host_interaction_phenotype"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "gain of functional pathogen effector"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000356",
       "meta" : {
         "definition" : {
@@ -18326,6 +18397,27 @@
       },
       "type" : "CLASS",
       "lbl" : "resistance to pyrimethanil"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001202",
+      "meta" : {
+        "definition" : {
+          "val" : "A phenotype where the ability of a pathogen effector to produce an infectious disease is abolished.",
+          "xrefs" : [ ]
+        },
+        "subsets" : [ "\"qc_extension_only\"" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "pathogen_host_interaction_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2020-09-29T08:11:20Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "loss of functional pathogen effector"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000119",
       "meta" : {
@@ -23152,13 +23244,17 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001186",
       "meta" : {
         "definition" : {
-          "val" : "A phenotype where the ability of a host, to be resistant to a given pathogenic organism is present.",
+          "val" : "A phenotype where ability of a host to be resistant to a pathogen, via the recognition of a pathogen effector by a specific host resistance gene, is present.",
           "xrefs" : [ ]
         },
         "subsets" : [ "\"qc_extension_only\"" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "host susceptibility absent",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasBroadSynonym",
+          "val" : "host resistance present",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
@@ -23173,15 +23269,20 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "host resistance present"
+      "lbl" : "functional host resistance gene present"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001185",
       "meta" : {
         "definition" : {
-          "val" : "A phenotype where the ability of a host, to be resistant to a given pathogenic organism is obtained (resistance was absent and is now present)..",
+          "val" : "A phenotype where the ability of a host, to be resistant to a pathogen, via the recognition of a pathogen effector by a specific host resistance gene is acquired (resistance was absent and is now present).",
           "xrefs" : [ ]
         },
         "subsets" : [ "\"qc_extension_only\"" ],
+        "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "gain of host resistance",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2020-06-22T15:26:51Z"
@@ -23191,10 +23292,13 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Gain of function may result from engineering of a natural variant or transformation"
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "gain of host resistance"
+      "lbl" : "gain of functional host resistance gene"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000097",
       "meta" : {
@@ -23224,10 +23328,15 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001184",
       "meta" : {
         "definition" : {
-          "val" : "A phenotype where the ability of a host, to be resistant to a given pathogenic organism is abolished (resistance was present and is now absent).",
+          "val" : "A phenotype where the ability of a host to be resistant to a pathogen, via the recognition of a pathogen effector by a specific host resistance gene is abolished (resistance was present and is now absent).",
           "xrefs" : [ ]
         },
         "subsets" : [ "\"qc_extension_only\"" ],
+        "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "loss of host resistance",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2020-06-22T15:26:41Z"
@@ -23240,7 +23349,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "loss of host resistance"
+      "lbl" : "loss of functional host resistance gene"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000094",
       "meta" : {
@@ -23377,13 +23486,17 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001187",
       "meta" : {
         "definition" : {
-          "val" : "A phenotype where the ability of a host, to be resistant to a given pathogenic organism is absent.",
+          "val" : "A phenotype where ability of a host to be resistant to a pathogen, via the recognition of a pathogen effector by a specific host resistance gene, is absent.",
           "xrefs" : [ ]
         },
         "subsets" : [ "\"qc_extension_only\"" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "host susceptibility present",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasBroadSynonym",
+          "val" : "host resistance absent",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
@@ -23398,7 +23511,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "host resistance absent"
+      "lbl" : "functional host resistance gene absent"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000099",
       "meta" : {
@@ -23623,6 +23736,51 @@
       },
       "type" : "CLASS",
       "lbl" : "abolished inhibition of pathogen chorismate mutase by host"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001199",
+      "meta" : {
+        "definition" : {
+          "val" : "A pathogen host interaction phenotype where disease is absent.",
+          "xrefs" : [ ]
+        },
+        "subsets" : [ "\"qc_extension_only\"" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2020-09-14T12:42:47Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "pathogen_host_interaction_phenotype"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "disease absent"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001198",
+      "meta" : {
+        "definition" : {
+          "val" : "A pathogen host interaction phenotype that affects the disease outcome of a pathogen host interaction.",
+          "xrefs" : [ ]
+        },
+        "subsets" : [ "\"qc_do_not_annotate\"", "\"qc_do_not_manually_annotate\"" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "For use in the annotation extension outcome of interaction."
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2020-09-14T12:39:58Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "pathogen_host_interaction_phenotype"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "outcome of interaction phenotype"
     }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000051",
       "meta" : {
@@ -24978,13 +25136,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000364"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000801",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001051",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001049"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000801",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000498",
       "pred" : "is_a",
@@ -25002,13 +25160,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000462",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000465"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000464",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000445"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000462",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000465"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000474",
       "pred" : "is_a",
@@ -25382,25 +25540,25 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000400",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000929"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001159",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000332"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000400",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000929"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000767",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000760"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000048",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000043"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001179",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000048",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000043"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001181",
       "pred" : "is_a",
@@ -25462,13 +25620,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000011"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000269",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000237"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000267",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000257"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000269",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000237"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000523",
       "pred" : "is_a",
@@ -25598,13 +25756,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000469"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001176",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000280"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000548",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001176",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000280"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000940",
       "pred" : "is_a",
@@ -25718,13 +25876,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000985"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000899",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001061",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001035"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000899",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000035",
       "pred" : "is_a",
@@ -25762,13 +25920,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000375",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000369"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000842",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000815"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000375",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000369"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001156",
       "pred" : "is_a",
@@ -26006,6 +26164,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000134"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001200",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001198"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000374",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000369"
@@ -26166,13 +26328,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001080"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000068",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000071"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000067",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000081"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000068",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000071"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000982",
       "pred" : "is_a",
@@ -26282,6 +26444,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001188"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001201",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001179"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000472",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000442"
@@ -26317,10 +26483,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000582",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000010",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000007"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000118",
       "pred" : "is_a",
@@ -26361,6 +26523,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000373",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000369"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000010",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000006"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000403",
       "pred" : "is_a",
@@ -26422,13 +26588,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000944"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000580",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000099",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000982"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000580",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000436",
       "pred" : "is_a",
@@ -27250,13 +27416,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000945"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001086",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000400"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001033",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001034"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001086",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000400"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000902",
       "pred" : "is_a",
@@ -27269,10 +27435,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000772",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000009",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000008"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000114",
       "pred" : "is_a",
@@ -27289,6 +27451,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000892",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000009",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000006"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000590",
       "pred" : "is_a",
@@ -27337,6 +27503,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001130",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001006"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001198",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000081",
       "pred" : "is_a",
@@ -27474,6 +27644,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000008",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001201"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000946",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001035"
@@ -27501,10 +27675,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000625",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000008",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000006"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000860",
       "pred" : "is_a",
@@ -27798,6 +27968,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000007",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001201"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001031",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001035"
@@ -27825,10 +27999,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000123",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000177"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000007",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000006"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000735",
       "pred" : "is_a",
@@ -27922,13 +28092,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001092",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001036"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000041",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000157"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001092",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001036"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000797",
       "pred" : "is_a",
@@ -28018,13 +28188,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000461"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000249",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000235"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000248",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000245"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000249",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000235"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000636",
       "pred" : "is_a",
@@ -28110,13 +28280,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000354"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000883",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000830"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000672",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000883",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000830"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000721",
       "pred" : "is_a",
@@ -28130,13 +28300,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000431",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000421"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000432",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000411"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000431",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000421"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000565",
       "pred" : "is_a",
@@ -28205,6 +28375,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000301",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000044"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001199",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001198"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001078",
       "pred" : "is_a",
@@ -28390,13 +28564,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000046"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000300",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000043"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000161",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000002"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000300",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000043"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000952",
       "pred" : "is_a",
@@ -28414,6 +28588,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001203",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000008"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001088",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001087"
@@ -28421,6 +28599,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000793",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001202",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000007"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000634",
       "pred" : "is_a",
@@ -28450,13 +28632,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001185",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001186"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000149",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000145"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001185",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001186"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000829",
       "pred" : "is_a",
@@ -28630,13 +28812,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000160"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000001",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000505"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000815",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000001",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000505"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000646",
       "pred" : "is_a",
@@ -28746,13 +28928,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001107",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000131"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000744",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001107",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000131"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000343",
       "pred" : "is_a",
@@ -28902,7 +29084,7 @@
         "pred" : "http://purl.org/dc/terms/license",
         "val" : "https://creativecommons.org/licenses/by/3.0/"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/phipo/releases/2020-08-27/phipo-simple.json"
+      "version" : "http://purl.obolibrary.org/obo/phipo/releases/2020-10-01/phipo-simple.json"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],
