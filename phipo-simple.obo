@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2020-09-29/phipo-simple.owl
+data-version: phipo/releases/2020-10-15/phipo-simple.owl
 subsetdef: ro-eco ""
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
@@ -1798,8 +1798,13 @@ creation_date: 2018-10-01T13:09:23Z
 id: PHIPO:0000182
 name: absence of effector-mediated host hypersensitive response during biotrophy
 namespace: pathogen_host_interaction_phenotype
+alt_id: PHIPO:0000186
 def: "A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen is absent (GO:0009626)." []
-comment: Comment: this term is to be used for host protection against the pathogen.
+comment: This term is to be used for host protection against the pathogen.
+synonym: "abolished effector-mediated host hypersensitive response during biotrophy" RELATED []
+synonym: "abolished host HR induced by pathogen during biotrophy" EXACT []
+synonym: "abolished host lesion" RELATED []
+synonym: "abolished host necrotic cell death" RELATED []
 synonym: "absence of host HR induced by pathogen during biotrophy" EXACT []
 synonym: "absence of host lesion" RELATED []
 synonym: "absence of host necrotic cell death" RELATED []
@@ -1836,19 +1841,6 @@ xref: FYPO:0006555
 is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:12:43Z
-
-[Term]
-id: PHIPO:0000186
-name: abolished effector-mediated host hypersensitive response during biotrophy
-namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen is abolished (GO:0009626)." []
-comment: This term is to be used for host protection against the pathogen.
-synonym: "abolished host HR induced by pathogen during biotrophy" EXACT []
-synonym: "abolished host lesion" RELATED []
-synonym: "abolished host necrotic cell death" RELATED []
-is_a: PHIPO:0000182 ! absence of effector-mediated host hypersensitive response during biotrophy
-created_by: alaynecuzick
-creation_date: 2018-10-01T13:12:57Z
 
 [Term]
 id: PHIPO:0000187
@@ -1905,8 +1897,12 @@ creation_date: 2018-10-01T13:14:20Z
 id: PHIPO:0000192
 name: presence of effector-mediated host hypersensitive response during biotrophy
 namespace: pathogen_host_interaction_phenotype
+alt_id: PHIPO:0000516
 def: "A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen is present (GO:0009626)." []
 comment: This term is to be used for host protection against the pathogen.
+synonym: "gain of effector-mediated host hypersensitive response during biotrophy" RELATED []
+synonym: "gain of host necrotic cell death" RELATED []
+synonym: "gain of presence of host lesion" RELATED []
 synonym: "presence of host lesion" RELATED []
 synonym: "presence of host necrotic cell death" RELATED []
 is_a: PHIPO:0000280 ! pathogen effector mediated modulation of host immune system process
@@ -2007,16 +2003,6 @@ def: "A single species hyphal colony morphology phenotype where the aerial heigh
 is_a: PHIPO:0000958 ! abnormal shape of hyphal colony
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:31:34Z
-
-[Term]
-id: PHIPO:0000204
-name: abolished pathogen host protein-protein interaction
-namespace: pathogen_host_interaction_phenotype
-def: "A molecular function phenotype in which the binding of one pathogen protein to one host protein does not occur (binding was present as is now absent)." []
-xref: FYPO:0000705
-is_a: PHIPO:0001107 ! absence of pathogen host protein-protein interaction
-created_by: alaynecuzick
-creation_date: 2018-10-01T13:31:59Z
 
 [Term]
 id: PHIPO:0000205
@@ -3448,7 +3434,10 @@ creation_date: 2018-11-05T13:25:33Z
 id: PHIPO:0000355
 name: pathogen penetration into host absent
 namespace: pathogen_host_interaction_phenotype
+alt_id: PHIPO:0000357
 def: "A pathogen entry into host phenotype in which pathogen penetration into the body, tissues, or cells of the host organism is absent." []
+synonym: "abolished pathogen entry into host" EXACT []
+synonym: "abolished pathogen penetration into host" RELATED []
 is_a: PHIPO:0000949 ! pathogen entry into host phenotype
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:26:18Z
@@ -3462,16 +3451,6 @@ synonym: "abnormal pathogen entry into host phenotype" EXACT []
 is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:26:35Z
-
-[Term]
-id: PHIPO:0000357
-name: abolished pathogen penetration into host
-namespace: pathogen_host_interaction_phenotype
-def: "A pathogen entry into host phenotype in which the ability of the pathogen to  penetrate into the body, tissues, or cells of the host organism is abolished." []
-synonym: "abolished pathogen entry into host" EXACT []
-is_a: PHIPO:0000355 ! pathogen penetration into host absent
-created_by: alaynecuzick
-creation_date: 2018-11-05T13:28:51Z
 
 [Term]
 id: PHIPO:0000358
@@ -4370,18 +4349,6 @@ created_by: alaynecuzick
 creation_date: 2018-12-21T12:55:04Z
 
 [Term]
-id: PHIPO:0000462
-name: abolished effector-mediated host programmed cell death during necrotrophy
-namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the process of host tissue programmed cell death modulated by the pathogen is abolished (GO:0034053)." []
-comment: This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen.
-synonym: "abolished host lesion" RELATED []
-synonym: "abolished host necrotic cell death" RELATED []
-is_a: PHIPO:0000465 ! absence of effector-mediated host programmed cell death during necrotrophy
-created_by: alaynecuzick
-creation_date: 2018-12-21T12:55:59Z
-
-[Term]
 id: PHIPO:0000463
 name: subcellular component phenotype
 namespace: single_species_phenotype
@@ -4406,15 +4373,19 @@ creation_date: 2018-12-21T13:01:44Z
 id: PHIPO:0000465
 name: absence of effector-mediated host programmed cell death during necrotrophy
 namespace: pathogen_host_interaction_phenotype
+alt_id: PHIPO:0000462
 def: "A phenotype where the process of host tissue programmed cell death modulated by the pathogen is absent (GO:0034053)." []
 comment: This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen.
+synonym: "abolished effector-mediated host programmed cell death during necrotrophy" RELATED []
+synonym: "abolished host lesion" RELATED []
+synonym: "abolished host necrotic cell death" RELATED []
 synonym: "absence of host lesion" RELATED []
 synonym: "absence of host necrotic cell death" RELATED []
 is_a: PHIPO:0000280 ! pathogen effector mediated modulation of host immune system process
 is_a: PHIPO:0000461 ! host programmed cell death phenotype induced by pathogen presence
 is_a: PHIPO:0000481 ! absence of host necrotic cell death by pathogen
 created_by: alaynecuzick
-creation_date: 2018-12-21T13:03:50Z
+creation_date: 2018-12-21T12:55:59Z
 
 [Term]
 id: PHIPO:0000466
@@ -4506,29 +4477,21 @@ created_by: alaynecuzick
 creation_date: 2019-01-14T12:21:13Z
 
 [Term]
-id: PHIPO:0000476
-name: gain of effector-mediated host programmed cell death during necrotrophy
-namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the process of host tissue programmed cell death modulated by the pathogen has been gained (host programmed cell death was absent and is now present) (GO:0034053)." []
-comment: This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen.
-synonym: "gain of host necrotic cell death" RELATED []
-synonym: "gain of presence of host lesion" RELATED []
-is_a: PHIPO:0000477 ! presence of effector-mediated host programmed cell death during necrotrophy
-created_by: alaynecuzick
-creation_date: 2019-01-14T12:22:36Z
-
-[Term]
 id: PHIPO:0000477
 name: presence of effector-mediated host programmed cell death during necrotrophy
 namespace: pathogen_host_interaction_phenotype
+alt_id: PHIPO:0000476
 def: "A phenotype where the process of host tissue programmed cell death modulated by the pathogen is present (GO:0034053)." []
 comment: This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen.
+synonym: "gain of effector-mediated host programmed cell death during necrotrophy" RELATED []
+synonym: "gain of host necrotic cell death" RELATED []
+synonym: "gain of presence of host lesion" RELATED []
 synonym: "presence of host lesion" RELATED []
 synonym: "presence of host necrotic cell death" RELATED []
 is_a: PHIPO:0000280 ! pathogen effector mediated modulation of host immune system process
 is_a: PHIPO:0000461 ! host programmed cell death phenotype induced by pathogen presence
 created_by: alaynecuzick
-creation_date: 2019-01-14T12:23:06Z
+creation_date: 2019-01-14T12:22:36Z
 
 [Term]
 id: PHIPO:0000478
@@ -4818,18 +4781,6 @@ xref: FYPO:0002057
 is_a: PHIPO:0000509 ! population phenotype
 created_by: alaynecuzick
 creation_date: 2019-02-11T13:07:36Z
-
-[Term]
-id: PHIPO:0000516
-name: gain of effector-mediated host hypersensitive response during biotrophy
-namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the process of host tissue hypersensitive response modulated by the pathogen has been gained (host hypersensitive response was absent and is now present) (GO:0009626)." []
-comment: This term is to be used for host protection against the pathogen.
-synonym: "gain of host necrotic cell death" RELATED []
-synonym: "gain of presence of host lesion" RELATED []
-is_a: PHIPO:0000192 ! presence of effector-mediated host hypersensitive response during biotrophy
-created_by: alaynecuzick
-creation_date: 2019-03-05T13:46:52Z
 
 [Term]
 id: PHIPO:0000517
@@ -9838,11 +9789,13 @@ creation_date: 2019-10-09T12:33:57Z
 id: PHIPO:0001107
 name: absence of pathogen host protein-protein interaction
 namespace: pathogen_host_interaction_phenotype
+alt_id: PHIPO:0000204
 def: "A molecular function phenotype in which the binding of one pathogen protein to one host protein is absent." []
+synonym: "abolished pathogen host protein-protein interaction" RELATED []
 synonym: "binding absent between pathogen protein and host protein" EXACT []
 is_a: PHIPO:0000131 ! pathogen host protein-protein interaction phenotype
 created_by: alaynecuzick
-creation_date: 2019-10-09T12:34:12Z
+creation_date: 2018-10-01T13:31:59Z
 
 [Term]
 id: PHIPO:0001108
@@ -10232,7 +10185,7 @@ synonym: "pathogen suppression of host effector triggered immunity" EXACT []
 synonym: "pathogen suppression of host ETI" EXACT []
 synonym: "suppression of host effector triggered immunity" EXACT []
 synonym: "suppression of host ETI" EXACT []
-is_a: PHIPO:0000186 ! abolished effector-mediated host hypersensitive response during biotrophy
+is_a: PHIPO:0000182 ! absence of effector-mediated host hypersensitive response during biotrophy
 is_a: PHIPO:0001176 ! effector-mediated immune suppression phenotype
 created_by: alaynecuzick
 creation_date: 2020-03-04T12:47:38Z
@@ -10508,21 +10461,13 @@ creation_date: 2020-06-01T13:19:23Z
 id: PHIPO:0001180
 name: absence of effector-independent host hypersensitive response
 namespace: single_species_phenotype
+alt_id: PHIPO:0001181
 def: "A single species phenotype where the immune system process of host tissue hypersensitive response is absent in a pathogen effector-independant manner. (i.e. an alteration within the host does not activate the hypersensitive response in the absence of a pathogen)." []
 subset: host_phenotype
+synonym: "abolished effector-independent host hypersensitive response" RELATED []
 is_a: PHIPO:0000446 ! host cell death phenotype
 created_by: alaynecuzick
 creation_date: 2020-06-09T11:25:32Z
-
-[Term]
-id: PHIPO:0001181
-name: abolished effector-independent host hypersensitive response
-namespace: single_species_phenotype
-def: "A single species phenotype where the immune system process of host tissue hypersensitive response is abolished in a pathogen effector-independant manner. (i.e. an alteration within the host did activate the hypersensitive response in the absence of a pathogen and now does not)." []
-subset: host_phenotype
-is_a: PHIPO:0001180 ! absence of effector-independent host hypersensitive response
-created_by: alaynecuzick
-creation_date: 2020-06-09T11:33:36Z
 
 [Term]
 id: PHIPO:0001182
@@ -10758,6 +10703,16 @@ subset: qc_extension_only
 is_a: PHIPO:0000008 ! functional pathogen effector present
 created_by: alaynecuzick
 creation_date: 2020-09-29T08:11:34Z
+
+[Term]
+id: PHIPO:0001204
+name: decreased extent of effector-mediated host hypersensitive response during biotrophy
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen occurs to a lower extent than normal (GO:0009626)." []
+comment: This term is to be used for host protection against the pathogen.
+is_a: PHIPO:0000192 ! presence of effector-mediated host hypersensitive response during biotrophy
+created_by: alaynecuzick
+creation_date: 2020-10-14T10:36:53Z
 
 [Typedef]
 id: PHIPO:0000304
