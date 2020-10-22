@@ -10,7 +10,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/phipo/imports/go_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2020-10-01/imports/go_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2020-10-22/imports/go_import.owl"/>
     </owl:Ontology>
     
 
@@ -1573,10 +1573,12 @@
     <!-- http://purl.obolibrary.org/obo/GO_0005622 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005622">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <obo:IAO_0000115>The living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0110165"/>
+        <obo:IAO_0000115>A component of a cell contained within (but not including) the plasma membrane. In eukaryotes it includes the nucleus and cytoplasm.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/17776</obo:IAO_0000233>
         <oboInOwl:hasDbXref>Wikipedia:Intracellular</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>internal to cell</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>intracellular</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>protoplasm</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>nucleocytoplasm</oboInOwl:hasRelatedSynonym>
@@ -1587,12 +1589,12 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_metagenomics"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
-        <rdfs:label>intracellular</rdfs:label>
+        <rdfs:label>intracellular anatomical structure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005622"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm.</owl:annotatedTarget>
+        <owl:annotatedTarget>A component of a cell contained within (but not including) the plasma membrane. In eukaryotes it includes the nucleus and cytoplasm.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198506732</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -5472,7 +5474,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0023051"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that modulates the frequency, rate or extent of a signaling process.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_signal</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:mtg_signal</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0023051"/>
@@ -5517,7 +5519,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0023052"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The entirety of a process in which information is transmitted within a biological system. This process begins with an active signal and ends when a cellular response has been triggered.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_signal</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:mtg_signal</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:mtg_signaling_feb11</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:signaling</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -5564,7 +5566,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0023056"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that activates, maintains or increases the frequency, rate or extent of a signaling process.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_signal</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:mtg_signal</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0023056"/>
@@ -5615,7 +5617,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0023057"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that stops, prevents, or reduces the frequency, rate or extent of a signaling process.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mtg_signal</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:mtg_signal</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0023057"/>
@@ -7929,7 +7931,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0034301"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The process in which a cell gives rise to an endospore, a dormant, highly resistant spore with a thick wall that forms within the mother cell. Endospores are produced by some low G+C Gram-positive bacteria in response to harsh conditions.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:ds</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ds</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:0470090278</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -7989,7 +7991,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043900"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043937"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051445"/>
         <rdfs:subClassOf>
@@ -8696,7 +8697,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0022603"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043937"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0045595"/>
         <rdfs:subClassOf>
@@ -10075,7 +10075,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043902"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043940"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0045881"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051446"/>
@@ -10116,7 +10115,6 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0010948"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0042174"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043901"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043940"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051447"/>
         <rdfs:subClassOf>
@@ -10383,7 +10381,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044068"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process in which a symbiont organism modulates the frequency, rate or extent of a cellular process, any process that is carried out at the cellular level, but not necessarily restricted to a single cell, in its host organism.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MITRE:tk</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MITRE:tk</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10416,7 +10414,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044071"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The process in which a symbiont organism effects a change in its host&apos;s cell cycle through direct interactions with the host cell macromolecular machinery.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MITRE:tk</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MITRE:tk</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10446,7 +10444,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044072"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The process in which a symbiont organism stops, prevents or reduces the rate or extent of its host&apos;s progression through its cell cycle via direct interactions with the host cell macromolecular machinery.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MITRE:tk</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MITRE:tk</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -17627,7 +17625,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1904359"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050793"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
@@ -17663,8 +17661,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051094"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0075010"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1904361"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
@@ -17700,8 +17698,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051093"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0075010"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1904360"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002212"/>
@@ -18131,7 +18129,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0097159"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Interacting selectively and non-covalently with an organic cyclic compound, any molecular entity that contains carbon arranged in a cyclic molecular structure.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:sjw</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:sjw</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:7583672</oboInOwl:hasDbXref>
     </owl:Axiom>
     
