@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2020-10-01/imports/go_import.owl
+data-version: phipo/releases/2020-10-22/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
@@ -478,20 +478,22 @@ xref: NIF_Subcellular:sao1337158144
 
 [Term]
 id: GO:0005622
-name: intracellular
+name: intracellular anatomical structure
 namespace: cellular_component
-def: "The living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm." [ISBN:0198506732]
+def: "A component of a cell contained within (but not including) the plasma membrane. In eukaryotes it includes the nucleus and cytoplasm." [ISBN:0198506732]
 subset: gocheck_do_not_annotate
 subset: goslim_chembl
 subset: goslim_generic
 subset: goslim_metagenomics
 subset: goslim_plant
 synonym: "internal to cell" EXACT []
+synonym: "intracellular" EXACT []
 synonym: "nucleocytoplasm" RELATED [GOC:mah]
 synonym: "protoplasm" EXACT []
 synonym: "protoplast" RELATED [GOC:mah]
 xref: Wikipedia:Intracellular
-is_a: GO:0005575 ! cellular_component
+is_a: GO:0110165 ! cellular anatomical entity
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/17776 xsd:anyURI
 
 [Term]
 id: GO:0005623
@@ -3009,7 +3011,6 @@ synonym: "MAPKKK cascade during sporulation" RELATED []
 synonym: "regulation of meiotic spore formation" EXACT []
 synonym: "regulation of meiotic sporulation" EXACT []
 synonym: "regulation of sexual spore formation" EXACT []
-is_a: GO:0043900 ! regulation of multi-organism process
 is_a: GO:0043937 ! regulation of sporulation
 is_a: GO:0051445 ! regulation of meiotic cell cycle
 intersection_of: GO:0008150 ! biological_process
@@ -3072,8 +3073,8 @@ synonym: "signal transduction via intracellular signaling cascade" RELATED []
 synonym: "signal transmission via intracellular cascade" NARROW []
 is_a: GO:0007165 ! signal transduction
 intersection_of: GO:0007165 ! signal transduction
-intersection_of: occurs_in GO:0005622 ! intracellular
-relationship: occurs_in GO:0005622 ! intracellular
+intersection_of: occurs_in GO:0005622 ! intracellular anatomical structure
+relationship: occurs_in GO:0005622 ! intracellular anatomical structure
 created_by: bf
 creation_date: 2010-05-14T01:14:37Z
 
@@ -3259,7 +3260,6 @@ id: GO:0042173
 name: regulation of sporulation resulting in formation of a cellular spore
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of spore formation." [GOC:jl]
-is_a: GO:0022603 ! regulation of anatomical structure morphogenesis
 is_a: GO:0043937 ! regulation of sporulation
 is_a: GO:0045595 ! regulation of cell differentiation
 intersection_of: GO:0008150 ! biological_process
@@ -3495,8 +3495,8 @@ def: "Organized structure of distinctive morphology and function, occurring with
 subset: goslim_pir
 is_a: GO:0043226 ! organelle
 intersection_of: GO:0043226 ! organelle
-intersection_of: part_of GO:0005622 ! intracellular
-relationship: part_of GO:0005622 ! intracellular
+intersection_of: part_of GO:0005622 ! intracellular anatomical structure
+relationship: part_of GO:0005622 ! intracellular anatomical structure
 
 [Term]
 id: GO:0043231
@@ -3519,7 +3519,7 @@ synonym: "intracellular non-membrane-enclosed organelle" EXACT []
 is_a: GO:0043228 ! non-membrane-bounded organelle
 is_a: GO:0043229 ! intracellular organelle
 intersection_of: GO:0043228 ! non-membrane-bounded organelle
-intersection_of: part_of GO:0005622 ! intracellular
+intersection_of: part_of GO:0005622 ! intracellular anatomical structure
 
 [Term]
 id: GO:0043385
@@ -3766,7 +3766,6 @@ id: GO:0043941
 name: positive regulation of sexual sporulation resulting in formation of a cellular spore
 namespace: biological_process
 def: "Any process that activates, maintains or increases the frequency, rate or extent of the formation of cellular spores derived from the products of meiosis." [GOC:pamgo_curators]
-is_a: GO:0043902 ! positive regulation of multi-organism process
 is_a: GO:0043940 ! regulation of sexual sporulation resulting in formation of a cellular spore
 is_a: GO:0045881 ! positive regulation of sporulation resulting in formation of a cellular spore
 is_a: GO:0051446 ! positive regulation of meiotic cell cycle
@@ -3782,7 +3781,6 @@ namespace: biological_process
 def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the formation of cellular spores derived from the products of meiosis." [GOC:pamgo_curators]
 is_a: GO:0010948 ! negative regulation of cell cycle process
 is_a: GO:0042174 ! negative regulation of sporulation resulting in formation of a cellular spore
-is_a: GO:0043901 ! negative regulation of multi-organism process
 is_a: GO:0043940 ! regulation of sexual sporulation resulting in formation of a cellular spore
 is_a: GO:0051447 ! negative regulation of meiotic cell cycle
 intersection_of: GO:0008150 ! biological_process
@@ -4839,8 +4837,8 @@ is_a: GO:0006810 ! transport
 is_a: GO:0051641 ! cellular localization
 is_a: GO:0051649 ! establishment of localization in cell
 intersection_of: GO:0006810 ! transport
-intersection_of: occurs_in GO:0005622 ! intracellular
-relationship: occurs_in GO:0005622 ! intracellular
+intersection_of: occurs_in GO:0005622 ! intracellular anatomical structure
+relationship: occurs_in GO:0005622 ! intracellular anatomical structure
 created_by: jl
 creation_date: 2013-12-18T14:04:50Z
 
@@ -6622,7 +6620,7 @@ name: regulation of germ tube formation
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of germ tube formation on or near host. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
 comment: Note that this term should not be used to annotate gene products of the host. It should only be used to annotate those gene products from the symbiont involved in this process.
-is_a: GO:1904359 ! regulation of spore germination
+is_a: GO:0050793 ! regulation of developmental process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0075009 ! germ tube formation
 relationship: regulates GO:0075009 ! germ tube formation
@@ -6633,8 +6631,8 @@ name: positive regulation of germ tube formation
 namespace: biological_process
 def: "Any process that activates, maintains or increases the frequency, rate or extent of germ tube formation on or near host. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
 synonym: "positive regulation of germ tube formation on or near host" EXACT []
+is_a: GO:0051094 ! positive regulation of developmental process
 is_a: GO:0075010 ! regulation of germ tube formation
-is_a: GO:1904361 ! positive regulation of spore germination
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0075009 ! germ tube formation
 relationship: positively_regulates GO:0075009 ! germ tube formation
@@ -6645,8 +6643,8 @@ name: negative regulation of germ tube formation
 namespace: biological_process
 def: "Any process that stops, prevents, or reduces the frequency, rate or extent of germ tube formation on or near host. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:pamgo_curators]
 synonym: "negative regulation of germ tube formation on or near host" EXACT []
+is_a: GO:0051093 ! negative regulation of developmental process
 is_a: GO:0075010 ! regulation of germ tube formation
-is_a: GO:1904360 ! negative regulation of spore germination
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0075009 ! germ tube formation
 relationship: negatively_regulates GO:0075009 ! germ tube formation
