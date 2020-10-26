@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2020-10-22/phipo-simple.owl
+data-version: phipo/releases/2020-10-26/phipo-simple.owl
 subsetdef: ro-eco ""
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
@@ -413,7 +413,7 @@ id: PHIPO:0000037
 name: abnormal hyphal colony morphology
 namespace: single_species_phenotype
 def: "A single species population phenotype where the morphology of a colony growing in filamentous form is abnormal." []
-is_a: PHIPO:0000273 ! filamentous colony morphology phenotype
+is_a: PHIPO:0000273 ! filamentous colony shape phenotype
 created_by: alaynecuzick
 creation_date: 2018-07-10T11:46:51Z
 
@@ -1796,7 +1796,7 @@ creation_date: 2018-10-01T13:09:23Z
 
 [Term]
 id: PHIPO:0000182
-name: absence of effector-mediated host hypersensitive response during biotrophy
+name: absence of host-defense induced lesion by host hypersensitive response
 namespace: pathogen_host_interaction_phenotype
 alt_id: PHIPO:0000186
 def: "A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen is absent (GO:0009626)." []
@@ -1805,11 +1805,12 @@ synonym: "abolished effector-mediated host hypersensitive response during biotro
 synonym: "abolished host HR induced by pathogen during biotrophy" EXACT []
 synonym: "abolished host lesion" RELATED []
 synonym: "abolished host necrotic cell death" RELATED []
+synonym: "absence of effector-mediated host hypersensitive response during biotrophy" RELATED []
 synonym: "absence of host HR induced by pathogen during biotrophy" EXACT []
 synonym: "absence of host lesion" RELATED []
 synonym: "absence of host necrotic cell death" RELATED []
 is_a: PHIPO:0000280 ! pathogen effector mediated modulation of host immune system process
-is_a: PHIPO:0000466 ! host necrotic cell death by pathogen induced hypersensitive response
+is_a: PHIPO:0000481 ! absence of pathogen-associated host lesions
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:09:35Z
 
@@ -1873,13 +1874,15 @@ creation_date: 2018-10-01T13:13:36Z
 
 [Term]
 id: PHIPO:0000190
-name: delayed effector-mediated host hypersensitive response during biotrophy
+name: delayed host-defence induced lesion formation by host hypersensitive response
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen is delayed (GO:0009626)." []
 comment: This term is to be used for host protection against the pathogen.
+synonym: "delayed effector-mediated host hypersensitive response during biotrophy" RELATED []
 synonym: "delayed host necrotic cell death" RELATED []
 synonym: "delayed presence of host lesion" RELATED []
-is_a: PHIPO:0000192 ! presence of effector-mediated host hypersensitive response during biotrophy
+is_a: PHIPO:0000192 ! presence of host-defense induced lesion by host hypersensitive response
+is_a: PHIPO:0000985 ! decreased extent of pathogen-associated host lesions
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:14:10Z
 
@@ -1895,7 +1898,7 @@ creation_date: 2018-10-01T13:14:20Z
 
 [Term]
 id: PHIPO:0000192
-name: presence of effector-mediated host hypersensitive response during biotrophy
+name: presence of host-defense induced lesion by host hypersensitive response
 namespace: pathogen_host_interaction_phenotype
 alt_id: PHIPO:0000516
 def: "A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen is present (GO:0009626)." []
@@ -1903,11 +1906,11 @@ comment: This term is to be used for host protection against the pathogen.
 synonym: "gain of effector-mediated host hypersensitive response during biotrophy" RELATED []
 synonym: "gain of host necrotic cell death" RELATED []
 synonym: "gain of presence of host lesion" RELATED []
+synonym: "presence of effector-mediated host hypersensitive response during biotrophy" RELATED []
 synonym: "presence of host lesion" RELATED []
 synonym: "presence of host necrotic cell death" RELATED []
 is_a: PHIPO:0000280 ! pathogen effector mediated modulation of host immune system process
-is_a: PHIPO:0000466 ! host necrotic cell death by pathogen induced hypersensitive response
-is_a: PHIPO:0000480 ! presence of pathogen-associated host lesions
+is_a: PHIPO:0000461 ! presence of pathogen-associated host defense induced lesions
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:14:29Z
 
@@ -1931,10 +1934,11 @@ creation_date: 2018-10-01T13:26:34Z
 
 [Term]
 id: PHIPO:0000196
-name: normal aerial height of filamentous colony
+name: normal aerial height of filamentous colony affecting colony shape
 namespace: single_species_phenotype
-def: "A single species hyphal colony morphology phenotype where the aerial height of the filamentous colony is normal (indistinguishable from wild type)." []
-is_a: PHIPO:0000278 ! normal hyphal colony morphology
+def: "A single species hyphal colony shape phenotype where the aerial height of the filamentous colony is normal (indistinguishable from wild type)." []
+synonym: "normal aerial height of filamentous colony" RELATED []
+is_a: PHIPO:0000278 ! normal hyphal colony shape
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:27:25Z
 
@@ -1997,18 +2001,20 @@ creation_date: 2018-10-01T13:31:30Z
 
 [Term]
 id: PHIPO:0000203
-name: increased aerial height of filamentous colony
+name: increased aerial height of filamentous colony affecting colony shape
 namespace: single_species_phenotype
-def: "A single species hyphal colony morphology phenotype where the aerial height of the filamentous colony is increased." []
+def: "A single species hyphal colony shape phenotype where the aerial height of the filamentous colony is increased." []
+synonym: "increased aerial height of filamentous colony" RELATED []
 is_a: PHIPO:0000958 ! abnormal shape of hyphal colony
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:31:34Z
 
 [Term]
 id: PHIPO:0000205
-name: decreased aerial height of filamentous colony
+name: decreased aerial height of filamentous colony affecting colony shape
 namespace: single_species_phenotype
-def: "A single species hyphal colony morphology phenotype where the aerial height of the filamentous colony is decreased." []
+def: "A single species hyphal colony shape phenotype where the aerial height of the filamentous colony is decreased." []
+synonym: "decreased aerial height of filamentous colony" RELATED []
 is_a: PHIPO:0000958 ! abnormal shape of hyphal colony
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:32:01Z
@@ -2668,9 +2674,10 @@ creation_date: 2018-10-03T11:05:31Z
 
 [Term]
 id: PHIPO:0000273
-name: filamentous colony morphology phenotype
+name: filamentous colony shape phenotype
 namespace: single_species_phenotype
-def: "A single species population phenotype affecting the morphology of a colony growing in filamentous form." []
+def: "A single species population phenotype affecting the shape of a colony growing in filamentous form." []
+synonym: "filamentous colony morphology phenotype" RELATED []
 is_a: PHIPO:0001049 ! colony shape phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-03T13:38:13Z
@@ -2714,11 +2721,12 @@ creation_date: 2018-10-03T13:39:41Z
 
 [Term]
 id: PHIPO:0000278
-name: normal hyphal colony morphology
+name: normal hyphal colony shape
 namespace: single_species_phenotype
-def: "A single species population phenotype where the morphology of a colony growing in filamentous form is normal (indistinguishable from wild type)." []
+def: "A single species population phenotype where the shape of a colony growing in filamentous form is normal (indistinguishable from wild type)." []
 synonym: "normal colony morphology" BROAD []
-is_a: PHIPO:0000273 ! filamentous colony morphology phenotype
+synonym: "normal hyphal colony morphology" RELATED []
+is_a: PHIPO:0000273 ! filamentous colony shape phenotype
 is_a: PHIPO:0001057 ! normal colony shape
 created_by: alaynecuzick
 creation_date: 2018-10-03T13:40:03Z
@@ -4304,15 +4312,13 @@ creation_date: 2018-12-19T09:51:47Z
 
 [Term]
 id: PHIPO:0000461
-name: host programmed cell death phenotype induced by pathogen presence
+name: presence of pathogen-associated host defense induced lesions
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype that affects the process of host tissue death causing a host lesion induced by the presence of a pathogen. The frequency, rate or extent of programmed cell death in the host organism may be modulated by the pathogen or the host (GO:0097300 and GO:0034053)." []
-comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
-subset: qc_do_not_annotate
-subset: qc_do_not_manually_annotate
 synonym: "host necrotic cell death" RELATED []
+synonym: "host programmed cell death phenotype induced by pathogen presence" RELATED []
 synonym: "presence of host lesion" RELATED []
-is_a: PHIPO:0000445 ! pathogen host interaction host lesion formation phenotype
+is_a: PHIPO:0000480 ! presence of pathogen-associated host lesions
 created_by: alaynecuzick
 creation_date: 2018-12-21T12:55:04Z
 
@@ -4357,13 +4363,13 @@ creation_date: 2018-12-21T12:55:59Z
 
 [Term]
 id: PHIPO:0000466
-name: host necrotic cell death by pathogen induced hypersensitive response
+name: obsolete host necrotic cell death by pathogen induced hypersensitive response
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype that affects the immune system process of host necrotic cell death by pathogen induced hypersensitive response. Pathogen induced hypersensitive response is the rapid, localized death of plant cells in response to invasion by a pathogen (GO:0009626)." []
 comment: This term is to be used for host protection against the pathogen.\nThis is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
-is_a: PHIPO:0000461 ! host programmed cell death phenotype induced by pathogen presence
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-12-21T13:09:35Z
 
@@ -4496,11 +4502,13 @@ creation_date: 2019-01-14T12:24:50Z
 id: PHIPO:0000481
 name: absence of pathogen-associated host lesions
 namespace: pathogen_host_interaction_phenotype
+alt_id: PHIPO:0000997
 def: "A phenotype where the process of host tissue cell death caused by the pathogen is absent." []
+synonym: "abolished pathogen-associated host lesions" RELATED []
 synonym: "absence of host necrotic cell death by pathogen" RELATED []
 is_a: PHIPO:0000445 ! pathogen host interaction host lesion formation phenotype
 created_by: alaynecuzick
-creation_date: 2019-01-14T12:25:11Z
+creation_date: 2019-08-10T13:35:33Z
 
 [Term]
 id: PHIPO:0000483
@@ -8675,15 +8683,6 @@ created_by: alaynecuzick
 creation_date: 2019-08-10T12:32:05Z
 
 [Term]
-id: PHIPO:0000997
-name: abolished pathogen-associated host lesions
-namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the occurrence of individual host tissue lesions induced by the presence of a pathogen is abolished. (Lesions were present and are now absent)." []
-is_a: PHIPO:0000985 ! decreased extent of pathogen-associated host lesions
-created_by: alaynecuzick
-creation_date: 2019-08-10T13:35:33Z
-
-[Term]
 id: PHIPO:0000998
 name: pathogen morphology phenotype during colonization of host
 namespace: pathogen_host_interaction_phenotype
@@ -9222,18 +9221,20 @@ creation_date: 2019-09-10T13:29:47Z
 
 [Term]
 id: PHIPO:0001052
-name: hyper-smooth colony morphology
+name: hyper-smooth colony shape
 namespace: single_species_phenotype
-def: "A single species colony morphology phenotype where the colony is smoother than normal." []
+def: "A single species colony shape phenotype where the colony is smoother than normal." []
+synonym: "hyper-smooth colony morphology" RELATED []
 is_a: PHIPO:0001051 ! abnormal colony shape
 created_by: alaynecuzick
 creation_date: 2019-09-10T13:32:18Z
 
 [Term]
 id: PHIPO:0001053
-name: hyper-rugose colony morphology
+name: hyper-rugose colony shape
 namespace: single_species_phenotype
-def: "A single species colony morphology phenotype where the colony is more rugose (wrinkled; corrugated) than normal." []
+def: "A single species colony shape phenotype where the colony is more rugose (wrinkled; corrugated) than normal." []
+synonym: "hyper-rugose colony morphology" RELATED []
 is_a: PHIPO:0001051 ! abnormal colony shape
 created_by: alaynecuzick
 creation_date: 2019-09-10T13:32:45Z
@@ -9290,9 +9291,10 @@ creation_date: 2019-09-13T10:53:42Z
 
 [Term]
 id: PHIPO:0001058
-name: normal rugose colony morphology
+name: normal rugose colony shape
 namespace: single_species_phenotype
-def: "A single species colony morphology phenotype where the colony is as rugose (wrinkled; corrugated) as normal (indistinguishable from wild type)." []
+def: "A single species colony shape phenotype where the colony is as rugose (wrinkled; corrugated) as normal (indistinguishable from wild type)." []
+synonym: "normal rugose colony morphology" RELATED []
 is_a: PHIPO:0001057 ! normal colony shape
 created_by: alaynecuzick
 creation_date: 2019-09-10T13:40:49Z
@@ -10159,7 +10161,7 @@ synonym: "pathogen suppression of host effector triggered immunity" EXACT []
 synonym: "pathogen suppression of host ETI" EXACT []
 synonym: "suppression of host effector triggered immunity" EXACT []
 synonym: "suppression of host ETI" EXACT []
-is_a: PHIPO:0000182 ! absence of effector-mediated host hypersensitive response during biotrophy
+is_a: PHIPO:0000182 ! absence of host-defense induced lesion by host hypersensitive response
 is_a: PHIPO:0001176 ! effector-mediated immune suppression phenotype
 created_by: alaynecuzick
 creation_date: 2020-03-04T12:47:38Z
@@ -10681,11 +10683,13 @@ creation_date: 2020-09-29T08:11:34Z
 
 [Term]
 id: PHIPO:0001204
-name: decreased extent of effector-mediated host hypersensitive response during biotrophy
+name: decreased extent of host-defence induced lesion by host hypersensitive response
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen occurs to a lower extent than normal (GO:0009626)." []
 comment: This term is to be used for host protection against the pathogen.
-is_a: PHIPO:0000192 ! presence of effector-mediated host hypersensitive response during biotrophy
+synonym: "decreased extent of effector-mediated host hypersensitive response during biotrophy" RELATED []
+is_a: PHIPO:0000192 ! presence of host-defense induced lesion by host hypersensitive response
+is_a: PHIPO:0000985 ! decreased extent of pathogen-associated host lesions
 created_by: alaynecuzick
 creation_date: 2020-10-14T10:36:53Z
 
