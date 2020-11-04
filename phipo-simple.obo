@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2020-10-26/phipo-simple.owl
+data-version: phipo/releases/2020-11-04/phipo-simple.owl
 subsetdef: ro-eco ""
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
@@ -407,15 +407,6 @@ xref: FYPO:0000356
 is_a: PHIPO:0000478 ! lipid droplet phenotype
 created_by: alaynecuzick
 creation_date: 2019-01-14T12:21:13Z
-
-[Term]
-id: PHIPO:0000037
-name: abnormal hyphal colony morphology
-namespace: single_species_phenotype
-def: "A single species population phenotype where the morphology of a colony growing in filamentous form is abnormal." []
-is_a: PHIPO:0000273 ! filamentous colony shape phenotype
-created_by: alaynecuzick
-creation_date: 2018-07-10T11:46:51Z
 
 [Term]
 id: PHIPO:0000038
@@ -1799,8 +1790,8 @@ id: PHIPO:0000182
 name: absence of host-defense induced lesion by host hypersensitive response
 namespace: pathogen_host_interaction_phenotype
 alt_id: PHIPO:0000186
-def: "A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen is absent (GO:0009626)." []
-comment: This term is to be used for host protection against the pathogen.
+def: "A phenotype where the process of host tissue cell death causing a host lesion is induced by the host activating its own hypersensitive response in defense, is absent." []
+comment: This term is to be used for host protection against the pathogen. Note that if you are curating a necrotroph you need to annotate to PHIPO:0000465.
 synonym: "abolished effector-mediated host hypersensitive response during biotrophy" RELATED []
 synonym: "abolished host HR induced by pathogen during biotrophy" EXACT []
 synonym: "abolished host lesion" RELATED []
@@ -1809,7 +1800,6 @@ synonym: "absence of effector-mediated host hypersensitive response during biotr
 synonym: "absence of host HR induced by pathogen during biotrophy" EXACT []
 synonym: "absence of host lesion" RELATED []
 synonym: "absence of host necrotic cell death" RELATED []
-is_a: PHIPO:0000280 ! pathogen effector mediated modulation of host immune system process
 is_a: PHIPO:0000481 ! absence of pathogen-associated host lesions
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:09:35Z
@@ -1876,7 +1866,7 @@ creation_date: 2018-10-01T13:13:36Z
 id: PHIPO:0000190
 name: delayed host-defence induced lesion formation by host hypersensitive response
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen is delayed (GO:0009626)." []
+def: "A phenotype where the process of host tissue cell death causing a host lesion is induced by the host activating its own hypersensitive response in defense is delayed." []
 comment: This term is to be used for host protection against the pathogen.
 synonym: "delayed effector-mediated host hypersensitive response during biotrophy" RELATED []
 synonym: "delayed host necrotic cell death" RELATED []
@@ -1901,15 +1891,14 @@ id: PHIPO:0000192
 name: presence of host-defense induced lesion by host hypersensitive response
 namespace: pathogen_host_interaction_phenotype
 alt_id: PHIPO:0000516
-def: "A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen is present (GO:0009626)." []
-comment: This term is to be used for host protection against the pathogen.
+def: "A phenotype where the process of host tissue cell death causing a host lesion is induced by the host activating its own hypersensitive response in defense, is present." []
+comment: This term is to be used for host protection against the pathogen. Note that if you are curating a necrotroph you need to annotate to PHIPO:0000477.
 synonym: "gain of effector-mediated host hypersensitive response during biotrophy" RELATED []
 synonym: "gain of host necrotic cell death" RELATED []
 synonym: "gain of presence of host lesion" RELATED []
 synonym: "presence of effector-mediated host hypersensitive response during biotrophy" RELATED []
 synonym: "presence of host lesion" RELATED []
 synonym: "presence of host necrotic cell death" RELATED []
-is_a: PHIPO:0000280 ! pathogen effector mediated modulation of host immune system process
 is_a: PHIPO:0000461 ! presence of pathogen-associated host defense induced lesions
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:14:29Z
@@ -4250,7 +4239,7 @@ creation_date: 2018-12-18T11:34:08Z
 id: PHIPO:0000445
 name: pathogen host interaction host lesion formation phenotype
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype that affects the process of host tissue death causing a host lesion induced by the presence of a pathogen." []
+def: "A phenotype that affects the process of host tissue death causing a host lesion induced by either the pathogen directly killing host tissue (e.g. cell wall degradation), or the host activating its own cell death pathways in defense." []
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
@@ -4314,7 +4303,8 @@ creation_date: 2018-12-19T09:51:47Z
 id: PHIPO:0000461
 name: presence of pathogen-associated host defense induced lesions
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype that affects the process of host tissue death causing a host lesion induced by the presence of a pathogen. The frequency, rate or extent of programmed cell death in the host organism may be modulated by the pathogen or the host (GO:0097300 and GO:0034053)." []
+def: "A phenotype where the process of host tissue cell death causing a host lesion is induced by the host activating its own programmed cell death pathways in defense, is present." []
+comment: Note that if you are curating a necrotroph you need to annotate to PHIPO:0000477.
 synonym: "host necrotic cell death" RELATED []
 synonym: "host programmed cell death phenotype induced by pathogen presence" RELATED []
 synonym: "presence of host lesion" RELATED []
@@ -4348,8 +4338,8 @@ id: PHIPO:0000465
 name: absence of pathogen necrotrophic effector-mediated host programmed cell death
 namespace: pathogen_host_interaction_phenotype
 alt_id: PHIPO:0000462
-def: "A phenotype where the process of host tissue programmed cell death modulated by the pathogen is absent (GO:0034053)." []
-comment: This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen.
+def: "A phenotype where the process of a necrotrophic pathogen effector activating the host immune system to trigger programmed cell death is absent." []
+comment: This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen. An effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defences or other host responses.
 synonym: "abolished effector-mediated host programmed cell death during necrotrophy" RELATED []
 synonym: "abolished host lesion" RELATED []
 synonym: "abolished host necrotic cell death" RELATED []
@@ -4455,8 +4445,8 @@ id: PHIPO:0000477
 name: presence of pathogen necrotrophic effector-mediated host programmed cell death
 namespace: pathogen_host_interaction_phenotype
 alt_id: PHIPO:0000476
-def: "A phenotype where the process of host tissue programmed cell death modulated by the pathogen is present (GO:0034053)." []
-comment: This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen.
+def: "A phenotype where the process of a necrotrophic pathogen effector activating the host immune system to trigger programmed cell death is present." []
+comment: This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen. An effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defences or other host responses.
 synonym: "gain of effector-mediated host programmed cell death during necrotrophy" RELATED []
 synonym: "gain of host necrotic cell death" RELATED []
 synonym: "gain of presence of host lesion" RELATED []
@@ -4491,7 +4481,8 @@ creation_date: 2019-01-14T12:23:54Z
 id: PHIPO:0000480
 name: presence of pathogen-associated host lesions
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the process of host tissue cell death caused by the pathogen is present." []
+def: "A phenotype where the process of host tissue cell death causing a host lesion is present." []
+comment: The lesion can be induced by either the pathogen directly killing host tissue (e.g. cell wall degradation), or the host activating its own cell death pathways in defense.
 synonym: "normal host lesion formation with pathogen" EXACT []
 synonym: "presence of host necrotic cell death by pathogen" RELATED []
 is_a: PHIPO:0000445 ! pathogen host interaction host lesion formation phenotype
@@ -4503,7 +4494,8 @@ id: PHIPO:0000481
 name: absence of pathogen-associated host lesions
 namespace: pathogen_host_interaction_phenotype
 alt_id: PHIPO:0000997
-def: "A phenotype where the process of host tissue cell death caused by the pathogen is absent." []
+def: "A phenotype where the process of host tissue cell death causing a host lesion is absent." []
+comment: The lesion can be induced by either the pathogen directly killing host tissue (e.g. cell wall degradation), or the host activating its own cell death pathways in defense. Note that if you are curating a necrotroph you need to annotate to PHIPO:0000465.
 synonym: "abolished pathogen-associated host lesions" RELATED []
 synonym: "absence of host necrotic cell death by pathogen" RELATED []
 is_a: PHIPO:0000445 ! pathogen host interaction host lesion formation phenotype
@@ -8313,9 +8305,11 @@ creation_date: 2019-06-10T09:09:38Z
 id: PHIPO:0000958
 name: abnormal shape of hyphal colony
 namespace: single_species_phenotype
+alt_id: PHIPO:0000037
 def: "A single species hyphal colony phenotype where the shape of the colony is abnormal." []
 synonym: "abnormal colony morphology" BROAD []
-is_a: PHIPO:0000037 ! abnormal hyphal colony morphology
+synonym: "abnormal hyphal colony morphology" RELATED []
+is_a: PHIPO:0000273 ! filamentous colony shape phenotype
 is_a: PHIPO:0001051 ! abnormal colony shape
 created_by: alaynecuzick
 creation_date: 2019-06-10T09:31:56Z
@@ -8578,7 +8572,8 @@ name: decreased extent of pathogen-associated host lesions
 namespace: pathogen_host_interaction_phenotype
 alt_id: PHIPO:0000223
 alt_id: PHIPO:0000225
-def: "A phenotype in which the process of host tissue death causing a host lesion induced by the presence of a pathogen occurs to a lower extent than normal." []
+def: "A phenotype where the process of host tissue cell death causing a host lesion occurs to a lesser extent than normal." []
+comment: The lesion can be induced by either the pathogen directly killing host tissue (e.g. cell wall degradation), or the host activating its own cell death pathways in defense.
 synonym: "decreased number of pathogen-associated host lesions" RELATED []
 synonym: "decreased size of pathogen-associated host lesion" RELATED []
 is_a: PHIPO:0000480 ! presence of pathogen-associated host lesions
@@ -8591,7 +8586,8 @@ name: increased extent of pathogen-associated host lesions
 namespace: pathogen_host_interaction_phenotype
 alt_id: PHIPO:0000221
 alt_id: PHIPO:0000222
-def: "A phenotype in which the process of host tissue death causing a host lesion induced by the presence of a pathogen occurs to a higher extent than normal." []
+def: "A phenotype where the process of host tissue cell death causing a host lesion occurs to a greater extent than normal." []
+comment: The lesion can be induced by either the pathogen directly killing host tissue (e.g. cell wall degradation), or the host activating its own cell death pathways in defense.
 synonym: "increased number of pathogen-associated host lesions" RELATED []
 synonym: "increased size of pathogen-associated host lesion" RELATED []
 is_a: PHIPO:0000480 ! presence of pathogen-associated host lesions
@@ -10156,7 +10152,7 @@ creation_date: 2020-01-28T12:40:16Z
 id: PHIPO:0001145
 name: effector-mediated suppression of host effector triggered immunity
 namespace: pathogen_host_interaction_phenotype
-def: "A cell signaling pathway phenotype where the host effector-triggered immunity innate immune response signaling pathway is suppressed by a pathogen. (GO:0140404)" []
+def: "A phenotype where the process of host tissue cell death causing a host lesion initially induced by the host activating its own hypersensitive response in defense, is subsequently suppressed by a pathogen effector." []
 synonym: "pathogen suppression of host effector triggered immunity" EXACT []
 synonym: "pathogen suppression of host ETI" EXACT []
 synonym: "suppression of host effector triggered immunity" EXACT []
@@ -10685,7 +10681,7 @@ creation_date: 2020-09-29T08:11:34Z
 id: PHIPO:0001204
 name: decreased extent of host-defence induced lesion by host hypersensitive response
 namespace: pathogen_host_interaction_phenotype
-def: "A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen occurs to a lower extent than normal (GO:0009626)." []
+def: "A phenotype where the process of host tissue cell death causing a host lesion is induced by the host activating its own hypersensitive response in defense to a lesser extent than normal." []
 comment: This term is to be used for host protection against the pathogen.
 synonym: "decreased extent of effector-mediated host hypersensitive response during biotrophy" RELATED []
 is_a: PHIPO:0000192 ! presence of host-defense induced lesion by host hypersensitive response
