@@ -1132,6 +1132,9 @@ Declaration(Class(obo:PHIPO_0001201))
 Declaration(Class(obo:PHIPO_0001202))
 Declaration(Class(obo:PHIPO_0001203))
 Declaration(Class(obo:PHIPO_0001204))
+Declaration(Class(obo:PHIPO_0001205))
+Declaration(Class(obo:PHIPO_0001206))
+Declaration(Class(obo:PHIPO_0001207))
 Declaration(ObjectProperty(obo:PHIPO_0000304))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:created_by))
@@ -4016,14 +4019,15 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0000291 "single_species_p
 AnnotationAssertion(rdfs:label obo:PHIPO_0000291 "obsolete colour absent"^^xsd:string)
 AnnotationAssertion(owl:deprecated obo:PHIPO_0000291 "true"^^xsd:boolean)
 
-# Class: obo:PHIPO_0000292 (reduced filament length)
+# Class: obo:PHIPO_0000292 (decreased filament length)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0000292 "A single species cell morphology phenotype where hyphal filaments are short in length.")
 AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0000292 "alaynecuzick"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0000292 "2018-10-05T12:43:16Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PHIPO_0000292 "reduced filament length")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0000292 "single_species_phenotype")
-AnnotationAssertion(rdfs:label obo:PHIPO_0000292 "reduced filament length"@en)
-SubClassOf(obo:PHIPO_0000292 obo:PHIPO_0000961)
+AnnotationAssertion(rdfs:label obo:PHIPO_0000292 "decreased filament length"@en)
+SubClassOf(obo:PHIPO_0000292 obo:PHIPO_0001205)
 
 # Class: obo:PHIPO_0000293 (abnormal organism morphology phenotype)
 
@@ -4049,7 +4053,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0000295 "2018-10-05T12:53:2
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PHIPO_0000295 "wavy hyphae")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0000295 "single_species_phenotype")
 AnnotationAssertion(rdfs:label obo:PHIPO_0000295 "sinusoidal filament"@en)
-SubClassOf(obo:PHIPO_0000295 obo:PHIPO_0000961)
+SubClassOf(obo:PHIPO_0000295 obo:PHIPO_0001205)
 
 # Class: obo:PHIPO_0000296 (obsolete normal dissemination of pathogen asexual product)
 
@@ -11415,14 +11419,14 @@ SubClassOf(obo:PHIPO_0001152 obo:PHIPO_0001006)
 
 # Class: obo:PHIPO_0001153 (hyphal hyper branching)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001153 "A single species cell phenotype in which fungal hyphae form an increased number of branches.")
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001153 "A single species cell morphology phenotype in which fungal hyphae form an increased number of branches.")
 AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001153 "alaynecuzick"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001153 "2020-03-04T14:33:49Z"^^xsd:dateTime)
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PHIPO_0001153 "increased branching of hyphae")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:PHIPO_0001153 "increased hyphal branching")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001153 "single_species_phenotype")
 AnnotationAssertion(rdfs:label obo:PHIPO_0001153 "hyphal hyper branching"@en)
-SubClassOf(obo:PHIPO_0001153 obo:PHIPO_0000961)
+SubClassOf(obo:PHIPO_0001153 obo:PHIPO_0001205)
 
 # Class: obo:PHIPO_0001154 (decreased pathogen chitin fragment binding)
 
@@ -11872,6 +11876,33 @@ AnnotationAssertion(rdfs:comment obo:PHIPO_0001204 "This term is to be used for 
 AnnotationAssertion(rdfs:label obo:PHIPO_0001204 "decreased extent of host-defence induced lesion by host hypersensitive response"@en)
 SubClassOf(obo:PHIPO_0001204 obo:PHIPO_0000192)
 SubClassOf(obo:PHIPO_0001204 obo:PHIPO_0000985)
+
+# Class: obo:PHIPO_0001205 (abnormal filament morphology)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001205 "A single species phenotype where the morphology of a cell is abnormal.")
+AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001205 "alaynecuzick"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001205 "2020-11-13T10:05:01Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001205 "single_species_phenotype")
+AnnotationAssertion(rdfs:label obo:PHIPO_0001205 "abnormal filament morphology"@en)
+SubClassOf(obo:PHIPO_0001205 obo:PHIPO_0000961)
+
+# Class: obo:PHIPO_0001206 (normal filament morphology)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001206 "A single species phenotype where the morphology of a cell is normal (i.e. indistinguishable from wild type).")
+AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001206 "alaynecuzick"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001206 "2020-11-13T10:05:12Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001206 "single_species_phenotype")
+AnnotationAssertion(rdfs:label obo:PHIPO_0001206 "normal filament morphology"@en)
+SubClassOf(obo:PHIPO_0001206 obo:PHIPO_0000961)
+
+# Class: obo:PHIPO_0001207 (normal filament length)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001207 "A single species cell morphology phenotype where the length of hyphal filaments are normal (i.e. indistinguishable from wild type).")
+AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001207 "alaynecuzick"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001207 "2020-11-13T10:05:35Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001207 "single_species_phenotype")
+AnnotationAssertion(rdfs:label obo:PHIPO_0001207 "normal filament length"@en)
+SubClassOf(obo:PHIPO_0001207 obo:PHIPO_0001206)
 
 
 )
