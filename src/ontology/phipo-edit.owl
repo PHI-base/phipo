@@ -995,7 +995,6 @@ Declaration(Class(obo:PHIPO_0001052))
 Declaration(Class(obo:PHIPO_0001053))
 Declaration(Class(obo:PHIPO_0001054))
 Declaration(Class(obo:PHIPO_0001055))
-Declaration(Class(obo:PHIPO_0001056))
 Declaration(Class(obo:PHIPO_0001057))
 Declaration(Class(obo:PHIPO_0001058))
 Declaration(Class(obo:PHIPO_0001059))
@@ -10455,19 +10454,6 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PHIPO_0001055 "increased size
 AnnotationAssertion(rdfs:label obo:PHIPO_0001055 "obsolete increased size of colony"^^xsd:string)
 AnnotationAssertion(owl:deprecated obo:PHIPO_0001055 "true"^^xsd:boolean)
 
-# Class: obo:PHIPO_0001056 (decreased size of colony)
-
-AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001056 "A single species colony morphology phenotype where the size of the population is  decreased.")
-AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001056 "alaynecuzick"^^xsd:string)
-AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001056 "2019-09-10T13:38:53Z"^^xsd:dateTime)
-AnnotationAssertion(oboInOwl:hasAlternativeId obo:PHIPO_0001056 "PHIPO:0000181")
-AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001056 "single_species_phenotype")
-AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PHIPO_0001056 "decreased filamentous growth")
-AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PHIPO_0001056 "decreased size of filamentous colony")
-AnnotationAssertion(rdfs:label obo:PHIPO_0001056 "decreased size of colony"@en)
-SubClassOf(obo:PHIPO_0001056 obo:PHIPO_0000974)
-SubClassOf(obo:PHIPO_0001056 obo:PHIPO_0001054)
-
 # Class: obo:PHIPO_0001057 (normal colony shape)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001057 "A single species phenotype where the shape of the colony is normal (indistinguishable from wild type).")
@@ -11358,12 +11344,19 @@ SubClassOf(obo:PHIPO_0001145 obo:PHIPO_0001176)
 
 # Class: obo:PHIPO_0001146 (decreased size of filamentous colony)
 
-AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001146 "A single species population growth phenotype where the size of the filamentous colony is decreased.")
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001146 "A single species population morphology phenotype where the size of the filamentous colony is decreased.")
 AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001146 "alaynecuzick"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001146 "2020-03-04T13:23:17Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:PHIPO_0001146 "PHIPO:0000181")
+AnnotationAssertion(oboInOwl:hasAlternativeId obo:PHIPO_0001146 "PHIPO:0001056")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001146 "single_species_phenotype")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PHIPO_0001146 "decreased filamentous growth")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PHIPO_0001146 "decreased size of colony")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PHIPO_0001146 "decreased size of filamentous colony")
+AnnotationAssertion(rdfs:comment obo:PHIPO_0001146 "Colony morphology terms are population level phenotypes, also consider  annotations describing individual hyphal formation (i.e decreased hyphal length, hyphal hyper branching).")
 AnnotationAssertion(rdfs:label obo:PHIPO_0001146 "decreased size of filamentous colony"@en)
-SubClassOf(obo:PHIPO_0001146 obo:PHIPO_0001056)
+SubClassOf(obo:PHIPO_0001146 obo:PHIPO_0001054)
+SubClassOf(obo:PHIPO_0001146 obo:PHIPO_0001146)
 
 # Class: obo:PHIPO_0001147 (cellular metabolic process phenotype)
 
@@ -11928,7 +11921,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001209 "A single species populati
 AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001209 "alaynecuzick"^^xsd:string)
 AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001209 "2020-11-16T12:38:25Z"^^xsd:dateTime)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001209 "single_species_phenotype")
-AnnotationAssertion(rdfs:comment obo:PHIPO_0001209 "Colony morphology terms are population level phenotypes, also  consider  annotations describing individual hyphal formation (i.e decreased hyphal length, hyphal hyper branching)")
+AnnotationAssertion(rdfs:comment obo:PHIPO_0001209 "Colony morphology terms are population level phenotypes, also consider  annotations describing individual hyphal formation (i.e decreased hyphal length, hyphal hyper branching).")
 AnnotationAssertion(rdfs:label obo:PHIPO_0001209 "hyphal colony size phenotype"@en)
 SubClassOf(obo:PHIPO_0001209 obo:PHIPO_0001208)
 
