@@ -1136,6 +1136,7 @@ Declaration(Class(obo:PHIPO_0001205))
 Declaration(Class(obo:PHIPO_0001206))
 Declaration(Class(obo:PHIPO_0001207))
 Declaration(Class(obo:PHIPO_0001208))
+Declaration(Class(obo:PHIPO_0001209))
 Declaration(ObjectProperty(obo:PHIPO_0000304))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:created_by))
@@ -10438,7 +10439,7 @@ AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PHIPO_0001054 "abnormal colony 
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001054 "single_species_phenotype")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PHIPO_0001054 "abnormal size of hyphal colony")
 AnnotationAssertion(rdfs:label obo:PHIPO_0001054 "abnormal size of colony"@en)
-SubClassOf(obo:PHIPO_0001054 obo:PHIPO_0001208)
+SubClassOf(obo:PHIPO_0001054 obo:PHIPO_0001209)
 
 # Class: obo:PHIPO_0001055 (obsolete increased size of colony)
 
@@ -10577,7 +10578,7 @@ AnnotationAssertion(oboInOwl:hasBroadSynonym obo:PHIPO_0001066 "normal colony mo
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001066 "single_species_phenotype")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PHIPO_0001066 "normal size of filamentous colony")
 AnnotationAssertion(rdfs:label obo:PHIPO_0001066 "normal size of colony"@en)
-SubClassOf(obo:PHIPO_0001066 obo:PHIPO_0001208)
+SubClassOf(obo:PHIPO_0001066 obo:PHIPO_0001209)
 
 # Class: obo:PHIPO_0001067 (pathogen host interaction organism level phenotype)
 
@@ -11918,6 +11919,16 @@ AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001208 "2020-11-16T12:31:5
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001208 "single_species_phenotype")
 AnnotationAssertion(rdfs:label obo:PHIPO_0001208 "colony morphology phenotype"@en)
 SubClassOf(obo:PHIPO_0001208 obo:PHIPO_0000509)
+
+# Class: obo:PHIPO_0001209 (hyphal colony size phenotype)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001209 "A single species population morphology phenotype affecting the size of the filamentous colony.")
+AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001209 "alaynecuzick"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001209 "2020-11-16T12:38:25Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001209 "single_species_phenotype")
+AnnotationAssertion(rdfs:comment obo:PHIPO_0001209 "Colony morphology terms are population level phenotypes, also  consider  annotations describing individual hyphal formation (i.e decreased hyphal length, hyphal hyper branching)")
+AnnotationAssertion(rdfs:label obo:PHIPO_0001209 "hyphal colony size phenotype"@en)
+SubClassOf(obo:PHIPO_0001209 obo:PHIPO_0001208)
 
 
 )
