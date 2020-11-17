@@ -1136,6 +1136,8 @@ Declaration(Class(obo:PHIPO_0001206))
 Declaration(Class(obo:PHIPO_0001207))
 Declaration(Class(obo:PHIPO_0001208))
 Declaration(Class(obo:PHIPO_0001209))
+Declaration(Class(obo:PHIPO_0001210))
+Declaration(Class(obo:PHIPO_0001211))
 Declaration(ObjectProperty(obo:PHIPO_0000304))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:created_by))
@@ -11921,6 +11923,26 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001209 "single_species_p
 AnnotationAssertion(rdfs:comment obo:PHIPO_0001209 "Colony morphology terms are population level phenotypes, also consider  annotations describing individual hyphal formation (i.e decreased hyphal length, hyphal hyper branching).")
 AnnotationAssertion(rdfs:label obo:PHIPO_0001209 "hyphal colony size phenotype"@en)
 SubClassOf(obo:PHIPO_0001209 obo:PHIPO_0001208)
+
+# Class: obo:PHIPO_0001210 (normal hyphal growth)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001210 "A single species cellular process phenotype in which hyphal growth is normal.")
+AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001210 "alaynecuzick"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001210 "2020-11-17T09:55:48Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PHIPO_0001210 "normal filament growth")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001210 "single_species_phenotype")
+AnnotationAssertion(rdfs:label obo:PHIPO_0001210 "normal hyphal growth"@en)
+SubClassOf(obo:PHIPO_0001210 obo:PHIPO_0001211)
+
+# Class: obo:PHIPO_0001211 (normal hyphal formation)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001211 "A single species cellular process phenotype in which hyphae formation is normal.")
+AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001211 "alaynecuzick"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001211 "2020-11-17T09:56:37Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PHIPO_0001211 "normal filament formation")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001211 "single_species_phenotype")
+AnnotationAssertion(rdfs:label obo:PHIPO_0001211 "normal hyphal formation"@en)
+SubClassOf(obo:PHIPO_0001211 obo:PHIPO_0000328)
 
 
 )
