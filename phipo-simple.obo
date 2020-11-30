@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2020-11-25/phipo-simple.owl
+data-version: phipo/releases/2020-11-30/phipo-simple.owl
 subsetdef: ro-eco ""
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
@@ -1935,9 +1935,9 @@ id: PHIPO:0000196
 name: normal aerial height of filamentous colony
 namespace: single_species_phenotype
 def: "A single species hyphal colony shape phenotype where the aerial height of the filamentous colony is normal (indistinguishable from wild type)." []
+comment: Although this phenotype is for an individual it can be inferred from a population in a colony.
 synonym: "normal aerial height of filamentous colony" RELATED []
-is_a: PHIPO:0000278 ! normal hyphal colony shape
-is_a: PHIPO:0001066 ! normal size of filamentous colony
+is_a: PHIPO:0001210 ! normal hyphal growth
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:27:25Z
 
@@ -2013,9 +2013,9 @@ id: PHIPO:0000205
 name: decreased aerial height of filamentous colony
 namespace: single_species_phenotype
 def: "A single species hyphal colony morphology phenotype where the aerial height of the filaments is decreased affecting colony shape." []
+comment: Although this phenotype is for an individual it can be inferred from a population in a colony.
 synonym: "decreased aerial height of filamentous colony" RELATED []
-is_a: PHIPO:0000958 ! abnormal shape of hyphal colony
-is_a: PHIPO:0001054 ! abnormal size of filamentous colony
+is_a: PHIPO:0001212 ! decreased hyphal growth
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:32:01Z
 
@@ -2673,16 +2673,6 @@ created_by: alaynecuzick
 creation_date: 2018-10-03T11:05:31Z
 
 [Term]
-id: PHIPO:0000273
-name: filamentous colony shape phenotype
-namespace: single_species_phenotype
-def: "A single species population phenotype affecting the shape of a colony growing in filamentous form." []
-synonym: "filamentous colony morphology phenotype" RELATED []
-is_a: PHIPO:0001049 ! colony shape phenotype
-created_by: alaynecuzick
-creation_date: 2018-10-03T13:38:13Z
-
-[Term]
 id: PHIPO:0000274
 name: increased asexual spore germination frequency
 namespace: single_species_phenotype
@@ -2718,19 +2708,6 @@ namespace: single_species_phenotype
 is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-03T13:39:41Z
-
-[Term]
-id: PHIPO:0000278
-name: normal hyphal colony shape
-namespace: single_species_phenotype
-def: "A single species population phenotype where the shape of a colony growing in filamentous form is normal (indistinguishable from wild type)." []
-comment: Colony shape phenotypes are population level observations. We try to capture as much phenotypic information as possible at the level of the individual. Therefore if you can say anything about the phenotype of the individual within the colony (for example, about the size or shape of individual filaments/hyphae), please co-annotate to a term in the individual organism branch.
-synonym: "normal colony morphology" BROAD []
-synonym: "normal hyphal colony morphology" RELATED []
-is_a: PHIPO:0000273 ! filamentous colony shape phenotype
-is_a: PHIPO:0001057 ! normal colony shape
-created_by: alaynecuzick
-creation_date: 2018-10-03T13:40:03Z
 
 [Term]
 id: PHIPO:0000279
@@ -8325,20 +8302,6 @@ created_by: alaynecuzick
 creation_date: 2019-06-10T09:09:38Z
 
 [Term]
-id: PHIPO:0000958
-name: abnormal shape of hyphal colony
-namespace: single_species_phenotype
-alt_id: PHIPO:0000037
-def: "A single species hyphal colony phenotype where the shape of the colony is abnormal." []
-comment: Colony shape phenotypes are population level observations. We try to capture as much phenotypic information as possible at the level of the individual. Therefore if you can say anything about the phenotype of the individual within the colony (for example, about the size or shape of individual filaments/hyphae), please co-annotate to a term in the individual organism branch.
-synonym: "abnormal colony morphology" BROAD []
-synonym: "abnormal hyphal colony morphology" RELATED []
-is_a: PHIPO:0000273 ! filamentous colony shape phenotype
-is_a: PHIPO:0001051 ! abnormal colony shape
-created_by: alaynecuzick
-creation_date: 2019-06-10T09:31:56Z
-
-[Term]
 id: PHIPO:0000959
 name: normal cellular melanin accumulation
 namespace: single_species_phenotype
@@ -9221,57 +9184,48 @@ creation_date: 2019-09-06T12:46:32Z
 
 [Term]
 id: PHIPO:0001049
-name: colony shape phenotype
+name: unicellular colony shape phenotype
 namespace: single_species_phenotype
-def: "A single species population phenotype affecting the shape of a colony." []
+def: "A single species population phenotype affecting the shape of a colony of unicellular individuals." []
+comment: Note that colony morphology terms are not used in PHIPO to annotate filamentous-form colonies because these phenotypes can be related to specific growth terms for hyphal colony morphology please search for PHIPO:0001214 (hyphal growth phenotype). For unicellular colony morphology at the usual resolution it is usually not possible to make any statement about an individual. For dimorphic pathogens these terms are suitable for yeast-form colony phenotypes.
 synonym: "colony morphology phenotype" BROAD []
-is_a: PHIPO:0001208 ! colony morphology phenotype
+is_a: PHIPO:0001208 ! unicellular colony morphology phenotype
 created_by: alaynecuzick
 creation_date: 2019-09-10T13:26:05Z
 
 [Term]
 id: PHIPO:0001051
-name: abnormal colony shape
+name: abnormal unicellular colony shape
 namespace: single_species_phenotype
 alt_id: PHIPO:0001050
-def: "A single species phenotype where the shape of the colony is abnormal." []
+def: "A single species phenotype where the shape of a colony of unicellular individuals is abnormal." []
+comment: Note that colony morphology terms are not used in PHIPO to annotate filamentous-form colonies because these phenotypes can be related to specific growth terms for hyphal colony morphology please search for PHIPO:0001214 (hyphal growth phenotype). For unicellular colony morphology at the usual resolution it is usually not possible to make any statement about an individual. For dimorphic pathogens these terms are suitable for yeast-form colony phenotypes.
 synonym: "abnormal colony morphology" BROAD []
-is_a: PHIPO:0001049 ! colony shape phenotype
+is_a: PHIPO:0001049 ! unicellular colony shape phenotype
 created_by: alaynecuzick
 creation_date: 2019-09-10T13:29:47Z
 
 [Term]
 id: PHIPO:0001052
-name: hyper-smooth colony shape
+name: hyper-smooth unicellular colony shape
 namespace: single_species_phenotype
 def: "A single species colony shape phenotype where the colony is smoother than normal." []
+comment: Note that colony morphology terms are not used in PHIPO to annotate filamentous-form colonies because these phenotypes can be related to specific growth terms for hyphal colony morphology please search for PHIPO:0001214 (hyphal growth phenotype). For unicellular colony morphology at the usual resolution it is usually not possible to make any statement about an individual. For dimorphic pathogens these terms are suitable for yeast-form colony phenotypes.
 synonym: "hyper-smooth colony morphology" RELATED []
-is_a: PHIPO:0001051 ! abnormal colony shape
+is_a: PHIPO:0001051 ! abnormal unicellular colony shape
 created_by: alaynecuzick
 creation_date: 2019-09-10T13:32:18Z
 
 [Term]
 id: PHIPO:0001053
-name: hyper-rugose colony shape
+name: hyper-rugose unicellular colony shape
 namespace: single_species_phenotype
-def: "A single species colony shape phenotype where the colony is more rugose (wrinkled; corrugated) than normal." []
+def: "A single species phenotype where the shape of a colony of unicellular individuals is more rugose (wrinkled; corrugated) than normal." []
+comment: Note that colony morphology terms are not used in PHIPO to annotate filamentous-form colonies because these phenotypes can be related to specific growth terms for hyphal colony morphology please search for PHIPO:0001214 (hyphal growth phenotype). For unicellular colony morphology at the usual resolution it is usually not possible to make any statement about an individual. For dimorphic pathogens these terms are suitable for yeast-form colony phenotypes.
 synonym: "hyper-rugose colony morphology" RELATED []
-is_a: PHIPO:0001051 ! abnormal colony shape
+is_a: PHIPO:0001051 ! abnormal unicellular colony shape
 created_by: alaynecuzick
 creation_date: 2019-09-10T13:32:45Z
-
-[Term]
-id: PHIPO:0001054
-name: abnormal size of filamentous colony
-namespace: single_species_phenotype
-alt_id: PHIPO:0000957
-def: "A single species colony morphology phenotype where the size of the population is abnormal." []
-comment: Colony morphology terms are population level phenotypes, also consider  annotations describing individual hyphal formation (i.e decreased hyphal length, hyphal hyper branching).
-synonym: "abnormal colony morphology" BROAD []
-synonym: "abnormal size of hyphal colony" RELATED []
-is_a: PHIPO:0001209 ! hyphal colony size phenotype
-created_by: alaynecuzick
-creation_date: 2019-06-10T09:31:25Z
 
 [Term]
 id: PHIPO:0001055
@@ -9287,23 +9241,25 @@ creation_date: 2019-09-10T13:37:47Z
 
 [Term]
 id: PHIPO:0001057
-name: normal colony shape
+name: normal unicellular colony shape
 namespace: single_species_phenotype
 alt_id: PHIPO:0001065
-def: "A single species phenotype where the shape of the colony is normal (indistinguishable from wild type)." []
+def: "A single species phenotype where the shape of a colony of unicellular individuals is normal (indistinguishable from wild type)." []
+comment: Note that colony morphology terms are not used in PHIPO to annotate filamentous-form colonies because these phenotypes can be related to specific growth terms for hyphal colony morphology please search for PHIPO:0001214 (hyphal growth phenotype). For unicellular colony morphology at the usual resolution it is usually not possible to make any statement about an individual. For dimorphic pathogens these terms are suitable for yeast-form colony phenotypes.
 synonym: "normal colony morphology" BROAD []
 synonym: "normal shape of colony" EXACT []
-is_a: PHIPO:0001049 ! colony shape phenotype
+is_a: PHIPO:0001049 ! unicellular colony shape phenotype
 created_by: alaynecuzick
 creation_date: 2019-09-13T10:53:42Z
 
 [Term]
 id: PHIPO:0001058
-name: normal rugose colony shape
+name: normal rugose unicellular colony shape
 namespace: single_species_phenotype
-def: "A single species colony shape phenotype where the colony is as rugose (wrinkled; corrugated) as normal (indistinguishable from wild type)." []
+def: "A single species phenotype where the shape of a colony of unicellular individuals is as rugose (wrinkled; corrugated) as normal (indistinguishable from wild type)." []
+comment: Note that colony morphology terms are not used in PHIPO to annotate filamentous-form colonies because these phenotypes can be related to specific growth terms for hyphal colony morphology please search for PHIPO:0001214 (hyphal growth phenotype). For unicellular colony morphology at the usual resolution it is usually not possible to make any statement about an individual. For dimorphic pathogens these terms are suitable for yeast-form colony phenotypes.
 synonym: "normal rugose colony morphology" RELATED []
-is_a: PHIPO:0001057 ! normal colony shape
+is_a: PHIPO:0001057 ! normal unicellular colony shape
 created_by: alaynecuzick
 creation_date: 2019-09-10T13:40:49Z
 
@@ -9386,18 +9342,6 @@ xref: FYPO:0000840
 is_a: PHIPO:0001038 ! normal level of substance in cell
 created_by: alaynecuzick
 creation_date: 2019-09-11T13:30:41Z
-
-[Term]
-id: PHIPO:0001066
-name: normal size of filamentous colony
-namespace: single_species_phenotype
-alt_id: PHIPO:0000960
-def: "A single species colony morphology phenotype where the size of the population is normal (indistinguishable from wild type)." []
-synonym: "normal colony morphology" BROAD []
-synonym: "normal size of filamentous colony" RELATED []
-is_a: PHIPO:0001209 ! hyphal colony size phenotype
-created_by: alaynecuzick
-creation_date: 2019-06-11T09:57:34Z
 
 [Term]
 id: PHIPO:0001067
@@ -9596,11 +9540,17 @@ creation_date: 2019-10-01T09:36:55Z
 id: PHIPO:0001087
 name: abnormal hyphal formation
 namespace: single_species_phenotype
+alt_id: PHIPO:0000037
+alt_id: PHIPO:0000958
 def: "An individual species growth phenotype in which hyphae formation is abnormal." []
+synonym: "abnormal colony morphology" BROAD []
 synonym: "abnormal filament formation" EXACT []
+synonym: "abnormal hyphal colony morphology" BROAD []
+synonym: "abnormal hyphal colony morphology" RELATED []
+synonym: "abnormal shape of hyphal colony" RELATED []
 is_a: PHIPO:0001214 ! hyphal growth phenotype
 created_by: alaynecuzick
-creation_date: 2019-10-01T09:40:58Z
+creation_date: 2019-06-10T09:31:56Z
 
 [Term]
 id: PHIPO:0001088
@@ -10176,21 +10126,6 @@ created_by: alaynecuzick
 creation_date: 2020-03-04T12:47:38Z
 
 [Term]
-id: PHIPO:0001146
-name: decreased size of filamentous colony
-namespace: single_species_phenotype
-alt_id: PHIPO:0000181
-alt_id: PHIPO:0001056
-def: "A single species population morphology phenotype where the size of the filamentous colony is decreased." []
-comment: Colony morphology terms are population level phenotypes, also consider  annotations describing individual hyphal formation (i.e decreased hyphal length, hyphal hyper branching).
-synonym: "decreased filamentous growth" RELATED []
-synonym: "decreased size of colony" RELATED []
-synonym: "decreased size of filamentous colony" RELATED []
-is_a: PHIPO:0001054 ! abnormal size of filamentous colony
-created_by: alaynecuzick
-creation_date: 2020-03-04T13:23:17Z
-
-[Term]
 id: PHIPO:0001147
 name: cellular metabolic process phenotype
 namespace: single_species_phenotype
@@ -10737,54 +10672,63 @@ creation_date: 2020-11-13T10:05:35Z
 
 [Term]
 id: PHIPO:0001208
-name: colony morphology phenotype
+name: unicellular colony morphology phenotype
 namespace: single_species_phenotype
-def: "A single species population phenotype affecting the morphology of a colony." []
+def: "A single species population phenotype affecting the morphology of a colony of unicellular individuals." []
+comment: Note that colony morphology terms are not used in PHIPO to annotate filamentous-form colonies because these phenotypes can be related to specific growth terms for hyphal colony morphology please search for PHIPO:0001214 (hyphal growth phenotype). For unicellular colony morphology at the usual resolution it is usually not possible to make any statement about an individual. For dimorphic pathogens these terms are suitable for yeast-form colony phenotypes.
 is_a: PHIPO:0000509 ! population phenotype
 created_by: alaynecuzick
 creation_date: 2020-11-16T12:31:56Z
 
 [Term]
-id: PHIPO:0001209
-name: hyphal colony size phenotype
-namespace: single_species_phenotype
-def: "A single species population morphology phenotype affecting the size of the filamentous colony." []
-comment: Colony morphology terms are population level phenotypes, also consider  annotations describing individual hyphal formation (i.e decreased hyphal length, hyphal hyper branching).
-is_a: PHIPO:0001208 ! colony morphology phenotype
-created_by: alaynecuzick
-creation_date: 2020-11-16T12:38:25Z
-
-[Term]
 id: PHIPO:0001210
 name: normal hyphal growth
 namespace: single_species_phenotype
+alt_id: PHIPO:0000960
+alt_id: PHIPO:0001066
 def: "An individual species growth phenotype in which the size or extent of directional growth of an individual hypha is normal." []
+comment: Although this phenotype is for an individual it can be inferred from a population in a colony.
+synonym: "normal colony morphology" BROAD []
 synonym: "normal filament growth" EXACT []
+synonym: "normal hyphal colony morphology" BROAD []
+synonym: "normal size of filamentous colony" RELATED []
 is_a: PHIPO:0001211 ! normal hyphal formation
 created_by: alaynecuzick
-creation_date: 2020-11-17T09:55:48Z
+creation_date: 2019-06-11T09:57:34Z
 
 [Term]
 id: PHIPO:0001211
 name: normal hyphal formation
 namespace: single_species_phenotype
+alt_id: PHIPO:0000278
 def: "An individual species growth phenotype in which hyphae formation is normal." []
+synonym: "normal colony morphology" BROAD []
+synonym: "normal colony morphology" RELATED []
 synonym: "normal filament formation" EXACT []
 synonym: "normal filamentous formation" EXACT []
 synonym: "normal hyphae formation" EXACT []
+synonym: "normal hyphal colony morphology" RELATED []
+synonym: "normal hyphal colony shape" RELATED []
 is_a: PHIPO:0001214 ! hyphal growth phenotype
 created_by: alaynecuzick
-creation_date: 2020-11-17T09:56:37Z
+creation_date: 2018-10-03T13:40:03Z
 
 [Term]
 id: PHIPO:0001212
 name: decreased hyphal growth
 namespace: single_species_phenotype
+alt_id: PHIPO:0000181
+alt_id: PHIPO:0001056
+alt_id: PHIPO:0001146
 def: "An individual species growth phenotype in which the growth of an individual hypha is decreased." []
+comment: Although this phenotype is for an individual it can be inferred from a population in a colony.
 synonym: "decreased filament growth" EXACT []
+synonym: "decreased filamentous growth" RELATED []
+synonym: "decreased size of colony" RELATED []
+synonym: "decreased size of filamentous colony" RELATED []
 synonym: "reduced filament growth" EXACT []
 synonym: "reduced hyphal growth" EXACT []
-is_a: PHIPO:0001087 ! abnormal hyphal formation
+is_a: PHIPO:0001215 ! abnormal hyphal growth
 created_by: alaynecuzick
 creation_date: 2020-11-17T10:05:15Z
 
@@ -10793,6 +10737,7 @@ id: PHIPO:0001213
 name: abolished hyphal growth
 namespace: single_species_phenotype
 def: "An individual species growth phenotype in which the growth of an individual hypha is abolished (it was present and is now absent)." []
+comment: Although this phenotype is for an individual it can be inferred from a population in a colony.
 synonym: "abolished filament growth" EXACT []
 is_a: PHIPO:0001212 ! decreased hyphal growth
 created_by: alaynecuzick
@@ -10802,13 +10747,33 @@ creation_date: 2020-11-17T10:05:33Z
 id: PHIPO:0001214
 name: hyphal growth phenotype
 namespace: single_species_phenotype
-def: "An individual species growth phenotype which affects the size or extent of directional growth of an individual organism." []
+alt_id: PHIPO:0000273
+alt_id: PHIPO:0001209
+def: "An individual species growth phenotype which affects the size, extent or rate of directional growth of an individual organism." []
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
+synonym: "filamentous colony morphology phenotype" RELATED []
+synonym: "filamentous colony shape phenotype" RELATED []
 synonym: "filamentous growth phenotype" EXACT []
+synonym: "hyphal colony size phenotype" RELATED []
 is_a: PHIPO:0000402 ! individual organism phenotype
 created_by: alaynecuzick
-creation_date: 2020-11-23T13:14:56Z
+creation_date: 2018-10-03T13:38:13Z
+
+[Term]
+id: PHIPO:0001215
+name: abnormal hyphal growth
+namespace: single_species_phenotype
+alt_id: PHIPO:0000957
+alt_id: PHIPO:0001052
+def: "An individual species growth phenotype in which the size or extent of directional growth of an individual hypha is abnormal." []
+comment: Although this phenotype is for an individual it can be inferred from a population in a colony.
+synonym: "abnormal colony morphology" BROAD []
+synonym: "abnormal size of filamentous colony" RELATED []
+synonym: "abnormal size of hyphal colony" RELATED []
+is_a: PHIPO:0001087 ! abnormal hyphal formation
+created_by: alaynecuzick
+creation_date: 2019-06-10T09:31:25Z
 
 [Typedef]
 id: PHIPO:0000304
