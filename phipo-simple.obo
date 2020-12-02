@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2020-11-30/phipo-simple.owl
+data-version: phipo/releases/2020-12-02/phipo-simple.owl
 subsetdef: ro-eco ""
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
@@ -249,7 +249,7 @@ id: PHIPO:0000021
 name: increased sensitivity to chemical
 namespace: single_species_phenotype
 def: "A single species population phenotype in which a population shows decreased resistance to a chemical stimulus. Resistance to a chemical is usually measured by determining the maximum concentration of the chemical at which a population grows and divides. Typically, populations are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type populations to grow." []
-is_a: PHIPO:0000414 ! abnormal population growth
+is_a: PHIPO:0001218 ! response to chemical phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:15:05Z xsd:string
 
@@ -258,7 +258,7 @@ id: PHIPO:0000022
 name: increased resistance to chemical
 namespace: single_species_phenotype
 def: "A single species population phenotype in which a population shows increased resistance to a chemical stimulus. Resistance to a chemical is usually measured by determining the maximum concentration of the chemical at which a population grows and divides." []
-is_a: PHIPO:0000414 ! abnormal population growth
+is_a: PHIPO:0001218 ! response to chemical phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-05-04T13:16:06Z xsd:string
 
@@ -1222,7 +1222,7 @@ name: normal population growth during dimorphic yeast-form
 namespace: single_species_phenotype
 def: "A single species population phenotype in which the population grows normally during the yeast-form lifecycle stage." []
 is_a: PHIPO:0000177 ! yeast-form growth phenotype
-is_a: PHIPO:0000405 ! normal population growth
+is_a: PHIPO:0000405 ! normal unicellular population growth
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:49:54Z
 
@@ -1626,9 +1626,9 @@ creation_date: 2018-10-01T12:14:40Z
 
 [Term]
 id: PHIPO:0000162
-name: population growth phenotype
+name: unicellular population growth phenotype
 namespace: single_species_phenotype
-def: "A single species population phenotype that affects the rate or extent of the increase in the number of organisms in the population (i.e organismal growth and reproduction)." []
+def: "A single species population phenotype that affects the rate or extent of the increase in the number of unicellular organisms in the population (i.e organismal growth and reproduction)." []
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
@@ -1642,7 +1642,7 @@ name: abnormal population growth during dimorphic yeast-form
 namespace: single_species_phenotype
 def: "A single species population phenotype in which the population grows abnormally during the yeast-form lifecycle stage." []
 is_a: PHIPO:0000177 ! yeast-form growth phenotype
-is_a: PHIPO:0000414 ! abnormal population growth
+is_a: PHIPO:0000414 ! abnormal unicellular population growth
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:18:47Z
 
@@ -1770,7 +1770,7 @@ id: PHIPO:0000177
 name: yeast-form growth phenotype
 namespace: single_species_phenotype
 def: "A single species population phenotype in which affects the population growth during the yeast-form lifecycle stage." []
-is_a: PHIPO:0000162 ! population growth phenotype
+is_a: PHIPO:0000162 ! unicellular population growth phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:05:53Z
 
@@ -1932,9 +1932,9 @@ creation_date: 2018-10-01T13:26:34Z
 
 [Term]
 id: PHIPO:0000196
-name: normal aerial height of filamentous colony
+name: normal aerial height of filament
 namespace: single_species_phenotype
-def: "A single species hyphal colony shape phenotype where the aerial height of the filamentous colony is normal (indistinguishable from wild type)." []
+def: "An individual species growth phenotype in which the aerial height of an individual hypha is normal (indistinguishable from wild type)." []
 comment: Although this phenotype is for an individual it can be inferred from a population in a colony.
 synonym: "normal aerial height of filamentous colony" RELATED []
 is_a: PHIPO:0001210 ! normal hyphal growth
@@ -2010,9 +2010,9 @@ creation_date: 2018-10-01T13:31:34Z
 
 [Term]
 id: PHIPO:0000205
-name: decreased aerial height of filamentous colony
+name: decreased aerial height of filament
 namespace: single_species_phenotype
-def: "A single species hyphal colony morphology phenotype where the aerial height of the filaments is decreased affecting colony shape." []
+def: "An individual species growth phenotype in which the aerial height of an individual hypha is decreased." []
 comment: Although this phenotype is for an individual it can be inferred from a population in a colony.
 synonym: "decreased aerial height of filamentous colony" RELATED []
 is_a: PHIPO:0001212 ! decreased hyphal growth
@@ -3850,10 +3850,10 @@ creation_date: 2018-12-05T11:44:40Z
 
 [Term]
 id: PHIPO:0000405
-name: normal population growth
+name: normal unicellular population growth
 namespace: single_species_phenotype
-def: "A single species population phenotype in which a population grows normally (i.e. indistinguishably from wild type)." []
-is_a: PHIPO:0000162 ! population growth phenotype
+def: "A single species population phenotype in which a population of unicellular organisms grow normally (i.e. indistinguishably from wild type)." []
+is_a: PHIPO:0000162 ! unicellular population growth phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:44:58Z
 
@@ -3937,10 +3937,10 @@ creation_date: 2018-12-05T11:47:25Z
 
 [Term]
 id: PHIPO:0000414
-name: abnormal population growth
+name: abnormal unicellular population growth
 namespace: single_species_phenotype
-def: "A single species population phenotype in which a population grows abnormally." []
-is_a: PHIPO:0000162 ! population growth phenotype
+def: "A single species population phenotype in which a population of unicellular organisms grow abnormally." []
+is_a: PHIPO:0000162 ! unicellular population growth phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:47:39Z
 
@@ -8334,7 +8334,7 @@ id: PHIPO:0000963
 name: normal population growth during dimorphic hyphal-form
 namespace: single_species_phenotype
 def: "A single species population phenotype in which the population grows normally during the hyphal-form lifecycle stage." []
-is_a: PHIPO:0000405 ! normal population growth
+is_a: PHIPO:0000405 ! normal unicellular population growth
 created_by: alaynecuzick
 creation_date: 2019-06-12T10:54:55Z
 
@@ -8443,24 +8443,24 @@ creation_date: 2019-07-16T13:22:46Z
 
 [Term]
 id: PHIPO:0000974
-name: decreased population growth
+name: decreased unicellular population growth
 namespace: single_species_phenotype
-def: "A single species phenotype in which population growth is decreased relative to normal. Decreased growth may reflect a reduced growth rate (i.e. slower growth), growth that occurs to a lesser extent than normal, or both." []
+def: "A single species phenotype in which the growth of a population of unicellular organisms is decreased relative to normal. Decreased growth may reflect a reduced growth rate (i.e. slower growth), growth that occurs to a lesser extent than normal, or both." []
 synonym: "slower growth" RELATED []
 xref: FYPO:0000046
-is_a: PHIPO:0000414 ! abnormal population growth
+is_a: PHIPO:0000414 ! abnormal unicellular population growth
 is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2019-07-27T10:55:41Z
 
 [Term]
 id: PHIPO:0000975
-name: increased population growth
+name: increased unicellular population growth
 namespace: single_species_phenotype
-def: "A single species phenotype in which population growth is increased relative to normal. Increased growth may reflect an increased growth rate (i.e. faster growth), growth that occurs to a greater extent than normal, or both." []
+def: "A single species phenotype in which the growth of a population of unicellular organisms is increased relative to normal. Increased growth may reflect an increased growth rate (i.e. faster growth), growth that occurs to a greater extent than normal, or both." []
 synonym: "faster growth" RELATED []
 xref: FYPO:0003937
-is_a: PHIPO:0000414 ! abnormal population growth
+is_a: PHIPO:0000414 ! abnormal unicellular population growth
 created_by: alaynecuzick
 creation_date: 2019-07-27T10:58:04Z
 
@@ -9428,11 +9428,12 @@ creation_date: 2019-09-27T09:51:47Z
 
 [Term]
 id: PHIPO:0001075
-name: auxotrophy phenotype
+name: auxotrophic growth
 namespace: single_species_phenotype
-def: "A single species population growth phenotype in which a cell requires a particular organic compound, which is not required by a wild-type cell for its growth. Auxotrophy usually results from a cell's inability to synthesize the compound." []
+def: "A single species response to nutrient phenotype in which an individual or a population of organisms requires a particular organic compound, which is not required by a wild-type for its growth. Auxotrophy usually results from a cell's inability to synthesize the compound." []
+synonym: "auxotrophy phenotype" RELATED []
 xref: FYPO:0000128
-is_a: PHIPO:0000162 ! population growth phenotype
+is_a: PHIPO:0001216 ! response to nutrient phenotype
 created_by: alaynecuzick
 creation_date: 2019-09-27T10:01:40Z
 
@@ -9442,7 +9443,7 @@ name: growth auxotrophic for lysine
 namespace: single_species_phenotype
 def: "Auxotrophy in which a cell is unable to synthesize lysine, and therefore requires lysine in the medium for vegetative cell growth." []
 xref: FYPO:0000039
-is_a: PHIPO:0001075 ! auxotrophy phenotype
+is_a: PHIPO:0001075 ! auxotrophic growth
 created_by: alaynecuzick
 creation_date: 2019-09-27T10:02:07Z
 
@@ -9507,22 +9508,22 @@ creation_date: 2019-10-01T09:09:20Z
 
 [Term]
 id: PHIPO:0001084
-name: increased population growth rate
+name: increased unicellular population growth rate
 namespace: single_species_phenotype
-def: "A single species cell population phenotype in which vegetative cell population growth is faster than normal." []
+def: "A single species phenotype in which the growth of a population of unicellular organisms is faster than normal." []
 xref: FYPO:0000636
 is_a: PHIPO:0000929 ! abnormal cellular process
-is_a: PHIPO:0000975 ! increased population growth
+is_a: PHIPO:0000975 ! increased unicellular population growth
 created_by: alaynecuzick
 creation_date: 2019-10-01T09:17:27Z
 
 [Term]
 id: PHIPO:0001085
-name: decreased population growth rate
+name: decreased unicellular population growth rate
 namespace: single_species_phenotype
-def: "A single species cell population phenotype in which vegetative cell population growth is slower than normal." []
+def: "A single species phenotype in which the growth of a population of unicellular organisms is slower than normal." []
 xref: FYPO:0001355
-is_a: PHIPO:0000974 ! decreased population growth
+is_a: PHIPO:0000974 ! decreased unicellular population growth
 created_by: alaynecuzick
 creation_date: 2019-10-01T09:21:13Z
 
@@ -9629,7 +9630,7 @@ def: "A single species phenotype in which cells in a population show decreased s
 synonym: "resistant to stress" EXACT []
 synonym: "stress resistance: increased" EXACT []
 xref: FYPO:0002046
-is_a: PHIPO:0000414 ! abnormal population growth
+is_a: PHIPO:0001217 ! response to stress phenotype
 created_by: alaynecuzick
 creation_date: 2019-10-04T09:18:07Z
 
@@ -9650,7 +9651,7 @@ def: "A single organism phenotype in which cells in a population show increased 
 synonym: "hypersensitive to stress" EXACT []
 synonym: "stress resistance: decreased" EXACT []
 xref: FYPO:0002549
-is_a: PHIPO:0000414 ! abnormal population growth
+is_a: PHIPO:0001217 ! response to stress phenotype
 created_by: alaynecuzick
 creation_date: 2019-10-04T09:25:47Z
 
@@ -9895,8 +9896,8 @@ creation_date: 2019-12-03T10:47:11Z
 id: PHIPO:0001124
 name: decreased population growth on erucic acid carbon source
 namespace: single_species_phenotype
-def: "A population growth phenotype in which organism growth is decreased relative to normal in a medium containing erucic acid as the carbon source." []
-is_a: PHIPO:0000974 ! decreased population growth
+def: "An individual or population growth phenotype in which organism growth is decreased relative to normal in a medium containing erucic acid as the carbon source." []
+is_a: PHIPO:0001216 ! response to nutrient phenotype
 created_by: alaynecuzick
 creation_date: 2019-12-03T10:52:30Z
 
@@ -9904,8 +9905,8 @@ creation_date: 2019-12-03T10:52:30Z
 id: PHIPO:0001125
 name: decreased population growth on oleic acid carbon source
 namespace: single_species_phenotype
-def: "A population growth phenotype in which organism growth is decreased relative to normal in a medium containing oleic acid as the carbon source." []
-is_a: PHIPO:0000974 ! decreased population growth
+def: "An individual or population growth phenotype in which organism growth is decreased relative to normal in a medium containing oleic acid as the carbon source." []
+is_a: PHIPO:0001216 ! response to nutrient phenotype
 created_by: alaynecuzick
 creation_date: 2019-12-03T10:57:47Z
 
@@ -9913,8 +9914,8 @@ creation_date: 2019-12-03T10:57:47Z
 id: PHIPO:0001126
 name: decreased population growth on palmitic acid carbon source
 namespace: single_species_phenotype
-def: "A population growth phenotype in which organism growth is decreased relative to normal in a medium containing palmitic acid as the carbon source." []
-is_a: PHIPO:0000974 ! decreased population growth
+def: "An individual or population growth phenotype in which organism growth is decreased relative to normal in a medium containing palmitic acid as the carbon source." []
+is_a: PHIPO:0001216 ! response to nutrient phenotype
 created_by: alaynecuzick
 creation_date: 2019-12-03T10:58:27Z
 
@@ -9922,8 +9923,8 @@ creation_date: 2019-12-03T10:58:27Z
 id: PHIPO:0001127
 name: decreased population growth on myristic acid carbon source
 namespace: single_species_phenotype
-def: "A population growth phenotype in which organism growth is decreased relative to normal in a medium containing myristic acid as the carbon source." []
-is_a: PHIPO:0000974 ! decreased population growth
+def: "An individual or population growth phenotype in which organism growth is decreased relative to normal in a medium containing myristic acid as the carbon source." []
+is_a: PHIPO:0001216 ! response to nutrient phenotype
 created_by: alaynecuzick
 creation_date: 2019-12-03T10:59:32Z
 
@@ -10774,6 +10775,39 @@ synonym: "abnormal size of hyphal colony" RELATED []
 is_a: PHIPO:0001087 ! abnormal hyphal formation
 created_by: alaynecuzick
 creation_date: 2019-06-10T09:31:25Z
+
+[Term]
+id: PHIPO:0001216
+name: response to nutrient phenotype
+namespace: single_species_phenotype
+def: "A single species phenotype that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a nutrient stimulus." []
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0000002 ! single species phenotype
+created_by: alaynecuzick
+creation_date: 2020-12-02T13:30:45Z
+
+[Term]
+id: PHIPO:0001217
+name: response to stress phenotype
+namespace: single_species_phenotype
+def: "A single species phenotype that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a disturbance in organismal or cellular homeostasis, usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation)." []
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0000002 ! single species phenotype
+created_by: alaynecuzick
+creation_date: 2020-12-02T14:07:43Z
+
+[Term]
+id: PHIPO:0001218
+name: response to chemical phenotype
+namespace: single_species_phenotype
+def: "A single species phenotype that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a chemical stimulus." []
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0000002 ! single species phenotype
+created_by: alaynecuzick
+creation_date: 2020-12-02T14:15:52Z
 
 [Typedef]
 id: PHIPO:0000304
