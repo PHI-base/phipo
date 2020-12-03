@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2020-10-22/imports/go_import.owl
+data-version: phipo/releases/2020-12-03/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
@@ -69,7 +69,7 @@ id: GO:0001907
 name: killing by symbiont of host cells
 namespace: biological_process
 def: "Any process mediated by an organism that results in the death of cells in the host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:add]
-is_a: GO:0051701 ! interaction with host
+is_a: GO:0051701 ! biological process involved in interaction with host
 is_a: GO:0051883 ! killing of cells in other organism involved in symbiotic interaction
 
 [Term]
@@ -668,6 +668,24 @@ created_by: jl
 creation_date: 2012-12-13T16:25:32Z
 
 [Term]
+id: GO:0006811
+name: ion transport
+namespace: biological_process
+def: "The directed movement of charged atoms or small charged molecules into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
+subset: goslim_drosophila
+subset: goslim_pir
+subset: goslim_yeast
+is_a: GO:0006810 ! transport
+
+[Term]
+id: GO:0006820
+name: anion transport
+namespace: biological_process
+alt_id: GO:0006822
+def: "The directed movement of anions, atoms or small molecules with a net negative charge, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
+is_a: GO:0006811 ! ion transport
+
+[Term]
 id: GO:0006897
 name: endocytosis
 namespace: biological_process
@@ -1153,7 +1171,7 @@ synonym: "HR" BROAD []
 synonym: "HR-PCD" EXACT []
 synonym: "plant hypersensitive response" EXACT []
 is_a: GO:0033554 ! cellular response to stress
-is_a: GO:0034050 ! host programmed cell death induced by symbiont
+is_a: GO:0034050 ! programmed cell death induced by symbiont
 is_a: GO:0045087 ! innate immune response
 
 [Term]
@@ -1445,6 +1463,7 @@ synonym: "regulation of HR" EXACT []
 synonym: "regulation of HR-PCD" EXACT []
 synonym: "regulation of plant hypersensitive response" EXACT []
 is_a: GO:0043067 ! regulation of programmed cell death
+is_a: GO:0043903 ! regulation of biological process involved in symbiotic interaction
 is_a: GO:0045088 ! regulation of innate immune response
 is_a: GO:0080135 ! regulation of cellular response to stress
 intersection_of: GO:0008150 ! biological_process
@@ -1898,6 +1917,14 @@ xref: Reactome:R-HSA-6788295 "HDHD1:Mg2+ dephosphorylates PURIDP"
 xref: Reactome:R-HSA-8938314 "ENPPs hydrolyse CoA-SH to PPANT, PAP"
 xref: Reactome:R-HSA-8952137 "Phospholipid phosphatase 6 hydrolyses Presqualene diphosphate to presqualene monophosphate"
 is_a: GO:0003824 ! catalytic activity
+
+[Term]
+id: GO:0018215
+name: protein phosphopantetheinylation
+namespace: biological_process
+def: "The modification of a protein amino acid by phosphopantetheinylation." [GOC:ai]
+synonym: "protein amino acid phosphopantetheinylation" EXACT [GOC:bf]
+is_a: GO:0006464 ! cellular protein modification process
 
 [Term]
 id: GO:0018995
@@ -2561,7 +2588,7 @@ subset: goslim_pir
 synonym: "killing of cells of another organism" EXACT [GOC:bf]
 synonym: "killing of cells of another, non-host, organism" NARROW []
 is_a: GO:0001906 ! cell killing
-is_a: GO:0044419 ! interspecies interaction between organisms
+is_a: GO:0044419 ! biological process involved in interspecies interaction between organisms
 
 [Term]
 id: GO:0032091
@@ -2919,11 +2946,15 @@ relationship: positively_regulates GO:0016301 ! kinase activity
 
 [Term]
 id: GO:0034050
-name: host programmed cell death induced by symbiont
+name: programmed cell death induced by symbiont
 namespace: biological_process
-def: "Cell death in a host resulting from activation of host endogenous cellular processes after direct or indirect interaction with a symbiont (defined as the smaller of two, or more, organisms engaged in symbiosis, a close interaction encompassing mutualism through parasitism). An example of direct interaction is contact with penetrating hyphae of a fungus; an example of indirect interaction is encountering symbiont-secreted molecules." [GOC:pamgo_curators]
-comment: Note that this term is to be used to annotate gene products in the host, not the symbiont. To annotate gene products in the symbiont that induce programmed cell death in the host, consider the biological process term 'induction by symbiont of host programmed cell death ; GO:0052044'.
+def: "Cell death resulting from activation of endogenous cellular processes after interaction with a symbiont (defined as the smaller of two, or more, organisms engaged in symbiosis, a close interaction encompassing mutualism through parasitism). This can be triggered by direct interaction with the organism, for example, contact with penetrating hyphae of a fungus; or an indirect interaction such as symbiont-secreted molecules." [GOC:pamgo_curators]
+comment: Note that this term is to be used to annotate gene products in the host, not the symbiont. To annotate gene products in the symbiont that induce programmed cell death in the host, consider the biological process term 'positive regulation by symbiont of host programmed cell death ; GO:0052042'.
+synonym: "'host programmed cell death induced by symbiont'" EXACT []
 is_a: GO:0012501 ! programmed cell death
+is_a: GO:0051702 ! biological process involved in interaction with symbiont
+is_a: GO:0098542 ! defense response to other organism
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/20255 xsd:anyURI
 
 [Term]
 id: GO:0034051
@@ -3088,7 +3119,7 @@ synonym: "regulation of morphology of other organism" NARROW [GOC:bf]
 synonym: "regulation of morphology or physiology of other organism" RELATED [GOC:bf]
 synonym: "regulation of physiological process of other organism" NARROW [GOC:bf]
 synonym: "regulation of physiology of other organism" NARROW [GOC:bf]
-is_a: GO:0044419 ! interspecies interaction between organisms
+is_a: GO:0044419 ! biological process involved in interspecies interaction between organisms
 property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/18605 xsd:anyURI
 created_by: bf
 creation_date: 2011-04-21T01:31:51Z
@@ -3493,10 +3524,7 @@ name: intracellular organelle
 namespace: cellular_component
 def: "Organized structure of distinctive morphology and function, occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton. Excludes the plasma membrane." [GOC:go_curators]
 subset: goslim_pir
-is_a: GO:0043226 ! organelle
-intersection_of: GO:0043226 ! organelle
-intersection_of: part_of GO:0005622 ! intracellular anatomical structure
-relationship: part_of GO:0005622 ! intracellular anatomical structure
+is_a: GO:0005622 ! intracellular anatomical structure
 
 [Term]
 id: GO:0043231
@@ -3520,6 +3548,48 @@ is_a: GO:0043228 ! non-membrane-bounded organelle
 is_a: GO:0043229 ! intracellular organelle
 intersection_of: GO:0043228 ! non-membrane-bounded organelle
 intersection_of: part_of GO:0005622 ! intracellular anatomical structure
+relationship: part_of GO:0005622 ! intracellular anatomical structure
+
+[Term]
+id: GO:0043269
+name: regulation of ion transport
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of the directed movement of charged atoms or small charged molecules into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:jl]
+is_a: GO:0051049 ! regulation of transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0006811 ! ion transport
+relationship: regulates GO:0006811 ! ion transport
+
+[Term]
+id: GO:0043270
+name: positive regulation of ion transport
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of the directed movement of charged atoms or small charged molecules into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:jl]
+synonym: "activation of ion transport" NARROW []
+synonym: "stimulation of ion transport" NARROW []
+synonym: "up regulation of ion transport" EXACT []
+synonym: "up-regulation of ion transport" EXACT []
+synonym: "upregulation of ion transport" EXACT []
+is_a: GO:0043269 ! regulation of ion transport
+is_a: GO:0051050 ! positive regulation of transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0006811 ! ion transport
+relationship: positively_regulates GO:0006811 ! ion transport
+
+[Term]
+id: GO:0043271
+name: negative regulation of ion transport
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the directed movement of charged atoms or small charged molecules into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:jl]
+synonym: "down regulation of ion transport" EXACT []
+synonym: "down-regulation of ion transport" EXACT []
+synonym: "downregulation of ion transport" EXACT []
+synonym: "inhibition of ion transport" NARROW []
+is_a: GO:0043269 ! regulation of ion transport
+is_a: GO:0051051 ! negative regulation of transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0006811 ! ion transport
+relationship: negatively_regulates GO:0006811 ! ion transport
 
 [Term]
 id: GO:0043385
@@ -3674,17 +3744,19 @@ relationship: positively_regulates GO:0051704 ! multi-organism process
 
 [Term]
 id: GO:0043903
-name: regulation of symbiotic process
+name: regulation of biological process involved in symbiotic interaction
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of symbiosis, an interaction between two organisms living together in more or less intimate association." [GOC:jl]
 comment: regulation of interspecies interactions between organisms
 synonym: "regulation of interspecies interactions between organisms" BROAD []
 synonym: "regulation of symbiosis, encompassing mutualism through parasitism" RELATED []
+synonym: "regulation of symbiotic process" EXACT []
 is_a: GO:0050789 ! regulation of biological process
 intersection_of: GO:0008150 ! biological_process
-intersection_of: regulates GO:0044403 ! symbiotic process
-relationship: regulates GO:0044403 ! symbiotic process
+intersection_of: regulates GO:0044403 ! biological process involved in symbiotic interaction
+relationship: regulates GO:0044403 ! biological process involved in symbiotic interaction
 property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/19028 xsd:anyURI
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/20191 xsd:anyURI
 
 [Term]
 id: GO:0043934
@@ -3865,7 +3937,7 @@ synonym: "modification by symbiont of host biological process" RELATED []
 synonym: "modification by symbiont of host morphology or physiology" RELATED []
 synonym: "modulation by symbiont of host system process" NARROW []
 synonym: "regulation by symbiont of host system process" NARROW []
-is_a: GO:0051701 ! interaction with host
+is_a: GO:0051701 ! biological process involved in interaction with host
 is_a: GO:0051817 ! modulation of process of other organism involved in symbiotic interaction
 property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/18719 xsd:anyURI
 
@@ -3881,6 +3953,27 @@ is_a: GO:0044003 ! modulation by symbiont of host process
 is_a: GO:0050794 ! regulation of cellular process
 intersection_of: GO:0044003 ! modulation by symbiont of host process
 intersection_of: regulates GO:0009987 ! cellular process
+
+[Term]
+id: GO:0044069
+name: modulation by symbiont of host anion transport
+namespace: biological_process
+def: "The process in which a symbiont organism modulates the anion transport, the directed movement of anions, atoms or small molecules with a net negative charge, into, out of or within a cell, or between cells, of its host organism." [MITRE:tk]
+synonym: "modification of host anion transport by symbiont" EXACT []
+is_a: GO:0044068 ! modulation by symbiont of host cellular process
+is_a: GO:0044070 ! regulation of anion transport
+intersection_of: GO:0044068 ! modulation by symbiont of host cellular process
+intersection_of: regulates GO:0006820 ! anion transport
+
+[Term]
+id: GO:0044070
+name: regulation of anion transport
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of the directed movement of anions, atoms or small molecules with a net negative charge into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:jl]
+is_a: GO:0043269 ! regulation of ion transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0006820 ! anion transport
+relationship: regulates GO:0006820 ! anion transport
 
 [Term]
 id: GO:0044071
@@ -3971,7 +4064,7 @@ synonym: "growth during symbiotic interaction" RELATED [GOC:dph]
 synonym: "growth on or near surface of other organism during symbiotic interaction" RELATED [GOC:tb]
 synonym: "growth on or near surface of other organism involved in symbiotic interaction" RELATED []
 is_a: GO:0040007 ! growth
-is_a: GO:0044419 ! interspecies interaction between organisms
+is_a: GO:0044419 ! biological process involved in interspecies interaction between organisms
 created_by: jl
 creation_date: 2009-07-30T02:22:33Z
 
@@ -3987,8 +4080,8 @@ synonym: "development on or near surface of other organism during symbiotic inte
 synonym: "development on or near surface of other organism involved in symbiotic interaction" NARROW []
 is_a: GO:0032502 ! developmental process
 intersection_of: GO:0032502 ! developmental process
-intersection_of: part_of GO:0044419 ! interspecies interaction between organisms
-relationship: part_of GO:0044419 ! interspecies interaction between organisms
+intersection_of: part_of GO:0044419 ! biological process involved in interspecies interaction between organisms
+relationship: part_of GO:0044419 ! biological process involved in interspecies interaction between organisms
 created_by: jl
 creation_date: 2009-07-30T02:26:46Z
 
@@ -3997,32 +4090,11 @@ id: GO:0044115
 name: development of symbiont involved in interaction with host
 namespace: biological_process
 def: "The progression of an organism from an initial condition to a later condition, occurring in, on or near the exterior of its host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:jl, GOC:pamgo_curators]
-comment: This term partially replaces the obsolete term 'growth or development of symbiont during interaction with host ; GO:0052108'. See also 'growth of symbiont in host ; GO:0044117'.
+comment: This term partially replaces the obsolete term 'growth or development of symbiont during interaction with host ; GO:0052108'. See also 'biological process involved in interaction with host ; GO:0051701.
 synonym: "development of symbiont during interaction with host" RELATED [GOC:dph]
 is_a: GO:0044111 ! development involved in symbiotic interaction
 created_by: jl
 creation_date: 2009-07-30T03:26:36Z
-
-[Term]
-id: GO:0044117
-name: growth of symbiont in host
-namespace: biological_process
-alt_id: GO:0044112
-alt_id: GO:0044116
-alt_id: GO:0044123
-alt_id: GO:0044125
-def: "The increase in size or mass of an organism, occurring within the cells or tissues of the host organism. This may (but not necessarily) include a filamentous growth form, and also can include secretion of proteases and lipases to break down host tissue. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:jl, GOC:pamgo_curators]
-comment: This term partially replaces the obsolete term 'growth or development of symbiont in host ; GO:0044412'. See also 'development of symbiont in host ; GO:0044114'.
-synonym: "growth in other organism during symbiotic interaction" RELATED [GOC:tb]
-synonym: "growth in other organism involved in symbiotic interaction" RELATED []
-synonym: "growth of symbiont during interaction with host" RELATED [GOC:tb]
-synonym: "growth of symbiont in host intercellular space" BROAD []
-synonym: "growth of symbiont in host vascular tissue" NARROW []
-synonym: "growth of symbiont involved in interaction with host" RELATED []
-is_a: GO:0044110 ! growth involved in symbiotic interaction
-is_a: GO:0044403 ! symbiotic process
-created_by: jl
-creation_date: 2009-07-30T02:32:14Z
 
 [Term]
 id: GO:0044132
@@ -4221,13 +4293,13 @@ creation_date: 2011-10-27T02:27:48Z
 
 [Term]
 id: GO:0044403
-name: symbiotic process
+name: biological process involved in symbiotic interaction
 namespace: biological_process
 alt_id: GO:0043298
 alt_id: GO:0044404
 alt_id: GO:0072519
 alt_id: GO:0085031
-def: "A process carried out by gene products in an organism that enable the organism to engage in a symbiotic relationship, a more or less intimate association, with another organism. The various forms of symbiosis include parasitism, in which the association is disadvantageous or destructive to one of the organisms; mutualism, in which the association is advantageous, or often necessary to one or both and not harmful to either; and commensalism, in which one member of the association benefits while the other is not affected. However, mutualism, parasitism, and commensalism are often not discrete categories of interactions and should rather be perceived as a continuum of interaction ranging from parasitism to mutualism. In fact, the direction of a symbiotic interaction can change during the lifetime of the symbionts due to developmental changes as well as changes in the biotic/abiotic environment in which the interaction occurs. Microscopic symbionts are often referred to as endosymbionts." [GOC:cc, https://study.com/academy/lesson/symbiont-definition-lesson-quiz.html]
+def: "A process carried out by gene products in an organism that enable the organism to engage in a symbiotic relationship, a more or less intimate association, with another organism. The various forms of symbiosis include parasitism, in which the association is disadvantageous or destructive to one of the organisms; mutualism, in which the association is advantageous, or often necessary to one or both and not harmful to either; and commensalism, in which one member of the association benefits while the other is not affected. However, mutualism, parasitism, and commensalism are often not discrete categories of interactions and should rather be perceived as a continuum of interaction ranging from parasitism to mutualism. In fact, the direction of a symbiotic interaction can change during the lifetime of the symbionts due to developmental changes as well as changes in the biotic/abiotic environment in which the interaction occurs. Microscopic symbionts are often referred to as endosymbionts." [GOC:cc, PMID:31257129]
 subset: goslim_chembl
 subset: goslim_generic
 synonym: "commensalism" NARROW []
@@ -4239,8 +4311,10 @@ synonym: "symbiotic interaction" RELATED []
 synonym: "symbiotic interaction between host and organism" RELATED []
 synonym: "symbiotic interaction between organisms" RELATED []
 synonym: "symbiotic interaction between species" RELATED []
-is_a: GO:0044419 ! interspecies interaction between organisms
+synonym: "symbiotic process" RELATED []
+is_a: GO:0044419 ! biological process involved in interspecies interaction between organisms
 property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/14807 xsd:anyURI
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/20191 xsd:anyURI
 
 [Term]
 id: GO:0044409
@@ -4283,16 +4357,19 @@ property_value: term_tracker_item https://github.com/geneontology/go-ontology/is
 
 [Term]
 id: GO:0044419
-name: interspecies interaction between organisms
+name: biological process involved in interspecies interaction between organisms
 namespace: biological_process
-def: "Any process in which an organism has an effect on an organism of a different species." [GOC:cc]
+def: "Any process evolved to enable an interaction with an organism of a different species." [GOC:cc]
+subset: gocheck_do_not_annotate
 subset: goslim_candida
 subset: goslim_pir
 synonym: "interaction with another species" EXACT []
 synonym: "interspecies interaction" EXACT []
+synonym: "interspecies interaction between organisms" EXACT []
 synonym: "interspecies interaction with other organisms" EXACT []
 is_a: GO:0008150 ! biological_process
 property_value: RO:0002161 NCBITaxon:4895
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/20191 xsd:anyURI
 
 [Term]
 id: GO:0044422
@@ -4350,16 +4427,6 @@ synonym: "protoplast" RELATED [GOC:mah]
 xref: NIF_Subcellular:sao628508602
 is_obsolete: true
 consider: CL:0000000
-
-[Term]
-id: GO:0044531
-name: modulation of programmed cell death in other organism
-namespace: biological_process
-def: "A process in which an organism modulates the frequency, rate or extent of programmed cell death in a second organism." [GOC:jl]
-is_a: GO:0035821 ! modulation of process of other organism
-is_a: GO:0043067 ! regulation of programmed cell death
-created_by: jl
-creation_date: 2012-03-20T04:48:41Z
 
 [Term]
 id: GO:0044550
@@ -5474,8 +5541,8 @@ synonym: "stimulation of protein transport" NARROW []
 synonym: "up regulation of protein transport" EXACT []
 synonym: "up-regulation of protein transport" EXACT []
 synonym: "upregulation of protein transport" EXACT []
-is_a: GO:0051050 ! positive regulation of transport
 is_a: GO:0051223 ! regulation of protein transport
+is_a: GO:1903793 ! positive regulation of anion transport
 is_a: GO:1904951 ! positive regulation of establishment of protein localization
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0015031 ! protein transport
@@ -5501,8 +5568,8 @@ synonym: "down regulation of protein transport" EXACT []
 synonym: "down-regulation of protein transport" EXACT []
 synonym: "downregulation of protein transport" EXACT []
 synonym: "inhibition of protein transport" NARROW []
-is_a: GO:0051051 ! negative regulation of transport
 is_a: GO:0051223 ! regulation of protein transport
+is_a: GO:1903792 ! negative regulation of anion transport
 is_a: GO:1904950 ! negative regulation of establishment of protein localization
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0015031 ! protein transport
@@ -5832,10 +5899,32 @@ is_a: GO:0051179 ! localization
 
 [Term]
 id: GO:0051701
-name: interaction with host
+name: biological process involved in interaction with host
 namespace: biological_process
+alt_id: GO:0044112
+alt_id: GO:0044116
+alt_id: GO:0044117
+alt_id: GO:0044119
+alt_id: GO:0044121
+alt_id: GO:0044123
+alt_id: GO:0044125
 def: "An interaction between two organisms living together in more or less intimate association. The term host is used for the larger (macro) of the two members of a symbiosis; the various forms of symbiosis include parasitism, commensalism and mutualism." [GOC:cc]
-is_a: GO:0044403 ! symbiotic process
+synonym: "growth of symbiont in host" NARROW []
+synonym: "growth of symbiont in host cell" NARROW []
+synonym: "growth of symbiont in host organelle" NARROW []
+synonym: "growth of symbiont in host vacuole" NARROW []
+synonym: "interaction with host" EXACT []
+is_a: GO:0044403 ! biological process involved in symbiotic interaction
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/20191 xsd:anyURI
+
+[Term]
+id: GO:0051702
+name: biological process involved in interaction with symbiont
+namespace: biological_process
+def: "An interaction between two organisms living together in more or less intimate association. The term symbiont is used for the smaller (macro) of the two members of a symbiosis; the various forms of symbiosis include parasitism, commensalism and mutualism." [GOC:cc]
+synonym: "interaction with symbiont" RELATED []
+is_a: GO:0044403 ! biological process involved in symbiotic interaction
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/20191 xsd:anyURI
 
 [Term]
 id: GO:0051704
@@ -5858,50 +5947,78 @@ alt_id: GO:0009613
 alt_id: GO:0042828
 def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus from another living organism." [GOC:ai]
 is_a: GO:0043207 ! response to external biotic stimulus
-is_a: GO:0044419 ! interspecies interaction between organisms
+is_a: GO:0044419 ! biological process involved in interspecies interaction between organisms
 
 [Term]
 id: GO:0051709
 name: regulation of killing of cells of other organism
 namespace: biological_process
+alt_id: GO:0044531
+alt_id: GO:0052248
+alt_id: GO:0052433
+alt_id: GO:0052459
 def: "Any process that modulates the frequency, rate or extent of the killing by an organism of cells in another organism." [GOC:ai]
+synonym: "modulation by organism of apoptotic process in other organism involved in symbiotic interaction" NARROW []
+synonym: "modulation of programmed cell death in other organism" NARROW []
+synonym: "modulation of programmed cell death in other organism involved in symbiotic interaction" NARROW []
 synonym: "regulation of killing of cells of another organism" EXACT [GOC:bf]
 is_a: GO:0031341 ! regulation of cell killing
-intersection_of: GO:0008150 ! biological_process
+is_a: GO:0035821 ! modulation of process of other organism
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0031640 ! killing of cells of other organism
 relationship: regulates GO:0031640 ! killing of cells of other organism
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/20287 xsd:anyURI
+created_by: jl
+creation_date: 2012-03-20T04:48:41Z
 
 [Term]
 id: GO:0051711
 name: negative regulation of killing of cells of other organism
 namespace: biological_process
+alt_id: GO:0052490
 def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the killing by an organism of cells in another organism." [GOC:ai]
 synonym: "down regulation of killing of cells of another organism" EXACT []
 synonym: "down-regulation of killing of cells of another organism" EXACT []
 synonym: "downregulation of killing of cells of another organism" EXACT []
 synonym: "inhibition of killing of cells of another organism" NARROW []
+synonym: "negative regulation by organism of programmed cell death in other organism involved in symbiotic interaction" NARROW []
 synonym: "negative regulation of killing of cells of another organism" EXACT [GOC:bf]
 is_a: GO:0031342 ! negative regulation of cell killing
 is_a: GO:0051709 ! regulation of killing of cells of other organism
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0031640 ! killing of cells of other organism
 relationship: negatively_regulates GO:0031640 ! killing of cells of other organism
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/20287 xsd:anyURI
 
 [Term]
 id: GO:0051712
 name: positive regulation of killing of cells of other organism
 namespace: biological_process
+alt_id: GO:0052330
+alt_id: GO:0052388
+alt_id: GO:0052501
+alt_id: GO:0052518
+alt_id: GO:0052529
 def: "Any process that activates or increases the frequency, rate or extent of the killing by an organism of cells in another organism." [GOC:ai]
+synonym: "activation by organism of apoptotic programmed cell death in other organism during symbiotic interaction" RELATED []
 synonym: "activation of killing of cells of another organism" NARROW []
+synonym: "enhancement of other organism programmed cell death by organism" RELATED []
+synonym: "induction by organism of apoptosis in other organism during symbiotic interaction" RELATED [GOC:tb]
+synonym: "induction by organism of apoptosis in other organism involved in symbiotic interaction" EXACT []
+synonym: "positive regulation by organism of apoptotic process in other organism involved in symbiotic interaction" NARROW []
+synonym: "positive regulation by organism of non-apoptotic programmed cell death in other organism during symbiotic interaction" NARROW []
+synonym: "positive regulation by organism of programmed cell death in other organism involved in symbiotic interaction" NARROW []
 synonym: "stimulation of killing of cells of another organism" NARROW []
 synonym: "up regulation of killing of cells of another organism" EXACT []
 synonym: "up-regulation of killing of cells of another organism" EXACT []
 synonym: "upregulation of killing of cells of another organism" EXACT []
 is_a: GO:0031343 ! positive regulation of cell killing
+is_a: GO:0043068 ! positive regulation of programmed cell death
 is_a: GO:0051709 ! regulation of killing of cells of other organism
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0031640 ! killing of cells of other organism
 relationship: positively_regulates GO:0031640 ! killing of cells of other organism
+property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/20287 xsd:anyURI
 
 [Term]
 id: GO:0051716
@@ -6073,8 +6190,8 @@ synonym: "induction of non-apoptotic programmed cell death by other organism" RE
 synonym: "positive regulation by symbiont of host non-apoptotic programmed cell death" NARROW []
 synonym: "stimulation by symbiont of host programmed cell death" NARROW []
 synonym: "upregulation by symbiont of host programmed cell death" EXACT []
+is_a: GO:0051712 ! positive regulation of killing of cells of other organism
 is_a: GO:0052040 ! modulation by symbiont of host programmed cell death
-is_a: GO:0052330 ! positive regulation by organism of programmed cell death in other organism involved in symbiotic interaction
 intersection_of: GO:0044003 ! modulation by symbiont of host process
 intersection_of: positively_regulates GO:0012501 ! programmed cell death
 relationship: part_of GO:0001907 ! killing by symbiont of host cells
@@ -6149,7 +6266,7 @@ name: movement in host environment
 namespace: biological_process
 def: "The directed movement of an organism or motile cell on, within or near its host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:mtg_pamgo_17jul06]
 synonym: "movement in response to host" EXACT []
-is_a: GO:0051701 ! interaction with host
+is_a: GO:0051701 ! biological process involved in interaction with host
 
 [Term]
 id: GO:0052148
@@ -6263,37 +6380,6 @@ is_a: GO:0032386 ! regulation of intracellular transport
 is_a: GO:0051817 ! modulation of process of other organism involved in symbiotic interaction
 
 [Term]
-id: GO:0052248
-name: modulation of programmed cell death in other organism involved in symbiotic interaction
-namespace: biological_process
-alt_id: GO:0052459
-def: "Any process in which an organism modulates the frequency, rate or extent of programmed cell death in a second organism, where the two organisms are in a symbiotic interaction." [GOC:mtg_pamgo_17jul06]
-synonym: "modulation by organism of non-apoptotic programmed cell death in other organism during symbiotic interaction" NARROW []
-synonym: "modulation of programmed cell death in other organism during symbiotic interaction" RELATED [GOC:dph]
-is_a: GO:0044531 ! modulation of programmed cell death in other organism
-is_a: GO:0051817 ! modulation of process of other organism involved in symbiotic interaction
-
-[Term]
-id: GO:0052330
-name: positive regulation by organism of programmed cell death in other organism involved in symbiotic interaction
-namespace: biological_process
-alt_id: GO:0052518
-alt_id: GO:0052529
-def: "Any process in which an organism activates, maintains or increases the frequency, rate or extent of programmed cell death in a second organism, where the two organisms are in a symbiotic interaction." [GOC:jl, GOC:mtg_pamgo_17jul06]
-synonym: "activation by organism of programmed cell death in other organism during symbiotic interaction" NARROW []
-synonym: "enhancement of other organism programmed cell death by organism" RELATED []
-synonym: "positive regulation by organism of non-apoptotic programmed cell death in other organism during symbiotic interaction" NARROW []
-synonym: "positive regulation by organism of programmed cell death in other organism during symbiotic interaction" RELATED [GOC:tb]
-synonym: "stimulation by organism of programmed cell death in other organism during symbiotic interaction" NARROW []
-synonym: "upregulation by organism of programmed cell death in other organism during symbiotic interaction" RELATED [GOC:tb]
-synonym: "upregulation by organism of programmed cell death in other organism involved in symbiotic interaction" EXACT []
-is_a: GO:0043068 ! positive regulation of programmed cell death
-is_a: GO:0043903 ! regulation of symbiotic process
-is_a: GO:0051712 ! positive regulation of killing of cells of other organism
-is_a: GO:0052248 ! modulation of programmed cell death in other organism involved in symbiotic interaction
-relationship: positively_regulates GO:0051883 ! killing of cells in other organism involved in symbiotic interaction
-
-[Term]
 id: GO:0052372
 name: modulation by symbiont of entry into host
 namespace: biological_process
@@ -6303,7 +6389,7 @@ synonym: "modulation by organism of entry into other organism during symbiotic i
 synonym: "modulation by symbiont of entry into host" RELATED []
 synonym: "regulation by organism of entry into other organism during symbiotic interaction" RELATED [GOC:tb]
 synonym: "regulation by organism of entry into other organism involved in symbiotic interaction" RELATED []
-is_a: GO:0043903 ! regulation of symbiotic process
+is_a: GO:0043903 ! regulation of biological process involved in symbiotic interaction
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0044409 ! entry into host
 relationship: regulates GO:0044409 ! entry into host
@@ -6565,7 +6651,7 @@ id: GO:0071702
 name: organic substance transport
 namespace: biological_process
 def: "The directed movement of organic substances into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter or pore. An organic substance is a molecular entity that contains carbon." [GOC:mah]
-is_a: GO:0006810 ! transport
+is_a: GO:0006820 ! anion transport
 created_by: mah
 creation_date: 2010-03-08T02:15:14Z
 
@@ -6743,7 +6829,7 @@ name: symbiotic process benefiting host
 namespace: biological_process
 def: "A process carried out by symbiont gene products that enables a symbiotic interaction with a host organism, that is beneficial to the host organism." [GOC:pdt]
 synonym: "mutualism" RELATED []
-is_a: GO:0044403 ! symbiotic process
+is_a: GO:0044403 ! biological process involved in symbiotic interaction
 created_by: jl
 creation_date: 2010-07-27T01:25:21Z
 
@@ -6778,7 +6864,7 @@ id: GO:0090087
 name: regulation of peptide transport
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the directed movement of peptides, compounds of two or more amino acids where the alpha carboxyl group of one is bound to the alpha amino group of another, into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:dph, GOC:tb]
-is_a: GO:0051049 ! regulation of transport
+is_a: GO:0044070 ! regulation of anion transport
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0015833 ! peptide transport
 relationship: regulates GO:0015833 ! peptide transport
@@ -6828,6 +6914,7 @@ id: GO:0098772
 name: molecular function regulator
 namespace: molecular_function
 def: "A molecular function that modulates the activity of a gene product or complex.  Examples include enzyme regulators and channel regulators." [GOC:dos, GOC:pt]
+subset: gocheck_do_not_annotate
 subset: goslim_flybase_ribbon
 is_a: GO:0003674 ! molecular_function
 relationship: part_of GO:0065009 ! regulation of molecular function
@@ -6876,6 +6963,7 @@ name: catalytic activity, acting on a protein
 namespace: molecular_function
 def: "Catalytic activity that acts to modify a protein." [GOC:molecular_function_refactoring, GOC:pdt]
 is_a: GO:0003824 ! catalytic activity
+relationship: part_of GO:0018215 ! protein phosphopantetheinylation
 property_value: term_tracker_item https://github.com/geneontology/go-ontology/issues/14225 xsd:anyURI
 created_by: pg
 creation_date: 2017-09-14T10:32:59Z
@@ -7456,6 +7544,40 @@ intersection_of: positively_regulates GO:0019954 ! asexual reproduction
 relationship: positively_regulates GO:0019954 ! asexual reproduction
 created_by: pf
 creation_date: 2014-11-26T21:13:40Z
+
+[Term]
+id: GO:1903792
+name: negative regulation of anion transport
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of anion transport." [GO_REF:0000058, GOC:TermGenie, PMID:11336802]
+synonym: "down regulation of anion transport" EXACT [GOC:TermGenie]
+synonym: "down-regulation of anion transport" EXACT [GOC:TermGenie]
+synonym: "downregulation of anion transport" EXACT [GOC:TermGenie]
+synonym: "inhibition of anion transport" NARROW [GOC:TermGenie]
+is_a: GO:0043271 ! negative regulation of ion transport
+is_a: GO:0044070 ! regulation of anion transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0006820 ! anion transport
+relationship: negatively_regulates GO:0006820 ! anion transport
+created_by: sl
+creation_date: 2015-01-12T21:50:20Z
+
+[Term]
+id: GO:1903793
+name: positive regulation of anion transport
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of anion transport." [GO_REF:0000058, GOC:TermGenie, PMID:11336802]
+synonym: "activation of anion transport" NARROW [GOC:TermGenie]
+synonym: "up regulation of anion transport" EXACT [GOC:TermGenie]
+synonym: "up-regulation of anion transport" EXACT [GOC:TermGenie]
+synonym: "upregulation of anion transport" EXACT [GOC:TermGenie]
+is_a: GO:0043270 ! positive regulation of ion transport
+is_a: GO:0044070 ! regulation of anion transport
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0006820 ! anion transport
+relationship: positively_regulates GO:0006820 ! anion transport
+created_by: sl
+creation_date: 2015-01-12T21:50:30Z
 
 [Term]
 id: GO:1903827

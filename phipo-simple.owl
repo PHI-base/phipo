@@ -12,7 +12,7 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/phipo/phipo-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2020-10-22/phipo-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2020-12-02/phipo-simple.owl"/>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-09T13:43:00Z</obo:creation_date>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology of species-neutral phenotypes observed in pathogen-host interactions.</dc:description>
@@ -462,7 +462,7 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000004">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000006"/>
-        <obo:IAO_0000115>A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is unaffected (i.e the same as wild-type, this could be pathogenicity present or pathogenicity absent).</obo:IAO_0000115>
+        <obo:IAO_0000115>A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is unaffected (i.e the same as wild-type, it could be pathogenic or non-pathogenic).</obo:IAO_0000115>
         <obo:created_by>alaynecuzick</obo:created_by>
         <obo:creation_date>2018-05-04T12:38:43Z</obo:creation_date>
         <oboInOwl:hasExactSynonym>normal pathogenicity</oboInOwl:hasExactSynonym>
@@ -741,7 +741,7 @@ Can apply to changes in the pathogen or the host.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000021 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000021">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000414"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001218"/>
         <obo:IAO_0000115>A single species population phenotype in which a population shows decreased resistance to a chemical stimulus. Resistance to a chemical is usually measured by determining the maximum concentration of the chemical at which a population grows and divides. Typically, populations are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type populations to grow.</obo:IAO_0000115>
         <obo:created_by>alaynecuzick</obo:created_by>
         <obo:creation_date>2018-05-04T13:15:05Z</obo:creation_date>
@@ -754,7 +754,7 @@ Can apply to changes in the pathogen or the host.</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000022 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000022">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000414"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001218"/>
         <obo:IAO_0000115>A single species population phenotype in which a population shows increased resistance to a chemical stimulus. Resistance to a chemical is usually measured by determining the maximum concentration of the chemical at which a population grows and divides.</obo:IAO_0000115>
         <obo:created_by>alaynecuzick</obo:created_by>
         <obo:creation_date>2018-05-04T13:16:06Z</obo:creation_date>
@@ -845,6 +845,7 @@ MU agrees REMOVE from penetration</rdfs:comment>
         <obo:IAO_0000115>A single species pathogen growth phenotype in which the formation of the pathogen penetration structure is normal (i.e same as wild-type) when assessed for penetration ability on a given experimental substance/membrane.</obo:IAO_0000115>
         <obo:created_by>alaynecuzick</obo:created_by>
         <obo:creation_date>2018-05-04T13:19:44Z</obo:creation_date>
+        <oboInOwl:hasExactSynonym>normal formation of pathogen infection structure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>normal pathogen pre penetration</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
@@ -904,6 +905,7 @@ should this be with reproduction?</rdfs:comment>
         <obo:IAO_0000115>A single species pathogen growth phenotype in which the formation of the pathogen penetration structure is abnormal (i.e different than wild-type) when assessed for penetration ability on a given experimental substance/membrane.</obo:IAO_0000115>
         <obo:created_by>alaynecuzick</obo:created_by>
         <obo:creation_date>2018-05-04T13:23:06Z</obo:creation_date>
+        <oboInOwl:hasExactSynonym>abnormal formation of pathogen infection structure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>abnormal pathogen pre penetration</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
@@ -966,19 +968,6 @@ should this be with reproduction?</rdfs:comment>
         <oboInOwl:hasDbXref>FYPO:0000356</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label>abnormal lipid droplet morphology</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PHIPO_0000037 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000037">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000273"/>
-        <obo:IAO_0000115>A single species population phenotype where the morphology of a colony growing in filamentous form is abnormal.</obo:IAO_0000115>
-        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-10T11:46:51Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal hyphal colony morphology</rdfs:label>
     </owl:Class>
     
 
@@ -1218,7 +1207,7 @@ also hosts</rdfs:comment>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:22:31Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">expedited asexual sporulation</rdfs:label>
+        <rdfs:label xml:lang="en">premature asexual sporulation</rdfs:label>
     </owl:Class>
     
 
@@ -1244,7 +1233,7 @@ also hosts</rdfs:comment>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:24:07Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">expedited sexual sporulation</rdfs:label>
+        <rdfs:label xml:lang="en">premature sexual sporulation</rdfs:label>
     </owl:Class>
     
 
@@ -1872,6 +1861,7 @@ also hosts</rdfs:comment>
         <obo:IAO_0000115>A single species pathogen growth phenotype in which the size of pathogen penetration stuctures are increased when assessed for penetration ability on a given experimental substance/membrane.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T10:58:56Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>increased size of infection structure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">increased size of penetration structure</rdfs:label>
@@ -1886,6 +1876,7 @@ also hosts</rdfs:comment>
         <obo:IAO_0000115>A single species pathogen growth phenotype in which the size of pathogen penetration stuctures are decreased when assessed for penetration ability on a given experimental substance/membrane.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:00:04Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>decreased size of infection structure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">decreased size of penetration structure</rdfs:label>
@@ -1900,6 +1891,7 @@ also hosts</rdfs:comment>
         <obo:IAO_0000115>A single species pathogen growth phenotype in which the frequency of occurrence of pathogen penetration stuctures are increased when assessed for penetration ability on a given experimental substance/membrane.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:00:54Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>increased number of infection structure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">increased number of penetration structure</rdfs:label>
@@ -1915,6 +1907,7 @@ also hosts</rdfs:comment>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:05:16Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>decreased number of appressorium</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>decreased number of infection structure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">decreased number of penetration structure</rdfs:label>
@@ -1929,6 +1922,7 @@ also hosts</rdfs:comment>
         <obo:IAO_0000115>A single species pathogen growth phenotype in which formation of pathogen specialized penetration structure begins later than normal when assessed for penetration ability on a given experimental substance/membrane.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:13:16Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>delayed timing of infection structure formation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">delayed timing of penetration structure formation</rdfs:label>
@@ -1943,9 +1937,10 @@ also hosts</rdfs:comment>
         <obo:IAO_0000115>A single species pathogen growth phenotype in which formation of pathogen specialized penetration structure begins sooner than normal when assessed for penetration ability on a given experimental substance/membrane.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:13:53Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>premature infection structure formation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">expedited timing of penetration structure formation</rdfs:label>
+        <rdfs:label xml:lang="en">premature penetration structure formation</rdfs:label>
     </owl:Class>
     
 
@@ -1957,6 +1952,7 @@ also hosts</rdfs:comment>
         <obo:IAO_0000115>A single species pathogen growth phenotype in which the  ability of the pathogen to  form a specialized penetration structure is abolished when assessed for penetration ability on a given experimental substance/membrane.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:16:18Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>abolished formation of pathogen infection structure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">abolished formation of pathogen penetration structure</rdfs:label>
@@ -2098,7 +2094,7 @@ also hosts</rdfs:comment>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:31:21Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">expedited timing of pathogen growth after penetration of the barrier</rdfs:label>
+        <rdfs:label xml:lang="en">premature pathogen growth after penetration of the barrier</rdfs:label>
     </owl:Class>
     
 
@@ -2179,7 +2175,7 @@ also hosts</rdfs:comment>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T12:39:33Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
-        <rdfs:label xml:lang="en">expedited pathogen penetration across the barrier</rdfs:label>
+        <rdfs:label xml:lang="en">premature pathogen penetration across the barrier</rdfs:label>
     </owl:Class>
     
 
@@ -2700,14 +2696,14 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000162">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000509"/>
-        <obo:IAO_0000115>A single species population phenotype that affects the rate or extent of the increase in the number of organisms in the population (i.e organismal growth and reproduction).</obo:IAO_0000115>
+        <obo:IAO_0000115>A single species population phenotype that affects the rate or extent of the increase in the number of unicellular organisms in the population (i.e organismal growth and reproduction).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T12:15:24Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
         <rdfs:comment>This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
-        <rdfs:label xml:lang="en">population growth phenotype</rdfs:label>
+        <rdfs:label xml:lang="en">unicellular population growth phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -2941,9 +2937,8 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000182 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000182">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000280"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000466"/>
-        <obo:IAO_0000115>A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen is absent (GO:0009626).</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000481"/>
+        <obo:IAO_0000115>A phenotype where the process of host tissue cell death causing a host lesion is induced by the host activating its own hypersensitive response in defense, is absent.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:09:35Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>PHIPO:0000186</oboInOwl:hasAlternativeId>
@@ -2953,10 +2948,11 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
         <oboInOwl:hasRelatedSynonym>abolished effector-mediated host hypersensitive response during biotrophy</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>abolished host lesion</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>abolished host necrotic cell death</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>absence of effector-mediated host hypersensitive response during biotrophy</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>absence of host lesion</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>absence of host necrotic cell death</oboInOwl:hasRelatedSynonym>
-        <rdfs:comment>This term is to be used for host protection against the pathogen.</rdfs:comment>
-        <rdfs:label xml:lang="en">absence of effector-mediated host hypersensitive response during biotrophy</rdfs:label>
+        <rdfs:comment>This term is to be used for host protection against the pathogen. Note that if you are curating a necrotroph you need to annotate to PHIPO:0000465.</rdfs:comment>
+        <rdfs:label xml:lang="en">absence of host-defense induced lesion by host hypersensitive response</rdfs:label>
     </owl:Class>
     
 
@@ -3048,14 +3044,16 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000190">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000192"/>
-        <obo:IAO_0000115>A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen is delayed (GO:0009626).</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000985"/>
+        <obo:IAO_0000115>A phenotype where the process of host tissue cell death causing a host lesion is induced by the host activating its own hypersensitive response in defense is delayed.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:14:10Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>delayed effector-mediated host hypersensitive response during biotrophy</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>delayed host necrotic cell death</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>delayed presence of host lesion</oboInOwl:hasRelatedSynonym>
         <rdfs:comment>This term is to be used for host protection against the pathogen.</rdfs:comment>
-        <rdfs:label xml:lang="en">delayed effector-mediated host hypersensitive response during biotrophy</rdfs:label>
+        <rdfs:label xml:lang="en">delayed host-defence induced lesion formation by host hypersensitive response</rdfs:label>
     </owl:Class>
     
 
@@ -3077,10 +3075,8 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000192 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000192">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000280"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000466"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000480"/>
-        <obo:IAO_0000115>A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen is present (GO:0009626).</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000461"/>
+        <obo:IAO_0000115>A phenotype where the process of host tissue cell death causing a host lesion is induced by the host activating its own hypersensitive response in defense, is present.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:14:29Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>PHIPO:0000516</oboInOwl:hasAlternativeId>
@@ -3088,10 +3084,11 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
         <oboInOwl:hasRelatedSynonym>gain of effector-mediated host hypersensitive response during biotrophy</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>gain of host necrotic cell death</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>gain of presence of host lesion</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>presence of effector-mediated host hypersensitive response during biotrophy</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>presence of host lesion</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>presence of host necrotic cell death</oboInOwl:hasRelatedSynonym>
-        <rdfs:comment>This term is to be used for host protection against the pathogen.</rdfs:comment>
-        <rdfs:label xml:lang="en">presence of effector-mediated host hypersensitive response during biotrophy</rdfs:label>
+        <rdfs:comment>This term is to be used for host protection against the pathogen. Note that if you are curating a necrotroph you need to annotate to PHIPO:0000477.</rdfs:comment>
+        <rdfs:label xml:lang="en">presence of host-defense induced lesion by host hypersensitive response</rdfs:label>
     </owl:Class>
     
 
@@ -3125,12 +3122,14 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000196 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000196">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000278"/>
-        <obo:IAO_0000115>A single species hyphal colony morphology phenotype where the aerial height of the filamentous colony is normal (indistinguishable from wild type).</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001210"/>
+        <obo:IAO_0000115>An individual species growth phenotype in which the aerial height of an individual hypha is normal (indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:27:25Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal aerial height of filamentous colony</rdfs:label>
+        <oboInOwl:hasRelatedSynonym>normal aerial height of filamentous colony</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment>Although this phenotype is for an individual it can be inferred from a population in a colony.</rdfs:comment>
+        <rdfs:label xml:lang="en">normal aerial height of filament</rdfs:label>
     </owl:Class>
     
 
@@ -3219,12 +3218,13 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000203 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000203">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000958"/>
-        <obo:IAO_0000115>A single species hyphal colony morphology phenotype where the aerial height of the filamentous colony is increased.</obo:IAO_0000115>
+        <obo:IAO_0000115>A single species hyphal colony shape phenotype where the aerial height of the filamentous colony is increased.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:31:34Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">increased aerial height of filamentous colony</rdfs:label>
+        <oboInOwl:hasRelatedSynonym>increased aerial height of filamentous colony</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>obsolete increased aerial height of filamentous colony affecting colony shape</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -3232,12 +3232,14 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000205 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000205">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000958"/>
-        <obo:IAO_0000115>A single species hyphal colony morphology phenotype where the aerial height of the filamentous colony is decreased.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001212"/>
+        <obo:IAO_0000115>An individual species growth phenotype in which the aerial height of an individual hypha is decreased.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:32:01Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">decreased aerial height of filamentous colony</rdfs:label>
+        <oboInOwl:hasRelatedSynonym>decreased aerial height of filamentous colony</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment>Although this phenotype is for an individual it can be inferred from a population in a colony.</rdfs:comment>
+        <rdfs:label xml:lang="en">decreased aerial height of filament</rdfs:label>
     </owl:Class>
     
 
@@ -4147,19 +4149,6 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PHIPO_0000273 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000273">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001049"/>
-        <obo:IAO_0000115>A single species population phenotype affecting the morphology of a colony growing in filamentous form.</obo:IAO_0000115>
-        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-03T13:38:13Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">filamentous colony morphology phenotype</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000274 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000274">
@@ -4209,21 +4198,6 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label>obsolete abnormal filamentous growth</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PHIPO_0000278 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000278">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000273"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001057"/>
-        <obo:IAO_0000115>A single species population phenotype where the morphology of a colony growing in filamentous form is normal (indistinguishable from wild type).</obo:IAO_0000115>
-        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-03T13:40:03Z</oboInOwl:creation_date>
-        <oboInOwl:hasBroadSynonym>normal colony morphology</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal hyphal colony morphology</rdfs:label>
     </owl:Class>
     
 
@@ -4400,12 +4374,13 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000292 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000292">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000961"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001205"/>
         <obo:IAO_0000115>A single species cell morphology phenotype where hyphal filaments are short in length.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-05T12:43:16Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>reduced filament length</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">reduced filament length</rdfs:label>
+        <rdfs:label xml:lang="en">decreased filament length</rdfs:label>
     </owl:Class>
     
 
@@ -4437,7 +4412,7 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000295 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000295">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000961"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001205"/>
         <obo:IAO_0000115>A single species cell morphology phenotype where hyphal filaments are wavy.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-05T12:53:20Z</oboInOwl:creation_date>
@@ -5041,7 +5016,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T16:19:03Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">expedited pathogen cell to cell migration within host</rdfs:label>
+        <rdfs:label xml:lang="en">premature pathogen cell to cell migration within host</rdfs:label>
     </owl:Class>
     
 
@@ -5167,6 +5142,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
         <obo:IAO_0000115>A pathogen growth with host phenotype in which the formation of the pathogen penetration structure is normal (i.e indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:24:42Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>normal formation of pathogen infection structure prior to entry into host</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>normal pre penetration of host by pathogen</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">normal formation of pathogen penetration structure prior to entry into host</rdfs:label>
@@ -5294,9 +5270,9 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
         <obo:IAO_0000115>A pathogen entry into host phenotype in which the frequency of occurrence of pathogen penetration into the body, tissues, or cells of the host organism begins sooner than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:33:34Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym>expedited pathogen entry into host</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>premature pathogen entry into host</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">expedited pathogen penetration into host</rdfs:label>
+        <rdfs:label xml:lang="en">premature pathogen penetration into host</rdfs:label>
     </owl:Class>
     
 
@@ -5364,7 +5340,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:40:14Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">expedited timing of pathogen growth within host</rdfs:label>
+        <rdfs:label xml:lang="en">premature pathogen growth within host</rdfs:label>
     </owl:Class>
     
 
@@ -5390,6 +5366,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
         <obo:IAO_0000115>A pathogen growth with host phenotype in which the formation of the pathogen penetration structure is abnormal (i.e different than wild-type).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-08T12:12:18Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>abnormal formation of pathogen infection structure when near host</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>abnormal pre penetration</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">abnormal formation of pathogen penetration structure when near host</rdfs:label>
@@ -5417,6 +5394,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
         <obo:IAO_0000115>A pathogen growth with host phenotype in which the frequency of occurrence of pathogen penetration stuctures near the host are decreased.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-08T12:15:52Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>decreased number of pathogen infection structure when near host</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">decreased number of pathogen penetration structure when near host</rdfs:label>
     </owl:Class>
@@ -5430,6 +5408,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
         <obo:IAO_0000115>A pathogen growth with host phenotype in which the size of pathogen penetration stuctures near the host are decreased.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-08T12:16:29Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>decreased size of pathogen infection structure when near host</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">decreased size of pathogen penetration structure when near host</rdfs:label>
     </owl:Class>
@@ -5443,6 +5422,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
         <obo:IAO_0000115>A pathogen growth with host phenotype in which the frequency of occurrence of pathogen penetration stuctures near the host are increased.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-08T12:16:46Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>increased number of pathogen infection structure when near host</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">increased number of pathogen penetration structure when near host</rdfs:label>
     </owl:Class>
@@ -5456,6 +5436,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
         <obo:IAO_0000115>A pathogen growth with host phenotype in which the size of pathogen penetration stuctures near the host are increased.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-08T12:17:03Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>increased size of pathogen infection structure when near host</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">increased size of pathogen penetration structure when near host</rdfs:label>
     </owl:Class>
@@ -5469,6 +5450,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
         <obo:IAO_0000115>A pathogen growth with host phenotype in which the formation of pathogen specialized penetration structure begins later than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-08T12:17:35Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>delayed timing of pathogen infection structure formation when near host</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">delayed timing of pathogen penetration structure formation when near host</rdfs:label>
     </owl:Class>
@@ -5482,8 +5464,9 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
         <obo:IAO_0000115>A pathogen growth with host phenotype in which the formation of pathogen specialized penetration structure begins sooner than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-08T12:17:52Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>premature pathogen infection structure formation when near host</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">expedited timing of pathogen penetration structure formation when near host</rdfs:label>
+        <rdfs:label xml:lang="en">premature pathogen penetration structure formation when near host</rdfs:label>
     </owl:Class>
     
 
@@ -5859,11 +5842,11 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000405">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000162"/>
-        <obo:IAO_0000115>A single species population phenotype in which a population grows normally (i.e. indistinguishably from wild type).</obo:IAO_0000115>
+        <obo:IAO_0000115>A single species population phenotype in which a population of unicellular organisms grow normally (i.e. indistinguishably from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-05T11:44:58Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal population growth</rdfs:label>
+        <rdfs:label xml:lang="en">normal unicellular population growth</rdfs:label>
     </owl:Class>
     
 
@@ -5982,11 +5965,11 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000414">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000162"/>
-        <obo:IAO_0000115>A single species population phenotype in which a population grows abnormally.</obo:IAO_0000115>
+        <obo:IAO_0000115>A single species population phenotype in which a population of unicellular organisms grow abnormally.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-05T11:47:39Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal population growth</rdfs:label>
+        <rdfs:label xml:lang="en">abnormal unicellular population growth</rdfs:label>
     </owl:Class>
     
 
@@ -6404,7 +6387,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000445">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000512"/>
-        <obo:IAO_0000115>A phenotype that affects the process of host tissue death causing a host lesion induced by the presence of a pathogen.</obo:IAO_0000115>
+        <obo:IAO_0000115>A phenotype that affects the process of host tissue death causing a host lesion induced by either the pathogen directly killing host tissue (e.g. cell wall degradation), or the host activating its own cell death pathways in defense.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-18T12:46:14Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>host necrotic lesion with pathogen phenotype</oboInOwl:hasExactSynonym>
@@ -6491,17 +6474,16 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000461 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000461">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000445"/>
-        <obo:IAO_0000115>A phenotype that affects the process of host tissue death causing a host lesion induced by the presence of a pathogen. The frequency, rate or extent of programmed cell death in the host organism may be modulated by the pathogen or the host (GO:0097300 and GO:0034053).</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000480"/>
+        <obo:IAO_0000115>A phenotype where the process of host tissue cell death causing a host lesion is induced by the host activating its own programmed cell death pathways in defense, is present.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-21T12:55:04Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>host necrotic cell death</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>host programmed cell death phenotype induced by pathogen presence</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>presence of host lesion</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
-        <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
-        <rdfs:comment>This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
-        <rdfs:label xml:lang="en">host programmed cell death phenotype induced by pathogen presence</rdfs:label>
+        <rdfs:comment>Note that if you are curating a necrotroph you need to annotate to PHIPO:0000477.</rdfs:comment>
+        <rdfs:label xml:lang="en">presence of pathogen-associated host defense induced lesions</rdfs:label>
     </owl:Class>
     
 
@@ -6540,7 +6522,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000465">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000280"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000481"/>
-        <obo:IAO_0000115>A phenotype where the process of host tissue programmed cell death modulated by the pathogen is absent (GO:0034053).</obo:IAO_0000115>
+        <obo:IAO_0000115>A phenotype where the process of a necrotrophic pathogen effector activating the host immune system to trigger programmed cell death is absent.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-21T12:55:59Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>PHIPO:0000462</oboInOwl:hasAlternativeId>
@@ -6551,7 +6533,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
         <oboInOwl:hasRelatedSynonym>absence of effector-mediated host programmed cell death during necrotrophy</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>absence of host lesion</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>absence of host necrotic cell death</oboInOwl:hasRelatedSynonym>
-        <rdfs:comment>This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen.</rdfs:comment>
+        <rdfs:comment>This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen. An effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defences or other host responses.</rdfs:comment>
         <rdfs:label xml:lang="en">absence of pathogen necrotrophic effector-mediated host programmed cell death</rdfs:label>
     </owl:Class>
     
@@ -6560,7 +6542,6 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000466 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000466">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000461"/>
         <obo:IAO_0000115>A phenotype that affects the immune system process of host necrotic cell death by pathogen induced hypersensitive response. Pathogen induced hypersensitive response is the rapid, localized death of plant cells in response to invasion by a pathogen (GO:0009626).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-21T13:09:35Z</oboInOwl:creation_date>
@@ -6569,7 +6550,8 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
         <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
         <rdfs:comment>This term is to be used for host protection against the pathogen.
 This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
-        <rdfs:label xml:lang="en">host necrotic cell death by pathogen induced hypersensitive response</rdfs:label>
+        <rdfs:label>obsolete host necrotic cell death by pathogen induced hypersensitive response</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -6688,7 +6670,7 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000477">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000280"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000480"/>
-        <obo:IAO_0000115>A phenotype where the process of host tissue programmed cell death modulated by the pathogen is present (GO:0034053).</obo:IAO_0000115>
+        <obo:IAO_0000115>A phenotype where the process of a necrotrophic pathogen effector activating the host immune system to trigger programmed cell death is present.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-14T12:22:36Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>PHIPO:0000476</oboInOwl:hasAlternativeId>
@@ -6699,7 +6681,7 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
         <oboInOwl:hasRelatedSynonym>presence of effector-mediated host programmed cell death during necrotrophy</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>presence of host lesion</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>presence of host necrotic cell death</oboInOwl:hasRelatedSynonym>
-        <rdfs:comment>This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen.</rdfs:comment>
+        <rdfs:comment>This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen. An effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defences or other host responses.</rdfs:comment>
         <rdfs:label xml:lang="en">presence of pathogen necrotrophic effector-mediated host programmed cell death</rdfs:label>
     </owl:Class>
     
@@ -6736,12 +6718,13 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000480">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000445"/>
-        <obo:IAO_0000115>A phenotype where the process of host tissue cell death caused by the pathogen is present.</obo:IAO_0000115>
+        <obo:IAO_0000115>A phenotype where the process of host tissue cell death causing a host lesion is present.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-14T12:24:50Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>normal host lesion formation with pathogen</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>presence of host necrotic cell death by pathogen</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment>The lesion can be induced by either the pathogen directly killing host tissue (e.g. cell wall degradation), or the host activating its own cell death pathways in defense.</rdfs:comment>
         <rdfs:label xml:lang="en">presence of pathogen-associated host lesions</rdfs:label>
     </owl:Class>
     
@@ -6751,11 +6734,14 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000481">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000445"/>
-        <obo:IAO_0000115>A phenotype where the process of host tissue cell death caused by the pathogen is absent.</obo:IAO_0000115>
+        <obo:IAO_0000115>A phenotype where the process of host tissue cell death causing a host lesion is absent.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-14T12:25:11Z</oboInOwl:creation_date>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T13:35:33Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>PHIPO:0000997</oboInOwl:hasAlternativeId>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>abolished pathogen-associated host lesions</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>absence of host necrotic cell death by pathogen</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment>The lesion can be induced by either the pathogen directly killing host tissue (e.g. cell wall degradation), or the host activating its own cell death pathways in defense. Note that if you are curating a necrotroph you need to annotate to PHIPO:0000465.</rdfs:comment>
         <rdfs:label xml:lang="en">absence of pathogen-associated host lesions</rdfs:label>
     </owl:Class>
     
@@ -12163,6 +12149,7 @@ no logical definition in FYPO</rdfs:comment>
         <obo:IAO_0000115>A pathogen growth with host phenotype in which the pathogen specialized host penetration structure is present.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-24T12:23:57Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>pathogen infection structure present when near host</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">pathogen penetration structure present when near host</rdfs:label>
     </owl:Class>
@@ -12189,6 +12176,7 @@ no logical definition in FYPO</rdfs:comment>
         <obo:IAO_0000115>A pathogen growth with host phenotype in which the ability of the pathogen to  form a specialized penetration structure is abolished.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-24T13:17:03Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>abolished formation of pathogen infection structure when near host</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">abolished formation of pathogen penetration structure when near host</rdfs:label>
     </owl:Class>
@@ -12205,21 +12193,6 @@ no logical definition in FYPO</rdfs:comment>
         <oboInOwl:hasExactSynonym>normal conidia germination frequency</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">normal asexual spore germination frequency</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PHIPO_0000958 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000958">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000037"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001051"/>
-        <obo:IAO_0000115>A single species hyphal colony phenotype where the shape of the colony is abnormal.</obo:IAO_0000115>
-        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-10T09:31:56Z</oboInOwl:creation_date>
-        <oboInOwl:hasBroadSynonym>abnormal colony morphology</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal shape of hyphal colony</rdfs:label>
     </owl:Class>
     
 
@@ -12319,6 +12292,7 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
         <obo:IAO_0000115>A single species pathogen growth phenotype in which the pathogen specialized host penetration structure is present when assessed for penetration ability on a given experimental substance/membrane.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-05T09:48:18Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>pathogen infection structure present</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">pathogen penetration structure present</rdfs:label>
@@ -12427,13 +12401,13 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000974">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000414"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000929"/>
-        <obo:IAO_0000115>A single species phenotype in which population growth is decreased relative to normal. Decreased growth may reflect a reduced growth rate (i.e. slower growth), growth that occurs to a lesser extent than normal, or both.</obo:IAO_0000115>
+        <obo:IAO_0000115>A single species phenotype in which the growth of a population of unicellular organisms is decreased relative to normal. Decreased growth may reflect a reduced growth rate (i.e. slower growth), growth that occurs to a lesser extent than normal, or both.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-27T10:55:41Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>FYPO:0000046</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>slower growth</oboInOwl:hasRelatedSynonym>
-        <rdfs:label xml:lang="en">decreased population growth</rdfs:label>
+        <rdfs:label xml:lang="en">decreased unicellular population growth</rdfs:label>
     </owl:Class>
     
 
@@ -12442,13 +12416,13 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000975">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000414"/>
-        <obo:IAO_0000115>A single species phenotype in which population growth is increased relative to normal. Increased growth may reflect an increased growth rate (i.e. faster growth), growth that occurs to a greater extent than normal, or both.</obo:IAO_0000115>
+        <obo:IAO_0000115>A single species phenotype in which the growth of a population of unicellular organisms is increased relative to normal. Increased growth may reflect an increased growth rate (i.e. faster growth), growth that occurs to a greater extent than normal, or both.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-27T10:58:04Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>FYPO:0003937</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>faster growth</oboInOwl:hasRelatedSynonym>
-        <rdfs:label xml:lang="en">increased population growth</rdfs:label>
+        <rdfs:label xml:lang="en">increased unicellular population growth</rdfs:label>
     </owl:Class>
     
 
@@ -12583,7 +12557,7 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000985">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000480"/>
-        <obo:IAO_0000115>A phenotype in which the process of host tissue death causing a host lesion induced by the presence of a pathogen occurs to a lower extent than normal.</obo:IAO_0000115>
+        <obo:IAO_0000115>A phenotype where the process of host tissue cell death causing a host lesion occurs to a lesser extent than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T08:58:26Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>PHIPO:0000223</oboInOwl:hasAlternativeId>
@@ -12591,6 +12565,7 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>decreased number of pathogen-associated host lesions</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>decreased size of pathogen-associated host lesion</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment>The lesion can be induced by either the pathogen directly killing host tissue (e.g. cell wall degradation), or the host activating its own cell death pathways in defense.</rdfs:comment>
         <rdfs:label xml:lang="en">decreased extent of pathogen-associated host lesions</rdfs:label>
     </owl:Class>
     
@@ -12600,7 +12575,7 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000986">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000480"/>
-        <obo:IAO_0000115>A phenotype in which the process of host tissue death causing a host lesion induced by the presence of a pathogen occurs to a higher extent than normal.</obo:IAO_0000115>
+        <obo:IAO_0000115>A phenotype where the process of host tissue cell death causing a host lesion occurs to a greater extent than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T08:56:00Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>PHIPO:0000221</oboInOwl:hasAlternativeId>
@@ -12608,6 +12583,7 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>increased number of pathogen-associated host lesions</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>increased size of pathogen-associated host lesion</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment>The lesion can be induced by either the pathogen directly killing host tissue (e.g. cell wall degradation), or the host activating its own cell death pathways in defense.</rdfs:comment>
         <rdfs:label xml:lang="en">increased extent of pathogen-associated host lesions</rdfs:label>
     </owl:Class>
     
@@ -12729,19 +12705,6 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T12:32:05Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">decreased level of pathogen RNA within host</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PHIPO_0000997 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000997">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000985"/>
-        <obo:IAO_0000115>A phenotype where the occurrence of individual host tissue lesions induced by the presence of a pathogen is abolished. (Lesions were present and are now absent).</obo:IAO_0000115>
-        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T13:35:33Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abolished pathogen-associated host lesions</rdfs:label>
     </owl:Class>
     
 
@@ -13469,13 +13432,14 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001049 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001049">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000509"/>
-        <obo:IAO_0000115>A single species population phenotype affecting the shape of a colony.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001208"/>
+        <obo:IAO_0000115>A single species population phenotype affecting the shape of a colony of unicellular individuals.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-10T13:26:05Z</oboInOwl:creation_date>
         <oboInOwl:hasBroadSynonym>colony morphology phenotype</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">colony shape phenotype</rdfs:label>
+        <rdfs:comment>Note that colony morphology terms are not used in PHIPO to annotate filamentous-form colonies because these phenotypes can be related to specific growth terms for hyphal colony morphology please search for PHIPO:0001214 (hyphal growth phenotype). For unicellular colony morphology at the usual resolution it is usually not possible to make any statement about an individual. For dimorphic pathogens these terms are suitable for yeast-form colony phenotypes.</rdfs:comment>
+        <rdfs:label xml:lang="en">unicellular colony shape phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -13484,13 +13448,14 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001051">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001049"/>
-        <obo:IAO_0000115>A single species phenotype where the shape of the colony is abnormal.</obo:IAO_0000115>
+        <obo:IAO_0000115>A single species phenotype where the shape of a colony of unicellular individuals is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-10T13:29:47Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>PHIPO:0001050</oboInOwl:hasAlternativeId>
         <oboInOwl:hasBroadSynonym>abnormal colony morphology</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal colony shape</rdfs:label>
+        <rdfs:comment>Note that colony morphology terms are not used in PHIPO to annotate filamentous-form colonies because these phenotypes can be related to specific growth terms for hyphal colony morphology please search for PHIPO:0001214 (hyphal growth phenotype). For unicellular colony morphology at the usual resolution it is usually not possible to make any statement about an individual. For dimorphic pathogens these terms are suitable for yeast-form colony phenotypes.</rdfs:comment>
+        <rdfs:label xml:lang="en">abnormal unicellular colony shape</rdfs:label>
     </owl:Class>
     
 
@@ -13499,11 +13464,13 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001052">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001051"/>
-        <obo:IAO_0000115>A single species colony morphology phenotype where the colony is smoother than normal.</obo:IAO_0000115>
+        <obo:IAO_0000115>A single species colony shape phenotype where the colony is smoother than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-10T13:32:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">hyper-smooth colony morphology</rdfs:label>
+        <oboInOwl:hasRelatedSynonym>hyper-smooth colony morphology</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment>Note that colony morphology terms are not used in PHIPO to annotate filamentous-form colonies because these phenotypes can be related to specific growth terms for hyphal colony morphology please search for PHIPO:0001214 (hyphal growth phenotype). For unicellular colony morphology at the usual resolution it is usually not possible to make any statement about an individual. For dimorphic pathogens these terms are suitable for yeast-form colony phenotypes.</rdfs:comment>
+        <rdfs:label xml:lang="en">hyper-smooth unicellular colony shape</rdfs:label>
     </owl:Class>
     
 
@@ -13512,27 +13479,13 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001053">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001051"/>
-        <obo:IAO_0000115>A single species colony morphology phenotype where the colony is more rugose (wrinkled; corrugated) than normal.</obo:IAO_0000115>
+        <obo:IAO_0000115>A single species phenotype where the shape of a colony of unicellular individuals is more rugose (wrinkled; corrugated) than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-10T13:32:45Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">hyper-rugose colony morphology</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PHIPO_0001054 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001054">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000162"/>
-        <obo:IAO_0000115>A single species colony morphology phenotype where the size of the population is abnormal.</obo:IAO_0000115>
-        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-10T09:31:25Z</oboInOwl:creation_date>
-        <oboInOwl:hasAlternativeId>PHIPO:0000957</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasBroadSynonym>abnormal colony morphology</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>abnormal size of hyphal colony</oboInOwl:hasRelatedSynonym>
-        <rdfs:label xml:lang="en">abnormal size of colony</rdfs:label>
+        <oboInOwl:hasRelatedSynonym>hyper-rugose colony morphology</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment>Note that colony morphology terms are not used in PHIPO to annotate filamentous-form colonies because these phenotypes can be related to specific growth terms for hyphal colony morphology please search for PHIPO:0001214 (hyphal growth phenotype). For unicellular colony morphology at the usual resolution it is usually not possible to make any statement about an individual. For dimorphic pathogens these terms are suitable for yeast-form colony phenotypes.</rdfs:comment>
+        <rdfs:label xml:lang="en">hyper-rugose unicellular colony shape</rdfs:label>
     </owl:Class>
     
 
@@ -13540,8 +13493,6 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001055 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001055">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000975"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001054"/>
         <obo:IAO_0000115>A single species colony morphology phenotype where the size of the population is  increased.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-10T13:37:47Z</oboInOwl:creation_date>
@@ -13549,24 +13500,8 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>increased filamentous growth</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>increased size of filamentous colony</oboInOwl:hasRelatedSynonym>
-        <rdfs:label xml:lang="en">increased size of colony</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PHIPO_0001056 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001056">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000974"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001054"/>
-        <obo:IAO_0000115>A single species colony morphology phenotype where the size of the population is  decreased.</obo:IAO_0000115>
-        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-10T13:38:53Z</oboInOwl:creation_date>
-        <oboInOwl:hasAlternativeId>PHIPO:0000181</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>decreased filamentous growth</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>decreased size of filamentous colony</oboInOwl:hasRelatedSynonym>
-        <rdfs:label xml:lang="en">decreased size of colony</rdfs:label>
+        <rdfs:label>obsolete increased size of colony</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -13575,14 +13510,15 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001057">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001049"/>
-        <obo:IAO_0000115>A single species phenotype where the shape of the colony is normal (indistinguishable from wild type).</obo:IAO_0000115>
+        <obo:IAO_0000115>A single species phenotype where the shape of a colony of unicellular individuals is normal (indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-13T10:53:42Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>PHIPO:0001065</oboInOwl:hasAlternativeId>
         <oboInOwl:hasBroadSynonym>normal colony morphology</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasExactSynonym>normal shape of colony</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal colony shape</rdfs:label>
+        <rdfs:comment>Note that colony morphology terms are not used in PHIPO to annotate filamentous-form colonies because these phenotypes can be related to specific growth terms for hyphal colony morphology please search for PHIPO:0001214 (hyphal growth phenotype). For unicellular colony morphology at the usual resolution it is usually not possible to make any statement about an individual. For dimorphic pathogens these terms are suitable for yeast-form colony phenotypes.</rdfs:comment>
+        <rdfs:label xml:lang="en">normal unicellular colony shape</rdfs:label>
     </owl:Class>
     
 
@@ -13591,11 +13527,13 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001058">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001057"/>
-        <obo:IAO_0000115>A single species colony morphology phenotype where the colony is as rugose (wrinkled; corrugated) as normal (indistinguishable from wild type).</obo:IAO_0000115>
+        <obo:IAO_0000115>A single species phenotype where the shape of a colony of unicellular individuals is as rugose (wrinkled; corrugated) as normal (indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-10T13:40:49Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal rugose colony morphology</rdfs:label>
+        <oboInOwl:hasRelatedSynonym>normal rugose colony morphology</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment>Note that colony morphology terms are not used in PHIPO to annotate filamentous-form colonies because these phenotypes can be related to specific growth terms for hyphal colony morphology please search for PHIPO:0001214 (hyphal growth phenotype). For unicellular colony morphology at the usual resolution it is usually not possible to make any statement about an individual. For dimorphic pathogens these terms are suitable for yeast-form colony phenotypes.</rdfs:comment>
+        <rdfs:label xml:lang="en">normal rugose unicellular colony shape</rdfs:label>
     </owl:Class>
     
 
@@ -13700,22 +13638,6 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
         <oboInOwl:hasNarrowSynonym>normal mRNA level</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">normal RNA level</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PHIPO_0001066 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001066">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000405"/>
-        <obo:IAO_0000115>A single species colony morphology phenotype where the size of the population is normal (indistinguishable from wild type).</obo:IAO_0000115>
-        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-11T09:57:34Z</oboInOwl:creation_date>
-        <oboInOwl:hasAlternativeId>PHIPO:0000960</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasBroadSynonym>normal colony morphology</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>normal size of filamentous colony</oboInOwl:hasRelatedSynonym>
-        <rdfs:label xml:lang="en">normal size of colony</rdfs:label>
     </owl:Class>
     
 
@@ -13838,13 +13760,14 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001075 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001075">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000162"/>
-        <obo:IAO_0000115>A single species population growth phenotype in which a cell requires a particular organic compound, which is not required by a wild-type cell for its growth. Auxotrophy usually results from a cell&apos;s inability to synthesize the compound.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001216"/>
+        <obo:IAO_0000115>A single species response to nutrient phenotype in which an individual or a population of organisms requires a particular organic compound, which is not required by a wild-type for its growth. Auxotrophy usually results from a cell&apos;s inability to synthesize the compound.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-27T10:01:40Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>FYPO:0000128</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">auxotrophy phenotype</rdfs:label>
+        <oboInOwl:hasRelatedSynonym>auxotrophy phenotype</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">auxotrophic growth</rdfs:label>
     </owl:Class>
     
 
@@ -13951,12 +13874,12 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001084">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000929"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000975"/>
-        <obo:IAO_0000115>A single species cell population phenotype in which vegetative cell population growth is faster than normal.</obo:IAO_0000115>
+        <obo:IAO_0000115>A single species phenotype in which the growth of a population of unicellular organisms is faster than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-01T09:17:27Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>FYPO:0000636</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">increased population growth rate</rdfs:label>
+        <rdfs:label xml:lang="en">increased unicellular population growth rate</rdfs:label>
     </owl:Class>
     
 
@@ -13965,12 +13888,12 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001085">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000974"/>
-        <obo:IAO_0000115>A single species cell population phenotype in which vegetative cell population growth is slower than normal.</obo:IAO_0000115>
+        <obo:IAO_0000115>A single species phenotype in which the growth of a population of unicellular organisms is slower than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-01T09:21:13Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>FYPO:0001355</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">decreased population growth rate</rdfs:label>
+        <rdfs:label xml:lang="en">decreased unicellular population growth rate</rdfs:label>
     </owl:Class>
     
 
@@ -13992,12 +13915,19 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001087 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001087">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001086"/>
-        <obo:IAO_0000115>A single species cellular process phenotype in which hyphae formation is abnormal.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001214"/>
+        <obo:IAO_0000115>An individual species growth phenotype in which hyphae formation is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-01T09:40:58Z</oboInOwl:creation_date>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-10T09:31:56Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>PHIPO:0000037</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>PHIPO:0000958</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasBroadSynonym>abnormal colony morphology</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym>abnormal hyphal colony morphology</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasExactSynonym>abnormal filament formation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal hyphae formation</rdfs:label>
+        <oboInOwl:hasRelatedSynonym>abnormal hyphal colony morphology</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>abnormal shape of hyphal colony</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">abnormal hyphal formation</rdfs:label>
     </owl:Class>
     
 
@@ -14102,7 +14032,7 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001096 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001096">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000414"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001217"/>
         <obo:IAO_0000115>A single species phenotype in which cells in a population show decreased sensitivity to a stress. Typically, a cell population are deemed resistant to a stress if cells in the population grow and divide when exposed to the stress at an intensity at which wild-type cells stop growing (and may die).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-04T09:18:07Z</oboInOwl:creation_date>
@@ -14131,7 +14061,7 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001098 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001098">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000414"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001217"/>
         <obo:IAO_0000115>A single organism phenotype in which cells in a population show increased sensitivity to a stress. Typically, a cell population are deemed sensitive to a stress if cells in the population stop growing (and may die) when exposed to the stress at an intensity that allows a population of wild type cells to grow and divide.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-04T09:25:47Z</oboInOwl:creation_date>
@@ -14480,8 +14410,8 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001124 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001124">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000974"/>
-        <obo:IAO_0000115>A population growth phenotype in which organism growth is decreased relative to normal in a medium containing erucic acid as the carbon source.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001216"/>
+        <obo:IAO_0000115>An individual or population growth phenotype in which organism growth is decreased relative to normal in a medium containing erucic acid as the carbon source.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-03T10:52:30Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
@@ -14493,8 +14423,8 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001125 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001125">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000974"/>
-        <obo:IAO_0000115>A population growth phenotype in which organism growth is decreased relative to normal in a medium containing oleic acid as the carbon source.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001216"/>
+        <obo:IAO_0000115>An individual or population growth phenotype in which organism growth is decreased relative to normal in a medium containing oleic acid as the carbon source.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-03T10:57:47Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
@@ -14506,8 +14436,8 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001126 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001126">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000974"/>
-        <obo:IAO_0000115>A population growth phenotype in which organism growth is decreased relative to normal in a medium containing palmitic acid as the carbon source.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001216"/>
+        <obo:IAO_0000115>An individual or population growth phenotype in which organism growth is decreased relative to normal in a medium containing palmitic acid as the carbon source.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-03T10:58:27Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
@@ -14519,8 +14449,8 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001127 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001127">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000974"/>
-        <obo:IAO_0000115>A population growth phenotype in which organism growth is decreased relative to normal in a medium containing myristic acid as the carbon source.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001216"/>
+        <obo:IAO_0000115>An individual or population growth phenotype in which organism growth is decreased relative to normal in a medium containing myristic acid as the carbon source.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-03T10:59:32Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
@@ -14786,7 +14716,7 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001145">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000182"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001176"/>
-        <obo:IAO_0000115>A cell signaling pathway phenotype where the host effector-triggered immunity innate immune response signaling pathway is suppressed by a pathogen. (GO:0140404)</obo:IAO_0000115>
+        <obo:IAO_0000115>A phenotype where the process of host tissue cell death causing a host lesion initially induced by the host activating its own hypersensitive response in defense, is subsequently suppressed by a pathogen effector.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-04T12:47:38Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>pathogen suppression of host ETI</oboInOwl:hasExactSynonym>
@@ -14795,19 +14725,6 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
         <oboInOwl:hasExactSynonym>suppression of host effector triggered immunity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">effector-mediated suppression of host effector triggered immunity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PHIPO_0001146 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001146">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001056"/>
-        <obo:IAO_0000115>A single species population growth phenotype where the size of the filamentous colony is decreased.</obo:IAO_0000115>
-        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-04T13:23:17Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">decreased size of filamentous colony</rdfs:label>
     </owl:Class>
     
 
@@ -14898,8 +14815,8 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001153 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001153">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000961"/>
-        <obo:IAO_0000115>A single species cell phenotype in which fungal hyphae form an increased number of branches.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001205"/>
+        <obo:IAO_0000115>A single species cell morphology phenotype in which fungal hyphae form an increased number of branches.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-04T14:33:49Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>increased branching of hyphae</oboInOwl:hasExactSynonym>
@@ -15519,12 +15436,231 @@ during GO:051702 interaction with symbiont</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001204">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000192"/>
-        <obo:IAO_0000115>A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen occurs to a lower extent than normal (GO:0009626).</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000985"/>
+        <obo:IAO_0000115>A phenotype where the process of host tissue cell death causing a host lesion is induced by the host activating its own hypersensitive response in defense to a lesser extent than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-10-14T10:36:53Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>decreased extent of effector-mediated host hypersensitive response during biotrophy</oboInOwl:hasRelatedSynonym>
         <rdfs:comment>This term is to be used for host protection against the pathogen.</rdfs:comment>
-        <rdfs:label xml:lang="en">decreased extent of effector-mediated host hypersensitive response during biotrophy</rdfs:label>
+        <rdfs:label xml:lang="en">decreased extent of host-defence induced lesion by host hypersensitive response</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001205 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001205">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000961"/>
+        <obo:IAO_0000115>A single species phenotype where the morphology of a cell is abnormal.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-13T10:05:01Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal filament morphology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001206 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001206">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000961"/>
+        <obo:IAO_0000115>A single species phenotype where the morphology of a cell is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-13T10:05:12Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal filament morphology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001207 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001207">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001206"/>
+        <obo:IAO_0000115>A single species cell morphology phenotype where the length of hyphal filaments are normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-13T10:05:35Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal filament length</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001208 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001208">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000509"/>
+        <obo:IAO_0000115>A single species population phenotype affecting the morphology of a colony of unicellular individuals.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-16T12:31:56Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:comment>Note that colony morphology terms are not used in PHIPO to annotate filamentous-form colonies because these phenotypes can be related to specific growth terms for hyphal colony morphology please search for PHIPO:0001214 (hyphal growth phenotype). For unicellular colony morphology at the usual resolution it is usually not possible to make any statement about an individual. For dimorphic pathogens these terms are suitable for yeast-form colony phenotypes.</rdfs:comment>
+        <rdfs:label xml:lang="en">unicellular colony morphology phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001210 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001210">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001211"/>
+        <obo:IAO_0000115>An individual species growth phenotype in which the size or extent of directional growth of an individual hypha is normal.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-11T09:57:34Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>PHIPO:0000960</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>PHIPO:0001066</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasBroadSynonym>normal colony morphology</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym>normal hyphal colony morphology</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasExactSynonym>normal filament growth</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>normal size of filamentous colony</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment>Although this phenotype is for an individual it can be inferred from a population in a colony.</rdfs:comment>
+        <rdfs:label xml:lang="en">normal hyphal growth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001211 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001211">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001214"/>
+        <obo:IAO_0000115>An individual species growth phenotype in which hyphae formation is normal.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-03T13:40:03Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>PHIPO:0000278</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasBroadSynonym>normal colony morphology</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasExactSynonym>normal filament formation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>normal filamentous formation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>normal hyphae formation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>normal colony morphology</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>normal hyphal colony morphology</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>normal hyphal colony shape</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">normal hyphal formation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001212 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001212">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001215"/>
+        <obo:IAO_0000115>An individual species growth phenotype in which the growth of an individual hypha is decreased.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-17T10:05:15Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>PHIPO:0000181</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>PHIPO:0001056</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>PHIPO:0001146</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym>decreased filament growth</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>reduced filament growth</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>reduced hyphal growth</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>decreased filamentous growth</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>decreased size of colony</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>decreased size of filamentous colony</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment>Although this phenotype is for an individual it can be inferred from a population in a colony.</rdfs:comment>
+        <rdfs:label xml:lang="en">decreased hyphal growth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001213 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001213">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001212"/>
+        <obo:IAO_0000115>An individual species growth phenotype in which the growth of an individual hypha is abolished (it was present and is now absent).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-17T10:05:33Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>abolished filament growth</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:comment>Although this phenotype is for an individual it can be inferred from a population in a colony.</rdfs:comment>
+        <rdfs:label xml:lang="en">abolished hyphal growth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001214 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001214">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000402"/>
+        <obo:IAO_0000115>An individual species growth phenotype which affects the size, extent or rate of directional growth of an individual organism.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-03T13:38:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>PHIPO:0000273</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>PHIPO:0001209</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym>filamentous growth phenotype</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>filamentous colony morphology phenotype</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>filamentous colony shape phenotype</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>hyphal colony size phenotype</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
+        <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">hyphal growth phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001215 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001215">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001087"/>
+        <obo:IAO_0000115>An individual species growth phenotype in which the size or extent of directional growth of an individual hypha is abnormal.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-10T09:31:25Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>PHIPO:0000957</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>PHIPO:0001052</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasBroadSynonym>abnormal colony morphology</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>abnormal size of filamentous colony</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>abnormal size of hyphal colony</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment>Although this phenotype is for an individual it can be inferred from a population in a colony.</rdfs:comment>
+        <rdfs:label xml:lang="en">abnormal hyphal growth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001216 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001216">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+        <obo:IAO_0000115>A single species phenotype that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a nutrient stimulus.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-02T13:30:45Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
+        <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">response to nutrient phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001217 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001217">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+        <obo:IAO_0000115>A single species phenotype that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a disturbance in organismal or cellular homeostasis, usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-02T14:07:43Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
+        <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">response to stress phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001218 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001218">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+        <obo:IAO_0000115>A single species phenotype that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a chemical stimulus.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-02T14:15:52Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
+        <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">response to chemical phenotype</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

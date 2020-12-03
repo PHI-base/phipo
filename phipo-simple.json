@@ -1814,7 +1814,7 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000405",
       "meta" : {
         "definition" : {
-          "val" : "A single species population phenotype in which a population grows normally (i.e. indistinguishably from wild type).",
+          "val" : "A single species population phenotype in which a population of unicellular organisms grow normally (i.e. indistinguishably from wild type).",
           "xrefs" : [ ]
         },
         "basicPropertyValues" : [ {
@@ -1829,7 +1829,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "normal population growth"
+      "lbl" : "normal unicellular population growth"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000406",
       "meta" : {
@@ -2534,7 +2534,7 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000414",
       "meta" : {
         "definition" : {
-          "val" : "A single species population phenotype in which a population grows abnormally.",
+          "val" : "A single species population phenotype in which a population of unicellular organisms grow abnormally.",
           "xrefs" : [ ]
         },
         "basicPropertyValues" : [ {
@@ -2549,7 +2549,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "abnormal population growth"
+      "lbl" : "abnormal unicellular population growth"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000898",
       "meta" : {
@@ -3717,7 +3717,7 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000445",
       "meta" : {
         "definition" : {
-          "val" : "A phenotype that affects the process of host tissue death causing a host lesion induced by the presence of a pathogen.",
+          "val" : "A phenotype that affects the process of host tissue death causing a host lesion induced by either the pathogen directly killing host tissue (e.g. cell wall degradation), or the host activating its own cell death pathways in defense.",
           "xrefs" : [ ]
         },
         "subsets" : [ "\"qc_do_not_manually_annotate\"", "\"qc_do_not_annotate\"" ],
@@ -3746,10 +3746,18 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000203",
       "meta" : {
         "definition" : {
-          "val" : "A single species hyphal colony morphology phenotype where the aerial height of the filamentous colony is increased.",
+          "val" : "A single species hyphal colony shape phenotype where the aerial height of the filamentous colony is increased.",
           "xrefs" : [ ]
         },
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "increased aerial height of filamentous colony",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2002/07/owl#deprecated",
+          "val" : "true"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "single_species_phenotype"
         }, {
@@ -3761,7 +3769,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "increased aerial height of filamentous colony"
+      "lbl" : "obsolete increased aerial height of filamentous colony affecting colony shape"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000688",
       "meta" : {
@@ -4035,12 +4043,20 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000205",
       "meta" : {
         "definition" : {
-          "val" : "A single species hyphal colony morphology phenotype where the aerial height of the filamentous colony is decreased.",
+          "val" : "An individual species growth phenotype in which the aerial height of an individual hypha is decreased.",
           "xrefs" : [ ]
         },
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "decreased aerial height of filamentous colony",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-10-01T13:32:01Z"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Although this phenotype is for an individual it can be inferred from a population in a colony."
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
@@ -4050,7 +4066,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "decreased aerial height of filamentous colony"
+      "lbl" : "decreased aerial height of filament"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000447",
       "meta" : {
@@ -4677,13 +4693,16 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000461",
       "meta" : {
         "definition" : {
-          "val" : "A phenotype that affects the process of host tissue death causing a host lesion induced by the presence of a pathogen. The frequency, rate or extent of programmed cell death in the host organism may be modulated by the pathogen or the host (GO:0097300 and GO:0034053).",
+          "val" : "A phenotype where the process of host tissue cell death causing a host lesion is induced by the host activating its own programmed cell death pathways in defense, is present.",
           "xrefs" : [ ]
         },
-        "subsets" : [ "\"qc_do_not_annotate\"", "\"qc_do_not_manually_annotate\"" ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
           "val" : "presence of host lesion",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "host programmed cell death phenotype induced by pathogen presence",
           "xrefs" : [ ]
         }, {
           "pred" : "hasRelatedSynonym",
@@ -4698,14 +4717,14 @@
           "val" : "pathogen_host_interaction_phenotype"
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype."
+          "val" : "Note that if you are curating a necrotroph you need to annotate to PHIPO:0000477."
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-12-21T12:55:04Z"
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "host programmed cell death phenotype induced by pathogen presence"
+      "lbl" : "presence of pathogen-associated host defense induced lesions"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000220",
       "meta" : {
@@ -4818,7 +4837,7 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000465",
       "meta" : {
         "definition" : {
-          "val" : "A phenotype where the process of host tissue programmed cell death modulated by the pathogen is absent (GO:0034053).",
+          "val" : "A phenotype where the process of a necrotrophic pathogen effector activating the host immune system to trigger programmed cell death is absent.",
           "xrefs" : [ ]
         },
         "synonyms" : [ {
@@ -4850,6 +4869,9 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "pathogen_host_interaction_phenotype"
         }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen. An effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defences or other host responses."
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
         }, {
@@ -4858,9 +4880,6 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-12-21T12:55:59Z"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen."
         } ]
       },
       "type" : "CLASS",
@@ -4897,6 +4916,9 @@
         },
         "subsets" : [ "\"qc_do_not_annotate\"", "\"qc_do_not_manually_annotate\"" ],
         "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2002/07/owl#deprecated",
+          "val" : "true"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-12-21T13:09:35Z"
         }, {
@@ -4911,7 +4933,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "host necrotic cell death by pathogen induced hypersensitive response"
+      "lbl" : "obsolete host necrotic cell death by pathogen induced hypersensitive response"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000229",
       "meta" : {
@@ -5341,7 +5363,7 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000477",
       "meta" : {
         "definition" : {
-          "val" : "A phenotype where the process of host tissue programmed cell death modulated by the pathogen is present (GO:0034053).",
+          "val" : "A phenotype where the process of a necrotrophic pathogen effector activating the host immune system to trigger programmed cell death is present.",
           "xrefs" : [ ]
         },
         "synonyms" : [ {
@@ -5376,14 +5398,14 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "PHIPO:0000476"
         }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen. An effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defences or other host responses."
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2019-01-14T12:22:36Z"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen."
         } ]
       },
       "type" : "CLASS",
@@ -5472,23 +5494,33 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000481",
       "meta" : {
         "definition" : {
-          "val" : "A phenotype where the process of host tissue cell death caused by the pathogen is absent.",
+          "val" : "A phenotype where the process of host tissue cell death causing a host lesion is absent.",
           "xrefs" : [ ]
         },
         "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "abolished pathogen-associated host lesions",
+          "xrefs" : [ ]
+        }, {
           "pred" : "hasRelatedSynonym",
           "val" : "absence of host necrotic cell death by pathogen",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2019-01-14T12:25:11Z"
+          "val" : "2019-08-10T13:35:33Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "PHIPO:0000997"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "pathogen_host_interaction_phenotype"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "The lesion can be induced by either the pathogen directly killing host tissue (e.g. cell wall degradation), or the host activating its own cell death pathways in defense. Note that if you are curating a necrotroph you need to annotate to PHIPO:0000465."
         } ]
       },
       "type" : "CLASS",
@@ -5517,7 +5549,7 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000480",
       "meta" : {
         "definition" : {
-          "val" : "A phenotype where the process of host tissue cell death caused by the pathogen is present.",
+          "val" : "A phenotype where the process of host tissue cell death causing a host lesion is present.",
           "xrefs" : [ ]
         },
         "synonyms" : [ {
@@ -5532,6 +5564,9 @@
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2019-01-14T12:24:50Z"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "The lesion can be induced by either the pathogen directly killing host tissue (e.g. cell wall degradation), or the host activating its own cell death pathways in defense."
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "pathogen_host_interaction_phenotype"
@@ -5902,7 +5937,7 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000004",
       "meta" : {
         "definition" : {
-          "val" : "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is unaffected (i.e the same as wild-type, this could be pathogenicity present or pathogenicity absent).",
+          "val" : "A phenotype where the ability of a pathogen, to produce an infectious disease in another organism is unaffected (i.e the same as wild-type, it could be pathogenic or non-pathogenic).",
           "xrefs" : [ ]
         },
         "subsets" : [ "\"qc_extension_only\"" ],
@@ -7509,6 +7544,10 @@
           "pred" : "hasExactSynonym",
           "val" : "normal pathogen pre penetration",
           "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "normal formation of pathogen infection structure",
+          "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/created_by",
@@ -7834,26 +7873,6 @@
       "type" : "CLASS",
       "lbl" : "decreased protein phosphorylation"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000273",
-      "meta" : {
-        "definition" : {
-          "val" : "A single species population phenotype affecting the morphology of a colony growing in filamentous form.",
-          "xrefs" : [ ]
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "single_species_phenotype"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "alaynecuzick"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2018-10-03T13:38:13Z"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "filamentous colony morphology phenotype"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000031",
       "meta" : {
         "definition" : {
@@ -7973,7 +7992,7 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001124",
       "meta" : {
         "definition" : {
-          "val" : "A population growth phenotype in which organism growth is decreased relative to normal in a medium containing erucic acid as the carbon source.",
+          "val" : "An individual or population growth phenotype in which organism growth is decreased relative to normal in a medium containing erucic acid as the carbon source.",
           "xrefs" : [ ]
         },
         "basicPropertyValues" : [ {
@@ -8094,6 +8113,10 @@
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "abnormal pathogen pre penetration",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "abnormal formation of pathogen infection structure",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
@@ -8249,6 +8272,26 @@
       "type" : "CLASS",
       "lbl" : "mutualism phenotype"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001127",
+      "meta" : {
+        "definition" : {
+          "val" : "An individual or population growth phenotype in which organism growth is decreased relative to normal in a medium containing myristic acid as the carbon source.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-12-03T10:59:32Z"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "decreased population growth on myristic acid carbon source"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000039",
       "meta" : {
         "definition" : {
@@ -8273,30 +8316,10 @@
       "type" : "CLASS",
       "lbl" : "normal mutualism"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001127",
-      "meta" : {
-        "definition" : {
-          "val" : "A population growth phenotype in which organism growth is decreased relative to normal in a medium containing myristic acid as the carbon source.",
-          "xrefs" : [ ]
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "single_species_phenotype"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "alaynecuzick"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2019-12-03T10:59:32Z"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "decreased population growth on myristic acid carbon source"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001126",
       "meta" : {
         "definition" : {
-          "val" : "A population growth phenotype in which organism growth is decreased relative to normal in a medium containing palmitic acid as the carbon source.",
+          "val" : "An individual or population growth phenotype in which organism growth is decreased relative to normal in a medium containing palmitic acid as the carbon source.",
           "xrefs" : [ ]
         },
         "basicPropertyValues" : [ {
@@ -8312,31 +8335,6 @@
       },
       "type" : "CLASS",
       "lbl" : "decreased population growth on palmitic acid carbon source"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000278",
-      "meta" : {
-        "definition" : {
-          "val" : "A single species population phenotype where the morphology of a colony growing in filamentous form is normal (indistinguishable from wild type).",
-          "xrefs" : [ ]
-        },
-        "synonyms" : [ {
-          "pred" : "hasBroadSynonym",
-          "val" : "normal colony morphology",
-          "xrefs" : [ ]
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "single_species_phenotype"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "alaynecuzick"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2018-10-03T13:40:03Z"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "normal hyphal colony morphology"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000036",
       "meta" : {
@@ -8361,46 +8359,10 @@
       "type" : "CLASS",
       "lbl" : "abnormal lipid droplet morphology"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000279",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2018-10-03T13:43:37Z"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "alaynecuzick"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "pathogen_host_interaction_phenotype"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "systemic phenotype"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000037",
-      "meta" : {
-        "definition" : {
-          "val" : "A single species population phenotype where the morphology of a colony growing in filamentous form is abnormal.",
-          "xrefs" : [ ]
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "single_species_phenotype"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "alaynecuzick"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2018-07-10T11:46:51Z"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal hyphal colony morphology"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001125",
       "meta" : {
         "definition" : {
-          "val" : "A population growth phenotype in which organism growth is decreased relative to normal in a medium containing oleic acid as the carbon source.",
+          "val" : "An individual or population growth phenotype in which organism growth is decreased relative to normal in a medium containing oleic acid as the carbon source.",
           "xrefs" : [ ]
         },
         "basicPropertyValues" : [ {
@@ -8416,6 +8378,22 @@
       },
       "type" : "CLASS",
       "lbl" : "decreased population growth on oleic acid carbon source"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000279",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2018-10-03T13:43:37Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "pathogen_host_interaction_phenotype"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "systemic phenotype"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001129",
       "meta" : {
@@ -8457,7 +8435,7 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000162",
       "meta" : {
         "definition" : {
-          "val" : "A single species population phenotype that affects the rate or extent of the increase in the number of organisms in the population (i.e organismal growth and reproduction).",
+          "val" : "A single species population phenotype that affects the rate or extent of the increase in the number of unicellular organisms in the population (i.e organismal growth and reproduction).",
           "xrefs" : [ ]
         },
         "subsets" : [ "\"qc_do_not_annotate\"", "\"qc_do_not_manually_annotate\"" ],
@@ -8476,7 +8454,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "population growth phenotype"
+      "lbl" : "unicellular population growth phenotype"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001010",
       "meta" : {
@@ -9519,7 +9497,7 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000182",
       "meta" : {
         "definition" : {
-          "val" : "A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen is absent (GO:0009626).",
+          "val" : "A phenotype where the process of host tissue cell death causing a host lesion is induced by the host activating its own hypersensitive response in defense, is absent.",
           "xrefs" : [ ]
         },
         "synonyms" : [ {
@@ -9540,6 +9518,10 @@
           "xrefs" : [ ]
         }, {
           "pred" : "hasRelatedSynonym",
+          "val" : "absence of effector-mediated host hypersensitive response during biotrophy",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasRelatedSynonym",
           "val" : "abolished host necrotic cell death",
           "xrefs" : [ ]
         }, {
@@ -9552,6 +9534,9 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "This term is to be used for host protection against the pathogen. Note that if you are curating a necrotroph you need to annotate to PHIPO:0000465."
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
         }, {
@@ -9563,13 +9548,10 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "PHIPO:0000186"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This term is to be used for host protection against the pathogen."
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "absence of effector-mediated host hypersensitive response during biotrophy"
+      "lbl" : "absence of host-defense induced lesion by host hypersensitive response"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001030",
       "meta" : {
@@ -9883,12 +9865,16 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000192",
       "meta" : {
         "definition" : {
-          "val" : "A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen is present (GO:0009626).",
+          "val" : "A phenotype where the process of host tissue cell death causing a host lesion is induced by the host activating its own hypersensitive response in defense, is present.",
           "xrefs" : [ ]
         },
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
           "val" : "presence of host necrotic cell death",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "presence of effector-mediated host hypersensitive response during biotrophy",
           "xrefs" : [ ]
         }, {
           "pred" : "hasRelatedSynonym",
@@ -9908,9 +9894,6 @@
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
-          "val" : "This term is to be used for host protection against the pathogen."
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "pathogen_host_interaction_phenotype"
         }, {
@@ -9922,18 +9905,25 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "This term is to be used for host protection against the pathogen. Note that if you are curating a necrotroph you need to annotate to PHIPO:0000477."
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "presence of effector-mediated host hypersensitive response during biotrophy"
+      "lbl" : "presence of host-defense induced lesion by host hypersensitive response"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000190",
       "meta" : {
         "definition" : {
-          "val" : "A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen is delayed (GO:0009626).",
+          "val" : "A phenotype where the process of host tissue cell death causing a host lesion is induced by the host activating its own hypersensitive response in defense is delayed.",
           "xrefs" : [ ]
         },
         "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "delayed effector-mediated host hypersensitive response during biotrophy",
+          "xrefs" : [ ]
+        }, {
           "pred" : "hasRelatedSynonym",
           "val" : "delayed host necrotic cell death",
           "xrefs" : [ ]
@@ -9957,7 +9947,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "delayed effector-mediated host hypersensitive response during biotrophy"
+      "lbl" : "delayed host-defence induced lesion formation by host hypersensitive response"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001043",
       "meta" : {
@@ -10024,9 +10014,14 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000196",
       "meta" : {
         "definition" : {
-          "val" : "A single species hyphal colony morphology phenotype where the aerial height of the filamentous colony is normal (indistinguishable from wild type).",
+          "val" : "An individual species growth phenotype in which the aerial height of an individual hypha is normal (indistinguishable from wild type).",
           "xrefs" : [ ]
         },
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "normal aerial height of filamentous colony",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
@@ -10034,12 +10029,15 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "single_species_phenotype"
         }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Although this phenotype is for an individual it can be inferred from a population in a colony."
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-10-01T13:27:25Z"
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "normal aerial height of filamentous colony"
+      "lbl" : "normal aerial height of filament"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001041",
       "meta" : {
@@ -10282,7 +10280,7 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001049",
       "meta" : {
         "definition" : {
-          "val" : "A single species population phenotype affecting the shape of a colony.",
+          "val" : "A single species population phenotype affecting the shape of a colony of unicellular individuals.",
           "xrefs" : [ ]
         },
         "synonyms" : [ {
@@ -10297,12 +10295,15 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "single_species_phenotype"
         }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Note that colony morphology terms are not used in PHIPO to annotate filamentous-form colonies because these phenotypes can be related to specific growth terms for hyphal colony morphology please search for PHIPO:0001214 (hyphal growth phenotype). For unicellular colony morphology at the usual resolution it is usually not possible to make any statement about an individual. For dimorphic pathogens these terms are suitable for yeast-form colony phenotypes."
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2019-09-10T13:26:05Z"
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "colony shape phenotype"
+      "lbl" : "unicellular colony shape phenotype"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001048",
       "meta" : {
@@ -10327,45 +10328,21 @@
       "type" : "CLASS",
       "lbl" : "obsolete normal level of substance phenotype in a pathogen host interaction"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001054",
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001053",
       "meta" : {
         "definition" : {
-          "val" : "A single species colony morphology phenotype where the size of the population is abnormal.",
+          "val" : "A single species phenotype where the shape of a colony of unicellular individuals is more rugose (wrinkled; corrugated) than normal.",
           "xrefs" : [ ]
         },
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
-          "val" : "abnormal size of hyphal colony",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasBroadSynonym",
-          "val" : "abnormal colony morphology",
+          "val" : "hyper-rugose colony morphology",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
-          "val" : "PHIPO:0000957"
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Note that colony morphology terms are not used in PHIPO to annotate filamentous-form colonies because these phenotypes can be related to specific growth terms for hyphal colony morphology please search for PHIPO:0001214 (hyphal growth phenotype). For unicellular colony morphology at the usual resolution it is usually not possible to make any statement about an individual. For dimorphic pathogens these terms are suitable for yeast-form colony phenotypes."
         }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "alaynecuzick"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "single_species_phenotype"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2019-06-10T09:31:25Z"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal size of colony"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001053",
-      "meta" : {
-        "definition" : {
-          "val" : "A single species colony morphology phenotype where the colony is more rugose (wrinkled; corrugated) than normal.",
-          "xrefs" : [ ]
-        },
-        "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "single_species_phenotype"
         }, {
@@ -10377,14 +10354,19 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "hyper-rugose colony morphology"
+      "lbl" : "hyper-rugose unicellular colony shape"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001052",
       "meta" : {
         "definition" : {
-          "val" : "A single species colony morphology phenotype where the colony is smoother than normal.",
+          "val" : "A single species colony shape phenotype where the colony is smoother than normal.",
           "xrefs" : [ ]
         },
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "hyper-smooth colony morphology",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2019-09-10T13:32:18Z"
@@ -10394,15 +10376,18 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "single_species_phenotype"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Note that colony morphology terms are not used in PHIPO to annotate filamentous-form colonies because these phenotypes can be related to specific growth terms for hyphal colony morphology please search for PHIPO:0001214 (hyphal growth phenotype). For unicellular colony morphology at the usual resolution it is usually not possible to make any statement about an individual. For dimorphic pathogens these terms are suitable for yeast-form colony phenotypes."
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "hyper-smooth colony morphology"
+      "lbl" : "hyper-smooth unicellular colony shape"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001051",
       "meta" : {
         "definition" : {
-          "val" : "A single species phenotype where the shape of the colony is abnormal.",
+          "val" : "A single species phenotype where the shape of a colony of unicellular individuals is abnormal.",
           "xrefs" : [ ]
         },
         "synonyms" : [ {
@@ -10417,6 +10402,9 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "PHIPO:0001050"
         }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Note that colony morphology terms are not used in PHIPO to annotate filamentous-form colonies because these phenotypes can be related to specific growth terms for hyphal colony morphology please search for PHIPO:0001214 (hyphal growth phenotype). For unicellular colony morphology at the usual resolution it is usually not possible to make any statement about an individual. For dimorphic pathogens these terms are suitable for yeast-form colony phenotypes."
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "single_species_phenotype"
         }, {
@@ -10425,14 +10413,19 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "abnormal colony shape"
+      "lbl" : "abnormal unicellular colony shape"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001058",
       "meta" : {
         "definition" : {
-          "val" : "A single species colony morphology phenotype where the colony is as rugose (wrinkled; corrugated) as normal (indistinguishable from wild type).",
+          "val" : "A single species phenotype where the shape of a colony of unicellular individuals is as rugose (wrinkled; corrugated) as normal (indistinguishable from wild type).",
           "xrefs" : [ ]
         },
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "normal rugose colony morphology",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "single_species_phenotype"
@@ -10442,15 +10435,18 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2019-09-10T13:40:49Z"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Note that colony morphology terms are not used in PHIPO to annotate filamentous-form colonies because these phenotypes can be related to specific growth terms for hyphal colony morphology please search for PHIPO:0001214 (hyphal growth phenotype). For unicellular colony morphology at the usual resolution it is usually not possible to make any statement about an individual. For dimorphic pathogens these terms are suitable for yeast-form colony phenotypes."
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "normal rugose colony morphology"
+      "lbl" : "normal rugose unicellular colony shape"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001057",
       "meta" : {
         "definition" : {
-          "val" : "A single species phenotype where the shape of the colony is normal (indistinguishable from wild type).",
+          "val" : "A single species phenotype where the shape of a colony of unicellular individuals is normal (indistinguishable from wild type).",
           "xrefs" : [ ]
         },
         "synonyms" : [ {
@@ -10466,6 +10462,9 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2019-09-13T10:53:42Z"
         }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Note that colony morphology terms are not used in PHIPO to annotate filamentous-form colonies because these phenotypes can be related to specific growth terms for hyphal colony morphology please search for PHIPO:0001214 (hyphal growth phenotype). For unicellular colony morphology at the usual resolution it is usually not possible to make any statement about an individual. For dimorphic pathogens these terms are suitable for yeast-form colony phenotypes."
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "PHIPO:0001065"
         }, {
@@ -10477,39 +10476,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "normal colony shape"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001056",
-      "meta" : {
-        "definition" : {
-          "val" : "A single species colony morphology phenotype where the size of the population is  decreased.",
-          "xrefs" : [ ]
-        },
-        "synonyms" : [ {
-          "pred" : "hasRelatedSynonym",
-          "val" : "decreased filamentous growth",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasRelatedSynonym",
-          "val" : "decreased size of filamentous colony",
-          "xrefs" : [ ]
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2019-09-10T13:38:53Z"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
-          "val" : "PHIPO:0000181"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "single_species_phenotype"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "alaynecuzick"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "decreased size of colony"
+      "lbl" : "normal unicellular colony shape"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001055",
       "meta" : {
@@ -10538,10 +10505,13 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2019-09-10T13:37:47Z"
+        }, {
+          "pred" : "http://www.w3.org/2002/07/owl#deprecated",
+          "val" : "true"
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "increased size of colony"
+      "lbl" : "obsolete increased size of colony"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001059",
       "meta" : {
@@ -10831,38 +10801,6 @@
       "type" : "CLASS",
       "lbl" : "pathogen host interaction organism level phenotype"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001066",
-      "meta" : {
-        "definition" : {
-          "val" : "A single species colony morphology phenotype where the size of the population is normal (indistinguishable from wild type).",
-          "xrefs" : [ ]
-        },
-        "synonyms" : [ {
-          "pred" : "hasRelatedSynonym",
-          "val" : "normal size of filamentous colony",
-          "xrefs" : [ ]
-        }, {
-          "pred" : "hasBroadSynonym",
-          "val" : "normal colony morphology",
-          "xrefs" : [ ]
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2019-06-11T09:57:34Z"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
-          "val" : "PHIPO:0000960"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "alaynecuzick"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "single_species_phenotype"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "normal size of colony"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001072",
       "meta" : {
         "definition" : {
@@ -10955,11 +10893,16 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001075",
       "meta" : {
         "definition" : {
-          "val" : "A single species population growth phenotype in which a cell requires a particular organic compound, which is not required by a wild-type cell for its growth. Auxotrophy usually results from a cell's inability to synthesize the compound.",
+          "val" : "A single species response to nutrient phenotype in which an individual or a population of organisms requires a particular organic compound, which is not required by a wild-type for its growth. Auxotrophy usually results from a cell's inability to synthesize the compound.",
           "xrefs" : [ ]
         },
         "xrefs" : [ {
           "val" : "FYPO:0000128"
+        } ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "auxotrophy phenotype",
+          "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
@@ -10973,7 +10916,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "auxotrophy phenotype"
+      "lbl" : "auxotrophic growth"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001074",
       "meta" : {
@@ -11186,12 +11129,39 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001087",
       "meta" : {
         "definition" : {
-          "val" : "A single species cellular process phenotype in which hyphae formation is abnormal.",
+          "val" : "An individual species growth phenotype in which hyphae formation is abnormal.",
           "xrefs" : [ ]
         },
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "abnormal shape of hyphal colony",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasBroadSynonym",
+          "val" : "abnormal hyphal colony morphology",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "abnormal hyphal colony morphology",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasBroadSynonym",
+          "val" : "abnormal colony morphology",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "abnormal filament formation",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "PHIPO:0000037"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "PHIPO:0000958"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2019-10-01T09:40:58Z"
+          "val" : "2019-06-10T09:31:56Z"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "single_species_phenotype"
@@ -11201,7 +11171,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "abnormal hyphae formation"
+      "lbl" : "abnormal hyphal formation"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001086",
       "meta" : {
@@ -11229,7 +11199,7 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001085",
       "meta" : {
         "definition" : {
-          "val" : "A single species cell population phenotype in which vegetative cell population growth is slower than normal.",
+          "val" : "A single species phenotype in which the growth of a population of unicellular organisms is slower than normal.",
           "xrefs" : [ ]
         },
         "xrefs" : [ {
@@ -11247,12 +11217,12 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "decreased population growth rate"
+      "lbl" : "decreased unicellular population growth rate"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001084",
       "meta" : {
         "definition" : {
-          "val" : "A single species cell population phenotype in which vegetative cell population growth is faster than normal.",
+          "val" : "A single species phenotype in which the growth of a population of unicellular organisms is faster than normal.",
           "xrefs" : [ ]
         },
         "xrefs" : [ {
@@ -11270,7 +11240,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "increased population growth rate"
+      "lbl" : "increased unicellular population growth rate"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001089",
       "meta" : {
@@ -12466,6 +12436,11 @@
           "xrefs" : [ ]
         },
         "subsets" : [ "\"pathogen_phenotype\"" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "pathogen infection structure present",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "single_species_phenotype"
@@ -12766,7 +12741,7 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000974",
       "meta" : {
         "definition" : {
-          "val" : "A single species phenotype in which population growth is decreased relative to normal. Decreased growth may reflect a reduced growth rate (i.e. slower growth), growth that occurs to a lesser extent than normal, or both.",
+          "val" : "A single species phenotype in which the growth of a population of unicellular organisms is decreased relative to normal. Decreased growth may reflect a reduced growth rate (i.e. slower growth), growth that occurs to a lesser extent than normal, or both.",
           "xrefs" : [ ]
         },
         "xrefs" : [ {
@@ -12789,7 +12764,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "decreased population growth"
+      "lbl" : "decreased unicellular population growth"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000732",
       "meta" : {
@@ -12957,7 +12932,7 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000975",
       "meta" : {
         "definition" : {
-          "val" : "A single species phenotype in which population growth is increased relative to normal. Increased growth may reflect an increased growth rate (i.e. faster growth), growth that occurs to a greater extent than normal, or both.",
+          "val" : "A single species phenotype in which the growth of a population of unicellular organisms is increased relative to normal. Increased growth may reflect an increased growth rate (i.e. faster growth), growth that occurs to a greater extent than normal, or both.",
           "xrefs" : [ ]
         },
         "xrefs" : [ {
@@ -12980,7 +12955,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "increased population growth"
+      "lbl" : "increased unicellular population growth"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000733",
       "meta" : {
@@ -13241,7 +13216,7 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000985",
       "meta" : {
         "definition" : {
-          "val" : "A phenotype in which the process of host tissue death causing a host lesion induced by the presence of a pathogen occurs to a lower extent than normal.",
+          "val" : "A phenotype where the process of host tissue cell death causing a host lesion occurs to a lesser extent than normal.",
           "xrefs" : [ ]
         },
         "synonyms" : [ {
@@ -13265,6 +13240,9 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "The lesion can be induced by either the pathogen directly killing host tissue (e.g. cell wall degradation), or the host activating its own cell death pathways in defense."
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "pathogen_host_interaction_phenotype"
@@ -13542,7 +13520,7 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000986",
       "meta" : {
         "definition" : {
-          "val" : "A phenotype in which the process of host tissue death causing a host lesion induced by the presence of a pathogen occurs to a higher extent than normal.",
+          "val" : "A phenotype where the process of host tissue cell death causing a host lesion occurs to a greater extent than normal.",
           "xrefs" : [ ]
         },
         "synonyms" : [ {
@@ -13569,6 +13547,9 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "PHIPO:0000221"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "The lesion can be induced by either the pathogen directly killing host tissue (e.g. cell wall degradation), or the host activating its own cell death pathways in defense."
         } ]
       },
       "type" : "CLASS",
@@ -14139,26 +14120,6 @@
       },
       "type" : "CLASS",
       "lbl" : "sensitive to cefpodoxime proxetil"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000997",
-      "meta" : {
-        "definition" : {
-          "val" : "A phenotype where the occurrence of individual host tissue lesions induced by the presence of a pathogen is abolished. (Lesions were present and are now absent).",
-          "xrefs" : [ ]
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2019-08-10T13:35:33Z"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "alaynecuzick"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "pathogen_host_interaction_phenotype"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abolished pathogen-associated host lesions"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000513",
       "meta" : {
@@ -17137,6 +17098,26 @@
       "type" : "CLASS",
       "lbl" : "resistance to flucytosine"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000342",
+      "meta" : {
+        "definition" : {
+          "val" : "A pathogen host interaction colonization phenotype in which the occurrence of the directional movement of the pathogen within the host organism happens sooner than normal.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "pathogen_host_interaction_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2018-10-29T16:19:03Z"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "premature pathogen cell to cell migration within host"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000584",
       "meta" : {
         "definition" : {
@@ -17172,26 +17153,6 @@
       },
       "type" : "CLASS",
       "lbl" : "increased motility"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000342",
-      "meta" : {
-        "definition" : {
-          "val" : "A pathogen host interaction colonization phenotype in which the occurrence of the directional movement of the pathogen within the host organism happens sooner than normal.",
-          "xrefs" : [ ]
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "pathogen_host_interaction_phenotype"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "alaynecuzick"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2018-10-29T16:19:03Z"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "expedited pathogen cell to cell migration within host"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000101",
       "meta" : {
@@ -17335,6 +17296,32 @@
       "type" : "CLASS",
       "lbl" : "resistance to trimethoprim"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000104",
+      "meta" : {
+        "definition" : {
+          "val" : "A single species pathogen growth phenotype in which the size of pathogen penetration stuctures are increased when assessed for penetration ability on a given experimental substance/membrane.",
+          "xrefs" : [ ]
+        },
+        "subsets" : [ "\"pathogen_phenotype\"" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "increased size of infection structure",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2018-07-17T10:58:56Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "increased size of penetration structure"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000346",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -17353,27 +17340,6 @@
       },
       "type" : "CLASS",
       "lbl" : "obsolete host necrotic lesion with pathogen phenotype"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000104",
-      "meta" : {
-        "definition" : {
-          "val" : "A single species pathogen growth phenotype in which the size of pathogen penetration stuctures are increased when assessed for penetration ability on a given experimental substance/membrane.",
-          "xrefs" : [ ]
-        },
-        "subsets" : [ "\"pathogen_phenotype\"" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2018-07-17T10:58:56Z"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "single_species_phenotype"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "alaynecuzick"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "increased size of penetration structure"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000589",
       "meta" : {
@@ -17422,6 +17388,11 @@
           "xrefs" : [ ]
         },
         "subsets" : [ "\"pathogen_phenotype\"" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "decreased size of infection structure",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-07-17T11:00:04Z"
@@ -17556,6 +17527,11 @@
           "xrefs" : [ ]
         },
         "subsets" : [ "\"pathogen_phenotype\"" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "delayed timing of infection structure formation",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-07-17T11:13:16Z"
@@ -17577,6 +17553,11 @@
           "xrefs" : [ ]
         },
         "subsets" : [ "\"pathogen_phenotype\"" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "premature infection structure formation",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-07-17T11:13:53Z"
@@ -17589,7 +17570,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "expedited timing of penetration structure formation"
+      "lbl" : "premature penetration structure formation"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000348",
       "meta" : {
@@ -17621,6 +17602,11 @@
           "xrefs" : [ ]
         },
         "subsets" : [ "\"pathogen_phenotype\"" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "increased number of infection structure",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-07-17T11:00:54Z"
@@ -17645,6 +17631,10 @@
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "decreased number of appressorium",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "decreased number of infection structure",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
@@ -17960,6 +17950,35 @@
       "type" : "CLASS",
       "lbl" : "obsolete pathogen is able to penetrate host"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000352",
+      "meta" : {
+        "definition" : {
+          "val" : "A pathogen growth with host phenotype in which the formation of the pathogen penetration structure is normal (i.e indistinguishable from wild type).",
+          "xrefs" : [ ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "normal formation of pathogen infection structure prior to entry into host",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "normal pre penetration of host by pathogen",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2018-11-05T13:24:42Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "pathogen_host_interaction_phenotype"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "normal formation of pathogen penetration structure prior to entry into host"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000110",
       "meta" : {
         "definition" : {
@@ -17967,6 +17986,11 @@
           "xrefs" : [ ]
         },
         "subsets" : [ "\"pathogen_phenotype\"" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "abolished formation of pathogen infection structure",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-07-17T11:16:18Z"
@@ -18001,31 +18025,6 @@
       "type" : "CLASS",
       "lbl" : "resistance to cefpodoxime proxetil"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000352",
-      "meta" : {
-        "definition" : {
-          "val" : "A pathogen growth with host phenotype in which the formation of the pathogen penetration structure is normal (i.e indistinguishable from wild type).",
-          "xrefs" : [ ]
-        },
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "normal pre penetration of host by pathogen",
-          "xrefs" : [ ]
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2018-11-05T13:24:42Z"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "alaynecuzick"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "pathogen_host_interaction_phenotype"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "normal formation of pathogen penetration structure prior to entry into host"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000115",
       "meta" : {
         "definition" : {
@@ -18046,6 +18045,26 @@
       },
       "type" : "CLASS",
       "lbl" : "decreased pathogen penetration across the barrier"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001205",
+      "meta" : {
+        "definition" : {
+          "val" : "A single species phenotype where the morphology of a cell is abnormal.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2020-11-13T10:05:01Z"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "abnormal filament morphology"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000599",
       "meta" : {
@@ -18070,9 +18089,14 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001204",
       "meta" : {
         "definition" : {
-          "val" : "A phenotype where the immune system process of host tissue hypersensitive response modulated by the pathogen occurs to a lower extent than normal (GO:0009626).",
+          "val" : "A phenotype where the process of host tissue cell death causing a host lesion is induced by the host activating its own hypersensitive response in defense to a lesser extent than normal.",
           "xrefs" : [ ]
         },
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "decreased extent of effector-mediated host hypersensitive response during biotrophy",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
@@ -18088,7 +18112,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "decreased extent of effector-mediated host hypersensitive response during biotrophy"
+      "lbl" : "decreased extent of host-defence induced lesion by host hypersensitive response"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000358",
       "meta" : {
@@ -18350,6 +18374,29 @@
       "type" : "CLASS",
       "lbl" : "delayed timing of pathogen growth after penetration of the barrier"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001208",
+      "meta" : {
+        "definition" : {
+          "val" : "A single species population phenotype affecting the morphology of a colony of unicellular individuals.",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2020-11-16T12:31:56Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Note that colony morphology terms are not used in PHIPO to annotate filamentous-form colonies because these phenotypes can be related to specific growth terms for hyphal colony morphology please search for PHIPO:0001214 (hyphal growth phenotype). For unicellular colony morphology at the usual resolution it is usually not possible to make any statement about an individual. For dimorphic pathogens these terms are suitable for yeast-form colony phenotypes."
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "unicellular colony morphology phenotype"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000359",
       "meta" : {
         "definition" : {
@@ -18374,6 +18421,26 @@
       },
       "type" : "CLASS",
       "lbl" : "decreased pathogen penetration into host"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001207",
+      "meta" : {
+        "definition" : {
+          "val" : "A single species cell morphology phenotype where the length of hyphal filaments are normal (i.e. indistinguishable from wild type).",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2020-11-13T10:05:35Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "normal filament length"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000117",
       "meta" : {
@@ -18416,6 +18483,26 @@
       },
       "type" : "CLASS",
       "lbl" : "decreased pathogen growth after penetration of the barrier"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001206",
+      "meta" : {
+        "definition" : {
+          "val" : "A single species phenotype where the morphology of a cell is normal (i.e. indistinguishable from wild type).",
+          "xrefs" : [ ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2020-11-13T10:05:12Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "normal filament morphology"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000360",
       "meta" : {
@@ -18507,6 +18594,63 @@
       "type" : "CLASS",
       "lbl" : "abnormal endospore formation"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001212",
+      "meta" : {
+        "definition" : {
+          "val" : "An individual species growth phenotype in which the growth of an individual hypha is decreased.",
+          "xrefs" : [ ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "reduced filament growth",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "decreased size of colony",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "reduced hyphal growth",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "decreased filamentous growth",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "decreased filament growth",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "decreased size of filamentous colony",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Although this phenotype is for an individual it can be inferred from a population in a colony."
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "PHIPO:0000181"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "PHIPO:0001146"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2020-11-17T10:05:15Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "PHIPO:0001056"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "decreased hyphal growth"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000365",
       "meta" : {
         "definition" : {
@@ -18539,6 +18683,58 @@
       },
       "type" : "CLASS",
       "lbl" : "decreased pathogen growth within host"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001211",
+      "meta" : {
+        "definition" : {
+          "val" : "An individual species growth phenotype in which hyphae formation is normal.",
+          "xrefs" : [ ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "normal colony morphology",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasBroadSynonym",
+          "val" : "normal colony morphology",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "normal filament formation",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "normal hyphal colony morphology",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "normal hyphal colony shape",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "normal hyphae formation",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "normal filamentous formation",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2018-10-03T13:40:03Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "PHIPO:0000278"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "normal hyphal formation"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000123",
       "meta" : {
@@ -18579,7 +18775,53 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "expedited timing of pathogen growth after penetration of the barrier"
+      "lbl" : "premature pathogen growth after penetration of the barrier"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001210",
+      "meta" : {
+        "definition" : {
+          "val" : "An individual species growth phenotype in which the size or extent of directional growth of an individual hypha is normal.",
+          "xrefs" : [ ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "normal filament growth",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "normal size of filamentous colony",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasBroadSynonym",
+          "val" : "normal colony morphology",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasBroadSynonym",
+          "val" : "normal hyphal colony morphology",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "PHIPO:0000960"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-06-11T09:57:34Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "PHIPO:0001066"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Although this phenotype is for an individual it can be inferred from a population in a colony."
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "normal hyphal growth"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000362",
       "meta" : {
@@ -18589,7 +18831,7 @@
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "expedited pathogen entry into host",
+          "val" : "premature pathogen entry into host",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
@@ -18604,7 +18846,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "expedited pathogen penetration into host"
+      "lbl" : "premature pathogen penetration into host"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000363",
       "meta" : {
@@ -18646,6 +18888,27 @@
       "type" : "CLASS",
       "lbl" : "abnormal asexual reproductive structure development"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001216",
+      "meta" : {
+        "definition" : {
+          "val" : "A single species phenotype that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a nutrient stimulus.",
+          "xrefs" : [ ]
+        },
+        "subsets" : [ "\"qc_do_not_manually_annotate\"", "\"qc_do_not_annotate\"" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2020-12-02T13:30:45Z"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "response to nutrient phenotype"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000126",
       "meta" : {
         "definition" : {
@@ -18665,7 +18928,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "expedited pathogen penetration across the barrier"
+      "lbl" : "premature pathogen penetration across the barrier"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000368",
       "meta" : {
@@ -18692,6 +18955,77 @@
       "type" : "CLASS",
       "lbl" : "increased pathogen growth within host"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001215",
+      "meta" : {
+        "definition" : {
+          "val" : "An individual species growth phenotype in which the size or extent of directional growth of an individual hypha is abnormal.",
+          "xrefs" : [ ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasBroadSynonym",
+          "val" : "abnormal colony morphology",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "abnormal size of filamentous colony",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "abnormal size of hyphal colony",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2019-06-10T09:31:25Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "PHIPO:0000957"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "PHIPO:0001052"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Although this phenotype is for an individual it can be inferred from a population in a colony."
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "abnormal hyphal growth"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000369",
+      "meta" : {
+        "definition" : {
+          "val" : "A pathogen growth with host phenotype in which the formation of the pathogen penetration structure is abnormal (i.e different than wild-type).",
+          "xrefs" : [ ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "abnormal formation of pathogen infection structure when near host",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "abnormal pre penetration",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2018-11-08T12:12:18Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "pathogen_host_interaction_phenotype"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "abnormal formation of pathogen penetration structure when near host"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000127",
       "meta" : {
         "definition" : {
@@ -18717,15 +19051,32 @@
       "type" : "CLASS",
       "lbl" : "abnormal asexual spore morphology"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000369",
+      "id" : "http://www.geneontology.org/formats/oboInOwl#inSubset",
+      "type" : "PROPERTY",
+      "lbl" : "in_subset"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001214",
       "meta" : {
         "definition" : {
-          "val" : "A pathogen growth with host phenotype in which the formation of the pathogen penetration structure is abnormal (i.e different than wild-type).",
+          "val" : "An individual species growth phenotype which affects the size, extent or rate of directional growth of an individual organism.",
           "xrefs" : [ ]
         },
+        "subsets" : [ "\"qc_do_not_annotate\"", "\"qc_do_not_manually_annotate\"" ],
         "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "hyphal colony size phenotype",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "filamentous colony shape phenotype",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "filamentous colony morphology phenotype",
+          "xrefs" : [ ]
+        }, {
           "pred" : "hasExactSynonym",
-          "val" : "abnormal pre penetration",
+          "val" : "filamentous growth phenotype",
           "xrefs" : [ ]
         } ],
         "basicPropertyValues" : [ {
@@ -18733,18 +19084,20 @@
           "val" : "alaynecuzick"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2018-11-08T12:12:18Z"
+          "val" : "2018-10-03T13:38:13Z"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "pathogen_host_interaction_phenotype"
+          "val" : "single_species_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "PHIPO:0000273"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "PHIPO:0001209"
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "abnormal formation of pathogen penetration structure when near host"
-    }, {
-      "id" : "http://www.geneontology.org/formats/oboInOwl#inSubset",
-      "type" : "PROPERTY",
-      "lbl" : "in_subset"
+      "lbl" : "hyphal growth phenotype"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000124",
       "meta" : {
@@ -18786,6 +19139,34 @@
       "type" : "CLASS",
       "lbl" : "delayed timing of pathogen growth within host"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001213",
+      "meta" : {
+        "definition" : {
+          "val" : "An individual species growth phenotype in which the growth of an individual hypha is abolished (it was present and is now absent).",
+          "xrefs" : [ ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "abolished filament growth",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Although this phenotype is for an individual it can be inferred from a population in a colony."
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2020-11-17T10:05:33Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "abolished hyphal growth"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000367",
       "meta" : {
         "definition" : {
@@ -18804,7 +19185,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "expedited timing of pathogen growth within host"
+      "lbl" : "premature pathogen growth within host"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000125",
       "meta" : {
@@ -18851,6 +19232,48 @@
       "type" : "CLASS",
       "lbl" : "normal asexual spore morphology"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001218",
+      "meta" : {
+        "definition" : {
+          "val" : "A single species phenotype that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a chemical stimulus.",
+          "xrefs" : [ ]
+        },
+        "subsets" : [ "\"qc_do_not_manually_annotate\"", "\"qc_do_not_annotate\"" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2020-12-02T14:15:52Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "response to chemical phenotype"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001217",
+      "meta" : {
+        "definition" : {
+          "val" : "A single species phenotype that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a disturbance in organismal or cellular homeostasis, usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation).",
+          "xrefs" : [ ]
+        },
+        "subsets" : [ "\"qc_do_not_annotate\"", "\"qc_do_not_manually_annotate\"" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "alaynecuzick"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2020-12-02T14:07:43Z"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "response to stress phenotype"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000129",
       "meta" : {
         "definition" : {
@@ -18877,6 +19300,11 @@
           "val" : "A pathogen growth with host phenotype in which the frequency of occurrence of pathogen penetration stuctures near the host are decreased.",
           "xrefs" : [ ]
         },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "decreased number of pathogen infection structure when near host",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-11-08T12:15:52Z"
@@ -18917,6 +19345,11 @@
           "val" : "A pathogen growth with host phenotype in which the size of pathogen penetration stuctures near the host are decreased.",
           "xrefs" : [ ]
         },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "decreased size of pathogen infection structure when near host",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "pathogen_host_interaction_phenotype"
@@ -18960,6 +19393,11 @@
           "val" : "A pathogen growth with host phenotype in which the formation of pathogen specialized penetration structure begins later than normal.",
           "xrefs" : [ ]
         },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "delayed timing of pathogen infection structure formation when near host",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "pathogen_host_interaction_phenotype"
@@ -19003,6 +19441,11 @@
           "val" : "A pathogen growth with host phenotype in which the formation of pathogen specialized penetration structure begins sooner than normal.",
           "xrefs" : [ ]
         },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "premature pathogen infection structure formation when near host",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-11-08T12:17:52Z"
@@ -19015,7 +19458,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "expedited timing of pathogen penetration structure formation when near host"
+      "lbl" : "premature pathogen penetration structure formation when near host"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000134",
       "meta" : {
@@ -19046,6 +19489,11 @@
           "val" : "A pathogen growth with host phenotype in which the frequency of occurrence of pathogen penetration stuctures near the host are increased.",
           "xrefs" : [ ]
         },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "increased number of pathogen infection structure when near host",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-11-08T12:16:46Z"
@@ -19113,6 +19561,11 @@
           "val" : "A pathogen growth with host phenotype in which the size of pathogen penetration stuctures near the host are increased.",
           "xrefs" : [ ]
         },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "increased size of pathogen infection structure when near host",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-11-08T12:17:03Z"
@@ -21337,6 +21790,11 @@
           "val" : "A single species cell morphology phenotype where hyphal filaments are short in length.",
           "xrefs" : [ ]
         },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "reduced filament length",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2018-10-05T12:43:16Z"
@@ -21349,7 +21807,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "reduced filament length"
+      "lbl" : "decreased filament length"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000050",
       "meta" : {
@@ -21449,32 +21907,12 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "expedited sexual sporulation"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001146",
-      "meta" : {
-        "definition" : {
-          "val" : "A single species population growth phenotype where the size of the filamentous colony is decreased.",
-          "xrefs" : [ ]
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2020-03-04T13:23:17Z"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "alaynecuzick"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "single_species_phenotype"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "decreased size of filamentous colony"
+      "lbl" : "premature sexual sporulation"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001145",
       "meta" : {
         "definition" : {
-          "val" : "A cell signaling pathway phenotype where the host effector-triggered immunity innate immune response signaling pathway is suppressed by a pathogen. (GO:0140404)",
+          "val" : "A phenotype where the process of host tissue cell death causing a host lesion initially induced by the host activating its own hypersensitive response in defense, is subsequently suppressed by a pathogen effector.",
           "xrefs" : [ ]
         },
         "synonyms" : [ {
@@ -21565,7 +22003,7 @@
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "expedited asexual sporulation"
+      "lbl" : "premature asexual sporulation"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001144",
       "meta" : {
@@ -21834,7 +22272,7 @@
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0001153",
       "meta" : {
         "definition" : {
-          "val" : "A single species cell phenotype in which fungal hyphae form an increased number of branches.",
+          "val" : "A single species cell morphology phenotype in which fungal hyphae form an increased number of branches.",
           "xrefs" : [ ]
         },
         "synonyms" : [ {
@@ -24724,6 +25162,11 @@
           "val" : "A pathogen growth with host phenotype in which the ability of the pathogen to  form a specialized penetration structure is abolished.",
           "xrefs" : [ ]
         },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "abolished formation of pathogen infection structure when near host",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2019-05-24T13:17:03Z"
@@ -24789,6 +25232,11 @@
           "val" : "A pathogen growth with host phenotype in which the pathogen specialized host penetration structure is present.",
           "xrefs" : [ ]
         },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "pathogen infection structure present when near host",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "pathogen_host_interaction_phenotype"
@@ -24920,31 +25368,6 @@
       "type" : "CLASS",
       "lbl" : "sensitive to polymyxin B1"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PHIPO_0000958",
-      "meta" : {
-        "definition" : {
-          "val" : "A single species hyphal colony phenotype where the shape of the colony is abnormal.",
-          "xrefs" : [ ]
-        },
-        "synonyms" : [ {
-          "pred" : "hasBroadSynonym",
-          "val" : "abnormal colony morphology",
-          "xrefs" : [ ]
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "single_species_phenotype"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "alaynecuzick"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2019-06-10T09:31:56Z"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abnormal shape of hyphal colony"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000716",
       "meta" : {
         "definition" : {
@@ -24966,6 +25389,10 @@
       "lbl" : "sensitive to cefixime"
     } ],
     "edges" : [ {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001212",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001215"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000989",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001197"
@@ -24982,9 +25409,9 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000022",
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001205",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000414"
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000961"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001062",
       "pred" : "is_a",
@@ -24993,6 +25420,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001074",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001073"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000205",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001212"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000980",
       "pred" : "is_a",
@@ -25030,10 +25461,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000133"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000295",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000961"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000791",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
@@ -25046,13 +25473,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000364"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001051",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001049"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000801",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001051",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001049"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000498",
       "pred" : "is_a",
@@ -25094,10 +25521,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001018"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000182",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000280"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000257",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001094"
@@ -25134,13 +25557,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000196",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001210"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000279",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000512"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000196",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000278"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001195",
       "pred" : "is_a",
@@ -25178,10 +25601,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000021",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000414"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000657",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
@@ -25197,6 +25616,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001097",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001096"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001211",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001214"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000959",
       "pred" : "is_a",
@@ -25242,6 +25665,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000143"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001215",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001087"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000800",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
@@ -25253,10 +25680,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000430",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000158"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000958",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000037"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001143",
       "pred" : "is_a",
@@ -25310,6 +25733,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001153",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001205"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000875",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
@@ -25353,10 +25780,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000190",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000192"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001146",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001056"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001005",
       "pred" : "is_a",
@@ -25414,6 +25837,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001210",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001211"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000718",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
@@ -25438,13 +25865,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001159",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000332"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000400",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000929"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001159",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000332"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000767",
       "pred" : "is_a",
@@ -25498,10 +25925,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001034"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000278",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000273"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000214",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001106"
@@ -25514,13 +25937,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000011"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000267",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000257"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000269",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000237"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000267",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000257"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000523",
       "pred" : "is_a",
@@ -25678,17 +26101,9 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001066",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000405"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000364",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000951"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000037",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000273"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001095",
       "pred" : "is_a",
@@ -25710,13 +26125,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000152"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000642",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000811",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000642",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000101",
       "pred" : "is_a",
@@ -25742,10 +26157,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000162"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000292",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000961"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000033",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000188"
@@ -25765,10 +26176,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000824",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000997",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000985"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001061",
       "pred" : "is_a",
@@ -25858,17 +26265,9 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001038"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000461",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000445"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001027",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001025"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000192",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000280"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001148",
       "pred" : "is_a",
@@ -26106,10 +26505,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001197"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001054",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000162"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000119",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000031"
@@ -26146,6 +26541,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000032"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001127",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001216"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000885",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
@@ -26161,6 +26560,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000559",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001126",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001216"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000728",
       "pred" : "is_a",
@@ -26394,6 +26797,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000936"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000022",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001218"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000884",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
@@ -26486,13 +26893,17 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000944"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000580",
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001125",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001216"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000099",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000982"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000580",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000436",
       "pred" : "is_a",
@@ -26658,10 +27069,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001153",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000961"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000581",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
@@ -26706,6 +27113,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000021",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001218"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000974",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000929"
@@ -26725,6 +27136,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000251",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000249"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000182",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000481"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001121",
       "pred" : "is_a",
@@ -26746,13 +27161,17 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000001"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000182",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000466"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000761",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001208",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000509"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001124",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001216"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000101",
       "pred" : "is_a",
@@ -26910,10 +27329,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001067"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000205",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000958"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000141",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000133"
@@ -27054,17 +27469,9 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000278",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001057"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000601",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001056",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000974"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000115",
       "pred" : "is_a",
@@ -27274,13 +27681,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000815"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000699",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000693"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000600",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000699",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000693"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000947",
       "pred" : "is_a",
@@ -27289,10 +27696,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000038",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001179"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001098",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000414"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000935",
       "pred" : "is_a",
@@ -27317,10 +27720,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000902",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001055",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000975"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000772",
       "pred" : "is_a",
@@ -27373,10 +27772,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000122",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000078"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001127",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000974"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000675",
       "pred" : "is_a",
@@ -27434,6 +27829,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000190",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000985"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001068",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001070"
@@ -27442,9 +27841,9 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001075",
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001207",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000162"
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001206"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000662",
       "pred" : "is_a",
@@ -27453,10 +27852,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000422",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000419"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000203",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000958"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000627",
       "pred" : "is_a",
@@ -27493,10 +27888,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001102",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000472"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000192",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000480"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001134",
       "pred" : "is_a",
@@ -27578,6 +27969,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000192",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000461"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000612",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
@@ -27606,10 +28001,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000333"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000192",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000466"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000327",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
@@ -27617,10 +28008,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000554",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001126",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000974"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001159",
       "pred" : "is_a",
@@ -27702,6 +28089,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001075",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001216"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000541",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
@@ -27725,10 +28116,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000808",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000958",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001051"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000150",
       "pred" : "is_a",
@@ -27778,10 +28165,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000121"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001056",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001054"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000639",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
@@ -27797,10 +28180,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000932",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000930"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001055",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001054"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001174",
       "pred" : "is_a",
@@ -27821,6 +28200,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001007",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000332"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000295",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001205"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000806",
       "pred" : "is_a",
@@ -27849,6 +28232,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000378",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001214",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000402"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000007",
       "pred" : "is_a",
@@ -27906,10 +28293,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000692"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001125",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000974"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001128",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001176"
@@ -27926,10 +28309,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001124",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000974"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000649",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000692"
@@ -27938,6 +28317,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000216"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001218",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000002"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000886",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000815"
@@ -27945,6 +28328,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000660",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001087",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001214"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000686",
       "pred" : "is_a",
@@ -27974,13 +28361,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001092",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001036"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000041",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000157"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001092",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001036"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000797",
       "pred" : "is_a",
@@ -28017,10 +28404,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000961",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000034"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001096",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000414"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000740",
       "pred" : "is_a",
@@ -28066,10 +28449,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000466",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000461"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000249",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000235"
@@ -28106,13 +28485,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000200"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000578",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000550",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000692"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000578",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001001",
       "pred" : "is_a",
@@ -28178,13 +28557,17 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000431",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000421"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000432",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000411"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000431",
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001217",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000421"
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000002"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000565",
       "pred" : "is_a",
@@ -28330,10 +28713,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000999"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001049",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000509"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000121",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000043"
@@ -28394,9 +28773,17 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001216",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000002"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000733",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001098",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001217"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000263",
       "pred" : "is_a",
@@ -28498,13 +28885,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001185",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001186"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000149",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000145"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001185",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001186"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000829",
       "pred" : "is_a",
@@ -28522,13 +28909,17 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000133"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000246",
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000292",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000240"
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001205"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000017",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000002"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000246",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000240"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000647",
       "pred" : "is_a",
@@ -28554,13 +28945,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000006"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000948",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000039"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000780",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000948",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000039"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000941",
       "pred" : "is_a",
@@ -28609,10 +29000,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001091",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000435"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000273",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001049"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000696",
       "pred" : "is_a",
@@ -28666,21 +29053,21 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000160"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000001",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000505"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000815",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000001",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000505"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000646",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001087",
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001206",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001086"
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000961"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000383",
       "pred" : "is_a",
@@ -28701,6 +29088,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000369",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000949"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001204",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000985"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000659",
       "pred" : "is_a",
@@ -28729,6 +29120,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000257",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000256"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001049",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001208"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000148",
       "pred" : "is_a",
@@ -28765,6 +29160,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000120",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000031"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000461",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000480"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000287",
       "pred" : "is_a",
@@ -28818,13 +29217,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000412"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000261",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000929"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000757",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000261",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000929"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000588",
       "pred" : "is_a",
@@ -28878,6 +29277,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000430"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001096",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001217"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000851",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000020"
@@ -28901,6 +29304,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000408",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000402"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001213",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001212"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000027",
       "pred" : "is_a",
@@ -28934,7 +29341,7 @@
         "pred" : "http://purl.org/dc/terms/license",
         "val" : "https://creativecommons.org/licenses/by/3.0/"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/phipo/releases/2020-10-22/phipo-simple.json"
+      "version" : "http://purl.obolibrary.org/obo/phipo/releases/2020-12-03/phipo-simple.json"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],
