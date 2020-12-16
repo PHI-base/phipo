@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2020-12-14/phipo-simple.owl
+data-version: phipo/releases/2020-12-16/phipo-simple.owl
 subsetdef: ro-eco ""
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
@@ -88,7 +88,7 @@ name: functional pathogen effector absent
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a pathogen effector to produce an infectious disease is absent." []
 comment: For use in the annotation extension infective ability.\nCan only apply to changes in the pathogen.
-subset: qc_extension_only
+subset: qc_do_not_annotate
 synonym: "disease causing ability absent" EXACT []
 synonym: "pathogenic ability absent" BROAD []
 is_a: PHIPO:0001201 ! pathogen effector phenotype
@@ -101,7 +101,7 @@ name: functional pathogen effector present
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a pathogen effector to produce an infectious disease is present." []
 comment: For use in the annotation extension infective ability.\nCan only apply to changes in the pathogen.
-subset: qc_extension_only
+subset: qc_do_not_annotate
 synonym: "disease causing ability present" EXACT []
 synonym: "pathogenic ability present" BROAD []
 is_a: PHIPO:0001201 ! pathogen effector phenotype
@@ -152,7 +152,7 @@ name: unaffected virulence
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is unchanged (i.e. the same degree of infectious disease as wild-type interaction)." []
 comment: For use in the annotation extension infective ability.\nCan apply to changes in the pathogen or the host.
-subset: qc_extension_only
+subset: qc_do_not_annotate
 synonym: "normal virulence" EXACT []
 synonym: "unaffected disease severity" EXACT []
 is_a: PHIPO:0000011 ! virulence phenotype
@@ -8189,7 +8189,7 @@ id: PHIPO:0000948
 name: mutualism absent
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction where the mutualism phenotype is normal (i.e. the same as wild-type), and the wild-type interaction does not exhibit mutualism." []
-subset: qc_extension_only
+subset: qc_do_not_annotate
 is_a: PHIPO:0000039 ! normal mutualism
 created_by: alaynecuzick
 creation_date: 2019-05-24T11:02:11Z
@@ -8306,7 +8306,7 @@ name: loss of virulence
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the degree to which a pathogen (species or strain) is able to cause infectious disease in another organism is abolished on a specific host genotype." []
 comment: For use in the annotation extension infective ability.\nNote this pathogen may still be pathogenic on an alternate host genotype. \nNote that avirulence means loss of pathogenicity in medical terminology.
-subset: qc_extension_only
+subset: qc_do_not_annotate
 synonym: "abolished virulence" EXACT []
 synonym: "avirulence" RELATED []
 is_a: PHIPO:0000015 ! reduced virulence
@@ -10363,7 +10363,7 @@ id: PHIPO:0001184
 name: loss of functional host resistance gene
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a host to be resistant to a pathogen, via the recognition of a pathogen effector by a specific host resistance gene is abolished (resistance was present and is now absent)." []
-subset: qc_extension_only
+subset: qc_do_not_annotate
 synonym: "loss of host resistance" BROAD []
 is_a: PHIPO:0001187 ! functional host resistance gene absent
 created_by: alaynecuzick
@@ -10375,7 +10375,7 @@ name: gain of functional host resistance gene
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a host, to be resistant to a pathogen, via the recognition of a pathogen effector by a specific host resistance gene is acquired (resistance was absent and is now present)." []
 comment: Gain of function may result from engineering of a natural variant or transformation
-subset: qc_extension_only
+subset: qc_do_not_annotate
 synonym: "gain of host resistance" BROAD []
 is_a: PHIPO:0001186 ! functional host resistance gene present
 created_by: alaynecuzick
@@ -10386,7 +10386,7 @@ id: PHIPO:0001186
 name: functional host resistance gene present
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where ability of a host to be resistant to a pathogen, via the recognition of a pathogen effector by a specific host resistance gene, is present." []
-subset: qc_extension_only
+subset: qc_do_not_annotate
 synonym: "host resistance present" BROAD []
 synonym: "host susceptibility absent" EXACT []
 is_a: PHIPO:0001183 ! host resistance to pathogen phenotype
@@ -10398,7 +10398,7 @@ id: PHIPO:0001187
 name: functional host resistance gene absent
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where ability of a host to be resistant to a pathogen, via the recognition of a pathogen effector by a specific host resistance gene, is absent." []
-subset: qc_extension_only
+subset: qc_do_not_annotate
 synonym: "host resistance absent" BROAD []
 synonym: "host susceptibility present" EXACT []
 is_a: PHIPO:0001183 ! host resistance to pathogen phenotype
@@ -10557,7 +10557,7 @@ id: PHIPO:0001202
 name: loss of functional pathogen effector
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a pathogen effector to produce an infectious disease is abolished." []
-subset: qc_extension_only
+subset: qc_do_not_annotate
 is_a: PHIPO:0000007 ! functional pathogen effector absent
 created_by: alaynecuzick
 creation_date: 2020-09-29T08:11:20Z
@@ -10567,7 +10567,7 @@ id: PHIPO:0001203
 name: gain of functional pathogen effector
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the ability of a pathogen effector to produce an infectious disease is acquired." []
-subset: qc_extension_only
+subset: qc_do_not_annotate
 is_a: PHIPO:0000008 ! functional pathogen effector present
 created_by: alaynecuzick
 creation_date: 2020-09-29T08:11:34Z
