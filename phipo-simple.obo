@@ -1,5 +1,8 @@
 format-version: 1.2
-data-version: phipo/releases/2021-01-26/phipo-simple.owl
+data-version: phipo/releases/2021-02-01/phipo-simple.owl
+subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
+subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
+subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
 subsetdef: ro-eco ""
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
@@ -7985,7 +7988,10 @@ synonym: "increased host H202 production resulting from oxidative burst" EXACT [
 synonym: "pathogen induced host oxidative burst present" EXACT []
 synonym: "pathogen induced host reactive oxygen species present" EXACT []
 synonym: "pathogen induced host respiratory burst present" EXACT []
+synonym: "pathogen induced host ROS present" EXACT []
+synonym: "pathogen-induced host ROS present" EXACT []
 synonym: "presence of pathogen induced host reactive oxygen species" RELATED []
+synonym: "presence of pathogen induced host ROS" EXACT []
 is_a: PHIPO:0000924 ! pathogen-induced host oxidative burst level phenotype
 created_by: alaynecuzick
 creation_date: 2019-05-01T10:52:28Z
@@ -7996,9 +8002,12 @@ name: pathogen-induced host reactive oxygen species absent
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the level of host reactive oxygen species (ROS) often associated with an oxidative burst response during infection is absent or at a level too low to detect." []
 synonym: "absence of pathogen induced host reactive oxygen species" RELATED []
+synonym: "absence of pathogen induced host ROS" EXACT []
 synonym: "pathogen induced host oxidative burst absent" EXACT []
 synonym: "pathogen induced host reactive oxygen species absent" EXACT []
 synonym: "pathogen induced host respiratory burst absent" EXACT []
+synonym: "pathogen induced host ROS absent" EXACT []
+synonym: "pathogen-induced host ROS absent" EXACT []
 is_a: PHIPO:0000924 ! pathogen-induced host oxidative burst level phenotype
 created_by: alaynecuzick
 creation_date: 2019-05-01T10:53:36Z
@@ -8162,6 +8171,8 @@ namespace: single_species_phenotype
 def: "A single species cell phenotype in which the amount of reactive oxygen species (ROS) measured in a cell differs from normal." []
 synonym: "abnormal cellular reactive oxygen species level" EXACT []
 synonym: "abnormal cellular ROS accumulation" RELATED []
+synonym: "abnormal cellular ROS level" EXACT []
+synonym: "altered cellular ROS level" EXACT []
 xref: FYPO:0002142
 is_a: PHIPO:0000944 ! altered level of substance in cell
 created_by: alaynecuzick
@@ -8172,6 +8183,8 @@ id: PHIPO:0000946
 name: decreased cellular reactive oxygen species level
 namespace: single_species_phenotype
 def: "A single species cell phenotype in which the amount of reactive oxygen species (ROS) measured in a cell is lower than normal." []
+synonym: "decreased cellular ROS level" EXACT []
+synonym: "reduced cellular ROS level" EXACT []
 is_a: PHIPO:0000945 ! altered cellular reactive oxygen species level
 is_a: PHIPO:0001035 ! decreased level of substance in cell
 created_by: alaynecuzick
@@ -8182,6 +8195,7 @@ id: PHIPO:0000947
 name: increased cellular reactive oxygen species level
 namespace: single_species_phenotype
 def: "A single species cell phenotype in which the amount of reactive oxygen species (ROS) measured in a cell is higher than normal." []
+synonym: "increased cellular ROS level" EXACT []
 is_a: PHIPO:0000945 ! altered cellular reactive oxygen species level
 is_a: PHIPO:0001036 ! increased level of substance in cell
 created_by: alaynecuzick
@@ -8597,7 +8611,7 @@ creation_date: 2019-08-10T12:22:12Z
 
 [Term]
 id: PHIPO:0000992
-name: increased expression of a host defense related marker gene involved in pathogen interaction
+name: increased expression of a host defense related marker gene protein involved in pathogen interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the level of host defence-related protein usually present during infection is higher than normal." []
 is_a: PHIPO:0000991 ! increased level of host protein involved in a pathogen host interaction
@@ -10090,6 +10104,8 @@ name: unaltered reactive oxygen species production
 namespace: single_species_phenotype
 def: "A single species metabolic cellular process phenotype in which the formation of reactive oxygen species (any molecules or ions formed by the incomplete one-electron reduction of oxygen) is unaltered.(GO:1903409)" []
 synonym: "normal reactive oxygen species production" EXACT []
+synonym: "normal ROS production" EXACT []
+synonym: "unaltered ROS production" EXACT []
 is_a: PHIPO:0001147 ! cellular metabolic process phenotype
 created_by: alaynecuzick
 creation_date: 2020-03-04T13:57:18Z
@@ -10100,7 +10116,9 @@ name: decreased reactive oxygen species production
 namespace: single_species_phenotype
 def: "A single species metabolic cellular process phenotype in which the formation of reactive oxygen species (any molecules or ions formed by the incomplete one-electron reduction of oxygen) is decreased.(GO:1903409)" []
 synonym: "decreased reactive oxygen species production" EXACT []
+synonym: "decreased ROS production" EXACT []
 synonym: "reduced reactive oxygen species production" EXACT []
+synonym: "reduced ROS production" EXACT []
 is_a: PHIPO:0001147 ! cellular metabolic process phenotype
 created_by: alaynecuzick
 creation_date: 2020-03-04T14:03:31Z
@@ -10110,6 +10128,7 @@ id: PHIPO:0001150
 name: abnormal spatial extent of reactive oxygen species production
 namespace: single_species_phenotype
 def: "A single species localization phenotype in which ROS are produced over a different portion of the cell than normal." []
+synonym: "abnormal spatial extent of ROS production" EXACT []
 is_a: PHIPO:0001094 ! abnormal localization
 created_by: alaynecuzick
 creation_date: 2020-03-04T14:11:20Z
@@ -10462,6 +10481,8 @@ name: decreased level of pathogen-induced host reactive oxygen species
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the level of host produced reactive oxygen species (ROS), often associated with an oxidative burst response  during infection is lower than normal." []
 synonym: "decreased level of pathogen induced host reactive oxygen species" EXACT []
+synonym: "decreased level of pathogen induced host ROS" EXACT []
+synonym: "decreased level of pathogen-induced host ROS" EXACT []
 synonym: "decreased pathogen host interaction oxidative burst" EXACT []
 synonym: "decreased pathogen host interaction respiratory burst" EXACT []
 is_a: PHIPO:0000924 ! pathogen-induced host oxidative burst level phenotype
@@ -10885,6 +10906,9 @@ namespace: quality
 def: "a core relation that holds between a whole and its part" []
 def: "Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2." [PATOC:CJM]
 comment: We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'.
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 xref: BFO:0000051
 property_value: IAO:0000111 "has part" xsd:string
 property_value: IAO:0000112 "my body has part my brain (continuant parthood, two material entities)" xsd:string
