@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2021-02-01/phipo-simple.owl
+data-version: phipo/releases/2021-02-09/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
@@ -369,12 +369,12 @@ property_value: creation:date 2018-05-04T13:23:06Z xsd:string
 
 [Term]
 id: PHIPO:0000033
-name: abnormal pathogen growth on host surface
+name: obsolete abnormal pathogen growth on host surface
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen colonization of host phenotype where the vegetative growth or proliferation of the pathogen on the host surface is abnormal." []
-is_a: PHIPO:0000188 ! pathogen growth on host surface phenotype
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-04T13:41:02Z xsd:string
+is_obsolete: true
 
 [Term]
 id: PHIPO:0000034
@@ -1711,7 +1711,7 @@ id: PHIPO:0000173
 name: abolished filamentous growth on host surface
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen colonization of host phenotype where the vegetative growth or proliferation of the pathogen on the host surface is abolished (it was present and is now absent)." []
-is_a: PHIPO:0000033 ! abnormal pathogen growth on host surface
+is_a: PHIPO:0000350 ! absence of pathogen growth on host surface
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:04:47Z
 
@@ -1727,10 +1727,10 @@ creation_date: 2018-10-01T13:05:26Z
 
 [Term]
 id: PHIPO:0000175
-name: normal pathogen growth on host surface
+name: obsolete normal pathogen growth on host surface
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen colonization of host phenotype where the vegetative growth or proliferation of the pathogen on the host surface is normal." []
-is_a: PHIPO:0000188 ! pathogen growth on host surface phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:05:29Z
 
@@ -3307,19 +3307,21 @@ creation_date: 2018-10-29T17:04:57Z
 
 [Term]
 id: PHIPO:0000349
-name: pathogen growth present on host surface
+name: presence of pathogen growth on host surface
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen colonization of host phenotype where the vegetative growth or proliferation of the pathogen on the host surface is present." []
-is_a: PHIPO:0000175 ! normal pathogen growth on host surface
+synonym: "pathogen growth present on host surface" EXACT []
+is_a: PHIPO:0000188 ! pathogen growth on host surface phenotype
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:23:08Z
 
 [Term]
 id: PHIPO:0000350
-name: pathogen growth absent on host surface
+name: absence of pathogen growth on host surface
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen colonization of host phenotype where the vegetative growth or proliferation of the pathogen on the host surface is absent." []
-is_a: PHIPO:0000175 ! normal pathogen growth on host surface
+synonym: "pathogen growth absent on host surface" EXACT []
+is_a: PHIPO:0000188 ! pathogen growth on host surface phenotype
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:23:33Z
 
@@ -3352,16 +3354,6 @@ synonym: "normal pathogen entry into host" EXACT []
 is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:25:01Z
-
-[Term]
-id: PHIPO:0000354
-name: normal pathogen growth within host
-namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is normal (i.e indistinguishable from wild type)." []
-synonym: "normal post penetration of host by pathogen" EXACT []
-is_a: PHIPO:0000951 ! pathogen growth within host phenotype
-created_by: alaynecuzick
-creation_date: 2018-11-05T13:25:33Z
 
 [Term]
 id: PHIPO:0000355
@@ -3436,19 +3428,20 @@ creation_date: 2018-11-05T13:33:34Z
 
 [Term]
 id: PHIPO:0000363
-name: absent pathogen growth within host
+name: absence of pathogen growth within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is absent." []
-is_a: PHIPO:0000354 ! normal pathogen growth within host
+synonym: "absent pathogen growth within host" EXACT []
+is_a: PHIPO:0000951 ! pathogen growth within host phenotype
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:35:05Z
 
 [Term]
 id: PHIPO:0000364
-name: abnormal pathogen growth within host
+name: obsolete abnormal pathogen growth within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is abnormal (i.e different than wild type)." []
-is_a: PHIPO:0000951 ! pathogen growth within host phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:37:31Z
 
@@ -3460,7 +3453,7 @@ def: "A pathogen host phenotype in which the frequency of occurrence of vegetati
 synonym: "decreased branching of invasive hyphae in host" NARROW []
 synonym: "decreased number of invasive hyphae in host" NARROW []
 synonym: "reduced pathogen biomass within host tissue" RELATED []
-is_a: PHIPO:0000364 ! abnormal pathogen growth within host
+is_a: PHIPO:0000954 ! presence of pathogen growth within host
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:39:00Z
 
@@ -3469,7 +3462,7 @@ id: PHIPO:0000366
 name: delayed timing of pathogen growth within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host phenotype in which the frequency of occurrence of vegetative growth or proliferation of the pathogen inside the host begins later than normal." []
-is_a: PHIPO:0000364 ! abnormal pathogen growth within host
+is_a: PHIPO:0000954 ! presence of pathogen growth within host
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:39:34Z
 
@@ -3478,7 +3471,7 @@ id: PHIPO:0000367
 name: premature pathogen growth within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host phenotype in which the frequency of occurrence of vegetative growth or proliferation of the pathogen inside the host begins sooner than normal." []
-is_a: PHIPO:0000364 ! abnormal pathogen growth within host
+is_a: PHIPO:0000954 ! presence of pathogen growth within host
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:40:14Z
 
@@ -3488,7 +3481,7 @@ name: increased pathogen growth within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host phenotype in which the frequency of occurrence of vegetative growth or proliferation of the pathogen inside the host is increased." []
 synonym: "increased pathogen biomass within host tissue" RELATED []
-is_a: PHIPO:0000364 ! abnormal pathogen growth within host
+is_a: PHIPO:0000954 ! presence of pathogen growth within host
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:41:05Z
 
@@ -8246,7 +8239,7 @@ id: PHIPO:0000952
 name: abolished pathogen growth within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is abolished (it was present as is now absent)." []
-is_a: PHIPO:0000364 ! abnormal pathogen growth within host
+is_a: PHIPO:0000363 ! absence of pathogen growth within host
 created_by: alaynecuzick
 creation_date: 2019-05-24T12:21:58Z
 
@@ -8262,10 +8255,14 @@ creation_date: 2019-05-24T12:23:57Z
 
 [Term]
 id: PHIPO:0000954
-name: pathogen growth present within host
+name: presence of pathogen growth within host
 namespace: pathogen_host_interaction_phenotype
+alt_id: PHIPO:0000354
 def: "A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is present." []
-is_a: PHIPO:0000354 ! normal pathogen growth within host
+synonym: "normal pathogen growth within host" RELATED []
+synonym: "normal post penetration of host by pathogen" EXACT []
+synonym: "pathogen growth present within host" EXACT []
+is_a: PHIPO:0000951 ! pathogen growth within host phenotype
 created_by: alaynecuzick
 creation_date: 2019-05-24T12:25:01Z
 
@@ -8313,7 +8310,7 @@ id: PHIPO:0000962
 name: decreased filamentous growth on host surface
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen colonization of host phenotype where the vegetative growth or proliferation of the pathogen on the host surface is decreased." []
-is_a: PHIPO:0000033 ! abnormal pathogen growth on host surface
+is_a: PHIPO:0000349 ! presence of pathogen growth on host surface
 created_by: alaynecuzick
 creation_date: 2019-06-12T10:48:26Z
 
@@ -8611,9 +8608,10 @@ creation_date: 2019-08-10T12:22:12Z
 
 [Term]
 id: PHIPO:0000992
-name: increased expression of a host defense related marker gene protein involved in pathogen interaction
+name: increased expression of a host defense-related protein involved in a pathogen interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the level of host defence-related protein usually present during infection is higher than normal." []
+synonym: "increased expression of a host defense related protein involved in a pathogen interaction" EXACT []
 is_a: PHIPO:0000991 ! increased level of host protein involved in a pathogen host interaction
 created_by: alaynecuzick
 creation_date: 2019-08-10T12:23:36Z
@@ -10067,9 +10065,10 @@ creation_date: 2020-01-28T12:13:25Z
 
 [Term]
 id: PHIPO:0001144
-name: decreased level of host defense related marker gene RNA involved in a pathogen interaction
+name: decreased level of host defense-related RNA involved in a pathogen interaction
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the level of host defence-related RNA usually present during infection is lower than normal." []
+synonym: "decreased level of host defense related RNA involved in a pathogen interaction" EXACT []
 is_a: PHIPO:0001174 ! decreased level of host RNA involved in a pathogen interaction
 created_by: alaynecuzick
 creation_date: 2020-01-28T12:40:16Z
@@ -10844,11 +10843,39 @@ creation_date: 2021-01-26T14:18:49Z
 [Term]
 id: PHIPO:0001225
 name: abolished PAMP receptor decoy activity
-namespace: A single species molecular function phenotype in which the occurrence of recognition, binding and sequestering of PAMP ligands in order to prevent them from binding and activating the host PAMP receptor is abolished (was present and is now absent).
 namespace: single_species_phenotype
+def: "A single species molecular function phenotype in which the occurrence of recognition, binding and sequestering of PAMP ligands in order to prevent them from binding and activating the host PAMP receptor is abolished (was present and is now absent)." []
 is_a: PHIPO:0000413 ! abnormal molecular function
 created_by: alaynecuzick
 creation_date: 2021-01-26T14:26:23Z
+
+[Term]
+id: PHIPO:0001226
+name: decreased level of host reducing sugar in apoplast induced by pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the level of host produced reducing sugars usually present in the apoplast during infection is lower than normal." []
+is_a: PHIPO:0001196 ! pathogen-induced host substance level phenotype
+created_by: alaynecuzick
+creation_date: 2021-02-09T09:16:39Z
+
+[Term]
+id: PHIPO:0001227
+name: increased level of host reducing sugar in apoplast induced by pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the level of host produced reducing sugars usually present in the apoplast during infection is higher than normal." []
+is_a: PHIPO:0001196 ! pathogen-induced host substance level phenotype
+created_by: alaynecuzick
+creation_date: 2021-02-09T09:16:56Z
+
+[Term]
+id: PHIPO:0001228
+name: pathogen reactive oxygen species production within host present
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the level of pathogen produced reactive oxygen species (ROS) usually present during infection is present as normal (i.e. indistinguishable from wild type)." []
+synonym: "pathogen ROS production within host present" EXACT []
+is_a: PHIPO:0001197 ! level of pathogen substance within host phenotype
+created_by: alaynecuzick
+creation_date: 2021-02-09T09:27:11Z
 
 [Typedef]
 id: PHIPO:0000304
