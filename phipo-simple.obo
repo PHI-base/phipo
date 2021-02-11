@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2021-02-09/phipo-simple.owl
+data-version: phipo/releases/2021-02-11/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
@@ -10,6 +10,7 @@ property_value: creation:date 2018-07-09T13:43:00Z xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
+property_value: owl:versionInfo "2021-02-11" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -10876,6 +10877,24 @@ synonym: "pathogen ROS production within host present" EXACT []
 is_a: PHIPO:0001197 ! level of pathogen substance within host phenotype
 created_by: alaynecuzick
 creation_date: 2021-02-09T09:27:11Z
+
+[Term]
+id: PHIPO:0001229
+name: presence of pathogen tissue to tissue migration within host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction colonization phenotype in which the ability of the pathogen to move directionally from tissue to tissue within the host organism is present." []
+is_a: PHIPO:0001159 ! pathogen tissue to tissue migration within host phenotype
+created_by: alaynecuzick
+creation_date: 2021-02-11T14:35:06Z
+
+[Term]
+id: PHIPO:0001230
+name: pathogen-induced host phenolic compound present
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the host phenolic compounds usually present during infection are normal (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001196 ! pathogen-induced host substance level phenotype
+created_by: alaynecuzick
+creation_date: 2021-02-11T14:46:42Z
 
 [Typedef]
 id: PHIPO:0000304
