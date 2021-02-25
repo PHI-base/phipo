@@ -12,12 +12,13 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/phipo/phipo-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2021-01-26/phipo-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2021-02-11/phipo-simple.owl"/>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-09T13:43:00Z</obo:creation_date>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology of species-neutral phenotypes observed in pathogen-host interactions.</dc:description>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathogen Host Interactions Phenotype Ontology</dc:title>
         <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://creativecommons.org/licenses/by/3.0/</terms:license>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-11</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -145,6 +146,30 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/namespace -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/namespace"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/valid_for_go_annotation_extension -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/valid_for_go_ontology -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/valid_for_go_ontology">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/valid_for_gocam -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/valid_for_gocam">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -315,6 +340,9 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id>has_part</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
         <oboInOwl:is_cyclic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</oboInOwl:is_cyclic>
         <oboInOwl:shorthand>has_part</oboInOwl:shorthand>
         <rdfs:comment>We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality &apos;swollen&apos; necessarily comes with the qualities of &apos;protruding&apos; and &apos;increased size&apos;.</rdfs:comment>
@@ -909,12 +937,12 @@ should this be with reproduction?</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000033 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000033">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000188"/>
         <obo:IAO_0000115>A pathogen colonization of host phenotype where the vegetative growth or proliferation of the pathogen on the host surface is abnormal.</obo:IAO_0000115>
         <obo:created_by>alaynecuzick</obo:created_by>
         <obo:creation_date>2018-07-04T13:41:02Z</obo:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label>abnormal pathogen growth on host surface</rdfs:label>
+        <rdfs:label>obsolete abnormal pathogen growth on host surface</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -2806,7 +2834,7 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000173 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000173">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000033"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000350"/>
         <obo:IAO_0000115>A pathogen colonization of host phenotype where the vegetative growth or proliferation of the pathogen on the host surface is abolished (it was present and is now absent).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:04:47Z</oboInOwl:creation_date>
@@ -2833,12 +2861,12 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000175 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000175">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000188"/>
         <obo:IAO_0000115>A pathogen colonization of host phenotype where the vegetative growth or proliferation of the pathogen on the host surface is normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:05:29Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal pathogen growth on host surface</rdfs:label>
+        <rdfs:label>obsolete normal pathogen growth on host surface</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -5063,12 +5091,13 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000349 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000349">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000175"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000188"/>
         <obo:IAO_0000115>A pathogen colonization of host phenotype where the vegetative growth or proliferation of the pathogen on the host surface is present.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:23:08Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>pathogen growth present on host surface</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">pathogen growth present on host surface</rdfs:label>
+        <rdfs:label xml:lang="en">presence of pathogen growth on host surface</rdfs:label>
     </owl:Class>
     
 
@@ -5076,12 +5105,13 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000350 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000350">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000175"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000188"/>
         <obo:IAO_0000115>A pathogen colonization of host phenotype where the vegetative growth or proliferation of the pathogen on the host surface is absent.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:23:33Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>pathogen growth absent on host surface</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">pathogen growth absent on host surface</rdfs:label>
+        <rdfs:label xml:lang="en">absence of pathogen growth on host surface</rdfs:label>
     </owl:Class>
     
 
@@ -5124,20 +5154,6 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label>obsolete normal penetration of host by pathogen</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PHIPO_0000354 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000354">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000951"/>
-        <obo:IAO_0000115>A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is normal (i.e indistinguishable from wild type).</obo:IAO_0000115>
-        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:25:33Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym>normal post penetration of host by pathogen</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal pathogen growth within host</rdfs:label>
     </owl:Class>
     
 
@@ -5244,12 +5260,13 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000363 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000363">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000354"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000951"/>
         <obo:IAO_0000115>A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is absent.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:35:05Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>absent pathogen growth within host</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">absent pathogen growth within host</rdfs:label>
+        <rdfs:label xml:lang="en">absence of pathogen growth within host</rdfs:label>
     </owl:Class>
     
 
@@ -5257,12 +5274,12 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000364 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000364">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000951"/>
         <obo:IAO_0000115>A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is abnormal (i.e different than wild type).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:37:31Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal pathogen growth within host</rdfs:label>
+        <rdfs:label>obsolete abnormal pathogen growth within host</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -5270,7 +5287,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000365 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000365">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000364"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000954"/>
         <obo:IAO_0000115>A pathogen host phenotype in which the frequency of occurrence of vegetative growth or proliferation of the pathogen inside the host is decreased.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:39:00Z</oboInOwl:creation_date>
@@ -5286,7 +5303,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000366 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000366">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000364"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000954"/>
         <obo:IAO_0000115>A pathogen host phenotype in which the frequency of occurrence of vegetative growth or proliferation of the pathogen inside the host begins later than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:39:34Z</oboInOwl:creation_date>
@@ -5299,7 +5316,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000367 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000367">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000364"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000954"/>
         <obo:IAO_0000115>A pathogen host phenotype in which the frequency of occurrence of vegetative growth or proliferation of the pathogen inside the host begins sooner than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:40:14Z</oboInOwl:creation_date>
@@ -5312,7 +5329,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000368 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000368">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000364"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000954"/>
         <obo:IAO_0000115>A pathogen host phenotype in which the frequency of occurrence of vegetative growth or proliferation of the pathogen inside the host is increased.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:41:05Z</oboInOwl:creation_date>
@@ -11752,9 +11769,12 @@ no logical definition in FYPO</rdfs:comment>
         <oboInOwl:hasAlternativeId>PHIPO:0000926</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym>host H202 production resulting from oxidative burst</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>increased host H202 production resulting from oxidative burst</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>pathogen induced host ROS present</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>pathogen induced host oxidative burst present</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>pathogen induced host reactive oxygen species present</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>pathogen induced host respiratory burst present</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>pathogen-induced host ROS present</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>presence of pathogen induced host ROS</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>presence of pathogen induced host reactive oxygen species</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">pathogen-induced host reactive oxygen species present</rdfs:label>
@@ -11769,9 +11789,12 @@ no logical definition in FYPO</rdfs:comment>
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of host reactive oxygen species (ROS) often associated with an oxidative burst response during infection is absent or at a level too low to detect.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-01T10:53:36Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>absence of pathogen induced host ROS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>pathogen induced host ROS absent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>pathogen induced host oxidative burst absent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>pathogen induced host reactive oxygen species absent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>pathogen induced host respiratory burst absent</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>pathogen-induced host ROS absent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>absence of pathogen induced host reactive oxygen species</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">pathogen-induced host reactive oxygen species absent</rdfs:label>
@@ -11995,7 +12018,9 @@ no logical definition in FYPO</rdfs:comment>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-21T12:00:07Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>FYPO:0002142</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>abnormal cellular ROS level</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>abnormal cellular reactive oxygen species level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>altered cellular ROS level</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>abnormal cellular ROS accumulation</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">altered cellular reactive oxygen species level</rdfs:label>
@@ -12011,6 +12036,8 @@ no logical definition in FYPO</rdfs:comment>
         <obo:IAO_0000115>A single species cell phenotype in which the amount of reactive oxygen species (ROS) measured in a cell is lower than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-21T12:01:32Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>decreased cellular ROS level</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>reduced cellular ROS level</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">decreased cellular reactive oxygen species level</rdfs:label>
     </owl:Class>
@@ -12025,6 +12052,7 @@ no logical definition in FYPO</rdfs:comment>
         <obo:IAO_0000115>A single species cell phenotype in which the amount of reactive oxygen species (ROS) measured in a cell is higher than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-21T12:01:41Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>increased cellular ROS level</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">increased cellular reactive oxygen species level</rdfs:label>
     </owl:Class>
@@ -12090,7 +12118,7 @@ no logical definition in FYPO</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000952 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000952">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000364"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000363"/>
         <obo:IAO_0000115>A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is abolished (it was present as is now absent).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-24T12:21:58Z</oboInOwl:creation_date>
@@ -12117,12 +12145,16 @@ no logical definition in FYPO</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000954 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000954">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000354"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000951"/>
         <obo:IAO_0000115>A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is present.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-24T12:25:01Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>PHIPO:0000354</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym>normal post penetration of host by pathogen</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>pathogen growth present within host</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">pathogen growth present within host</rdfs:label>
+        <oboInOwl:hasRelatedSynonym>normal pathogen growth within host</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">presence of pathogen growth within host</rdfs:label>
     </owl:Class>
     
 
@@ -12185,7 +12217,7 @@ no logical definition in FYPO</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000962 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000962">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000033"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000349"/>
         <obo:IAO_0000115>A pathogen colonization of host phenotype where the vegetative growth or proliferation of the pathogen on the host surface is decreased.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-12T10:48:26Z</oboInOwl:creation_date>
@@ -12609,8 +12641,9 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of host defence-related protein usually present during infection is higher than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T12:23:36Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>increased expression of a host defense related protein involved in a pathogen interaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">increased expression of a host defense related marker gene involved in pathogen interaction</rdfs:label>
+        <rdfs:label xml:lang="en">increased expression of a host defense-related protein involved in a pathogen interaction</rdfs:label>
     </owl:Class>
     
 
@@ -14625,8 +14658,9 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of host defence-related RNA usually present during infection is lower than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-28T12:40:16Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>decreased level of host defense related RNA involved in a pathogen interaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">decreased level of host defense related marker gene RNA involved in a pathogen interaction</rdfs:label>
+        <rdfs:label xml:lang="en">decreased level of host defense-related RNA involved in a pathogen interaction</rdfs:label>
     </owl:Class>
     
 
@@ -14670,7 +14704,9 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
         <obo:IAO_0000115>A single species metabolic cellular process phenotype in which the formation of reactive oxygen species (any molecules or ions formed by the incomplete one-electron reduction of oxygen) is unaltered.(GO:1903409)</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-04T13:57:18Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>normal ROS production</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>normal reactive oxygen species production</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>unaltered ROS production</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">unaltered reactive oxygen species production</rdfs:label>
     </owl:Class>
@@ -14684,7 +14720,9 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
         <obo:IAO_0000115>A single species metabolic cellular process phenotype in which the formation of reactive oxygen species (any molecules or ions formed by the incomplete one-electron reduction of oxygen) is decreased.(GO:1903409)</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-04T14:03:31Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>decreased ROS production</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>decreased reactive oxygen species production</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>reduced ROS production</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>reduced reactive oxygen species production</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">decreased reactive oxygen species production</rdfs:label>
@@ -14699,6 +14737,7 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
         <obo:IAO_0000115>A single species localization phenotype in which ROS are produced over a different portion of the cell than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-04T14:11:20Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>abnormal spatial extent of ROS production</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">abnormal spatial extent of reactive oxygen species production</rdfs:label>
     </owl:Class>
@@ -15187,7 +15226,9 @@ during GO:051702 interaction with symbiont</rdfs:comment>
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of host produced reactive oxygen species (ROS), often associated with an oxidative burst response  during infection is lower than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-31T09:49:14Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>decreased level of pathogen induced host ROS</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>decreased level of pathogen induced host reactive oxygen species</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>decreased level of pathogen-induced host ROS</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>decreased pathogen host interaction oxidative burst</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>decreased pathogen host interaction respiratory burst</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
@@ -15672,11 +15713,77 @@ during GO:051702 interaction with symbiont</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001225">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000413"/>
+        <obo:IAO_0000115>A single species molecular function phenotype in which the occurrence of recognition, binding and sequestering of PAMP ligands in order to prevent them from binding and activating the host PAMP receptor is abolished (was present and is now absent).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-26T14:26:23Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>A single species molecular function phenotype in which the occurrence of recognition, binding and sequestering of PAMP ligands in order to prevent them from binding and activating the host PAMP receptor is abolished (was present and is now absent).</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">abolished PAMP receptor decoy activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001226 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001226">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001196"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of host produced reducing sugars usually present in the apoplast during infection is lower than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-09T09:16:39Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased level of host reducing sugar in apoplast induced by pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001227 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001227">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001196"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of host produced reducing sugars usually present in the apoplast during infection is higher than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-09T09:16:56Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased level of host reducing sugar in apoplast induced by pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001228 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001228">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001197"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of pathogen produced reactive oxygen species (ROS) usually present during infection is present as normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-09T09:27:11Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>pathogen ROS production within host present</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">pathogen reactive oxygen species production within host present</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001229 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001229">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001159"/>
+        <obo:IAO_0000115>A pathogen host interaction colonization phenotype in which the ability of the pathogen to move directionally from tissue to tissue within the host organism is present.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-11T14:35:06Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">presence of pathogen tissue to tissue migration within host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001230 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001230">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001196"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype, in which the host phenolic compounds usually present during infection are normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-11T14:46:42Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">pathogen-induced host phenolic compound present</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
