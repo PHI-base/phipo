@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2021-03-08/phipo-simple.owl
+data-version: phipo/releases/2021-03-10/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
@@ -10,7 +10,7 @@ property_value: creation:date 2018-07-09T13:43:00Z xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
-property_value: owl:versionInfo "2021-03-08" xsd:string
+property_value: owl:versionInfo "2021-03-10" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -10923,6 +10923,21 @@ def: "A pathogen host interaction phenotype where the host induced pH decrease w
 is_a: PHIPO:0001108 ! pathogen host interaction pH phenotype
 created_by: alaynecuzick
 creation_date: 2021-03-08T13:21:14Z
+
+[Term]
+id: PHIPO:0001234
+name: increased hyphal growth
+namespace: single_species_phenotype
+def: "An individual organism growth phenotype in which the growth of hyphae is increased." []
+comment: Although this phenotype is for an individual it can be inferred from a population in a colony.
+synonym: "increased filament growth" EXACT []
+synonym: "increased filamentous growth" RELATED []
+synonym: "increased hyphal growth" EXACT []
+synonym: "increased size of colony" RELATED []
+synonym: "increased size of filamentous colony" RELATED []
+is_a: PHIPO:0001215 ! abnormal hyphal growth
+created_by: alaynecuzick
+creation_date: 2021-03-10T09:49:03Z
 
 [Typedef]
 id: PHIPO:0000304
