@@ -83,8 +83,8 @@ ERROR	multiple_labels	negatively regulates	label	negatively regulates
 ERROR	multiple_labels	negatively regulates	label	negatively regulates@en
 ERROR	multiple_labels	positively regulates	label	positively regulates
 ERROR	multiple_labels	positively regulates	label	positively regulates@en
-ERROR	multiple_labels	is_opposite_of	label	is opposite of
-ERROR	multiple_labels	is_opposite_of	label	is_opposite_of
+ERROR	multiple_labels	is opposite of	label	is opposite of
+ERROR	multiple_labels	is opposite of	label	is_opposite_of
 WARN	annotation_whitespace	continuant	has associated axiom(fol)	<(forall (x y) (if (and (Continuant x) (exists (t) (continuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [009-002] >
 WARN	annotation_whitespace	continuant	has associated axiom(fol)	<(forall (x y) (if (and (Continuant x) (exists (t) (hasContinuantPartOfAt y x t))) (Continuant y))) // axiom label in BFO2 CLIF: [126-001] >
 WARN	annotation_whitespace	continuant	has associated axiom(fol)	<(forall (x) (if (Continuant x) (Entity x))) // axiom label in BFO2 CLIF: [008-002] >
@@ -845,7 +845,7 @@ INFO	lowercase_definition	causal relation between processes	definition	p is caus
 INFO	lowercase_definition	towards	definition	q towards e2 if and only if q is a relational quality such that q inheres-in some e, and e != e2 and q is dependent on e2
 INFO	lowercase_definition	is direct form of	definition	<relation p is the direct form of relation q iff p is a subPropertyOf q, p does not have the Transitive characteristic, q does have the Transitive characteristic, and for all x, y: x q y -> exists z1, z2, ..., zn such that x p z1 ... z2n y>
 INFO	lowercase_definition	has part structure that is capable of	definition	s 'has part structure that is capable of' p if and only if there exists some part x such that s 'has part' x and x 'capable of' p
-INFO	lowercase_definition	is_opposite_of	definition	x is the opposite of y if there exists some distance metric M, and there exists no z such as M(x,z) <= M(x,y) or M(y,z) <= M(y,x).
+INFO	lowercase_definition	is opposite of	definition	x is the opposite of y if there exists some distance metric M, and there exists no z such as M(x,z) <= M(x,y) or M(y,z) <= M(y,x).
 INFO	lowercase_definition	produces	definition	<a produces b if some process that occurs_in a has_output b, where a and b are material entities. Examples: hybridoma cell line produces monoclonal antibody reagent; chondroblast produces avascular GAG-rich matrix.>
 INFO	lowercase_definition	produced by	definition	a produced_by b iff some process that occurs_in b has_output a.
 INFO	lowercase_definition	acts upstream of, positive effect	definition	c 'acts upstream of, positive effect' p if c is enables f, and f is causally upstream of p, and the direction of f is positive
