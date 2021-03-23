@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2021-03-10/phipo-simple.owl
+data-version: phipo/releases/2021-03-23/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
@@ -10,7 +10,7 @@ property_value: creation:date 2018-07-09T13:43:00Z xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
-property_value: owl:versionInfo "2021-03-10" xsd:string
+property_value: owl:versionInfo "2021-03-23" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -4107,6 +4107,7 @@ name: abolished catalytic activity
 namespace: single_species_phenotype
 def: "A single species molecular function phenotype in which a specified catalytic activity is absent." []
 synonym: "catalytic activity abolished" EXACT []
+synonym: "catalytic activity absent" EXACT []
 xref: FYPO:0000664
 is_a: PHIPO:0000434 ! abnormal catalytic activity
 created_by: alaynecuzick
@@ -9540,6 +9541,7 @@ id: PHIPO:0001091
 name: abolished chitinase activity
 namespace: single_species_phenotype
 def: "A single species molecular function phenotype in which a chitinase activity is absent." []
+synonym: "chitinase activity absent" EXACT []
 is_a: PHIPO:0000435 ! abolished catalytic activity
 created_by: alaynecuzick
 creation_date: 2019-10-01T13:15:29Z
@@ -9891,7 +9893,7 @@ creation_date: 2019-12-03T10:59:32Z
 
 [Term]
 id: PHIPO:0001128
-name: effector-mediated suppression of host PAMP-triggered immunity
+name: effector-mediated suppression of host PAMP-triggered immunity present
 namespace: pathogen_host_interaction_phenotype
 def: "A cell signaling pathway phenotype where the molecular pattern-induced host innate immune response signaling pathway is suppressed by a pathogen. (GO:0052034)" []
 synonym: "pathogen suppression of host PAMP-triggered immunity" EXACT []
@@ -10077,7 +10079,7 @@ creation_date: 2020-01-28T12:40:16Z
 
 [Term]
 id: PHIPO:0001145
-name: effector-mediated suppression of host effector triggered immunity
+name: effector-mediated suppression of host effector triggered immunity present
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype where the process of host tissue cell death causing a host lesion initially induced by the host activating its own hypersensitive response in defense, is subsequently suppressed by a pathogen effector." []
 synonym: "pathogen suppression of host effector triggered immunity" EXACT []
@@ -10938,6 +10940,90 @@ synonym: "increased size of filamentous colony" RELATED []
 is_a: PHIPO:0001215 ! abnormal hyphal growth
 created_by: alaynecuzick
 creation_date: 2021-03-10T09:49:03Z
+
+[Term]
+id: PHIPO:0001235
+name: host defense-related RNA involved in a pathogen interaction present
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the host defence-related RNA usually present during infection is normal (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001231 ! host RNA involved in a pathogen interaction present
+created_by: alaynecuzick
+creation_date: 2021-03-16T16:30:04Z
+
+[Term]
+id: PHIPO:0001236
+name: effector-mediated suppression of host effector triggered immunity absent
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the process of host tissue cell death causing a host lesion initially induced by the host activating its own hypersensitive response in defense, is subsequently not suppressed by a pathogen effector." []
+synonym: "effector-mediated suppression of host ETI absent" EXACT []
+is_a: PHIPO:0001176 ! effector-mediated immune suppression phenotype
+created_by: alaynecuzick
+creation_date: 2021-03-22T16:02:47Z
+
+[Term]
+id: PHIPO:0001237
+name: effector-mediated suppression of host PAMP-triggered immunity absent
+namespace: pathogen_host_interaction_phenotype
+def: "A cell signaling pathway phenotype where the molecular pattern-induced host innate immune response signaling pathway is not suppressed by a pathogen. (GO:0052034)" []
+synonym: "effector-mediated suppression of host PTI absent" EXACT []
+synonym: "suppression of host MAMP-triggered immunity absent" EXACT []
+is_a: PHIPO:0001176 ! effector-mediated immune suppression phenotype
+created_by: alaynecuzick
+creation_date: 2021-03-22T16:10:37Z
+
+[Term]
+id: PHIPO:0001238
+name: increased chitinase activity
+namespace: single_species_phenotype
+def: "A single species molecular function phenotype in which the observed rate of chitinase activity is increased." []
+is_a: PHIPO:0000437 ! increased catalytic activity
+created_by: alaynecuzick
+creation_date: 2021-03-23T10:32:17Z
+
+[Term]
+id: PHIPO:0001239
+name: pathogen inhibition of host defense induced alkalization
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the host induced pH increase in response to pathogen colonization is inhibited." []
+is_a: PHIPO:0001108 ! pathogen host interaction pH phenotype
+created_by: alaynecuzick
+creation_date: 2021-03-23T11:00:52Z
+
+[Term]
+id: PHIPO:0001240
+name: host defense induced alkalization
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the host induces a pH increase in response to pathogen colonization." []
+is_a: PHIPO:0001108 ! pathogen host interaction pH phenotype
+created_by: alaynecuzick
+creation_date: 2021-03-23T11:03:17Z
+
+[Term]
+id: PHIPO:0001241
+name: decreased chitinase activity
+namespace: single_species_phenotype
+def: "A single species molecular function phenotype in which the observed rate of chitinase activity is decreased." []
+is_a: PHIPO:0000436 ! decreased catalytic activity
+created_by: alaynecuzick
+creation_date: 2021-03-23T11:09:16Z
+
+[Term]
+id: PHIPO:0001242
+name: pathogen binding of chitin with host present
+namespace: pathogen_host_interaction_phenotype
+def: "A molecular function phenotype in which the binding of chitin or chitin fragments by the pathogen during host colonization is present." []
+is_a: PHIPO:0000164 ! pathogen host interaction binding phenotype
+created_by: alaynecuzick
+creation_date: 2021-03-23T11:17:39Z
+
+[Term]
+id: PHIPO:0001243
+name: pathogen binding of chitin with host absent
+namespace: pathogen_host_interaction_phenotype
+def: "A molecular function phenotype in which the binding of chitin or chitin fragments by the pathogen during host colonization is absent." []
+is_a: PHIPO:0000164 ! pathogen host interaction binding phenotype
+created_by: alaynecuzick
+creation_date: 2021-03-23T11:18:11Z
 
 [Typedef]
 id: PHIPO:0000304
