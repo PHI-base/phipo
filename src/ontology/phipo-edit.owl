@@ -1156,6 +1156,7 @@ Declaration(Class(obo:PHIPO_0001242))
 Declaration(Class(obo:PHIPO_0001243))
 Declaration(Class(obo:PHIPO_0001244))
 Declaration(Class(obo:PHIPO_0001245))
+Declaration(Class(obo:PHIPO_0001246))
 Declaration(ObjectProperty(obo:PHIPO_0000304))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:created_by))
@@ -11196,6 +11197,7 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001140 "pathogen_host_in
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:PHIPO_0001140 "pathogen induced host MAP kinase activity")
 AnnotationAssertion(rdfs:label obo:PHIPO_0001140 "host PAMP-triggered immunity signaling activated by pathogen present"@en)
 SubClassOf(obo:PHIPO_0001140 obo:PHIPO_0001117)
+SubClassOf(obo:PHIPO_0001140 obo:PHIPO_0001246)
 
 # Class: obo:PHIPO_0001141 (obsolete host effector triggered immunity signaling induced hypersensitive response activated by pathogen)
 
@@ -12207,6 +12209,17 @@ AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001245 "2021-04-21T11:49:3
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001245 "pathogen_host_interaction_phenotype")
 AnnotationAssertion(rdfs:label obo:PHIPO_0001245 "increased protein phosphorylation involved in host PAMP-triggered immunity (MAPK) signaling activated by pathogen"@en)
 SubClassOf(obo:PHIPO_0001245 obo:PHIPO_0001140)
+
+# Class: obo:PHIPO_0001246 (host PAMP-triggered immunity activated by pathogen present)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001246 "A phenotype where the process of pathogen-associated molecular pattern (PAMPs) or microbe-associated molecular pattern (MAMPs), activate the host PAMP-triggered immunity (PTI) innate immune system to trigger host defense responses such as reactive oxygen species (ROS) and callose deposition is present. (PAMPs and MAMPs are conserved structures among microbial species, eg chitin and lipopolysaccharide (LPS)).")
+AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001246 "alaynecuzick"^^xsd:string)
+AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001246 "2021-04-21T11:59:25Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PHIPO_0001246 "host MAMP-triggered immunity activated by pathogen present")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PHIPO_0001246 "host PTI activated by pathogen present")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001246 "pathogen_host_interaction_phenotype")
+AnnotationAssertion(rdfs:label obo:PHIPO_0001246 "host PAMP-triggered immunity activated by pathogen present"@en)
+SubClassOf(obo:PHIPO_0001246 obo:PHIPO_0001167)
 
 
 )
