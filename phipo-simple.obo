@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2021-04-13/phipo-simple.owl
+data-version: phipo/releases/2021-04-26/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
@@ -10,7 +10,7 @@ property_value: creation:date 2018-07-09T13:43:00Z xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
-property_value: owl:versionInfo "2021-04-13" xsd:string
+property_value: owl:versionInfo "2021-04-26" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -9777,10 +9777,10 @@ creation_date: 2019-10-18T09:13:50Z
 
 [Term]
 id: PHIPO:0001116
-name: pathogen modulation of host immune system signaling pathway phenotype
+name: host immune system signaling pathway pathogen-host interaction phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype that affects a host immune system signaling pathway during pathogen infection." []
-synonym: "pathogen modulation of host immune system signalling pathway phenotype" EXACT []
+synonym: "pathogen modulation of host immune system signaling pathway phenotype" RELATED []
 is_a: PHIPO:0001167 ! pathogen modulation of host immune system process phenotype
 created_by: alaynecuzick
 creation_date: 2019-10-22T12:26:26Z
@@ -9791,7 +9791,7 @@ name: host immune signaling pathway activated by pathogen
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the host immune signaling pathway is induced by a pathogen." []
 synonym: "host immune signalling pathway activated by pathogen" EXACT []
-is_a: PHIPO:0001116 ! pathogen modulation of host immune system signaling pathway phenotype
+is_a: PHIPO:0001116 ! host immune system signaling pathway pathogen-host interaction phenotype
 created_by: alaynecuzick
 creation_date: 2019-10-22T12:26:58Z
 
@@ -9913,7 +9913,7 @@ synonym: "abolished pathogen suppression of host PTI" EXACT []
 synonym: "abolished suppression of host MAMP-triggered immunity" EXACT []
 synonym: "abolished suppression of host PAMP-triggered immunity" EXACT []
 synonym: "abolished suppression of host PTI" EXACT []
-is_a: PHIPO:0001116 ! pathogen modulation of host immune system signaling pathway phenotype
+is_a: PHIPO:0001116 ! host immune system signaling pathway pathogen-host interaction phenotype
 created_by: alaynecuzick
 creation_date: 2019-12-03T11:09:29Z
 
@@ -10019,17 +10019,18 @@ creation_date: 2020-01-07T13:11:13Z
 
 [Term]
 id: PHIPO:0001140
-name: host PAMP-triggered immunity signaling activated by pathogen
+name: host PAMP-triggered immunity signaling activated by pathogen present
 namespace: pathogen_host_interaction_phenotype
 def: "A cell signaling pathway phenotype where the host pattern recognition receptor signaling pathway is directly induced by a pathogen. This can include any series of molecular signals generated as a consequence of a pattern recognition receptor (PRR) binding to a pathogen-derived physiological ligand. PRR ligands are usually referred to as pathogen-associated molecular pattern (PAMPs) or microbe-associated molecular pattern (MAMPs), structures conserved among microbial species (GO:0002221)." []
-synonym: "activation of host MAMP-triggered immunity" EXACT []
-synonym: "activation of host PAMP-triggered immunity" EXACT []
+synonym: "activation of host MAMP-triggered immunity signaling" EXACT []
+synonym: "activation of host PAMP-triggered immunity signaling" EXACT []
 synonym: "activation of host PRR signalling pathway" BROAD []
-synonym: "activation of host PTI" EXACT []
+synonym: "activation of host PTI signaling" EXACT []
 synonym: "host PAMP-triggered immunity signalling activated by pathogen" EXACT []
 synonym: "host PTI signaling activated by pathogen" EXACT []
 synonym: "pathogen induced host MAP kinase activity" RELATED []
 is_a: PHIPO:0001117 ! host immune signaling pathway activated by pathogen
+is_a: PHIPO:0001246 ! host PAMP-triggered immunity activated by pathogen present
 created_by: alaynecuzick
 creation_date: 2020-01-28T11:29:52Z
 
@@ -11034,6 +11035,26 @@ synonym: "increased number of pycnidia within host" RELATED []
 is_a: PHIPO:0000469 ! abnormal pathogen asexual sporulation within host
 created_by: alaynecuzick
 creation_date: 2021-04-13T12:41:33Z
+
+[Term]
+id: PHIPO:0001245
+name: increased protein phosphorylation involved in host PAMP-triggered immunity (MAPK) signaling activated by pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A host immune system signaling pathway pathogen-host interaction phenotype observed during the activation of host PAMP-triggered immunity in which the phosphorylation of one or more specific proteins, or of specific protein sites, occurs to a greater extent than normal." []
+is_a: PHIPO:0001140 ! host PAMP-triggered immunity signaling activated by pathogen present
+created_by: alaynecuzick
+creation_date: 2021-04-21T11:49:31Z
+
+[Term]
+id: PHIPO:0001246
+name: host PAMP-triggered immunity activated by pathogen present
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the process of pathogen-associated molecular pattern (PAMPs) or microbe-associated molecular pattern (MAMPs), activate the host PAMP-triggered immunity (PTI) innate immune system to trigger host defense responses such as reactive oxygen species (ROS) and callose deposition is present. (PAMPs and MAMPs are conserved structures among microbial species, eg chitin and lipopolysaccharide (LPS))." []
+synonym: "host MAMP-triggered immunity activated by pathogen present" EXACT []
+synonym: "host PTI activated by pathogen present" EXACT []
+is_a: PHIPO:0001167 ! pathogen modulation of host immune system process phenotype
+created_by: alaynecuzick
+creation_date: 2021-04-21T11:59:25Z
 
 [Typedef]
 id: PHIPO:0000304
