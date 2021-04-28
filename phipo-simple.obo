@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2021-04-26/phipo-simple.owl
+data-version: phipo/releases/2021-04-28/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
@@ -10,7 +10,7 @@ property_value: creation:date 2018-07-09T13:43:00Z xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
-property_value: owl:versionInfo "2021-04-26" xsd:string
+property_value: owl:versionInfo "2021-04-28" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -4380,7 +4380,7 @@ creation_date: 2019-01-11T11:49:51Z
 
 [Term]
 id: PHIPO:0000473
-name: normal number of pathogen asexual spores within host
+name: presence of pathogen asexual spores within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen reproductive phenotype within host in which the frequency of occurrence of asexual spores is normal  (i.e. indistinguishable from wild type)." []
 synonym: "normal number of pathogen conidia within host" EXACT []
@@ -9643,7 +9643,7 @@ creation_date: 2019-10-04T12:39:32Z
 
 [Term]
 id: PHIPO:0001102
-name: normal number of pathogen asexual sporulation structures within host lesion
+name: presence of pathogen asexual sporulation structures within host lesion
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen reproductive phenotype within host in which the frequency of occurrence of asexual sporulation structures within a host lesion is normal (i.e. indistinguishable from wild type)." []
 synonym: "normal number of pycnidia within host" RELATED []
@@ -9747,7 +9747,7 @@ creation_date: 2019-10-09T12:45:38Z
 
 [Term]
 id: PHIPO:0001113
-name: host defense induced acidification in phagolysome
+name: host defense induced acidification in phagolysome present
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype where the host induces a pH decrease within the host phagolysome in response to pathogen colonization." []
 synonym: "pathogen induced acidification in host phagolysome" EXACT []
@@ -9903,19 +9903,6 @@ synonym: "suppression of host PTI" EXACT []
 is_a: PHIPO:0001176 ! effector-mediated immune suppression phenotype
 created_by: alaynecuzick
 creation_date: 2019-12-03T11:08:34Z
-
-[Term]
-id: PHIPO:0001129
-name: abolished pathogen suppression of host PAMP-triggered immunity
-namespace: pathogen_host_interaction_phenotype
-def: "A cell signaling pathway phenotype where the molecular pattern-induced host innate immune response signaling pathway that was suppressed by a pathogen is no longer suppressed (suppression was present and is now absent). (GO:0052034)" []
-synonym: "abolished pathogen suppression of host PTI" EXACT []
-synonym: "abolished suppression of host MAMP-triggered immunity" EXACT []
-synonym: "abolished suppression of host PAMP-triggered immunity" EXACT []
-synonym: "abolished suppression of host PTI" EXACT []
-is_a: PHIPO:0001116 ! host immune system signaling pathway pathogen-host interaction phenotype
-created_by: alaynecuzick
-creation_date: 2019-12-03T11:09:29Z
 
 [Term]
 id: PHIPO:0001130
@@ -10965,12 +10952,22 @@ creation_date: 2021-03-22T16:02:47Z
 id: PHIPO:0001237
 name: effector-mediated suppression of host PAMP-triggered immunity absent
 namespace: pathogen_host_interaction_phenotype
+alt_id: PHIPO:0001129
 def: "A cell signaling pathway phenotype where the molecular pattern-induced host innate immune response signaling pathway is not suppressed by a pathogen. (GO:0052034)" []
+synonym: "abolished pathogen suppression of host PAMP-triggered immunity" NARROW []
+synonym: "abolished pathogen suppression of host PTI" EXACT []
+synonym: "abolished pathogen suppression of host PTI" NARROW []
+synonym: "abolished suppression of host MAMP-triggered immunity" EXACT []
+synonym: "abolished suppression of host MAMP-triggered immunity" NARROW []
+synonym: "abolished suppression of host PAMP-triggered immunity" EXACT []
+synonym: "abolished suppression of host PAMP-triggered immunity" NARROW []
+synonym: "abolished suppression of host PTI" EXACT []
+synonym: "abolished suppression of host PTI" NARROW []
 synonym: "effector-mediated suppression of host PTI absent" EXACT []
 synonym: "suppression of host MAMP-triggered immunity absent" EXACT []
 is_a: PHIPO:0001176 ! effector-mediated immune suppression phenotype
 created_by: alaynecuzick
-creation_date: 2021-03-22T16:10:37Z
+creation_date: 2019-12-03T11:09:29Z
 
 [Term]
 id: PHIPO:0001238
@@ -10992,7 +10989,7 @@ creation_date: 2021-03-23T11:00:52Z
 
 [Term]
 id: PHIPO:0001240
-name: host defense induced alkalization
+name: host defense induced alkalization present
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype where the host induces a pH increase in response to pathogen colonization." []
 is_a: PHIPO:0001108 ! pathogen host interaction pH phenotype
@@ -11055,6 +11052,26 @@ synonym: "host PTI activated by pathogen present" EXACT []
 is_a: PHIPO:0001167 ! pathogen modulation of host immune system process phenotype
 created_by: alaynecuzick
 creation_date: 2021-04-21T11:59:25Z
+
+[Term]
+id: PHIPO:0001247
+name: pathogen modulation of host metabolic process phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which a pathogen effects a change in the metabolic processes of its host organism." []
+is_a: PHIPO:0001173 ! pathogen modulation of host process phenotype
+created_by: alaynecuzick
+creation_date: 2021-04-28T11:22:11Z
+
+[Term]
+id: PHIPO:0001248
+name: pathogen modulation of chitin hydrolysis by host present
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which a pathogen effector preventing the hydrolysis of chitin by host chitinases is present." []
+synonym: "PAMP receptor decoy activity present" RELATED []
+is_a: PHIPO:0001128 ! effector-mediated suppression of host PAMP-triggered immunity present
+is_a: PHIPO:0001247 ! pathogen modulation of host metabolic process phenotype
+created_by: alaynecuzick
+creation_date: 2021-04-28T11:28:06Z
 
 [Typedef]
 id: PHIPO:0000304
