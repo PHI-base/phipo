@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2021-04-28/phipo-simple.owl
+data-version: phipo/releases/2021-05-04/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
@@ -10,7 +10,7 @@ property_value: creation:date 2018-07-09T13:43:00Z xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
-property_value: owl:versionInfo "2021-04-28" xsd:string
+property_value: owl:versionInfo "2021-05-04" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -10825,19 +10825,22 @@ creation_date: 2021-01-25T15:24:55Z
 
 [Term]
 id: PHIPO:0001224
-name: decreased PAMP receptor decoy activity
+name: increased chitin hydrolysis present
 namespace: single_species_phenotype
-def: "A single species molecular function phenotype in which the occurrence of recognition, binding and sequestering of PAMP ligands in order to prevent them from binding and activating the host PAMP receptor is decreased." []
-is_a: PHIPO:0000413 ! abnormal molecular function
+def: "A single species metabolic cellular process phenotype, in which the occurrence of a pathogen effector preventing the hydrolysis of chitin by chitinases is decreased (chitin hydrolysis is increased)." []
+synonym: "decreased PAMP receptor decoy activity" RELATED []
+is_a: PHIPO:0001225 ! chitin hydrolysis present
 created_by: alaynecuzick
 creation_date: 2021-01-26T14:18:49Z
 
 [Term]
 id: PHIPO:0001225
-name: abolished PAMP receptor decoy activity
+name: chitin hydrolysis present
 namespace: single_species_phenotype
-def: "A single species molecular function phenotype in which the occurrence of recognition, binding and sequestering of PAMP ligands in order to prevent them from binding and activating the host PAMP receptor is abolished (was present and is now absent)." []
-is_a: PHIPO:0000413 ! abnormal molecular function
+def: "A single species metabolic cellular process phenotype, in which a pathogen effector does not prevent the hydrolysis of chitin by chitinases." []
+synonym: "abolished PAMP receptor decoy activity" RELATED []
+synonym: "PAMP receptor decoy activity absent" RELATED []
+is_a: PHIPO:0001147 ! cellular metabolic process phenotype
 created_by: alaynecuzick
 creation_date: 2021-01-26T14:26:23Z
 
@@ -11039,6 +11042,7 @@ name: increased protein phosphorylation involved in host PAMP-triggered immunity
 namespace: pathogen_host_interaction_phenotype
 def: "A host immune system signaling pathway pathogen-host interaction phenotype observed during the activation of host PAMP-triggered immunity in which the phosphorylation of one or more specific proteins, or of specific protein sites, occurs to a greater extent than normal." []
 is_a: PHIPO:0001140 ! host PAMP-triggered immunity signaling activated by pathogen present
+is_a: PHIPO:0001247 ! pathogen modulation of host metabolic process phenotype
 created_by: alaynecuzick
 creation_date: 2021-04-21T11:49:31Z
 
@@ -11072,6 +11076,16 @@ is_a: PHIPO:0001128 ! effector-mediated suppression of host PAMP-triggered immun
 is_a: PHIPO:0001247 ! pathogen modulation of host metabolic process phenotype
 created_by: alaynecuzick
 creation_date: 2021-04-28T11:28:06Z
+
+[Term]
+id: PHIPO:0001249
+name: chitin hydrolysis absent
+namespace: single_species_phenotype
+def: "A single species metabolic cellular process phenotype, in which a pathogen effector prevents the hydrolysis of chitin by chitinases." []
+synonym: "PAMP receptor decoy activity present" RELATED []
+is_a: PHIPO:0001147 ! cellular metabolic process phenotype
+created_by: alaynecuzick
+creation_date: 2021-04-30T10:10:15Z
 
 [Typedef]
 id: PHIPO:0000304
