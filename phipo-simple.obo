@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2021-05-04/phipo-simple.owl
+data-version: phipo/releases/2021-05-13/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
@@ -10,7 +10,7 @@ property_value: creation:date 2018-07-09T13:43:00Z xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
-property_value: owl:versionInfo "2021-05-04" xsd:string
+property_value: owl:versionInfo "2021-05-13" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -414,6 +414,7 @@ creation_date: 2019-01-14T12:21:13Z
 id: PHIPO:0000038
 name: mutualism phenotype
 namespace: pathogen_host_interaction_phenotype
+def: "A phenotype which affects the balance of symbiotic mutualism, mutualism describes an interaction between two symbionts (where the larger is usually the host), results in positive (beneficial) effects on reproduction and/or survival of both species." []
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 is_a: PHIPO:0001179 ! infective ability phenotype
@@ -1954,6 +1955,7 @@ creation_date: 2018-10-01T13:27:56Z
 id: PHIPO:0000200
 name: host chlorosis phenotype in presence of pathogen
 namespace: pathogen_host_interaction_phenotype
+def: "A pathogen-host interaction phenotype in which leaves produce insufficient chlorophyll." []
 is_a: PHIPO:0000216 ! pathogen host interaction disease symptom phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:28:13Z
@@ -2067,8 +2069,9 @@ creation_date: 2018-10-01T13:33:00Z
 
 [Term]
 id: PHIPO:0000213
-name: host chlorosis absent with pathogen
+name: host chlorosis absent in presence of pathogen
 namespace: pathogen_host_interaction_phenotype
+def: "A pathogen-host interaction phenotype in which host chlorosis is absent." []
 is_a: PHIPO:0000200 ! host chlorosis phenotype in presence of pathogen
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:33:03Z
@@ -2085,8 +2088,9 @@ creation_date: 2018-10-01T13:33:15Z
 
 [Term]
 id: PHIPO:0000215
-name: host chlorosis present with pathogen
+name: host chlorosis present in presence of pathogen
 namespace: pathogen_host_interaction_phenotype
+def: "A pathogen-host interaction phenotype in which host chlorosis is present." []
 is_a: PHIPO:0000200 ! host chlorosis phenotype in presence of pathogen
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:33:18Z
@@ -2095,7 +2099,7 @@ creation_date: 2018-10-01T13:33:18Z
 id: PHIPO:0000216
 name: pathogen host interaction disease symptom phenotype
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000512 ! pathogen host interaction tissue phenotype
+is_a: PHIPO:0000512 ! pathogen host interaction host tissue phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:42:29Z
 
@@ -2693,7 +2697,7 @@ creation_date: 2018-10-03T13:39:41Z
 id: PHIPO:0000279
 name: systemic phenotype
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000512 ! pathogen host interaction tissue phenotype
+is_a: PHIPO:0000512 ! pathogen host interaction host tissue phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-03T13:43:37Z
 
@@ -3887,6 +3891,7 @@ creation_date: 2018-12-05T11:46:43Z
 id: PHIPO:0000411
 name: molecular function phenotype
 namespace: single_species_phenotype
+def: "A phenotype that affects a molecular function such as binding or catalytic activity." []
 is_a: PHIPO:0000002 ! single species phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-05T11:46:59Z
@@ -4211,7 +4216,7 @@ comment: This is a high-level term whose primary purpose is to organize terms be
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "host necrotic lesion with pathogen phenotype" EXACT []
-is_a: PHIPO:0000512 ! pathogen host interaction tissue phenotype
+is_a: PHIPO:0000512 ! pathogen host interaction host tissue phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-18T12:46:14Z
 
@@ -4686,9 +4691,9 @@ creation_date: 2019-02-11T12:28:03Z
 
 [Term]
 id: PHIPO:0000512
-name: pathogen host interaction tissue phenotype
+name: pathogen host interaction host tissue phenotype
 namespace: pathogen_host_interaction_phenotype
-def: "A pathogen host interaction phenotype that is observed at the level of a tissue (eg leaf, inflorescence, ear or kidney)." []
+def: "A pathogen host interaction phenotype that is observed at the level of a host tissue (eg leaf, inflorescence, ear or kidney)." []
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
@@ -10199,7 +10204,7 @@ name: pathogen tissue to tissue migration within host phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction colonization phenotype which affects the directional tissue to tissue movement of the pathogen within the host organism (GO:0044001)." []
 is_a: PHIPO:0000332 ! pathogen colonization of host phenotype
-is_a: PHIPO:0000512 ! pathogen host interaction tissue phenotype
+is_a: PHIPO:0000512 ! pathogen host interaction host tissue phenotype
 created_by: alaynecuzick
 creation_date: 2020-03-27T18:25:20Z
 

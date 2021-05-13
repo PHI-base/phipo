@@ -12,13 +12,13 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/phipo/phipo-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2021-03-10/phipo-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2021-05-13/phipo-simple.owl"/>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-09T13:43:00Z</obo:creation_date>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology of species-neutral phenotypes observed in pathogen-host interactions.</dc:description>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathogen Host Interactions Phenotype Ontology</dc:title>
         <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://creativecommons.org/licenses/by/3.0/</terms:license>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-03-10</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-05-13</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -201,9 +201,7 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <!-- http://www.geneontology.org/formats/oboInOwl#SubsetProperty -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SubsetProperty">
-        <rdfs:label>subset_property</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     
 
 
@@ -364,9 +362,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000304">
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-12T13:24:02Z</oboInOwl:creation_date>
-        <rdfs:comment>Used in FYPO as described in PATO best practices; placeholder relation to indicate normality/abnormality.
-
-which namespace? do we need all 3 triplicated again?</rdfs:comment>
+        <rdfs:comment>Used in FYPO as described in PATO best practices; placeholder relation to indicate normality/abnormality. which namespace? do we need all 3 triplicated again?</rdfs:comment>
         <rdfs:label xml:lang="en">qualifier</rdfs:label>
     </owl:ObjectProperty>
     
@@ -499,8 +495,7 @@ which namespace? do we need all 3 triplicated again?</rdfs:comment>
         <oboInOwl:hasExactSynonym>unchanged pathogenicity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>qc_extension_only</oboInOwl:inSubset>
-        <rdfs:comment>For use in the annotation extension infective ability.
-Can only apply to changes in the pathogen.</rdfs:comment>
+        <rdfs:comment>For use in the annotation extension infective ability. Can only apply to changes in the pathogen.</rdfs:comment>
         <rdfs:label>unaffected pathogenicity</rdfs:label>
     </owl:Class>
     
@@ -531,8 +526,7 @@ Can only apply to changes in the pathogen.</rdfs:comment>
         <oboInOwl:hasRelatedSynonym>pathogenesis (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
-        <rdfs:comment>Can only apply to changes in the pathogen.
-Pathogenicity is a qualitative concept.</rdfs:comment>
+        <rdfs:comment>Can only apply to changes in the pathogen. Pathogenicity is a qualitative concept.</rdfs:comment>
         <rdfs:label>pathogenicity phenotype</rdfs:label>
     </owl:Class>
     
@@ -548,8 +542,7 @@ Pathogenicity is a qualitative concept.</rdfs:comment>
         <oboInOwl:hasExactSynonym>disease causing ability absent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
-        <rdfs:comment>For use in the annotation extension infective ability.
-Can only apply to changes in the pathogen.</rdfs:comment>
+        <rdfs:comment>For use in the annotation extension infective ability. Can only apply to changes in the pathogen.</rdfs:comment>
         <rdfs:label>obsolete functional pathogen effector absent</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
@@ -566,8 +559,7 @@ Can only apply to changes in the pathogen.</rdfs:comment>
         <oboInOwl:hasExactSynonym>disease causing ability present</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
-        <rdfs:comment>For use in the annotation extension infective ability.
-Can only apply to changes in the pathogen.</rdfs:comment>
+        <rdfs:comment>For use in the annotation extension infective ability. Can only apply to changes in the pathogen.</rdfs:comment>
         <rdfs:label>obsolete functional pathogen effector present</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
@@ -584,8 +576,7 @@ Can only apply to changes in the pathogen.</rdfs:comment>
         <oboInOwl:hasExactSynonym>gain of disease causing ability</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>qc_extension_only</oboInOwl:inSubset>
-        <rdfs:comment>For use in the annotation extension infective ability.
-Can only apply to changes in the pathogen. Note that this ability to cause pathogenicity is a feature of the pathogen. Therefore gain/loss of pathogenicity should never be dependent on changes to the host genotype, only on changes to the pathogen genotype. If you are annotating changes in disease presence or absence dependent on the changes to the host consider increased/decreased virulence phenotypes.</rdfs:comment>
+        <rdfs:comment>For use in the annotation extension infective ability. Can only apply to changes in the pathogen. Note that this ability to cause pathogenicity is a feature of the pathogen. Therefore gain/loss of pathogenicity should never be dependent on changes to the host genotype, only on changes to the pathogen genotype. If you are annotating changes in disease presence or absence dependent on the changes to the host consider increased/decreased virulence phenotypes.</rdfs:comment>
         <rdfs:label>gain of pathogenicity</rdfs:label>
     </owl:Class>
     
@@ -602,9 +593,7 @@ Can only apply to changes in the pathogen. Note that this ability to cause patho
         <oboInOwl:hasExactSynonym>loss of disease causing ability</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>qc_extension_only</oboInOwl:inSubset>
-        <rdfs:comment>For use in the annotation extension infective ability.
-Can only apply to changes in the pathogen. Note that this ability to cause pathogenicity is a feature of the pathogen. Therefore gain/loss of pathogenicity should never be dependent on changes to the host genotype, only on changes to the pathogen genotype. If you are annotating changes in disease presence or absence dependent on the changes to the host consider increased/decreased virulence phenotypes.
-Note that avirulence means loss of/abolished virulence in plant pathology terminology.</rdfs:comment>
+        <rdfs:comment>For use in the annotation extension infective ability. Can only apply to changes in the pathogen. Note that this ability to cause pathogenicity is a feature of the pathogen. Therefore gain/loss of pathogenicity should never be dependent on changes to the host genotype, only on changes to the pathogen genotype. If you are annotating changes in disease presence or absence dependent on the changes to the host consider increased/decreased virulence phenotypes. Note that avirulence means loss of/abolished virulence in plant pathology terminology.</rdfs:comment>
         <rdfs:label>loss of pathogenicity</rdfs:label>
     </owl:Class>
     
@@ -621,8 +610,7 @@ Note that avirulence means loss of/abolished virulence in plant pathology termin
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
-        <rdfs:comment>Can apply to changes in the pathogen or the host.
-Virulence is a quantitative concept</rdfs:comment>
+        <rdfs:comment>Can apply to changes in the pathogen or the host. Virulence is a quantitative concept</rdfs:comment>
         <rdfs:label>virulence phenotype</rdfs:label>
     </owl:Class>
     
@@ -639,8 +627,7 @@ Virulence is a quantitative concept</rdfs:comment>
         <oboInOwl:hasExactSynonym>unaffected disease severity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
-        <rdfs:comment>For use in the annotation extension infective ability.
-Can apply to changes in the pathogen or the host.</rdfs:comment>
+        <rdfs:comment>For use in the annotation extension infective ability. Can apply to changes in the pathogen or the host.</rdfs:comment>
         <rdfs:label>unaffected virulence</rdfs:label>
     </owl:Class>
     
@@ -670,8 +657,7 @@ Can apply to changes in the pathogen or the host.</rdfs:comment>
         <oboInOwl:hasExactSynonym>increased disease severity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>qc_extension_only</oboInOwl:inSubset>
-        <rdfs:comment>For use in the annotation extension infective ability.
-Can apply to changes in the pathogen or the host.</rdfs:comment>
+        <rdfs:comment>For use in the annotation extension infective ability. Can apply to changes in the pathogen or the host.</rdfs:comment>
         <rdfs:label>increased virulence</rdfs:label>
     </owl:Class>
     
@@ -688,8 +674,7 @@ Can apply to changes in the pathogen or the host.</rdfs:comment>
         <oboInOwl:hasExactSynonym>reduced disease severity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>qc_extension_only</oboInOwl:inSubset>
-        <rdfs:comment>For use in the annotation extension infective ability.
-Can apply to changes in the pathogen or the host.</rdfs:comment>
+        <rdfs:comment>For use in the annotation extension infective ability. Can apply to changes in the pathogen or the host.</rdfs:comment>
         <rdfs:label>reduced virulence</rdfs:label>
     </owl:Class>
     
@@ -818,10 +803,7 @@ Can apply to changes in the pathogen or the host.</rdfs:comment>
         <obo:created_by>alaynecuzick</obo:created_by>
         <obo:creation_date>2018-05-04T13:17:46Z</obo:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment>Is this a bit too specific?
-should this be with sexual reproduction?
-eg ustilago and rust fungus
-MU agrees REMOVE from penetration</rdfs:comment>
+        <rdfs:comment>Is this a bit too specific? should this be with sexual reproduction? eg ustilago and rust fungus MU agrees REMOVE from penetration</rdfs:comment>
         <rdfs:label>obsolete normal mating phenotype prior to penetration</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
@@ -880,8 +862,7 @@ MU agrees REMOVE from penetration</rdfs:comment>
         <obo:created_by>alaynecuzick</obo:created_by>
         <obo:creation_date>2018-05-04T13:22:14Z</obo:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment>Is this a bit too specific?
-should this be with reproduction?</rdfs:comment>
+        <rdfs:comment>Is this a bit too specific? should this be with reproduction?</rdfs:comment>
         <rdfs:label>obsolete abnormal mating phenotype prior to penetration</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
@@ -996,6 +977,7 @@ should this be with reproduction?</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000038">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001179"/>
+        <obo:IAO_0000115>A phenotype which affects the balance of symbiotic mutualism, mutualism describes an interaction between two symbionts (where the larger is usually the host), results in positive (beneficial) effects on reproduction and/or survival of both species.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-10T11:52:04Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
@@ -1016,8 +998,7 @@ should this be with reproduction?</rdfs:comment>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
-        <rdfs:comment>Logical definition
-mutualism (GO:0085030) and (has_relative_magnitude some normal (PATO:0000461))</rdfs:comment>
+        <rdfs:comment>Logical definition mutualism (GO:0085030) and (has_relative_magnitude some normal (PATO:0000461))</rdfs:comment>
         <rdfs:label xml:lang="en">normal mutualism</rdfs:label>
     </owl:Class>
     
@@ -1033,10 +1014,7 @@ mutualism (GO:0085030) and (has_relative_magnitude some normal (PATO:0000461))</
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
-        <rdfs:comment xml:lang="en">Logical definition
-mutualism (GO:0085030) and (has_relative_magnitude some abnormal (PATO:0000460))
-
-need to choose correct language for term name</rdfs:comment>
+        <rdfs:comment xml:lang="en">Logical definition mutualism (GO:0085030) and (has_relative_magnitude some abnormal (PATO:0000460)) need to choose correct language for term name</rdfs:comment>
         <rdfs:label xml:lang="en">abnormal mutualism</rdfs:label>
     </owl:Class>
     
@@ -1049,11 +1027,7 @@ need to choose correct language for term name</rdfs:comment>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T11:54:28Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment>bacteria flagella
-aphid flight
-nematode wiggle
-fungi non-motile (apart from spores)
-also hosts</rdfs:comment>
+        <rdfs:comment>bacteria flagella aphid flight nematode wiggle fungi non-motile (apart from spores) also hosts</rdfs:comment>
         <rdfs:label xml:lang="en">normal motility phenotype</rdfs:label>
     </owl:Class>
     
@@ -2470,8 +2444,7 @@ also hosts</rdfs:comment>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-25T13:33:18Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>FYPO:0000655</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment>Logical defintion
-quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (qualifier (??) some normal PATO:0000461)</rdfs:comment>
+        <rdfs:comment>Logical defintion quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (qualifier (??) some normal PATO:0000461)</rdfs:comment>
         <rdfs:label xml:lang="en">normal DNA binding</rdfs:label>
     </owl:Class>
     
@@ -2675,8 +2648,7 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
         <oboInOwl:inSubset>pathogen_phenotype</oboInOwl:inSubset>
         <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
-        <rdfs:comment>Penetration assays are often performed in vitro to assess pathogen penetration machinery.
-This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
+        <rdfs:comment>Penetration assays are often performed in vitro to assess pathogen penetration machinery. This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
         <rdfs:label xml:lang="en">pathogen penetration across barrier phenotype</rdfs:label>
     </owl:Class>
     
@@ -2957,8 +2929,7 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:09:42Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>FYPO:0000655</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment>Logical defintion
-quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (qualifier (??) some normal PATO:0000461)</rdfs:comment>
+        <rdfs:comment>Logical defintion quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (qualifier (??) some normal PATO:0000461)</rdfs:comment>
         <rdfs:label>obsolete normal pathogen host interaction DNA binding</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
@@ -3171,6 +3142,7 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000200">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000216"/>
+        <obo:IAO_0000115>A pathogen-host interaction phenotype in which leaves produce insufficient chlorophyll.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:28:13Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
@@ -3334,10 +3306,11 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000213">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000200"/>
+        <obo:IAO_0000115>A pathogen-host interaction phenotype in which host chlorosis is absent.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:33:03Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">host chlorosis absent with pathogen</rdfs:label>
+        <rdfs:label xml:lang="en">host chlorosis absent in presence of pathogen</rdfs:label>
     </owl:Class>
     
 
@@ -3360,10 +3333,11 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000215">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000200"/>
+        <obo:IAO_0000115>A pathogen-host interaction phenotype in which host chlorosis is present.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:33:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">host chlorosis present with pathogen</rdfs:label>
+        <rdfs:label xml:lang="en">host chlorosis present in presence of pathogen</rdfs:label>
     </owl:Class>
     
 
@@ -4598,8 +4572,7 @@ quality (PATO:0000001) and (inheres_in some DNA binding (GO:0003677)) and (quali
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000311 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000311">
-        <obo:IAO_0000115>(gene for gene relationships) or defined from the phenotype described in the published study.
-The pathogen has the ability to cause infectious disease dependent upon the gene for gene relationship between the pathogen and host genotype.</obo:IAO_0000115>
+        <obo:IAO_0000115>(gene for gene relationships) or defined from the phenotype described in the published study. The pathogen has the ability to cause infectious disease dependent upon the gene for gene relationship between the pathogen and host genotype.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:14:06Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
@@ -5909,6 +5882,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000411">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000002"/>
+        <obo:IAO_0000115>A phenotype that affects a molecular function such as binding or catalytic activity.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-05T11:46:59Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
@@ -6224,6 +6198,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-12T14:40:37Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>FYPO:0000664</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>catalytic activity abolished</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>catalytic activity absent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">abolished catalytic activity</rdfs:label>
     </owl:Class>
@@ -6520,8 +6495,7 @@ The pathogen has the ability to cause infectious disease dependent upon the gene
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
-        <rdfs:comment>This term is to be used for host protection against the pathogen.
-This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
+        <rdfs:comment>This term is to be used for host protection against the pathogen. This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
         <rdfs:label>obsolete host necrotic cell death by pathogen induced hypersensitive response</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
@@ -6606,7 +6580,7 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
         <oboInOwl:hasExactSynonym>normal number of pathogen conidia within host</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>normal number of pathogen uredinia within host</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">normal number of pathogen asexual spores within host</rdfs:label>
+        <rdfs:label xml:lang="en">presence of pathogen asexual spores within host</rdfs:label>
     </owl:Class>
     
 
@@ -6843,10 +6817,7 @@ This is a high-level term whose primary purpose is to organize terms beneath it 
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-18T13:04:53Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:comment>For logical defintions
-Do we want to make this species neutral and just add in DON at lowest child level and use CHEBI id CHEBI_10022 ## vomitoxin
-OR
-use fungi specific GO term GO_0106110 ## vomitoxin biosynthetic process??</rdfs:comment>
+        <rdfs:comment>For logical defintions Do we want to make this species neutral and just add in DON at lowest child level and use CHEBI id CHEBI_10022 ## vomitoxin OR use fungi specific GO term GO_0106110 ## vomitoxin biosynthetic process??</rdfs:comment>
         <rdfs:label xml:lang="en">abnormal toxin biosynthetic process</rdfs:label>
     </owl:Class>
     
@@ -7014,9 +6985,7 @@ use fungi specific GO term GO_0106110 ## vomitoxin biosynthetic process??</rdfs:
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
-        <rdfs:comment>This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Note: differentium is population level, and may reflect observation conditions.
-
-no logical definition in FYPO</rdfs:comment>
+        <rdfs:comment>This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype. Note: differentium is population level, and may reflect observation conditions. no logical definition in FYPO</rdfs:comment>
         <rdfs:label>obsolete pathogen host interaction cell population phenotype</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
@@ -7027,14 +6996,14 @@ no logical definition in FYPO</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000512">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
-        <obo:IAO_0000115>A pathogen host interaction phenotype that is observed at the level of a tissue (eg leaf, inflorescence, ear or kidney).</obo:IAO_0000115>
+        <obo:IAO_0000115>A pathogen host interaction phenotype that is observed at the level of a host tissue (eg leaf, inflorescence, ear or kidney).</obo:IAO_0000115>
         <obo:created_by>alaynecuzick</obo:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-11T12:41:00Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
         <rdfs:comment>This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
-        <rdfs:label xml:lang="en">pathogen host interaction tissue phenotype</rdfs:label>
+        <rdfs:label xml:lang="en">pathogen host interaction host tissue phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -12238,9 +12207,7 @@ no logical definition in FYPO</rdfs:comment>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>avirulence</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
-        <rdfs:comment>For use in the annotation extension infective ability.
-Note this pathogen may still be pathogenic on an alternate host genotype. 
-Note that avirulence means loss of pathogenicity in medical terminology.</rdfs:comment>
+        <rdfs:comment>For use in the annotation extension infective ability. Note this pathogen may still be pathogenic on an alternate host genotype. Note that avirulence means loss of pathogenicity in medical terminology.</rdfs:comment>
         <rdfs:label xml:lang="en">loss of virulence</rdfs:label>
     </owl:Class>
     
@@ -12254,8 +12221,7 @@ Note that avirulence means loss of pathogenicity in medical terminology.</rdfs:c
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-26T12:27:44Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>qc_extension_only</oboInOwl:inSubset>
-        <rdfs:comment>For use in the annotation extension infective ability.
-Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:comment>
+        <rdfs:comment>For use in the annotation extension infective ability. Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:comment>
         <rdfs:label>obsolete loss of virulence of gain of pathogenicity mutant</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
@@ -13925,6 +13891,7 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
         <obo:IAO_0000115>A single species molecular function phenotype in which a chitinase activity is absent.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-01T13:15:29Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>chitinase activity absent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">abolished chitinase activity</rdfs:label>
     </owl:Class>
@@ -14071,7 +14038,7 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-04T12:43:45Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>normal number of pycnidia within host</oboInOwl:hasRelatedSynonym>
-        <rdfs:label xml:lang="en">normal number of pathogen asexual sporulation structures within host lesion</rdfs:label>
+        <rdfs:label xml:lang="en">presence of pathogen asexual sporulation structures within host lesion</rdfs:label>
     </owl:Class>
     
 
@@ -14216,7 +14183,7 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
         <oboInOwl:hasExactSynonym>pathogen induced acidification in host phagolysome</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>pathogen induced pH decrease in host phagolysome</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">host defense induced acidification in phagolysome</rdfs:label>
+        <rdfs:label xml:lang="en">host defense induced acidification in phagolysome present</rdfs:label>
     </owl:Class>
     
 
@@ -14255,9 +14222,9 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
         <obo:IAO_0000115>A pathogen host interaction phenotype that affects a host immune system signaling pathway during pathogen infection.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-22T12:26:26Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym>pathogen modulation of host immune system signalling pathway phenotype</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">pathogen modulation of host immune system signaling pathway phenotype</rdfs:label>
+        <oboInOwl:hasRelatedSynonym>pathogen modulation of host immune system signaling pathway phenotype</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">host immune system signaling pathway pathogen-host interaction phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -14424,24 +14391,7 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
         <oboInOwl:hasExactSynonym>suppression of host PAMP-triggered immunity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>suppression of host PTI</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">effector-mediated suppression of host PAMP-triggered immunity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PHIPO_0001129 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001129">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001116"/>
-        <obo:IAO_0000115>A cell signaling pathway phenotype where the molecular pattern-induced host innate immune response signaling pathway that was suppressed by a pathogen is no longer suppressed (suppression was present and is now absent). (GO:0052034)</obo:IAO_0000115>
-        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-03T11:09:29Z</oboInOwl:creation_date>
-        <oboInOwl:hasExactSynonym>abolished pathogen suppression of host PTI</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>abolished suppression of host MAMP-triggered immunity</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>abolished suppression of host PAMP-triggered immunity</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>abolished suppression of host PTI</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abolished pathogen suppression of host PAMP-triggered immunity</rdfs:label>
+        <rdfs:label xml:lang="en">effector-mediated suppression of host PAMP-triggered immunity present</rdfs:label>
     </owl:Class>
     
 
@@ -14590,18 +14540,19 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001140">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001117"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001246"/>
         <obo:IAO_0000115>A cell signaling pathway phenotype where the host pattern recognition receptor signaling pathway is directly induced by a pathogen. This can include any series of molecular signals generated as a consequence of a pattern recognition receptor (PRR) binding to a pathogen-derived physiological ligand. PRR ligands are usually referred to as pathogen-associated molecular pattern (PAMPs) or microbe-associated molecular pattern (MAMPs), structures conserved among microbial species (GO:0002221).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-28T11:29:52Z</oboInOwl:creation_date>
         <oboInOwl:hasBroadSynonym>activation of host PRR signalling pathway</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasExactSynonym>activation of host MAMP-triggered immunity</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>activation of host PAMP-triggered immunity</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>activation of host PTI</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>activation of host MAMP-triggered immunity signaling</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>activation of host PAMP-triggered immunity signaling</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>activation of host PTI signaling</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>host PAMP-triggered immunity signalling activated by pathogen</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>host PTI signaling activated by pathogen</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>pathogen induced host MAP kinase activity</oboInOwl:hasRelatedSynonym>
-        <rdfs:label xml:lang="en">host PAMP-triggered immunity signaling activated by pathogen</rdfs:label>
+        <rdfs:label xml:lang="en">host PAMP-triggered immunity signaling activated by pathogen present</rdfs:label>
     </owl:Class>
     
 
@@ -14679,7 +14630,7 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
         <oboInOwl:hasExactSynonym>suppression of host ETI</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>suppression of host effector triggered immunity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">effector-mediated suppression of host effector triggered immunity</rdfs:label>
+        <rdfs:label xml:lang="en">effector-mediated suppression of host effector triggered immunity present</rdfs:label>
     </owl:Class>
     
 
@@ -14879,8 +14830,7 @@ Note this pathogen may still be pathogenic on an alternate host genotype.</rdfs:
         <oboInOwl:hasExactSynonym>pathogen induced host phenolic compound absent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>absence of pathogen induced host phenolic compound</oboInOwl:hasRelatedSynonym>
-        <rdfs:comment>decreased level of CHEBI:33853 in host
-during GO:051702 interaction with symbiont</rdfs:comment>
+        <rdfs:comment>decreased level of CHEBI:33853 in host during GO:051702 interaction with symbiont</rdfs:comment>
         <rdfs:label xml:lang="en">pathogen-induced host phenolic compound absent</rdfs:label>
     </owl:Class>
     
@@ -15258,11 +15208,11 @@ during GO:051702 interaction with symbiont</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001194">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000347"/>
-        <obo:IAO_0000115>A pathogen host interaction molecular function phenotype in which host-mediated inhibition of a pathogen chorismate mutase is abolished (inhibition was present and is now absent).</obo:IAO_0000115>
+        <obo:IAO_0000115>A pathogen host interaction molecular function phenotype in which host-mediated inhibition of a pathogen chorismate mutase is absent.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-31T15:28:52Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abolished inhibition of pathogen chorismate mutase by host</rdfs:label>
+        <rdfs:label xml:lang="en">inhibition of pathogen chorismate mutase by host absent</rdfs:label>
     </owl:Class>
     
 
@@ -15275,7 +15225,7 @@ during GO:051702 interaction with symbiont</rdfs:comment>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-31T15:29:07Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">inhibition of pathogen chorismate mutase by host</rdfs:label>
+        <rdfs:label xml:lang="en">inhibition of pathogen chorismate mutase by host present</rdfs:label>
     </owl:Class>
     
 
@@ -15700,12 +15650,13 @@ during GO:051702 interaction with symbiont</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001224 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001224">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000413"/>
-        <obo:IAO_0000115>A single species molecular function phenotype in which the occurrence of recognition, binding and sequestering of PAMP ligands in order to prevent them from binding and activating the host PAMP receptor is decreased.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001225"/>
+        <obo:IAO_0000115>A single species metabolic cellular process phenotype, in which the occurrence of a pathogen effector preventing the hydrolysis of chitin by chitinases is decreased (chitin hydrolysis is increased).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-26T14:18:49Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">decreased PAMP receptor decoy activity</rdfs:label>
+        <oboInOwl:hasRelatedSynonym>decreased PAMP receptor decoy activity</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">increased chitin hydrolysis present</rdfs:label>
     </owl:Class>
     
 
@@ -15713,12 +15664,14 @@ during GO:051702 interaction with symbiont</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001225 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001225">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000413"/>
-        <obo:IAO_0000115>A single species molecular function phenotype in which the occurrence of recognition, binding and sequestering of PAMP ligands in order to prevent them from binding and activating the host PAMP receptor is abolished (was present and is now absent).</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001147"/>
+        <obo:IAO_0000115>A single species metabolic cellular process phenotype, in which a pathogen effector does not prevent the hydrolysis of chitin by chitinases.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-26T14:26:23Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abolished PAMP receptor decoy activity</rdfs:label>
+        <oboInOwl:hasRelatedSynonym>PAMP receptor decoy activity absent</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>abolished PAMP receptor decoy activity</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">chitin hydrolysis present</rdfs:label>
     </owl:Class>
     
 
@@ -15843,6 +15796,221 @@ during GO:051702 interaction with symbiont</rdfs:comment>
         <oboInOwl:hasRelatedSynonym>increased size of filamentous colony</oboInOwl:hasRelatedSynonym>
         <rdfs:comment>Although this phenotype is for an individual it can be inferred from a population in a colony.</rdfs:comment>
         <rdfs:label xml:lang="en">increased hyphal growth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001235 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001235">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001231"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype, in which the host defence-related RNA usually present during infection is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-16T16:30:04Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">host defense-related RNA involved in a pathogen interaction present</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001236 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001236">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001176"/>
+        <obo:IAO_0000115>A phenotype where the process of host tissue cell death causing a host lesion initially induced by the host activating its own hypersensitive response in defense, is subsequently not suppressed by a pathogen effector.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-22T16:02:47Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>effector-mediated suppression of host ETI absent</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">effector-mediated suppression of host effector triggered immunity absent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001237 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001237">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001176"/>
+        <obo:IAO_0000115>A cell signaling pathway phenotype where the molecular pattern-induced host innate immune response signaling pathway is not suppressed by a pathogen. (GO:0052034)</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-03T11:09:29Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>PHIPO:0001129</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym>abolished pathogen suppression of host PTI</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>abolished suppression of host MAMP-triggered immunity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>abolished suppression of host PAMP-triggered immunity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>abolished suppression of host PTI</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>effector-mediated suppression of host PTI absent</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>suppression of host MAMP-triggered immunity absent</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>abolished pathogen suppression of host PAMP-triggered immunity</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>abolished pathogen suppression of host PTI</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>abolished suppression of host MAMP-triggered immunity</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>abolished suppression of host PAMP-triggered immunity</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>abolished suppression of host PTI</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">effector-mediated suppression of host PAMP-triggered immunity absent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001238 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001238">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000437"/>
+        <obo:IAO_0000115>A single species molecular function phenotype in which the observed rate of chitinase activity is increased.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T10:32:17Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased chitinase activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001239 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001239">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001108"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype where the host induced pH increase in response to pathogen colonization is inhibited.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T11:00:52Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">pathogen inhibition of host defense induced alkalization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001240 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001240">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001108"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype where the host induces a pH increase in response to pathogen colonization.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T11:03:17Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">host defense induced alkalization present</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001241 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001241">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000436"/>
+        <obo:IAO_0000115>A single species molecular function phenotype in which the observed rate of chitinase activity is decreased.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T11:09:16Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased chitinase activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001242 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001242">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000164"/>
+        <obo:IAO_0000115>A molecular function phenotype in which the binding of chitin or chitin fragments by the pathogen during host colonization is present.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T11:17:39Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">pathogen binding of chitin with host present</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001243 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001243">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000164"/>
+        <obo:IAO_0000115>A molecular function phenotype in which the binding of chitin or chitin fragments by the pathogen during host colonization is absent.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T11:18:11Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">pathogen binding of chitin with host absent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001244 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001244">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000469"/>
+        <obo:IAO_0000115>A pathogen reproductive phenotype within host in which the frequency of occurrence of asexual sporulation structures within a host lesion is greater than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-13T12:41:33Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>increased number of pycnidia within host</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">increased number of pathogen asexual sporulation structures within host lesion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001245 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001245">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001140"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001247"/>
+        <obo:IAO_0000115>A host immune system signaling pathway pathogen-host interaction phenotype observed during the activation of host PAMP-triggered immunity in which the phosphorylation of one or more specific proteins, or of specific protein sites, occurs to a greater extent than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-21T11:49:31Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased protein phosphorylation involved in host PAMP-triggered immunity (MAPK) signaling activated by pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001246 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001246">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001167"/>
+        <obo:IAO_0000115>A phenotype where the process of pathogen-associated molecular pattern (PAMPs) or microbe-associated molecular pattern (MAMPs), activate the host PAMP-triggered immunity (PTI) innate immune system to trigger host defense responses such as reactive oxygen species (ROS) and callose deposition is present. (PAMPs and MAMPs are conserved structures among microbial species, eg chitin and lipopolysaccharide (LPS)).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-21T11:59:25Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>host MAMP-triggered immunity activated by pathogen present</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>host PTI activated by pathogen present</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">host PAMP-triggered immunity activated by pathogen present</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001247 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001247">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001173"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype, in which a pathogen effects a change in the metabolic processes of its host organism.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-28T11:22:11Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">pathogen modulation of host metabolic process phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001248 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001248">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001128"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001247"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype, in which a pathogen effector preventing the hydrolysis of chitin by host chitinases is present.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-28T11:28:06Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>PAMP receptor decoy activity present</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">pathogen modulation of chitin hydrolysis by host present</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001249 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001249">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001147"/>
+        <obo:IAO_0000115>A single species metabolic cellular process phenotype, in which a pathogen effector prevents the hydrolysis of chitin by chitinases.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-30T10:10:15Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>PAMP receptor decoy activity present</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">chitin hydrolysis absent</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
