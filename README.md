@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/PHI-base/phipo.svg?branch=master)](https://travis-ci.org/PHI-base/phipo)
 [![DOI](https://zenodo.org/badge/13996/PHI-base/phipo.svg)](https://zenodo.org/badge/latestdoi/13996/PHI-base/phipo)
 
-# Pathogen Host Interactions Phenotype Ontology
+# Pathogen-Host Interaction Phenotype Ontology
 
 PHIPO is a formal ontology of species-neutral phenotypes observed in pathogen-host interactions.
 
