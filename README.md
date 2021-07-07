@@ -16,8 +16,6 @@ The latest version of the ontology can always be found at:
 * http://purl.obolibrary.org/obo/phipo.owl
 * http://purl.obolibrary.org/obo/phipo.obo
 
-(Note this will not show up until the request has been approved by obofoundry.org)
-
 ### Editors' version
 
 Editors of this ontology should use the edit version, [src/ontology/phipo-edit.owl](src/ontology/phipo-edit.owl)
