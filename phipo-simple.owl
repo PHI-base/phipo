@@ -12,13 +12,13 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/phipo/phipo-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2021-05-13/phipo-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2021-07-13/phipo-simple.owl"/>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-09T13:43:00Z</obo:creation_date>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology of species-neutral phenotypes observed in pathogen-host interactions.</dc:description>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathogen Host Interactions Phenotype Ontology</dc:title>
         <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://creativecommons.org/licenses/by/3.0/</terms:license>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-05-13</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-07-13</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -324,9 +324,9 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000112 xml:lang="en">my body has part my brain (continuant parthood, two material entities)</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">this year has part this day (occurrent parthood)</obo:IAO_0000112>
-        <obo:IAO_0000115>Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">a core relation that holds between a whole and its part</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)
 
@@ -337,23 +337,17 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
         <oboInOwl:id>has_part</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
         <oboInOwl:is_cyclic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</oboInOwl:is_cyclic>
         <oboInOwl:shorthand>has_part</oboInOwl:shorthand>
-        <rdfs:comment>We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality &apos;swollen&apos; necessarily comes with the qualities of &apos;protruding&apos; and &apos;increased size&apos;.</rdfs:comment>
         <rdfs:label>has part</rdfs:label>
         <rdfs:label xml:lang="en">has part</rdfs:label>
         <rdfs:label>has_part</rdfs:label>
     </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -372,13 +366,19 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002314"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <obo:IAO_0000111 xml:lang="en">inheres in</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">this fragility inheres in this vase</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this fragility is a characteristic of this vase</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">this red color inheres in this apple</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this red color is a characteristic of this apple</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">A dependent inheres in its bearer at all times for which the dependent exists.</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">inheres_in</obo:IAO_0000118>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
+        <rdfs:comment>Note that this relation was previously called &quot;inheres in&quot;, but was changed to be called &quot;characteristic of&quot; because BFO2 uses &quot;inheres in&quot; in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing.</rdfs:comment>
+        <rdfs:label xml:lang="en">characteristic of</rdfs:label>
         <rdfs:label xml:lang="en">inheres in</rdfs:label>
     </owl:ObjectProperty>
     
@@ -387,13 +387,14 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/RO_0002314 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002314">
-        <obo:IAO_0000115>q inheres in part of w if and only if there exists some p such that q inheres in p and p part of w.</obo:IAO_0000115>
-        <obo:IAO_0000116>Because part_of is transitive, inheres in is a sub-relation of inheres in part of</obo:IAO_0000116>
+        <obo:IAO_0000115>q characteristic of part of w if and only if there exists some p such that q inheres in p and p part of w.</obo:IAO_0000115>
+        <obo:IAO_0000116>Because part_of is transitive, inheres in is a sub-relation of characteristic of part of</obo:IAO_0000116>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000118>inheres in part of</obo:IAO_0000118>
         <obo:IAO_0000119 rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/20064205"/>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <rdfs:label xml:lang="en">inheres in part of</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://github.com/oborel/obo-relations/wiki/ROGuide#defining-property-chains-involving-reflexivity"/>
+        <rdfs:label xml:lang="en">characteristic of part of</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/ro/docs/reflexivity/"/>
     </owl:ObjectProperty>
     
 
@@ -1023,12 +1024,12 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000041 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000041">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000157"/>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T11:54:28Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:comment>bacteria flagella aphid flight nematode wiggle fungi non-motile (apart from spores) also hosts</rdfs:comment>
-        <rdfs:label xml:lang="en">normal motility phenotype</rdfs:label>
+        <rdfs:label>obsolete normal motility phenotype</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1036,11 +1037,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000042 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000042">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000157"/>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T11:54:54Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal motility phenotype</rdfs:label>
+        <rdfs:label>obsolete abnormal motility phenotype</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1286,7 +1287,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000061 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000061">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000078"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000082"/>
         <obo:IAO_0000115>A reproductive phenotype where asexual spores are absent (FAO:0000023).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-13T12:28:57Z</oboInOwl:creation_date>
@@ -1801,12 +1802,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000100 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000100">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000042"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000929"/>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T10:24:59Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">increased motility</rdfs:label>
+        <rdfs:label>obsolete increased motility</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1814,12 +1814,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000101 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000101">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000042"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000929"/>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T10:25:07Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label>decreased motility</rdfs:label>
+        <rdfs:label>obsolete decreased motility</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1827,11 +1826,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000102 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000102">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000042"/>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T10:25:22Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">loss of motility</rdfs:label>
+        <rdfs:label>obsolete loss of motility</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -1958,6 +1957,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000111">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000024"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000331"/>
         <obo:IAO_0000115>A single species pathogen growth phenotype in which the frequency of occurrence of pathogen penetration begins later than normal when assessed for penetration ability on a given experimental substance/membrane.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:17:12Z</oboInOwl:creation_date>
@@ -2248,6 +2248,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000133">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000132"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000413"/>
         <obo:IAO_0000115>A single species molecular function phenotype in which the binding of one protein to another is abnormal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-13T13:32:39Z</oboInOwl:creation_date>
@@ -2425,6 +2426,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000145">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000143"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000413"/>
         <obo:IAO_0000115>A single organism (molecular function??) phenotype in which occurrence of DNA binding by a gene product is abnormal, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-25T13:33:07Z</oboInOwl:creation_date>
@@ -2526,6 +2528,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000152">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000142"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000413"/>
         <obo:IAO_0000115>A single organism (molecular function??) phenotype in which occurrence of RNA binding by a gene product is abnormal, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene.</obo:IAO_0000115>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-25T13:37:19Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>FYPO:0002132</oboInOwl:hasDbXref>
@@ -2594,14 +2597,14 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000157 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000157">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000003"/>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T12:11:36Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
         <rdfs:comment>This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
-        <rdfs:label xml:lang="en">motility phenotype</rdfs:label>
+        <rdfs:label>obsolete motility phenotype</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -2714,11 +2717,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000166 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000166">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000284"/>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T12:46:24Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">chlorosis phenotype</rdfs:label>
+        <rdfs:label>obsolete chlorosis phenotype</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -2754,11 +2757,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000169 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000169">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000166"/>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T12:56:11Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">chlorosis absent</rdfs:label>
+        <rdfs:label>obsolete chlorosis absent</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -2766,11 +2769,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000170 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000170">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000166"/>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T12:57:11Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">chlorosis present</rdfs:label>
+        <rdfs:label>obsolete chlorosis present</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -3141,7 +3144,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000200 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000200">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000216"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000512"/>
         <obo:IAO_0000115>A pathogen-host interaction phenotype in which leaves produce insufficient chlorophyll.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:28:13Z</oboInOwl:creation_date>
@@ -3225,6 +3228,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000207 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000207">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000039"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000040"/>
         <obo:IAO_0000115>A phenotype in which the balance of symbiotic mutualism has been disrupted compared to the normal interaction and the endosymbiont organism is able to show greater biomass within the host and/or the formation of visible disease formation symptoms compared to the normal interaction.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
@@ -3345,11 +3349,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000216 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000216">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000512"/>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:42:29Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">pathogen host interaction disease symptom phenotype</rdfs:label>
+        <rdfs:label>obsolete pathogen host interaction disease symptom phenotype</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -4119,7 +4123,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000274">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000509"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001018"/>
         <obo:IAO_0000115>A population phenotype in which the frequency of occurrence of asexual spore germination is increased.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-03T13:38:33Z</oboInOwl:creation_date>
@@ -4171,11 +4174,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000279 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000279">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000512"/>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-03T13:43:37Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">systemic phenotype</rdfs:label>
+        <rdfs:label>obsolete systemic phenotype</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -4821,6 +4824,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000330">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000409"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000413"/>
         <obo:IAO_0000115>A molecular function phenotype in which the observed rate of a specified transporter activity is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-19T13:43:13Z</oboInOwl:creation_date>
@@ -5205,6 +5209,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000361 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000361">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000024"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000331"/>
         <obo:IAO_0000115>A pathogen entry into host phenotype in which the frequency of occurrence of pathogen penetration into the body, tissues, or cells of the host organism begins later than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
@@ -5976,6 +5981,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000419 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000419">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000413"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000430"/>
         <obo:IAO_0000115>A single species molecular function phenotype in which occurrence of carbohydrate binding by a gene product (usually a protein) in a mutant is abnormal. The affected gene product may be encoded by the mutated gene, or by a different gene.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
@@ -6178,6 +6184,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000434 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000434">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000413"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000432"/>
         <obo:IAO_0000115>A single species molecular function phenotype in which the observed rate or other catalytic property of a specified catalytic activity is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
@@ -6812,7 +6819,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000498">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000496"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000929"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001147"/>
         <obo:IAO_0000115>A single organism phenotype in which the toxin biosynthetic process is abnormal (i.e. different than the wild type).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-18T13:04:53Z</oboInOwl:creation_date>
@@ -6839,7 +6846,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000500 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000500">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000498"/>
         <obo:IAO_0000115>A single organism phenotype in which the biosynthesis of deoxynivalenol is abnormal (i.e. different than the wild type).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-18T13:06:19Z</oboInOwl:creation_date>
@@ -12032,6 +12038,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000948">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000039"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000040"/>
         <obo:IAO_0000115>A pathogen host interaction where the mutualism phenotype is normal (i.e. the same as wild-type), and the wild-type interaction does not exhibit mutualism.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-24T11:02:11Z</oboInOwl:creation_date>
@@ -12059,12 +12066,12 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000950 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000950">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000332"/>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-24T12:00:40Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:comment>Note: to add asexual/sexual etc</rdfs:comment>
-        <rdfs:label xml:lang="en">pathogen spore germination on host phenotype</rdfs:label>
+        <rdfs:label>obsolete pathogen spore germination on host phenotype</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -12087,7 +12094,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000952 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000952">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000363"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000951"/>
         <obo:IAO_0000115>A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is abolished (it was present as is now absent).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-24T12:21:58Z</oboInOwl:creation_date>
@@ -12359,6 +12366,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000975">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000414"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000929"/>
         <obo:IAO_0000115>A single species population growth phenotype where the rate or extent of the increase in the number of unicellular organisms in the population (i.e organismal growth and reproduction) is greater than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-27T10:58:04Z</oboInOwl:creation_date>
@@ -13557,6 +13565,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001063">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001034"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001060"/>
         <obo:IAO_0000115>A single species cell phenotype in which the amount of RNA measured in a cell is too low to detect. Total RNA or a specific RNA, such as the mRNA transcribed from a gene of interest, may be affected.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-11T13:26:30Z</oboInOwl:creation_date>
@@ -13803,7 +13812,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001084 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001084">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000929"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000975"/>
         <obo:IAO_0000115>A single species population growth phenotype where the rate of the increase in the number of unicellular organisms in the population (i.e organismal growth and reproduction) is faster than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
@@ -14261,6 +14269,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001119">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001118"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001147"/>
         <obo:IAO_0000115>A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-11-06T13:02:19Z</oboInOwl:creation_date>
@@ -14441,7 +14450,8 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001133 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001133">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000287"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000285"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000929"/>
         <obo:IAO_0000115>A single species individual organism phenotype where the accumulation of melanin in a cell is increased.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-17T14:27:14Z</oboInOwl:creation_date>
@@ -14496,6 +14506,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001137 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001137">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000415"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000929"/>
         <obo:IAO_0000115>An individual organism cellular process phenotype in which the number of septa produced during hyphae formation is increased.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
@@ -14525,6 +14536,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001139">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000127"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001137"/>
         <obo:IAO_0000115>A single species phenotype where the frequency of occurrence of septum within an asexual spore is decreased.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-07T13:11:13Z</oboInOwl:creation_date>
@@ -14639,6 +14651,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001147">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000492"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000929"/>
         <obo:IAO_0000115>A single organism phenotype that affects the chemical reactions and pathways by which individual cells transform chemical substances. (GO:0044237)</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-04T13:53:21Z</oboInOwl:creation_date>

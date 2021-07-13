@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2021-05-13/phipo-simple.owl
+data-version: phipo/releases/2021-07-13/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
@@ -10,7 +10,7 @@ property_value: creation:date 2018-07-09T13:43:00Z xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
-property_value: owl:versionInfo "2021-05-13" xsd:string
+property_value: owl:versionInfo "2021-07-13" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -447,18 +447,18 @@ creation_date: 2018-07-10T11:53:05Z
 
 [Term]
 id: PHIPO:0000041
-name: normal motility phenotype
+name: obsolete normal motility phenotype
 namespace: single_species_phenotype
 comment: bacteria flagella aphid flight nematode wiggle fungi non-motile (apart from spores) also hosts
-is_a: PHIPO:0000157 ! motility phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-13T11:54:28Z
 
 [Term]
 id: PHIPO:0000042
-name: abnormal motility phenotype
+name: obsolete abnormal motility phenotype
 namespace: single_species_phenotype
-is_a: PHIPO:0000157 ! motility phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-13T11:54:54Z
 
@@ -634,7 +634,7 @@ name: asexual spores absent
 namespace: single_species_phenotype
 def: "A reproductive phenotype where asexual spores are absent (FAO:0000023)." []
 synonym: "conidia absent" EXACT []
-is_a: PHIPO:0000078 ! abnormal asexual sporulation
+is_a: PHIPO:0000082 ! abnormal number of asexual spores
 created_by: alaynecuzick
 creation_date: 2018-07-13T12:28:57Z
 
@@ -989,27 +989,25 @@ creation_date: 2018-07-13T13:43:30Z
 
 [Term]
 id: PHIPO:0000100
-name: increased motility
+name: obsolete increased motility
 namespace: single_species_phenotype
-is_a: PHIPO:0000042 ! abnormal motility phenotype
-is_a: PHIPO:0000929 ! abnormal cellular process
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-17T10:24:59Z
 
 [Term]
 id: PHIPO:0000101
-name: decreased motility
+name: obsolete decreased motility
 namespace: single_species_phenotype
-is_a: PHIPO:0000042 ! abnormal motility phenotype
-is_a: PHIPO:0000929 ! abnormal cellular process
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-17T10:25:07Z
 
 [Term]
 id: PHIPO:0000102
-name: loss of motility
+name: obsolete loss of motility
 namespace: single_species_phenotype
-is_a: PHIPO:0000042 ! abnormal motility phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-17T10:25:22Z
 
@@ -1106,6 +1104,7 @@ namespace: single_species_phenotype
 def: "A single species pathogen growth phenotype in which the frequency of occurrence of pathogen penetration begins later than normal when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
 is_a: PHIPO:0000024 ! pathogen penetration across the barrier present
+is_a: PHIPO:0000331 ! pathogen penetration into host present
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:17:12Z
 
@@ -1312,6 +1311,7 @@ namespace: single_species_phenotype
 def: "A single species molecular function phenotype in which the binding of one protein to another is abnormal. The relevant proteins may include the one encoded by the mutated gene, or may both be encoded by different genes." []
 xref: FYPO:0000704
 is_a: PHIPO:0000132 ! protein-protein interaction phenotype
+is_a: PHIPO:0000413 ! abnormal molecular function
 created_by: alaynecuzick
 creation_date: 2018-09-13T13:32:39Z
 
@@ -1441,6 +1441,7 @@ namespace: single_species_phenotype
 def: "A single organism (molecular function??) phenotype in which occurrence of DNA binding by a gene product is abnormal, when a gene or the bound DNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0000656
 is_a: PHIPO:0000143 ! DNA binding phenotype
+is_a: PHIPO:0000413 ! abnormal molecular function
 created_by: alaynecuzick
 creation_date: 2018-09-25T13:33:07Z
 
@@ -1514,6 +1515,7 @@ namespace: single_species_phenotype
 def: "A single organism (molecular function??) phenotype in which occurrence of RNA binding by a gene product is abnormal, when a gene or the bound RNA sequence is mutated. The affected gene product may be encoded by the mutated gene, or by a different gene." []
 xref: FYPO:0002132
 is_a: PHIPO:0000142 ! RNA binding phenotype
+is_a: PHIPO:0000413 ! abnormal molecular function
 creation_date: 2018-09-25T13:37:19Z
 
 [Term]
@@ -1558,12 +1560,12 @@ creation_date: 2018-09-25T13:38:31Z
 
 [Term]
 id: PHIPO:0000157
-name: motility phenotype
+name: obsolete motility phenotype
 namespace: single_species_phenotype
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
-is_a: PHIPO:0000003 ! tissue phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:11:36Z
 
@@ -1646,9 +1648,9 @@ creation_date: 2018-10-01T12:22:45Z
 
 [Term]
 id: PHIPO:0000166
-name: chlorosis phenotype
+name: obsolete chlorosis phenotype
 namespace: single_species_phenotype
-is_a: PHIPO:0000284 ! pigment phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:46:24Z
 
@@ -1674,17 +1676,17 @@ creation_date: 2018-10-01T12:56:01Z
 
 [Term]
 id: PHIPO:0000169
-name: chlorosis absent
+name: obsolete chlorosis absent
 namespace: single_species_phenotype
-is_a: PHIPO:0000166 ! chlorosis phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:56:11Z
 
 [Term]
 id: PHIPO:0000170
-name: chlorosis present
+name: obsolete chlorosis present
 namespace: single_species_phenotype
-is_a: PHIPO:0000166 ! chlorosis phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:57:11Z
 
@@ -1956,7 +1958,7 @@ id: PHIPO:0000200
 name: host chlorosis phenotype in presence of pathogen
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen-host interaction phenotype in which leaves produce insufficient chlorophyll." []
-is_a: PHIPO:0000216 ! pathogen host interaction disease symptom phenotype
+is_a: PHIPO:0000512 ! pathogen host interaction host tissue phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:28:13Z
 
@@ -2017,6 +2019,7 @@ name: loss of mutualism
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype in which the balance of symbiotic mutualism has been disrupted compared to the normal interaction and the endosymbiont organism is able to show greater biomass within the host and/or the formation of visible disease formation symptoms compared to the normal interaction." []
 subset: qc_extension_only
+is_a: PHIPO:0000039 ! normal mutualism
 is_a: PHIPO:0000040 ! abnormal mutualism
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:32:18Z
@@ -2097,9 +2100,9 @@ creation_date: 2018-10-01T13:33:18Z
 
 [Term]
 id: PHIPO:0000216
-name: pathogen host interaction disease symptom phenotype
+name: obsolete pathogen host interaction disease symptom phenotype
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000512 ! pathogen host interaction host tissue phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:42:29Z
 
@@ -2663,7 +2666,6 @@ namespace: single_species_phenotype
 def: "A population phenotype in which the frequency of occurrence of asexual spore germination is increased." []
 synonym: "increased conidia germination frequency" EXACT []
 is_a: PHIPO:0000509 ! population phenotype
-is_a: PHIPO:0001018 ! abnormal asexual spore germination
 created_by: alaynecuzick
 creation_date: 2018-10-03T13:38:33Z
 
@@ -2695,9 +2697,9 @@ creation_date: 2018-10-03T13:39:41Z
 
 [Term]
 id: PHIPO:0000279
-name: systemic phenotype
+name: obsolete systemic phenotype
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000512 ! pathogen host interaction host tissue phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-03T13:43:37Z
 
@@ -3149,6 +3151,7 @@ namespace: single_species_phenotype
 def: "A molecular function phenotype in which the observed rate of a specified transporter activity is abnormal." []
 xref: FYPO:0002116
 is_a: PHIPO:0000409 ! transporter activity phenotype
+is_a: PHIPO:0000413 ! abnormal molecular function
 created_by: alaynecuzick
 creation_date: 2018-10-19T13:43:13Z
 
@@ -3417,6 +3420,7 @@ name: delayed pathogen penetration into host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen entry into host phenotype in which the frequency of occurrence of pathogen penetration into the body, tissues, or cells of the host organism begins later than normal." []
 synonym: "delayed pathogen entry into host" EXACT []
+is_a: PHIPO:0000024 ! pathogen penetration across the barrier present
 is_a: PHIPO:0000331 ! pathogen penetration into host present
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:32:57Z
@@ -3959,6 +3963,7 @@ id: PHIPO:0000419
 name: abnormal carbohydrate binding
 namespace: single_species_phenotype
 def: "A single species molecular function phenotype in which occurrence of carbohydrate binding by a gene product (usually a protein) in a mutant is abnormal. The affected gene product may be encoded by the mutated gene, or by a different gene." []
+is_a: PHIPO:0000413 ! abnormal molecular function
 is_a: PHIPO:0000430 ! carbohydrate binding phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-10T14:13:02Z
@@ -4102,6 +4107,7 @@ name: abnormal catalytic activity
 namespace: single_species_phenotype
 def: "A single species molecular function phenotype in which the observed rate or other catalytic property of a specified catalytic activity is abnormal." []
 xref: FYPO:0000661
+is_a: PHIPO:0000413 ! abnormal molecular function
 is_a: PHIPO:0000432 ! catalytic activity phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-11T13:55:08Z
@@ -4564,7 +4570,7 @@ namespace: single_species_phenotype
 def: "A single organism phenotype in which the toxin biosynthetic process is abnormal (i.e. different than the wild type)." []
 comment: For logical defintions Do we want to make this species neutral and just add in DON at lowest child level and use CHEBI id CHEBI_10022 ## vomitoxin OR use fungi specific GO term GO_0106110 ## vomitoxin biosynthetic process??
 is_a: PHIPO:0000496 ! toxin biosynthetic process phenotype
-is_a: PHIPO:0000929 ! abnormal cellular process
+is_a: PHIPO:0001147 ! cellular metabolic process phenotype
 created_by: alaynecuzick
 creation_date: 2019-01-18T13:04:53Z
 
@@ -4582,7 +4588,6 @@ id: PHIPO:0000500
 name: obsolete abnormal biosynthesis of deoxynivalenol
 namespace: single_species_phenotype
 def: "A single organism phenotype in which the biosynthesis of deoxynivalenol is abnormal (i.e. different than the wild type)." []
-is_a: PHIPO:0000498 ! abnormal toxin biosynthetic process
 is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-01-18T13:06:19Z
@@ -8208,6 +8213,7 @@ namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction where the mutualism phenotype is normal (i.e. the same as wild-type), and the wild-type interaction does not exhibit mutualism." []
 subset: qc_do_not_annotate
 is_a: PHIPO:0000039 ! normal mutualism
+is_a: PHIPO:0000040 ! abnormal mutualism
 created_by: alaynecuzick
 creation_date: 2019-05-24T11:02:11Z
 
@@ -8223,10 +8229,10 @@ creation_date: 2019-05-24T11:54:37Z
 
 [Term]
 id: PHIPO:0000950
-name: pathogen spore germination on host phenotype
+name: obsolete pathogen spore germination on host phenotype
 namespace: pathogen_host_interaction_phenotype
 comment: Note: to add asexual/sexual etc
-is_a: PHIPO:0000332 ! pathogen colonization of host phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-05-24T12:00:40Z
 
@@ -8246,7 +8252,7 @@ id: PHIPO:0000952
 name: abolished pathogen growth within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is abolished (it was present as is now absent)." []
-is_a: PHIPO:0000363 ! absence of pathogen growth within host
+is_a: PHIPO:0000951 ! pathogen growth within host phenotype
 created_by: alaynecuzick
 creation_date: 2019-05-24T12:21:58Z
 
@@ -8444,6 +8450,7 @@ def: "A single species population growth phenotype where the rate or extent of t
 synonym: "faster growth" RELATED []
 xref: FYPO:0003937
 is_a: PHIPO:0000414 ! abnormal unicellular population growth
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2019-07-27T10:58:04Z
 
@@ -9311,6 +9318,7 @@ synonym: "transcripts absent from cell" EXACT []
 synonym: "undetectable cellular RNA level" EXACT []
 xref: FYPO:0001889
 is_a: PHIPO:0001034 ! substance absent from cell
+is_a: PHIPO:0001060 ! altered RNA level
 created_by: alaynecuzick
 creation_date: 2019-09-11T13:26:30Z
 
@@ -9487,7 +9495,6 @@ name: increased unicellular population growth rate
 namespace: single_species_phenotype
 def: "A single species population growth phenotype where the rate of the increase in the number of unicellular organisms in the population (i.e organismal growth and reproduction) is faster than normal." []
 xref: FYPO:0000636
-is_a: PHIPO:0000929 ! abnormal cellular process
 is_a: PHIPO:0000975 ! increased unicellular population growth
 created_by: alaynecuzick
 creation_date: 2019-10-01T09:17:27Z
@@ -9817,6 +9824,7 @@ namespace: single_species_phenotype
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, is abnormal." []
 xref: FYPO:0000775
 is_a: PHIPO:0001118 ! abnormal protein modification
+is_a: PHIPO:0001147 ! cellular metabolic process phenotype
 created_by: alaynecuzick
 creation_date: 2019-11-06T13:02:19Z
 
@@ -9944,7 +9952,8 @@ id: PHIPO:0001133
 name: increased cellular melanin accumulation
 namespace: single_species_phenotype
 def: "A single species individual organism phenotype where the accumulation of melanin in a cell is increased." []
-is_a: PHIPO:0000287 ! increased cellular pigment accumulation
+is_a: PHIPO:0000285 ! abnormal cellular pigment accumulation
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2019-12-17T14:27:14Z
 
@@ -9984,6 +9993,7 @@ name: increased number of hyphal septa
 namespace: single_species_phenotype
 def: "An individual organism cellular process phenotype in which the number of septa produced during hyphae formation is increased." []
 comment: This phenotype is related to division rather than growth and usually indicates that hyphae with more septa have an increased number of smaller individual cells. If experiments also indicate an increase or reduction in hyphal growth please coannotate in the hyphal growth branch.
+is_a: PHIPO:0000415 ! abnormal subcellular component
 is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2019-12-18T09:34:09Z
@@ -10006,6 +10016,7 @@ def: "A single species phenotype where the frequency of occurrence of septum wit
 synonym: "decreased number of conidial septum" EXACT []
 synonym: "decreased number of septum in conidia" EXACT []
 is_a: PHIPO:0000127 ! abnormal asexual spore morphology
+is_a: PHIPO:0001137 ! increased number of hyphal septa
 created_by: alaynecuzick
 creation_date: 2020-01-07T13:11:13Z
 
@@ -10091,6 +10102,7 @@ namespace: single_species_phenotype
 def: "A single organism phenotype that affects the chemical reactions and pathways by which individual cells transform chemical substances. (GO:0044237)" []
 synonym: "cellular metabolism phenotype" EXACT []
 is_a: PHIPO:0000492 ! metabolic process phenotype
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2020-03-04T13:53:21Z
 
@@ -11101,25 +11113,32 @@ creation_date: 2018-10-12T13:24:02Z
 
 [Typedef]
 id: RO:0000052
+name: characteristic of
 name: inheres in
+def: "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence." []
 def: "a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence" []
+comment: Note that this relation was previously called "inheres in", but was changed to be called "characteristic of" because BFO2 uses "inheres in" in a more restricted fashion. This relation differs from BFO2:inheres_in in two respects: (1) it does not impose a range constraint, and thus it allows qualities of processes, as well as of information entities, whereas BFO2 restricts inheres_in to only apply to independent continuants (2) it is declared functional, i.e. something can only be a characteristic of one thing.
 property_value: IAO:0000111 "inheres in" xsd:string
 property_value: IAO:0000112 "this fragility inheres in this vase" xsd:string
+property_value: IAO:0000112 "this fragility is a characteristic of this vase" xsd:string
 property_value: IAO:0000112 "this red color inheres in this apple" xsd:string
+property_value: IAO:0000112 "this red color is a characteristic of this apple" xsd:string
 property_value: IAO:0000116 "A dependent inheres in its bearer at all times for which the dependent exists." xsd:string
 property_value: IAO:0000118 "inheres_in" xsd:string
 property_value: RO:0001900 RO:0001901
-is_a: RO:0002314 ! inheres in part of
+is_functional: true
+is_a: RO:0002314 ! characteristic of part of
 
 [Typedef]
 id: RO:0002314
-name: inheres in part of
-def: "q inheres in part of w if and only if there exists some p such that q inheres in p and p part of w." []
-property_value: IAO:0000116 "Because part_of is transitive, inheres in is a sub-relation of inheres in part of" xsd:string
+name: characteristic of part of
+def: "q characteristic of part of w if and only if there exists some p such that q inheres in p and p part of w." []
+property_value: IAO:0000116 "Because part_of is transitive, inheres in is a sub-relation of characteristic of part of" xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000118 "inheres in part of" xsd:string
 property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20064205
 property_value: RO:0001900 RO:0001901
-property_value: seeAlso "defining-property-chains-involving-reflexivity"
+property_value: seeAlso http://purl.obolibrary.org/obo/ro/docs/reflexivity/
 
 [Typedef]
 id: RO:0002503
@@ -11145,9 +11164,8 @@ name: has_part
 namespace: chebi_ontology
 namespace: external
 namespace: quality
+namespace: uberon
 def: "a core relation that holds between a whole and its part" []
-def: "Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2." [PATOC:CJM]
-comment: We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'.
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
 subset: http://purl.obolibrary.org/obo/valid_for_gocam
@@ -11157,6 +11175,7 @@ property_value: IAO:0000112 "my body has part my brain (continuant parthood, two
 property_value: IAO:0000112 "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)" xsd:string
 property_value: IAO:0000112 "this year has part this day (occurrent parthood)" xsd:string
 property_value: IAO:0000116 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part." xsd:string
+property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/" xsd:string
 property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
 property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)\n\nA continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'." xsd:string
 property_value: IAO:0000118 "has_part" xsd:string

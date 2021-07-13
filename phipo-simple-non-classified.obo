@@ -1,12 +1,12 @@
 format-version: 1.2
-data-version: phipo/releases/2021-05-13/phipo-simple-non-classified.owl
+data-version: phipo/releases/2021-07-13/phipo-simple-non-classified.owl
 ontology: phipo/phipo-simple-non-classified
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
-property_value: owl:versionInfo "2021-05-13" xsd:string
+property_value: owl:versionInfo "2021-07-13" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -443,18 +443,18 @@ creation_date: 2018-07-10T11:53:05Z
 
 [Term]
 id: PHIPO:0000041
-name: normal motility phenotype
+name: obsolete normal motility phenotype
 namespace: single_species_phenotype
 comment: bacteria flagella aphid flight nematode wiggle fungi non-motile (apart from spores) also hosts
-is_a: PHIPO:0000157 ! motility phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-13T11:54:28Z
 
 [Term]
 id: PHIPO:0000042
-name: abnormal motility phenotype
+name: obsolete abnormal motility phenotype
 namespace: single_species_phenotype
-is_a: PHIPO:0000157 ! motility phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-13T11:54:54Z
 
@@ -985,25 +985,25 @@ creation_date: 2018-07-13T13:43:30Z
 
 [Term]
 id: PHIPO:0000100
-name: increased motility
+name: obsolete increased motility
 namespace: single_species_phenotype
-is_a: PHIPO:0000042 ! abnormal motility phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-17T10:24:59Z
 
 [Term]
 id: PHIPO:0000101
-name: decreased motility
+name: obsolete decreased motility
 namespace: single_species_phenotype
-is_a: PHIPO:0000042 ! abnormal motility phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-17T10:25:07Z
 
 [Term]
 id: PHIPO:0000102
-name: loss of motility
+name: obsolete loss of motility
 namespace: single_species_phenotype
-is_a: PHIPO:0000042 ! abnormal motility phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-07-17T10:25:22Z
 
@@ -1551,12 +1551,12 @@ creation_date: 2018-09-25T13:38:31Z
 
 [Term]
 id: PHIPO:0000157
-name: motility phenotype
+name: obsolete motility phenotype
 namespace: single_species_phenotype
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
-is_a: PHIPO:0000003 ! tissue phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:11:36Z
 
@@ -1639,9 +1639,9 @@ creation_date: 2018-10-01T12:22:45Z
 
 [Term]
 id: PHIPO:0000166
-name: chlorosis phenotype
+name: obsolete chlorosis phenotype
 namespace: single_species_phenotype
-is_a: PHIPO:0000284 ! pigment phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:46:24Z
 
@@ -1667,17 +1667,17 @@ creation_date: 2018-10-01T12:56:01Z
 
 [Term]
 id: PHIPO:0000169
-name: chlorosis absent
+name: obsolete chlorosis absent
 namespace: single_species_phenotype
-is_a: PHIPO:0000166 ! chlorosis phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:56:11Z
 
 [Term]
 id: PHIPO:0000170
-name: chlorosis present
+name: obsolete chlorosis present
 namespace: single_species_phenotype
-is_a: PHIPO:0000166 ! chlorosis phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T12:57:11Z
 
@@ -1949,7 +1949,7 @@ id: PHIPO:0000200
 name: host chlorosis phenotype in presence of pathogen
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen-host interaction phenotype in which leaves produce insufficient chlorophyll." []
-is_a: PHIPO:0000216 ! pathogen host interaction disease symptom phenotype
+is_a: PHIPO:0000512 ! pathogen host interaction host tissue phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:28:13Z
 
@@ -2090,9 +2090,9 @@ creation_date: 2018-10-01T13:33:18Z
 
 [Term]
 id: PHIPO:0000216
-name: pathogen host interaction disease symptom phenotype
+name: obsolete pathogen host interaction disease symptom phenotype
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000512 ! pathogen host interaction host tissue phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:42:29Z
 
@@ -2681,9 +2681,9 @@ creation_date: 2018-10-03T13:39:41Z
 
 [Term]
 id: PHIPO:0000279
-name: systemic phenotype
+name: obsolete systemic phenotype
 namespace: pathogen_host_interaction_phenotype
-is_a: PHIPO:0000512 ! pathogen host interaction host tissue phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2018-10-03T13:43:37Z
 
@@ -8203,10 +8203,10 @@ creation_date: 2019-05-24T11:54:37Z
 
 [Term]
 id: PHIPO:0000950
-name: pathogen spore germination on host phenotype
+name: obsolete pathogen spore germination on host phenotype
 namespace: pathogen_host_interaction_phenotype
 comment: Note: to add asexual/sexual etc
-is_a: PHIPO:0000332 ! pathogen colonization of host phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-05-24T12:00:40Z
 
