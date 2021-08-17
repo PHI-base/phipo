@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2021-08-16/phipo-simple.owl
+data-version: phipo/releases/2021-08-17/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -11,7 +11,7 @@ property_value: creation:date 2018-07-09T13:43:00Z xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
-property_value: owl:versionInfo "2021-08-16" xsd:string
+property_value: owl:versionInfo "2021-08-17" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -1959,7 +1959,7 @@ id: PHIPO:0000200
 name: host chlorosis phenotype in presence of pathogen
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen-host interaction phenotype in which leaves produce insufficient chlorophyll." []
-is_a: PHIPO:0000512 ! pathogen host interaction host tissue phenotype
+is_a: PHIPO:0000001 ! pathogen host interaction phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:28:13Z
 
@@ -4231,7 +4231,7 @@ comment: This is a high-level term whose primary purpose is to organize terms be
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
 synonym: "host necrotic lesion with pathogen phenotype" EXACT []
-is_a: PHIPO:0000512 ! pathogen host interaction host tissue phenotype
+is_a: PHIPO:0000001 ! pathogen host interaction phenotype
 created_by: alaynecuzick
 creation_date: 2018-12-18T12:46:14Z
 
@@ -4705,14 +4705,14 @@ creation_date: 2019-02-11T12:28:03Z
 
 [Term]
 id: PHIPO:0000512
-name: pathogen host interaction host tissue phenotype
+name: obsolete pathogen host interaction host tissue phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype that is observed at the level of a host tissue (eg leaf, inflorescence, ear or kidney)." []
 comment: This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.
 subset: qc_do_not_annotate
 subset: qc_do_not_manually_annotate
-is_a: PHIPO:0000001 ! pathogen host interaction phenotype
 property_value: created:by "alaynecuzick" xsd:string
+is_obsolete: true
 creation_date: 2019-02-11T12:41:00Z
 
 [Term]
@@ -8675,7 +8675,7 @@ id: PHIPO:0000998
 name: pathogen morphology phenotype during colonization of host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype which affects the pathogen morphology during host colonization. This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
-is_a: PHIPO:0001007 ! pathogen colonization of host morphology phenotype
+is_a: PHIPO:0000001 ! pathogen host interaction phenotype
 created_by: alaynecuzick
 creation_date: 2019-08-10T13:48:27Z
 
@@ -8759,10 +8759,10 @@ creation_date: 2019-08-10T13:58:30Z
 
 [Term]
 id: PHIPO:0001007
-name: pathogen colonization of host morphology phenotype
+name: obsolete pathogen colonization of host morphology phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype which affects the morphology of the pathogen or the host during pathogen colonization of the host. This relates to the pathogen colonization of the body, tissues, or cells of the host organism." []
-is_a: PHIPO:0000332 ! pathogen colonization of host phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-08-10T14:19:52Z
 
@@ -9352,10 +9352,10 @@ creation_date: 2019-09-11T13:30:41Z
 
 [Term]
 id: PHIPO:0001067
-name: pathogen host interaction organism level phenotype
+name: obsolete pathogen host interaction organism level phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype that is observed at the level of an individual organism (eg a worm host)." []
-is_a: PHIPO:0000001 ! pathogen host interaction phenotype
+is_obsolete: true
 created_by: alaynecuzick
 creation_date: 2019-09-20T11:03:58Z
 
@@ -9387,7 +9387,7 @@ id: PHIPO:0001070
 name: host organism viability with pathogen phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction organism level phenotype which affects the viability of an individual host organism in the presence of a pathogen." []
-is_a: PHIPO:0001067 ! pathogen host interaction organism level phenotype
+is_a: PHIPO:0000001 ! pathogen host interaction phenotype
 created_by: alaynecuzick
 creation_date: 2019-09-20T11:19:37Z
 
@@ -9478,7 +9478,7 @@ id: PHIPO:0001080
 name: altered pathogen pigment accumulation within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the accumulation of pathogen pigmentation (coloring matter) usually present during infection differs from normal." []
-is_a: PHIPO:0001067 ! pathogen host interaction organism level phenotype
+is_a: PHIPO:0000001 ! pathogen host interaction phenotype
 created_by: alaynecuzick
 creation_date: 2019-09-27T11:19:13Z
 
@@ -10233,7 +10233,6 @@ name: pathogen tissue to tissue migration within host phenotype
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction colonization phenotype which affects the directional tissue to tissue movement of the pathogen within the host organism (GO:0044001)." []
 is_a: PHIPO:0000332 ! pathogen colonization of host phenotype
-is_a: PHIPO:0000512 ! pathogen host interaction host tissue phenotype
 created_by: alaynecuzick
 creation_date: 2020-03-27T18:25:20Z
 
