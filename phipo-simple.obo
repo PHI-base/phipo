@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2021-08-17/phipo-simple.owl
+data-version: phipo/releases/2022-06-15/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -11,7 +11,7 @@ property_value: creation:date 2018-07-09T13:43:00Z xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
-property_value: owl:versionInfo "2021-08-17" xsd:string
+property_value: owl:versionInfo "2022-06-15" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -11138,6 +11138,25 @@ def: "A pathogen host interaction phenotype where the development of a host stru
 is_a: PHIPO:0000001 ! pathogen host interaction phenotype
 created_by: alaynecuzick
 creation_date: 2021-08-16T12:59:12Z
+
+[Term]
+id: PHIPO:0001251
+name: host defense-induced protein present
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the host protein usually present during infection is normal (i.e. indistinguishable from wild type)." []
+synonym: "host protein involved in a pathogen interaction present" EXACT []
+is_a: PHIPO:0001196 ! host defense-induced substance level phenotype
+created_by: alaynecuzick
+creation_date: 2022-06-15T11:06:24Z
+
+[Term]
+id: PHIPO:0001252
+name: decreased pathogen tissue to tissue migration within host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction colonization phenotype in which the ability of the pathogen to move directionally from tissue to tissue within the host organism is decreased." []
+is_a: PHIPO:0001159 ! pathogen tissue to tissue migration within host phenotype
+created_by: alaynecuzick
+creation_date: 2022-06-15T11:13:29Z
 
 [Typedef]
 id: PHIPO:0000304
