@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2022-06-15/phipo-simple.owl
+data-version: phipo/releases/2022-06-20/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -11,7 +11,7 @@ property_value: creation:date 2018-07-09T13:43:00Z xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
-property_value: owl:versionInfo "2022-06-15" xsd:string
+property_value: owl:versionInfo "2022-06-20" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -3169,6 +3169,7 @@ id: PHIPO:0000331
 name: pathogen penetration into host present
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen entry into host phenotype in which pathogen penetration into the body, tissues, or cells of the host organism is present." []
+synonym: "pathogen invasion of host present" RELATED []
 is_a: PHIPO:0000949 ! pathogen entry into host phenotype
 created_by: alaynecuzick
 creation_date: 2018-10-29T15:59:22Z
@@ -3380,6 +3381,7 @@ alt_id: PHIPO:0000357
 def: "A pathogen entry into host phenotype in which pathogen penetration into the body, tissues, or cells of the host organism is absent." []
 synonym: "abolished pathogen entry into host" EXACT []
 synonym: "abolished pathogen penetration into host" RELATED []
+synonym: "pathogen invasion of host absent" RELATED []
 is_a: PHIPO:0000949 ! pathogen entry into host phenotype
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:26:18Z
@@ -3409,6 +3411,7 @@ name: decreased pathogen penetration into host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen entry into host phenotype in which the frequency of occurrence of pathogen penetration into the body, tissues, or cells of the host organism is decreased." []
 synonym: "decreased pathogen entry into host" EXACT []
+synonym: "decreased pathogen invasion of host" RELATED []
 is_a: PHIPO:0000331 ! pathogen penetration into host present
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:31:26Z
@@ -3419,6 +3422,7 @@ name: increased pathogen penetration into host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen entry into host phenotype in which the frequency of occurrence of pathogen penetration into the body, tissues, or cells of the host organism is increased." []
 synonym: "increased pathogen entry into host" EXACT []
+synonym: "increased pathogen invasion of host" RELATED []
 is_a: PHIPO:0000331 ! pathogen penetration into host present
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:32:32Z
@@ -3429,6 +3433,7 @@ name: delayed pathogen penetration into host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen entry into host phenotype in which the frequency of occurrence of pathogen penetration into the body, tissues, or cells of the host organism begins later than normal." []
 synonym: "delayed pathogen entry into host" EXACT []
+synonym: "delayed pathogen invasion of host" RELATED []
 is_a: PHIPO:0000024 ! pathogen penetration across the barrier present
 is_a: PHIPO:0000331 ! pathogen penetration into host present
 created_by: alaynecuzick
@@ -3440,6 +3445,7 @@ name: premature pathogen penetration into host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen entry into host phenotype in which the frequency of occurrence of pathogen penetration into the body, tissues, or cells of the host organism begins sooner than normal." []
 synonym: "premature pathogen entry into host" EXACT []
+synonym: "premature pathogen invasion of host" RELATED []
 is_a: PHIPO:0000331 ! pathogen penetration into host present
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:33:34Z
@@ -11157,6 +11163,63 @@ def: "A pathogen host interaction colonization phenotype in which the ability of
 is_a: PHIPO:0001159 ! pathogen tissue to tissue migration within host phenotype
 created_by: alaynecuzick
 creation_date: 2022-06-15T11:13:29Z
+
+[Term]
+id: PHIPO:0001253
+name: host immune system inflammatory response activated by pathogen present
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the host immune system inflammatory response during pathogen infection is present. (GO:0006954 inflammatory response)." []
+synonym: "inflammation present" EXACT []
+is_a: PHIPO:0001167 ! pathogen modulation of host immune system process phenotype
+created_by: alaynecuzick
+creation_date: 2022-06-17T11:09:50Z
+
+[Term]
+id: PHIPO:0001254
+name: decreased host immune inflammatory response with pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the host immune system inflammatory response during pathogen infection occurs to a lesser extent than normal. (GO:0006954 inflammatory response)." []
+synonym: "decreased inflammation" EXACT []
+is_a: PHIPO:0001253 ! host immune system inflammatory response activated by pathogen present
+created_by: alaynecuzick
+creation_date: 2022-06-17T11:49:45Z
+
+[Term]
+id: PHIPO:0001255
+name: increased host immune inflammatory response with pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the host immune system inflammatory response during pathogen infection occurs to a greater extent than normal. (GO:0006954 inflammatory response)." []
+synonym: "increased inflammation" EXACT []
+is_a: PHIPO:0001253 ! host immune system inflammatory response activated by pathogen present
+created_by: alaynecuzick
+creation_date: 2022-06-20T09:58:39Z
+
+[Term]
+id: PHIPO:0001256
+name: host defense-related protein involved in a pathogen interaction present
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the host defense-related protein usually present during infection is normal (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001251 ! host defense-induced protein present
+created_by: alaynecuzick
+creation_date: 2022-06-20T10:03:29Z
+
+[Term]
+id: PHIPO:0001257
+name: decreased level of host defense-induced protein
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the level of host protein usually present during infection is lower than normal." []
+is_a: PHIPO:0001196 ! host defense-induced substance level phenotype
+created_by: alaynecuzick
+creation_date: 2022-06-20T10:21:16Z
+
+[Term]
+id: PHIPO:0001258
+name: decreased expression of a host defense-related protein involved in a pathogen interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the level of host defense-related protein usually present during infection is lower than normal." []
+is_a: PHIPO:0001257 ! decreased level of host defense-induced protein
+created_by: alaynecuzick
+creation_date: 2022-06-20T10:23:47Z
 
 [Typedef]
 id: PHIPO:0000304
