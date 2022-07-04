@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2022-06-20/phipo-simple.owl
+data-version: phipo/releases/2022-07-04/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -11,7 +11,7 @@ property_value: creation:date 2018-07-09T13:43:00Z xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
-property_value: owl:versionInfo "2022-06-20" xsd:string
+property_value: owl:versionInfo "2022-07-04" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -8635,7 +8635,7 @@ name: increased level of host defense-induced protein
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the level of host protein usually present during infection is higher than normal." []
 synonym: "increased level of host protein involved in a pathogen host interaction" EXACT []
-is_a: PHIPO:0001196 ! host defense-induced substance level phenotype
+is_a: PHIPO:0001262 ! host defense-induced protein level phenotype
 created_by: alaynecuzick
 creation_date: 2019-08-10T12:22:12Z
 
@@ -9691,7 +9691,7 @@ name: increased level of host defense-induced RNA
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the level of host RNA usually present during infection is higher than normal." []
 synonym: "increased level of host RNA involved in a pathogen interaction" EXACT []
-is_a: PHIPO:0001196 ! host defense-induced substance level phenotype
+is_a: PHIPO:0001263 ! host defense-induced RNA level phenotype
 created_by: alaynecuzick
 creation_date: 2019-10-07T13:26:33Z
 
@@ -10351,7 +10351,7 @@ name: decreased level of host defense-induced RNA
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the level of host RNA usually present during infection is lower than normal." []
 synonym: "decreased level of host RNA involved in a pathogen interaction" EXACT []
-is_a: PHIPO:0001196 ! host defense-induced substance level phenotype
+is_a: PHIPO:0001263 ! host defense-induced RNA level phenotype
 created_by: alaynecuzick
 creation_date: 2020-05-12T13:21:58Z
 
@@ -10944,7 +10944,7 @@ name: host defense-induced RNA present
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the host RNA usually present during infection is normal (i.e. indistinguishable from wild type)." []
 synonym: "host RNA involved in a pathogen interaction present" EXACT []
-is_a: PHIPO:0001196 ! host defense-induced substance level phenotype
+is_a: PHIPO:0001263 ! host defense-induced RNA level phenotype
 created_by: alaynecuzick
 creation_date: 2021-03-02T14:55:22Z
 
@@ -11151,7 +11151,7 @@ name: host defense-induced protein present
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the host protein usually present during infection is normal (i.e. indistinguishable from wild type)." []
 synonym: "host protein involved in a pathogen interaction present" EXACT []
-is_a: PHIPO:0001196 ! host defense-induced substance level phenotype
+is_a: PHIPO:0001262 ! host defense-induced protein level phenotype
 created_by: alaynecuzick
 creation_date: 2022-06-15T11:06:24Z
 
@@ -11208,7 +11208,7 @@ id: PHIPO:0001257
 name: decreased level of host defense-induced protein
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction phenotype, in which the level of host protein usually present during infection is lower than normal." []
-is_a: PHIPO:0001196 ! host defense-induced substance level phenotype
+is_a: PHIPO:0001262 ! host defense-induced protein level phenotype
 created_by: alaynecuzick
 creation_date: 2022-06-20T10:21:16Z
 
@@ -11220,6 +11220,83 @@ def: "A pathogen host interaction phenotype, in which the level of host defense-
 is_a: PHIPO:0001257 ! decreased level of host defense-induced protein
 created_by: alaynecuzick
 creation_date: 2022-06-20T10:23:47Z
+
+[Term]
+id: PHIPO:0001259
+name: host cell viability with pathogen phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction cell level phenotype which affects the viability of a host cell in the presence of a pathogen." []
+synonym: "cytotoxicity phenotype" BROAD []
+is_a: PHIPO:0000510 ! pathogen host interaction cell phenotype
+created_by: alaynecuzick
+creation_date: 2022-07-01T09:19:41Z
+
+[Term]
+id: PHIPO:0001260
+name: host cell viable with pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A host cell viability phenotype where the host cell survives in the presence of the pathogen." []
+is_a: PHIPO:0001259 ! host cell viability with pathogen phenotype
+created_by: alaynecuzick
+creation_date: 2022-07-01T09:24:19Z
+
+[Term]
+id: PHIPO:0001261
+name: host cell inviable with pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A host cell viability phenotype where the host cell death is accelerated by the pathogen." []
+is_a: PHIPO:0001259 ! host cell viability with pathogen phenotype
+created_by: alaynecuzick
+creation_date: 2022-07-01T09:27:27Z
+
+[Term]
+id: PHIPO:0001262
+name: host defense-induced protein level phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, which affects the level of a host produced protein during infection." []
+is_a: PHIPO:0001196 ! host defense-induced substance level phenotype
+created_by: alaynecuzick
+creation_date: 2022-07-01T09:51:01Z
+
+[Term]
+id: PHIPO:0001263
+name: host defense-induced RNA level phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, which affects the level of a host produced RNA during infection." []
+is_a: PHIPO:0001196 ! host defense-induced substance level phenotype
+created_by: alaynecuzick
+creation_date: 2022-07-01T09:59:49Z
+
+[Term]
+id: PHIPO:0001264
+name: host physiological process affected by pathogen phenotype
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which a pathogen effects a change in the physiological processes of its host organism." []
+is_a: PHIPO:0001173 ! pathogen modulation of host process phenotype
+created_by: alaynecuzick
+creation_date: 2022-07-04T08:38:22Z
+
+[Term]
+id: PHIPO:0001265
+name: host hemorrhage with pathogen present
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which host bleeding occurs during pathogen infection (MP:0001914 hemorrhage)." []
+synonym: "host bleeding with pathogen present" EXACT []
+synonym: "host haemorrhage with pathogen present" EXACT []
+is_a: PHIPO:0001264 ! host physiological process affected by pathogen phenotype
+created_by: alaynecuzick
+creation_date: 2022-07-04T08:41:51Z
+
+[Term]
+id: PHIPO:0001266
+name: increased host hemorrhage with pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which the host bleeding during pathogen infection occurs to a greater extent than normal (MP:0001914 hemorrhage)." []
+synonym: "increased host bleeding with pathogen" EXACT []
+synonym: "increased host haemorrhage with pathogen" EXACT []
+is_a: PHIPO:0001265 ! host hemorrhage with pathogen present
+created_by: alaynecuzick
+creation_date: 2022-07-04T08:45:10Z
 
 [Typedef]
 id: PHIPO:0000304
