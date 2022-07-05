@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2022-07-04/phipo-simple.owl
+data-version: phipo/releases/2022-07-05/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -11,7 +11,7 @@ property_value: creation:date 2018-07-09T13:43:00Z xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
-property_value: owl:versionInfo "2022-07-04" xsd:string
+property_value: owl:versionInfo "2022-07-05" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -11306,6 +11306,24 @@ def: "A pathogen host interaction phenotype, which affects the level of pathogen
 is_a: PHIPO:0001197 ! level of pathogen produced substance within host phenotype
 created_by: alaynecuzick
 creation_date: 2022-07-04T08:58:03Z
+
+[Term]
+id: PHIPO:0001268
+name: presence of host gall during pathogen invasion
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the presence of a pathogen (or symbiont) has resulted in the abnormal growth of the host tissue, forming a plant gall (BTO:0005833 plant gall)." []
+is_a: PHIPO:0001006 ! abnormal host morphology during pathogen invasion
+created_by: alaynecuzick
+creation_date: 2022-07-05T12:52:20Z
+
+[Term]
+id: PHIPO:0001269
+name: decreased number of host galls during pathogen invasion
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the presence of a pathogen (or symbiont) has resulted in a decreased number of plant galls (BTO:0005833 plant gall)." []
+is_a: PHIPO:0001268 ! presence of host gall during pathogen invasion
+created_by: alaynecuzick
+creation_date: 2022-07-05T12:57:02Z
 
 [Typedef]
 id: PHIPO:0000304
