@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2022-07-27/phipo-simple.owl
+data-version: phipo/releases/2022-07-29/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -11,7 +11,7 @@ property_value: creation:date 2018-07-09T13:43:00Z xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
-property_value: owl:versionInfo "2022-07-27" xsd:string
+property_value: owl:versionInfo "2022-07-29" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -2311,6 +2311,7 @@ namespace: single_species_phenotype
 def: "A single organism phenotype in which the localization of a protein in a cell is abnormal. A protein may be observed in a place where it is not normally found, absent from a place where it is normally found, or both." []
 xref: FYPO:0001370
 is_a: PHIPO:0000237 ! protein localization phenotype
+is_a: PHIPO:0000929 ! abnormal cellular process
 is_a: PHIPO:0001094 ! abnormal localization
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:14:02Z
@@ -2363,7 +2364,6 @@ def: "A single organism phenotype in which the localization of a protein to the 
 comment: Encompasses both presence of proteins not normally found in the nucleus and decreased levels or absence of proteins normally found there, and describes defects in a localization process. We recommend noting which protein(s) were used in the assay when annotating to this term.
 xref: FYPO:0002956
 is_a: PHIPO:0000239 ! abnormal protein localization
-is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:16:37Z
 
@@ -2552,7 +2552,6 @@ namespace: single_species_phenotype
 def: "A single organism cellular process phenotype in which endocytosis is abnormal. Endocytosis is a vesicle-mediated transport process in which cells take up external materials or membrane constituents by the invagination of a small region of the plasma membrane to form a new membrane-bounded vesicle. A phenotype may affect endocytosis of all cargoes, or of specific cargo such as a particular protein." []
 xref: FYPO:0003886
 is_a: PHIPO:0000257 ! abnormal transport
-is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:22:57Z
 
@@ -2675,6 +2674,7 @@ namespace: single_species_phenotype
 def: "A population phenotype in which the frequency of occurrence of asexual spore germination is increased." []
 synonym: "increased conidia germination frequency" EXACT []
 is_a: PHIPO:0000509 ! population phenotype
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2018-10-03T13:38:33Z
 
@@ -8888,6 +8888,7 @@ namespace: single_species_phenotype
 def: "A cellular process phenotype in which the rate, or speed, of asexual spore germination is decreased." []
 synonym: "decreased rate of conidia germination" EXACT []
 xref: FYPO:0000582
+is_a: PHIPO:0000929 ! abnormal cellular process
 is_a: PHIPO:0001018 ! abnormal asexual spore germination
 created_by: alaynecuzick
 creation_date: 2019-08-17T13:01:16Z
@@ -11394,6 +11395,13 @@ subset: ro-eco
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20064205
 property_value: IAO:0000232 "This relation is intended to be used in combination with PATO, to be able to refine PATO quality classes using modifiers such as 'abnormal' and 'normal'. It has yet to be formally aligned into an ontological framework; it's not clear what the ontological status of the \"modifiers\" are." xsd:string
+
+[Typedef]
+id: dc-creator
+name: creator
+namespace: uberon
+xref: http://purl.org/dc/elements/1.1/creator
+is_metadata_tag: true
 
 [Typedef]
 id: has_part

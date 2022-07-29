@@ -12,13 +12,13 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/phipo/phipo-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2021-07-14/phipo-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2022-07-29/phipo-simple.owl"/>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-09T13:43:00Z</obo:creation_date>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology of species-neutral phenotypes observed in pathogen-host interactions.</dc:description>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathogen Host Interactions Phenotype Ontology</dc:title>
         <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://creativecommons.org/licenses/by/3.0/</terms:license>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-07-14</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-07-29</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -195,6 +195,19 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <oboInOwl:hasDbXref>http://purl.org/dc/elements/1.1/creator</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>dc-creator</oboInOwl:id>
+        <oboInOwl:is_metadata_tag rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oboInOwl:is_metadata_tag>
+        <oboInOwl:shorthand>dc-creator</oboInOwl:shorthand>
+        <rdfs:label>creator</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/description -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
@@ -304,6 +317,12 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://www.geneontology.org/formats/oboInOwl#is_cyclic -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#is_cyclic"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#is_metadata_tag -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#is_metadata_tag"/>
     
 
 
@@ -3117,7 +3136,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:hasRelatedSynonym>delayed host necrotic cell death</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>delayed presence of host lesion</oboInOwl:hasRelatedSynonym>
         <rdfs:comment>This term is to be used for host protection against the pathogen.</rdfs:comment>
-        <rdfs:label xml:lang="en">delayed host-defence induced lesion formation by host hypersensitive response</rdfs:label>
+        <rdfs:label xml:lang="en">delayed host-defense induced lesion formation by host hypersensitive response</rdfs:label>
     </owl:Class>
     
 
@@ -3242,7 +3261,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000200 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000200">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000512"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
         <obo:IAO_0000115>A pathogen-host interaction phenotype in which leaves produce insufficient chlorophyll.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:28:13Z</oboInOwl:creation_date>
@@ -3491,6 +3510,8 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of pathogen produced deoxynivalenol usually present during infection is lower than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:44:10Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>decreased level of pathogen DON within host</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>decreased level of pathogen vomitoxin within host</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">decreased level of pathogen deoxynivalenol within host</rdfs:label>
     </owl:Class>
@@ -3615,6 +3636,8 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of pathogen produced deoxynivalenol usually present during infection is higher than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T09:18:35Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>increased level of pathogen DON within host</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>increased level of pathogen vomitoxin within host</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">increased level of pathogen deoxynivalenol within host</rdfs:label>
     </owl:Class>
@@ -3624,10 +3647,12 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000233 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000233">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001197"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001043"/>
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the pathogen produced deoxynivalenol usually present during infection is present as normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T09:19:27Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>pathogen DON within host present</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>pathogen vomitoxin within host present</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>presence of pathogen deoxynivalenol within host</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">pathogen deoxynivalenol within host present</rdfs:label>
@@ -3642,6 +3667,8 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the pathogen produced deoxynivalenol usually present during infection is absent or at a level too low to detect.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T09:20:17Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>pathogen DON within host absent</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>pathogen vomitoxin within host absent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>absence of pathogen deoxynivalenol within host</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">pathogen deoxynivalenol within host absent</rdfs:label>
@@ -3669,16 +3696,16 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000236 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000236">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000510"/>
         <obo:IAO_0000115>A pathogen host interaction phenotype that affects the localization of a structure or substance in a cell.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:13:04Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>FYPO:0000138</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
+        <rdfs:comment>Note that this term was reinstated from obsolete.</rdfs:comment>
         <rdfs:comment>This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
-        <rdfs:label>obsolete pathogen host interaction localization phenotype</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <rdfs:label>pathogen host interaction localization phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -3721,6 +3748,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000239">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000237"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000929"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001094"/>
         <obo:IAO_0000115>A single organism phenotype in which the localization of a protein in a cell is abnormal. A protein may be observed in a place where it is not normally found, absent from a place where it is normally found, or both.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
@@ -3735,7 +3763,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000240 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000240">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000510"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000236"/>
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the localization of a pathogen protein in a host cell differs from normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:14:05Z</oboInOwl:creation_date>
@@ -3792,7 +3820,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000244">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000239"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000929"/>
         <obo:IAO_0000115>A single organism phenotype in which the localization of a protein to the nucleus is abnormal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:16:37Z</oboInOwl:creation_date>
@@ -4050,7 +4077,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000261">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000257"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000929"/>
         <obo:IAO_0000115>A single organism cellular process phenotype in which endocytosis is abnormal. Endocytosis is a vesicle-mediated transport process in which cells take up external materials or membrane constituents by the invagination of a small region of the plasma membrane to form a new membrane-bounded vesicle. A phenotype may affect endocytosis of all cargoes, or of specific cargo such as a particular protein.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:22:57Z</oboInOwl:creation_date>
@@ -4179,7 +4205,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000270 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000270">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000510"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000236"/>
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the colocalization of a pathogen protein and a host protein within a host cell is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-03T11:05:09Z</oboInOwl:creation_date>
@@ -4221,6 +4247,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000274">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000509"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000929"/>
         <obo:IAO_0000115>A population phenotype in which the frequency of occurrence of asexual spore germination is increased.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-03T13:38:33Z</oboInOwl:creation_date>
@@ -4285,7 +4312,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000280">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001167"/>
-        <obo:IAO_0000115>A phenotype dependent on an interaction between a pathogen effector and a host process in order for the pathogen to activate or suppress the host immune system. An effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defences or other host responses.</obo:IAO_0000115>
+        <obo:IAO_0000115>A phenotype dependent on an interaction between a pathogen effector and a host process in order for the pathogen to activate or suppress the host immune system. An effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defenses or other host responses.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-05T11:00:39Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
@@ -4595,7 +4622,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000305 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000305">
-        <obo:IAO_0000115>(Required for successful infection of the host species). The ability of an organism to activate or suppress host defences to enable infectious disease. (Irrespective of the host genotype).</obo:IAO_0000115>
+        <obo:IAO_0000115>(Required for successful infection of the host species). The ability of an organism to activate or suppress host defenses to enable infectious disease. (Irrespective of the host genotype).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T12:55:58Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
@@ -4608,7 +4635,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000306 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000306">
-        <obo:IAO_0000115>The host defences activated by the pathogen are altered compared to the wild type interaction</obo:IAO_0000115>
+        <obo:IAO_0000115>The host defenses activated by the pathogen are altered compared to the wild type interaction</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T12:56:08Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
@@ -4621,7 +4648,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000307 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000307">
-        <obo:IAO_0000115>The ability to cause disease by activating or suppressing host defences is unaltered compared to the wildtype interaction. This may result in the outcome of being pathogenic or not-pathogenic.</obo:IAO_0000115>
+        <obo:IAO_0000115>The ability to cause disease by activating or suppressing host defenses is unaltered compared to the wildtype interaction. This may result in the outcome of being pathogenic or not-pathogenic.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T12:58:41Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
@@ -4634,11 +4661,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000308 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000308">
-        <obo:IAO_0000115>The host defences activated by the pathogen are unaltered compared to the wild type interaction</obo:IAO_0000115>
+        <obo:IAO_0000115>The host defenses activated by the pathogen are unaltered compared to the wild type interaction</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T12:59:50Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label>obsolete normal effector of pathogenicity activation of host defence</rdfs:label>
+        <rdfs:label>obsolete normal effector of pathogenicity activation of host defense</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4647,11 +4674,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000309 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000309">
-        <obo:IAO_0000115>The host defences suppressed by the pathogen are unaltered compared to the wild type interaction</obo:IAO_0000115>
+        <obo:IAO_0000115>The host defenses suppressed by the pathogen are unaltered compared to the wild type interaction</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:11:15Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label>obsolete normal effector of pathogenicity suppression of host defence</rdfs:label>
+        <rdfs:label>obsolete normal effector of pathogenicity suppression of host defense</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4686,7 +4713,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000312 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000312">
-        <obo:IAO_0000115>The ability to cause disease by activating or suppressing host defences is altered compared to the wildtype interaction.</obo:IAO_0000115>
+        <obo:IAO_0000115>The ability to cause disease by activating or suppressing host defenses is altered compared to the wildtype interaction.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:15:10Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
@@ -4699,11 +4726,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000313 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000313">
-        <obo:IAO_0000115>The host defences activated by the pathogen are unaltered compared to the wild type interaction</obo:IAO_0000115>
+        <obo:IAO_0000115>The host defenses activated by the pathogen are unaltered compared to the wild type interaction</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:22:08Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label>obsolete normal effector of virulence activation of host defence</rdfs:label>
+        <rdfs:label>obsolete normal effector of virulence activation of host defense</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4712,11 +4739,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000314 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000314">
-        <obo:IAO_0000115>The host defences suppressed by the pathogen are unaltered compared to the wild type interaction</obo:IAO_0000115>
+        <obo:IAO_0000115>The host defenses suppressed by the pathogen are unaltered compared to the wild type interaction</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:22:20Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label>obsolete normal effector of virulence suppression of host defence</rdfs:label>
+        <rdfs:label>obsolete normal effector of virulence suppression of host defense</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4729,7 +4756,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:25:51Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label>obsolete abnormal effector of virulence activation of host defence</rdfs:label>
+        <rdfs:label>obsolete abnormal effector of virulence activation of host defense</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4738,11 +4765,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000316 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000316">
-        <obo:IAO_0000115>The pathogen effector entity has a decreased ability to activate host defence.</obo:IAO_0000115>
+        <obo:IAO_0000115>The pathogen effector entity has a decreased ability to activate host defense.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:26:40Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label>obsolete decreased effector of virulence activation of host defence</rdfs:label>
+        <rdfs:label>obsolete decreased effector of virulence activation of host defense</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4751,11 +4778,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000317 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000317">
-        <obo:IAO_0000115>The pathogen effector entity has an increased ability to activate host defence.</obo:IAO_0000115>
+        <obo:IAO_0000115>The pathogen effector entity has an increased ability to activate host defense.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:27:34Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label>obsolete increased effector of virulence activation of host defence</rdfs:label>
+        <rdfs:label>obsolete increased effector of virulence activation of host defense</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4764,11 +4791,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000318 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000318">
-        <obo:IAO_0000115>The host defences suppressed by the pathogen are altered compare to the wild type interaction</obo:IAO_0000115>
+        <obo:IAO_0000115>The host defenses suppressed by the pathogen are altered compare to the wild type interaction</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:28:11Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label>obsolete abnormal effector of virulence suppression of host defence</rdfs:label>
+        <rdfs:label>obsolete abnormal effector of virulence suppression of host defense</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4777,11 +4804,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000319 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000319">
-        <obo:IAO_0000115>The pathogen effector entity has a decreased ability to suppress host defence.</obo:IAO_0000115>
+        <obo:IAO_0000115>The pathogen effector entity has a decreased ability to suppress host defense.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:28:53Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label>obsolete decreased effector of virulence suppression of host defence</rdfs:label>
+        <rdfs:label>obsolete decreased effector of virulence suppression of host defense</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4790,11 +4817,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000320 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000320">
-        <obo:IAO_0000115>The pathogen effector entity has an increased ability to suppress host defence.</obo:IAO_0000115>
+        <obo:IAO_0000115>The pathogen effector entity has an increased ability to suppress host defense.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:29:31Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label>obsolete increased effector of virulence suppression of host defence</rdfs:label>
+        <rdfs:label>obsolete increased effector of virulence suppression of host defense</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4803,11 +4830,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000321 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000321">
-        <obo:IAO_0000115>The host defences activated by the pathogen are altered compared to the wild type interaction.</obo:IAO_0000115>
+        <obo:IAO_0000115>The host defenses activated by the pathogen are altered compared to the wild type interaction.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:31:28Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label>obsolete abnormal effector of pathogenicity activation of host defence</rdfs:label>
+        <rdfs:label>obsolete abnormal effector of pathogenicity activation of host defense</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4816,11 +4843,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000322 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000322">
-        <obo:IAO_0000115>The pathogen effector entity has gained the ability to activate host defence.</obo:IAO_0000115>
+        <obo:IAO_0000115>The pathogen effector entity has gained the ability to activate host defense.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:32:29Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label>obsolete gain of effector of pathogenicity activation of host defence</rdfs:label>
+        <rdfs:label>obsolete gain of effector of pathogenicity activation of host defense</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4829,11 +4856,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000323 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000323">
-        <obo:IAO_0000115>The pathogen effector entity has lost the ability to activate host defence.</obo:IAO_0000115>
+        <obo:IAO_0000115>The pathogen effector entity has lost the ability to activate host defense.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:32:51Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label>obsolete loss of effector of pathogenicity activation of host defence</rdfs:label>
+        <rdfs:label>obsolete loss of effector of pathogenicity activation of host defense</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4842,11 +4869,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000324 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000324">
-        <obo:IAO_0000115>The host defences suppressed by the pathogen are altered compared to the wild type interaction</obo:IAO_0000115>
+        <obo:IAO_0000115>The host defenses suppressed by the pathogen are altered compared to the wild type interaction</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:33:53Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label>obsolete abnormal effector of pathogenicity suppression of host defence</rdfs:label>
+        <rdfs:label>obsolete abnormal effector of pathogenicity suppression of host defense</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4855,11 +4882,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000325 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000325">
-        <obo:IAO_0000115>The pathogen effector entity has gained the ability to suppress host defence.</obo:IAO_0000115>
+        <obo:IAO_0000115>The pathogen effector entity has gained the ability to suppress host defense.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:34:13Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label>obsolete gain of effector of pathogenicity suppression of host defence</rdfs:label>
+        <rdfs:label>obsolete gain of effector of pathogenicity suppression of host defense</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4868,11 +4895,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000326 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000326">
-        <obo:IAO_0000115>The pathogen effector entity has lost the ability to suppress host defence.</obo:IAO_0000115>
+        <obo:IAO_0000115>The pathogen effector entity has lost the ability to suppress host defense.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T13:34:33Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label>obsolete loss of effector of pathogenicity suppression of host defence</rdfs:label>
+        <rdfs:label>obsolete loss of effector of pathogenicity suppression of host defense</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -4941,6 +4968,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T15:59:22Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>pathogen invasion of host present</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">pathogen penetration into host present</rdfs:label>
     </owl:Class>
     
@@ -5244,6 +5272,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:hasExactSynonym>abolished pathogen entry into host</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>abolished pathogen penetration into host</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>pathogen invasion of host absent</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">pathogen penetration into host absent</rdfs:label>
     </owl:Class>
     
@@ -5285,6 +5314,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:31:26Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>decreased pathogen entry into host</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>decreased pathogen invasion of host</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">decreased pathogen penetration into host</rdfs:label>
     </owl:Class>
     
@@ -5299,6 +5329,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:32:32Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>increased pathogen entry into host</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>increased pathogen invasion of host</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">increased pathogen penetration into host</rdfs:label>
     </owl:Class>
     
@@ -5314,6 +5345,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:32:57Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>delayed pathogen entry into host</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>delayed pathogen invasion of host</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">delayed pathogen penetration into host</rdfs:label>
     </owl:Class>
     
@@ -5328,6 +5360,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-05T13:33:34Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>premature pathogen entry into host</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>premature pathogen invasion of host</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">premature pathogen penetration into host</rdfs:label>
     </owl:Class>
     
@@ -6358,7 +6391,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000439 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000439">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001163"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
         <obo:IAO_0000115>A pathogen host interaction phenotype which affects the pathogen reproductive process within the host. The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms (GO:0000003).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-18T11:25:46Z</oboInOwl:creation_date>
@@ -6438,7 +6471,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000445 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000445">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000512"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
         <obo:IAO_0000115>A phenotype that affects the process of host tissue death causing a host lesion induced by either the pathogen directly killing host tissue (e.g. cell wall degradation), or the host activating its own cell death pathways in defense.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-18T12:46:14Z</oboInOwl:creation_date>
@@ -6585,7 +6618,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:hasRelatedSynonym>absence of effector-mediated host programmed cell death during necrotrophy</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>absence of host lesion</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>absence of host necrotic cell death</oboInOwl:hasRelatedSynonym>
-        <rdfs:comment>This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen. An effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defences or other host responses.</rdfs:comment>
+        <rdfs:comment>This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen. An effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defenses or other host responses.</rdfs:comment>
         <rdfs:label xml:lang="en">absence of pathogen necrotrophic effector-mediated host programmed cell death</rdfs:label>
     </owl:Class>
     
@@ -6732,7 +6765,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:hasRelatedSynonym>presence of effector-mediated host programmed cell death during necrotrophy</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>presence of host lesion</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>presence of host necrotic cell death</oboInOwl:hasRelatedSynonym>
-        <rdfs:comment>This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen. An effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defences or other host responses.</rdfs:comment>
+        <rdfs:comment>This term is to be used when the pathogen actively induces the host responses, not for host protection against the pathogen. An effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defenses or other host responses.</rdfs:comment>
         <rdfs:label xml:lang="en">presence of pathogen necrotrophic effector-mediated host programmed cell death</rdfs:label>
     </owl:Class>
     
@@ -7099,7 +7132,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000512 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000512">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
         <obo:IAO_0000115>A pathogen host interaction phenotype that is observed at the level of a host tissue (eg leaf, inflorescence, ear or kidney).</obo:IAO_0000115>
         <obo:created_by>alaynecuzick</obo:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-11T12:41:00Z</oboInOwl:creation_date>
@@ -7107,7 +7139,8 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
         <rdfs:comment>This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
-        <rdfs:label xml:lang="en">pathogen host interaction host tissue phenotype</rdfs:label>
+        <rdfs:label>obsolete pathogen host interaction host tissue phenotype</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -11810,9 +11843,10 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:hasDbXref>GO:0002679</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>pathogen host interaction respiratory burst phenotype</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>pathogen induced host oxidative burst level phenotype</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>pathogen-induced host oxidative burst level phenotype</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:comment>Definition adapted from GO:0002679 respiratory burst involved in defense response.</rdfs:comment>
-        <rdfs:label xml:lang="en">pathogen-induced host oxidative burst level phenotype</rdfs:label>
+        <rdfs:label xml:lang="en">host defense-induced oxidative burst level phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -11847,10 +11881,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:hasExactSynonym>pathogen induced host reactive oxygen species present</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>pathogen induced host respiratory burst present</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>pathogen-induced host ROS present</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>pathogen-induced host reactive oxygen species present</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>presence of pathogen induced host ROS</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>presence of pathogen induced host reactive oxygen species</oboInOwl:hasRelatedSynonym>
-        <rdfs:label xml:lang="en">pathogen-induced host reactive oxygen species present</rdfs:label>
+        <rdfs:label xml:lang="en">host defense-induced reactive oxygen species present</rdfs:label>
     </owl:Class>
     
 
@@ -11868,9 +11903,10 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:hasExactSynonym>pathogen induced host reactive oxygen species absent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>pathogen induced host respiratory burst absent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>pathogen-induced host ROS absent</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>pathogen-induced host reactive oxygen species absent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>absence of pathogen induced host reactive oxygen species</oboInOwl:hasRelatedSynonym>
-        <rdfs:label xml:lang="en">pathogen-induced host reactive oxygen species absent</rdfs:label>
+        <rdfs:label xml:lang="en">host defense-induced reactive oxygen species absent</rdfs:label>
     </owl:Class>
     
 
@@ -12696,12 +12732,13 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000991 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000991">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001196"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001262"/>
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of host protein usually present during infection is higher than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T12:22:12Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>increased level of host protein involved in a pathogen host interaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">increased level of host protein involved in a pathogen host interaction</rdfs:label>
+        <rdfs:label xml:lang="en">increased level of host defense-induced protein</rdfs:label>
     </owl:Class>
     
 
@@ -12710,7 +12747,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000992">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000991"/>
-        <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of host defence-related protein usually present during infection is higher than normal.</obo:IAO_0000115>
+        <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of host defense-related protein usually present during infection is higher than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T12:23:36Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>increased expression of a host defense related protein involved in a pathogen interaction</oboInOwl:hasExactSynonym>
@@ -12749,7 +12786,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000995 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000995">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001197"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001267"/>
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of pathogen RNA usually present during infection is lower than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T12:32:05Z</oboInOwl:creation_date>
@@ -12762,7 +12799,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000998 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000998">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001007"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
         <obo:IAO_0000115>A pathogen host interaction phenotype which affects the pathogen morphology during host colonization. This relates to the pathogen colonization of the body, tissues, or cells of the host organism.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T13:48:27Z</oboInOwl:creation_date>
@@ -12819,7 +12856,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001002 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001002">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001007"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
         <obo:IAO_0000115>A pathogen host interaction phenotype which affects the host morphology during pathogen invasion. This relates to the pathogen colonization of the body, tissues, or cells of the host organism</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T13:51:57Z</oboInOwl:creation_date>
@@ -12885,12 +12922,12 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001007 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001007">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000332"/>
         <obo:IAO_0000115>A pathogen host interaction phenotype which affects the morphology of the pathogen or the host during pathogen colonization of the host. This relates to the pathogen colonization of the body, tissues, or cells of the host organism.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T14:19:52Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">pathogen colonization of host morphology phenotype</rdfs:label>
+        <rdfs:label>obsolete pathogen colonization of host morphology phenotype</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -12984,9 +13021,10 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of host produced callose deposition usually present during infection is higher than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T16:37:53Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>increased level of host callose deposition induced by pathogen</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:comment>GO:0052542</rdfs:comment>
-        <rdfs:label xml:lang="en">increased level of host callose deposition induced by pathogen</rdfs:label>
+        <rdfs:label xml:lang="en">increased level of host defense-induced callose deposition</rdfs:label>
     </owl:Class>
     
 
@@ -12998,9 +13036,10 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of host produced callose deposition usually present during infection is lower than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-10T16:38:36Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>decreased level of host callose deposition induced by pathogen</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:comment>GO:0052542</rdfs:comment>
-        <rdfs:label xml:lang="en">decreased level of host callose deposition induced by pathogen</rdfs:label>
+        <rdfs:label xml:lang="en">decreased level of host defense-induced callose deposition</rdfs:label>
     </owl:Class>
     
 
@@ -13049,6 +13088,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001019 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000929"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001018"/>
         <obo:IAO_0000115>A cellular process phenotype in which the rate, or speed, of asexual spore germination is decreased.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
@@ -13407,7 +13447,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T12:30:03Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">level of pathogen toxin within host phenotype</rdfs:label>
+        <rdfs:label xml:lang="en">level of pathogen produced toxin within host phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -13434,7 +13474,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T12:44:12Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">decreased level of pathogen toxin within host</rdfs:label>
+        <rdfs:label xml:lang="en">decreased level of pathogen produced toxin within host</rdfs:label>
     </owl:Class>
     
 
@@ -13447,7 +13487,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-06T12:44:20Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">increased level of pathogen toxin within host</rdfs:label>
+        <rdfs:label xml:lang="en">increased level of pathogen produced toxin within host</rdfs:label>
     </owl:Class>
     
 
@@ -13696,12 +13736,12 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001067 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001067">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
         <obo:IAO_0000115>A pathogen host interaction phenotype that is observed at the level of an individual organism (eg a worm host).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-20T11:03:58Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">pathogen host interaction organism level phenotype</rdfs:label>
+        <rdfs:label>obsolete pathogen host interaction organism level phenotype</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -13740,7 +13780,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001070 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001070">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001067"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
         <obo:IAO_0000115>A pathogen host interaction organism level phenotype which affects the viability of an individual host organism in the presence of a pathogen.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-20T11:19:37Z</oboInOwl:creation_date>
@@ -13867,7 +13907,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001080 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001080">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001067"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the accumulation of pathogen pigmentation (coloring matter) usually present during infection differs from normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-27T11:19:13Z</oboInOwl:creation_date>
@@ -13899,10 +13939,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-01T09:09:20Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>pathogen induced callose deposition in host present</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>pathogen-induced callose deposition in host present</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>presence of pathogen induced callose deposition in host</oboInOwl:hasRelatedSynonym>
         <rdfs:comment>GO:0052542</rdfs:comment>
-        <rdfs:label xml:lang="en">pathogen-induced callose deposition in host present</rdfs:label>
+        <rdfs:label xml:lang="en">host defense-induced callose deposition present</rdfs:label>
     </owl:Class>
     
 
@@ -14111,7 +14152,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001100 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001100">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001197"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001267"/>
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of pathogen RNA usually present during infection is higher than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-04T12:31:14Z</oboInOwl:creation_date>
@@ -14152,12 +14193,13 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001104 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001104">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001196"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001263"/>
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of host RNA usually present during infection is higher than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-07T13:26:33Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>increased level of host RNA involved in a pathogen interaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">increased level of host RNA involved in a pathogen interaction</rdfs:label>
+        <rdfs:label xml:lang="en">increased level of host defense-induced RNA</rdfs:label>
     </owl:Class>
     
 
@@ -14717,7 +14759,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001144">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001174"/>
-        <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of host defence-related RNA usually present during infection is lower than normal.</obo:IAO_0000115>
+        <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of host defense-related RNA usually present during infection is lower than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-28T12:40:16Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>decreased level of host defense related RNA involved in a pathogen interaction</oboInOwl:hasExactSynonym>
@@ -14908,7 +14950,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001159">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000332"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000512"/>
         <obo:IAO_0000115>A pathogen host interaction colonization phenotype which affects the directional tissue to tissue movement of the pathogen within the host organism (GO:0044001).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-27T18:25:20Z</oboInOwl:creation_date>
@@ -14939,10 +14980,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-27T18:36:56Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>pathogen induced host phenolic compound absent</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>pathogen-induced host phenolic compound absent</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>absence of pathogen induced host phenolic compound</oboInOwl:hasRelatedSynonym>
         <rdfs:comment>decreased level of CHEBI:33853 in host during GO:051702 interaction with symbiont</rdfs:comment>
-        <rdfs:label xml:lang="en">pathogen-induced host phenolic compound absent</rdfs:label>
+        <rdfs:label xml:lang="en">host defense-induced phenolic compound absent</rdfs:label>
     </owl:Class>
     
 
@@ -14950,12 +14992,12 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001162 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001162">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001163"/>
         <obo:IAO_0000115>A pathogen host interaction phenotype which affects the host reproductive process within the host when a pathogen is present. The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms (GO:0000003).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-30T15:14:51Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">host reproductive phenotype induced by pathogen</rdfs:label>
+        <rdfs:label>obsolete host reproductive phenotype induced by pathogen</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -14963,7 +15005,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001163 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001163">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
         <obo:IAO_0000115>A pathogen host interaction phenotype which affects either the pathogen or host reproductive process. The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms (GO:0000003).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-30T15:16:04Z</oboInOwl:creation_date>
@@ -14971,7 +15012,8 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
         <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
         <rdfs:comment>This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.</rdfs:comment>
-        <rdfs:label xml:lang="en">pathogen host interaction reproductive phenotype</rdfs:label>
+        <rdfs:label>obsolete pathogen host interaction reproductive phenotype</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -14979,12 +15021,12 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001164 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001164">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001162"/>
         <obo:IAO_0000115>A host reproductive phenotype with pathogen where the process of host reproductive development is abnormal (GO:0048608).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-30T15:17:25Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">abnormal host reproductive structure development induced by pathogen</rdfs:label>
+        <rdfs:label>obsolete abnormal host reproductive structure development induced by pathogen</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -14992,7 +15034,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001165 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001165">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001164"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001250"/>
         <obo:IAO_0000115>A host reproductive phenotype with pathogen where the process of host seed development is abnormal (GO:0048316).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-30T15:17:44Z</oboInOwl:creation_date>
@@ -15063,12 +15105,13 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001174 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001174">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001196"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001263"/>
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of host RNA usually present during infection is lower than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-05-12T13:21:58Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>decreased level of host RNA involved in a pathogen interaction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">decreased level of host RNA involved in a pathogen interaction</rdfs:label>
+        <rdfs:label xml:lang="en">decreased level of host defense-induced RNA</rdfs:label>
     </owl:Class>
     
 
@@ -15076,7 +15119,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001175 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001175">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000510"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000236"/>
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the localization of a pathogen protein in a host cell is normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-05-13T13:50:08Z</oboInOwl:creation_date>
@@ -15090,7 +15133,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001176">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000280"/>
-        <obo:IAO_0000115>A phenotype dependent on an interaction between a pathogen effector and a host process in order for the pathogen to suppress the host immune system. An effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defences or other host responses.</obo:IAO_0000115>
+        <obo:IAO_0000115>A phenotype dependent on an interaction between a pathogen effector and a host process in order for the pathogen to suppress the host immune system. An effector is an entity derived from a pathogenic or non-pathogenic species that either activates or suppresses host defenses or other host responses.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-05-13T15:00:47Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
@@ -15139,6 +15182,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-06-10T15:09:01Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>normal level of DON</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>normal level of vomitoxin</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">normal level of deoxynivalenol</rdfs:label>
     </owl:Class>
@@ -15291,10 +15335,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:hasExactSynonym>decreased level of pathogen induced host ROS</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>decreased level of pathogen induced host reactive oxygen species</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>decreased level of pathogen-induced host ROS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>decreased level of pathogen-induced host reactive oxygen species</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>decreased pathogen host interaction oxidative burst</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>decreased pathogen host interaction respiratory burst</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">decreased level of pathogen-induced host reactive oxygen species</rdfs:label>
+        <rdfs:label xml:lang="en">decreased level of host defense-induced reactive oxygen species</rdfs:label>
     </owl:Class>
     
 
@@ -15307,10 +15352,11 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-07-31T09:49:30Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>increased level of pathogen induced host reactive oxygen species</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>increased level of pathogen-induced host reactive oxygen species</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>increased pathogen host interaction oxidative burst</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>increased pathogen host interaction respiratory burst</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">increased level of pathogen-induced host reactive oxygen species</rdfs:label>
+        <rdfs:label xml:lang="en">increased level of host defense-induced reactive oxygen species</rdfs:label>
     </owl:Class>
     
 
@@ -15351,8 +15397,9 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:hasAlternativeId>PHIPO:0001169</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>PHIPO:0001172</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym>pathogen induced host substance level phenotype</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>pathogen-induced host substance level phenotype</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">pathogen-induced host substance level phenotype</rdfs:label>
+        <rdfs:label xml:lang="en">host defense-induced substance level phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -15367,7 +15414,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:hasAlternativeId>PHIPO:0001170</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>PHIPO:0001171</oboInOwl:hasAlternativeId>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">level of pathogen substance within host phenotype</rdfs:label>
+        <rdfs:label xml:lang="en">level of pathogen produced substance within host phenotype</rdfs:label>
     </owl:Class>
     
 
@@ -15470,7 +15517,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>decreased extent of effector-mediated host hypersensitive response during biotrophy</oboInOwl:hasRelatedSynonym>
         <rdfs:comment>This term is to be used for host protection against the pathogen.</rdfs:comment>
-        <rdfs:label xml:lang="en">decreased extent of host-defence induced lesion by host hypersensitive response</rdfs:label>
+        <rdfs:label xml:lang="en">decreased extent of host-defense induced lesion by host hypersensitive response</rdfs:label>
     </owl:Class>
     
 
@@ -15794,8 +15841,9 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of host produced reducing sugars usually present in the apoplast during infection is lower than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-09T09:16:39Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>decreased level of host reducing sugar in apoplast induced by pathogen</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">decreased level of host reducing sugar in apoplast induced by pathogen</rdfs:label>
+        <rdfs:label xml:lang="en">decreased level of host defense-induced reducing sugar in apoplast</rdfs:label>
     </owl:Class>
     
 
@@ -15807,8 +15855,9 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of host produced reducing sugars usually present in the apoplast during infection is higher than normal.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-09T09:16:56Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>increased level of host reducing sugar in apoplast induced by pathogen</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">increased level of host reducing sugar in apoplast induced by pathogen</rdfs:label>
+        <rdfs:label xml:lang="en">increased level of host defense-induced reducing sugar in apoplast</rdfs:label>
     </owl:Class>
     
 
@@ -15847,8 +15896,9 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the host phenolic compounds usually present during infection are normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-11T14:46:42Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>pathogen-induced host phenolic compound present</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">pathogen-induced host phenolic compound present</rdfs:label>
+        <rdfs:label xml:lang="en">host defense-induced phenolic compound present</rdfs:label>
     </owl:Class>
     
 
@@ -15856,12 +15906,13 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001231 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001231">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001196"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001263"/>
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the host RNA usually present during infection is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-02T14:55:22Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>host RNA involved in a pathogen interaction present</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label xml:lang="en">host RNA involved in a pathogen interaction present</rdfs:label>
+        <rdfs:label xml:lang="en">host defense-induced RNA present</rdfs:label>
     </owl:Class>
     
 
@@ -15869,7 +15920,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001232 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001232">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001197"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001267"/>
         <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of pathogen RNA usually present during host infection is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-08T09:26:06Z</oboInOwl:creation_date>
@@ -15915,7 +15966,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001235">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001231"/>
-        <obo:IAO_0000115>A pathogen host interaction phenotype, in which the host defence-related RNA usually present during infection is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <obo:IAO_0000115>A pathogen host interaction phenotype, in which the host defense-related RNA usually present during infection is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-16T16:30:04Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
@@ -16122,6 +16173,294 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>PAMP receptor decoy activity present</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">chitin hydrolysis absent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001250 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001250">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype where the development of a host structure is abnormal during pathogen infection.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-16T12:59:12Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal host structure induced by pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001251 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001251">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001262"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype, in which the host protein usually present during infection is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-15T11:06:24Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>host protein involved in a pathogen interaction present</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">host defense-induced protein present</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001252 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001252">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001159"/>
+        <obo:IAO_0000115>A pathogen host interaction colonization phenotype in which the ability of the pathogen to move directionally from tissue to tissue within the host organism is decreased.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-15T11:13:29Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased pathogen tissue to tissue migration within host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001253 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001253">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001167"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype where the host immune system inflammatory response during pathogen infection is present. (GO:0006954 inflammatory response).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-17T11:09:50Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>inflammation present</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">host immune system inflammatory response activated by pathogen present</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001254 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001254">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001253"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype where the host immune system inflammatory response during pathogen infection occurs to a lesser extent than normal. (GO:0006954 inflammatory response).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-17T11:49:45Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>decreased inflammation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased host immune inflammatory response with pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001255 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001255">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001253"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype where the host immune system inflammatory response during pathogen infection occurs to a greater extent than normal. (GO:0006954 inflammatory response).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-20T09:58:39Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>increased inflammation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased host immune inflammatory response with pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001256 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001256">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001251"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype, in which the host defense-related protein usually present during infection is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-20T10:03:29Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">host defense-related protein involved in a pathogen interaction present</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001257 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001257">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001262"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of host protein usually present during infection is lower than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-20T10:21:16Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased level of host defense-induced protein</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001258 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001258">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001257"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of host defense-related protein usually present during infection is lower than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-20T10:23:47Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased expression of a host defense-related protein involved in a pathogen interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001259 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001259">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000510"/>
+        <obo:IAO_0000115>A pathogen host interaction cell level phenotype which affects the viability of a host cell in the presence of a pathogen.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-07-01T09:19:41Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>cytotoxicity phenotype</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">host cell viability with pathogen phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001260 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001260">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001259"/>
+        <obo:IAO_0000115>A host cell viability phenotype where the host cell survives in the presence of the pathogen.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-07-01T09:24:19Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">host cell viable with pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001261 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001261">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001259"/>
+        <obo:IAO_0000115>A host cell viability phenotype where the host cell death is accelerated by the pathogen.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-07-01T09:27:27Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">host cell inviable with pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001262 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001262">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001196"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype, which affects the level of a host produced protein during infection.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-07-01T09:51:01Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">host defense-induced protein level phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001263 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001263">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001196"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype, which affects the level of a host produced RNA during infection.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-07-01T09:59:49Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">host defense-induced RNA level phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001264 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001264">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001173"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype, in which a pathogen effects a change in the physiological processes of its host organism.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-07-04T08:38:22Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">host physiological process affected by pathogen phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001265 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001265">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001264"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype in which host bleeding occurs during pathogen infection (MP:0001914 hemorrhage).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-07-04T08:41:51Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>host bleeding with pathogen present</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>host haemorrhage with pathogen present</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">host hemorrhage with pathogen present</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001266 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001266">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001265"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype in which the host bleeding during pathogen infection occurs to a greater extent than normal (MP:0001914 hemorrhage).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-07-04T08:45:10Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>increased host bleeding with pathogen</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>increased host haemorrhage with pathogen</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased host hemorrhage with pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001267 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001267">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001197"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype, which affects the level of pathogen produced RNA during host infection.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-07-04T08:58:03Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">level of pathogen produced RNA within host phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001268 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001268">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001006"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype where the presence of a pathogen (or symbiont) has resulted in the abnormal growth of the host tissue, forming a plant gall (BTO:0005833 plant gall).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-07-05T12:52:20Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">presence of host gall during pathogen invasion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001269 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001269">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001268"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype where the presence of a pathogen (or symbiont) has resulted in a decreased number of plant galls (BTO:0005833 plant gall).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-07-05T12:57:02Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased number of host galls during pathogen invasion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001270 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001270">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001098"/>
+        <obo:IAO_0000115>A growth phenotype which describes the sensitivity of individuals or populations after exposure to calcium ion starvation. Typically, individuals or populations are deemed sensitive to a stress if they stop growing (and may die) when exposed to the stress at an intensity that allows an individual or population of wild type cell(s) to grow and divide.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-07-27T11:20:23Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0001201</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>hypersensitive to calcium ion starvation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>reduced growth in low calcium</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>sensitive to calcium ion depletion</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>sensitive to calcium ion deprivation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>sensitive to calcium starvation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">sensitive to calcium ion starvation</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
