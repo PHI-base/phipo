@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2022-08-16/phipo-simple.owl
+data-version: phipo/releases/2022-08-25/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -11,7 +11,7 @@ property_value: creation:date 2018-07-09T13:43:00Z xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
-property_value: owl:versionInfo "2022-08-16" xsd:string
+property_value: owl:versionInfo "2022-08-25" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -11350,6 +11350,34 @@ synonym: "presence of pathogen teliospores within host" BROAD []
 is_a: PHIPO:0000443 ! normal pathogen sexual reproduction within host
 created_by: alaynecuzick
 creation_date: 2022-08-15T16:22:41Z
+
+[Term]
+id: PHIPO:0001272
+name: stunted growth
+namespace: single_species_phenotype
+def: "A single species growth phenotype where there is a decrease in size of an entire multicellular organism." []
+is_a: PHIPO:0000402 ! individual organism phenotype
+created_by: alaynecuzick
+creation_date: 2022-08-25T08:11:36Z
+
+[Term]
+id: PHIPO:0001273
+name: abnormal host morphology during phagocytosis of pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the morphology of the host cell is irregular due to the phagocytosis (engulfment and ingestion) of the pathogen (GO:0006911)." []
+synonym: "irregular host morphology during phagocytosis of pathogen" EXACT []
+is_a: PHIPO:0001006 ! abnormal host morphology during pathogen invasion
+created_by: alaynecuzick
+creation_date: 2022-08-25T09:26:08Z
+
+[Term]
+id: PHIPO:0001274
+name: host immune system phagocytosis of pathogen present
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the host immune system activates the phagocytosis of a pathogen (GO:0006911)." []
+is_a: PHIPO:0001167 ! pathogen modulation of host immune system process phenotype
+created_by: alaynecuzick
+creation_date: 2022-08-25T10:07:49Z
 
 [Typedef]
 id: PHIPO:0000304
