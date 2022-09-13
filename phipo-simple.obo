@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2022-08-25/phipo-simple.owl
+data-version: phipo/releases/2022-09-13/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -11,7 +11,7 @@ property_value: creation:date 2018-07-09T13:43:00Z xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
-property_value: owl:versionInfo "2022-08-25" xsd:string
+property_value: owl:versionInfo "2022-09-13" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -11378,6 +11378,42 @@ def: "A pathogen host interaction phenotype where the host immune system activat
 is_a: PHIPO:0001167 ! pathogen modulation of host immune system process phenotype
 created_by: alaynecuzick
 creation_date: 2022-08-25T10:07:49Z
+
+[Term]
+id: PHIPO:0001275
+name: presence of viable pathogen sexual spores within host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen reproductive phenotype within host in which the viability of sexual spores is normal (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001271 ! presence of pathogen sexual spores within host
+created_by: alaynecuzick
+creation_date: 2022-09-09T13:22:21Z
+
+[Term]
+id: PHIPO:0001276
+name: increased number of host galls during pathogen invasion
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the presence of a pathogen (or symbiont) has resulted in an increased number of plant galls (BTO:0005833 plant gall)." []
+is_a: PHIPO:0001268 ! presence of host gall during pathogen invasion
+created_by: alaynecuzick
+creation_date: 2022-09-09T13:28:14Z
+
+[Term]
+id: PHIPO:0001277
+name: presence of pathogen induced host DNA synthesis
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which host DNA synthesis occurs during pathogen infection (GO:0090592 DNA synthesis involved in DNA replication)." []
+is_a: PHIPO:0001247 ! pathogen modulation of host metabolic process phenotype
+created_by: alaynecuzick
+creation_date: 2022-09-09T14:04:31Z
+
+[Term]
+id: PHIPO:0001278
+name: decreased pathogen induced host DNA synthesis
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which the host DNA synthesis during pathogen infection occurs to a lesser extent than normal (GO:0090592 DNA synthesis involved in DNA replication)." []
+is_a: PHIPO:0001247 ! pathogen modulation of host metabolic process phenotype
+created_by: alaynecuzick
+creation_date: 2022-09-09T14:06:29Z
 
 [Typedef]
 id: PHIPO:0000304
