@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2022-11-07/phipo-simple.owl
+data-version: phipo/releases/2022-11-22/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -11,7 +11,7 @@ property_value: creation:date 2018-07-09T13:43:00Z xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
-property_value: owl:versionInfo "2022-11-07" xsd:string
+property_value: owl:versionInfo "2022-11-22" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -11435,6 +11435,62 @@ def: "A pathogen host interaction phenotype in which the host DNA synthesis duri
 is_a: PHIPO:0001247 ! pathogen modulation of host metabolic process phenotype
 created_by: alaynecuzick
 creation_date: 2022-11-07T14:30:40Z
+
+[Term]
+id: PHIPO:0001281
+name: presence of host protein phosphorylation with pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which the phosphorylation of one or more specific host proteins, or of specific host protein sites, occurs during pathogen infection (GO:0006468 protein phosphorylation)." []
+is_a: PHIPO:0001247 ! pathogen modulation of host metabolic process phenotype
+created_by: alaynecuzick
+creation_date: 2022-11-11T13:05:20Z
+
+[Term]
+id: PHIPO:0001282
+name: absence of host protein phosphorylation with pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which the phosphorylation of one or more specific host proteins, or of specific host protein sites, does not occur during pathogen infection (GO:0006468 protein phosphorylation)." []
+is_a: PHIPO:0001247 ! pathogen modulation of host metabolic process phenotype
+created_by: alaynecuzick
+creation_date: 2022-11-11T13:06:37Z
+
+[Term]
+id: PHIPO:0001283
+name: increased host protein phosphorylation with pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which the phosphorylation of one or more specific host proteins, or of specific host protein sites, during pathogen infection occurs to a greater extent than normal (GO:0006468 protein phosphorylation)." []
+is_a: PHIPO:0001247 ! pathogen modulation of host metabolic process phenotype
+created_by: alaynecuzick
+creation_date: 2022-11-11T13:10:07Z
+
+[Term]
+id: PHIPO:0001284
+name: decreased host protein phosphorylation with pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which the phosphorylation of one or more specific host proteins, or of specific host protein sites, during pathogen infection occurs to a lesser extent than normal (GO:0006468 protein phosphorylation)." []
+is_a: PHIPO:0001247 ! pathogen modulation of host metabolic process phenotype
+created_by: alaynecuzick
+creation_date: 2022-11-11T13:11:15Z
+
+[Term]
+id: PHIPO:0001285
+name: increased level of host defense-related RNA involved in a pathogen interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the level of host defense-related RNA usually present during infection is higher than normal." []
+synonym: "increased level of host defense related RNA involved in a pathogen interaction" EXACT []
+is_a: PHIPO:0001104 ! increased level of host defense-induced RNA
+created_by: alaynecuzick
+creation_date: 2022-11-22T10:38:36Z
+
+[Term]
+id: PHIPO:0001286
+name: presence of pathogen protein host DNA interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A molecular function phenotype in which the binding of one pathogen protein to host DNA is present." []
+synonym: "presence of pathogen protein host DNA binding" EXACT []
+is_a: PHIPO:0000164 ! pathogen host interaction binding phenotype
+created_by: alaynecuzick
+creation_date: 2022-11-22T10:43:32Z
 
 [Typedef]
 id: PHIPO:0000304
