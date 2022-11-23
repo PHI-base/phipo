@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2022-11-22/phipo-simple.owl
+data-version: phipo/releases/2022-11-23/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -11,7 +11,7 @@ property_value: creation:date 2018-07-09T13:43:00Z xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
-property_value: owl:versionInfo "2022-11-22" xsd:string
+property_value: owl:versionInfo "2022-11-23" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -1105,7 +1105,6 @@ namespace: single_species_phenotype
 def: "A single species pathogen growth phenotype in which the frequency of occurrence of pathogen penetration begins later than normal when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
 is_a: PHIPO:0000024 ! pathogen penetration across the barrier present
-is_a: PHIPO:0000331 ! pathogen penetration into host present
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:17:12Z
 
@@ -2020,7 +2019,6 @@ name: loss of mutualism
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype in which the balance of symbiotic mutualism has been disrupted compared to the normal interaction and the endosymbiont organism is able to show greater biomass within the host and/or the formation of visible disease formation symptoms compared to the normal interaction." []
 subset: qc_extension_only
-is_a: PHIPO:0000039 ! normal mutualism
 is_a: PHIPO:0000040 ! abnormal mutualism
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:32:18Z
@@ -3434,7 +3432,6 @@ namespace: pathogen_host_interaction_phenotype
 def: "A pathogen entry into host phenotype in which the frequency of occurrence of pathogen penetration into the body, tissues, or cells of the host organism begins later than normal." []
 synonym: "delayed pathogen entry into host" EXACT []
 synonym: "delayed pathogen invasion of host" RELATED []
-is_a: PHIPO:0000024 ! pathogen penetration across the barrier present
 is_a: PHIPO:0000331 ! pathogen penetration into host present
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:32:57Z
@@ -8231,7 +8228,6 @@ namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction where the mutualism phenotype is normal (i.e. the same as wild-type), and the wild-type interaction does not exhibit mutualism." []
 subset: qc_do_not_annotate
 is_a: PHIPO:0000039 ! normal mutualism
-is_a: PHIPO:0000040 ! abnormal mutualism
 created_by: alaynecuzick
 creation_date: 2019-05-24T11:02:11Z
 
@@ -8270,7 +8266,7 @@ id: PHIPO:0000952
 name: abolished pathogen growth within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is abolished (it was present as is now absent)." []
-is_a: PHIPO:0000951 ! pathogen growth within host phenotype
+is_a: PHIPO:0000363 ! absence of pathogen growth within host
 created_by: alaynecuzick
 creation_date: 2019-05-24T12:21:58Z
 
@@ -9976,8 +9972,7 @@ id: PHIPO:0001133
 name: increased cellular melanin accumulation
 namespace: single_species_phenotype
 def: "A single species individual organism phenotype where the accumulation of melanin in a cell is increased." []
-is_a: PHIPO:0000285 ! abnormal cellular pigment accumulation
-is_a: PHIPO:0000929 ! abnormal cellular process
+is_a: PHIPO:0000287 ! increased cellular pigment accumulation
 created_by: alaynecuzick
 creation_date: 2019-12-17T14:27:14Z
 

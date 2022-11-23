@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2022-07-29/phipo-full.owl
+data-version: phipo/releases/2022-11-23/phipo-full.owl
 subsetdef: 1_STAR ""
 subsetdef: 3_STAR ""
 subsetdef: abnormal_slim ""
@@ -35,13 +35,18 @@ subsetdef: scalar_slim ""
 subsetdef: ubprop:upper_level ""
 subsetdef: upper_level ""
 subsetdef: value_slim ""
+synonymtypedef: blast_name ""
+synonymtypedef: common_name ""
+synonymtypedef: genbank_common_name ""
+synonymtypedef: IUPAC_NAME ""
+synonymtypedef: synonym ""
 ontology: phipo/phipo-full
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date 2018-07-09T13:43:00Z xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
-property_value: owl:versionInfo "2022-07-29" xsd:string
+property_value: owl:versionInfo "2022-11-23" xsd:string
 
 [Term]
 id: BFO:0000001
@@ -507,6 +512,7 @@ is_a: CHEBI:23765 ! quinolone
 is_a: CHEBI:26512 ! quinolinemonocarboxylic acid
 is_a: CHEBI:36709 ! aminoquinoline
 is_a: CHEBI:46848 ! N-arylpiperazine
+is_a: CHEBI:51454 ! cyclopropanes
 is_a: CHEBI:86324 ! quinolone antibiotic
 is_a: CHEBI:87211 ! fluoroquinolone antibiotic
 relationship: has_role CHEBI:35703 ! xenobiotic
@@ -515,6 +521,8 @@ relationship: has_role CHEBI:50750 ! EC 5.99.1.3 [DNA topoisomerase (ATP-hydroly
 relationship: has_role CHEBI:53559 ! topoisomerase IV inhibitor
 relationship: has_role CHEBI:59517 ! DNA synthesis inhibitor
 relationship: has_role CHEBI:78298 ! environmental contaminant
+relationship: is_conjugate_base_of CHEBI:192486 ! ciprofloxacin(1+)
+relationship: is_tautomer_of CHEBI:192484 ! ciprofloxacin zwitterion
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C17H18FN3O3" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C17H18FN3O3/c18-13-7-11-14(8-15(13)20-5-3-19-4-6-20)21(10-1-2-10)9-12(16(11)22)17(23)24/h7-10,19H,1-6H2,(H,23,24)" xsd:string
@@ -721,6 +729,15 @@ def: "Any bacterial metabolite produced during a metabolic reaction in Mycoplasm
 subset: 3_STAR
 synonym: "Mycoplasma genitalium metabolites" RELATED [ChEBI]
 is_a: CHEBI:76969 ! bacterial metabolite
+
+[Term]
+id: CHEBI:131605
+name: dicarboxylic acid monoester(1-)
+namespace: chebi_ontology
+def: "A carboxylic acid anion resulting from the deprotonation of the carboxy group of a dicarboxylic acid monoester." []
+subset: 3_STAR
+is_a: CHEBI:29067 ! carboxylic acid anion
+relationship: is_conjugate_base_of CHEBI:36244 ! dicarboxylic acid monoester
 
 [Term]
 id: CHEBI:131609
@@ -2693,7 +2710,6 @@ relationship: has_role CHEBI:48219 ! disinfectant
 relationship: has_role CHEBI:50902 ! genotoxin
 relationship: has_role CHEBI:50910 ! neurotoxin
 relationship: has_role CHEBI:59163 ! biomarker
-relationship: has_role CHEBI:63248 ! oxidising agent
 relationship: has_role CHEBI:63490 ! explosive
 relationship: has_role CHEBI:65259 ! GABA antagonist
 relationship: has_role CHEBI:68495 ! apoptosis inducer
@@ -5380,6 +5396,65 @@ synonym: "11alpha-hydroxy steroids" RELATED [ChEBI]
 is_a: CHEBI:36841 ! 11-hydroxy steroid
 
 [Term]
+id: CHEBI:192484
+name: ciprofloxacin zwitterion
+namespace: chebi_ontology
+def: "A zwitterion formed from ciprofloxacin by transfer of a proton from the carboxy to the amino group; major species at pH 7.3." []
+subset: 3_STAR
+synonym: "1-cyclopropyl-6-fluoro-4-oxo-7-(piperazin-4-ium-1-yl)-1,4-dihydroquinoline-3-carboxylate" EXACT IUPAC_NAME [IUPAC]
+xref: MetaCyc:CPD-12843
+xref: PMID:11202360 {source="SUBMITTER"}
+xref: PMID:12084502 {source="SUBMITTER"}
+xref: PMID:21368411 {source="Europe PMC"}
+xref: PMID:9303400 {source="SUBMITTER"}
+is_a: CHEBI:27369 ! zwitterion
+relationship: is_tautomer_of CHEBI:100241 ! ciprofloxacin
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C17H18FN3O3" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C17H18FN3O3/c18-13-7-11-14(8-15(13)20-5-3-19-4-6-20)21(10-1-2-10)9-12(16(11)22)17(23)24/h7-10,19H,1-6H2,(H,23,24)" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "MYSWGUAQZAJSOK-UHFFFAOYSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "331.347" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "331.13322" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[O-]C(=O)C1=CN(C2CC2)C2=CC(N3CC[NH2+]CC3)=C(F)C=C2C1=O" xsd:string
+
+[Term]
+id: CHEBI:192486
+name: ciprofloxacin(1+)
+namespace: chebi_ontology
+def: "A secondary ammonium ion that is the conjugate acid of ciprofloxacin resulting from the protonation of the NH group; major species at acidic pH." []
+subset: 3_STAR
+synonym: "4-(3-carboxy-1-cyclopropyl-6-fluoro-4-oxo-1,4-dihydroquinolin-7-yl)piperazin-1-ium" EXACT IUPAC_NAME [IUPAC]
+synonym: "ciprofloxacin cation" RELATED [ChEBI]
+xref: PMID:35371545 {source="Europe PMC"}
+is_a: CHEBI:137419 ! secondary ammonium ion
+relationship: is_conjugate_acid_of CHEBI:100241 ! ciprofloxacin
+property_value: http://purl.obolibrary.org/obo/chebi/charge "+1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C17H19FN3O3" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C17H18FN3O3/c18-13-7-11-14(8-15(13)20-5-3-19-4-6-20)21(10-1-2-10)9-12(16(11)22)17(23)24/h7-10,19H,1-6H2,(H,23,24)/p+1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "MYSWGUAQZAJSOK-UHFFFAOYSA-O" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "332.355" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "332.14050" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "OC(=O)C1=CN(C2CC2)C2=CC(N3CC[NH2+]CC3)=C(F)C=C2C1=O" xsd:string
+
+[Term]
+id: CHEBI:192979
+name: nystatin A2
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "(1R,3S,7R,9R,11R,15S,16R,17R,18S,19E,21E,25E,27E,29E,31E,33R,35S,36R,37S)-33-[(3-amino-3,6-dideoxy-beta-D-mannopyranosyl)oxy]-1,3,7,9,11,17,37-heptahydroxy-15,16,18-trimethyl-13-oxo-14,39-dioxabicyclo[33.3.1]nonatriaconta-19,21,25,27,29,31-hexaene-36-carboxylic acid" EXACT IUPAC_NAME [IUPAC]
+synonym: "nystatin A2" EXACT [ChemIDplus]
+xref: CAS:65086-32-0 {source="ChemIDplus"}
+xref: PMID:15504830 {source="Europe PMC"}
+is_a: CHEBI:59676 ! nystatins
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C47H75NO16" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C47H75NO16/c1-28-18-15-13-11-9-7-5-6-8-10-12-14-16-21-36(63-46-44(57)41(48)43(56)31(4)62-46)25-38-40(45(58)59)37(53)27-47(60,64-38)26-33(50)20-17-19-32(49)22-34(51)23-35(52)24-39(54)61-30(3)29(2)42(28)55/h5-6,8,10-16,18,21,28-38,40-44,46,49-53,55-57,60H,7,9,17,19-20,22-27,48H2,1-4H3,(H,58,59)/b6-5+,10-8+,13-11+,14-12+,18-15+,21-16+/t28-,29-,30-,31+,32+,33-,34+,35+,36-,37-,38-,40+,41-,42+,43+,44-,46-,47+/m0/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "RALQCAVZSAUESR-XTEMEEEFSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "910.108" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "909.50859" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H][C@]12C[C@@H](O[C@@H]3O[C@H](C)[C@@H](O)[C@H](N)[C@@H]3O)\\C=C\\C=C\\C=C\\C=C\\CC\\C=C\\C=C\\[C@H](C)[C@@H](O)[C@@H](C)[C@H](C)OC(=O)C[C@H](O)C[C@H](O)C[C@H](O)CCC[C@H](O)C[C@](O)(C[C@H](O)[C@H]1C(O)=O)O2" xsd:string
+
+[Term]
 id: CHEBI:19834
 name: 3',5'-cyclic purine nucleotide
 namespace: chebi_ontology
@@ -7917,6 +7992,7 @@ subset: 3_STAR
 synonym: "a peroxide" RELATED [UniProt]
 is_a: CHEBI:25741 ! oxide
 relationship: has_part CHEBI:29369 ! peroxy group
+relationship: has_role CHEBI:63248 ! oxidising agent
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "O2R2" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "31.999" xsd:string
@@ -12809,6 +12885,30 @@ is_a: CHEBI:50047 ! organic amino compound
 relationship: has_functional_parent CHEBI:30347 ! ethylenediamine
 
 [Term]
+id: CHEBI:31927
+name: nystatin A3
+namespace: chebi_ontology
+subset: 3_STAR
+synonym: "(1S,3R,4R,7R,9R,11R,15S,16S,17R,18S,19E,21E,25E,27E,29E,31E,33R,35S,36R,37S)-33-[(3-amino-3,6-dideoxy-beta-D-mannopyranosyl)oxy]-17-[(2,6-dideoxy-L-ribo-hexopyranosyl)oxy]-1,3,4,7,9,11,37-heptahydroxy-15,16,18-trimethyl-13-oxo-14,39-dioxabicyclo[33.3.1]nonatriaconta-19,21,25,27,29,31-hexaene-36-carboxylic acid" EXACT IUPAC_NAME [IUPAC]
+synonym: "nystatin A3" EXACT [KEGG_COMPOUND]
+xref: CAS:62997-67-5 {source="ChemIDplus"}
+xref: HMDB:HMDB0242303
+xref: KEGG:C12156
+xref: LIPID_MAPS_instance:LMPK06000005 {source="LIPID MAPS"}
+xref: PMID:15504830 {source="Europe PMC"}
+xref: PMID:27803316 {source="Europe PMC"}
+xref: PMID:3182406 {source="Europe PMC"}
+xref: PMID:468732 {source="Europe PMC"}
+is_a: CHEBI:59676 ! nystatins
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C53H85NO20" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C53H85NO20/c1-29-18-16-14-12-10-8-6-7-9-11-13-15-17-19-37(72-52-49(65)46(54)48(64)33(5)71-52)25-42-45(51(66)67)41(61)28-53(68,74-42)27-40(60)38(58)21-20-34(55)22-35(56)23-36(57)24-43(62)69-31(3)30(2)50(29)73-44-26-39(59)47(63)32(4)70-44/h6-7,9,11-19,29-42,44-50,52,55-61,63-65,68H,8,10,20-28,54H2,1-5H3,(H,66,67)/b7-6+,11-9+,14-12+,15-13+,18-16+,19-17+/t29-,30-,31-,32-,33+,34+,35+,36+,37-,38+,39+,40+,41-,42-,44?,45+,46-,47-,48+,49-,50+,52-,53+/m0/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "IKYMLQOHQLVORI-PLAPNZKPSA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "1056.250" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "1055.56649" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H][C@]12C[C@@H](O[C@@H]3O[C@H](C)[C@@H](O)[C@H](N)[C@@H]3O)\\C=C\\C=C\\C=C\\C=C\\CC\\C=C\\C=C\\[C@H](C)[C@@H](OC3C[C@@H](O)[C@@H](O)[C@H](C)O3)[C@@H](C)[C@H](C)OC(=O)C[C@H](O)C[C@H](O)C[C@H](O)CC[C@@H](O)[C@H](O)C[C@](O)(C[C@H](O)[C@H]1C(O)=O)O2" xsd:string
+
+[Term]
 id: CHEBI:32066
 name: Prothionamide
 namespace: chebi_ontology
@@ -14427,6 +14527,18 @@ subset: 3_STAR
 synonym: "ortho-fused compounds" RELATED [ChEBI]
 synonym: "ortho-fused polycyclic compounds" EXACT IUPAC_NAME [IUPAC]
 is_a: CHEBI:35293 ! fused compound
+
+[Term]
+id: CHEBI:33641
+name: olefin
+namespace: chebi_ontology
+def: "Acyclic and cyclic hydrocarbons having one or more carbon-carbon double bonds, apart from the formal ones in aromatic compounds. The class olefins subsumes alkenes and cycloalkenes and the corresponding polyenes." []
+subset: 3_STAR
+synonym: "olefin" EXACT IUPAC_NAME [IUPAC]
+synonym: "olefins" EXACT IUPAC_NAME [IUPAC]
+synonym: "olefins" RELATED [ChEBI]
+is_a: CHEBI:24632 ! hydrocarbon
+is_a: CHEBI:78840 ! olefinic compound
 
 [Term]
 id: CHEBI:33653
@@ -17664,6 +17776,18 @@ xref: KEGG:C01911
 is_a: CHEBI:50699 ! oligosaccharide
 
 [Term]
+id: CHEBI:36244
+name: dicarboxylic acid monoester
+namespace: chebi_ontology
+def: "A monoester of a dicarboxylic acid." []
+subset: 3_STAR
+synonym: "dicarboxylic acid monoesters" RELATED [ChEBI]
+is_a: CHEBI:131927 ! dicarboxylic acids and O-substituted derivatives
+is_a: CHEBI:33308 ! carboxylic ester
+is_a: CHEBI:33575 ! carboxylic acid
+relationship: is_conjugate_acid_of CHEBI:131605 ! dicarboxylic acid monoester(1-)
+
+[Term]
 id: CHEBI:36335
 name: trypanocidal drug
 namespace: chebi_ontology
@@ -18918,6 +19042,7 @@ namespace: chebi_ontology
 def: "The L-enantiomer of glucopyranose." []
 subset: 3_STAR
 synonym: "L-glucopyranose" EXACT IUPAC_NAME [IUPAC]
+synonym: "L-glucopyranose" EXACT [UniProt]
 synonym: "WURCS=2.0/1,1,0/[a1211h-1x_1-5]/1/" RELATED [GlyTouCan]
 xref: Beilstein:2206321 {source="Beilstein"}
 xref: GlyGen:G16038XU
@@ -22300,6 +22425,50 @@ property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "453.04129
 property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H][C@]12SCC(C=C)=C(N1C(=O)[C@H]2NC(=O)C(=N/OCC(O)=O)\\c1csc(N)n1)C(O)=O" xsd:string
 
 [Term]
+id: CHEBI:473992
+name: nystatin A1
+namespace: chebi_ontology
+alt_id: CHEBI:31926
+def: "A polyene macrolide antibiotic; part of the nystatin complex produced by several Streptomyces species. It is an antifungal antibiotic used for the treatment of topical fungal infections caused by a broad spectrum of fungal pathogens comprising yeast-like and filamentous species." []
+subset: 3_STAR
+synonym: "(1S,3R,4R,7R,9R,11R,15S,16R,17R,18S,19E,21E,25E,27E,29E,31E,33R,35S,36R,37S)-33-[(3-amino-3,6-dideoxy-beta-D-mannopyranosyl)oxy]-1,3,4,7,9,11,17,37-octahydroxy-15,16,18-trimethyl-13-oxo-14,39-dioxabicyclo[33.3.1]nonatriaconta-19,21,25,27,29,31-hexaene-36-carboxylic acid" EXACT IUPAC_NAME [IUPAC]
+synonym: "nystatin A1" EXACT [LIPID_MAPS]
+xref: Beilstein:12153125 {source="Beilstein"}
+xref: CAS:34786-70-4 {source="ChemIDplus"}
+xref: HMDB:HMDB0242564
+xref: KEGG:C12155
+xref: LIPID_MAPS_instance:LMPK06000004 {source="LIPID MAPS"}
+xref: PMID:1086913 {source="Europe PMC"}
+xref: PMID:12230565 {source="Europe PMC"}
+xref: PMID:15034898 {source="Europe PMC"}
+xref: PMID:19362643 {source="Europe PMC"}
+xref: PMID:2010357 {source="Europe PMC"}
+xref: PMID:24231162 {source="Europe PMC"}
+xref: PMID:24924305 {source="Europe PMC"}
+xref: PMID:25082221 {source="Europe PMC"}
+xref: PMID:26233316 {source="Europe PMC"}
+xref: PMID:27379602 {source="Europe PMC"}
+xref: PMID:28488115 {source="Europe PMC"}
+xref: PMID:28555391 {source="Europe PMC"}
+xref: PMID:30206268 {source="Europe PMC"}
+xref: PMID:31924510 {source="Europe PMC"}
+xref: PMID:32038598 {source="Europe PMC"}
+xref: PMID:33932153 {source="Europe PMC"}
+xref: PMID:34275291 {source="Europe PMC"}
+xref: PMID:34938275 {source="Europe PMC"}
+xref: PMID:6331301 {source="Europe PMC"}
+xref: PMID:9188800 {source="Europe PMC"}
+xref: VSDB:2985
+is_a: CHEBI:59676 ! nystatins
+property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/formula "C47H75NO17" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C47H75NO17/c1-27-17-15-13-11-9-7-5-6-8-10-12-14-16-18-34(64-46-44(58)41(48)43(57)30(4)63-46)24-38-40(45(59)60)37(54)26-47(61,65-38)25-36(53)35(52)20-19-31(49)21-32(50)22-33(51)23-39(55)62-29(3)28(2)42(27)56/h5-6,8,10-18,27-38,40-44,46,49-54,56-58,61H,7,9,19-26,48H2,1-4H3,(H,59,60)/b6-5+,10-8+,13-11+,14-12+,17-15+,18-16+/t27-,28-,29-,30+,31+,32+,33+,34-,35+,36+,37-,38-,40+,41-,42+,43+,44-,46-,47+/m0/s1" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/inchikey "VQOXZBDYSJBXMA-NQTDYLQESA-N" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "926.107" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "925.50350" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "[H][C@]12C[C@@H](O[C@@H]3O[C@H](C)[C@@H](O)[C@H](N)[C@@H]3O)\\C=C\\C=C\\C=C\\C=C\\CC\\C=C\\C=C\\[C@H](C)[C@@H](O)[C@@H](C)[C@H](C)OC(=O)C[C@H](O)C[C@H](O)C[C@H](O)CC[C@@H](O)[C@H](O)C[C@](O)(C[C@H](O)[C@H]1C(O)=O)O2" xsd:string
+
+[Term]
 id: CHEBI:474053
 name: cefazolin
 namespace: chebi_ontology
@@ -22733,6 +22902,15 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C17H13ClFN3O" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "329.75600" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "329.07312" xsd:string
+
+[Term]
+id: CHEBI:48121
+name: polyene
+namespace: chebi_ontology
+def: "An olefin that contains more than one carbon-carbon double bond." []
+subset: 3_STAR
+synonym: "polyenes" RELATED [ChEBI]
+is_a: CHEBI:33641 ! olefin
 
 [Term]
 id: CHEBI:48132
@@ -24544,7 +24722,7 @@ namespace: chebi_ontology
 alt_id: CHEBI:58108
 def: "Any anion formed by loss of a proton from the carboxy group of a penicillin." []
 subset: 3_STAR
-synonym: "penicillin" RELATED [UniProt]
+synonym: "a penicillin" RELATED [UniProt]
 synonym: "penicillin anion" RELATED [ChEBI]
 synonym: "penicillin anions" RELATED [ChEBI]
 is_a: CHEBI:47811 ! penamcarboxylate
@@ -26496,11 +26674,18 @@ property_value: http://purl.obolibrary.org/obo/chebi/smiles "CC(C)CCCCC(=O)N[C@@
 id: CHEBI:59676
 name: nystatins
 namespace: chebi_ontology
-def: "A polyene antifungal antibiotic complex containing three biologically active components, A1, A2 and A3. Produced by Streptococcus noursei, S. aureus and other Streptococcus species." []
+def: "A class of polyene antifungal antibiotics produced by Streptomyces noursei, and other Streptomyces species." []
 subset: 3_STAR
 xref: Patent:US2832719
 xref: Patent:US3517100
+xref: PMID:12230565 {source="Europe PMC"}
+xref: PMID:15504830 {source="Europe PMC"}
+xref: PMID:1793301 {source="Europe PMC"}
+is_a: CHEBI:22507 ! aminoglycoside antibiotic
 is_a: CHEBI:25105 ! macrolide antibiotic
+is_a: CHEBI:26191 ! polyol
+is_a: CHEBI:36244 ! dicarboxylic acid monoester
+is_a: CHEBI:48121 ! polyene
 is_a: CHEBI:87113 ! antibiotic antifungal drug
 relationship: has_role CHEBI:76969 ! bacterial metabolite
 
@@ -30293,22 +30478,64 @@ relationship: is_conjugate_base_of CHEBI:26208 ! polyunsaturated fatty acid
 id: CHEBI:7660
 name: nystatin
 namespace: chebi_ontology
-def: "A polyene macrolide antibiotic; part of the nystatin complex produced by several Streptococcus species. The keto-form of nystatin A1." []
+def: "A heterogeneous mixture of polyene compounds produced by cultures of Streptomyces noursei. It mainly consists of three biologically active components designated nystatin A1, nystatin A2, and nystatin A3. It is used to treat oral and dermal fungal infections." []
 subset: 3_STAR
-synonym: "(21E,23E,25E,27E,31E,33E)-20-[(3-amino-3,6-dideoxy-D-mannopyranosyl)oxy]-4,6,8,11,12,16,18,36-octahydroxy-35,37,38-trimethyl-2,14-dioxooxacyclooctatriaconta-21,23,25,27,31,33-hexaene-17-carboxylic acid" EXACT IUPAC_NAME [IUPAC]
-synonym: "mycostatin" RELATED [ChEBI]
+synonym: "Barstatin 100" RELATED BRAND_NAME [ChemIDplus]
+synonym: "Biofanal" RELATED BRAND_NAME [ChemIDplus]
+synonym: "Candex" RELATED BRAND_NAME [ChemIDplus]
+synonym: "Diastatin" RELATED BRAND_NAME [ChemIDplus]
+synonym: "Fungicidin" RELATED BRAND_NAME [ChemIDplus]
+synonym: "Herniocid" RELATED BRAND_NAME [ChemIDplus]
+synonym: "Korostatin" RELATED BRAND_NAME [ChemIDplus]
+synonym: "Mycostatin" RELATED BRAND_NAME [KEGG_DRUG]
+synonym: "nystatin" RELATED INN [WHO_MedNet]
+synonym: "nystatina" RELATED INN [WHO_MedNet]
+synonym: "nystatine" RELATED INN [WHO_MedNet]
+synonym: "nystatinum" RELATED INN [WHO_MedNet]
+synonym: "Nystex" RELATED BRAND_NAME [ChemIDplus]
+synonym: "Nystop" RELATED BRAND_NAME [ChemIDplus]
+xref: CAS:1400-61-9 {source="ChemIDplus"}
+xref: Drug_Central:1977 {source="DrugCentral"}
 xref: DrugBank:DB00646
+xref: KEGG:C06572
 xref: KEGG:D00202
 xref: LIPID_MAPS_instance:LMPK06000001 {source="LIPID MAPS"}
-is_a: CHEBI:33575 ! carboxylic acid
-is_a: CHEBI:59676 ! nystatins
+xref: PMID:10427694 {source="Europe PMC"}
+xref: PMID:12987085 {source="Europe PMC"}
+xref: PMID:16374455 {source="Europe PMC"}
+xref: PMID:16740372 {source="Europe PMC"}
+xref: PMID:17422416 {source="Europe PMC"}
+xref: PMID:18551578 {source="Europe PMC"}
+xref: PMID:33141477 {source="Europe PMC"}
+xref: PMID:33279513 {source="Europe PMC"}
+xref: PMID:33387388 {source="Europe PMC"}
+xref: PMID:33389775 {source="Europe PMC"}
+xref: PMID:34033502 {source="Europe PMC"}
+xref: PMID:34160701 {source="Europe PMC"}
+xref: PMID:34657217 {source="Europe PMC"}
+xref: PMID:34714482 {source="Europe PMC"}
+xref: PMID:34738720 {source="Europe PMC"}
+xref: PMID:34946737 {source="Europe PMC"}
+xref: PMID:35178173 {source="Europe PMC"}
+xref: PMID:35195155 {source="Europe PMC"}
+xref: PMID:35299602 {source="Europe PMC"}
+xref: PMID:35549875 {source="Europe PMC"}
+xref: Wikipedia:Nystatin
+is_a: CHEBI:22507 ! aminoglycoside antibiotic
+is_a: CHEBI:25105 ! macrolide antibiotic
+is_a: CHEBI:26191 ! polyol
+is_a: CHEBI:36244 ! dicarboxylic acid monoester
+is_a: CHEBI:48121 ! polyene
+is_a: CHEBI:60004 ! mixture
+is_a: CHEBI:87113 ! antibiotic antifungal drug
+relationship: has_part CHEBI:192979 ! nystatin A2
+relationship: has_part CHEBI:31927 ! nystatin A3
+relationship: has_part CHEBI:473992 ! nystatin A1
+relationship: has_role CHEBI:76969 ! bacterial metabolite
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "C47H75NO17" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/inchi "InChI=1S/C47H75NO17/c1-27-17-15-13-11-9-7-5-6-8-10-12-14-16-18-35(65-47-45(60)42(48)44(59)30(4)64-47)26-39(56)41(46(61)62)38(55)24-34(52)23-37(54)36(53)20-19-31(49)21-32(50)22-33(51)25-40(57)63-29(3)28(2)43(27)58/h5-6,8,10-18,27-33,35-39,41-45,47,49-51,53-56,58-60H,7,9,19-26,48H2,1-4H3,(H,61,62)/b6-5+,10-8+,13-11+,14-12+,17-15+,18-16+/t27?,28?,29?,30-,31?,32?,33?,35?,36?,37?,38?,39?,41?,42+,43?,44-,45+,47?/m1/s1" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/inchikey "ZDFDJJJGIRGMBE-AFARJNEBSA-N" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/mass "926.09490" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/mass "926.107" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "925.50350" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "CC1OC(=O)CC(O)CC(O)CC(O)CCC(O)C(O)CC(=O)CC(O)C(C(O)CC(OC2O[C@H](C)[C@@H](O)[C@H](N)[C@@H]2O)\\C=C\\C=C\\C=C\\C=C\\CC\\C=C\\C=C\\C(C)C(O)C1C)C(O)=O" xsd:string
 
 [Term]
 id: CHEBI:76661
@@ -35496,8 +35723,8 @@ is_a: CL:0000000 ! cell
 intersection_of: CL:0000000 ! cell
 intersection_of: bearer_of PATO:0000460 ! abnormal
 relationship: bearer_of PATO:0000460 ! abnormal
-relationship: dc-creator http://orcid.org/0000-0001-9990-8331
-property_value: http://purl.org/dc/elements/1.1/date 2017-01-30T18:53:32Z xsd:dateTime
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-9990-8331
+property_value: http://purl.org/dc/terms/date 2017-01-30T18:53:32Z xsd:dateTime
 
 [Term]
 id: CL:0017505
@@ -35507,7 +35734,7 @@ is_a: GO:0005634 ! nucleus
 intersection_of: GO:0005634 ! nucleus
 intersection_of: bearer_of PATO:0000586 ! increased size
 relationship: bearer_of PATO:0000586 ! increased size
-created_by: tmeehan
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-1980-3228
 creation_date: 2009-12-23T10:53:24Z
 
 [Term]
@@ -35853,6 +36080,20 @@ xref: Wikipedia:Enzyme
 is_a: GO:0003674 ! molecular_function
 
 [Term]
+id: GO:0004176
+name: ATP-dependent peptidase activity
+namespace: molecular_function
+alt_id: GO:0004280
+def: "Catalysis of the hydrolysis of peptide bonds, driven by ATP hydrolysis." [GOC:mah]
+synonym: "ATP-dependent proteolysis" RELATED [GOC:mah]
+xref: Reactome:R-HSA-9698929 "pPR-AP:pAP cleaves the MCP:pPR-AP:pAP Complex"
+is_a: GO:0008233 ! peptidase activity
+is_a: GO:0140657 ! ATP-dependent activity
+intersection_of: GO:0008233 ! peptidase activity
+intersection_of: has_part GO:0016887 ! ATP hydrolysis activity
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/21612 xsd:anyURI
+
+[Term]
 id: GO:0004553
 name: hydrolase activity, hydrolyzing O-glycosyl compounds
 namespace: molecular_function
@@ -35881,6 +36122,20 @@ xref: Reactome:R-HSA-6786421 "CHIA hydrolyses chitin"
 is_a: GO:0004553 ! hydrolase activity, hydrolyzing O-glycosyl compounds
 
 [Term]
+id: GO:0004857
+name: enzyme inhibitor activity
+namespace: molecular_function
+alt_id: GO:0048551
+def: "Binds to and stops, prevents or reduces the activity of an enzyme." [GOC:ai, GOC:ebc]
+comment: This term should only be used in cases when the regulator directly interacts with the enzyme.
+synonym: "metalloenzyme inhibitor activity" NARROW []
+is_a: GO:0030234 ! enzyme regulator activity
+is_a: GO:0140678 ! molecular function inhibitor activity
+intersection_of: GO:0098772 ! molecular function regulator activity
+intersection_of: negatively_regulates GO:0003824 ! catalytic activity
+relationship: negatively_regulates GO:0003824 ! catalytic activity
+
+[Term]
 id: GO:0005215
 name: transporter activity
 namespace: molecular_function
@@ -35899,7 +36154,6 @@ subset: goslim_pir
 subset: goslim_plant
 subset: prokaryote_subset
 synonym: "carrier" RELATED []
-xref: EC:7.-.-.-
 xref: Reactome:R-HSA-168313 "Virion-associated M2 protein mediated ion infusion"
 xref: Reactome:R-HSA-178215 "SMAD7:SMURF1 complex is exported to the cytosol"
 is_a: GO:0003674 ! molecular_function
@@ -36124,6 +36378,7 @@ is_a: GO:0043232 ! intracellular non-membrane-bounded organelle
 id: GO:0005886
 name: plasma membrane
 namespace: cellular_component
+alt_id: GO:0005887
 alt_id: GO:0005904
 def: "The membrane surrounding a cell that separates the cell from its external environment. It consists of a phospholipid bilayer and associated proteins." [ISBN:0716731363]
 subset: goslim_agr
@@ -36141,6 +36396,8 @@ synonym: "cell membrane" EXACT []
 synonym: "cellular membrane" EXACT [NIF_Subcellular:sao6433132645]
 synonym: "cytoplasmic membrane" EXACT []
 synonym: "inner endospore membrane" NARROW []
+synonym: "integral component of plasma membrane" NARROW []
+synonym: "integral to plasma membrane" NARROW []
 synonym: "juxtamembrane" BROAD []
 synonym: "plasma membrane lipid bilayer" NARROW [GOC:mah]
 synonym: "plasmalemma" EXACT []
@@ -36374,7 +36631,7 @@ synonym: "regulation of protein biosynthesis" EXACT []
 synonym: "regulation of protein formation" EXACT []
 synonym: "regulation of protein synthesis" EXACT []
 is_a: GO:0010608 ! post-transcriptional regulation of gene expression
-is_a: GO:0034248 ! regulation of cellular amide metabolic process
+is_a: GO:0034248 ! regulation of amide metabolic process
 is_a: GO:0051246 ! regulation of protein metabolic process
 is_a: GO:2000112 ! regulation of cellular macromolecule biosynthetic process
 intersection_of: GO:0065007 ! biological regulation
@@ -36429,7 +36686,7 @@ namespace: biological_process
 def: "The chemical reactions and pathways involving peptides, compounds of two or more amino acids where the alpha carboxyl group of one is bound to the alpha amino group of another." [GOC:go_curators]
 subset: goslim_pir
 synonym: "peptide metabolism" EXACT []
-is_a: GO:0043603 ! cellular amide metabolic process
+is_a: GO:0043603 ! amide metabolic process
 is_a: GO:1901564 ! organonitrogen compound metabolic process
 intersection_of: GO:0008152 ! metabolic process
 intersection_of: has_primary_input_or_output CHEBI:16670 ! peptide
@@ -36437,10 +36694,10 @@ relationship: has_primary_input_or_output CHEBI:16670 ! peptide
 
 [Term]
 id: GO:0006520
-name: cellular amino acid metabolic process
+name: amino acid metabolic process
 namespace: biological_process
 alt_id: GO:0006519
-def: "The chemical reactions and pathways involving amino acids, carboxylic acids containing one or more amino groups, as carried out by individual cells." [ISBN:0198506732]
+def: "The chemical reactions and pathways involving amino acids, carboxylic acids containing one or more amino groups." [ISBN:0198506732]
 subset: goslim_chembl
 subset: goslim_drosophila
 subset: goslim_generic
@@ -36448,9 +36705,9 @@ subset: goslim_pir
 subset: goslim_pombe
 subset: goslim_yeast
 subset: prokaryote_subset
-synonym: "amino acid and derivative metabolism" EXACT []
-synonym: "amino acid metabolic process" EXACT []
-synonym: "cellular amino acid and derivative metabolic process" EXACT []
+synonym: "amino acid and derivative metabolism" RELATED []
+synonym: "cellular amino acid and derivative metabolic process" RELATED []
+synonym: "cellular amino acid metabolic process" EXACT []
 synonym: "cellular amino acid metabolism" EXACT []
 is_a: GO:0019752 ! carboxylic acid metabolic process
 is_a: GO:0044238 ! primary metabolic process
@@ -36458,6 +36715,7 @@ is_a: GO:1901564 ! organonitrogen compound metabolic process
 intersection_of: GO:0008152 ! metabolic process
 intersection_of: has_primary_input_or_output CHEBI:37022 ! amino-acid anion
 relationship: has_primary_input_or_output CHEBI:37022 ! amino-acid anion
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/17904 xsd:anyURI
 
 [Term]
 id: GO:0006521
@@ -36466,11 +36724,11 @@ namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways involving amino acids." [GOC:go_curators]
 synonym: "regulation of amino acid metabolism" EXACT []
 is_a: GO:0010565 ! regulation of cellular ketone metabolic process
-is_a: GO:0033238 ! regulation of cellular amine metabolic process
+is_a: GO:0033238 ! regulation of amine metabolic process
 is_a: GO:0080090 ! regulation of primary metabolic process
 intersection_of: GO:0065007 ! biological regulation
-intersection_of: regulates GO:0006520 ! cellular amino acid metabolic process
-relationship: regulates GO:0006520 ! cellular amino acid metabolic process
+intersection_of: regulates GO:0006520 ! amino acid metabolic process
+relationship: regulates GO:0006520 ! amino acid metabolic process
 
 [Term]
 id: GO:0006553
@@ -37006,6 +37264,20 @@ is_a: GO:0061983 ! meiosis II cell cycle process
 is_a: GO:0140013 ! meiotic nuclear division
 
 [Term]
+id: GO:0008047
+name: enzyme activator activity
+namespace: molecular_function
+alt_id: GO:0010577
+def: "Binds to and increases the activity of an enzyme." [GOC:dph, GOC:mah, GOC:tb]
+comment: This term should only be used in cases when the regulator directly interacts with the enzyme.
+synonym: "metalloenzyme activator activity" NARROW []
+is_a: GO:0030234 ! enzyme regulator activity
+is_a: GO:0140677 ! molecular function activator activity
+intersection_of: GO:0140677 ! molecular function activator activity
+intersection_of: positively_regulates GO:0003824 ! catalytic activity
+relationship: positively_regulates GO:0003824 ! catalytic activity
+
+[Term]
 id: GO:0008061
 name: chitin binding
 namespace: molecular_function
@@ -37273,6 +37545,7 @@ subset: goslim_pir
 synonym: "small protein activating enzyme activity" NARROW []
 is_a: GO:0016877 ! ligase activity, forming carbon-sulfur bonds
 is_a: GO:0140096 ! catalytic activity, acting on a protein
+is_a: GO:0140657 ! ATP-dependent activity
 property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/14208 xsd:anyURI
 
 [Term]
@@ -37292,21 +37565,22 @@ relationship: has_primary_input CHEBI:16646 ! carbohydrate
 
 [Term]
 id: GO:0008652
-name: cellular amino acid biosynthetic process
+name: amino acid biosynthetic process
 namespace: biological_process
 def: "The chemical reactions and pathways resulting in the formation of amino acids, organic acids containing one or more amino substituents." [ISBN:0198506732]
-synonym: "amino acid biosynthetic process" EXACT []
-synonym: "cellular amino acid anabolism" EXACT []
-synonym: "cellular amino acid biosynthesis" EXACT []
-synonym: "cellular amino acid formation" EXACT []
-synonym: "cellular amino acid synthesis" EXACT []
+synonym: "amino acid anabolism" EXACT []
+synonym: "amino acid biosynthesis" EXACT []
+synonym: "amino acid formation" EXACT []
+synonym: "amino acid synthesis" EXACT []
+synonym: "cellular amino acid biosynthetic process" EXACT []
 xref: Wikipedia:Amino_acid_synthesis
-is_a: GO:0006520 ! cellular amino acid metabolic process
+is_a: GO:0006520 ! amino acid metabolic process
 is_a: GO:0046394 ! carboxylic acid biosynthetic process
 is_a: GO:1901566 ! organonitrogen compound biosynthetic process
 intersection_of: GO:0009058 ! biosynthetic process
 intersection_of: has_primary_output CHEBI:37022 ! amino-acid anion
 relationship: has_primary_output CHEBI:37022 ! amino-acid anion
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/17904 xsd:anyURI
 
 [Term]
 id: GO:0009056
@@ -37388,19 +37662,20 @@ relationship: has_primary_output CHEBI:33694 ! biomacromolecule
 
 [Term]
 id: GO:0009063
-name: cellular amino acid catabolic process
+name: amino acid catabolic process
 namespace: biological_process
 def: "The chemical reactions and pathways resulting in the breakdown of amino acids, organic acids containing one or more amino substituents." [GOC:ai]
-synonym: "amino acid catabolic process" EXACT []
-synonym: "cellular amino acid breakdown" EXACT []
-synonym: "cellular amino acid catabolism" EXACT []
-synonym: "cellular amino acid degradation" EXACT []
-is_a: GO:0006520 ! cellular amino acid metabolic process
+synonym: "amino acid breakdown" EXACT []
+synonym: "amino acid catabolism" EXACT []
+synonym: "amino acid degradation" EXACT []
+synonym: "cellular amino acid catabolic process" EXACT []
+is_a: GO:0006520 ! amino acid metabolic process
 is_a: GO:0046395 ! carboxylic acid catabolic process
 is_a: GO:1901565 ! organonitrogen compound catabolic process
 intersection_of: GO:0009056 ! catabolic process
 intersection_of: has_primary_input CHEBI:37022 ! amino-acid anion
 relationship: has_primary_input CHEBI:37022 ! amino-acid anion
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/17904 xsd:anyURI
 
 [Term]
 id: GO:0009066
@@ -37467,14 +37742,18 @@ intersection_of: has_primary_input PR:000000001 ! protein
 id: GO:0009308
 name: amine metabolic process
 namespace: biological_process
+alt_id: GO:0044106
 def: "The chemical reactions and pathways involving any organic compound that is weakly basic in character and contains an amino or a substituted amino group. Amines are called primary, secondary, or tertiary according to whether one, two, or three carbon atoms are attached to the nitrogen atom." [GOC:jl, ISBN:0198506732]
 subset: goslim_chembl
 subset: goslim_pir
 synonym: "amine metabolism" EXACT []
+synonym: "cellular amine metabolic process" EXACT []
 is_a: GO:1901564 ! organonitrogen compound metabolic process
 intersection_of: GO:0008152 ! metabolic process
 intersection_of: has_primary_input_or_output CHEBI:32952 ! amine
 relationship: has_primary_input_or_output CHEBI:32952 ! amine
+created_by: jl
+creation_date: 2009-07-15T11:55:44Z
 
 [Term]
 id: GO:0009309
@@ -38178,6 +38457,7 @@ relationship: has_primary_input CHEBI:61120 ! nucleobase-containing molecular en
 id: GO:0016020
 name: membrane
 namespace: cellular_component
+alt_id: GO:0016021
 alt_id: GO:0098589
 alt_id: GO:0098805
 def: "A lipid bilayer along with all the proteins and protein complexes embedded in it an attached to it." [GOC:dos, GOC:mah, ISBN:0815316194]
@@ -38188,10 +38468,14 @@ subset: goslim_metagenomics
 subset: goslim_pir
 subset: goslim_plant
 subset: goslim_yeast
+synonym: "integral component of membrane" NARROW []
+synonym: "integral to membrane" NARROW []
 synonym: "membrane region" NARROW []
 synonym: "region of membrane" NARROW []
+synonym: "transmembrane" RELATED [GOC:mah]
 synonym: "whole membrane" NARROW []
 xref: Wikipedia:Biological_membrane
+xref: Wikipedia:Transmembrane_protein
 is_a: GO:0110165 ! cellular anatomical entity
 creation_date: 2014-03-06T11:37:54Z
 
@@ -38419,6 +38703,14 @@ xref: Wikipedia:Phosphorylation
 is_a: GO:0006796 ! phosphate-containing compound metabolic process
 
 [Term]
+id: GO:0016462
+name: pyrophosphatase activity
+namespace: molecular_function
+def: "Catalysis of the hydrolysis of a pyrophosphate bond (diphosphate bond) between two phosphate groups." [GOC:curators, https://en.wikipedia.org/wiki/Pyrophosphatase]
+xref: Reactome:R-HSA-6810472 "NUDT13 hydrolyses AP6A to AP4 and ADP"
+is_a: GO:0016818 ! hydrolase activity, acting on acid anhydrides, in phosphorus-containing anhydrides
+
+[Term]
 id: GO:0016597
 name: amino acid binding
 namespace: molecular_function
@@ -38505,6 +38797,23 @@ xref: Reactome:R-HSA-2065233 "CS is cleaved from its proteoglycan"
 is_a: GO:0016787 ! hydrolase activity
 
 [Term]
+id: GO:0016817
+name: hydrolase activity, acting on acid anhydrides
+namespace: molecular_function
+def: "Catalysis of the hydrolysis of any acid anhydride." [GOC:jl]
+synonym: "hydrolase activity, acting on acid anhydrides, involved in cellular and subcellular movement" NARROW []
+xref: EC:3.6.-.-
+is_a: GO:0016787 ! hydrolase activity
+
+[Term]
+id: GO:0016818
+name: hydrolase activity, acting on acid anhydrides, in phosphorus-containing anhydrides
+namespace: molecular_function
+def: "Catalysis of the hydrolysis of any acid anhydride which contains phosphorus." [GOC:jl]
+xref: EC:3.6.1.-
+is_a: GO:0016817 ! hydrolase activity, acting on acid anhydrides
+
+[Term]
 id: GO:0016874
 name: ligase activity
 namespace: molecular_function
@@ -38533,6 +38842,77 @@ xref: EC:6.2.-.-
 is_a: GO:0016874 ! ligase activity
 
 [Term]
+id: GO:0016887
+name: ATP hydrolysis activity
+namespace: molecular_function
+alt_id: GO:0004002
+alt_id: GO:0042623
+def: "Catalysis of the reaction: ATP + H2O = ADP + H+ phosphate. ATP hydrolysis is used in some reactions as an energy source, for example to catalyze a reaction or drive transport against a concentration gradient." [RHEA:13065]
+comment: Note that this term is meant to specifically represent the ATPase activity of proteins using ATP as a source of energy to drive a reaction. If possible, gene products should also be annotated to a child of 'ATP-dependent activity ; GO:0140657', to capture their overall function.
+synonym: "adenosine 5'-triphosphatase activity" EXACT []
+synonym: "adenosine triphosphatase activity" EXACT []
+synonym: "adenosinetriphosphatase activity" EXACT []
+synonym: "ATP hydrolase activity" EXACT []
+synonym: "ATP monophosphatase activity" RELATED []
+synonym: "ATP phosphohydrolase activity" EXACT []
+xref: Reactome:R-HSA-159101 "NXF1:NXT1 (TAP:p15) binds capped mRNA:CBC:EJC:TREX (minus DDX39B)"
+xref: Reactome:R-HSA-3371422 "ATP hydrolysis by HSP70"
+xref: Reactome:R-HSA-416985 "Trafficking of GluR2-containing AMPA receptors to synapse"
+xref: Reactome:R-HSA-5618093 "ATP hydrolysis by HSP90"
+xref: Reactome:R-HSA-5654989 "SPRTN:VCP-mediated release of POLH from monoUb:K164-PCNA"
+xref: Reactome:R-HSA-5694425 "NSF ATPase activity dissociates cis-SNARE"
+xref: Reactome:R-HSA-6809015 "NSF ATPase activity dissociates cis-SNARE at cis-Golgi"
+xref: Reactome:R-HSA-6811422 "NSF ATPase activity dissociates cis-SNARE at the ER"
+xref: Reactome:R-HSA-6814670 "ATP hydrolysis by RHOBTB3 promotes PLIN3 dissociation"
+xref: Reactome:R-HSA-6814678 "ATP hydrolysis by NSF disassembles the cis-SNARE at the TGN"
+xref: Reactome:R-HSA-6814683 "NSF-dependent ATP hydrolysis disassembles the cis-SNARE at the TGN"
+xref: Reactome:R-HSA-72139 "Formation of the active Spliceosomal C (B*) complex"
+xref: Reactome:R-HSA-8847638 "ATP hydrolysis by NSF disassembles the cis-SNARE at the Golgi membrane"
+xref: Reactome:R-HSA-8868658 "HSPA8-mediated ATP hydrolysis promotes vesicle uncoating"
+xref: Reactome:R-HSA-8939203 "HSP90-dependent ATP hydrolysis promotes release of ESR:ESTG from chaperone complex"
+xref: Reactome:R-HSA-9038161 "Progesterone stimulation promotes PGR:P4 binding to ESR1:ESTG"
+xref: Reactome:R-HSA-917693 "ESCRT Disassembly"
+xref: Reactome:R-HSA-9609860 "Tail-anchored protein:SGTA:BAG6:GET4:UBL4A:ASNA1:ATP dissociates and ASNA1 hydrolyzes ATP yielding Tail-anchored protein:ASNA1:ADP"
+xref: Reactome:R-HSA-9668415 "VPS4 mediates disassembly of ESCRTIII subunits to promote sealing of holes in the nuclear envelope"
+xref: Reactome:R-HSA-9706399 "RHOBTB3 hydrolyzes ATP"
+xref: RHEA:13065
+is_a: GO:0017111 ! ribonucleoside triphosphate phosphatase activity
+relationship: part_of GO:0140657 ! ATP-dependent activity
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/19078 xsd:anyURI
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/20498 xsd:anyURI
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/21612 xsd:anyURI
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/22371 xsd:anyURI
+
+[Term]
+id: GO:0017111
+name: ribonucleoside triphosphate phosphatase activity
+namespace: molecular_function
+def: "Catalysis of the reaction: a ribonucleoside triphosphate + H2O = a ribonucleoside diphosphate + H+ + phosphate." [RHEA:23680]
+subset: goslim_chembl
+subset: goslim_metagenomics
+synonym: "apyrase activity" BROAD []
+synonym: "NTPase activity" EXACT []
+synonym: "nucleoside 5-triphosphatase activity" BROAD [EC:3.6.1.15]
+synonym: "nucleoside triphosphatase activity" BROAD []
+synonym: "nucleoside triphosphate hydrolase activity" BROAD []
+synonym: "nucleoside triphosphate phosphatase activity" BROAD []
+synonym: "nucleoside triphosphate phosphohydrolase activity" RELATED []
+synonym: "nucleoside-5-triphosphate phosphohydrolase activity" RELATED []
+synonym: "nucleoside-triphosphatase activity" BROAD []
+xref: EC:3.6.1.15
+xref: MetaCyc:NUCLEOSIDE-TRIPHOSPHATASE-RXN
+xref: Reactome:R-HSA-8850846 "NTPDase1 hydrolyzes nucleoside triphosphates"
+xref: Reactome:R-HSA-8851089 "NTPDase2 hydrolyzes nucleoside triphosphates"
+xref: Reactome:R-HSA-8851110 "NTPDase3 hydrolyzes nucleoside triphosphates"
+xref: Reactome:R-HSA-8851234 "NTPDase4 hydrolyzes nucleoside triphosphates"
+xref: Reactome:R-HSA-8851494 "NTPDase7 hydrolyzes nucleoside triphosphates"
+xref: Reactome:R-HSA-8851538 "NTPDase8 hydrolyzes nucleoside triphosphates"
+xref: RHEA:23680
+is_a: GO:0016462 ! pyrophosphatase activity
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/21232 xsd:anyURI
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/23401 xsd:anyURI
+
+[Term]
 id: GO:0017148
 name: negative regulation of translation
 namespace: biological_process
@@ -38551,7 +38931,7 @@ synonym: "protein biosynthesis inhibitor activity" RELATED []
 synonym: "protein biosynthetic process inhibitor activity" RELATED []
 is_a: GO:0006417 ! regulation of translation
 is_a: GO:0010629 ! negative regulation of gene expression
-is_a: GO:0034249 ! negative regulation of cellular amide metabolic process
+is_a: GO:0034249 ! negative regulation of amide metabolic process
 is_a: GO:0051248 ! negative regulation of protein metabolic process
 is_a: GO:2000113 ! negative regulation of cellular macromolecule biosynthetic process
 intersection_of: GO:0065007 ! biological regulation
@@ -38593,6 +38973,38 @@ def: "Any cellular component of a host cell. The host is an organism in which an
 synonym: "host organism" EXACT []
 xref: Wikipedia:Host_(biology)
 is_a: GO:0110165 ! cellular anatomical entity
+
+[Term]
+id: GO:0019207
+name: kinase regulator activity
+namespace: molecular_function
+def: "Modulates the activity of a kinase, an enzyme which catalyzes of the transfer of a phosphate group, usually from ATP, to a substrate molecule." [GOC:ai]
+is_a: GO:0030234 ! enzyme regulator activity
+intersection_of: GO:0098772 ! molecular function regulator activity
+intersection_of: regulates GO:0016301 ! kinase activity
+relationship: regulates GO:0016301 ! kinase activity
+
+[Term]
+id: GO:0019209
+name: kinase activator activity
+namespace: molecular_function
+def: "Binds to and increases the activity of a kinase, an enzyme which catalyzes of the transfer of a phosphate group, usually from ATP, to a substrate molecule." [GOC:ai]
+is_a: GO:0008047 ! enzyme activator activity
+is_a: GO:0019207 ! kinase regulator activity
+intersection_of: GO:0140677 ! molecular function activator activity
+intersection_of: positively_regulates GO:0016301 ! kinase activity
+relationship: positively_regulates GO:0016301 ! kinase activity
+
+[Term]
+id: GO:0019210
+name: kinase inhibitor activity
+namespace: molecular_function
+def: "Binds to and stops, prevents or reduces the activity of a kinase." [GOC:mah]
+is_a: GO:0004857 ! enzyme inhibitor activity
+is_a: GO:0019207 ! kinase regulator activity
+intersection_of: GO:0140678 ! molecular function inhibitor activity
+intersection_of: negatively_regulates GO:0016301 ! kinase activity
+relationship: negatively_regulates GO:0016301 ! kinase activity
 
 [Term]
 id: GO:0019216
@@ -39000,6 +39412,29 @@ intersection_of: GO:0009056 ! catabolic process
 intersection_of: has_primary_input PR:000000001 ! protein
 relationship: has_primary_input PR:000000001 ! protein
 property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/23112 xsd:anyURI
+
+[Term]
+id: GO:0030234
+name: enzyme regulator activity
+namespace: molecular_function
+alt_id: GO:0010576
+def: "Binds to and modulates the activity of an enzyme." [GOC:dph, GOC:mah, GOC:tb]
+comment: This term should only be used in cases when the regulator directly interacts with the enzyme.
+subset: goslim_agr
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_drosophila
+subset: goslim_mouse
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+synonym: "catalytic regulator activity" EXACT [GOC:dph]
+synonym: "enzyme modulator" EXACT []
+synonym: "metalloenzyme regulator activity" NARROW []
+is_a: GO:0098772 ! molecular function regulator activity
+intersection_of: GO:0098772 ! molecular function regulator activity
+intersection_of: regulates GO:0003824 ! catalytic activity
+relationship: regulates GO:0003824 ! catalytic activity
 
 [Term]
 id: GO:0030246
@@ -39940,82 +40375,84 @@ relationship: has_input CHEBI:32988 ! amide
 
 [Term]
 id: GO:0033238
-name: regulation of cellular amine metabolic process
+name: regulation of amine metabolic process
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways by which individual cells transform amines." [GOC:mah]
 synonym: "regulation of amine metabolism" EXACT []
-is_a: GO:0031323 ! regulation of cellular metabolic process
+synonym: "regulation of cellular amine metabolic process" EXACT []
 is_a: GO:0051171 ! regulation of nitrogen compound metabolic process
 intersection_of: GO:0065007 ! biological regulation
-intersection_of: regulates GO:0044106 ! cellular amine metabolic process
-relationship: regulates GO:0044106 ! cellular amine metabolic process
+intersection_of: regulates GO:0009308 ! amine metabolic process
+relationship: regulates GO:0009308 ! amine metabolic process
 
 [Term]
 id: GO:0033239
-name: negative regulation of cellular amine metabolic process
+name: negative regulation of amine metabolic process
 namespace: biological_process
 def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the chemical reactions and pathways involving amines." [GOC:mah]
 synonym: "negative regulation of amine metabolism" EXACT []
-is_a: GO:0031324 ! negative regulation of cellular metabolic process
-is_a: GO:0033238 ! regulation of cellular amine metabolic process
+synonym: "negative regulation of cellular amine metabolic process" EXACT []
+is_a: GO:0033238 ! regulation of amine metabolic process
 is_a: GO:0051172 ! negative regulation of nitrogen compound metabolic process
 intersection_of: GO:0065007 ! biological regulation
-intersection_of: negatively_regulates GO:0044106 ! cellular amine metabolic process
-relationship: negatively_regulates GO:0044106 ! cellular amine metabolic process
+intersection_of: negatively_regulates GO:0009308 ! amine metabolic process
+relationship: negatively_regulates GO:0009308 ! amine metabolic process
 
 [Term]
 id: GO:0033240
-name: positive regulation of cellular amine metabolic process
+name: positive regulation of amine metabolic process
 namespace: biological_process
 def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways involving amines." [GOC:mah]
 synonym: "positive regulation of amine metabolism" EXACT []
-is_a: GO:0031325 ! positive regulation of cellular metabolic process
-is_a: GO:0033238 ! regulation of cellular amine metabolic process
+synonym: "positive regulation of cellular amine metabolic process" EXACT []
+is_a: GO:0033238 ! regulation of amine metabolic process
 is_a: GO:0051173 ! positive regulation of nitrogen compound metabolic process
 intersection_of: GO:0065007 ! biological regulation
-intersection_of: positively_regulates GO:0044106 ! cellular amine metabolic process
-relationship: positively_regulates GO:0044106 ! cellular amine metabolic process
+intersection_of: positively_regulates GO:0009308 ! amine metabolic process
+relationship: positively_regulates GO:0009308 ! amine metabolic process
 
 [Term]
 id: GO:0033241
-name: regulation of cellular amine catabolic process
+name: regulation of amine catabolic process
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways leading to the breakdown of amines." [GOC:mah]
 synonym: "regulation of amine breakdown" EXACT []
 synonym: "regulation of amine catabolism" EXACT []
 synonym: "regulation of amine degradation" EXACT []
-is_a: GO:0031329 ! regulation of cellular catabolic process
-is_a: GO:0033238 ! regulation of cellular amine metabolic process
+synonym: "regulation of cellular amine catabolic process" EXACT []
+is_a: GO:0009894 ! regulation of catabolic process
+is_a: GO:0033238 ! regulation of amine metabolic process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: regulates GO:0009310 ! amine catabolic process
 relationship: regulates GO:0009310 ! amine catabolic process
 
 [Term]
 id: GO:0033242
-name: negative regulation of cellular amine catabolic process
+name: negative regulation of amine catabolic process
 namespace: biological_process
 def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the chemical reactions and pathways leading to the breakdown of amines." [GOC:mah]
 synonym: "negative regulation of amine breakdown" EXACT []
 synonym: "negative regulation of amine catabolism" EXACT []
 synonym: "negative regulation of amine degradation" EXACT []
-is_a: GO:0031330 ! negative regulation of cellular catabolic process
-is_a: GO:0033239 ! negative regulation of cellular amine metabolic process
-is_a: GO:0033241 ! regulation of cellular amine catabolic process
+synonym: "negative regulation of cellular amine catabolic process" EXACT []
+is_a: GO:0009895 ! negative regulation of catabolic process
+is_a: GO:0033239 ! negative regulation of amine metabolic process
+is_a: GO:0033241 ! regulation of amine catabolic process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: negatively_regulates GO:0009310 ! amine catabolic process
 relationship: negatively_regulates GO:0009310 ! amine catabolic process
 
 [Term]
 id: GO:0033243
-name: positive regulation of cellular amine catabolic process
+name: positive regulation of amine catabolic process
 namespace: biological_process
 def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways leading to the breakdown of amines." [GOC:mah]
 synonym: "positive regulation of amine breakdown" EXACT []
 synonym: "positive regulation of amine catabolism" EXACT []
 synonym: "positive regulation of amine degradation" EXACT []
-is_a: GO:0031331 ! positive regulation of cellular catabolic process
-is_a: GO:0033240 ! positive regulation of cellular amine metabolic process
-is_a: GO:0033241 ! regulation of cellular amine catabolic process
+is_a: GO:0009896 ! positive regulation of catabolic process
+is_a: GO:0033240 ! positive regulation of amine metabolic process
+is_a: GO:0033241 ! regulation of amine catabolic process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0009310 ! amine catabolic process
 relationship: positively_regulates GO:0009310 ! amine catabolic process
@@ -40090,41 +40527,88 @@ property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/2
 
 [Term]
 id: GO:0034248
-name: regulation of cellular amide metabolic process
+name: regulation of amide metabolic process
 namespace: biological_process
 def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways involving amides." [GOC:mah]
 synonym: "regulation of amide metabolism" EXACT []
-is_a: GO:0031323 ! regulation of cellular metabolic process
+synonym: "regulation of cellular amide metabolic process" EXACT []
 is_a: GO:0051171 ! regulation of nitrogen compound metabolic process
 intersection_of: GO:0065007 ! biological regulation
-intersection_of: regulates GO:0043603 ! cellular amide metabolic process
-relationship: regulates GO:0043603 ! cellular amide metabolic process
+intersection_of: regulates GO:0043603 ! amide metabolic process
+relationship: regulates GO:0043603 ! amide metabolic process
 
 [Term]
 id: GO:0034249
-name: negative regulation of cellular amide metabolic process
+name: negative regulation of amide metabolic process
 namespace: biological_process
 def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the chemical reactions and pathways involving amides." [GOC:mah]
 synonym: "negative regulation of amide metabolism" EXACT []
-is_a: GO:0031324 ! negative regulation of cellular metabolic process
-is_a: GO:0034248 ! regulation of cellular amide metabolic process
+synonym: "negative regulation of cellular amide metabolic process" EXACT []
+is_a: GO:0034248 ! regulation of amide metabolic process
 is_a: GO:0051172 ! negative regulation of nitrogen compound metabolic process
 intersection_of: GO:0065007 ! biological regulation
-intersection_of: negatively_regulates GO:0043603 ! cellular amide metabolic process
-relationship: negatively_regulates GO:0043603 ! cellular amide metabolic process
+intersection_of: negatively_regulates GO:0043603 ! amide metabolic process
+relationship: negatively_regulates GO:0043603 ! amide metabolic process
 
 [Term]
 id: GO:0034250
-name: positive regulation of cellular amide metabolic process
+name: positive regulation of amide metabolic process
 namespace: biological_process
 def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways involving amides." [GOC:mah]
 synonym: "positive regulation of amide metabolism" EXACT []
-is_a: GO:0031325 ! positive regulation of cellular metabolic process
-is_a: GO:0034248 ! regulation of cellular amide metabolic process
+synonym: "positive regulation of cellular amide metabolic process" EXACT []
+is_a: GO:0034248 ! regulation of amide metabolic process
 is_a: GO:0051173 ! positive regulation of nitrogen compound metabolic process
 intersection_of: GO:0065007 ! biological regulation
-intersection_of: positively_regulates GO:0043603 ! cellular amide metabolic process
-relationship: positively_regulates GO:0043603 ! cellular amide metabolic process
+intersection_of: positively_regulates GO:0043603 ! amide metabolic process
+relationship: positively_regulates GO:0043603 ! amide metabolic process
+
+[Term]
+id: GO:0034251
+name: regulation of amide catabolic process
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways resulting in the breakdown of amides." [GOC:mah]
+synonym: "regulation of amide breakdown" EXACT []
+synonym: "regulation of amide catabolism" EXACT []
+synonym: "regulation of amide degradation" EXACT []
+synonym: "regulation of cellular amide catabolic process" EXACT []
+is_a: GO:0009894 ! regulation of catabolic process
+is_a: GO:0034248 ! regulation of amide metabolic process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: regulates GO:0043605 ! amide catabolic process
+relationship: regulates GO:0043605 ! amide catabolic process
+
+[Term]
+id: GO:0034252
+name: negative regulation of amide catabolic process
+namespace: biological_process
+def: "Any process that stops, prevents, or reduces the frequency, rate or extent of the chemical reactions and pathways resulting in the breakdown of amides." [GOC:mah]
+synonym: "negative regulation of amide breakdown" EXACT []
+synonym: "negative regulation of amide catabolism" EXACT []
+synonym: "negative regulation of amide degradation" RELATED []
+synonym: "negative regulation of cellular amide catabolic process" EXACT []
+is_a: GO:0009895 ! negative regulation of catabolic process
+is_a: GO:0034249 ! negative regulation of amide metabolic process
+is_a: GO:0034251 ! regulation of amide catabolic process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: negatively_regulates GO:0043605 ! amide catabolic process
+relationship: negatively_regulates GO:0043605 ! amide catabolic process
+
+[Term]
+id: GO:0034253
+name: positive regulation of amide catabolic process
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the breakdown of amides." [GOC:mah]
+synonym: "positive regulation of amide breakdown" EXACT []
+synonym: "positive regulation of amide catabolism" EXACT []
+synonym: "positive regulation of amide degradation" RELATED []
+synonym: "positive regulation of cellular amide catabolic process" EXACT []
+is_a: GO:0009896 ! positive regulation of catabolic process
+is_a: GO:0034250 ! positive regulation of amide metabolic process
+is_a: GO:0034251 ! regulation of amide catabolic process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: positively_regulates GO:0043605 ! amide catabolic process
+relationship: positively_regulates GO:0043605 ! amide catabolic process
 
 [Term]
 id: GO:0034293
@@ -41033,12 +41517,13 @@ relationship: regulates GO:0016301 ! kinase activity
 
 [Term]
 id: GO:0043603
-name: cellular amide metabolic process
+name: amide metabolic process
 namespace: biological_process
 def: "The chemical reactions and pathways involving an amide, any derivative of an oxoacid in which an acidic hydroxy group has been replaced by an amino or substituted amino group, as carried out by individual cells." [GOC:curators]
 subset: goslim_pir
 synonym: "amide metabolism" EXACT []
-is_a: GO:0034641 ! cellular nitrogen compound metabolic process
+synonym: "cellular amide metabolic process" EXACT []
+is_a: GO:0006807 ! nitrogen compound metabolic process
 intersection_of: GO:0008152 ! metabolic process
 intersection_of: has_primary_input_or_output CHEBI:32988 ! amide
 relationship: has_primary_input_or_output CHEBI:32988 ! amide
@@ -41048,9 +41533,21 @@ id: GO:0043604
 name: amide biosynthetic process
 namespace: biological_process
 def: "The chemical reactions and pathways resulting in the formation of an amide, any derivative of an oxoacid in which an acidic hydroxy group has been replaced by an amino or substituted amino group." [GOC:curators]
-is_a: GO:0043603 ! cellular amide metabolic process
+is_a: GO:0043603 ! amide metabolic process
 is_a: GO:0044271 ! cellular nitrogen compound biosynthetic process
 intersection_of: GO:0009058 ! biosynthetic process
+intersection_of: has_primary_output CHEBI:32988 ! amide
+relationship: has_primary_output CHEBI:32988 ! amide
+
+[Term]
+id: GO:0043605
+name: amide catabolic process
+namespace: biological_process
+def: "The chemical reactions and pathways resulting in the breakdown of an amide, any derivative of an oxoacid in which an acidic hydroxy group has been replaced by an amino or substituted amino group." [GOC:curators]
+synonym: "cellular amide catabolic process" EXACT []
+is_a: GO:0009056 ! catabolic process
+is_a: GO:0043603 ! amide metabolic process
+intersection_of: GO:0009056 ! catabolic process
 intersection_of: has_primary_output CHEBI:32988 ! amide
 relationship: has_primary_output CHEBI:32988 ! amide
 
@@ -41232,16 +41729,6 @@ intersection_of: positively_regulates GO:0003674 ! molecular_function
 relationship: positively_regulates GO:0003674 ! molecular_function
 created_by: jl
 creation_date: 2009-04-21T04:11:06Z
-
-[Term]
-id: GO:0044106
-name: cellular amine metabolic process
-namespace: biological_process
-def: "The chemical reactions and pathways involving any organic compound that is weakly basic in character and contains an amino or a substituted amino group, as carried out by individual cells. Amines are called primary, secondary, or tertiary according to whether one, two, or three carbon atoms are attached to the nitrogen atom." [GOC:jl]
-is_a: GO:0009308 ! amine metabolic process
-is_a: GO:0034641 ! cellular nitrogen compound metabolic process
-created_by: jl
-creation_date: 2009-07-15T11:55:44Z
 
 [Term]
 id: GO:0044111
@@ -41640,7 +42127,7 @@ is_a: GO:0006417 ! regulation of translation
 is_a: GO:0010557 ! positive regulation of macromolecule biosynthetic process
 is_a: GO:0010628 ! positive regulation of gene expression
 is_a: GO:0031328 ! positive regulation of cellular biosynthetic process
-is_a: GO:0034250 ! positive regulation of cellular amide metabolic process
+is_a: GO:0034250 ! positive regulation of amide metabolic process
 is_a: GO:0051247 ! positive regulation of protein metabolic process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: positively_regulates GO:0006412 ! translation
@@ -41715,29 +42202,32 @@ synonym: "downregulation of amino acid metabolic process" EXACT []
 synonym: "inhibition of amino acid metabolic process" NARROW []
 synonym: "negative regulation of amino acid metabolism" EXACT []
 is_a: GO:0006521 ! regulation of cellular amino acid metabolic process
-is_a: GO:0033239 ! negative regulation of cellular amine metabolic process
+is_a: GO:0031324 ! negative regulation of cellular metabolic process
+is_a: GO:0033239 ! negative regulation of amine metabolic process
 is_a: GO:0062014 ! negative regulation of small molecule metabolic process
 intersection_of: GO:0065007 ! biological regulation
-intersection_of: negatively_regulates GO:0006520 ! cellular amino acid metabolic process
-relationship: negatively_regulates GO:0006520 ! cellular amino acid metabolic process
+intersection_of: negatively_regulates GO:0006520 ! amino acid metabolic process
+relationship: negatively_regulates GO:0006520 ! amino acid metabolic process
 
 [Term]
 id: GO:0045764
-name: positive regulation of cellular amino acid metabolic process
+name: positive regulation of amino acid metabolic process
 namespace: biological_process
 def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways involving amino acid." [GOC:go_curators]
 synonym: "activation of amino acid metabolic process" NARROW []
 synonym: "positive regulation of amino acid metabolism" EXACT []
+synonym: "positive regulation of cellular amino acid metabolic process" EXACT []
 synonym: "stimulation of amino acid metabolic process" NARROW []
 synonym: "up regulation of amino acid metabolic process" EXACT []
 synonym: "up-regulation of amino acid metabolic process" EXACT []
 synonym: "upregulation of amino acid metabolic process" EXACT []
 is_a: GO:0006521 ! regulation of cellular amino acid metabolic process
-is_a: GO:0033240 ! positive regulation of cellular amine metabolic process
+is_a: GO:0031325 ! positive regulation of cellular metabolic process
+is_a: GO:0033240 ! positive regulation of amine metabolic process
 is_a: GO:0062013 ! positive regulation of small molecule metabolic process
 intersection_of: GO:0065007 ! biological regulation
-intersection_of: positively_regulates GO:0006520 ! cellular amino acid metabolic process
-relationship: positively_regulates GO:0006520 ! cellular amino acid metabolic process
+intersection_of: positively_regulates GO:0006520 ! amino acid metabolic process
+relationship: positively_regulates GO:0006520 ! amino acid metabolic process
 
 [Term]
 id: GO:0045786
@@ -44416,6 +44906,24 @@ subset: gocheck_do_not_annotate
 is_a: GO:0098762 ! meiotic cell cycle phase
 
 [Term]
+id: GO:0098772
+name: molecular function regulator activity
+namespace: molecular_function
+def: "A molecular function regulator regulates the activity of its target via non-covalent binding that does not result in covalent modification to the target. Examples of molecular function regulators include regulatory subunits of multimeric enzymes and channels. Mechanisms of regulation include allosteric changes in the target and competitive inhibition." [GOC:dos, GOC:pt]
+subset: gocheck_do_not_annotate
+subset: goslim_flybase_ribbon
+subset: goslim_generic
+subset: prokaryote_subset
+synonym: "molecular function regulator" EXACT []
+is_a: GO:0003674 ! molecular_function
+intersection_of: GO:0003674 ! molecular_function
+intersection_of: regulates GO:0003674 ! molecular_function
+relationship: has_part GO:0005515 ! protein binding
+relationship: regulates GO:0003674 ! molecular_function
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/20854 xsd:anyURI
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/20862 xsd:anyURI
+
+[Term]
 id: GO:0098796
 name: membrane protein complex
 namespace: cellular_component
@@ -44588,8 +45096,8 @@ synonym: "alkene substituted compound anabolism" EXACT [GOC:krc]
 synonym: "alkene substituted compound biosynthesis" EXACT [GOC:krc]
 synonym: "alkene substituted compound biosynthetic process" EXACT [GOC:krc]
 synonym: "alkene substituted compound synthesis" EXACT [GOC:krc]
-is_a: GO:0009058 ! biosynthetic process
 is_a: GO:0120254 ! olefinic compound metabolic process
+is_a: GO:1901576 ! organic substance biosynthetic process
 property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/19936 xsd:anyURI
 created_by: krc
 creation_date: 2020-09-02T23:30:20Z
@@ -44753,6 +45261,67 @@ relationship: has_input CHEBI:33696 ! nucleic acid
 property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/21402 xsd:anyURI
 created_by: pg
 creation_date: 2021-05-11T06:31:07Z
+
+[Term]
+id: GO:0140657
+name: ATP-dependent activity
+namespace: molecular_function
+def: "A molecular function characterized by the coupling of ATP hydrolysis to other steps of a reaction mechanism to make the reaction energetically favorable, for example to catalyze a reaction or drive transport against a concentration gradient." [PMID:24878343, PMID:25750732, PMID:32933017, PMID:33818025, PMID:33873056, PMID:33988324]
+comment: Note that this term represents a grouping class that includes all proteins that use ATP hydrolysis to drive a reaction; it is not meant to capture the ATP hydrolysis reaction itself. To annotate ATP hydrolysis, please use 'ATP hydrolysis activity ; GO:0016887'.
+subset: gocheck_do_not_annotate
+subset: goslim_chembl
+subset: goslim_drosophila
+subset: goslim_generic
+subset: goslim_yeast
+subset: prokaryote_subset
+synonym: "ATP hydrolysis-dependent activity" EXACT []
+synonym: "ATPase activity" EXACT []
+synonym: "ATPase activity, coupled" EXACT []
+synonym: "ATPase-dependent activity" EXACT []
+is_a: GO:0003674 ! molecular_function
+intersection_of: GO:0003674 ! molecular_function
+intersection_of: has_part GO:0016887 ! ATP hydrolysis activity
+relationship: has_part GO:0016887 ! ATP hydrolysis activity
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/21612 xsd:anyURI
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/22371 xsd:anyURI
+created_by: pg
+creation_date: 2021-06-15T07:35:06Z
+
+[Term]
+id: GO:0140677
+name: molecular function activator activity
+namespace: molecular_function
+def: "A molecular function regulator that activates or increases the activity of its target via non-covalent binding that does not result in covalent modification to the target." [GOC:curators]
+is_a: GO:0098772 ! molecular function regulator activity
+intersection_of: GO:0098772 ! molecular function regulator activity
+intersection_of: positively_regulates GO:0003674 ! molecular_function
+relationship: positively_regulates GO:0003674 ! molecular_function
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/21782 xsd:anyURI
+created_by: pg
+creation_date: 2021-07-07T07:24:16Z
+
+[Term]
+id: GO:0140678
+name: molecular function inhibitor activity
+namespace: molecular_function
+def: "A molecular function regulator that inhibits or decreases the activity of its target via non-covalent binding that does not result in covalent modification to the target." [GOC:curators]
+is_a: GO:0098772 ! molecular function regulator activity
+intersection_of: GO:0098772 ! molecular function regulator activity
+intersection_of: negatively_regulates GO:0003674 ! molecular_function
+relationship: negatively_regulates GO:0003674 ! molecular_function
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/21782 xsd:anyURI
+created_by: pg
+creation_date: 2021-07-07T07:24:32Z
+
+[Term]
+id: GO:0150005
+name: enzyme activator complex
+namespace: cellular_component
+def: "A protein complex capable of activating an enzyme. Activating subunits may dissociate from the catalytic unit before the enzyme is active." [GOC:bhm, PMID:16244137, PMID:28710280]
+is_a: GO:0032991 ! protein-containing complex
+intersection_of: GO:0032991 ! protein-containing complex
+intersection_of: capable_of GO:0008047 ! enzyme activator activity
+relationship: capable_of GO:0008047 ! enzyme activator activity
 
 [Term]
 id: GO:1900130
@@ -45104,7 +45673,7 @@ name: alpha-amino acid metabolic process
 namespace: biological_process
 def: "The chemical reactions and pathways involving an alpha-amino acid." [GOC:TermGenie]
 synonym: "alpha-amino acid metabolism" EXACT [GOC:TermGenie]
-is_a: GO:0006520 ! cellular amino acid metabolic process
+is_a: GO:0006520 ! amino acid metabolic process
 intersection_of: GO:0008152 ! metabolic process
 intersection_of: has_primary_input_or_output CHEBI:33704 ! alpha-amino acid
 relationship: has_primary_input_or_output CHEBI:33704 ! alpha-amino acid
@@ -45137,7 +45706,7 @@ synonym: "alpha-amino acid anabolism" EXACT [GOC:TermGenie]
 synonym: "alpha-amino acid biosynthesis" EXACT [GOC:TermGenie]
 synonym: "alpha-amino acid formation" EXACT [GOC:TermGenie]
 synonym: "alpha-amino acid synthesis" EXACT [GOC:TermGenie]
-is_a: GO:0008652 ! cellular amino acid biosynthetic process
+is_a: GO:0008652 ! amino acid biosynthetic process
 is_a: GO:1901605 ! alpha-amino acid metabolic process
 intersection_of: GO:0009058 ! biosynthetic process
 intersection_of: has_primary_output CHEBI:33704 ! alpha-amino acid
@@ -45260,6 +45829,7 @@ is_a: GO:0032991 ! protein-containing complex
 intersection_of: GO:0032991 ! protein-containing complex
 intersection_of: capable_of GO:0003824 ! catalytic activity
 relationship: capable_of GO:0003824 ! catalytic activity
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/19980 xsd:anyURI
 created_by: bhm
 creation_date: 2013-11-13T16:18:47Z
 
@@ -46352,46 +46922,46 @@ synonym: "regulation of cellular amino acid synthesis" EXACT [GOC:obol]
 is_a: GO:0006521 ! regulation of cellular amino acid metabolic process
 is_a: GO:0031326 ! regulation of cellular biosynthetic process
 intersection_of: GO:0065007 ! biological regulation
-intersection_of: regulates GO:0008652 ! cellular amino acid biosynthetic process
-relationship: regulates GO:0008652 ! cellular amino acid biosynthetic process
+intersection_of: regulates GO:0008652 ! amino acid biosynthetic process
+relationship: regulates GO:0008652 ! amino acid biosynthetic process
 created_by: vw
 creation_date: 2010-12-10T11:54:19Z
 
 [Term]
 id: GO:2000283
-name: negative regulation of cellular amino acid biosynthetic process
+name: negative regulation of amino acid biosynthetic process
 namespace: biological_process
-def: "Any process that stops, prevents or reduces the frequency, rate or extent of cellular amino acid biosynthetic process." [GOC:obol]
-synonym: "negative regulation of amino acid biosynthetic process" EXACT [GOC:obol]
-synonym: "negative regulation of cellular amino acid anabolism" EXACT [GOC:obol]
-synonym: "negative regulation of cellular amino acid biosynthesis" EXACT [GOC:obol]
-synonym: "negative regulation of cellular amino acid formation" EXACT [GOC:obol]
-synonym: "negative regulation of cellular amino acid synthesis" EXACT [GOC:obol]
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of an amino acid biosynthetic process." [GOC:obol]
+synonym: "negative regulation of amino acid anabolism" EXACT [GOC:obol]
+synonym: "negative regulation of amino acid biosynthesis" EXACT [GOC:obol]
+synonym: "negative regulation of amino acid formation" EXACT [GOC:obol]
+synonym: "negative regulation of amino acid synthesis" EXACT [GOC:obol]
+synonym: "negative regulation of cellular amino acid biosynthetic process" EXACT [GOC:obol]
 is_a: GO:0031327 ! negative regulation of cellular biosynthetic process
 is_a: GO:0045763 ! negative regulation of cellular amino acid metabolic process
 is_a: GO:2000282 ! regulation of cellular amino acid biosynthetic process
 intersection_of: GO:0065007 ! biological regulation
-intersection_of: negatively_regulates GO:0008652 ! cellular amino acid biosynthetic process
-relationship: negatively_regulates GO:0008652 ! cellular amino acid biosynthetic process
+intersection_of: negatively_regulates GO:0008652 ! amino acid biosynthetic process
+relationship: negatively_regulates GO:0008652 ! amino acid biosynthetic process
 created_by: vw
 creation_date: 2010-12-10T11:54:23Z
 
 [Term]
 id: GO:2000284
-name: positive regulation of cellular amino acid biosynthetic process
+name: positive regulation of amino acid biosynthetic process
 namespace: biological_process
 def: "Any process that activates or increases the frequency, rate or extent of cellular amino acid biosynthetic process." [GOC:obol]
-synonym: "positive regulation of amino acid biosynthetic process" EXACT [GOC:obol]
-synonym: "positive regulation of cellular amino acid anabolism" EXACT [GOC:obol]
-synonym: "positive regulation of cellular amino acid biosynthesis" EXACT [GOC:obol]
-synonym: "positive regulation of cellular amino acid formation" EXACT [GOC:obol]
-synonym: "positive regulation of cellular amino acid synthesis" EXACT [GOC:obol]
+synonym: "positive regulation of amino acid anabolism" EXACT [GOC:obol]
+synonym: "positive regulation of amino acid biosynthesis" EXACT [GOC:obol]
+synonym: "positive regulation of amino acid formation" EXACT [GOC:obol]
+synonym: "positive regulation of amino acid synthesis" EXACT [GOC:obol]
+synonym: "positive regulation of cellular amino acid biosynthetic process" EXACT [GOC:obol]
 is_a: GO:0031328 ! positive regulation of cellular biosynthetic process
-is_a: GO:0045764 ! positive regulation of cellular amino acid metabolic process
+is_a: GO:0045764 ! positive regulation of amino acid metabolic process
 is_a: GO:2000282 ! regulation of cellular amino acid biosynthetic process
 intersection_of: GO:0065007 ! biological regulation
-intersection_of: positively_regulates GO:0008652 ! cellular amino acid biosynthetic process
-relationship: positively_regulates GO:0008652 ! cellular amino acid biosynthetic process
+intersection_of: positively_regulates GO:0008652 ! amino acid biosynthetic process
+relationship: positively_regulates GO:0008652 ! amino acid biosynthetic process
 created_by: vw
 creation_date: 2010-12-10T11:54:27Z
 
@@ -46741,7 +47311,7 @@ name: absent
 namespace: quality
 alt_id: PATO:0001996
 def: "A quality denoting the lack of an entity." [thefreedictionary.:thefreedictionary.]
-comment: See documentation here: http://code.google.com/p/phenotype-ontologies/wiki/ModelingOfAbsence
+comment: We recommend using the new absent terms (physical absence, absent anatomical entity, or absent process) instead of this class. This is a legacy term and will ultimately be obsoleted.\nSee https://github.com/pato-ontology/pato/issues/331.
 subset: absent_slim
 subset: mpath_slim
 subset: value_slim
@@ -48854,7 +49424,6 @@ namespace: single_species_phenotype
 def: "A single species pathogen growth phenotype in which the frequency of occurrence of pathogen penetration begins later than normal when assessed for penetration ability on a given experimental substance/membrane." []
 subset: pathogen_phenotype
 is_a: PHIPO:0000024 ! pathogen penetration across the barrier present
-is_a: PHIPO:0000331 ! pathogen penetration into host present
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:17:12Z
 
@@ -49769,7 +50338,6 @@ name: loss of mutualism
 namespace: pathogen_host_interaction_phenotype
 def: "A phenotype in which the balance of symbiotic mutualism has been disrupted compared to the normal interaction and the endosymbiont organism is able to show greater biomass within the host and/or the formation of visible disease formation symptoms compared to the normal interaction." []
 subset: qc_extension_only
-is_a: PHIPO:0000039 ! normal mutualism
 is_a: PHIPO:0000040 ! abnormal mutualism
 created_by: alaynecuzick
 creation_date: 2018-10-01T13:32:18Z
@@ -51183,7 +51751,6 @@ namespace: pathogen_host_interaction_phenotype
 def: "A pathogen entry into host phenotype in which the frequency of occurrence of pathogen penetration into the body, tissues, or cells of the host organism begins later than normal." []
 synonym: "delayed pathogen entry into host" EXACT []
 synonym: "delayed pathogen invasion of host" RELATED []
-is_a: PHIPO:0000024 ! pathogen penetration across the barrier present
 is_a: PHIPO:0000331 ! pathogen penetration into host present
 created_by: alaynecuzick
 creation_date: 2018-11-05T13:32:57Z
@@ -55980,7 +56547,6 @@ namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host interaction where the mutualism phenotype is normal (i.e. the same as wild-type), and the wild-type interaction does not exhibit mutualism." []
 subset: qc_do_not_annotate
 is_a: PHIPO:0000039 ! normal mutualism
-is_a: PHIPO:0000040 ! abnormal mutualism
 created_by: alaynecuzick
 creation_date: 2019-05-24T11:02:11Z
 
@@ -56019,7 +56585,7 @@ id: PHIPO:0000952
 name: abolished pathogen growth within host
 namespace: pathogen_host_interaction_phenotype
 def: "A pathogen host phenotype in which the vegetative growth or proliferation of the pathogen inside the host is abolished (it was present as is now absent)." []
-is_a: PHIPO:0000951 ! pathogen growth within host phenotype
+is_a: PHIPO:0000363 ! absence of pathogen growth within host
 created_by: alaynecuzick
 creation_date: 2019-05-24T12:21:58Z
 
@@ -57725,8 +58291,7 @@ id: PHIPO:0001133
 name: increased cellular melanin accumulation
 namespace: single_species_phenotype
 def: "A single species individual organism phenotype where the accumulation of melanin in a cell is increased." []
-is_a: PHIPO:0000285 ! abnormal cellular pigment accumulation
-is_a: PHIPO:0000929 ! abnormal cellular process
+is_a: PHIPO:0000287 ! increased cellular pigment accumulation
 created_by: alaynecuzick
 creation_date: 2019-12-17T14:27:14Z
 
@@ -59091,6 +59656,157 @@ created_by: alaynecuzick
 creation_date: 2022-07-27T11:20:23Z
 
 [Term]
+id: PHIPO:0001271
+name: presence of pathogen sexual spores within host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen reproductive phenotype within host in which the frequency of occurrence of sexual spores is normal (i.e. indistinguishable from wild type)." []
+synonym: "presence of pathogen teliospores within host" BROAD []
+is_a: PHIPO:0000443 ! normal pathogen sexual reproduction within host
+created_by: alaynecuzick
+creation_date: 2022-08-15T16:22:41Z
+
+[Term]
+id: PHIPO:0001272
+name: stunted growth
+namespace: single_species_phenotype
+def: "A single species growth phenotype where there is a decrease in size of an entire multicellular organism." []
+is_a: PHIPO:0000402 ! individual organism phenotype
+created_by: alaynecuzick
+creation_date: 2022-08-25T08:11:36Z
+
+[Term]
+id: PHIPO:0001273
+name: abnormal host morphology during phagocytosis of pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the morphology of the host cell is irregular due to the phagocytosis (engulfment and ingestion) of the pathogen (GO:0006911)." []
+synonym: "irregular host morphology during phagocytosis of pathogen" EXACT []
+is_a: PHIPO:0001006 ! abnormal host morphology during pathogen invasion
+created_by: alaynecuzick
+creation_date: 2022-08-25T09:26:08Z
+
+[Term]
+id: PHIPO:0001274
+name: host immune system phagocytosis of pathogen present
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the host immune system activates the phagocytosis of a pathogen (GO:0006911)." []
+is_a: PHIPO:0001167 ! pathogen modulation of host immune system process phenotype
+created_by: alaynecuzick
+creation_date: 2022-08-25T10:07:49Z
+
+[Term]
+id: PHIPO:0001275
+name: presence of viable pathogen sexual spores within host
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen reproductive phenotype within host in which the viability of sexual spores is normal (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001271 ! presence of pathogen sexual spores within host
+created_by: alaynecuzick
+creation_date: 2022-09-09T13:22:21Z
+
+[Term]
+id: PHIPO:0001276
+name: increased number of host galls during pathogen invasion
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype where the presence of a pathogen (or symbiont) has resulted in an increased number of plant galls (BTO:0005833 plant gall)." []
+is_a: PHIPO:0001268 ! presence of host gall during pathogen invasion
+created_by: alaynecuzick
+creation_date: 2022-09-09T13:28:14Z
+
+[Term]
+id: PHIPO:0001277
+name: presence of pathogen induced host DNA synthesis
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which host DNA synthesis occurs during pathogen infection (GO:0090592 DNA synthesis involved in DNA replication)." []
+is_a: PHIPO:0001247 ! pathogen modulation of host metabolic process phenotype
+created_by: alaynecuzick
+creation_date: 2022-09-09T14:04:31Z
+
+[Term]
+id: PHIPO:0001278
+name: decreased pathogen induced host DNA synthesis
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which the host DNA synthesis during pathogen infection occurs to a lesser extent than normal (GO:0090592 DNA synthesis involved in DNA replication)." []
+is_a: PHIPO:0001247 ! pathogen modulation of host metabolic process phenotype
+created_by: alaynecuzick
+creation_date: 2022-09-09T14:06:29Z
+
+[Term]
+id: PHIPO:0001279
+name: abolished peptidase activity
+namespace: single_species_phenotype
+def: "A single species molecular function phenotype in which a peptidase activity is absent." []
+synonym: "abolished protease activity" EXACT []
+synonym: "peptidase activity abolished" EXACT []
+xref: FYPO:0000669
+is_a: PHIPO:0000435 ! abolished catalytic activity
+created_by: alaynecuzick
+creation_date: 2022-11-07T10:37:31Z
+
+[Term]
+id: PHIPO:0001280
+name: increased pathogen induced host DNA synthesis
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which the host DNA synthesis during pathogen infection occurs to a greater extent than normal (GO:0090592 DNA synthesis involved in DNA replication)." []
+is_a: PHIPO:0001247 ! pathogen modulation of host metabolic process phenotype
+created_by: alaynecuzick
+creation_date: 2022-11-07T14:30:40Z
+
+[Term]
+id: PHIPO:0001281
+name: presence of host protein phosphorylation with pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which the phosphorylation of one or more specific host proteins, or of specific host protein sites, occurs during pathogen infection (GO:0006468 protein phosphorylation)." []
+is_a: PHIPO:0001247 ! pathogen modulation of host metabolic process phenotype
+created_by: alaynecuzick
+creation_date: 2022-11-11T13:05:20Z
+
+[Term]
+id: PHIPO:0001282
+name: absence of host protein phosphorylation with pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which the phosphorylation of one or more specific host proteins, or of specific host protein sites, does not occur during pathogen infection (GO:0006468 protein phosphorylation)." []
+is_a: PHIPO:0001247 ! pathogen modulation of host metabolic process phenotype
+created_by: alaynecuzick
+creation_date: 2022-11-11T13:06:37Z
+
+[Term]
+id: PHIPO:0001283
+name: increased host protein phosphorylation with pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which the phosphorylation of one or more specific host proteins, or of specific host protein sites, during pathogen infection occurs to a greater extent than normal (GO:0006468 protein phosphorylation)." []
+is_a: PHIPO:0001247 ! pathogen modulation of host metabolic process phenotype
+created_by: alaynecuzick
+creation_date: 2022-11-11T13:10:07Z
+
+[Term]
+id: PHIPO:0001284
+name: decreased host protein phosphorylation with pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype in which the phosphorylation of one or more specific host proteins, or of specific host protein sites, during pathogen infection occurs to a lesser extent than normal (GO:0006468 protein phosphorylation)." []
+is_a: PHIPO:0001247 ! pathogen modulation of host metabolic process phenotype
+created_by: alaynecuzick
+creation_date: 2022-11-11T13:11:15Z
+
+[Term]
+id: PHIPO:0001285
+name: increased level of host defense-related RNA involved in a pathogen interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction phenotype, in which the level of host defense-related RNA usually present during infection is higher than normal." []
+synonym: "increased level of host defense related RNA involved in a pathogen interaction" EXACT []
+is_a: PHIPO:0001104 ! increased level of host defense-induced RNA
+created_by: alaynecuzick
+creation_date: 2022-11-22T10:38:36Z
+
+[Term]
+id: PHIPO:0001286
+name: presence of pathogen protein host DNA interaction
+namespace: pathogen_host_interaction_phenotype
+def: "A molecular function phenotype in which the binding of one pathogen protein to host DNA is present." []
+synonym: "presence of pathogen protein host DNA binding" EXACT []
+is_a: PHIPO:0000164 ! pathogen host interaction binding phenotype
+created_by: alaynecuzick
+creation_date: 2022-11-22T10:43:32Z
+
+[Term]
 id: PR:000000001
 name: protein
 namespace: protein
@@ -59425,6 +60141,7 @@ property_value: IAO:0000232 "Do not use this relation directly. It is ended as a
 [Typedef]
 id: RO:0002327
 name: enables
+def: "c enables p iff c is capable of p and c acts to execute p." []
 subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
 property_value: IAO:0000112 "a particular instances of akt-2 enables some instance of protein kinase activity" xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
@@ -59486,11 +60203,39 @@ property_value: IAO:0000117 "Chris Mungall" xsd:string
 is_a: output_of ! output of
 
 [Typedef]
+id: RO:0002407
+name: indirectly positively regulates
+def: "p indirectly positively regulates q iff p is indirectly causally upstream of q and p positively regulates q." []
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000118 "indirectly activates" xsd:string
+property_value: RO:0002579 RO:0002213
+holds_over_chain: RO:0002409 RO:0002409
+holds_over_chain: RO:0002629 RO:0002407
+holds_over_chain: RO:0002629 RO:0002629
+is_transitive: true
+is_a: positively_regulates ! positively regulates
+is_a: RO:0012012 ! indirectly regulates
+transitive_over: RO:0002629 ! directly positively regulates
+
+[Typedef]
+id: RO:0002409
+name: indirectly negatively regulates
+def: "p indirectly negatively regulates q iff p is indirectly causally upstream of q and p negatively regulates q." []
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000118 "indirectly inhibits" xsd:string
+property_value: RO:0002579 RO:0002212
+holds_over_chain: RO:0002630 RO:0002409
+holds_over_chain: RO:0002630 RO:0002630
+is_transitive: true
+is_a: negatively_regulates ! negatively regulates
+is_a: RO:0012012 ! indirectly regulates
+transitive_over: RO:0002630 ! directly negatively regulates
+
+[Typedef]
 id: RO:0002410
 name: causally related to
-def: "This relation groups causal relations between material entities and causal relations between processes" []
-property_value: IAO:0000114 IAO:0000428
-property_value: IAO:0000116 "This branch of the ontology deals with causal relations between entities. It is divided into two branches: causal relations between occurrents/processes, and causal relations between material entities. We take an 'activity flow-centric approach', with the former as primary, and define causal relations between material entities in terms of causal relations between occurrents.\n\nTo define causal relations in an activity-flow type network, we make use of 3 primitives:\n\n * Temporal: how do the intervals of the two occurrents relate? \n * Is the causal relation regulatory?\n * Is the influence positive or negative\n\nThe first of these can be formalized in terms of the Allen Interval Algebra. Informally, the 3 bins we care about are 'direct', 'indirect' or overlapping. Note that all causal relations should be classified under a RO temporal relation (see the branch under 'temporally related to'). Note that all causal relations are temporal, but not all temporal relations are causal. Two occurrents can be related in time without being causally connected. We take causal influence to be primitive, elucidated as being such that has the upstream changed, some qualities of the donwstream would necessarily be modified.\n\nFor the second, we consider a relationship to be regulatory if the system in which the activities occur is capable of altering the relationship to achieve some objective. This could include changing the rate of production of a molecule.\n\nFor the third, we consider the effect of the upstream process on the output(s) of the downstream process. If the level of output is increased, or the rate of production of the output is increased, then the direction is increased. Direction can be positive, negative or neutral or capable of either direction. Two positives in succession yield a positive, two negatives in succession yield a positive, otherwise the default assumption is that the net effect is canceled and the influence is neutral.\n\nEach of these 3 primitives can be composed to yield a cross-product of different relation types." xsd:string
+def: "relation that links two events, processes, states, or objects such that one event, process, state, or object (a cause) contributes to the production of another event, process, state, or object (an effect) where the cause is partly or wholly responsible for the effect, and the effect is partly or wholly dependent on the cause." [https://en.wikipedia.org/wiki/Causality]
+property_value: IAO:0000116 "This branch of the ontology deals with causal relations between entities. It is divided into two branches: causal relations between occurrents/processes, and causal relations between material entities. We take an 'activity flow-centric approach', with the former as primary, and define causal relations between material entities in terms of causal relations between occurrents.\n\nTo define causal relations in an activity-flow type network, we make use of 3 primitives:\n\n * Temporal: how do the intervals of the two occurrents relate? \n * Is the causal relation regulatory?\n * Is the influence positive or negative?\n\nThe first of these can be formalized in terms of the Allen Interval Algebra. Informally, the 3 bins we care about are 'direct', 'indirect' or overlapping. Note that all causal relations should be classified under a RO temporal relation (see the branch under 'temporally related to'). Note that all causal relations are temporal, but not all temporal relations are causal. Two occurrents can be related in time without being causally connected. We take causal influence to be primitive, elucidated as being such that has the upstream changed, some qualities of the donwstream would necessarily be modified.\n\nFor the second, we consider a relationship to be regulatory if the system in which the activities occur is capable of altering the relationship to achieve some objective. This could include changing the rate of production of a molecule.\n\nFor the third, we consider the effect of the upstream process on the output(s) of the downstream process. If the level of output is increased, or the rate of production of the output is increased, then the direction is increased. Direction can be positive, negative or neutral or capable of either direction. Two positives in succession yield a positive, two negatives in succession yield a positive, otherwise the default assumption is that the net effect is canceled and the influence is neutral.\n\nEach of these 3 primitives can be composed to yield a cross-product of different relation types." xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000232 "Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect." xsd:string
 
@@ -59652,7 +60397,7 @@ inverse_of: process_has_causal_agent ! process has causal agent
 [Typedef]
 id: RO:0002501
 name: causal relation between processes
-def: "p is causally related to q if and only if p or any part of p and q or any part of q are linked by a chain of events where each event pair is one of direct activation or direct inhibition. p may be upstream, downstream, part of or a container of q." []
+def: "p is causally related to q if and only if p or any part of p and q or any part of q are linked by a chain of events where each event pair is one where the execution of p influences the execution of q. p may be upstream, downstream, part of, or a container of q." []
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
 property_value: IAO:0000232 "Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving cause and effect." xsd:string
@@ -59735,7 +60480,7 @@ range: BFO:0000020 ! specifically dependent continuant
 [Typedef]
 id: RO:0002578
 name: directly regulates
-def: "Process(P1) directly regulates process(P2) iff: P1 regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  regulates the kinase activity (P2) of protein B then P1 directly regulates P2." []
+def: "p directly regulates q iff p is immediately causally upstream of q and p regulates q." []
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
 subset: http://purl.obolibrary.org/obo/valid_for_gocam
@@ -59802,7 +60547,7 @@ is_a: RO:0002596 ! capable of regulating
 [Typedef]
 id: RO:0002629
 name: directly positively regulates
-def: "Process(P1) directly postively regulates process(P2) iff: P1 positively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding positively regulates the kinase activity (P2) of protein B then P1 directly positively regulates P2." []
+def: "p directly positively regulates q iff p is immediately causally upstream of q, and p positively regulates q." []
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
 subset: http://purl.obolibrary.org/obo/valid_for_gocam
@@ -59815,7 +60560,7 @@ is_a: RO:0002578 ! directly regulates
 [Typedef]
 id: RO:0002630
 name: directly negatively regulates
-def: "Process(P1) directly negatively regulates process(P2) iff: P1 negatively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  negatively regulates the kinase activity (P2) of protein B then P1 directly negatively regulates P2." []
+def: "p directly negatively regulates q iff p is immediately causally upstream of q, and p negatively regulates q." []
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
 subset: http://purl.obolibrary.org/obo/valid_for_gocam
@@ -59907,6 +60652,23 @@ range: BFO:0000040 ! material entity
 is_a: RO:0002566 ! causally influences
 
 [Typedef]
+id: RO:0012011
+name: indirectly causally upstream of
+def: "p is indirectly causally upstream of q iff p is causally upstream of q and there exists some process r such that p is causally upstream of r and r is causally upstream of q." []
+is_a: causally_upstream_of ! causally upstream of
+created_by: pg
+creation_date: 2022-09-26T06:07:17Z
+
+[Typedef]
+id: RO:0012012
+name: indirectly regulates
+def: "p indirectly regulates q iff p is indirectly causally upstream of q and p regulates q." []
+is_a: regulates ! regulates
+is_a: RO:0012011 ! indirectly causally upstream of
+created_by: pg
+creation_date: 2022-09-26T06:08:01Z
+
+[Typedef]
 id: RO:0015006
 name: different in magnitude relative to
 def: "q1 different_in_magnitude_relative_to q2 if and only if magnitude(q1) NOT =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [https://orcid.org/0000-0002-6601-2165]
@@ -59953,14 +60715,6 @@ property_value: IAO:0000232 "A diagnostic testing device utilizes a specimen mea
 property_value: IAO:0000232 "See github ticket https://github.com/oborel/obo-relations/issues/497" xsd:string
 holds_over_chain: capable_of has_input
 creation_date: 2021-11-08T12:00:00Z
-
-[Typedef]
-id: RO:0040036
-name: results in changes to anatomical or cellular structure
-def: "p has anatomical participant c iff p has participant c, and c is an anatomical entity" []
-is_a: has_participant ! has participant
-created_by: cjm
-creation_date: 2018-09-26T01:08:58Z
 
 [Typedef]
 id: bearer_of
@@ -60042,11 +60796,10 @@ is_a: RO:0002501 ! causal relation between processes
 id: causally_upstream_of
 name: causally upstream of
 namespace: external
-def: "p is causally upstream of q if and only if p precedes q and p and q are linked in a causal chain" []
+def: "p is causally upstream of q iff p is causally related to q, the end of p precedes the end of q, and p is not an occurrent part of q." []
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_gocam
 xref: RO:0002411
-property_value: IAO:0000114 IAO:0000428
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 is_transitive: true
 is_a: causally_upstream_of_or_within ! causally upstream of or within
@@ -60056,7 +60809,9 @@ is_a: precedes ! precedes
 id: causally_upstream_of,_negative_effect
 name: causally upstream of, negative effect
 namespace: external
-comment: holds between x and y if and only if x is causally upstream of y and the progression of x decreases the frequency, rate or extent of y
+def: "p is causally upstream of, negative effect q iff p is casually upstream of q, and the execution of p decreases the execution of q." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 xref: RO:0002305
 property_value: http://purl.org/dc/terms/creator "cjm" xsd:string
 property_value: RO:0004050 RO:0002411
@@ -60067,6 +60822,7 @@ is_a: RO:0004046 ! causally upstream of or within, negative effect
 id: causally_upstream_of,_positive_effect
 name: causally upstream of, positive effect
 namespace: external
+def: "p is causally upstream of, positive effect q iff p is casually upstream of q, and the execution of p is required for the execution of q." []
 comment: holds between x and y if and only if x is causally upstream of y and the progression of x increases the frequency, rate or extent of y
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_gocam
@@ -60080,7 +60836,7 @@ is_a: RO:0004047 ! causally upstream of or within, positive effect
 id: causally_upstream_of_or_within
 name: causally upstream of or within
 namespace: external
-def: "p 'causally upstream or within' q iff (1) the end of p is before the end of q and (2) the execution of p exerts some causal influence over the outputs of q; i.e. if p was abolished or the outputs of p were to be modified, this would necessarily affect q." []
+def: "p is 'causally upstream or within' q iff p is causally related to q, and the end of p precedes, or is coincident with, the end of q." []
 synonym: "affects" RELATED []
 xref: RO:0002418
 property_value: IAO:0000116 "We would like to make this disjoint with 'preceded by', but this is prohibited in OWL2" xsd:string
@@ -60134,7 +60890,7 @@ inverse_of: ends_with ! ends with
 
 [Typedef]
 id: ends_during
-name: ends_during
+name: ends during
 namespace: external
 xref: RO:0002093
 
@@ -60168,7 +60924,7 @@ name: happens during
 namespace: external
 xref: RO:0002092
 is_transitive: true
-is_a: ends_during ! ends_during
+is_a: ends_during ! ends during
 
 [Typedef]
 id: has_component
@@ -60445,18 +61201,16 @@ inverse_of: immediately_causally_upstream_of ! immediately causally upstream of
 id: immediately_causally_upstream_of
 name: immediately causally upstream of
 namespace: external
-def: "p is immediately causally upstream of q iff both (a) p immediately precedes q and (b) p is causally upstream of q. In addition, the output of p  must be an input of q." []
+def: "p is immediately causally upstream of q iff p is causally upstream of q, and the end of p is coincident with the beginning of q." []
 xref: RO:0002412
-property_value: IAO:0000114 IAO:0000428
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: RO:0002575 RO:0002411
 is_a: causally_upstream_of ! causally upstream of
-is_a: immediately_precedes ! immediately_precedes
+is_a: immediately_precedes ! immediately precedes
 
 [Typedef]
 id: immediately_preceded_by
 name: immediately preceded by
-name: immediately_preceded_by
 namespace: external
 namespace: uberon
 comment: X immediately_preceded_by Y iff: end(X) simultaneous_with start(Y)
@@ -60465,12 +61219,11 @@ property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
 property_value: IAO:0000118 "starts_at_end_of" xsd:string
 holds_over_chain: starts_with ends_with
 is_a: preceded_by ! preceded by
-inverse_of: immediately_precedes ! immediately_precedes
+inverse_of: immediately_precedes ! immediately precedes
 
 [Typedef]
 id: immediately_precedes
 name: immediately precedes
-name: immediately_precedes
 namespace: external
 comment: X immediately_precedes_Y iff: end(X) simultaneous_with start(Y)
 subset: ro-eco
@@ -60579,7 +61332,7 @@ is_a: regulated_by ! regulated by
 id: negatively_regulates
 name: negatively regulates
 namespace: external
-def: "Process(P1) negatively regulates process(P2) iff: P1 terminates P2, or P1 descreases the the frequency of initiation of P2 or the magnitude or rate of output of P2." []
+def: "p negatively regulates q iff p regulates q, and p decreases the rate or magnitude of execution of q." []
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
 subset: http://purl.obolibrary.org/obo/valid_for_gocam
@@ -60713,7 +61466,6 @@ inverse_of: has_part ! has_part
 [Typedef]
 id: participates_in
 name: participates in
-name: participates_in
 namespace: external
 namespace: uberon
 def: "a relation between a continuant and a process, in which the continuant is somehow involved in the process" []
@@ -60741,7 +61493,7 @@ is_a: regulated_by ! regulated by
 id: positively_regulates
 name: positively regulates
 namespace: external
-def: "Process(P1) postively regulates process(P2) iff: P1 initiates P2, or P1 increases the the frequency of initiation of P2 or the magnitude or rate of output of P2." []
+def: "p positively regulates q iff p regulates q, and p increases the rate or magnitude of execution of q." []
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
 subset: http://purl.obolibrary.org/obo/valid_for_gocam
@@ -60857,13 +61609,11 @@ is_a: causally_downstream_of_or_within ! causally downstream of or within
 id: regulates
 name: regulates
 namespace: external
-def: "process(P1) regulates process(P2) iff: P1 results in the initiation or termination of P2 OR affects the frequency of its initiation or termination OR affects the magnitude or rate of output of P2." []
+def: "p regulates q iff p is causally upstream of q, the execution of p is not constant and varies according to specific conditions, and p influences the rate or magnitude of execution of q due to an effect either on some enabler of q or some enabler of a part of q." []
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
 subset: http://purl.obolibrary.org/obo/valid_for_gocam
 xref: RO:0002211
-property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000116 "We use 'regulates' here to specifically imply control. However, many colloquial usages of the term correctly correspond to the weaker relation of 'causally upstream of or within' (aka influences). Consider relabeling to make things more explicit" xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000117 "David Hill" xsd:string
 property_value: IAO:0000117 "Tanya Berardini" xsd:string
@@ -60896,7 +61646,6 @@ is_a: RO:0002410 ! causally related to
 [Typedef]
 id: results_in_assembly_of
 name: results in assembly of
-name: results_in_assembly_of
 namespace: external
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
@@ -60904,6 +61653,16 @@ subset: http://purl.obolibrary.org/obo/valid_for_gocam
 xref: RO:0002588
 is_a: results_in_formation_of ! results in formation of
 is_a: results_in_organization_of ! results in organization of
+
+[Typedef]
+id: results_in_changes_to_anatomical_or_cellular_structure
+name: results in changes to anatomical or cellular structure
+namespace: external
+def: "p has anatomical participant c iff p has participant c, and c is an anatomical entity" []
+xref: RO:0040036
+is_a: has_participant ! has participant
+created_by: cjm
+creation_date: 2018-09-26T01:08:58Z
 
 [Typedef]
 id: results_in_developmental_progression_of
@@ -60921,7 +61680,6 @@ is_a: RO:0002324 ! developmentally related to
 [Typedef]
 id: results_in_disassembly_of
 name: results in disassembly of
-name: results_in_disassembly_of
 namespace: external
 xref: RO:0002590
 is_a: results_in_organization_of ! results in organization of
@@ -60929,6 +61687,7 @@ is_a: RO:0002586 ! results in breakdown of
 
 [Typedef]
 id: results_in_fission_of
+name: results in fission of
 name: results_in_fission_of
 namespace: external
 xref: GOREL:0002004
@@ -60959,7 +61718,7 @@ namespace: external
 def: "p results in organization of c iff p results in the assembly, arrangement of constituent parts, or disassembly of c" []
 xref: RO:0002592
 is_a: has_participant ! has participant
-is_a: RO:0040036 ! results in changes to anatomical or cellular structure
+is_a: results_in_changes_to_anatomical_or_cellular_structure ! results in changes to anatomical or cellular structure
 
 [Typedef]
 id: results_in_transport_to_from_or_in

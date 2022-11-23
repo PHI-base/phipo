@@ -9,11 +9,12 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/phipo/imports/go_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2022-07-29/imports/go_import.owl"/>
-        <dc:source rdf:resource="http://purl.obolibrary.org/obo/go/releases/2022-07-01/go.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-07-29</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2022-11-23/imports/go_import.owl"/>
+        <dc:source rdf:resource="http://purl.obolibrary.org/obo/go/releases/2022-11-03/go.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-11-23</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -178,6 +179,12 @@
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#prokaryote_subset">
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
 
 
@@ -356,7 +363,7 @@
         <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
         <oboInOwl:id>ends_during</oboInOwl:id>
         <oboInOwl:shorthand>ends_during</oboInOwl:shorthand>
-        <rdfs:label>ends_during</rdfs:label>
+        <rdfs:label>ends during</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -804,6 +811,52 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0004176 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0004176">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008233"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008233"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0140657"/>
+        <obo:IAO_0000115>Catalysis of the hydrolysis of peptide bonds, driven by ATP hydrolysis.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/21612</obo:IAO_0000233>
+        <oboInOwl:hasAlternativeId>GO:0004280</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-9698929</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>ATP-dependent proteolysis</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>GO:0004176</oboInOwl:id>
+        <rdfs:label>ATP-dependent peptidase activity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004176"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Catalysis of the hydrolysis of peptide bonds, driven by ATP hydrolysis.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004176"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-9698929</owl:annotatedTarget>
+        <rdfs:label>pPR-AP:pAP cleaves the MCP:pPR-AP:pAP Complex</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004176"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>ATP-dependent proteolysis</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0004553 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0004553">
@@ -918,7 +971,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003674"/>
         <obo:IAO_0000115>Enables the directed movement of substances (such as macromolecules, small molecules, ions) into, out of or within a cell, or between cells.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>GO:0005478</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasDbXref>EC:7.-.-.-</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-168313</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Reactome:R-HSA-178215</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
@@ -1308,6 +1360,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The membrane surrounding a cell that separates the cell from its external environment. It consists of a phospholipid bilayer and associated proteins.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>GO:0005887</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0005904</oboInOwl:hasAlternativeId>
         <oboInOwl:hasBroadSynonym>juxtamembrane</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao1663586795</oboInOwl:hasDbXref>
@@ -1318,6 +1371,8 @@
         <oboInOwl:hasExactSynonym>plasmalemma</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>bacterial inner membrane</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>inner endospore membrane</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>integral component of plasma membrane</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>integral to plasma membrane</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>plasma membrane lipid bilayer</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0005886</oboInOwl:id>
@@ -1525,13 +1580,14 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019752"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044238"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1901564"/>
-        <obo:IAO_0000115>The chemical reactions and pathways involving amino acids, carboxylic acids containing one or more amino groups, as carried out by individual cells.</obo:IAO_0000115>
+        <obo:IAO_0000115>The chemical reactions and pathways involving amino acids, carboxylic acids containing one or more amino groups.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/17904</obo:IAO_0000233>
         <oboInOwl:hasAlternativeId>GO:0006519</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasExactSynonym>amino acid and derivative metabolism</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>amino acid metabolic process</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>cellular amino acid and derivative metabolic process</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>cellular amino acid metabolic process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>cellular amino acid metabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>amino acid and derivative metabolism</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>cellular amino acid and derivative metabolic process</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0006520</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_drosophila"/>
@@ -1540,12 +1596,12 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pombe"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#prokaryote_subset"/>
-        <rdfs:label>cellular amino acid metabolic process</rdfs:label>
+        <rdfs:label>amino acid metabolic process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0006520"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The chemical reactions and pathways involving amino acids, carboxylic acids containing one or more amino groups, as carried out by individual cells.</owl:annotatedTarget>
+        <owl:annotatedTarget>The chemical reactions and pathways involving amino acids, carboxylic acids containing one or more amino groups.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198506732</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2637,6 +2693,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008641">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0016877"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0140096"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0140657"/>
         <obo:IAO_0000115>Catalysis of the activation of small proteins, such as ubiquitin or ubiquitin-like proteins, through the formation of an ATP-dependent high-energy thiolester bond.</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/14208</obo:IAO_0000233>
         <oboInOwl:hasAlternativeId>GO:0008642</oboInOwl:hasAlternativeId>
@@ -2663,15 +2720,16 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0046394"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1901566"/>
         <obo:IAO_0000115>The chemical reactions and pathways resulting in the formation of amino acids, organic acids containing one or more amino substituents.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/17904</obo:IAO_0000233>
         <oboInOwl:hasDbXref>Wikipedia:Amino_acid_synthesis</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>amino acid biosynthetic process</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>cellular amino acid anabolism</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>cellular amino acid biosynthesis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>cellular amino acid formation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>cellular amino acid synthesis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>amino acid anabolism</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>amino acid biosynthesis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>amino acid formation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>amino acid synthesis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>cellular amino acid biosynthetic process</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0008652</oboInOwl:id>
-        <rdfs:label>cellular amino acid biosynthetic process</rdfs:label>
+        <rdfs:label>amino acid biosynthetic process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008652"/>
@@ -3189,13 +3247,18 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0110165"/>
         <obo:IAO_0000115>A lipid bilayer along with all the proteins and protein complexes embedded in it an attached to it.</obo:IAO_0000115>
         <oboInOwl:creation_date>2014-03-06T11:37:54Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>GO:0016021</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0098589</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0098805</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>Wikipedia:Biological_membrane</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Wikipedia:Transmembrane_protein</oboInOwl:hasDbXref>
+        <oboInOwl:hasNarrowSynonym>integral component of membrane</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>integral to membrane</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>membrane region</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>region of membrane</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>whole membrane</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>transmembrane</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>GO:0016020</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_candida"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
@@ -3213,6 +3276,12 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dos</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0815316194</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016020"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>transmembrane</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3480,6 +3549,32 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0016462 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016462">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0016818"/>
+        <obo:IAO_0000115>Catalysis of the hydrolysis of a pyrophosphate bond (diphosphate bond) between two phosphate groups.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-6810472</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0016462</oboInOwl:id>
+        <rdfs:label>pyrophosphatase activity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016462"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Catalysis of the hydrolysis of a pyrophosphate bond (diphosphate bond) between two phosphate groups.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:curators</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Pyrophosphatase</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016462"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-6810472</owl:annotatedTarget>
+        <rdfs:label>NUDT13 hydrolyses AP6A to AP4 and ADP</rdfs:label>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0016740 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016740">
@@ -3661,6 +3756,45 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0016817 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016817">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0016787"/>
+        <obo:IAO_0000115>Catalysis of the hydrolysis of any acid anhydride.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>EC:3.6.-.-</oboInOwl:hasDbXref>
+        <oboInOwl:hasNarrowSynonym>hydrolase activity, acting on acid anhydrides, involved in cellular and subcellular movement</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0016817</oboInOwl:id>
+        <rdfs:label>hydrolase activity, acting on acid anhydrides</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016817"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Catalysis of the hydrolysis of any acid anhydride.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0016818 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016818">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0016817"/>
+        <obo:IAO_0000115>Catalysis of the hydrolysis of any acid anhydride which contains phosphorus.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>EC:3.6.1.-</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0016818</oboInOwl:id>
+        <rdfs:label>hydrolase activity, acting on acid anhydrides, in phosphorus-containing anhydrides</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016818"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Catalysis of the hydrolysis of any acid anhydride which contains phosphorus.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0016874 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016874">
@@ -3714,6 +3848,266 @@
         <owl:annotatedTarget>Catalysis of the joining of two molecules via a carbon-sulfur bond, with the concomitant hydrolysis of the diphosphate bond in ATP or a similar triphosphate.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>EC:6.2.-.-</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0016887 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016887">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0017111"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0140657"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Catalysis of the reaction: ATP + H2O = ADP + H+ phosphate. ATP hydrolysis is used in some reactions as an energy source, for example to catalyze a reaction or drive transport against a concentration gradient.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/19078</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/20498</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/21612</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/22371</obo:IAO_0000233>
+        <oboInOwl:hasAlternativeId>GO:0004002</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0042623</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>RHEA:13065</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-159101</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-3371422</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-416985</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-5618093</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-5654989</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-5694425</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-6809015</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-6811422</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-6814670</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-6814678</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-6814683</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-72139</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-8847638</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-8868658</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-8939203</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-9038161</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-917693</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-9609860</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-9668415</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-9706399</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>ATP hydrolase activity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>ATP phosphohydrolase activity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>adenosine 5&apos;-triphosphatase activity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>adenosine triphosphatase activity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>adenosinetriphosphatase activity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>ATP monophosphatase activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>GO:0016887</oboInOwl:id>
+        <rdfs:comment>Note that this term is meant to specifically represent the ATPase activity of proteins using ATP as a source of energy to drive a reaction. If possible, gene products should also be annotated to a child of &apos;ATP-dependent activity ; GO:0140657&apos;, to capture their overall function.</rdfs:comment>
+        <rdfs:label>ATP hydrolysis activity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Catalysis of the reaction: ATP + H2O = ADP + H+ phosphate. ATP hydrolysis is used in some reactions as an energy source, for example to catalyze a reaction or drive transport against a concentration gradient.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>RHEA:13065</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-159101</owl:annotatedTarget>
+        <rdfs:label>NXF1:NXT1 (TAP:p15) binds capped mRNA:CBC:EJC:TREX (minus DDX39B)</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-3371422</owl:annotatedTarget>
+        <rdfs:label>ATP hydrolysis by HSP70</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-416985</owl:annotatedTarget>
+        <rdfs:label>Trafficking of GluR2-containing AMPA receptors to synapse</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-5618093</owl:annotatedTarget>
+        <rdfs:label>ATP hydrolysis by HSP90</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-5654989</owl:annotatedTarget>
+        <rdfs:label>SPRTN:VCP-mediated release of POLH from monoUb:K164-PCNA</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-5694425</owl:annotatedTarget>
+        <rdfs:label>NSF ATPase activity dissociates cis-SNARE</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-6809015</owl:annotatedTarget>
+        <rdfs:label>NSF ATPase activity dissociates cis-SNARE at cis-Golgi</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-6811422</owl:annotatedTarget>
+        <rdfs:label>NSF ATPase activity dissociates cis-SNARE at the ER</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-6814670</owl:annotatedTarget>
+        <rdfs:label>ATP hydrolysis by RHOBTB3 promotes PLIN3 dissociation</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-6814678</owl:annotatedTarget>
+        <rdfs:label>ATP hydrolysis by NSF disassembles the cis-SNARE at the TGN</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-6814683</owl:annotatedTarget>
+        <rdfs:label>NSF-dependent ATP hydrolysis disassembles the cis-SNARE at the TGN</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-72139</owl:annotatedTarget>
+        <rdfs:label>Formation of the active Spliceosomal C (B*) complex</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-8847638</owl:annotatedTarget>
+        <rdfs:label>ATP hydrolysis by NSF disassembles the cis-SNARE at the Golgi membrane</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-8868658</owl:annotatedTarget>
+        <rdfs:label>HSPA8-mediated ATP hydrolysis promotes vesicle uncoating</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-8939203</owl:annotatedTarget>
+        <rdfs:label>HSP90-dependent ATP hydrolysis promotes release of ESR:ESTG from chaperone complex</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-9038161</owl:annotatedTarget>
+        <rdfs:label>Progesterone stimulation promotes PGR:P4 binding to ESR1:ESTG</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-917693</owl:annotatedTarget>
+        <rdfs:label>ESCRT Disassembly</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-9609860</owl:annotatedTarget>
+        <rdfs:label>Tail-anchored protein:SGTA:BAG6:GET4:UBL4A:ASNA1:ATP dissociates and ASNA1 hydrolyzes ATP yielding Tail-anchored protein:ASNA1:ADP</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-9668415</owl:annotatedTarget>
+        <rdfs:label>VPS4 mediates disassembly of ESCRTIII subunits to promote sealing of holes in the nuclear envelope</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-9706399</owl:annotatedTarget>
+        <rdfs:label>RHOBTB3 hydrolyzes ATP</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0017111 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0017111">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0016462"/>
+        <obo:IAO_0000115>Catalysis of the reaction: a ribonucleoside triphosphate + H2O = a ribonucleoside diphosphate + H+ + phosphate.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/21232</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/23401</obo:IAO_0000233>
+        <oboInOwl:hasBroadSynonym>apyrase activity</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym>nucleoside 5-triphosphatase activity</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym>nucleoside triphosphatase activity</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym>nucleoside triphosphate hydrolase activity</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym>nucleoside triphosphate phosphatase activity</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym>nucleoside-triphosphatase activity</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>EC:3.6.1.15</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:NUCLEOSIDE-TRIPHOSPHATASE-RXN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>RHEA:23680</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-8850846</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-8851089</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-8851110</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-8851234</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-8851494</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-8851538</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>NTPase activity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>nucleoside triphosphate phosphohydrolase activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>nucleoside-5-triphosphate phosphohydrolase activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>GO:0017111</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_metagenomics"/>
+        <rdfs:label>ribonucleoside triphosphate phosphatase activity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0017111"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Catalysis of the reaction: a ribonucleoside triphosphate + H2O = a ribonucleoside diphosphate + H+ + phosphate.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>RHEA:23680</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0017111"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+        <owl:annotatedTarget>nucleoside 5-triphosphatase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.6.1.15</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0017111"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-8850846</owl:annotatedTarget>
+        <rdfs:label>NTPDase1 hydrolyzes nucleoside triphosphates</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0017111"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-8851089</owl:annotatedTarget>
+        <rdfs:label>NTPDase2 hydrolyzes nucleoside triphosphates</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0017111"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-8851110</owl:annotatedTarget>
+        <rdfs:label>NTPDase3 hydrolyzes nucleoside triphosphates</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0017111"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-8851234</owl:annotatedTarget>
+        <rdfs:label>NTPDase4 hydrolyzes nucleoside triphosphates</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0017111"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-8851494</owl:annotatedTarget>
+        <rdfs:label>NTPDase7 hydrolyzes nucleoside triphosphates</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0017111"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-8851538</owl:annotatedTarget>
+        <rdfs:label>NTPDase8 hydrolyzes nucleoside triphosphates</rdfs:label>
     </owl:Axiom>
     
 
@@ -4404,7 +4798,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The process in which a relatively unspecialized cell acquires the specialized features of a cellular spore, a cell form that can be used for dissemination, for survival of adverse conditions because of its heat and dessication resistance, and/or for reproduction.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pamgo_curators</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pamgo_curators</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:0072992913</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -4939,7 +5333,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0034050"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Cell death resulting from activation of endogenous cellular processes after interaction with a symbiont (defined as the smaller of two, or more, organisms engaged in symbiosis, a close interaction encompassing mutualism through parasitism). This can be triggered by direct interaction with the organism, for example, contact with penetrating hyphae of a fungus; or an indirect interaction such as symbiont-secreted molecules.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pamgo_curators</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pamgo_curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5712,7 +6106,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043934"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The process whose specific outcome is the progression of a spore over time, from its initiation to the mature structure. A spore is a structure that can be used for dissemination, for survival of adverse conditions because of its heat and dessication resistance, and/or for reproduction.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pamgo_curators</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pamgo_curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5743,7 +6137,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043935"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The formation of spores derived from the products of meiosis. A cellular spore is a cell form that can be used for dissemination, for survival of adverse conditions because of its heat and dessication resistance, and/or for reproduction.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pamgo_curators</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pamgo_curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5764,7 +6158,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043936"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The formation of a cellular spore derived from the products of mitosis. A cellular spore is a cell form that can be used for dissemination, for survival of adverse conditions because of its heat and dessication resistance, and/or for reproduction.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pamgo_curators</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pamgo_curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043936"/>
@@ -5873,7 +6267,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The progression of an organism from an initial condition to a later condition, occurring when the organism is in a symbiotic interaction.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:jl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pamgo_curators</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pamgo_curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044111"/>
@@ -5917,7 +6311,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The progression of an organism from an initial condition to a later condition, occurring within the cells or tissues of the host organism. This may (but not necessarily) include a filamentous growth form, and also can include secretion of proteases and lipases to break down host tissue. The host is defined as the larger of the organisms involved in a symbiotic interaction.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pamgo_curators</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pamgo_curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7958,7 +8352,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0075009"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Development of slender tubular outgrowth first produced by most symbiont spores immediately following germination on or near its host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pamgo_curators</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pamgo_curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7989,7 +8383,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0075015"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The formation of a symbiont structure that serves to infect its host organism. It includes physiological, developmental, and morphological changes of the symbiont. The host is defined as the larger of the organisms involved in a symbiotic interaction.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pamgo_curators</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pamgo_curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -8024,7 +8418,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0075053"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The assembly by the symbiont of a peg-like structure for the purpose of penetration into its host organism, which penetrates through the host cuticle and epidermal cell wall. The host is defined as the larger of the organisms involved in a symbiotic interaction.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pamgo_curators</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:pamgo_curators</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PMID:26441323</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -8426,8 +8820,8 @@
     <!-- http://purl.obolibrary.org/obo/GO_0120255 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0120255">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009058"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0120254"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1901576"/>
         <obo:IAO_0000115>The chemical reactions and pathways resulting in the formation of an olefinic compound, any compound which contains a carbon-carbon double bond (aka C=C).</obo:IAO_0000115>
         <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/19936</obo:IAO_0000233>
         <oboInOwl:created_by>krc</oboInOwl:created_by>
@@ -8578,6 +8972,61 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The directed movement of some substance from a cell, into the extracellular region. This may occur via transport across the plasma membrane or via exocytosis.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pg</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0140657 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0140657">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0003674"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003674"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0016887"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A molecular function characterized by the coupling of ATP hydrolysis to other steps of a reaction mechanism to make the reaction energetically favorable, for example to catalyze a reaction or drive transport against a concentration gradient.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/21612</obo:IAO_0000233>
+        <obo:IAO_0000233 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/geneontology/go-ontology/issues/22371</obo:IAO_0000233>
+        <oboInOwl:created_by>pg</oboInOwl:created_by>
+        <oboInOwl:creation_date>2021-06-15T07:35:06Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>ATP hydrolysis-dependent activity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>ATPase activity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>ATPase activity, coupled</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>ATPase-dependent activity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0140657</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_drosophila"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#prokaryote_subset"/>
+        <rdfs:comment>Note that this term represents a grouping class that includes all proteins that use ATP hydrolysis to drive a reaction; it is not meant to capture the ATP hydrolysis reaction itself. To annotate ATP hydrolysis, please use &apos;ATP hydrolysis activity ; GO:0016887&apos;.</rdfs:comment>
+        <rdfs:label>ATP-dependent activity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0140657"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A molecular function characterized by the coupling of ATP hydrolysis to other steps of a reaction mechanism to make the reaction energetically favorable, for example to catalyze a reaction or drive transport against a concentration gradient.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:24878343</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:25750732</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:32933017</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:33818025</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:33873056</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:33988324</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 

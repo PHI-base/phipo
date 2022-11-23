@@ -11,13 +11,13 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/phipo/phipo-simple-non-classified.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2022-07-29/phipo-simple-non-classified.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2022-11-23/phipo-simple-non-classified.owl"/>
         <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-09T13:43:00Z</obo:creation_date>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology of species-neutral phenotypes observed in pathogen-host interactions.</dc:description>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathogen Host Interactions Phenotype Ontology</dc:title>
         <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://creativecommons.org/licenses/by/3.0/</terms:license>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-07-29</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-11-23</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -48,6 +48,42 @@
     <!-- http://purl.obolibrary.org/obo/creation_date -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/creation_date"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/def -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/def"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/namespace -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/namespace"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
 
 
@@ -111,6 +147,12 @@
     
 
 
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -122,6 +164,24 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000066 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000066"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000304 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000304">
@@ -130,6 +190,30 @@
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Used in FYPO as described in PATO best practices; placeholder relation to indicate normality/abnormality. which namespace? do we need all 3 triplicated again?</rdfs:comment>
         <rdfs:label xml:lang="en">qualifier</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000052 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000052"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002314 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002314"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002503 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002503"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002573 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002573"/>
     
 
 
@@ -16020,6 +16104,221 @@
         <oboInOwl:hasExactSynonym>sensitive to calcium starvation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">sensitive to calcium ion starvation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001271 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001271">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000443"/>
+        <obo:IAO_0000115>A pathogen reproductive phenotype within host in which the frequency of occurrence of sexual spores is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-15T16:22:41Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>presence of pathogen teliospores within host</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">presence of pathogen sexual spores within host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001272 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001272">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000402"/>
+        <obo:IAO_0000115>A single species growth phenotype where there is a decrease in size of an entire multicellular organism.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-25T08:11:36Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">stunted growth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001273 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001273">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001006"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype where the morphology of the host cell is irregular due to the phagocytosis (engulfment and ingestion) of the pathogen (GO:0006911).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-25T09:26:08Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>irregular host morphology during phagocytosis of pathogen</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abnormal host morphology during phagocytosis of pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001274 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001274">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001167"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype where the host immune system activates the phagocytosis of a pathogen (GO:0006911).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-25T10:07:49Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">host immune system phagocytosis of pathogen present</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001275 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001275">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001271"/>
+        <obo:IAO_0000115>A pathogen reproductive phenotype within host in which the viability of sexual spores is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-09-09T13:22:21Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">presence of viable pathogen sexual spores within host</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001276 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001276">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001268"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype where the presence of a pathogen (or symbiont) has resulted in an increased number of plant galls (BTO:0005833 plant gall).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-09-09T13:28:14Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased number of host galls during pathogen invasion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001277 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001277">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001247"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype in which host DNA synthesis occurs during pathogen infection (GO:0090592 DNA synthesis involved in DNA replication).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-09-09T14:04:31Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">presence of pathogen induced host DNA synthesis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001278 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001278">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001247"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype in which the host DNA synthesis during pathogen infection occurs to a lesser extent than normal (GO:0090592 DNA synthesis involved in DNA replication).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-09-09T14:06:29Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased pathogen induced host DNA synthesis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001279 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001279">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000435"/>
+        <obo:IAO_0000115>A single species molecular function phenotype in which a peptidase activity is absent.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-11-07T10:37:31Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000669</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>abolished protease activity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>peptidase activity abolished</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">abolished peptidase activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001280 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001280">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001247"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype in which the host DNA synthesis during pathogen infection occurs to a greater extent than normal (GO:0090592 DNA synthesis involved in DNA replication).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-11-07T14:30:40Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased pathogen induced host DNA synthesis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001281 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001281">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001247"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype in which the phosphorylation of one or more specific host proteins, or of specific host protein sites, occurs during pathogen infection (GO:0006468 protein phosphorylation).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-11-11T13:05:20Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">presence of host protein phosphorylation with pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001282 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001282">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001247"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype in which the phosphorylation of one or more specific host proteins, or of specific host protein sites, does not occur during pathogen infection (GO:0006468 protein phosphorylation).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-11-11T13:06:37Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">absence of host protein phosphorylation with pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001283 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001283">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001247"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype in which the phosphorylation of one or more specific host proteins, or of specific host protein sites, during pathogen infection occurs to a greater extent than normal (GO:0006468 protein phosphorylation).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-11-11T13:10:07Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased host protein phosphorylation with pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001284 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001284">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001247"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype in which the phosphorylation of one or more specific host proteins, or of specific host protein sites, during pathogen infection occurs to a lesser extent than normal (GO:0006468 protein phosphorylation).</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-11-11T13:11:15Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">decreased host protein phosphorylation with pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001285 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001285">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001104"/>
+        <obo:IAO_0000115>A pathogen host interaction phenotype, in which the level of host defense-related RNA usually present during infection is higher than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-11-22T10:38:36Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>increased level of host defense related RNA involved in a pathogen interaction</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased level of host defense-related RNA involved in a pathogen interaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001286 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001286">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000164"/>
+        <obo:IAO_0000115>A molecular function phenotype in which the binding of one pathogen protein to host DNA is present.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-11-22T10:43:32Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>presence of pathogen protein host DNA binding</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">presence of pathogen protein host DNA interaction</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
