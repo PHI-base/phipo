@@ -23,3 +23,5 @@ imports/chebi_import.owl: mirror/chebi.owl imports/chebi_terms_combined.txt
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: imports/chebi_import.owl
+
+SPARQL_VALIDATION_CHECKS =  owldef-self-reference label-with-iri
