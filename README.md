@@ -27,3 +27,7 @@ Please use this repository's [issue tracker](https://github.com/PHI-base/phipo/i
 ## Acknowledgements
 
 This ontology repository was created using the [Ontology Development Kit](https://github.com/INCATools/ontology-development-kit).
+
+## Publications
+
+Alayne Cuzick, James Seager, Valerie Wood, Martin Urban, Kim Rutherford, and Kim E. Hammond-Kosack (2023) **A framework for community curation of interspecies interaction literature.** eLife2023;12:e84658 DOI: https://doi.org/10.7554/eLife.84658
