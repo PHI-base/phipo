@@ -12,13 +12,13 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/phipo/phipo-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2022-11-23/phipo-simple.owl"/>
-        <obo:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alaynecuzick</obo:created_by>
-        <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-07-09T13:43:00Z</obo:creation_date>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology of species-neutral phenotypes observed in pathogen-host interactions.</dc:description>
-        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pathogen Host Interactions Phenotype Ontology</dc:title>
-        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://creativecommons.org/licenses/by/3.0/</terms:license>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-11-23</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2023-06-19/phipo-simple.owl"/>
+        <obo:created_by>alaynecuzick</obo:created_by>
+        <obo:creation_date>2018-07-09T13:43:00Z</obo:creation_date>
+        <dc:description>Ontology of species-neutral phenotypes observed in pathogen-host interactions.</dc:description>
+        <dc:title>Pathogen Host Interactions Phenotype Ontology</dc:title>
+        <terms:license>https://creativecommons.org/licenses/by/3.0/</terms:license>
+        <owl:versionInfo>2023-06-19</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -82,8 +82,8 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
-        <rdfs:label>definition</rdfs:label>
         <rdfs:label xml:lang="en">definition</rdfs:label>
+        <rdfs:label>definition</rdfs:label>
         <rdfs:label>textual definition</rdfs:label>
     </owl:AnnotationProperty>
     
@@ -210,19 +210,40 @@ We also have the outstanding issue of how to aim different definitions to differ
 
     <!-- http://purl.org/dc/elements/1.1/description -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description">
+        <oboInOwl:hasDbXref>http://purl.org/dc/elements/1.1/description</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>dc-description</oboInOwl:id>
+        <oboInOwl:is_metadata_tag rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oboInOwl:is_metadata_tag>
+        <oboInOwl:shorthand>dc-description</oboInOwl:shorthand>
+        <rdfs:label>description</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/title -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title">
+        <oboInOwl:hasDbXref>http://purl.org/dc/elements/1.1/title</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>dc-title</oboInOwl:id>
+        <oboInOwl:is_metadata_tag rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oboInOwl:is_metadata_tag>
+        <oboInOwl:shorthand>dc-title</oboInOwl:shorthand>
+        <rdfs:label>title</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://purl.org/dc/terms/license -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
+        <oboInOwl:hasDbXref>http://purl.org/dc/terms/license</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>dcterms-license</oboInOwl:id>
+        <oboInOwl:is_metadata_tag rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oboInOwl:is_metadata_tag>
+        <oboInOwl:shorthand>dcterms-license</oboInOwl:shorthand>
+        <rdfs:label>license</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -320,12 +341,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     
 
 
-    <!-- http://www.geneontology.org/formats/oboInOwl#is_cyclic -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#is_cyclic"/>
-    
-
-
     <!-- http://www.geneontology.org/formats/oboInOwl#is_metadata_tag -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#is_metadata_tag"/>
@@ -390,8 +405,8 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
         <oboInOwl:shorthand>part_of</oboInOwl:shorthand>
-        <rdfs:label>part of</rdfs:label>
         <rdfs:label xml:lang="en">part of</rdfs:label>
+        <rdfs:label>part of</rdfs:label>
         <rdfs:label>part_of</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections"/>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:PartOf"/>
@@ -418,7 +433,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000118 xml:lang="en">has_part</obo:IAO_0000118>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
         <oboInOwl:hasDbXref>BFO:0000051</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>chebi_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
@@ -426,10 +440,9 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <oboInOwl:is_cyclic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</oboInOwl:is_cyclic>
         <oboInOwl:shorthand>has_part</oboInOwl:shorthand>
-        <rdfs:label>has part</rdfs:label>
         <rdfs:label xml:lang="en">has part</rdfs:label>
+        <rdfs:label>has part</rdfs:label>
         <rdfs:label>has_part</rdfs:label>
     </owl:ObjectProperty>
     
@@ -460,8 +473,8 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:shorthand>occurs_in</oboInOwl:shorthand>
         <rdfs:comment>Paraphrase of definition: a relation between a process and an independent continuant, in which the process takes place entirely within the independent continuant</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
-        <rdfs:label>occurs in</rdfs:label>
         <rdfs:label xml:lang="en">occurs in</rdfs:label>
+        <rdfs:label>occurs in</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -512,7 +525,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         </owl:propertyChainAxiom>
         <obo:IAO_0000115>q characteristic of part of w if and only if there exists some p such that q inheres in p and p part of w.</obo:IAO_0000115>
         <obo:IAO_0000116>Because part_of is transitive, inheres in is a sub-relation of characteristic of part of</obo:IAO_0000116>
-        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
         <obo:IAO_0000118>inheres in part of</obo:IAO_0000118>
         <obo:IAO_0000119 rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/20064205"/>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
@@ -527,7 +540,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002503">
         <obo:IAO_0000115>q towards e2 if and only if q is a relational quality such that q inheres-in some e, and e != e2 and q is dependent on e2</obo:IAO_0000115>
         <obo:IAO_0000116>This relation is provided in order to support the use of relational qualities such as &apos;concentration of&apos;; for example, the concentration of C in V is a quality that inheres in V, but pertains to C.</obo:IAO_0000116>
-        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
         <obo:IAO_0000119 rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/20064205"/>
         <rdfs:label>towards</rdfs:label>
     </owl:ObjectProperty>
@@ -538,7 +551,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002573">
         <obo:IAO_0000115>A relation that holds between an attribute or a qualifier and another attribute.</obo:IAO_0000115>
-        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
         <obo:IAO_0000119 rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/20064205"/>
         <obo:IAO_0000232>This relation is intended to be used in combination with PATO, to be able to refine PATO quality classes using modifiers such as &apos;abnormal&apos; and &apos;normal&apos;. It has yet to be formally aligned into an ontological framework; it&apos;s not clear what the ontological status of the &quot;modifiers&quot; are.</obo:IAO_0000232>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
@@ -2232,7 +2245,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000122">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000078"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000929"/>
         <obo:IAO_0000115>A reproductive phenotype where the process of endospore formation, in which a cell gives rise to an endospore, a dormant, highly resistant spore with a thick wall that forms within the mother cell is abnormal. Endospores are produced by some low G+C Gram-positive bacteria in response to harsh conditions. (GO:0034301)</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-07-17T11:46:50Z</oboInOwl:creation_date>
@@ -4081,6 +4093,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000261">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000257"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000929"/>
         <obo:IAO_0000115>A single organism cellular process phenotype in which endocytosis is abnormal. Endocytosis is a vesicle-mediated transport process in which cells take up external materials or membrane constituents by the invagination of a small region of the plasma membrane to form a new membrane-bounded vesicle. A phenotype may affect endocytosis of all cargoes, or of specific cargo such as a particular protein.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-02T10:22:57Z</oboInOwl:creation_date>
@@ -9022,7 +9035,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000670 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000670">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000665"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000022"/>
         <obo:IAO_0000115>A growth phenotype which describes the resistance of individuals or populations after exposure to levofloxacin. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow.</obo:IAO_0000115>
         <obo:created_by>alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-20T14:29:00Z</obo:creation_date>
@@ -11566,7 +11579,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000883 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000883">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000830"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000021"/>
         <obo:IAO_0000115>A growth phenotype which describes the sensitivity of individuals or populations after exposure to levofloxacin. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow.</obo:IAO_0000115>
         <obo:created_by>alaynecuzick</obo:created_by>
         <obo:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-20T14:29:00Z</obo:creation_date>
@@ -16678,9 +16691,100 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">presence of pathogen protein host DNA interaction</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001287 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001287">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001218"/>
+        <obo:IAO_0000115>A growth phenotype which describes the absence of change of individuals or populations after exposure to tolnaftate (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-06-12T08:49:10Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal growth on tolnaftate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001288 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001288">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000022"/>
+        <obo:IAO_0000115>A growth phenotype which describes the resistance of individuals or populations after exposure to tolnaftate. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-06-12T09:02:28Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">resistance to tolnaftate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001289 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001289">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000021"/>
+        <obo:IAO_0000115>A growth phenotype which describes the sensitivity of individuals or populations after exposure to tolnaftate. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-06-12T09:05:32Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">sensitive to tolnaftate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001290 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001290">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001218"/>
+        <obo:IAO_0000115>A growth phenotype which describes the absence of change of individuals or populations after exposure to azoxystrobin (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-06-12T09:21:50Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal growth on azoxystrobin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001291 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001291">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000022"/>
+        <obo:IAO_0000115>A growth phenotype which describes the resistance of individuals or populations after exposure to fenpicoxamid. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-06-12T09:34:07Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">resistance to fenpicoxamid</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001292 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001292">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000021"/>
+        <obo:IAO_0000115>A growth phenotype which describes the sensitivity of individuals or populations after exposure to fenpicoxamid. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-06-12T09:37:49Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">sensitive to fenpicoxamid</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001293 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001293">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001218"/>
+        <obo:IAO_0000115>A growth phenotype which describes the absence of change of individuals or populations after exposure to fenpicoxamid (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-06-12T09:41:30Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal growth on fenpicoxamid</rdfs:label>
+    </owl:Class>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.25) https://github.com/owlcs/owlapi -->
 

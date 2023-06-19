@@ -359,7 +359,7 @@ IMP_LARGE=true # Global parameter to bypass handling of large imports
 .PHONY: mirror-ido
 .PRECIOUS: $(MIRRORDIR)/ido.owl
 mirror-ido: | $(TMPDIR)
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(OBOBASE)/ido.owl --create-dirs -o $(MIRRORDIR)/ido.owl --retry 4 --max-time 200 &&\
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(OBOBASE)/ido.owl --create-dirs -o $(MIRRORDIR)/ido.owl --retry 4 --max-time 600 &&\
 		$(ROBOT) convert -i $(MIRRORDIR)/ido.owl -o $@.tmp.owl &&\
 		mv $@.tmp.owl $(TMPDIR)/$@.owl; fi
 
@@ -368,7 +368,7 @@ mirror-ido: | $(TMPDIR)
 .PHONY: mirror-go
 .PRECIOUS: $(MIRRORDIR)/go.owl
 mirror-go: | $(TMPDIR)
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(OBOBASE)/go.owl --create-dirs -o $(MIRRORDIR)/go.owl --retry 4 --max-time 200 &&\
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(OBOBASE)/go.owl --create-dirs -o $(MIRRORDIR)/go.owl --retry 4 --max-time 600 &&\
 		$(ROBOT) convert -i $(MIRRORDIR)/go.owl -o $@.tmp.owl &&\
 		mv $@.tmp.owl $(TMPDIR)/$@.owl; fi
 
@@ -377,7 +377,7 @@ mirror-go: | $(TMPDIR)
 .PHONY: mirror-ro
 .PRECIOUS: $(MIRRORDIR)/ro.owl
 mirror-ro: | $(TMPDIR)
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(OBOBASE)/ro.owl --create-dirs -o $(MIRRORDIR)/ro.owl --retry 4 --max-time 200 &&\
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(OBOBASE)/ro.owl --create-dirs -o $(MIRRORDIR)/ro.owl --retry 4 --max-time 600 &&\
 		$(ROBOT) convert -i $(MIRRORDIR)/ro.owl -o $@.tmp.owl &&\
 		mv $@.tmp.owl $(TMPDIR)/$@.owl; fi
 
@@ -386,8 +386,8 @@ mirror-ro: | $(TMPDIR)
 .PHONY: mirror-chebi
 .PRECIOUS: $(MIRRORDIR)/chebi.owl
 mirror-chebi: | $(TMPDIR)
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(OBOBASE)/chebi.owl --create-dirs -o $(MIRRORDIR)/chebi.owl --retry 4 --max-time 200 &&\
-		$(ROBOT) convert -i $(MIRRORDIR)/chebi.owl -o $@.tmp.owl &&\
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I https://raw.githubusercontent.com/obophenotype/chebi_obo_slim/main/chebi_slim.owl -o $@.tmp.owl && \
+		$(ROBOT) remove -i $@.tmp.owl --base-iri $(URIBASE)/CHEBI --axioms external --preserve-structure false --trim false -o $@.tmp.owl &&\
 		mv $@.tmp.owl $(TMPDIR)/$@.owl; fi
 
 
@@ -395,7 +395,7 @@ mirror-chebi: | $(TMPDIR)
 .PHONY: mirror-pato
 .PRECIOUS: $(MIRRORDIR)/pato.owl
 mirror-pato: | $(TMPDIR)
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(OBOBASE)/pato.owl --create-dirs -o $(MIRRORDIR)/pato.owl --retry 4 --max-time 200 &&\
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(OBOBASE)/pato.owl --create-dirs -o $(MIRRORDIR)/pato.owl --retry 4 --max-time 600 &&\
 		$(ROBOT) convert -i $(MIRRORDIR)/pato.owl -o $@.tmp.owl &&\
 		mv $@.tmp.owl $(TMPDIR)/$@.owl; fi
 
@@ -404,7 +404,7 @@ mirror-pato: | $(TMPDIR)
 .PHONY: mirror-so
 .PRECIOUS: $(MIRRORDIR)/so.owl
 mirror-so: | $(TMPDIR)
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(OBOBASE)/so.owl --create-dirs -o $(MIRRORDIR)/so.owl --retry 4 --max-time 200 &&\
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(OBOBASE)/so.owl --create-dirs -o $(MIRRORDIR)/so.owl --retry 4 --max-time 600 &&\
 		$(ROBOT) convert -i $(MIRRORDIR)/so.owl -o $@.tmp.owl &&\
 		mv $@.tmp.owl $(TMPDIR)/$@.owl; fi
 
@@ -413,7 +413,7 @@ mirror-so: | $(TMPDIR)
 .PHONY: mirror-cl
 .PRECIOUS: $(MIRRORDIR)/cl.owl
 mirror-cl: | $(TMPDIR)
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(OBOBASE)/cl.owl --create-dirs -o $(MIRRORDIR)/cl.owl --retry 4 --max-time 200 &&\
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(OBOBASE)/cl.owl --create-dirs -o $(MIRRORDIR)/cl.owl --retry 4 --max-time 600 &&\
 		$(ROBOT) convert -i $(MIRRORDIR)/cl.owl -o $@.tmp.owl &&\
 		mv $@.tmp.owl $(TMPDIR)/$@.owl; fi
 
