@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2023-06-13/phipo-simple.owl
+data-version: phipo/releases/2023-06-19/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -8,10 +8,10 @@ subsetdef: ro-eco ""
 ontology: phipo/phipo-simple
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date "2018-07-09T13:43:00Z" xsd:string
-property_value: http://purl.org/dc/elements/1.1/description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
-property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
-property_value: http://purl.org/dc/terms/license "https://creativecommons.org/licenses/by/3.0/" xsd:string
-property_value: owl:versionInfo "2023-06-13" xsd:string
+property_value: dc-description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
+property_value: dc-title "Pathogen Host Interactions Phenotype Ontology" xsd:string
+property_value: dcterms-license "https://creativecommons.org/licenses/by/3.0/" xsd:string
+property_value: owl:versionInfo "2023-06-19" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -1212,7 +1212,6 @@ name: abnormal endospore formation
 namespace: single_species_phenotype
 def: "A reproductive phenotype where the process of endospore formation, in which a cell gives rise to an endospore, a dormant, highly resistant spore with a thick wall that forms within the mother cell is abnormal. Endospores are produced by some low G+C Gram-positive bacteria in response to harsh conditions. (GO:0034301)" []
 is_a: PHIPO:0000078 ! abnormal asexual sporulation
-is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2018-07-17T11:46:50Z
 
@@ -2550,6 +2549,7 @@ namespace: single_species_phenotype
 def: "A single organism cellular process phenotype in which endocytosis is abnormal. Endocytosis is a vesicle-mediated transport process in which cells take up external materials or membrane constituents by the invagination of a small region of the plasma membrane to form a new membrane-bounded vesicle. A phenotype may affect endocytosis of all cargoes, or of specific cargo such as a particular protein." []
 xref: FYPO:0003886
 is_a: PHIPO:0000257 ! abnormal transport
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2018-10-02T10:22:57Z
 
@@ -6022,7 +6022,7 @@ id: PHIPO:0000670
 name: resistance to levofloxacin
 namespace: single_species_phenotype
 def: "A growth phenotype which describes the resistance of individuals or populations after exposure to levofloxacin. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
-is_a: PHIPO:0000665 ! resistance to ofloxacin
+is_a: PHIPO:0000022 ! increased resistance to chemical
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date "2018-03-20T14:29:00Z" xsd:dateTime
 
@@ -7786,7 +7786,7 @@ id: PHIPO:0000883
 name: sensitive to levofloxacin
 namespace: single_species_phenotype
 def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to levofloxacin. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
-is_a: PHIPO:0000830 ! sensitive to ofloxacin
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date "2018-03-20T14:29:00Z" xsd:dateTime
 
@@ -11580,7 +11580,7 @@ id: RO:0002314
 name: characteristic of part of
 def: "q characteristic of part of w if and only if there exists some p such that q inheres in p and p part of w." []
 property_value: IAO:0000116 "Because part_of is transitive, inheres in is a sub-relation of characteristic of part of" xsd:string
-property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
 property_value: IAO:0000118 "inheres in part of" xsd:string
 property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20064205
 property_value: RO:0001900 RO:0001901
@@ -11593,7 +11593,7 @@ id: RO:0002503
 name: towards
 def: "q towards e2 if and only if q is a relational quality such that q inheres-in some e, and e != e2 and q is dependent on e2" []
 property_value: IAO:0000116 "This relation is provided in order to support the use of relational qualities such as 'concentration of'; for example, the concentration of C in V is a quality that inheres in V, but pertains to C." xsd:string
-property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
 property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20064205
 
 [Typedef]
@@ -11601,7 +11601,7 @@ id: RO:0002573
 name: has modifier
 def: "A relation that holds between an attribute or a qualifier and another attribute." []
 subset: ro-eco
-property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
 property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20064205
 property_value: IAO:0000232 "This relation is intended to be used in combination with PATO, to be able to refine PATO quality classes using modifiers such as 'abnormal' and 'normal'. It has yet to be formally aligned into an ontological framework; it's not clear what the ontological status of the \"modifiers\" are." xsd:string
 
@@ -11613,10 +11613,30 @@ xref: http://purl.org/dc/elements/1.1/creator
 is_metadata_tag: true
 
 [Typedef]
+id: dc-description
+name: description
+namespace: uberon
+xref: http://purl.org/dc/elements/1.1/description
+is_metadata_tag: true
+
+[Typedef]
+id: dc-title
+name: title
+namespace: uberon
+xref: http://purl.org/dc/elements/1.1/title
+is_metadata_tag: true
+
+[Typedef]
+id: dcterms-license
+name: license
+namespace: uberon
+xref: http://purl.org/dc/terms/license
+is_metadata_tag: true
+
+[Typedef]
 id: has_part
 name: has part
 name: has_part
-namespace: chebi_ontology
 namespace: external
 namespace: quality
 namespace: uberon
@@ -11635,7 +11655,6 @@ property_value: IAO:0000116 "Occurrents are not subject to change and so parthoo
 property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)\n\nA continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'." xsd:string
 property_value: IAO:0000118 "has_part" xsd:string
 property_value: RO:0001900 RO:0001901
-is_cyclic: false
 is_transitive: true
 
 [Typedef]
@@ -11690,5 +11709,5 @@ property_value: seeAlso http://ontologydesignpatterns.org/wiki/Community:Parts_a
 property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:PartOf
 property_value: seeAlso "http://www.obofoundry.org/ro/#OBO_REL:part_of" xsd:string
 is_transitive: true
-inverse_of: has_part ! has_part
+inverse_of: has_part ! has part
 
