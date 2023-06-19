@@ -7,9 +7,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/phipo/imports/go_import.owl>
-<http://purl.obolibrary.org/obo/phipo/releases/2023-06-13/imports/go_import.owl>
-Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/go/releases/2023-05-10/go.owl>)
-Annotation(owl:versionInfo "2023-06-13")
+<http://purl.obolibrary.org/obo/phipo/releases/2023-06-19/imports/go_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/go/releases/2023-06-11/go.owl>)
+Annotation(owl:versionInfo "2023-06-19")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0000003>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0000045>))
@@ -75,7 +75,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0008150>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0008152>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0008219>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0008233>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0008234>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0008283>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0008299>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0008610>))
@@ -131,7 +130,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0019751>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0019752>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0019777>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0019778>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_0019783>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0019786>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0019787>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0019835>))
@@ -333,7 +331,6 @@ Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_plant>)
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_pombe>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_yeast>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#prokaryote_subset>))
-Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#term_scheduled_for_obsoletion>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/description>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/title>))
@@ -421,10 +418,6 @@ SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/go#goslim_yeast> <http:/
 # Annotation Property: <http://purl.obolibrary.org/obo/go#prokaryote_subset> (<http://purl.obolibrary.org/obo/go#prokaryote_subset>)
 
 SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/go#prokaryote_subset> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
-
-# Annotation Property: <http://purl.obolibrary.org/obo/go#term_scheduled_for_obsoletion> (<http://purl.obolibrary.org/obo/go#term_scheduled_for_obsoletion>)
-
-SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/go#term_scheduled_for_obsoletion> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
 
 # Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> (has_alternative_id)
 
@@ -1056,8 +1049,8 @@ AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#has
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:bf") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0006468> "protein amino acid phosphorylation")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0006468> "biological_process")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0006468> "GO:0006468")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0006468> <http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0006468> <http://purl.obolibrary.org/obo/go#goslim_yeast>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0006468> <http://purl.obolibrary.org/obo/go#term_scheduled_for_obsoletion>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0006468> "protein phosphorylation")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0006468> <http://purl.obolibrary.org/obo/GO_0016310>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0006468> <http://purl.obolibrary.org/obo/GO_0036211>)
@@ -1540,22 +1533,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0008233> "peptidase activity")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0008233> <http://purl.obolibrary.org/obo/GO_0016787>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0008233> <http://purl.obolibrary.org/obo/GO_0140096>)
-
-# Class: <http://purl.obolibrary.org/obo/GO_0008234> (cysteine-type peptidase activity)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.ebi.ac.uk/merops/about/glossary.shtml#CATTYPE") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0008234> "Catalysis of the hydrolysis of peptide bonds in a polypeptide chain by a mechanism in which the sulfhydryl group of a cysteine residue at the active center acts as a nucleophile.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/GO_0008234> "GO:0004220")
-AnnotationAssertion(Annotation(rdfs:label "Cathepsin Z (Cathepsin X) hydrolyzes Angiotensin-(1-10) to Angiotensin-(1-8)") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0008234> "Reactome:R-HSA-2022381")
-AnnotationAssertion(Annotation(rdfs:label "Autocleavage of ESPL1 (Separase)") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0008234> "Reactome:R-HSA-2467775")
-AnnotationAssertion(Annotation(rdfs:label "ESPL1 (Separase) cleaves centromeric cohesin") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0008234> "Reactome:R-HSA-2467809")
-AnnotationAssertion(Annotation(rdfs:label "USP9X deubiquitinates Ub-SNCA") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0008234> "Reactome:R-HSA-5660752")
-AnnotationAssertion(Annotation(rdfs:label "CASP8 cleaves N4BP1 at D424, D490") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0008234> "Reactome:R-HSA-9757951")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0008234> "cysteine protease activity")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0008234> "thiol protease activity")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0008234> "molecular_function")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0008234> "GO:0008234")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0008234> "cysteine-type peptidase activity")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0008234> <http://purl.obolibrary.org/obo/GO_0008233>)
 
 # Class: <http://purl.obolibrary.org/obo/GO_0008283> (cell population proliferation)
 
@@ -2048,6 +2025,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0016114> <http://purl.obolibrary.o
 # Class: <http://purl.obolibrary.org/obo/GO_0016192> (vesicle-mediated transport)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:ai") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:08789310662000") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0016192> "A cellular transport process in which transported substances are moved in membrane-bounded vesicles; transported substances are enclosed in the vesicle lumen or located in the vesicle membrane. The process begins with a step that directs a substance to the forming vesicle, and includes vesicle budding and coating. Vesicles are then targeted to, and fuse with, an acceptor membrane.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/GO_0016192> "https://github.com/geneontology/go-ontology/issues/25421"^^xsd:anyURI)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/GO_0016192> "GO:0006899")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0016192> "vesicle transport")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0016192> "vesicular transport")
@@ -2064,6 +2042,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0016192> <http://purl.obolibrary.org/obo/go#goslim_pombe>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0016192> "vesicle-mediated transport")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0016192> <http://purl.obolibrary.org/obo/GO_0006810>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0016192> <http://purl.obolibrary.org/obo/GO_0009987>)
 
 # Class: <http://purl.obolibrary.org/obo/GO_0016236> (macroautophagy)
 
@@ -2147,7 +2126,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0016755> "GO:0016755")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0016755> "aminoacyltransferase activity")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0016755> <http://purl.obolibrary.org/obo/GO_0016746>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0016755> <http://purl.obolibrary.org/obo/GO_0140096>)
 
 # Class: <http://purl.obolibrary.org/obo/GO_0016787> (hydrolase activity)
 
@@ -2417,7 +2395,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0019752> <http://purl.obolibrary.o
 
 # Class: <http://purl.obolibrary.org/obo/GO_0019777> (Atg12 transferase activity)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:12826404") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0019777> "Catalysis of the transfer of ATG12 from one protein to another via the reaction X-ATG12 + Y --> Y-ATG12 + X, where both X-ATG12 and Y-ATG12 are covalent linkages.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:12826404") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0019777> "Catalysis of the transfer of ATG12 from one protein to another via the reaction X-ATG12 + Y = Y-ATG12 + X, where both X-ATG12 and Y-ATG12 are covalent linkages.")
 AnnotationAssertion(Annotation(rdfs:label "ATG10 transfers ATG12 from ATG7 to ATG10") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0019777> "Reactome:R-HSA-5681999")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0019777> "APG12 conjugating enzyme activity")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0019777> "APG12 ligase activity")
@@ -2437,48 +2415,29 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0019778> "Atg12 activating enzyme activity")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0019778> <http://purl.obolibrary.org/obo/GO_0008641>)
 
-# Class: <http://purl.obolibrary.org/obo/GO_0019783> (ubiquitin-like protein peptidase activity)
+# Class: <http://purl.obolibrary.org/obo/GO_0019786> (protein-phosphatidylethanolamide deconjugating activity)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:19489724") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0019783> "An isopeptidase activity that cleaves ubiquitin or ubiquitin-like proteins (ULP; e.g. ATG8, ISG15, NEDD8, SUMO) from target proteins.")
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/GO_0019783> "https://github.com/geneontology/go-ontology/issues/17398"^^xsd:anyURI)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/GO_0019783> "GO:0070138")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/GO_0019783> "GO:0140491")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/GO_0019783> "GO:1904454")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/GO_0019783> "GO:1904455")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0019783> "small conjugating protein-specific isopeptidase activity")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0019783> "small conjugating protein-specific protease activity")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0019783> "ubiquitin-like hydrolase activity")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0019783> "ubiquitin-like protein-specific isopeptidase activity")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0019783> "ubiquitin-like protein-specific protease activity")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0019783> "ubiquitinyl-like hydrolase activity")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0019783> "ubiquitin-like specific protease activity")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0019783> "ubiquitin-like-protein-specific protease activity")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0019783> "ubiquitin-specific protease activity involved in negative regulation of ERAD pathway")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0019783> "ubiquitin-specific protease activity involved in positive regulation of ERAD pathway")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0019783> "molecular_function")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0019783> "GO:0019783")
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0019783> "While ubiquitin-like proteins can be rarely linked to substrates via bonds other than isopeptide bonds, all known ubiquitin-like peptidases cleave the isopeptide bond.")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0019783> "ubiquitin-like protein peptidase activity")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0019783> <http://purl.obolibrary.org/obo/GO_0008233>)
-
-# Class: <http://purl.obolibrary.org/obo/GO_0019786> (Atg8-specific peptidase activity)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:28901328") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0019786> "A thiol-dependent isopeptidase activity that cleaves APG8 from a target protein to which it is conjugated.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:22240591") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:22652539") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:28330855") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:2882172") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:28901328") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0019786> "Catalysis of the reaction: [protein]-C-terminal L-amino acid-glycyl-phosphatidylethanolamide + H2O = [protein]-C-terminal L-amino acid-glycine + a 1,2-diacyl-sn-glycero-3-phosphoethanolamine. An example of this reaction is the removal of ATG8 from membranes to which it is covalently linked to a phosphatidylethanolamid via its terminal glycine residue.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/GO_0019786> "https://github.com/geneontology/go-ontology/issues/25472"^^xsd:anyURI)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0019786> "Atg8-specific protease activity")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:vw") <http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0019786> "APG8-specific protease activity")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0019786> "ATG8-PE deconjugation activity")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0019786> "ATG8-PE hydrolase activity")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0019786> "Atg8-specific peptidase activity")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0019786> "molecular_function")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0019786> "APG8-PE hydrolase")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:vw") <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0019786> "APG8-specific protease activity")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0019786> "GO:0019786")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0019786> "Atg8-specific peptidase activity")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0019786> <http://purl.obolibrary.org/obo/GO_0008234>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0019786> <http://purl.obolibrary.org/obo/GO_0019783>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0019786> "protein-phosphatidylethanolamide deconjugating activity")
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0019786> <http://purl.obolibrary.org/obo/GO_0016787>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0019786> <http://purl.obolibrary.org/obo/GO_0140096>)
 
 # Class: <http://purl.obolibrary.org/obo/GO_0019787> (ubiquitin-like protein transferase activity)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:rn") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:10806345") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:10884686") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0019787> "Catalysis of the transfer of a ubiquitin-like from one protein to another via the reaction X-ULP + Y --> Y-ULP + X, where both X-ULP and Y-ULP are covalent linkages. ULP represents a ubiquitin-like protein.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:rn") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:10806345") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:10884686") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0019787> "Catalysis of the transfer of a ubiquitin-like from one protein to another via the reaction X-ULP + Y = Y-ULP + X, where both X-ULP and Y-ULP are covalent linkages. ULP represents a ubiquitin-like protein.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/GO_0019787> "https://github.com/geneontology/go-ontology/issues/24697"^^xsd:anyURI)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/GO_0019787> "GO:0008639")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/GO_0019787> "GO:0008640")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <http://purl.obolibrary.org/obo/GO_0019787> "E2")
 AnnotationAssertion(Annotation(rdfs:label "ATG16L1 complex transfers LC3 from ATG3 to PE") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0019787> "Reactome:R-HSA-5678490")
 AnnotationAssertion(Annotation(rdfs:label "RIP2 is K63 polyubiquitinated") <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0019787> "Reactome:R-HSA-688137")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0019787> "small conjugating protein transferase activity")
@@ -2487,13 +2446,13 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynon
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0019787> "ubiquitin-like conjugating enzyme activity")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0019787> "ubiquitin-like-protein ligase activity")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0019787> "molecular_function")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0019787> "E2")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0019787> "E3")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0019787> "GO:0019787")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0019787> <http://purl.obolibrary.org/obo/go#goslim_drosophila>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0019787> <http://purl.obolibrary.org/obo/go#goslim_pir>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0019787> "ubiquitin-like protein transferase activity")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0019787> <http://purl.obolibrary.org/obo/GO_0016755>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0019787> <http://purl.obolibrary.org/obo/GO_0140096>)
 
 # Class: <http://purl.obolibrary.org/obo/GO_0019835> (cytolysis)
 
@@ -2793,14 +2752,13 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0032940> <http://purl.obolibrary.o
 # Class: <http://purl.obolibrary.org/obo/GO_0032989> (cellular component morphogenesis)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tb") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0032989> "The process in which cellular structures, including whole cells or cell parts, are generated and organized.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/GO_0032989> "https://github.com/geneontology/go-ontology/issues/25496"^^xsd:anyURI)
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tb") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0032989> "cellular structure morphogenesis")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0032989> "biological_process")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0032989> "GO:0032989")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0032989> <http://purl.obolibrary.org/obo/go#goslim_pir>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0032989> "cellular component morphogenesis")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0032989> <http://purl.obolibrary.org/obo/GO_0009653>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0032989> <http://purl.obolibrary.org/obo/GO_0016043>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0032989> <http://purl.obolibrary.org/obo/GO_0048869>)
 
 # Class: <http://purl.obolibrary.org/obo/GO_0033036> (macromolecule localization)
 
@@ -3961,23 +3919,23 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0061024> <http://purl.obolibrary.o
 
 # Class: <http://purl.obolibrary.org/obo/GO_0061650> (ubiquitin-like protein conjugating enzyme activity)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0061650> "Isoenergetic transfer of a ubiquitin-like protein (ULP) from one protein to another via the reaction X-SCP + Y -> Y-SCP + X, where both the X-SCP and Y-SCP linkages are thioester bonds between the C-terminal amino acid of SCP and a sulfhydryl side group of a cysteine residue.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0061650> "Isoenergetic transfer of a ubiquitin-like protein (ULP) from one protein to another via the reaction X-SCP + Y = Y-SCP + X, where both the X-SCP and Y-SCP linkages are thioester bonds between the C-terminal amino acid of SCP and a sulfhydryl side group of a cysteine residue.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/GO_0061650> "dph")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/GO_0061650> "2014-11-06T13:15:27Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <http://purl.obolibrary.org/obo/GO_0061650> "E2")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0061650> "small conjugating protein conjugating enzyme activity")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0061650> "molecular_function")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0061650> "E2")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0061650> "GO:0061650")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0061650> "ubiquitin-like protein conjugating enzyme activity")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0061650> <http://purl.obolibrary.org/obo/GO_0019787>)
 
 # Class: <http://purl.obolibrary.org/obo/GO_0061651> (Atg12 conjugating enzyme activity)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0061651> "Isoenergetic transfer of Atg12 from one protein to another via the reaction X-Atg12 + Y -> Y-Atg12 + X, where both the X-Atg12 and Y-Atg12 linkages are thioester bonds between the C-terminal amino acid of Atg12 and a sulfhydryl side group of a cysteine residue.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0061651> "Isoenergetic transfer of Atg12 from one protein to another via the reaction X-Atg12 + Y = Y-Atg12 + X, where both the X-Atg12 and Y-Atg12 linkages are thioester bonds between the C-terminal amino acid of Atg12 and a sulfhydryl side group of a cysteine residue.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/GO_0061651> "dph")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/GO_0061651> "2014-11-06T13:17:36Z")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <http://purl.obolibrary.org/obo/GO_0061651> "E2")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0061651> "molecular_function")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0061651> "E2")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0061651> "GO:0061651")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0061651> "Atg12 conjugating enzyme activity")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0061651> <http://purl.obolibrary.org/obo/GO_0019777>)
@@ -3985,7 +3943,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0061651> <http://purl.obolibrary.o
 
 # Class: <http://purl.obolibrary.org/obo/GO_0061659> (ubiquitin-like protein ligase activity)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0061659> "Catalysis of the transfer of a ubiquitin-like protein (ULP) to a substrate protein via the reaction X-ULP + S --> X + S-ULP, where X is either an E2 or E3 enzyme, the X-ULP linkage is a thioester bond, and the S-ULP linkage is an isopeptide bond between the C-terminal glycine of ULP and the epsilon-amino group of lysine residues in the substrate.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0061659> "Catalysis of the transfer of a ubiquitin-like protein (ULP) to a substrate protein via the reaction X-ULP + S = X + S-ULP, where X is either an E2 or E3 enzyme, the X-ULP linkage is a thioester bond, and the S-ULP linkage is an isopeptide bond between the C-terminal glycine of ULP and the epsilon-amino group of lysine residues in the substrate.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/GO_0061659> "dph")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/GO_0061659> "2014-11-06T13:46:23Z")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0061659> "small conjugating protein ligase activity")
@@ -3997,11 +3955,11 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0061659> <http://purl.obolibrary.o
 
 # Class: <http://purl.obolibrary.org/obo/GO_0061660> (Atg12 ligase activity)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0061660> "Catalysis of the transfer of Atg12 to a substrate protein via the reaction X-Atg12 + S --> X + S-Atg12, where X is either an E2 or E3 enzyme, the X-Atg12 linkage is a thioester bond, and the S-Atg12 linkage is an isopeptide bond between the C-terminal amino acid of Atg12 and the epsilon-amino group of lysine residues in the substrate.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0061660> "Catalysis of the transfer of Atg12 to a substrate protein via the reaction X-Atg12 + S = X + S-Atg12, where X is either an E2 or E3 enzyme, the X-Atg12 linkage is a thioester bond, and the S-Atg12 linkage is an isopeptide bond between the C-terminal amino acid of Atg12 and the epsilon-amino group of lysine residues in the substrate.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/GO_0061660> "dph")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/GO_0061660> "2014-11-06T13:50:42Z")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <http://purl.obolibrary.org/obo/GO_0061660> "E3")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0061660> "molecular_function")
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0061660> "E3")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0061660> "GO:0061660")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0061660> "Atg12 ligase activity")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0061660> <http://purl.obolibrary.org/obo/GO_0019777>)
@@ -4052,16 +4010,18 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0061983> "meiosis II cell cycle process")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0061983> <http://purl.obolibrary.org/obo/GO_1903046>)
 
-# Class: <http://purl.obolibrary.org/obo/GO_0070265> (necrotic cell death)
+# Class: <http://purl.obolibrary.org/obo/GO_0070265> (obsolete necrotic cell death)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mtg_apoptosis") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:18846107") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:20823910") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0070265> "A type of cell death that is morphologically characterized by an increasingly translucent cytoplasm, swelling of organelles, minor ultrastructural modifications of the nucleus (specifically, dilatation of the nuclear membrane and condensation of chromatin into small, irregular, circumscribed patches) and increased cell volume (oncosis), culminating in the disruption of the plasma membrane and subsequent loss of intracellular contents. Necrotic cells do not fragment into discrete corpses as their apoptotic counterparts do. Moreover, their nuclei remain intact and can aggregate and accumulate in necrotic tissues.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mtg_apoptosis") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:18846107") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:20823910") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0070265> "OBSOLETE. A type of cell death that is morphologically characterized by an increasingly translucent cytoplasm, swelling of organelles, minor ultrastructural modifications of the nucleus (specifically, dilatation of the nuclear membrane and condensation of chromatin into small, irregular, circumscribed patches) and increased cell volume (oncosis), culminating in the disruption of the plasma membrane and subsequent loss of intracellular contents. Necrotic cells do not fragment into discrete corpses as their apoptotic counterparts do. Moreover, their nuclei remain intact and can aggregate and accumulate in necrotic tissues.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/GO_0070265> "https://github.com/geneontology/go-ontology/issues/24680"^^xsd:anyURI)
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah") <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <http://purl.obolibrary.org/obo/GO_0070265> "necrosis")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:add") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0070265> "cellular necrosis")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0070265> "biological_process")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0070265> "GO:0070265")
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0070265> "Note that the word necrosis has been widely used in earlier literature to describe forms of cell death which are now known by more precise terms, such as apoptosis. Necrosis can occur in a regulated fashion, involving a precise sequence of signals; in this case, consider annotating to GO:0097300 'programmed necrotic cell death' or to its more specific child GO:0070266 'necroptotic process'.")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0070265> "necrotic cell death")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0070265> <http://purl.obolibrary.org/obo/GO_0008219>)
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0070265> "The reason for obsoletion is that this term represent an assay and not a GO process.
+ The reason for obsoletion is that this represents a phenotype.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0070265> "obsolete necrotic cell death")
+AnnotationAssertion(owl:deprecated <http://purl.obolibrary.org/obo/GO_0070265> "true"^^xsd:boolean)
 
 # Class: <http://purl.obolibrary.org/obo/GO_0070727> (cellular macromolecule localization)
 
