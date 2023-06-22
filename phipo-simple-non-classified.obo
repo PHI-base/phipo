@@ -1,12 +1,12 @@
 format-version: 1.2
-data-version: phipo/releases/2023-06-19/phipo-simple-non-classified.owl
+data-version: phipo/releases/2023-06-22/phipo-simple-non-classified.owl
 ontology: phipo/phipo-simple-non-classified
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date "2018-07-09T13:43:00Z" xsd:string
 property_value: http://purl.org/dc/elements/1.1/description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license "https://creativecommons.org/licenses/by/3.0/" xsd:string
-property_value: owl:versionInfo "2023-06-19" xsd:string
+property_value: owl:versionInfo "2023-06-22" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -11516,6 +11516,51 @@ def: "A growth phenotype which describes the absence of change of individuals or
 is_a: PHIPO:0001218 ! chemical phenotype
 created_by: alaynecuzick
 creation_date: 2023-06-12T09:41:30Z
+
+[Term]
+id: PHIPO:0001294
+name: inhibition of pathogen polygalacturonase by host present
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction molecular function phenotype in which host-mediated inhibition of a pathogen polygalacturonase is present." []
+is_a: PHIPO:0000347 ! pathogen host interaction molecular function phenotype
+created_by: alaynecuzick
+creation_date: 2023-06-16T11:19:19Z
+
+[Term]
+id: PHIPO:0001295
+name: inhibition of pathogen polygalacturonase by host decreased
+namespace: pathogen_host_interaction_phenotype
+def: "A pathogen host interaction molecular function phenotype in which host-mediated inhibition of a pathogen polygalacturonase\noccurs to a lesser extent than normal." []
+is_a: PHIPO:0000347 ! pathogen host interaction molecular function phenotype
+created_by: alaynecuzick
+creation_date: 2023-06-16T11:21:35Z
+
+[Term]
+id: PHIPO:0001296
+name: resistance to arborcandin C
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to arborcandin C. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
+is_a: PHIPO:0000022 ! increased resistance to chemical
+created_by: alaynecuzick
+creation_date: 2023-06-21T11:31:01Z
+
+[Term]
+id: PHIPO:0001297
+name: sensitive to arborcandin C
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to arborcandin C. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2023-06-21T11:33:40Z
+
+[Term]
+id: PHIPO:0001298
+name: normal growth on arborcandin C
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to arborcandin C (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001218 ! chemical phenotype
+created_by: alaynecuzick
+creation_date: 2023-06-21T11:35:28Z
 
 [Typedef]
 id: PHIPO:0000304
