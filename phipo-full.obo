@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2023-06-22/phipo-full.owl
+data-version: phipo/releases/2023-06-29/phipo-full.owl
 subsetdef: 1_STAR ""
 subsetdef: 2_STAR ""
 subsetdef: 3_STAR ""
@@ -52,7 +52,7 @@ property_value: creation:date "2018-07-09T13:43:00Z" xsd:string
 property_value: dc-description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: dc-title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: dcterms-license "https://creativecommons.org/licenses/by/3.0/" xsd:string
-property_value: owl:versionInfo "2023-06-22" xsd:string
+property_value: owl:versionInfo "2023-06-29" xsd:string
 
 [Term]
 id: BFO:0000001
@@ -59628,6 +59628,54 @@ def: "A growth phenotype which describes the absence of change of individuals or
 is_a: PHIPO:0001218 ! chemical phenotype
 created_by: alaynecuzick
 creation_date: 2023-06-21T11:35:28Z
+
+[Term]
+id: PHIPO:0001299
+name: normal growth on pyrrolnitrin
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to pyrrolnitrin (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001218 ! chemical phenotype
+created_by: alaynecuzick
+creation_date: 2023-06-27T13:33:13Z
+
+[Term]
+id: PHIPO:0001300
+name: sensitive to pyrrolnitrin
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to pyrrolnitrin. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2023-06-27T13:35:46Z
+
+[Term]
+id: PHIPO:0001301
+name: resistance to pyrrolnitrin
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to pyrrolnitrin. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
+is_a: PHIPO:0000022 ! increased resistance to chemical
+created_by: alaynecuzick
+creation_date: 2023-06-27T13:37:29Z
+
+[Term]
+id: PHIPO:0001302
+name: resistance to osmotic stress
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to an osmotic stress. Typically, individuals or populations are deemed resistant to a stress if they grow when exposed to the stress at an intensity at which an individual or population of wild type cell(s) stop growing (and may die)." []
+synonym: "resistant to osmotic stress" EXACT []
+xref: FYPO:0000851
+is_a: PHIPO:0001096 ! resistance to stress
+created_by: alaynecuzick
+creation_date: 2023-06-27T14:23:57Z
+
+[Term]
+id: PHIPO:0001303
+name: sensitive to osmotic stress
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to an osmotic stress. Typically, individuals or populations are deemed sensitive to a stress if they stop growing (and may die) when exposed to the stress at an intensity that allows an individual or population of wild type cell(s) to grow and divide." []
+xref: FYPO:0000270
+is_a: PHIPO:0001098 ! sensitive to stress
+created_by: alaynecuzick
+creation_date: 2023-06-27T14:27:20Z
 
 [Term]
 id: PR:000000001
