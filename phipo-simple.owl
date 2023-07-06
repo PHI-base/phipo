@@ -12,13 +12,13 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/phipo/phipo-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2023-06-29/phipo-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2023-07-06/phipo-simple.owl"/>
         <obo:created_by>alaynecuzick</obo:created_by>
         <obo:creation_date>2018-07-09T13:43:00Z</obo:creation_date>
         <dc:description>Ontology of species-neutral phenotypes observed in pathogen-host interactions.</dc:description>
         <dc:title>Pathogen Host Interactions Phenotype Ontology</dc:title>
         <terms:license>https://creativecommons.org/licenses/by/3.0/</terms:license>
-        <owl:versionInfo>2023-06-29</owl:versionInfo>
+        <owl:versionInfo>2023-07-06</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -116,6 +116,12 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://purl.obolibrary.org/obo/IAO_0000232 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000232"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000233 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000233"/>
     
 
 
@@ -282,7 +288,12 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym">
+        <obo:IAO_0000115>An alternative label for a class or property which has a more general meaning than the preferred name/primary label.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
+        <obo:IAO_0000233>https://github.com/information-artifact-ontology/ontology-metadata/issues/18</obo:IAO_0000233>
+        <rdfs:label xml:lang="en">has broad synonym</rdfs:label>
         <rdfs:label>has_broad_synonym</rdfs:label>
+        <rdfs:seeAlso>https://github.com/information-artifact-ontology/ontology-metadata/issues/18</rdfs:seeAlso>
     </owl:AnnotationProperty>
     
 
@@ -298,7 +309,12 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym">
+        <obo:IAO_0000115>An alternative label for a class or property which has the exact same meaning than the preferred name/primary label.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
+        <obo:IAO_0000233>https://github.com/information-artifact-ontology/ontology-metadata/issues/20</obo:IAO_0000233>
+        <rdfs:label xml:lang="en">has exact synonym</rdfs:label>
         <rdfs:label>has_exact_synonym</rdfs:label>
+        <rdfs:seeAlso>https://github.com/information-artifact-ontology/ontology-metadata/issues/20</rdfs:seeAlso>
     </owl:AnnotationProperty>
     
 
@@ -306,7 +322,12 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym">
+        <obo:IAO_0000115>An alternative label for a class or property which has a more specific meaning than the preferred name/primary label.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
+        <obo:IAO_0000233>https://github.com/information-artifact-ontology/ontology-metadata/issues/19</obo:IAO_0000233>
+        <rdfs:label xml:lang="en">has narrow synonym</rdfs:label>
         <rdfs:label>has_narrow_synonym</rdfs:label>
+        <rdfs:seeAlso>https://github.com/information-artifact-ontology/ontology-metadata/issues/19</rdfs:seeAlso>
     </owl:AnnotationProperty>
     
 
@@ -322,7 +343,12 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym">
+        <obo:IAO_0000115>An alternative label for a class or property that has been used synonymously with the primary term name, but the usage is not strictly correct.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
+        <obo:IAO_0000233>https://github.com/information-artifact-ontology/ontology-metadata/issues/21</obo:IAO_0000233>
+        <rdfs:label xml:lang="en">has related synonym</rdfs:label>
         <rdfs:label>has_related_synonym</rdfs:label>
+        <rdfs:seeAlso>https://github.com/information-artifact-ontology/ontology-metadata/issues/21</rdfs:seeAlso>
     </owl:AnnotationProperty>
     
 
@@ -410,6 +436,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <rdfs:label>part_of</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections"/>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:PartOf"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://wiki.geneontology.org/Part_of</rdfs:seeAlso>
         <rdfs:seeAlso>http://www.obofoundry.org/ro/#OBO_REL:part_of</rdfs:seeAlso>
     </owl:ObjectProperty>
     
@@ -475,6 +502,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
         <rdfs:label xml:lang="en">occurs in</rdfs:label>
         <rdfs:label>occurs in</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://wiki.geneontology.org/Occurs_in</rdfs:seeAlso>
     </owl:ObjectProperty>
     
 
@@ -16915,6 +16943,67 @@ occurs to a lesser extent than normal.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>FYPO:0000270</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">sensitive to osmotic stress</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001304 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001304">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001302"/>
+        <obo:IAO_0000115>A growth phenotype which describes the resistance of individuals or populations after exposure to a salt stress. Typically, individuals or populations are deemed resistant to a stress if they grow when exposed to the stress at an intensity at which an individual or population of wild type cell(s) stop growing (and may die).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-06-30T12:46:55Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000852</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>ionic stress resistance: increased</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>resistant to salt stress</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">resistance to salt stress</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001305 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001305">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001302"/>
+        <obo:IAO_0000115>A growth phenotype which describes the resistance of individuals or populations after exposure to a non-ionic osmotic stress. Typically, individuals or populations are deemed sensitive to a stress if they stop growing (and may die) when exposed to the stress at an intensity that allows an individual or population of wild type cell(s) to grow and divide.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-06-30T12:55:08Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>resistant to non-ionic osmotic stress</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">resistance to non-ionic osmotic stress</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001306 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001306">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001303"/>
+        <obo:IAO_0000115>A growth phenotype which describes the sensitivity of individuals or populations after exposure to a salt stress. Typically, individuals or populations are deemed sensitive to a stress if they stop growing (and may die) when exposed to the stress at an intensity that allows an individual or population of wild type cell(s) to grow and divide.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-06-30T12:57:45Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0000271</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>hypersensitive to salt stress</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>ionic stress resistance: decreased</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">sensitive to salt stress</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001307 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001307">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001303"/>
+        <obo:IAO_0000115>A growth phenotype which describes the sensitivity of individuals or populations after exposure to a non-ionic osmotic stress. Typically, individuals or populations are deemed sensitive to a stress if they stop growing (and may die) when exposed to the stress at an intensity that allows an individual or population of wild type cell(s) to grow and divide.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-06-30T13:00:44Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0002811</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>hypersensitive to non-ionic osmotic stress</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">sensitive to non-ionic osmotic stress</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

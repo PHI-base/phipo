@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2023-06-29/phipo-full.owl
+data-version: phipo/releases/2023-07-06/phipo-full.owl
 subsetdef: 1_STAR ""
 subsetdef: 2_STAR ""
 subsetdef: 3_STAR ""
@@ -52,7 +52,7 @@ property_value: creation:date "2018-07-09T13:43:00Z" xsd:string
 property_value: dc-description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: dc-title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: dcterms-license "https://creativecommons.org/licenses/by/3.0/" xsd:string
-property_value: owl:versionInfo "2023-06-29" xsd:string
+property_value: owl:versionInfo "2023-07-06" xsd:string
 
 [Term]
 id: BFO:0000001
@@ -113,6 +113,7 @@ id: BFO:0000004
 name: independent continuant
 def: "A continuant that is a bearer of quality and realizable entity entities, in which other entities inhere and which itself cannot inhere in anything." []
 def: "b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])" [] {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/017-002"}
+comment: A continuant that is a bearer of quality and realizable entity entities, in which other entities inhere and which itself cannot inhere in anything.
 is_a: BFO:0000002 ! continuant
 disjoint_from: BFO:0000020 ! specifically dependent continuant
 disjoint_from: BFO:0000020 ! specifically dependent continuant
@@ -142,6 +143,7 @@ id: BFO:0000015
 name: process
 def: "An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t." []
 def: "p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])" [] {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/083-003"}
+comment: An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t.
 is_a: BFO:0000003 ! occurrent
 property_value: BFO:0000179 "process" xsd:string
 property_value: BFO:0000180 "Process" xsd:string
@@ -206,6 +208,7 @@ name: specifically dependent continuant
 def: "A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same." []
 def: "b is a relational specifically dependent continuant = Def. b is a specifically dependent continuant and there are n &gt; 1 independent continuants c1, … cn which are not spatial regions are such that for all 1  i &lt; j  n, ci  and cj share no common parts, are such that for each 1  i  n, b s-depends_on ci at every time t during the course of b’s existence (axiom label in BFO2 Reference: [131-004])" [] {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/131-004"}
 def: "b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])" [] {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/050-003"}
+comment: A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same.
 is_a: BFO:0000002 ! continuant
 disjoint_from: BFO:0000031 ! generically dependent continuant
 relationship: part_of BFO:0000020 {all_only="true"} ! specifically dependent continuant
@@ -36069,7 +36072,6 @@ name: molecular_function
 namespace: molecular_function
 alt_id: GO:0005554
 def: "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs." [GOC:pdt]
-def: "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process." [GOC:pdt]
 comment: Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.
 subset: goslim_candida
 subset: goslim_chembl
@@ -37320,7 +37322,6 @@ alt_id: GO:0000004
 alt_id: GO:0007582
 alt_id: GO:0044699
 def: "A biological process is the execution of a genetically-encoded biological module or program. It consists of all the steps required to achieve the specific biological objective of the module. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence." [GOC:pdt]
-def: "A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence." [GOC:pdt]
 def: "Any process specifically pertinent to the functioning of integrated living units: cells, tissues, organs, and organisms. A process is a collection of molecular events with a defined beginning and end." []
 comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
 subset: goslim_candida
@@ -59678,6 +59679,51 @@ created_by: alaynecuzick
 creation_date: 2023-06-27T14:27:20Z
 
 [Term]
+id: PHIPO:0001304
+name: resistance to salt stress
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to a salt stress. Typically, individuals or populations are deemed resistant to a stress if they grow when exposed to the stress at an intensity at which an individual or population of wild type cell(s) stop growing (and may die)." []
+synonym: "ionic stress resistance: increased" EXACT []
+synonym: "resistant to salt stress" EXACT []
+xref: FYPO:0000852
+is_a: PHIPO:0001302 ! resistance to osmotic stress
+created_by: alaynecuzick
+creation_date: 2023-06-30T12:46:55Z
+
+[Term]
+id: PHIPO:0001305
+name: resistance to non-ionic osmotic stress
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to a non-ionic osmotic stress. Typically, individuals or populations are deemed sensitive to a stress if they stop growing (and may die) when exposed to the stress at an intensity that allows an individual or population of wild type cell(s) to grow and divide." []
+synonym: "resistant to non-ionic osmotic stress" EXACT []
+is_a: PHIPO:0001302 ! resistance to osmotic stress
+created_by: alaynecuzick
+creation_date: 2023-06-30T12:55:08Z
+
+[Term]
+id: PHIPO:0001306
+name: sensitive to salt stress
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to a salt stress. Typically, individuals or populations are deemed sensitive to a stress if they stop growing (and may die) when exposed to the stress at an intensity that allows an individual or population of wild type cell(s) to grow and divide." []
+synonym: "hypersensitive to salt stress" EXACT []
+synonym: "ionic stress resistance: decreased" EXACT []
+xref: FYPO:0000271
+is_a: PHIPO:0001303 ! sensitive to osmotic stress
+created_by: alaynecuzick
+creation_date: 2023-06-30T12:57:45Z
+
+[Term]
+id: PHIPO:0001307
+name: sensitive to non-ionic osmotic stress
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to a non-ionic osmotic stress. Typically, individuals or populations are deemed sensitive to a stress if they stop growing (and may die) when exposed to the stress at an intensity that allows an individual or population of wild type cell(s) to grow and divide." []
+synonym: "hypersensitive to non-ionic osmotic stress" EXACT []
+xref: FYPO:0002811
+is_a: PHIPO:0001303 ! sensitive to osmotic stress
+created_by: alaynecuzick
+creation_date: 2023-06-30T13:00:44Z
+
+[Term]
 id: PR:000000001
 name: protein
 namespace: protein
@@ -59902,6 +59948,7 @@ xref: UMLS:C1515976 {source="ncithesaurus:Anatomic_Structure_System_or_Substance
 xref: WBbt:0000100
 xref: XAO:0000000
 xref: ZFA:0100000
+is_a: BFO:0000004 ! independent continuant
 property_value: RO:0002175 NCBITaxon:33090
 property_value: RO:0002175 NCBITaxon:33208
 property_value: RO:0002175 NCBITaxon:4751
@@ -60049,6 +60096,7 @@ comment: By convention GO molecular functions are classified by their effector f
 is_a: has_regulatory_component_activity ! has regulatory component activity
 is_a: positively_regulated_by ! positively regulated by
 created_by: dos
+created_by: https://orcid.org/0000-0002-7073-9172
 creation_date: 2017-05-24T09:31:17Z
 
 [Typedef]
@@ -60057,6 +60105,7 @@ name: has component activity
 comment: A 'has component activity' B if A is A and B are molecular functions (GO_0003674) and A has_component B.
 is_a: RO:0002018 ! has component process
 created_by: dos
+created_by: https://orcid.org/0000-0002-7073-9172
 creation_date: 2017-05-24T09:44:33Z
 
 [Typedef]
@@ -60067,43 +60116,52 @@ domain: BFO:0000015 ! process
 range: BFO:0000015 ! process
 is_a: has_component ! has component
 created_by: dos
+created_by: https://orcid.org/0000-0002-7073-9172
 creation_date: 2017-05-24T09:49:21Z
 
 [Typedef]
 id: RO:0002022
 name: directly regulated by
 comment: Process(P2) is directly regulated by process(P1) iff: P1 regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  regulates the kinase activity (P2) of protein B then P1 directly regulates P2. {xref="GOC:dos"}
+comment: Process(P2) is directly regulated by process(P1) iff: P1 regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  regulates the kinase activity (P2) of protein B then P1 directly regulates P2. {xref="https://orcid.org/0000-0002-7073-9172"}
 is_a: regulated_by ! regulated by
 inverse_of: directly_regulates ! directly regulates
 created_by: dos
+created_by: https://orcid.org/0000-0002-7073-9172
 creation_date: 2017-09-17T13:52:24Z
 
 [Typedef]
 id: RO:0002023
 name: directly negatively regulated by
 def: "Process(P2) is directly negatively regulated by process(P1) iff: P1 negatively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  negatively regulates the kinase activity (P2) of protein B then P2 directly negatively regulated by P1." [GOC:dos]
+def: "Process(P2) is directly negatively regulated by process(P1) iff: P1 negatively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  negatively regulates the kinase activity (P2) of protein B then P2 directly negatively regulated by P1." [https://orcid.org/0000-0002-7073-9172]
 is_a: RO:0002022 ! directly regulated by
 inverse_of: directly_negatively_regulates ! directly negatively regulates
 created_by: dos
+created_by: https://orcid.org/0000-0002-7073-9172
 creation_date: 2017-09-17T13:52:38Z
 
 [Typedef]
 id: RO:0002024
 name: directly positively regulated by
 def: "Process(P2) is directly postively regulated by process(P1) iff: P1 positively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding positively regulates the kinase activity (P2) of protein B then P2 is directly postively regulated by P1." [GOC:dos]
+def: "Process(P2) is directly postively regulated by process(P1) iff: P1 positively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding positively regulates the kinase activity (P2) of protein B then P2 is directly postively regulated by P1." [https://orcid.org/0000-0002-7073-9172]
 is_a: RO:0002022 ! directly regulated by
 inverse_of: directly_positively_regulates ! directly positively regulates
 created_by: dos
+created_by: https://orcid.org/0000-0002-7073-9172
 creation_date: 2017-09-17T13:52:47Z
 
 [Typedef]
 id: RO:0002025
 name: has effector activity
 def: "A 'has effector activity' B if A and B are GO molecular functions (GO_0003674),  A 'has component activity' B and B is the effector (output function) of B.  Each compound function has only one effector activity." [GOC:dos]
+def: "A 'has effector activity' B if A and B are GO molecular functions (GO_0003674),  A 'has component activity' B and B is the effector (output function) of B.  Each compound function has only one effector activity." [https://orcid.org/0000-0002-7073-9172]
 comment: This relation is designed for constructing compound molecular functions, typically in combination with one or more regulatory component activity relations.
 is_functional: true
 is_a: RO:0002017 ! has component activity
 created_by: dos
+created_by: https://orcid.org/0000-0002-7073-9172
 creation_date: 2017-09-22T14:14:36Z
 
 [Typedef]
@@ -60146,6 +60204,7 @@ subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
 synonym: "affects" RELATED []
 property_value: IAO:0000112 "A gene product that has some activity, where that activity may be a part of a pathway or upstream of the pathway." xsd:string
 property_value: seeAlso http://wiki.geneontology.org/index.php/Acts_upstream_of_or_within
+property_value: seeAlso "https://wiki.geneontology.org/Acts_upstream_of_or_within" xsd:anyURI
 holds_over_chain: RO:0002327 causally_upstream_of_or_within
 is_a: RO:0002500 ! causal agent in process
 
@@ -60198,6 +60257,7 @@ property_value: IAO:0000118 "has" xsd:string
 property_value: IAO:0000118 "is catalyzing" xsd:string
 property_value: IAO:0000118 "is executing" xsd:string
 property_value: IAO:0000232 "This relation differs from the parent relation 'capable of' in that the parent is weaker and only expresses a capability that may not be actually realized, whereas this relation is always realized." xsd:string
+property_value: seeAlso "https://wiki.geneontology.org/Enables" xsd:anyURI
 is_a: capable_of ! capable of
 inverse_of: RO:0002333 ! enabled by
 transitive_over: has_part ! has part
@@ -60219,6 +60279,7 @@ def: "c involved_in p if and only if c enables some process p', and p' is part o
 property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
 property_value: IAO:0000118 "actively involved in" xsd:string
 property_value: IAO:0000118 "enables part of" xsd:string
+property_value: seeAlso "https://wiki.geneontology.org/Involved_in" xsd:anyURI
 property_value: seeAlso Involved:in
 holds_over_chain: RO:0002327 part_of
 is_a: participates_in ! participates in
@@ -60231,6 +60292,7 @@ name: enabled by
 def: "inverse of enables" []
 subset: http://purl.obolibrary.org/obo/valid_for_gocam
 property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
+property_value: seeAlso "https://wiki.geneontology.org/Enabled_by" xsd:anyURI
 is_a: functionally_related_to ! functionally related to
 is_a: has_participant ! has participant
 
@@ -60256,6 +60318,7 @@ def: "p indirectly positively regulates q iff p is indirectly causally upstream 
 property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
 property_value: IAO:0000118 "indirectly activates" xsd:string
 property_value: RO:0002579 RO:0002213
+property_value: seeAlso "https://wiki.geneontology.org/Indirectly_positively_regulates" xsd:anyURI
 holds_over_chain: directly_positively_regulates directly_positively_regulates
 holds_over_chain: directly_positively_regulates RO:0002407
 holds_over_chain: RO:0002409 RO:0002409
@@ -60271,6 +60334,7 @@ def: "p indirectly negatively regulates q iff p is indirectly causally upstream 
 property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
 property_value: IAO:0000118 "indirectly inhibits" xsd:string
 property_value: RO:0002579 RO:0002212
+property_value: seeAlso "https://wiki.geneontology.org/Indirectly_negatively_regulates" xsd:anyURI
 holds_over_chain: directly_negatively_regulates directly_negatively_regulates
 holds_over_chain: directly_negatively_regulates RO:0002409
 is_transitive: true
@@ -60331,10 +60395,12 @@ is_a: RO:0002500 ! causal agent in process
 id: RO:0002432
 name: is active in
 def: "c executes activity in d if and only if c enables p and p occurs_in d.  Assuming no action at a distance by gene products, if a gene product enables (is capable of) a process that occurs in some structure, it must have at least some part in that structure." [GOC:cjm, GOC:dos]
+def: "c executes activity in d if and only if c enables p and p occurs_in d.  Assuming no action at a distance by gene products, if a gene product enables (is capable of) a process that occurs in some structure, it must have at least some part in that structure." [https://orcid.org/0000-0002-6601-2165, https://orcid.org/0000-0002-7073-9172]
 synonym: "enables activity in" EXACT []
 property_value: IAO:0000112 "A protein that enables activity in a cytosol." xsd:string
 property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
 property_value: IAO:0000118 "executes activity in" xsd:string
+property_value: seeAlso "https://wiki.geneontology.org/Is_active_in" xsd:anyURI
 holds_over_chain: RO:0002327 occurs_in {http://purl.obolibrary.org/obo/RO_0002581="true"}
 is_a: functionally_related_to ! functionally related to
 is_a: overlaps ! overlaps
@@ -60586,6 +60652,12 @@ holds_over_chain: capable_of positively_regulates
 is_a: RO:0002596 ! capable of regulating
 
 [Typedef]
+id: RO:0002610
+name: correlated with
+def: "A relationship that holds between two entities, where the entities exhibit a statistical dependence relationship. The entities may be statistical variables, or they may be other kinds of entities such as diseases, chemical entities or processes." []
+property_value: IAO:0000232 "Groups both positive and negative correlation" xsd:string
+
+[Typedef]
 id: RO:0004031
 name: enables subfunction
 def: "Holds between an entity and an process P where the entity enables some larger compound process, and that larger process has-part P." []
@@ -60600,6 +60672,7 @@ name: acts upstream of or within, positive effect
 subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
 property_value: RO:0004049 RO:0002264
 property_value: seeAlso http://wiki.geneontology.org/index.php/Acts_upstream_of_or_within,_positive_effect
+property_value: seeAlso "https://wiki.geneontology.org/Acts_upstream_of_or_within,_positive_effect" xsd:anyURI
 holds_over_chain: RO:0002327 RO:0004047
 is_a: RO:0002264 ! acts upstream of or within
 created_by: https://orcid.org/0000-0002-6601-2165
@@ -60610,6 +60683,7 @@ id: RO:0004033
 name: acts upstream of or within, negative effect
 subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
 property_value: RO:0004050 RO:0002264
+property_value: seeAlso "https://wiki.geneontology.org/Acts_upstream_of_or_within,_negative_effect" xsd:anyURI
 holds_over_chain: RO:0002327 RO:0004046
 is_a: RO:0002264 ! acts upstream of or within
 created_by: https://orcid.org/0000-0002-6601-2165
@@ -60622,6 +60696,7 @@ def: "c 'acts upstream of, positive effect' p if c is enables f, and f is causal
 subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
 property_value: RO:0004049 RO:0002263
 property_value: seeAlso http://wiki.geneontology.org/index.php/Acts_upstream_of,_positive_effect
+property_value: seeAlso "https://wiki.geneontology.org/Acts_upstream_of,_positive_effect" xsd:anyURI
 holds_over_chain: RO:0002327 causally_upstream_of,_positive_effect
 is_a: RO:0002263 ! acts upstream of
 is_a: RO:0004032 ! acts upstream of or within, positive effect
@@ -60635,6 +60710,7 @@ def: "c 'acts upstream of, negative effect' p if c is enables f, and f is causal
 subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
 property_value: RO:0004050 RO:0002263
 property_value: seeAlso http://wiki.geneontology.org/index.php/Acts_upstream_of,_negative_effect
+property_value: seeAlso "https://wiki.geneontology.org/Acts_upstream_of,_negative_effect" xsd:anyURI
 holds_over_chain: RO:0002327 causally_upstream_of,_negative_effect
 is_a: RO:0002263 ! acts upstream of
 is_a: RO:0004033 ! acts upstream of or within, negative effect
@@ -60645,6 +60721,7 @@ creation_date: 2018-01-26T23:53:22Z
 id: RO:0004046
 name: causally upstream of or within, negative effect
 property_value: RO:0004050 RO:0002418
+property_value: seeAlso "https://wiki.geneontology.org/Causally_upstream_of_or_within,_negative_effect" xsd:anyURI
 is_a: causally_upstream_of_or_within ! causally upstream of or within
 created_by: https://orcid.org/0000-0002-6601-2165
 creation_date: 2018-03-13T23:55:05Z
@@ -60653,6 +60730,7 @@ creation_date: 2018-03-13T23:55:05Z
 id: RO:0004047
 name: causally upstream of or within, positive effect
 property_value: RO:0004049 RO:0002418
+property_value: seeAlso https://wiki.geneontology.org/Causally_upstream_of_or_within,_positive_effect
 is_a: causally_upstream_of_or_within ! causally upstream of or within
 created_by: https://orcid.org/0000-0002-6601-2165
 creation_date: 2018-03-13T23:55:19Z
@@ -60671,6 +60749,7 @@ id: RO:0012011
 name: indirectly causally upstream of
 def: "p is indirectly causally upstream of q iff p is causally upstream of q and there exists some process r such that p is causally upstream of r and r is causally upstream of q." []
 is_a: causally_upstream_of ! causally upstream of
+created_by: https://orcid.org/0000-0003-1813-6857
 created_by: pg
 creation_date: 2022-09-26T06:07:17Z
 
@@ -60680,6 +60759,7 @@ name: indirectly regulates
 def: "p indirectly regulates q iff p is indirectly causally upstream of q and p regulates q." []
 is_a: regulates ! regulates
 is_a: RO:0012011 ! indirectly causally upstream of
+created_by: https://orcid.org/0000-0003-1813-6857
 created_by: pg
 creation_date: 2022-09-26T06:08:01Z
 
@@ -60730,6 +60810,16 @@ property_value: IAO:0000232 "A diagnostic testing device utilizes a specimen mea
 property_value: IAO:0000232 "See github ticket https://github.com/oborel/obo-relations/issues/497" xsd:string
 holds_over_chain: capable_of has_input
 creation_date: 2021-11-08T12:00:00Z
+
+[Typedef]
+id: RO:0017003
+name: positively correlated with
+def: "A relation between entities in which one increases or decreases as the other does the same." []
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-1909-9269
+property_value: IAO:0000118 "directly correlated with" xsd:string
+is_reflexive: true
+is_symmetric: true
+is_a: RO:0002610 ! correlated with
 
 [Typedef]
 id: bearer_of
@@ -60829,6 +60919,7 @@ subset: http://purl.obolibrary.org/obo/valid_for_gocam
 xref: RO:0002305
 property_value: http://purl.org/dc/terms/creator https://orcid.org/0000-0002-6601-2165
 property_value: RO:0004050 RO:0002411
+property_value: seeAlso https://wiki.geneontology.org/Causally_upstream_of,_negative_effect
 is_a: causally_upstream_of ! causally upstream of
 is_a: RO:0004046 ! causally upstream of or within, negative effect
 
@@ -60843,6 +60934,7 @@ subset: http://purl.obolibrary.org/obo/valid_for_gocam
 xref: RO:0002304
 property_value: http://purl.org/dc/terms/creator https://orcid.org/0000-0002-6601-2165
 property_value: RO:0004049 RO:0002411
+property_value: seeAlso https://wiki.geneontology.org/Causally_upstream_of,_positive_effect
 is_a: causally_upstream_of ! causally upstream of
 is_a: RO:0004047 ! causally upstream of or within, positive effect
 
@@ -60922,6 +61014,7 @@ xref: RO:0002630
 property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
 property_value: IAO:0000589 "directly negatively regulates (process to process)" xsd:string
 property_value: RO:0004050 RO:0002578
+property_value: seeAlso "https://wiki.geneontology.org/Directly_negatively_regulates" xsd:anyURI
 is_a: directly_regulates ! directly regulates
 is_a: negatively_regulates ! negatively regulates
 
@@ -60937,6 +61030,7 @@ xref: RO:0002629
 property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
 property_value: IAO:0000589 "directly positively regulates (process to process)" xsd:string
 property_value: RO:0004049 RO:0002578
+property_value: seeAlso "https://wiki.geneontology.org/Directly_positively_regulates" xsd:anyURI
 is_a: directly_regulates ! directly regulates
 is_a: positively_regulates ! positively regulates
 
@@ -61065,6 +61159,7 @@ xref: RO:0002233
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
 property_value: IAO:0000118 "consumes" xsd:string
+property_value: seeAlso "https://wiki.geneontology.org/Has_input" xsd:anyURI
 domain: BFO:0000015 ! process
 holds_over_chain: starts_with has_input
 is_a: has_participant ! has participant
@@ -61080,6 +61175,7 @@ xref: RO:0002014
 is_a: has_regulatory_component_activity ! has regulatory component activity
 is_a: negatively_regulated_by ! negatively regulated by
 created_by: dos
+created_by: https://orcid.org/0000-0002-7073-9172
 creation_date: 2017-05-24T09:31:01Z
 
 [Typedef]
@@ -61200,6 +61296,7 @@ xref: RO:0002013
 is_a: regulated_by ! regulated by
 is_a: RO:0002017 ! has component activity
 created_by: dos
+created_by: https://orcid.org/0000-0002-7073-9172
 creation_date: 2017-05-24T09:30:46Z
 
 [Typedef]
@@ -61402,6 +61499,7 @@ property_value: IAO:0000118 "occurs_in" xsd:string
 property_value: IAO:0000118 "unfolds in" xsd:string
 property_value: IAO:0000118 "unfolds_in" xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
+property_value: seeAlso "https://wiki.geneontology.org/Occurs_in" xsd:anyURI
 domain: BFO:0000003 ! occurrent
 range: BFO:0000004 ! independent continuant
 holds_over_chain: part_of occurs_in
@@ -61489,6 +61587,7 @@ property_value: RO:0040042 BFO:0000031
 property_value: seeAlso http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections
 property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:PartOf
 property_value: seeAlso "http://www.obofoundry.org/ro/#OBO_REL:part_of" xsd:string
+property_value: seeAlso "https://wiki.geneontology.org/Part_of" xsd:anyURI
 is_transitive: true
 is_a: overlaps ! overlaps
 inverse_of: has_part ! has part
