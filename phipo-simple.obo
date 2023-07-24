@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2023-07-06/phipo-simple.owl
+data-version: phipo/releases/2023-07-24/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -11,7 +11,7 @@ property_value: creation:date "2018-07-09T13:43:00Z" xsd:string
 property_value: dc-description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: dc-title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: dcterms-license "https://creativecommons.org/licenses/by/3.0/" xsd:string
-property_value: owl:versionInfo "2023-07-06" xsd:string
+property_value: owl:versionInfo "2023-07-24" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -10823,7 +10823,7 @@ id: PHIPO:0001219
 name: normal growth on voriconazole
 namespace: single_species_phenotype
 def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to voriconazole (i.e. indistinguishable from wild type)." []
-is_a: PHIPO:0001218 ! chemical phenotype
+is_a: PHIPO:0001308 ! normal growth on chemical
 created_by: alaynecuzick
 creation_date: 2020-12-08T15:43:45Z
 
@@ -11492,7 +11492,7 @@ id: PHIPO:0001287
 name: normal growth on tolnaftate
 namespace: single_species_phenotype
 def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to tolnaftate (i.e. indistinguishable from wild type)." []
-is_a: PHIPO:0001218 ! chemical phenotype
+is_a: PHIPO:0001308 ! normal growth on chemical
 created_by: alaynecuzick
 creation_date: 2023-06-12T08:49:10Z
 
@@ -11519,7 +11519,7 @@ id: PHIPO:0001290
 name: normal growth on azoxystrobin
 namespace: single_species_phenotype
 def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to azoxystrobin (i.e. indistinguishable from wild type)." []
-is_a: PHIPO:0001218 ! chemical phenotype
+is_a: PHIPO:0001308 ! normal growth on chemical
 created_by: alaynecuzick
 creation_date: 2023-06-12T09:21:50Z
 
@@ -11546,7 +11546,7 @@ id: PHIPO:0001293
 name: normal growth on fenpicoxamid
 namespace: single_species_phenotype
 def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to fenpicoxamid (i.e. indistinguishable from wild type)." []
-is_a: PHIPO:0001218 ! chemical phenotype
+is_a: PHIPO:0001308 ! normal growth on chemical
 created_by: alaynecuzick
 creation_date: 2023-06-12T09:41:30Z
 
@@ -11591,7 +11591,7 @@ id: PHIPO:0001298
 name: normal growth on arborcandin C
 namespace: single_species_phenotype
 def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to arborcandin C (i.e. indistinguishable from wild type)." []
-is_a: PHIPO:0001218 ! chemical phenotype
+is_a: PHIPO:0001308 ! normal growth on chemical
 created_by: alaynecuzick
 creation_date: 2023-06-21T11:35:28Z
 
@@ -11600,7 +11600,7 @@ id: PHIPO:0001299
 name: normal growth on pyrrolnitrin
 namespace: single_species_phenotype
 def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to pyrrolnitrin (i.e. indistinguishable from wild type)." []
-is_a: PHIPO:0001218 ! chemical phenotype
+is_a: PHIPO:0001308 ! normal growth on chemical
 created_by: alaynecuzick
 creation_date: 2023-06-27T13:33:13Z
 
@@ -11687,6 +11687,33 @@ xref: FYPO:0002811
 is_a: PHIPO:0001303 ! sensitive to osmotic stress
 created_by: alaynecuzick
 creation_date: 2023-06-30T13:00:44Z
+
+[Term]
+id: PHIPO:0001308
+name: normal growth on chemical
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to a specific chemical (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001218 ! chemical phenotype
+created_by: alaynecuzick
+creation_date: 2023-07-21T15:06:54Z
+
+[Term]
+id: PHIPO:0001309
+name: normal growth on benomyl
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to benomyl (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001308 ! normal growth on chemical
+created_by: alaynecuzick
+creation_date: 2023-07-21T15:13:15Z
+
+[Term]
+id: PHIPO:0001310
+name: normal growth on carbendazim
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to carbendazim (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001308 ! normal growth on chemical
+created_by: alaynecuzick
+creation_date: 2023-07-21T15:16:51Z
 
 [Typedef]
 id: PHIPO:0000304
