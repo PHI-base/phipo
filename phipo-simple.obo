@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2023-10-11/phipo-simple.owl
+data-version: phipo/releases/2023-10-17/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -11,7 +11,7 @@ property_value: creation:date "2018-07-09T13:43:00Z" xsd:string
 property_value: dc-description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: dc-title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: dcterms-license "https://creativecommons.org/licenses/by/3.0/" xsd:string
-property_value: owl:versionInfo "2023-10-11" xsd:string
+property_value: owl:versionInfo "2023-10-17" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -10663,7 +10663,7 @@ id: PHIPO:0001206
 name: normal filament morphology
 namespace: single_species_phenotype
 def: "A single species phenotype where the morphology of a cell is normal (i.e. indistinguishable from wild type)." []
-is_a: PHIPO:0001220 ! physical quality phenotype
+is_a: PHIPO:0001376 ! normal anatomical structure physical quality phenotype
 created_by: alaynecuzick
 creation_date: 2020-11-13T10:05:12Z
 
@@ -10841,7 +10841,7 @@ id: PHIPO:0001221
 name: abnormal anatomical structure physical quality phenotype
 namespace: single_species_phenotype
 def: "A physical anatomical structure phenotype in which the amount, distribution, morphology, or other physical characteristic of a cell part, cell, or tissue, or individual is abnormal in the vegetative growth phase of the life cycle." []
-is_a: PHIPO:0001220 ! physical quality phenotype
+is_a: PHIPO:0001373 ! anatomical structure physical quality phenotype
 created_by: alaynecuzick
 creation_date: 2020-12-14T11:24:41Z
 
@@ -12273,6 +12273,81 @@ def: "A growth phenotype which describes the absence of change of individuals or
 is_a: PHIPO:0001308 ! normal growth on chemical
 created_by: alaynecuzick
 creation_date: 2023-10-10T15:36:59Z
+
+[Term]
+id: PHIPO:0001373
+name: anatomical structure physical quality phenotype
+namespace: single_species_phenotype
+def: "A phenotype that affects any anatomical structure physical quality, such as morphology, number, location, etc." []
+is_a: PHIPO:0001220 ! physical quality phenotype
+created_by: alaynecuzick
+creation_date: 2023-10-17T11:46:05Z
+
+[Term]
+id: PHIPO:0001374
+name: increased number of resting structures
+namespace: single_species_phenotype
+def: "A single species phenotype where the frequency of occurrence of resting structures is increased." []
+synonym: "increased number of sclerotia" RELATED []
+is_a: PHIPO:0001221 ! abnormal anatomical structure physical quality phenotype
+created_by: alaynecuzick
+creation_date: 2023-10-17T12:48:52Z
+
+[Term]
+id: PHIPO:0001375
+name: decreased number of resting structures
+namespace: single_species_phenotype
+def: "A single species phenotype where the frequency of occurrence of resting structures is decreased." []
+synonym: "decreased number of sclerotia" RELATED []
+is_a: PHIPO:0001221 ! abnormal anatomical structure physical quality phenotype
+created_by: alaynecuzick
+creation_date: 2023-10-17T12:52:42Z
+
+[Term]
+id: PHIPO:0001376
+name: normal anatomical structure physical quality phenotype
+namespace: single_species_phenotype
+def: "A physical anatomical structure phenotype in which the amount, distribution, morphology, or other physical characteristic of a cell part, cell, or tissue, or individual is normal in the vegetative growth phase of the life cycle (i.e. indistinguishable from wild type.)" []
+is_a: PHIPO:0001373 ! anatomical structure physical quality phenotype
+created_by: alaynecuzick
+creation_date: 2023-10-17T13:00:17Z
+
+[Term]
+id: PHIPO:0001377
+name: normal number of resting structures
+namespace: single_species_phenotype
+def: "A single species phenotype where the number of resting structures is normal (i.e. indistinguishable from wild type)." []
+synonym: "normal number of sclerotia" RELATED []
+is_a: PHIPO:0001376 ! normal anatomical structure physical quality phenotype
+created_by: alaynecuzick
+creation_date: 2023-10-17T13:03:53Z
+
+[Term]
+id: PHIPO:0001378
+name: resistance to tacrolimus
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to tacrolimus. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
+is_a: PHIPO:0000022 ! increased resistance to chemical
+created_by: alaynecuzick
+creation_date: 2023-10-17T14:21:39Z
+
+[Term]
+id: PHIPO:0001379
+name: sensitive to tacrolimus
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to tacrolimus. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2023-10-17T14:21:39Z
+
+[Term]
+id: PHIPO:0001380
+name: normal growth on tacrolimus
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to tacrolimus (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001308 ! normal growth on chemical
+created_by: alaynecuzick
+creation_date: 2023-10-17T14:21:39Z
 
 [Typedef]
 id: PHIPO:0000304
