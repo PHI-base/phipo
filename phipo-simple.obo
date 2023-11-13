@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2023-10-17/phipo-simple.owl
+data-version: phipo/releases/2023-11-13/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -11,7 +11,7 @@ property_value: creation:date "2018-07-09T13:43:00Z" xsd:string
 property_value: dc-description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: dc-title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: dcterms-license "https://creativecommons.org/licenses/by/3.0/" xsd:string
-property_value: owl:versionInfo "2023-10-17" xsd:string
+property_value: owl:versionInfo "2023-11-13" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -12348,6 +12348,18 @@ def: "A growth phenotype which describes the absence of change of individuals or
 is_a: PHIPO:0001308 ! normal growth on chemical
 created_by: alaynecuzick
 creation_date: 2023-10-17T14:21:39Z
+
+[Term]
+id: PHIPO:0001381
+name: sensitive to iron
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to iron. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+synonym: "hypersensitive to iron" EXACT []
+synonym: "sensitive to iron ions" EXACT []
+xref: FYPO:0005825
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2023-11-13T15:10:47Z
 
 [Typedef]
 id: PHIPO:0000304
