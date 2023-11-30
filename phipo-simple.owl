@@ -12,13 +12,13 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/phipo/phipo-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2023-10-11/phipo-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2023-11-30/phipo-simple.owl"/>
         <obo:created_by>alaynecuzick</obo:created_by>
         <obo:creation_date>2018-07-09T13:43:00Z</obo:creation_date>
         <dc:description>Ontology of species-neutral phenotypes observed in pathogen-host interactions.</dc:description>
         <dc:title>Pathogen Host Interactions Phenotype Ontology</dc:title>
         <terms:license>https://creativecommons.org/licenses/by/3.0/</terms:license>
-        <owl:versionInfo>2023-10-11</owl:versionInfo>
+        <owl:versionInfo>2023-11-30</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -15580,7 +15580,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001206 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001206">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001220"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001376"/>
         <obo:IAO_0000115>A single species phenotype where the morphology of a cell is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-13T10:05:12Z</oboInOwl:creation_date>
@@ -15810,7 +15810,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <!-- http://purl.obolibrary.org/obo/PHIPO_0001221 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001221">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001220"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001373"/>
         <obo:IAO_0000115>A physical anatomical structure phenotype in which the amount, distribution, morphology, or other physical characteristic of a cell part, cell, or tissue, or individual is abnormal in the vegetative growth phase of the life cycle.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-14T11:24:41Z</oboInOwl:creation_date>
@@ -17878,6 +17878,216 @@ occurs to a lesser extent than normal.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <oboInOwl:id>PHIPO:0001372</oboInOwl:id>
         <rdfs:label>normal growth on pyrimorph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001373 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001373">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001220"/>
+        <obo:IAO_0000115>A phenotype that affects any anatomical structure physical quality, such as morphology, number, location, etc.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-17T11:46:05Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">anatomical structure physical quality phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001374 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001374">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001221"/>
+        <obo:IAO_0000115>A single species phenotype where the frequency of occurrence of resting structures is increased.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-17T12:48:52Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>increased number of sclerotia</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">increased number of resting structures</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001375 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001375">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001221"/>
+        <obo:IAO_0000115>A single species phenotype where the frequency of occurrence of resting structures is decreased.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-17T12:52:42Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>decreased number of sclerotia</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">decreased number of resting structures</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001376 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001376">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001373"/>
+        <obo:IAO_0000115>A physical anatomical structure phenotype in which the amount, distribution, morphology, or other physical characteristic of a cell part, cell, or tissue, or individual is normal in the vegetative growth phase of the life cycle (i.e. indistinguishable from wild type.)</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-17T13:00:17Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">normal anatomical structure physical quality phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001377 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001377">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001376"/>
+        <obo:IAO_0000115>A single species phenotype where the number of resting structures is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-17T13:03:53Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>normal number of sclerotia</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">normal number of resting structures</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001378 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001378">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000022"/>
+        <obo:IAO_0000115>A growth phenotype which describes the resistance of individuals or populations after exposure to tacrolimus. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-17T14:21:39Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PHIPO:0001378</oboInOwl:id>
+        <rdfs:label>resistance to tacrolimus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001379 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001379">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000021"/>
+        <obo:IAO_0000115>A growth phenotype which describes the sensitivity of individuals or populations after exposure to tacrolimus. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-17T14:21:39Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PHIPO:0001379</oboInOwl:id>
+        <rdfs:label>sensitive to tacrolimus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001380 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001380">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001308"/>
+        <obo:IAO_0000115>A growth phenotype which describes the absence of change of individuals or populations after exposure to tacrolimus (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-17T14:21:39Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PHIPO:0001380</oboInOwl:id>
+        <rdfs:label>normal growth on tacrolimus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001381 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001381">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000021"/>
+        <obo:IAO_0000115>A growth phenotype which describes the sensitivity of individuals or populations after exposure to iron. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-13T15:10:47Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>FYPO:0005825</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>hypersensitive to iron</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>sensitive to iron ions</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">sensitive to iron</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001382 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001382">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000022"/>
+        <obo:IAO_0000115>A growth phenotype which describes the resistance of individuals or populations after exposure to fenpiclonil. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-21T10:43:41Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PHIPO:0001382</oboInOwl:id>
+        <rdfs:label>resistance to fenpiclonil</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001383 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001383">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000021"/>
+        <obo:IAO_0000115>A growth phenotype which describes the sensitivity of individuals or populations after exposure to fenpiclonil. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-21T10:43:41Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PHIPO:0001383</oboInOwl:id>
+        <rdfs:label>sensitive to fenpiclonil</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001384 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001384">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001308"/>
+        <obo:IAO_0000115>A growth phenotype which describes the absence of change of individuals or populations after exposure to fenpiclonil (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-21T10:43:41Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PHIPO:0001384</oboInOwl:id>
+        <rdfs:label>normal growth on fenpiclonil</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001385 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001385">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000022"/>
+        <obo:IAO_0000115>A growth phenotype which describes the resistance of individuals or populations after exposure to phenamacril. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-21T12:08:01Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PHIPO:0001385</oboInOwl:id>
+        <rdfs:label>resistance to phenamacril</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001386 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001386">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000021"/>
+        <obo:IAO_0000115>A growth phenotype which describes the sensitivity of individuals or populations after exposure to phenamacril. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow.</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-21T12:08:01Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PHIPO:0001386</oboInOwl:id>
+        <rdfs:label>sensitive to phenamacril</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001387 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001387">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001308"/>
+        <obo:IAO_0000115>A growth phenotype which describes the absence of change of individuals or populations after exposure to phenamacril (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-11-21T12:08:01Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PHIPO:0001387</oboInOwl:id>
+        <rdfs:label>normal growth on phenamacril</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

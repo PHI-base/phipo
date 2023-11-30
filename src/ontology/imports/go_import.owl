@@ -7,9 +7,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/phipo/imports/go_import.owl>
-<http://purl.obolibrary.org/obo/phipo/releases/2023-10-11/imports/go_import.owl>
-Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/go/releases/2023-07-27/go.owl>)
-Annotation(owl:versionInfo "2023-10-11")
+<http://purl.obolibrary.org/obo/phipo/releases/2023-11-30/imports/go_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/go/releases/2023-11-15/go.owl>)
+Annotation(owl:versionInfo "2023-11-30")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0000003>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0000045>))
@@ -291,7 +291,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0140352>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0140657>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_1901360>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_1901362>))
-Declaration(Class(<http://purl.obolibrary.org/obo/GO_1901363>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_1901503>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_1901564>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_1901566>))
@@ -629,7 +628,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0003674> <http://purl.obolibrary.org/obo/go#goslim_pir>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0003674> <http://purl.obolibrary.org/obo/go#goslim_plant>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0003674> <http://purl.obolibrary.org/obo/go#goslim_yeast>)
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0003674> "Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0003674> "Note that, in addition to forming the root of the molecular function ontology, this term is recommended for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0003674> "molecular_function")
 
 # Class: <http://purl.obolibrary.org/obo/GO_0003676> (nucleic acid binding)
@@ -645,7 +644,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0003676> <http://purl.obolibrary.org/obo/go#goslim_plant>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0003676> "nucleic acid binding")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0003676> <http://purl.obolibrary.org/obo/GO_0097159>)
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0003676> <http://purl.obolibrary.org/obo/GO_1901363>)
 
 # Class: <http://purl.obolibrary.org/obo/GO_0003677> (DNA binding)
 
@@ -813,7 +811,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0005515> <http://purl.obolibrary.o
 
 # Class: <http://purl.obolibrary.org/obo/GO_0005575> (cellular_component)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:pdt") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NIF_Subcellular:sao1337158144") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0005575> "A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome).")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:pdt") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0005575> "A location, relative to cellular compartments and structures, occupied by a macromolecular machine. There are three types of  cellular components described in the gene ontology: (1) the cellular anatomical entity where a gene product carries out a molecular function (e.g., plasma membrane, cytoskeleton) or membrane-enclosed compartments (e.g., mitochondrion); (2) virion components, where viral proteins act, and (3) the stable macromolecular complexes of which gene product are parts (e.g., the clathrin complex).")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/GO_0005575> "https://github.com/geneontology/go-ontology/issues/17729"^^xsd:anyURI)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/GO_0005575> "GO:0008372")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0005575> "NIF_Subcellular:sao1337158144")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0005575> "cell or subcellular entity")
@@ -827,7 +826,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0005575> <http://purl.obolibrary.org/obo/go#goslim_pir>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0005575> <http://purl.obolibrary.org/obo/go#goslim_plant>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0005575> <http://purl.obolibrary.org/obo/go#goslim_yeast>)
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0005575> "Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0005575> "Note that, in addition to forming the root of the cellular component ontology, this term is recommended for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0005575> "cellular_component")
 
 # Class: <http://purl.obolibrary.org/obo/GO_0005622> (intracellular anatomical structure)
@@ -987,7 +986,9 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0005886> ObjectSomeValuesFrom(<htt
 # Class: <http://purl.obolibrary.org/obo/GO_0005938> (cell cortex)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0815316194") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0005938> "The region of a cell that lies just beneath the plasma membrane and often, but not always, contains a network of actin filaments and associated proteins.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/GO_0005938> "https://github.com/geneontology/go-ontology/issues/26298"^^xsd:anyURI)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0005938> "Wikipedia:Cell_cortex")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0005938> "ectoplasm")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0005938> "cellular_component")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0005938> "cell periphery")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0005938> "peripheral cytoplasm")
@@ -1257,7 +1258,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0006900> ObjectSomeValuesFrom(<htt
 
 # Class: <http://purl.obolibrary.org/obo/GO_0006914> (autophagy)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:autophagy") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0198547684") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:11099404") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:9412464") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0006914> "The cellular catabolic process in which cells digest parts of their own cytoplasm; allows for both recycling of macromolecular constituents under conditions of cellular stress and remodeling the intracellular structure for cell differentiation.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:autophagy") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0198547684") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:11099404") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:29455577") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:9412464") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0006914> "The cellular catabolic process in which cells digest cellular materials, such as organelles and other macromolecular constituents, or non-self materials such as intracellular pathogens. Autophagy serves to provide essential nutrients under conditions of cellular stress; or can remodel intracellular structures during cell differentiation.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/GO_0006914> "https://github.com/geneontology/go-ontology/issues/25541#issuecomment-1740659745"^^xsd:anyURI)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/GO_0006914> "GO:0016238")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0006914> "Wikipedia:Autophagy_(cellular)")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0006914> "biological_process")
@@ -1458,7 +1460,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0008150> <http://purl.obolibrary.org/obo/go#goslim_plant>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0008150> <http://purl.obolibrary.org/obo/go#goslim_pombe>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0008150> <http://purl.obolibrary.org/obo/go#goslim_yeast>)
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0008150> "Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0008150> "Note that, in addition to forming the root of the biological process ontology, this term is recommended for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0008150> "biological_process")
 
 # Class: <http://purl.obolibrary.org/obo/GO_0008152> (metabolic process)
@@ -2049,12 +2051,13 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0016192> <http://purl.obolibrary.o
 
 # Class: <http://purl.obolibrary.org/obo/GO_0016236> (macroautophagy)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:11099404") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:12914914") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:15798367") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:16973210") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:20159618") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:9412464") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0016236> "The major inducible pathway for the general turnover of cytoplasmic constituents in eukaryotic cells, it is also responsible for the degradation of active cytoplasmic enzymes and organelles during nutrient starvation. Macroautophagy involves the formation of double-membrane-bounded autophagosomes which enclose the cytoplasmic constituent targeted for degradation in a membrane-bounded structure. Autophagosomes then fuse with a lysosome (or vacuole) releasing single-membrane-bounded autophagic bodies that are then degraded within the lysosome (or vacuole). Some types of macroautophagy, e.g. pexophagy, mitophagy, involve selective targeting of the targets to be degraded.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:24366339") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0016236> "The autophagic process that proceeds via the formation of an autophagosome.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/GO_0016236> "https://github.com/geneontology/go-ontology/issues/26115"^^xsd:anyURI)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/GO_0016236> "GO:0034262")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <http://purl.obolibrary.org/obo/GO_0016236> "autophagy")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0016236> "selective autophagy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0016236> "biological_process")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0016236> "GO:0016236")
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0016236> "Targeted macroautophagy sometimes targets regions of cytoplasm containing non-self, such as virus particles or components (e.g. see PMID:20159618). As this is essentially the same process as macroautophagy that encloses and digests only self, the term autophagy is still used despite the enclosure of some non-self (non-auto) entities.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0016236> "macroautophagy")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0016236> <http://purl.obolibrary.org/obo/GO_0006914>)
 
@@ -2752,15 +2755,17 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0032940> "secr
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0032940> <http://purl.obolibrary.org/obo/GO_0046903>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0032940> <http://purl.obolibrary.org/obo/GO_0140352>)
 
-# Class: <http://purl.obolibrary.org/obo/GO_0032989> (cellular component morphogenesis)
+# Class: <http://purl.obolibrary.org/obo/GO_0032989> (cellular anatomical entity morphogenesis)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tb") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0032989> "The process in which cellular structures, including whole cells or cell parts, are generated and organized.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tb") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0032989> "The process in which a cellular entity is generated and organized. A cellular entity has granularity above the level of a protein complex but below that of an anatomical system.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/GO_0032989> "https://github.com/geneontology/go-ontology/issues/25496"^^xsd:anyURI)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/GO_0032989> "https://github.com/geneontology/go-ontology/issues/26249"^^xsd:anyURI)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0032989> "cellular component morphogenesis")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tb") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0032989> "cellular structure morphogenesis")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0032989> "biological_process")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0032989> "GO:0032989")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0032989> <http://purl.obolibrary.org/obo/go#goslim_pir>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0032989> "cellular component morphogenesis")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0032989> "cellular anatomical entity morphogenesis")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0032989> <http://purl.obolibrary.org/obo/GO_0009653>)
 
 # Class: <http://purl.obolibrary.org/obo/GO_0033036> (macromolecule localization)
@@ -3046,8 +3051,8 @@ AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#has
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/GO_0043228> "https://github.com/geneontology/go-ontology/issues/21881"^^xsd:anyURI)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/GO_0043228> "NIF_Subcellular:sao1456184038")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0043228> "non-membrane-enclosed organelle")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> <http://purl.obolibrary.org/obo/GO_0043228> "biological condensate")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0043228> "cellular_component")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/GO_0043228> "biological condensate")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0043228> "GO:0043228")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0043228> <http://purl.obolibrary.org/obo/go#goslim_mouse>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0043228> "non-membrane-bounded organelle")
@@ -3743,9 +3748,11 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0051179> <http://purl.obolibrary.o
 # Class: <http://purl.obolibrary.org/obo/GO_0051234> (establishment of localization)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:ai") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dos") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0051234> "Any process that localizes a substance or cellular component. This may occur via movement, tethering or selective degradation.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/GO_0051234> "https://github.com/geneontology/go-ontology/issues/24200"^^xsd:anyURI)
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0051234> "establishment of localisation")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0051234> "biological_process")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0051234> "GO:0051234")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0051234> <http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0051234> <http://purl.obolibrary.org/obo/go#goslim_agr>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0051234> <http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0051234> <http://purl.obolibrary.org/obo/go#goslim_mouse>)
@@ -4397,10 +4404,12 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0106259> <http://purl.obolibrary.o
 # Class: <http://purl.obolibrary.org/obo/GO_0110165> (cellular anatomical entity)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:kmv") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0110165> "A part of a cellular organism that is either an immaterial entity or a material entity with granularity above the level of a protein complex but below that of an anatomical system. Or, a substance produced by a cellular organism with granularity above the level of a protein complex.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/GO_0110165> "https://github.com/geneontology/go-ontology/issues/24200"^^xsd:anyURI)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/GO_0110165> "kmv")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/GO_0110165> "2019-08-12T18:01:37Z")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0110165> "cellular_component")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0110165> "GO:0110165")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0110165> <http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0110165> <http://purl.obolibrary.org/obo/go#goslim_pir>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0110165> "cellular anatomical entity")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_0110165> <http://purl.obolibrary.org/obo/GO_0005575>)
@@ -4472,7 +4481,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0140272> "GO:0140272")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0140272> "Note that as GO captures normal processes, it may be that exogenous proteins interactions are normal for one of the participating species but not the other. Therefore reciprocal annotations should not be made without confirming that it is physiological relevant.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0140272> "exogenous protein binding")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_0140272> <http://purl.obolibrary.org/obo/GO_0005488>)
+SubClassOf(<http://purl.obolibrary.org/obo/GO_0140272> <http://purl.obolibrary.org/obo/GO_0005515>)
 
 # Class: <http://purl.obolibrary.org/obo/GO_0140352> (export from cell)
 
@@ -4536,16 +4545,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_1901362> "organic cyclic compound biosynthetic process")
 SubClassOf(<http://purl.obolibrary.org/obo/GO_1901362> <http://purl.obolibrary.org/obo/GO_1901360>)
 SubClassOf(<http://purl.obolibrary.org/obo/GO_1901362> <http://purl.obolibrary.org/obo/GO_1901576>)
-
-# Class: <http://purl.obolibrary.org/obo/GO_1901363> (heterocyclic compound binding)
-
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:TermGenie") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_1901363> "Binding to heterocyclic compound.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/GO_1901363> "bf")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/GO_1901363> "2012-09-14T13:53:50Z")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_1901363> "molecular_function")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_1901363> "GO:1901363")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_1901363> "heterocyclic compound binding")
-SubClassOf(<http://purl.obolibrary.org/obo/GO_1901363> <http://purl.obolibrary.org/obo/GO_0005488>)
 
 # Class: <http://purl.obolibrary.org/obo/GO_1901503> (ether biosynthetic process)
 

@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2023-10-11/phipo-full.owl
+data-version: phipo/releases/2023-11-30/phipo-full.owl
 subsetdef: 1_STAR ""
 subsetdef: 2_STAR ""
 subsetdef: 3_STAR ""
@@ -52,7 +52,7 @@ property_value: creation:date "2018-07-09T13:43:00Z" xsd:string
 property_value: dc-description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: dc-title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: dcterms-license "https://creativecommons.org/licenses/by/3.0/" xsd:string
-property_value: owl:versionInfo "2023-10-11" xsd:string
+property_value: owl:versionInfo "2023-11-30" xsd:string
 
 [Term]
 id: BFO:0000001
@@ -10832,6 +10832,7 @@ synonym: "Dihexyl" RELATED [HMDB]
 synonym: "DODECANE" EXACT [PDBeChem]
 synonym: "Dodecane" EXACT [KEGG_COMPOUND]
 synonym: "dodecane" EXACT IUPAC_NAME [IUPAC]
+synonym: "dodecane" EXACT [UniProt]
 synonym: "Dodekan" RELATED [ChEBI]
 synonym: "n-Dodecane" RELATED [KEGG_COMPOUND]
 xref: Beilstein:1697175 {source="ChemIDplus"}
@@ -13033,6 +13034,7 @@ synonym: "nicotinate" EXACT [UniProt]
 synonym: "pyridine-3-carboxylate" EXACT IUPAC_NAME [IUPAC]
 xref: Beilstein:3539722 {source="Beilstein"}
 xref: Gmelin:327384 {source="Gmelin"}
+xref: KEGG:C00253
 xref: MetaCyc:NIACINE
 xref: PMID:17190852 {source="Europe PMC"}
 xref: PMID:21742010 {source="Europe PMC"}
@@ -15493,7 +15495,7 @@ xref: CAS:573-58-0 {source="KEGG COMPOUND"}
 xref: CAS:573-58-0 {source="ChemIDplus"}
 xref: Gmelin:135213 {source="Gmelin"}
 xref: KEGG:C14078
-is_a: CHEBI:37533 ! azo compound
+is_a: CHEBI:48960 ! bis(azo) compound
 relationship: has_functional_parent CHEBI:38217 ! 3,3'-(biphenyl-4,4'-diyldidiazene-2,1-diyl)bis(4-aminonaphthalene-1-sulfonic acid)
 relationship: has_part CHEBI:38216 ! 3,3'-(biphenyl-4,4'-diyldidiazene-2,1-diyl)bis(4-aminonaphthalene-1-sulfonate)
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
@@ -23482,6 +23484,16 @@ relationship: is_conjugate_acid_of CHEBI:64290 ! erythromycin cation
 relationship: RO:0000087 CHEBI:35703 ! has role xenobiotic
 relationship: RO:0000087 CHEBI:76969 ! has role bacterial metabolite
 relationship: RO:0000087 CHEBI:78298 ! has role environmental contaminant
+
+[Term]
+id: CHEBI:48960
+name: bis(azo) compound
+namespace: chebi_ontology
+def: "Any  azo compound containing two -N=N- groups." []
+subset: 3_STAR
+synonym: "bis(azo) compound" EXACT IUPAC_NAME [IUPAC]
+synonym: "bis(azo) compounds" RELATED [ChEBI]
+is_a: CHEBI:37533 ! azo compound
 
 [Term]
 id: CHEBI:48975
@@ -36072,6 +36084,7 @@ name: molecular_function
 namespace: molecular_function
 alt_id: GO:0005554
 def: "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs." [GOC:pdt]
+comment: Note that, in addition to forming the root of the molecular function ontology, this term is recommended for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.
 comment: Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.
 subset: goslim_candida
 subset: goslim_chembl
@@ -36096,7 +36109,6 @@ subset: goslim_pir
 subset: goslim_plant
 synonym: "base pairing" NARROW []
 is_a: GO:0097159 ! organic cyclic compound binding
-is_a: GO:1901363 ! heterocyclic compound binding
 
 [Term]
 id: GO:0003677
@@ -36284,6 +36296,8 @@ name: cellular_component
 namespace: cellular_component
 alt_id: GO:0008372
 def: "A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome)." [GOC:pdt, NIF_Subcellular:sao1337158144]
+def: "A location, relative to cellular compartments and structures, occupied by a macromolecular machine. There are three types of  cellular components described in the gene ontology: (1) the cellular anatomical entity where a gene product carries out a molecular function (e.g., plasma membrane, cytoskeleton) or membrane-enclosed compartments (e.g., mitochondrion); (2) virion components, where viral proteins act, and (3) the stable macromolecular complexes of which gene product are parts (e.g., the clathrin complex)." [GOC:pdt]
+comment: Note that, in addition to forming the root of the cellular component ontology, this term is recommended for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
 comment: Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
 subset: goslim_candida
 subset: goslim_chembl
@@ -36297,6 +36311,7 @@ synonym: "subcellular entity" RELATED [NIF_Subcellular:nlx_subcell_100315]
 xref: NIF_Subcellular:sao1337158144
 is_a: BFO:0000040 ! material entity
 disjoint_from: GO:0008150 ! biological_process
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/17729" xsd:anyURI
 
 [Term]
 id: GO:0005576
@@ -36477,12 +36492,14 @@ def: "The region of a cell that lies just beneath the plasma membrane and often,
 subset: goslim_candida
 subset: goslim_yeast
 synonym: "cell periphery" RELATED []
+synonym: "ectoplasm" NARROW []
 synonym: "peripheral cytoplasm" RELATED []
 xref: Wikipedia:Cell_cortex
 is_a: GO:0005737 ! cytoplasm
 intersection_of: GO:0005737 ! cytoplasm
 intersection_of: part_of GO:0071944 ! cell periphery
 relationship: part_of GO:0071944 ! cell periphery
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26298" xsd:anyURI
 
 [Term]
 id: GO:0006033
@@ -37043,7 +37060,7 @@ id: GO:0006914
 name: autophagy
 namespace: biological_process
 alt_id: GO:0016238
-def: "The cellular catabolic process in which cells digest parts of their own cytoplasm; allows for both recycling of macromolecular constituents under conditions of cellular stress and remodeling the intracellular structure for cell differentiation." [GOC:autophagy, ISBN:0198547684, PMID:11099404, PMID:9412464]
+def: "The cellular catabolic process in which cells digest cellular materials, such as organelles and other macromolecular constituents, or non-self materials such as intracellular pathogens. Autophagy serves to provide essential nutrients under conditions of cellular stress; or can remodel intracellular structures during cell differentiation." [GOC:autophagy, ISBN:0198547684, PMID:11099404, PMID:29455577, PMID:9412464]
 subset: goslim_chembl
 subset: goslim_drosophila
 subset: goslim_generic
@@ -37052,6 +37069,7 @@ subset: goslim_pombe
 xref: Wikipedia:Autophagy_(cellular)
 is_a: GO:0044248 ! cellular catabolic process
 is_a: GO:0061919 ! process utilizing autophagic mechanism
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/25541#issuecomment-1740659745" xsd:anyURI
 
 [Term]
 id: GO:0006950
@@ -37323,6 +37341,7 @@ alt_id: GO:0007582
 alt_id: GO:0044699
 def: "A biological process is the execution of a genetically-encoded biological module or program. It consists of all the steps required to achieve the specific biological objective of the module. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence." [GOC:pdt]
 def: "Any process specifically pertinent to the functioning of integrated living units: cells, tissues, organs, and organisms. A process is a collection of molecular events with a defined beginning and end." []
+comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
 comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
 subset: goslim_candida
 subset: goslim_chembl
@@ -38254,7 +38273,7 @@ is_a: GO:0022607 ! cellular component assembly
 is_a: GO:0048646 ! anatomical structure formation involved in morphogenesis
 intersection_of: GO:0022607 ! cellular component assembly
 intersection_of: part_of GO:0009653 ! anatomical structure morphogenesis
-relationship: part_of GO:0032989 ! cellular component morphogenesis
+relationship: part_of GO:0032989 ! cellular anatomical entity morphogenesis
 
 [Term]
 id: GO:0010948
@@ -38614,10 +38633,11 @@ id: GO:0016236
 name: macroautophagy
 namespace: biological_process
 alt_id: GO:0034262
-def: "The major inducible pathway for the general turnover of cytoplasmic constituents in eukaryotic cells, it is also responsible for the degradation of active cytoplasmic enzymes and organelles during nutrient starvation. Macroautophagy involves the formation of double-membrane-bounded autophagosomes which enclose the cytoplasmic constituent targeted for degradation in a membrane-bounded structure. Autophagosomes then fuse with a lysosome (or vacuole) releasing single-membrane-bounded autophagic bodies that are then degraded within the lysosome (or vacuole). Some types of macroautophagy, e.g. pexophagy, mitophagy, involve selective targeting of the targets to be degraded." [PMID:11099404, PMID:12914914, PMID:15798367, PMID:16973210, PMID:20159618, PMID:9412464]
-comment: Targeted macroautophagy sometimes targets regions of cytoplasm containing non-self, such as virus particles or components (e.g. see PMID:20159618). As this is essentially the same process as macroautophagy that encloses and digests only self, the term autophagy is still used despite the enclosure of some non-self (non-auto) entities.
+def: "The autophagic process that proceeds via the formation of an autophagosome." [PMID:24366339]
 synonym: "autophagy" BROAD []
+synonym: "selective autophagy" NARROW []
 is_a: GO:0006914 ! autophagy
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26115" xsd:anyURI
 
 [Term]
 id: GO:0016301
@@ -40210,13 +40230,15 @@ property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/
 
 [Term]
 id: GO:0032989
-name: cellular component morphogenesis
+name: cellular anatomical entity morphogenesis
 namespace: biological_process
-def: "The process in which cellular structures, including whole cells or cell parts, are generated and organized." [GOC:dph, GOC:mah, GOC:tb]
+def: "The process in which a cellular entity is generated and organized. A cellular entity has granularity above the level of a protein complex but below that of an anatomical system." [GOC:dph, GOC:mah, GOC:tb]
 subset: goslim_pir
+synonym: "cellular component morphogenesis" EXACT []
 synonym: "cellular structure morphogenesis" EXACT [GOC:dph, GOC:tb]
 is_a: GO:0009653 ! anatomical structure morphogenesis
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/25496" xsd:anyURI
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26249" xsd:anyURI
 
 [Term]
 id: GO:0032991
@@ -41057,7 +41079,7 @@ name: non-membrane-bounded organelle
 namespace: cellular_component
 def: "Organized structure of distinctive morphology and function, not bounded by a lipid bilayer membrane. Includes ribosomes, the cytoskeleton and chromosomes." [GOC:go_curators]
 subset: goslim_mouse
-synonym: "biological condensate" NARROW []
+synonym: "biological condensate" RELATED []
 synonym: "non-membrane-enclosed organelle" EXACT []
 xref: NIF_Subcellular:sao1456184038
 is_a: GO:0043226 ! organelle
@@ -43113,12 +43135,14 @@ id: GO:0051234
 name: establishment of localization
 namespace: biological_process
 def: "Any process that localizes a substance or cellular component. This may occur via movement, tethering or selective degradation." [GOC:ai, GOC:dos]
+subset: gocheck_do_not_annotate
 subset: goslim_agr
 subset: goslim_flybase_ribbon
 subset: goslim_mouse
 subset: goslim_pir
 synonym: "establishment of localisation" EXACT [GOC:mah]
 is_a: GO:0051179 ! localization
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/24200" xsd:anyURI
 
 [Term]
 id: GO:0051236
@@ -44919,8 +44943,10 @@ id: GO:0110165
 name: cellular anatomical entity
 namespace: cellular_component
 def: "A part of a cellular organism that is either an immaterial entity or a material entity with granularity above the level of a protein complex but below that of an anatomical system. Or, a substance produced by a cellular organism with granularity above the level of a protein complex." [GOC:kmv]
+subset: gocheck_do_not_annotate
 subset: goslim_pir
 is_a: GO:0005575 ! cellular_component
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/24200" xsd:anyURI
 created_by: kmv
 creation_date: 2019-08-12T18:01:37Z
 
@@ -45017,7 +45043,7 @@ name: exogenous protein binding
 namespace: molecular_function
 def: "Binding to a protein or protein complex from a different species, for example a pathogen molecule binding to a host protein." [PMID:28861068]
 comment: Note that as GO captures normal processes, it may be that exogenous proteins interactions are normal for one of the participating species but not the other. Therefore reciprocal annotations should not be made without confirming that it is physiological relevant.
-is_a: GO:0005488 ! binding
+is_a: GO:0005515 ! protein binding
 created_by: pg
 creation_date: 2018-10-01T10:03:21Z
 
@@ -45333,15 +45359,6 @@ intersection_of: has_primary_output CHEBI:33832 ! organic cyclic compound
 relationship: has_primary_output CHEBI:33832 ! organic cyclic compound
 created_by: bf
 creation_date: 2012-09-14T09:05:22Z
-
-[Term]
-id: GO:1901363
-name: heterocyclic compound binding
-namespace: molecular_function
-def: "Binding to heterocyclic compound." [GOC:TermGenie]
-is_a: GO:0005488 ! binding
-created_by: bf
-creation_date: 2012-09-14T13:53:50Z
 
 [Term]
 id: GO:1901503
@@ -58700,7 +58717,7 @@ id: PHIPO:0001206
 name: normal filament morphology
 namespace: single_species_phenotype
 def: "A single species phenotype where the morphology of a cell is normal (i.e. indistinguishable from wild type)." []
-is_a: PHIPO:0001220 ! physical quality phenotype
+is_a: PHIPO:0001376 ! normal anatomical structure physical quality phenotype
 created_by: alaynecuzick
 creation_date: 2020-11-13T10:05:12Z
 
@@ -58878,7 +58895,7 @@ id: PHIPO:0001221
 name: abnormal anatomical structure physical quality phenotype
 namespace: single_species_phenotype
 def: "A physical anatomical structure phenotype in which the amount, distribution, morphology, or other physical characteristic of a cell part, cell, or tissue, or individual is abnormal in the vegetative growth phase of the life cycle." []
-is_a: PHIPO:0001220 ! physical quality phenotype
+is_a: PHIPO:0001373 ! anatomical structure physical quality phenotype
 created_by: alaynecuzick
 creation_date: 2020-12-14T11:24:41Z
 
@@ -60310,6 +60327,147 @@ def: "A growth phenotype which describes the absence of change of individuals or
 is_a: PHIPO:0001308 ! normal growth on chemical
 created_by: alaynecuzick
 creation_date: 2023-10-10T15:36:59Z
+
+[Term]
+id: PHIPO:0001373
+name: anatomical structure physical quality phenotype
+namespace: single_species_phenotype
+def: "A phenotype that affects any anatomical structure physical quality, such as morphology, number, location, etc." []
+is_a: PHIPO:0001220 ! physical quality phenotype
+created_by: alaynecuzick
+creation_date: 2023-10-17T11:46:05Z
+
+[Term]
+id: PHIPO:0001374
+name: increased number of resting structures
+namespace: single_species_phenotype
+def: "A single species phenotype where the frequency of occurrence of resting structures is increased." []
+synonym: "increased number of sclerotia" RELATED []
+is_a: PHIPO:0001221 ! abnormal anatomical structure physical quality phenotype
+created_by: alaynecuzick
+creation_date: 2023-10-17T12:48:52Z
+
+[Term]
+id: PHIPO:0001375
+name: decreased number of resting structures
+namespace: single_species_phenotype
+def: "A single species phenotype where the frequency of occurrence of resting structures is decreased." []
+synonym: "decreased number of sclerotia" RELATED []
+is_a: PHIPO:0001221 ! abnormal anatomical structure physical quality phenotype
+created_by: alaynecuzick
+creation_date: 2023-10-17T12:52:42Z
+
+[Term]
+id: PHIPO:0001376
+name: normal anatomical structure physical quality phenotype
+namespace: single_species_phenotype
+def: "A physical anatomical structure phenotype in which the amount, distribution, morphology, or other physical characteristic of a cell part, cell, or tissue, or individual is normal in the vegetative growth phase of the life cycle (i.e. indistinguishable from wild type.)" []
+is_a: PHIPO:0001373 ! anatomical structure physical quality phenotype
+created_by: alaynecuzick
+creation_date: 2023-10-17T13:00:17Z
+
+[Term]
+id: PHIPO:0001377
+name: normal number of resting structures
+namespace: single_species_phenotype
+def: "A single species phenotype where the number of resting structures is normal (i.e. indistinguishable from wild type)." []
+synonym: "normal number of sclerotia" RELATED []
+is_a: PHIPO:0001376 ! normal anatomical structure physical quality phenotype
+created_by: alaynecuzick
+creation_date: 2023-10-17T13:03:53Z
+
+[Term]
+id: PHIPO:0001378
+name: resistance to tacrolimus
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to tacrolimus. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
+is_a: PHIPO:0000022 ! increased resistance to chemical
+created_by: alaynecuzick
+creation_date: 2023-10-17T14:21:39Z
+
+[Term]
+id: PHIPO:0001379
+name: sensitive to tacrolimus
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to tacrolimus. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2023-10-17T14:21:39Z
+
+[Term]
+id: PHIPO:0001380
+name: normal growth on tacrolimus
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to tacrolimus (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001308 ! normal growth on chemical
+created_by: alaynecuzick
+creation_date: 2023-10-17T14:21:39Z
+
+[Term]
+id: PHIPO:0001381
+name: sensitive to iron
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to iron. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+synonym: "hypersensitive to iron" EXACT []
+synonym: "sensitive to iron ions" EXACT []
+xref: FYPO:0005825
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2023-11-13T15:10:47Z
+
+[Term]
+id: PHIPO:0001382
+name: resistance to fenpiclonil
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to fenpiclonil. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
+is_a: PHIPO:0000022 ! increased resistance to chemical
+created_by: alaynecuzick
+creation_date: 2023-11-21T10:43:41Z
+
+[Term]
+id: PHIPO:0001383
+name: sensitive to fenpiclonil
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to fenpiclonil. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2023-11-21T10:43:41Z
+
+[Term]
+id: PHIPO:0001384
+name: normal growth on fenpiclonil
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to fenpiclonil (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001308 ! normal growth on chemical
+created_by: alaynecuzick
+creation_date: 2023-11-21T10:43:41Z
+
+[Term]
+id: PHIPO:0001385
+name: resistance to phenamacril
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to phenamacril. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
+is_a: PHIPO:0000022 ! increased resistance to chemical
+created_by: alaynecuzick
+creation_date: 2023-11-21T12:08:01Z
+
+[Term]
+id: PHIPO:0001386
+name: sensitive to phenamacril
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to phenamacril. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2023-11-21T12:08:01Z
+
+[Term]
+id: PHIPO:0001387
+name: normal growth on phenamacril
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to phenamacril (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001308 ! normal growth on chemical
+created_by: alaynecuzick
+creation_date: 2023-11-21T12:08:01Z
 
 [Term]
 id: PR:000000001
