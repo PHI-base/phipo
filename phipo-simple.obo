@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2023-11-30/phipo-simple.owl
+data-version: phipo/releases/2023-12-04/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -11,7 +11,7 @@ property_value: creation:date "2018-07-09T13:43:00Z" xsd:string
 property_value: dc-description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: dc-title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: dcterms-license "https://creativecommons.org/licenses/by/3.0/" xsd:string
-property_value: owl:versionInfo "2023-11-30" xsd:string
+property_value: owl:versionInfo "2023-12-04" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -12414,6 +12414,36 @@ def: "A growth phenotype which describes the absence of change of individuals or
 is_a: PHIPO:0001308 ! normal growth on chemical
 created_by: alaynecuzick
 creation_date: 2023-11-21T12:08:01Z
+
+[Term]
+id: PHIPO:0001388
+name: resistance to pyrisoxazole
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to pyrisoxazole. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
+synonym: "resistance to SYP-Z048" EXACT []
+is_a: PHIPO:0000022 ! increased resistance to chemical
+created_by: alaynecuzick
+creation_date: 2023-12-04T14:19:53Z
+
+[Term]
+id: PHIPO:0001389
+name: sensitive to pyrisoxazole
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to pyrisoxazole. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+synonym: "sensitive to SYP-Z048" EXACT []
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2023-12-04T14:19:53Z
+
+[Term]
+id: PHIPO:0001390
+name: normal growth on pyrisoxazole
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to pyrisoxazole (i.e. indistinguishable from wild type)." []
+synonym: "normal growth on SYP-Z048" EXACT []
+is_a: PHIPO:0001308 ! normal growth on chemical
+created_by: alaynecuzick
+creation_date: 2023-12-04T14:19:53Z
 
 [Typedef]
 id: PHIPO:0000304
