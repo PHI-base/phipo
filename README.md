@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/PHI-base/phipo.svg?branch=master)](https://travis-ci.org/PHI-base/phipo)
-[![DOI](https://zenodo.org/badge/13996/PHI-base/phipo.svg)](https://zenodo.org/badge/latestdoi/13996/PHI-base/phipo)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10229930.svg)](https://doi.org/10.5281/zenodo.10229930)
 
 # Pathogen-Host Interaction Phenotype Ontology
 
