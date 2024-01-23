@@ -34,7 +34,6 @@ Annotation(dc:description "Ontology of species-neutral phenotypes observed in pa
 Annotation(dc:title "Pathogen Host Interactions Phenotype Ontology")
 Annotation(terms:license "https://creativecommons.org/licenses/by/3.0/")
 
-Declaration(Class(obo:PHIPO_0000000))
 Declaration(Class(obo:PHIPO_0000001))
 Declaration(Class(obo:PHIPO_0000002))
 Declaration(Class(obo:PHIPO_0000003))
@@ -1308,6 +1307,7 @@ Declaration(Class(obo:PHIPO_0001393))
 Declaration(Class(obo:PHIPO_0001394))
 Declaration(Class(obo:PHIPO_0001395))
 Declaration(Class(obo:PHIPO_0001396))
+Declaration(Class(obo:PHIPO_0001397))
 Declaration(ObjectProperty(obo:PHIPO_0000304))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:created_by))
@@ -1346,15 +1346,6 @@ AnnotationAssertion(rdfs:label obo:PHIPO_0000304 "qualifier"@en)
 ############################
 #   Classes
 ############################
-
-# Class: obo:PHIPO_0000000 (sensitive to cell wall stress)
-
-AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0000000 "A growth phenotype which describes the sensitivity of individuals or populations after exposure to a cell wall stress. Typically, individuals or populations are deemed sensitive to a stress if they grow when exposed to the stress at an intensity at which an individual or population of wild type cell(s) stop growing (and may die).")
-AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0000000 "alaynecuzick")
-AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0000000 "2024-01-23T11:47:46Z"^^xsd:dateTime)
-AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0000000 "single_species_phenotype")
-AnnotationAssertion(rdfs:label obo:PHIPO_0000000 "sensitive to cell wall stress"@en)
-SubClassOf(obo:PHIPO_0000000 obo:PHIPO_0001098)
 
 # Class: obo:PHIPO_0000001 (pathogen host interaction phenotype)
 
@@ -10239,7 +10230,7 @@ AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001021 "2019-08-17T13:36:0
 AnnotationAssertion(oboInOwl:hasDbXref obo:PHIPO_0001021 "FYPO:0005984")
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001021 "single_species_phenotype")
 AnnotationAssertion(rdfs:label obo:PHIPO_0001021 "sensitive to congo red"@en)
-SubClassOf(obo:PHIPO_0001021 obo:PHIPO_0000000)
+SubClassOf(obo:PHIPO_0001021 obo:PHIPO_0001397)
 SubClassOf(obo:PHIPO_0001021 obo:PHIPO_0000021)
 
 # Class: obo:PHIPO_0001022 (altered cellular cAMP level)
@@ -13873,6 +13864,15 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001396 "single_species_p
 AnnotationAssertion(oboInOwl:id obo:PHIPO_0001396 "PHIPO:0001396")
 AnnotationAssertion(rdfs:label obo:PHIPO_0001396 "normal growth on trifloxystrobin")
 SubClassOf(obo:PHIPO_0001396 obo:PHIPO_0001308)
+
+# Class: obo:PHIPO_0001397 (sensitive to cell wall stress)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001397 "A growth phenotype which describes the sensitivity of individuals or populations after exposure to a cell wall stress. Typically, individuals or populations are deemed sensitive to a stress if they grow when exposed to the stress at an intensity at which an individual or population of wild type cell(s) stop growing (and may die).")
+AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001397 "alaynecuzick")
+AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001397 "2024-01-23T11:47:46Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001397 "single_species_phenotype")
+AnnotationAssertion(rdfs:label obo:PHIPO_0001397 "sensitive to cell wall stress"@en)
+SubClassOf(obo:PHIPO_0001397 obo:PHIPO_0001098)
 
 
 )
