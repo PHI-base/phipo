@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2023-11-30
+data-version: releases/2024-01-31
 subsetdef: 1_STAR ""
 subsetdef: 2_STAR ""
 subsetdef: 3_STAR ""
@@ -23,6 +23,7 @@ subsetdef: goslim_mouse ""
 subsetdef: goslim_pir ""
 subsetdef: goslim_plant ""
 subsetdef: goslim_pombe ""
+subsetdef: goslim_prokaryote ""
 subsetdef: goslim_yeast ""
 subsetdef: hpo_slim ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
@@ -52,7 +53,7 @@ property_value: creation:date "2018-07-09T13:43:00Z" xsd:string
 property_value: dc-description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: dc-title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: dcterms-license "https://creativecommons.org/licenses/by/3.0/" xsd:string
-property_value: owl:versionInfo "2023-11-30" xsd:string
+property_value: owl:versionInfo "2024-01-31" xsd:string
 
 [Term]
 id: BFO:0000001
@@ -4878,7 +4879,6 @@ alt_id: CHEBI:13368
 alt_id: CHEBI:37140
 alt_id: CHEBI:5599
 subset: 3_STAR
-synonym: "HX" RELATED [UniProt]
 synonym: "hydrogen halide" EXACT [IUPAC]
 synonym: "hydrogen halides" EXACT IUPAC_NAME [IUPAC]
 synonym: "hydrogen halides" RELATED [ChEBI]
@@ -4888,7 +4888,7 @@ property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "HX" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/mass "1.008" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/monoisotopicmass "1.00783" xsd:string
-property_value: http://purl.obolibrary.org/obo/chebi/smiles "[F,Cl,Br,I]" xsd:string
+property_value: http://purl.obolibrary.org/obo/chebi/smiles "*[H]" xsd:string
 
 [Term]
 id: CHEBI:18154
@@ -9965,6 +9965,7 @@ def: "A member of the class of benzimidazoles that is benzimidazole in which the
 subset: 3_STAR
 synonym: "1H-benzimidazol-2-amine" EXACT IUPAC_NAME [IUPAC]
 synonym: "2-Aminobenzimidazole" EXACT [KEGG_COMPOUND]
+synonym: "2-aminobenzimidazole" EXACT [UniProt]
 synonym: "2-Iminobenzimidazoline" RELATED [ChemIDplus]
 synonym: "Benzimidazol-2-ylamine" RELATED [ChemIDplus]
 xref: Beilstein:116525 {source="Beilstein"}
@@ -15214,6 +15215,7 @@ synonym: "2-(methoxycarbonylamino)benzimidazole" RELATED [ChEBI]
 synonym: "2-benzimidazolecarbamic acid methyl ester" RELATED [ChEBI]
 synonym: "BMC" RELATED [ChEBI]
 synonym: "Carbendazim" EXACT [KEGG_COMPOUND]
+synonym: "carbendazim" EXACT [UniProt]
 synonym: "carbendazime" RELATED [ChemIDplus]
 synonym: "MBC" RELATED [ChEBI]
 synonym: "Mecarzole" RELATED [KEGG_COMPOUND]
@@ -33979,8 +33981,7 @@ synonym: "canonical amino acid" RELATED [ChEBI]
 synonym: "canonical amino acids" RELATED [ChEBI]
 synonym: "proteinogenic amino acids" RELATED [ChEBI]
 xref: Wikipedia:Proteinogenic_amino_acid
-is_a: CHEBI:33575 ! carboxylic acid
-is_a: CHEBI:35352 ! organonitrogen compound
+is_a: CHEBI:33709 ! amino acid
 
 [Term]
 id: CHEBI:83820
@@ -35188,9 +35189,11 @@ property_value: http://purl.obolibrary.org/obo/chebi/smiles "[Na+].CCCCCCCCCCCCO
 id: CHEBI:90710
 name: receptor modulator
 namespace: chebi_ontology
+alt_id: CHEBI:189678
 def: "A drug that acts as an antagonist, agonist, reverse agonist, or in some other fashion when interacting with cellular receptors." []
 subset: 3_STAR
 synonym: "receptor modulators" RELATED [ChEBI]
+xref: Wikipedia:Receptor_modulator
 is_a: CHEBI:23888 ! drug
 
 [Term]
@@ -36124,8 +36127,8 @@ subset: goslim_flybase_ribbon
 subset: goslim_generic
 subset: goslim_mouse
 subset: goslim_plant
+subset: goslim_prokaryote
 subset: goslim_yeast
-subset: prokaryote_subset
 synonym: "microtubule/chromatin interaction" RELATED []
 synonym: "plasmid binding" NARROW []
 synonym: "structure specific DNA binding" RELATED []
@@ -36147,8 +36150,8 @@ subset: goslim_flybase_ribbon
 subset: goslim_generic
 subset: goslim_mouse
 subset: goslim_plant
+subset: goslim_prokaryote
 subset: goslim_yeast
-subset: prokaryote_subset
 synonym: "base pairing with RNA" NARROW []
 synonym: "poly(A) RNA binding" RELATED []
 synonym: "poly(A)-RNA binding" RELATED []
@@ -36231,6 +36234,7 @@ subset: goslim_metagenomics
 subset: goslim_mouse
 subset: goslim_pir
 subset: goslim_plant
+subset: goslim_prokaryote
 subset: prokaryote_subset
 synonym: "carrier" RELATED []
 xref: Reactome:R-HSA-168313 "Virion-associated M2 protein mediated ion infusion"
@@ -36296,7 +36300,7 @@ name: cellular_component
 namespace: cellular_component
 alt_id: GO:0008372
 def: "A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome)." [GOC:pdt, NIF_Subcellular:sao1337158144]
-def: "A location, relative to cellular compartments and structures, occupied by a macromolecular machine. There are three types of  cellular components described in the gene ontology: (1) the cellular anatomical entity where a gene product carries out a molecular function (e.g., plasma membrane, cytoskeleton) or membrane-enclosed compartments (e.g., mitochondrion); (2) virion components, where viral proteins act, and (3) the stable macromolecular complexes of which gene product are parts (e.g., the clathrin complex)." [GOC:pdt]
+def: "A location, relative to cellular compartments and structures, occupied by a macromolecular machine. There are three types of cellular components described in the gene ontology: (1) the cellular anatomical entity where a gene product carries out a molecular function (e.g., plasma membrane, cytoskeleton) or membrane-enclosed compartments (e.g., mitochondrion); (2) virion components, where viral proteins act, and (3) the stable macromolecular complexes of which gene product are parts (e.g., the clathrin complex)." [GOC:pdt]
 comment: Note that, in addition to forming the root of the cellular component ontology, this term is recommended for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
 comment: Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
 subset: goslim_candida
@@ -36402,6 +36406,7 @@ subset: goslim_chembl
 subset: goslim_metagenomics
 subset: goslim_pir
 subset: goslim_plant
+subset: goslim_prokaryote
 subset: goslim_yeast
 subset: prokaryote_subset
 xref: Wikipedia:Cytoplasm
@@ -36467,6 +36472,7 @@ subset: goslim_generic
 subset: goslim_metagenomics
 subset: goslim_mouse
 subset: goslim_plant
+subset: goslim_prokaryote
 subset: goslim_yeast
 subset: prokaryote_subset
 synonym: "bacterial inner membrane" NARROW []
@@ -36745,6 +36751,7 @@ subset: goslim_drosophila
 subset: goslim_generic
 subset: goslim_pir
 subset: goslim_pombe
+subset: goslim_prokaryote
 subset: goslim_yeast
 subset: prokaryote_subset
 synonym: "amino acid and derivative metabolism" RELATED []
@@ -36779,7 +36786,7 @@ namespace: biological_process
 def: "The chemical reactions and pathways involving lysine, 2,6-diaminohexanoic acid." [GOC:go_curators]
 synonym: "lysine metabolism" EXACT []
 xref: Wikipedia:Lysine
-is_a: GO:0009066 ! aspartate family amino acid metabolic process
+is_a: GO:1901605 ! alpha-amino acid metabolic process
 
 [Term]
 id: GO:0006629
@@ -36796,6 +36803,7 @@ subset: goslim_mouse
 subset: goslim_pir
 subset: goslim_plant
 subset: goslim_pombe
+subset: goslim_prokaryote
 subset: goslim_yeast
 subset: prokaryote_subset
 synonym: "lipid metabolism" EXACT []
@@ -36878,6 +36886,7 @@ id: GO:0006807
 name: nitrogen compound metabolic process
 namespace: biological_process
 def: "The chemical reactions and pathways involving organic or inorganic compounds that contain nitrogen." [GOC:jl, ISBN:0198506732]
+subset: gocheck_do_not_annotate
 subset: goslim_metagenomics
 subset: goslim_pir
 synonym: "nitrogen compound metabolism" EXACT []
@@ -36885,6 +36894,7 @@ is_a: GO:0008152 ! metabolic process
 intersection_of: GO:0008152 ! metabolic process
 intersection_of: has_primary_input_or_output CHEBI:51143 ! nitrogen molecular entity
 relationship: has_primary_input_or_output CHEBI:51143 ! nitrogen molecular entity
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26424" xsd:anyURI
 
 [Term]
 id: GO:0006810
@@ -36901,6 +36911,7 @@ subset: goslim_chembl
 subset: goslim_metagenomics
 subset: goslim_pir
 subset: goslim_plant
+subset: goslim_prokaryote
 subset: prokaryote_subset
 synonym: "single-organism transport" RELATED []
 is_a: GO:0051234 ! establishment of localization
@@ -36974,6 +36985,7 @@ namespace: biological_process
 alt_id: GO:0032779
 def: "The directed movement of proteins in a cell, including the movement of proteins between specific compartments or structures within a cell, such as organelles of a eukaryotic cell." [GOC:mah]
 subset: goslim_generic
+subset: goslim_prokaryote
 subset: prokaryote_subset
 synonym: "copper-induced intracellular protein transport" RELATED [GOC:al]
 is_a: GO:0015031 ! protein transport
@@ -37391,7 +37403,7 @@ id: GO:0008219
 name: cell death
 namespace: biological_process
 def: "Any biological process that results in permanent cessation of all vital functions of a cell. A cell should be considered dead when any one of the following molecular or morphological criteria is met: (1) the cell has lost the integrity of its plasma membrane; (2) the cell, including its nucleus, has undergone complete fragmentation into discrete bodies (frequently referred to as apoptotic bodies). The cell corpse (or its fragments) may be engulfed by an adjacent cell in vivo, but engulfment of whole cells should not be considered a strict criteria to define cell death as, under some circumstances, live engulfed cells can be released from phagosomes (see PMID:18045538)." [GOC:mah, GOC:mtg_apoptosis, PMID:25236395]
-comment: This term should not be used for direct annotation, it is currently kept in GO as a placeholder for describing cell death phenotypes in uPHENO.  When information is provided on a programmed cell death mechanism, annotations should be made to the appropriate descendant of 'cell death' (such as, but not limited to, GO:0097300 'programmed necrotic cell death' or GO:0006915 'apoptotic process'). Unintentional cell death, i.e. cell death caused by injury, ageing, or cell phenotypes observed as a result of a pathological mutation in an essential gene should NOT be annotated using GO terms.
+comment: This term should not be used for direct annotation, it is currently kept in GO as a placeholder for describing cell death phenotypes in uPHENO. When information is provided on a programmed cell death mechanism, annotations should be made to the appropriate descendant of 'cell death' (such as, but not limited to, GO:0097300 'programmed necrotic cell death' or GO:0006915 'apoptotic process'). Unintentional cell death, i.e. cell death caused by injury, ageing, or cell phenotypes observed as a result of a pathological mutation in an essential gene should NOT be annotated using GO terms.
 subset: gocheck_do_not_annotate
 synonym: "accidental cell death" RELATED []
 synonym: "necrosis" RELATED []
@@ -37660,7 +37672,8 @@ name: aspartate family amino acid metabolic process
 namespace: biological_process
 def: "The chemical reactions and pathways involving amino acids of the aspartate family, comprising asparagine, aspartate, lysine, methionine and threonine." [GOC:ai]
 synonym: "aspartate family amino acid metabolism" EXACT []
-is_a: GO:1901605 ! alpha-amino acid metabolic process
+is_a: GO:0170033 ! L-amino acid metabolic process
+is_a: GO:0170039 ! proteinogenic amino acid metabolic process
 
 [Term]
 id: GO:0009067
@@ -37672,7 +37685,8 @@ synonym: "aspartate family amino acid biosynthesis" EXACT []
 synonym: "aspartate family amino acid formation" EXACT []
 synonym: "aspartate family amino acid synthesis" EXACT []
 is_a: GO:0009066 ! aspartate family amino acid metabolic process
-is_a: GO:1901607 ! alpha-amino acid biosynthetic process
+is_a: GO:0170034 ! L-amino acid biosynthetic process
+is_a: GO:0170038 ! proteinogenic amino acid biosynthetic process
 
 [Term]
 id: GO:0009085
@@ -37820,7 +37834,7 @@ synonym: "HR" BROAD []
 synonym: "HR-PCD" EXACT []
 synonym: "plant hypersensitive response" EXACT []
 is_a: GO:0033554 ! cellular response to stress
-is_a: GO:0034050 ! programmed cell death induced by symbiont
+is_a: GO:0034050 ! symbiont-induced defense-related programmed cell death
 is_a: GO:0045087 ! innate immune response
 
 [Term]
@@ -38313,7 +38327,7 @@ subset: goslim_drosophila
 subset: goslim_generic
 subset: goslim_mouse
 subset: goslim_plant
-subset: prokaryote_subset
+subset: goslim_prokaryote
 synonym: "caspase-independent apoptosis" RELATED []
 synonym: "caspase-independent cell death" NARROW []
 synonym: "non-apoptotic programmed cell death" NARROW []
@@ -38686,6 +38700,7 @@ subset: goslim_metagenomics
 subset: goslim_mouse
 subset: goslim_pir
 subset: goslim_plant
+subset: goslim_prokaryote
 subset: goslim_yeast
 subset: prokaryote_subset
 xref: EC:2.-.-.-
@@ -38745,8 +38760,8 @@ subset: goslim_metagenomics
 subset: goslim_mouse
 subset: goslim_pir
 subset: goslim_plant
+subset: goslim_prokaryote
 subset: goslim_yeast
-subset: prokaryote_subset
 xref: EC:3.-.-.-
 xref: Reactome:R-HSA-1236938 "Partial proteolysis of antigen in phagolysosomes"
 xref: Reactome:R-HSA-2029475 "Production of AA by iPLA2 upon FCGR activation"
@@ -38806,8 +38821,8 @@ subset: goslim_generic
 subset: goslim_metagenomics
 subset: goslim_mouse
 subset: goslim_pir
+subset: goslim_prokaryote
 subset: goslim_yeast
-subset: prokaryote_subset
 synonym: "synthetase activity" EXACT [GOC:jh2]
 xref: EC:6.-.-.-
 is_a: GO:0003824 ! catalytic activity
@@ -40454,14 +40469,14 @@ relationship: positively_regulates GO:0016301 ! kinase activity
 
 [Term]
 id: GO:0034050
-name: programmed cell death induced by symbiont
+name: symbiont-induced defense-related programmed cell death
 namespace: biological_process
 def: "Cell death resulting from activation of endogenous cellular processes after interaction with a symbiont (defined as the smaller of two, or more, organisms engaged in symbiosis, a close interaction encompassing mutualism through parasitism). This can be triggered by direct interaction with the organism, for example, contact with penetrating hyphae of a fungus; or an indirect interaction such as symbiont-secreted molecules." [GOC:pamgo_curators]
-comment: Note that this term is to be used to annotate gene products in the host, not the symbiont. To annotate gene products in the symbiont that induce programmed cell death in the host, consider the biological process term 'positive regulation by symbiont of host programmed cell death ; GO:0052042'.
-synonym: "'host programmed cell death induced by symbiont'" EXACT []
+comment: Note that this term is to be used to annotate gene products in the host, not the symbiont. To annotate gene products in the symbiont that induce programmed cell death in the host, consider the biological process term 'symbiont-mediated activation of host programmed cell death' ; GO:0052042'.
+synonym: "host programmed cell death induced by symbiont" EXACT []
+synonym: "programmed cell death induced by symbiont" EXACT []
 is_a: GO:0012501 ! programmed cell death
-is_a: GO:0051702 ! biological process involved in interaction with symbiont
-is_a: GO:0098542 ! defense response to other organism
+is_a: GO:0140546 ! defense response to symbiont
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/20255" xsd:anyURI
 
 [Term]
@@ -40692,7 +40707,7 @@ subset: goslim_candida
 subset: goslim_chembl
 subset: goslim_pir
 subset: goslim_plant
-subset: prokaryote_subset
+subset: goslim_prokaryote
 synonym: "cellular protein modification process" EXACT []
 synonym: "process resulting in protein modification" EXACT []
 synonym: "protein modification" EXACT [GOC:bf]
@@ -41015,6 +41030,7 @@ alt_id: GO:0034960
 alt_id: GO:0043283
 alt_id: GO:0044259
 def: "The chemical reactions and pathways involving macromolecules, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass." [GOC:mah]
+subset: gocheck_do_not_annotate
 subset: goslim_pir
 synonym: "biopolymer metabolic process" EXACT [GOC:mtg_chebi_dec09]
 synonym: "macromolecule metabolism" EXACT []
@@ -41024,6 +41040,7 @@ is_a: GO:0071704 ! organic substance metabolic process
 intersection_of: GO:0008152 ! metabolic process
 intersection_of: has_primary_input_or_output CHEBI:33694 ! biomacromolecule
 relationship: has_primary_input_or_output CHEBI:33694 ! biomacromolecule
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26424" xsd:anyURI
 
 [Term]
 id: GO:0043171
@@ -41056,6 +41073,7 @@ def: "Organized structure of distinctive morphology and function. Includes the n
 subset: goslim_chembl
 subset: goslim_generic
 subset: goslim_pir
+subset: goslim_prokaryote
 subset: prokaryote_subset
 xref: NIF_Subcellular:sao1539965131
 xref: Wikipedia:Organelle
@@ -41364,27 +41382,12 @@ is_a: GO:0030435 ! sporulation resulting in formation of a cellular spore
 is_a: GO:0030436 ! asexual sporulation
 
 [Term]
-id: GO:0044000
-name: movement in host
-namespace: biological_process
-alt_id: GO:0052126
-def: "The process in which an organism or its progeny spreads from one location to another within its host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:cc]
-synonym: "movement in host environment" RELATED []
-synonym: "movement of symbiont in host" EXACT []
-synonym: "movement of symbiont within host" EXACT []
-synonym: "movement within host" EXACT []
-synonym: "symbiont movement in host" EXACT []
-synonym: "symbiont movement within host" RELATED []
-is_a: GO:0051701 ! biological process involved in interaction with host
-property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/23085" xsd:anyURI
-
-[Term]
 id: GO:0044001
 name: migration in host
 namespace: biological_process
 def: "The directional movement of an organism from one place to another within its host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." [GOC:cc]
 synonym: "migration within host" EXACT []
-is_a: GO:0044000 ! movement in host
+is_a: GO:0051701 ! biological process involved in interaction with host
 
 [Term]
 id: GO:0044085
@@ -41539,9 +41542,11 @@ id: GO:0044238
 name: primary metabolic process
 namespace: biological_process
 def: "The chemical reactions and pathways involving those compounds which are formed as a part of the normal anabolic and catabolic processes. These processes take place in most, if not all, cells of the organism." [GOC:go_curators, http://www.metacyc.org]
+subset: gocheck_do_not_annotate
 subset: goslim_pir
 synonym: "primary metabolism" EXACT []
 is_a: GO:0008152 ! metabolic process
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26424" xsd:anyURI
 
 [Term]
 id: GO:0044248
@@ -41631,6 +41636,7 @@ name: small molecule biosynthetic process
 namespace: biological_process
 def: "The chemical reactions and pathways resulting in the formation of small molecules, any low molecular weight, monomeric, non-encoded molecule." [GOC:curators, GOC:pde, GOC:vw]
 comment: Small molecules in GO include monosaccharides but exclude disaccharides and polysaccharides.
+subset: goslim_prokaryote
 subset: prokaryote_subset
 synonym: "small molecule biosynthesis" EXACT []
 is_a: GO:0009058 ! biosynthetic process
@@ -41669,6 +41675,7 @@ property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
 [Term]
 id: GO:0044409
 name: entry into host
+name: symbiont entry into host
 namespace: biological_process
 alt_id: GO:0030260
 alt_id: GO:0044411
@@ -41682,7 +41689,7 @@ def: "Entry of a symbiont into the body, tissues, or cells of a host organism as
 def: "Penetration by an organism into the body, tissues, or cells of the host organism. The host is defined as the larger of the organisms involved in a symbiotic interaction." []
 synonym: "entry into cell of other organism during symbiotic interaction" NARROW [GOC:tb]
 synonym: "entry into cell of other organism involved in symbiotic interaction" RELATED []
-synonym: "entry into host cell" NARROW []
+synonym: "entry into host" EXACT []
 synonym: "entry into host cell via penetration peg" NARROW []
 synonym: "entry into host through host barriers" RELATED []
 synonym: "entry into host via a specialized structure during symbiotic interaction" NARROW []
@@ -41690,7 +41697,6 @@ synonym: "entry into host via enzymatic degradation of host anatomical structure
 synonym: "entry into host via enzymatic degradation of host cuticle" NARROW []
 synonym: "entry into other organism during symbiotic interaction" RELATED [GOC:tb]
 synonym: "entry into other organism involved in symbiotic interaction" RELATED []
-synonym: "host cell invasion" NARROW []
 synonym: "host invasion" EXACT []
 synonym: "host penetration" EXACT [GOC:vw]
 synonym: "invasion into host" EXACT []
@@ -41698,12 +41704,11 @@ synonym: "invasion into other organism" RELATED []
 synonym: "invasion of host" EXACT []
 synonym: "invasion of other organism" RELATED []
 synonym: "invasive growth" RELATED []
-synonym: "other organism cell invasion" NARROW []
 synonym: "other organism invasion" RELATED []
 synonym: "penetration into host" EXACT [GOC:vw]
 synonym: "penetration into host via a specialized structure" NARROW [GOC:vw]
 synonym: "penetration into host via a specialized structure during symbiotic interaction" NARROW [GOC:vw]
-is_a: GO:0044000 ! movement in host
+is_a: GO:0051701 ! biological process involved in interaction with host
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/18563" xsd:anyURI
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
 
@@ -41738,7 +41743,7 @@ id: GO:0044550
 name: secondary metabolite biosynthetic process
 namespace: biological_process
 def: "The chemical reactions and pathways resulting in the formation of secondary metabolites, the compounds that are not necessarily required for growth and maintenance of cells, and are often unique to a taxon." [GOC:jl]
-subset: prokaryote_subset
+subset: goslim_prokaryote
 synonym: "secondary metabolite biosynthesis" EXACT []
 is_a: GO:0009058 ! biosynthetic process
 is_a: GO:0019748 ! secondary metabolic process
@@ -41796,7 +41801,7 @@ synonym: "innate immunity" EXACT [GOC:pg]
 synonym: "nonspecific immune response" EXACT []
 xref: Wikipedia:Innate_immune_system
 is_a: GO:0006955 ! immune response
-is_a: GO:0098542 ! defense response to other organism
+is_a: GO:0140546 ! defense response to symbiont
 property_value: RO:0002161 NCBITaxon_Union:0000023
 
 [Term]
@@ -42622,11 +42627,13 @@ id: GO:0048856
 name: anatomical structure development
 namespace: biological_process
 def: "The biological process whose specific outcome is the progression of an anatomical structure from an initial condition to its mature state. This process begins with the formation of the structure and ends with the mature structure, whatever form that may be including its natural destruction. An anatomical structure is any biological entity that occupies space and is distinguished from its surroundings. Anatomical structures can be macroscopic such as a carpel, or microscopic such as an acrosome." [GO_REF:0000021]
+subset: gocheck_do_not_annotate
 subset: goslim_chembl
 subset: goslim_generic
 subset: goslim_plant
 synonym: "development of an anatomical structure" EXACT []
 is_a: GO:0032502 ! developmental process
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26424" xsd:anyURI
 
 [Term]
 id: GO:0048869
@@ -42756,7 +42763,7 @@ subset: goslim_agr
 subset: goslim_flybase_ribbon
 subset: goslim_mouse
 subset: goslim_pir
-subset: prokaryote_subset
+subset: goslim_prokaryote
 synonym: "physiological response to stimulus" EXACT []
 is_a: GO:0008150 ! biological_process
 
@@ -43592,15 +43599,6 @@ is_a: GO:0044403 ! biological process involved in symbiotic interaction
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/20191" xsd:anyURI
 
 [Term]
-id: GO:0051702
-name: biological process involved in interaction with symbiont
-namespace: biological_process
-def: "An interaction between two organisms living together in more or less intimate association. The term symbiont is used for the smaller (macro) of the two members of a symbiosis; the various forms of symbiosis include parasitism, commensalism and mutualism." [GOC:cc]
-synonym: "interaction with symbiont" RELATED []
-is_a: GO:0044403 ! biological process involved in symbiotic interaction
-property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/20191" xsd:anyURI
-
-[Term]
 id: GO:0051704
 name: multi-organism process
 def: "A biological process which involves another organism of the same or different species." []
@@ -43861,6 +43859,7 @@ subset: goslim_drosophila
 subset: goslim_generic
 subset: goslim_pir
 subset: goslim_pombe
+subset: goslim_prokaryote
 subset: prokaryote_subset
 synonym: "cellular membrane organisation" EXACT []
 synonym: "cellular membrane organization" EXACT []
@@ -44178,8 +44177,8 @@ def: "A process that results in the biosynthesis of constituent macromolecules, 
 subset: goslim_chembl
 subset: goslim_generic
 subset: goslim_pombe
+subset: goslim_prokaryote
 subset: goslim_yeast
-subset: prokaryote_subset
 synonym: "cell wall organisation or biogenesis" EXACT [GOC:mah]
 synonym: "cell wall organization or biogenesis at cellular level" EXACT [GOC:mah]
 synonym: "cellular cell wall organisation or biogenesis" EXACT [GOC:mah]
@@ -44240,6 +44239,7 @@ id: GO:0071704
 name: organic substance metabolic process
 namespace: biological_process
 def: "The chemical reactions and pathways involving an organic substance, any molecular entity containing carbon." [GOC:mah]
+subset: gocheck_do_not_annotate
 synonym: "organic molecular entity metabolic process" EXACT []
 synonym: "organic molecular entity metabolism" EXACT []
 synonym: "organic substance metabolism" EXACT []
@@ -44247,6 +44247,7 @@ is_a: GO:0008152 ! metabolic process
 intersection_of: GO:0008152 ! metabolic process
 intersection_of: has_primary_input_or_output CHEBI:50860 ! organic molecular entity
 relationship: has_primary_input_or_output CHEBI:50860 ! organic molecular entity
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26424" xsd:anyURI
 created_by: mah
 creation_date: 2010-03-08T03:32:18Z
 
@@ -44328,6 +44329,7 @@ id: GO:0071944
 name: cell periphery
 namespace: cellular_component
 def: "The broad region around and including the plasma membrane of a cell,  encompassing the cell cortex (inside the cell), the plasma membrane, and any external encapsulating structures." [GOC:pdt]
+def: "The broad region around and including the plasma membrane of a cell, encompassing the cell cortex (inside the cell), the plasma membrane, and any external encapsulating structures." [GOC:pdt]
 subset: goslim_flybase_ribbon
 is_a: GO:0110165 ! cellular anatomical entity
 created_by: mah
@@ -44694,7 +44696,7 @@ namespace: biological_process
 alt_id: GO:0009814
 def: "Reactions triggered in response to the presence of another organism that act to protect the cell or organism from damage caused by that organism." [GOC:dos]
 subset: goslim_generic
-subset: prokaryote_subset
+subset: goslim_prokaryote
 synonym: "defence response incompatible interaction" NARROW []
 synonym: "defence response to pathogen, incompatible interaction" NARROW []
 synonym: "defense response, incompatible interaction" NARROW []
@@ -44947,6 +44949,7 @@ subset: gocheck_do_not_annotate
 subset: goslim_pir
 is_a: GO:0005575 ! cellular_component
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/24200" xsd:anyURI
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26424" xsd:anyURI
 created_by: kmv
 creation_date: 2019-08-12T18:01:37Z
 
@@ -45012,6 +45015,7 @@ name: catalytic activity, acting on a protein
 namespace: molecular_function
 def: "Catalytic activity that acts to modify a protein." [GOC:molecular_function_refactoring, GOC:pdt]
 subset: goslim_generic
+subset: goslim_prokaryote
 subset: prokaryote_subset
 is_a: GO:0003824 ! catalytic activity
 intersection_of: GO:0003824 ! catalytic activity
@@ -45127,6 +45131,16 @@ created_by: pg
 creation_date: 2020-09-09T05:12:38Z
 
 [Term]
+id: GO:0140546
+name: defense response to symbiont
+namespace: biological_process
+def: "Reactions triggered in response to the presence of a symbiont that act to protect or prevent damage to the host." [GOC:pg]
+is_a: GO:0098542 ! defense response to other organism
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/20261" xsd:anyURI
+created_by: pg
+creation_date: 2020-11-11T17:19:06Z
+
+[Term]
 id: GO:0140572
 name: vacuole fission
 namespace: biological_process
@@ -45162,8 +45176,8 @@ subset: gocheck_do_not_annotate
 subset: goslim_chembl
 subset: goslim_drosophila
 subset: goslim_generic
+subset: goslim_prokaryote
 subset: goslim_yeast
-subset: prokaryote_subset
 synonym: "ATP hydrolysis-dependent activity" EXACT []
 synonym: "ATPase activity" EXACT []
 synonym: "ATPase activity, coupled" EXACT []
@@ -45176,6 +45190,60 @@ property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/
 property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/22371" xsd:anyURI
 created_by: pg
 creation_date: 2021-06-15T07:35:06Z
+
+[Term]
+id: GO:0170033
+name: L-amino acid metabolic process
+namespace: biological_process
+def: "The chemical reactions and pathways involving an L-amino acid." [GOC:edw]
+synonym: "L-alpha-amino acid metabolism" EXACT []
+synonym: "L-amino acid metabolism" EXACT []
+is_a: GO:1901605 ! alpha-amino acid metabolic process
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/23268" xsd:anyURI
+created_by: ew
+creation_date: 2023-11-20T23:41:23Z
+
+[Term]
+id: GO:0170034
+name: L-amino acid biosynthetic process
+namespace: biological_process
+def: "The chemical reactions and pathways resulting in the formation of L-amino acids, the L-enantiomers of amino acids." [GOC:edw]
+synonym: "L-amino acid anabolism" EXACT []
+synonym: "L-amino acid biosynthesis" EXACT []
+synonym: "L-amino acid formation" EXACT []
+synonym: "L-amino acid synthesis" EXACT []
+is_a: GO:0170033 ! L-amino acid metabolic process
+is_a: GO:1901607 ! alpha-amino acid biosynthetic process
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/23268" xsd:anyURI
+created_by: ew
+creation_date: 2023-11-20T23:42:06Z
+
+[Term]
+id: GO:0170038
+name: proteinogenic amino acid biosynthetic process
+namespace: biological_process
+def: "The chemical reactions and pathways resulting in the formation of any amino acid that is incorporated into protein naturally by ribosomal translation of mRNA, and that has a specific codon for translation from mRNA to protein." [GOC:ew]
+synonym: "proteinogenic amino acid anabolism" EXACT []
+synonym: "proteinogenic amino acid biosynthesis" EXACT []
+synonym: "proteinogenic amino acid formation" EXACT []
+synonym: "proteinogenic amino acid synthesis" EXACT []
+is_a: GO:0046394 ! carboxylic acid biosynthetic process
+is_a: GO:0170039 ! proteinogenic amino acid metabolic process
+is_a: GO:1901566 ! organonitrogen compound biosynthetic process
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/23268" xsd:anyURI
+created_by: ew
+creation_date: 2023-12-18T16:28:19Z
+
+[Term]
+id: GO:0170039
+name: proteinogenic amino acid metabolic process
+namespace: biological_process
+def: "The chemical reactions and pathways involving any amino acid that is incorporated into protein naturally by ribosomal translation of mRNA, and that has a specific codon for translation from mRNA to protein." [GOC:ew]
+synonym: "proteinogenic amino acid metabolism" EXACT []
+is_a: GO:0006520 ! amino acid metabolic process
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/23268" xsd:anyURI
+created_by: ew
+creation_date: 2023-12-18T17:31:08Z
 
 [Term]
 id: GO:1900180
@@ -45379,12 +45447,14 @@ id: GO:1901564
 name: organonitrogen compound metabolic process
 namespace: biological_process
 def: "The chemical reactions and pathways involving organonitrogen compound." [GOC:pr, GOC:TermGenie]
+subset: gocheck_do_not_annotate
 synonym: "organonitrogen compound metabolism" EXACT [GOC:TermGenie]
 is_a: GO:0006807 ! nitrogen compound metabolic process
 is_a: GO:0071704 ! organic substance metabolic process
 intersection_of: GO:0008152 ! metabolic process
 intersection_of: has_primary_input_or_output CHEBI:35352 ! organonitrogen compound
 relationship: has_primary_input_or_output CHEBI:35352 ! organonitrogen compound
+property_value: IAO:0000233 "https://github.com/geneontology/go-ontology/issues/26424" xsd:anyURI
 created_by: pr
 creation_date: 2012-11-04T15:17:52Z
 
@@ -56224,6 +56294,7 @@ namespace: single_species_phenotype
 alt_id: PHIPO:0000849
 def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to hydrogen peroxide. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
 is_a: PHIPO:0000021 ! increased sensitivity to chemical
+is_a: PHIPO:0001398 ! sensitive to oxidative stress
 property_value: created:by "alaynecuzick" xsd:string
 creation_date: 2019-05-21T11:55:15Z
 
@@ -56960,6 +57031,7 @@ namespace: single_species_phenotype
 def: "A phenotype in which a population of a single-species shows increased sensitivity to congo red, manifested as an affect on the extent of population growth. (CHEBI:34653)." []
 xref: FYPO:0005984
 is_a: PHIPO:0000021 ! increased sensitivity to chemical
+is_a: PHIPO:0001397 ! sensitive to cell wall stress
 created_by: alaynecuzick
 creation_date: 2019-08-17T13:36:09Z
 
@@ -60468,6 +60540,216 @@ def: "A growth phenotype which describes the absence of change of individuals or
 is_a: PHIPO:0001308 ! normal growth on chemical
 created_by: alaynecuzick
 creation_date: 2023-11-21T12:08:01Z
+
+[Term]
+id: PHIPO:0001388
+name: resistance to pyrisoxazole
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to pyrisoxazole. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
+synonym: "resistance to SYP-Z048" EXACT []
+is_a: PHIPO:0000022 ! increased resistance to chemical
+created_by: alaynecuzick
+creation_date: 2023-12-04T14:19:53Z
+
+[Term]
+id: PHIPO:0001389
+name: sensitive to pyrisoxazole
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to pyrisoxazole. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+synonym: "sensitive to SYP-Z048" EXACT []
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2023-12-04T14:19:53Z
+
+[Term]
+id: PHIPO:0001390
+name: normal growth on pyrisoxazole
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to pyrisoxazole (i.e. indistinguishable from wild type)." []
+synonym: "normal growth on SYP-Z048" EXACT []
+is_a: PHIPO:0001308 ! normal growth on chemical
+created_by: alaynecuzick
+creation_date: 2023-12-04T14:19:53Z
+
+[Term]
+id: PHIPO:0001391
+name: resistance to metconazole
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to metconazole. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
+is_a: PHIPO:0000022 ! increased resistance to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-10T15:25:16Z
+
+[Term]
+id: PHIPO:0001392
+name: sensitive to metconazole
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to metconazole. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-10T15:25:16Z
+
+[Term]
+id: PHIPO:0001393
+name: normal growth on metconazole
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to metconazole (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001308 ! normal growth on chemical
+created_by: alaynecuzick
+creation_date: 2024-01-10T15:25:16Z
+
+[Term]
+id: PHIPO:0001394
+name: resistance to trifloxystrobin
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to trifloxystrobin. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
+is_a: PHIPO:0000022 ! increased resistance to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-22T12:34:13Z
+
+[Term]
+id: PHIPO:0001395
+name: sensitive to trifloxystrobin
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to trifloxystrobin. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-22T12:34:13Z
+
+[Term]
+id: PHIPO:0001396
+name: normal growth on trifloxystrobin
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to trifloxystrobin (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001308 ! normal growth on chemical
+created_by: alaynecuzick
+creation_date: 2024-01-22T12:34:13Z
+
+[Term]
+id: PHIPO:0001397
+name: sensitive to cell wall stress
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to a cell wall stress. Typically, individuals or populations are deemed sensitive to a stress if they grow when exposed to the stress at an intensity at which an individual or population of wild type cell(s) stop growing (and may die)." []
+is_a: PHIPO:0001098 ! sensitive to stress
+created_by: alaynecuzick
+creation_date: 2024-01-23T11:47:46Z
+
+[Term]
+id: PHIPO:0001398
+name: sensitive to oxidative stress
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to an oxidative stress. Typically, individuals or populations are deemed sensitive to a stress if they grow when exposed to the stress at an intensity at which an individual or population of wild type cell(s) stop growing (and may die)." []
+is_a: PHIPO:0001098 ! sensitive to stress
+created_by: alaynecuzick
+creation_date: 2024-01-23T12:01:41Z
+
+[Term]
+id: PHIPO:0001399
+name: resistance to flusilazole
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to flusilazole. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
+is_a: PHIPO:0000022 ! increased resistance to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
+
+[Term]
+id: PHIPO:0001400
+name: sensitive to flusilazole
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to flusilazole. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
+
+[Term]
+id: PHIPO:0001401
+name: normal growth on flusilazole
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to flusilazole (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001308 ! normal growth on chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
+
+[Term]
+id: PHIPO:0001402
+name: resistance to mandipropamid
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to mandipropamid. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
+is_a: PHIPO:0000022 ! increased resistance to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
+
+[Term]
+id: PHIPO:0001403
+name: sensitive to mandipropamid
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to mandipropamid. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
+
+[Term]
+id: PHIPO:0001404
+name: normal growth on mandipropamid
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to mandipropamid (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001308 ! normal growth on chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
+
+[Term]
+id: PHIPO:0001405
+name: resistance to dimethomorph
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to dimethomorph. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
+is_a: PHIPO:0000022 ! increased resistance to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
+
+[Term]
+id: PHIPO:0001406
+name: sensitive to dimethomorph
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to dimethomorph. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
+
+[Term]
+id: PHIPO:0001407
+name: normal growth on dimethomorph
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to dimethomorph (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001308 ! normal growth on chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
+
+[Term]
+id: PHIPO:0001408
+name: resistance to iprovalicarb
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to iprovalicarb. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
+is_a: PHIPO:0000022 ! increased resistance to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
+
+[Term]
+id: PHIPO:0001409
+name: sensitive to iprovalicarb
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to iprovalicarb. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
+
+[Term]
+id: PHIPO:0001410
+name: normal growth on iprovalicarb
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to iprovalicarb (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001308 ! normal growth on chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
 
 [Term]
 id: PR:000000001

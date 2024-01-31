@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2023-11-30/phipo-base.owl
+data-version: phipo/releases/2024-01-31/phipo-base.owl
 ontology: phipo/phipo-base
 property_value: created:by "alaynecuzick" xsd:string
 property_value: creation:date "2018-07-09T13:43:00Z" xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/description "Ontology of species
 property_value: http://purl.org/dc/elements/1.1/title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license "https://creativecommons.org/licenses/by/3.0/" xsd:string
-property_value: owl:versionInfo "2023-11-30" xsd:string
+property_value: owl:versionInfo "2024-01-31" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -8148,6 +8148,7 @@ namespace: single_species_phenotype
 alt_id: PHIPO:0000849
 def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to hydrogen peroxide. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
 is_a: PHIPO:0000021 ! increased sensitivity to chemical
+is_a: PHIPO:0001398 ! sensitive to oxidative stress
 property_value: created:by "alaynecuzick" xsd:string
 creation_date: 2019-05-21T11:55:15Z
 
@@ -8880,6 +8881,7 @@ namespace: single_species_phenotype
 def: "A phenotype in which a population of a single-species shows increased sensitivity to congo red, manifested as an affect on the extent of population growth. (CHEBI:34653)." []
 xref: FYPO:0005984
 is_a: PHIPO:0000021 ! increased sensitivity to chemical
+is_a: PHIPO:0001397 ! sensitive to cell wall stress
 created_by: alaynecuzick
 creation_date: 2019-08-17T13:36:09Z
 
@@ -12383,6 +12385,216 @@ def: "A growth phenotype which describes the absence of change of individuals or
 is_a: PHIPO:0001308 ! normal growth on chemical
 created_by: alaynecuzick
 creation_date: 2023-11-21T12:08:01Z
+
+[Term]
+id: PHIPO:0001388
+name: resistance to pyrisoxazole
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to pyrisoxazole. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
+synonym: "resistance to SYP-Z048" EXACT []
+is_a: PHIPO:0000022 ! increased resistance to chemical
+created_by: alaynecuzick
+creation_date: 2023-12-04T14:19:53Z
+
+[Term]
+id: PHIPO:0001389
+name: sensitive to pyrisoxazole
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to pyrisoxazole. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+synonym: "sensitive to SYP-Z048" EXACT []
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2023-12-04T14:19:53Z
+
+[Term]
+id: PHIPO:0001390
+name: normal growth on pyrisoxazole
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to pyrisoxazole (i.e. indistinguishable from wild type)." []
+synonym: "normal growth on SYP-Z048" EXACT []
+is_a: PHIPO:0001308 ! normal growth on chemical
+created_by: alaynecuzick
+creation_date: 2023-12-04T14:19:53Z
+
+[Term]
+id: PHIPO:0001391
+name: resistance to metconazole
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to metconazole. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
+is_a: PHIPO:0000022 ! increased resistance to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-10T15:25:16Z
+
+[Term]
+id: PHIPO:0001392
+name: sensitive to metconazole
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to metconazole. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-10T15:25:16Z
+
+[Term]
+id: PHIPO:0001393
+name: normal growth on metconazole
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to metconazole (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001308 ! normal growth on chemical
+created_by: alaynecuzick
+creation_date: 2024-01-10T15:25:16Z
+
+[Term]
+id: PHIPO:0001394
+name: resistance to trifloxystrobin
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to trifloxystrobin. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
+is_a: PHIPO:0000022 ! increased resistance to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-22T12:34:13Z
+
+[Term]
+id: PHIPO:0001395
+name: sensitive to trifloxystrobin
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to trifloxystrobin. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-22T12:34:13Z
+
+[Term]
+id: PHIPO:0001396
+name: normal growth on trifloxystrobin
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to trifloxystrobin (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001308 ! normal growth on chemical
+created_by: alaynecuzick
+creation_date: 2024-01-22T12:34:13Z
+
+[Term]
+id: PHIPO:0001397
+name: sensitive to cell wall stress
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to a cell wall stress. Typically, individuals or populations are deemed sensitive to a stress if they grow when exposed to the stress at an intensity at which an individual or population of wild type cell(s) stop growing (and may die)." []
+is_a: PHIPO:0001098 ! sensitive to stress
+created_by: alaynecuzick
+creation_date: 2024-01-23T11:47:46Z
+
+[Term]
+id: PHIPO:0001398
+name: sensitive to oxidative stress
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to an oxidative stress. Typically, individuals or populations are deemed sensitive to a stress if they grow when exposed to the stress at an intensity at which an individual or population of wild type cell(s) stop growing (and may die)." []
+is_a: PHIPO:0001098 ! sensitive to stress
+created_by: alaynecuzick
+creation_date: 2024-01-23T12:01:41Z
+
+[Term]
+id: PHIPO:0001399
+name: resistance to flusilazole
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to flusilazole. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
+is_a: PHIPO:0000022 ! increased resistance to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
+
+[Term]
+id: PHIPO:0001400
+name: sensitive to flusilazole
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to flusilazole. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
+
+[Term]
+id: PHIPO:0001401
+name: normal growth on flusilazole
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to flusilazole (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001308 ! normal growth on chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
+
+[Term]
+id: PHIPO:0001402
+name: resistance to mandipropamid
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to mandipropamid. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
+is_a: PHIPO:0000022 ! increased resistance to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
+
+[Term]
+id: PHIPO:0001403
+name: sensitive to mandipropamid
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to mandipropamid. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
+
+[Term]
+id: PHIPO:0001404
+name: normal growth on mandipropamid
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to mandipropamid (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001308 ! normal growth on chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
+
+[Term]
+id: PHIPO:0001405
+name: resistance to dimethomorph
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to dimethomorph. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
+is_a: PHIPO:0000022 ! increased resistance to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
+
+[Term]
+id: PHIPO:0001406
+name: sensitive to dimethomorph
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to dimethomorph. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
+
+[Term]
+id: PHIPO:0001407
+name: normal growth on dimethomorph
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to dimethomorph (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001308 ! normal growth on chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
+
+[Term]
+id: PHIPO:0001408
+name: resistance to iprovalicarb
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to iprovalicarb. Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
+is_a: PHIPO:0000022 ! increased resistance to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
+
+[Term]
+id: PHIPO:0001409
+name: sensitive to iprovalicarb
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to iprovalicarb. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
+is_a: PHIPO:0000021 ! increased sensitivity to chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
+
+[Term]
+id: PHIPO:0001410
+name: normal growth on iprovalicarb
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to iprovalicarb (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001308 ! normal growth on chemical
+created_by: alaynecuzick
+creation_date: 2024-01-30T14:16:53Z
 
 [Typedef]
 id: PHIPO:0000304
