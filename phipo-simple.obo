@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2024-02-12/phipo-simple.owl
+data-version: phipo/releases/2024-03-04/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -11,7 +11,7 @@ property_value: creation:date "2018-07-09T13:43:00Z" xsd:string
 property_value: dc-description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: dc-title "Pathogen Host Interactions Phenotype Ontology" xsd:string
 property_value: dcterms-license "https://creativecommons.org/licenses/by/3.0/" xsd:string
-property_value: owl:versionInfo "2024-02-12" xsd:string
+property_value: owl:versionInfo "2024-03-04" xsd:string
 
 [Term]
 id: PHIPO:0000001
@@ -10188,7 +10188,7 @@ namespace: single_species_phenotype
 def: "A single species cell morphology phenotype in which fungal hyphae form an increased number of branches." []
 synonym: "increased branching of hyphae" EXACT []
 synonym: "increased hyphal branching" EXACT []
-is_a: PHIPO:0001205 ! abnormal filament morphology
+is_a: PHIPO:0001427 ! abnormal hyphal branching
 created_by: alaynecuzick
 creation_date: 2020-03-04T14:33:49Z
 
@@ -12761,6 +12761,24 @@ def: "A growth phenotype which describes the absence of change of individuals or
 is_a: PHIPO:0001308 ! normal growth on chemical
 created_by: alaynecuzick
 creation_date: 2024-02-12T10:06:39Z
+
+[Term]
+id: PHIPO:0001426
+name: normal growth on fludioxonil
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the absence of change of individuals or populations after exposure to fludioxonil (i.e. indistinguishable from wild type)." []
+is_a: PHIPO:0001308 ! normal growth on chemical
+created_by: alaynecuzick
+creation_date: 2024-02-28T09:44:54Z
+
+[Term]
+id: PHIPO:0001427
+name: abnormal hyphal branching
+namespace: single_species_phenotype
+def: "A single species cell morphology phenotype in which fungal hyphae branching is abnormal." []
+is_a: PHIPO:0001205 ! abnormal filament morphology
+created_by: alaynecuzick
+creation_date: 2024-03-04T15:00:58Z
 
 [Typedef]
 id: PHIPO:0000304
