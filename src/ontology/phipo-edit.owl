@@ -1350,6 +1350,9 @@ Declaration(Class(obo:PHIPO_0001437))
 Declaration(Class(obo:PHIPO_0001438))
 Declaration(Class(obo:PHIPO_0001439))
 Declaration(Class(obo:PHIPO_0001440))
+Declaration(Class(obo:PHIPO_0001441))
+Declaration(Class(obo:PHIPO_0001442))
+Declaration(Class(obo:PHIPO_0001443))
 Declaration(ObjectProperty(obo:PHIPO_0000304))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:created_by))
@@ -1369,6 +1372,7 @@ Declaration(AnnotationProperty(oboInOwl:hasExactSynonym))
 Declaration(AnnotationProperty(oboInOwl:hasNarrowSynonym))
 Declaration(AnnotationProperty(oboInOwl:hasOBONamespace))
 Declaration(AnnotationProperty(oboInOwl:hasRelatedSynonym))
+Declaration(AnnotationProperty(oboInOwl:id))
 Declaration(AnnotationProperty(oboInOwl:inSubset))
 Declaration(AnnotationProperty(rdfs:comment))
 
@@ -14329,6 +14333,33 @@ AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001440 "2024-08-03T10:45:4
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001440 "single_species_phenotype")
 AnnotationAssertion(rdfs:label obo:PHIPO_0001440 "increased number of nuclei in asexual spore"@en)
 SubClassOf(obo:PHIPO_0001440 obo:PHIPO_0000127)
+
+# Class: obo:PHIPO_0001441 (abnormal mycotoxin biosythesis)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001441 "A single organism phenotype in which an abnormal amount of mycotoxin is produced.")
+AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001441 "changh")
+AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001441 "2025-03-11T10:52:39Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001441 "single_species_phenotype")
+AnnotationAssertion(rdfs:label obo:PHIPO_0001441 "abnormal mycotoxin biosythesis"@en)
+SubClassOf(obo:PHIPO_0001441 obo:PHIPO_0001442)
+
+# Class: obo:PHIPO_0001442 (abnormal biological process phenotype)
+
+AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001442 "changh")
+AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001442 "2025-03-11T10:57:55Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001442 "single_species_phenotype")
+AnnotationAssertion(rdfs:label obo:PHIPO_0001442 "abnormal biological process phenotype"@en)
+SubClassOf(obo:PHIPO_0001442 obo:PHIPO_0000002)
+
+# Class: obo:PHIPO_0001443 (abnormal deoxynivalenol biosynthesis)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001443 "A single organism phenotype in which deoxynivalenol biosynthesis is abnormal.")
+AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001443 "changh")
+AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001443 "2025-03-11T11:12:11Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PHIPO_0001443 "abnormal vomitoxin biosynthesis")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001443 "single_species_phenotype")
+AnnotationAssertion(rdfs:label obo:PHIPO_0001443 "abnormal deoxynivalenol biosynthesis"@en)
+SubClassOf(obo:PHIPO_0001443 obo:PHIPO_0001441)
 
 
 )
