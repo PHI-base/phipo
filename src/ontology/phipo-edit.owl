@@ -28,12 +28,13 @@ Import(<http://purl.obolibrary.org/obo/phipo/imports/pato_import.owl>)
 Import(<http://purl.obolibrary.org/obo/phipo/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/phipo/imports/so_import.owl>)
 Import(<http://purl.obolibrary.org/obo/phipo/patterns/definitions.owl>)
-Annotation(oboInOwl:created_by "alaynecuzick")
-Annotation(oboInOwl:creation_date "2018-07-09T13:43:00Z")
 Annotation(dc:description "Ontology of species-neutral phenotypes observed in pathogen-host interactions.")
 Annotation(dc:title "Pathogen Host Interactions Phenotype Ontology")
 Annotation(terms:license "https://creativecommons.org/licenses/by/3.0/")
+Annotation(oboInOwl:created_by "alaynecuzick")
+Annotation(oboInOwl:creation_date "2018-07-09T13:43:00Z")
 
+Declaration(Class(obo:PHIPO_0000000))
 Declaration(Class(obo:PHIPO_0000001))
 Declaration(Class(obo:PHIPO_0000002))
 Declaration(Class(obo:PHIPO_0000003))
@@ -1356,8 +1357,6 @@ Declaration(Class(obo:PHIPO_0001443))
 Declaration(Class(obo:PHIPO_0001444))
 Declaration(ObjectProperty(obo:PHIPO_0000304))
 Declaration(AnnotationProperty(obo:IAO_0000115))
-Declaration(AnnotationProperty(oboInOwl:created_by))
-Declaration(AnnotationProperty(oboInOwl:creation_date))
 Declaration(AnnotationProperty(obo:def))
 Declaration(AnnotationProperty(obo:namespace))
 Declaration(AnnotationProperty(dc:creator))
@@ -1394,6 +1393,16 @@ AnnotationAssertion(rdfs:label obo:PHIPO_0000304 "qualifier"@en)
 #   Classes
 ############################
 
+# Class: obo:PHIPO_0000000 (decreased level of deoxynivalenol)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0000000 "A single species cell phenotype in which the amount of deoxynivalenol measured in a cell is decreased.")
+AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0000000 "changh")
+AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0000000 "2025-03-18T12:04:49Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PHIPO_0000000 "decreased level of vomitoxin")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0000000 "single_species_phenotype")
+AnnotationAssertion(rdfs:label obo:PHIPO_0000000 "decreased level of deoxynivalenol"@en)
+SubClassOf(obo:PHIPO_0000000 obo:PHIPO_0001031)
+
 # Class: obo:PHIPO_0000001 (pathogen host interaction phenotype)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0000001 "Any of the set of observable characteristics arising from the interaction of a potentially pathogenic organism with a host organism.")
@@ -1416,7 +1425,7 @@ AnnotationAssertion(oboInOwl:inSubset obo:PHIPO_0000002 "qc_do_not_annotate")
 AnnotationAssertion(oboInOwl:inSubset obo:PHIPO_0000002 "qc_do_not_manually_annotate")
 AnnotationAssertion(rdfs:comment obo:PHIPO_0000002 "This is a high-level term whose primary purpose is to organize terms beneath it in the ontology, and we expect that it will not be used for direct annotations. Please consider using a more specific term to annotate each phenotype.")
 AnnotationAssertion(rdfs:label obo:PHIPO_0000002 "single species phenotype")
-SubClassOf(obo:PHIPO_0000002 obo:PHIPO_0000505)
+SubClassOf(obo:PHIPO_0000002 obo:PHIPO_0001218)
 
 # Class: obo:PHIPO_0000003 (tissue phenotype)
 
@@ -14362,13 +14371,12 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001443 "single_species_p
 AnnotationAssertion(rdfs:label obo:PHIPO_0001443 "abnormal deoxynivalenol biosynthesis"@en)
 SubClassOf(obo:PHIPO_0001443 obo:PHIPO_0001441)
 
-# Class: obo:PHIPO_0001444 (sensitive to heat stress)
+# Class: obo:PHIPO_0001444 (obo:PHIPO_0001444)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001444 "a cell phenotype in which cells grow to a lower extent than wild type following exposure to heat.")
 AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001444 "changh")
 AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001444 "2025-03-11T15:43:01Z"^^xsd:dateTime)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001444 "single_species_phenotype")
-AnnotationAssertion(rdfs:label obo:PHIPO_0001444 "sensitive to heat stress"@en)
 SubClassOf(obo:PHIPO_0001444 obo:PHIPO_0001098)
 
 
