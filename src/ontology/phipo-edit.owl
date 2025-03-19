@@ -34,7 +34,6 @@ Annotation(terms:license "https://creativecommons.org/licenses/by/3.0/")
 Annotation(oboInOwl:created_by "alaynecuzick")
 Annotation(oboInOwl:creation_date "2018-07-09T13:43:00Z")
 
-Declaration(Class(obo:PHIPO_0000000))
 Declaration(Class(obo:PHIPO_0000001))
 Declaration(Class(obo:PHIPO_0000002))
 Declaration(Class(obo:PHIPO_0000003))
@@ -1355,6 +1354,7 @@ Declaration(Class(obo:PHIPO_0001441))
 Declaration(Class(obo:PHIPO_0001442))
 Declaration(Class(obo:PHIPO_0001443))
 Declaration(Class(obo:PHIPO_0001444))
+Declaration(Class(obo:PHIPO_0001445))
 Declaration(ObjectProperty(obo:PHIPO_0000304))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:def))
@@ -1392,16 +1392,6 @@ AnnotationAssertion(rdfs:label obo:PHIPO_0000304 "qualifier"@en)
 ############################
 #   Classes
 ############################
-
-# Class: obo:PHIPO_0000000 (decreased level of deoxynivalenol)
-
-AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0000000 "A single species cell phenotype in which the amount of deoxynivalenol measured in a cell is decreased.")
-AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0000000 "changh")
-AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0000000 "2025-03-18T12:04:49Z"^^xsd:dateTime)
-AnnotationAssertion(oboInOwl:hasExactSynonym obo:PHIPO_0000000 "decreased level of vomitoxin")
-AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0000000 "single_species_phenotype")
-AnnotationAssertion(rdfs:label obo:PHIPO_0000000 "decreased level of deoxynivalenol"@en)
-SubClassOf(obo:PHIPO_0000000 obo:PHIPO_0001031)
 
 # Class: obo:PHIPO_0000001 (pathogen host interaction phenotype)
 
@@ -14371,13 +14361,24 @@ AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001443 "single_species_p
 AnnotationAssertion(rdfs:label obo:PHIPO_0001443 "abnormal deoxynivalenol biosynthesis"@en)
 SubClassOf(obo:PHIPO_0001443 obo:PHIPO_0001441)
 
-# Class: obo:PHIPO_0001444 (obo:PHIPO_0001444)
+# Class: obo:PHIPO_0001444 (sensitive to heat stress)
 
 AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001444 "a cell phenotype in which cells grow to a lower extent than wild type following exposure to heat.")
 AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001444 "changh")
 AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001444 "2025-03-11T15:43:01Z"^^xsd:dateTime)
 AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001444 "single_species_phenotype")
+AnnotationAssertion(rdfs:label obo:PHIPO_0001444 "sensitive to heat stress")
 SubClassOf(obo:PHIPO_0001444 obo:PHIPO_0001098)
+
+# Class: obo:PHIPO_0001445 (decreased level of deoxynivalenol)
+
+AnnotationAssertion(obo:IAO_0000115 obo:PHIPO_0001445 "A single species cell phenotype in which the amount of deoxynivalenol measured in a cell is decreased.")
+AnnotationAssertion(oboInOwl:created_by obo:PHIPO_0001445 "changh")
+AnnotationAssertion(oboInOwl:creation_date obo:PHIPO_0001445 "2025-03-18T12:04:49Z"^^xsd:dateTime)
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:PHIPO_0001445 "decreased level of vomitoxin")
+AnnotationAssertion(oboInOwl:hasOBONamespace obo:PHIPO_0001445 "single_species_phenotype")
+AnnotationAssertion(rdfs:label obo:PHIPO_0001445 "decreased level of deoxynivalenol"@en)
+SubClassOf(obo:PHIPO_0001445 obo:PHIPO_0001031)
 
 
 )
