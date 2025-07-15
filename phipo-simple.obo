@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2025-05-06/phipo-simple.owl
+data-version: phipo/releases/2025-07-15/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -11,7 +11,7 @@ idspace: terms http://purl.org/dc/terms/
 ontology: phipo/phipo-simple
 property_value: dc:description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: dc:title "Pathogen Host Interactions Phenotype Ontology" xsd:string
-property_value: owl:versionInfo "2025-05-06" xsd:string
+property_value: owl:versionInfo "2025-07-15" xsd:string
 property_value: terms:license "https://creativecommons.org/licenses/by/3.0/" xsd:string
 creation_date: 2018-07-09T13:43:00Z
 created_by: alaynecuzick
@@ -12964,6 +12964,17 @@ synonym: "increased level of vomitoxin" EXACT []
 is_a: PHIPO:0001037 ! increased cellular toxin level
 created_by: changh
 creation_date: 2025-04-29T14:22:02Z
+
+[Term]
+id: PHIPO:0001448
+name: restored pathogenicity
+namespace: pathogen_host_interaction_phenotype
+def: "A phenotype where the ability of a pathogen to produce an infectious disease in another organism is restored (pathogenicity was present, then absent, and now present)." []
+comment: For use in the annotation extension infective ability. Can only apply to changes in the pathogen. Note that this ability to cause pathogenicity is a feature of the pathogen. Therefore restoration of pathogenicity should never be dependent on changes to the host genotype, only on changes to the pathogen genotype. If you are annotating changes in disease presence or absence dependent on the changes to the host consider increased/decreased virulence phenotypes.
+subset: qc_extension_only
+is_a: PHIPO:0000006 ! pathogenicity phenotype
+created_by: changh
+creation_date: 2025-07-14T13:24:34Z
 
 [Typedef]
 id: PHIPO:0000304
