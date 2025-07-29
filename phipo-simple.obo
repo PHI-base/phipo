@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2025-07-15/phipo-simple.owl
+data-version: phipo/releases/2025-07-29/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -11,7 +11,7 @@ idspace: terms http://purl.org/dc/terms/
 ontology: phipo/phipo-simple
 property_value: dc:description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: dc:title "Pathogen Host Interactions Phenotype Ontology" xsd:string
-property_value: owl:versionInfo "2025-07-15" xsd:string
+property_value: owl:versionInfo "2025-07-29" xsd:string
 property_value: terms:license "https://creativecommons.org/licenses/by/3.0/" xsd:string
 creation_date: 2018-07-09T13:43:00Z
 created_by: alaynecuzick
@@ -4585,7 +4585,7 @@ namespace: single_species_phenotype
 def: "A single organism phenotype in which the toxin biosynthetic process is abnormal (i.e. different than the wild type)." []
 comment: For logical defintions Do we want to make this species neutral and just add in DON at lowest child level and use CHEBI id CHEBI_10022 ## vomitoxin OR use fungi specific GO term GO_0106110 ## vomitoxin biosynthetic process??
 is_a: PHIPO:0000496 ! toxin biosynthetic process phenotype
-is_a: PHIPO:0001147 ! cellular metabolic process phenotype
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2019-01-18T13:04:53Z
 
@@ -8480,6 +8480,7 @@ def: "A single organism metabolic process phenotype in which the occurrence of l
 synonym: "decreased lipolysis" EXACT []
 is_a: PHIPO:0000478 ! lipid droplet phenotype
 is_a: PHIPO:0000493 ! primary metabolic process phenotype
+is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2019-07-27T11:17:17Z
 
@@ -9849,7 +9850,6 @@ namespace: single_species_phenotype
 def: "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, is abnormal." []
 xref: FYPO:0000775
 is_a: PHIPO:0001118 ! abnormal protein modification
-is_a: PHIPO:0001147 ! cellular metabolic process phenotype
 created_by: alaynecuzick
 creation_date: 2019-11-06T13:02:19Z
 
@@ -10126,7 +10126,6 @@ namespace: single_species_phenotype
 def: "A single organism phenotype that affects the chemical reactions and pathways by which individual cells transform chemical substances. (GO:0044237)" []
 synonym: "cellular metabolism phenotype" EXACT []
 is_a: PHIPO:0000492 ! metabolic process phenotype
-is_a: PHIPO:0000929 ! abnormal cellular process
 created_by: alaynecuzick
 creation_date: 2020-03-04T13:53:21Z
 
@@ -10151,6 +10150,7 @@ synonym: "decreased reactive oxygen species production" EXACT []
 synonym: "decreased ROS production" EXACT []
 synonym: "reduced reactive oxygen species production" EXACT []
 synonym: "reduced ROS production" EXACT []
+is_a: PHIPO:0000929 ! abnormal cellular process
 is_a: PHIPO:0001147 ! cellular metabolic process phenotype
 created_by: alaynecuzick
 creation_date: 2020-03-04T14:03:31Z
