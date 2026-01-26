@@ -1359,6 +1359,7 @@ Declaration(Class(obo:PHIPO_0001445))
 Declaration(Class(obo:PHIPO_0001446))
 Declaration(Class(obo:PHIPO_0001447))
 Declaration(Class(obo:PHIPO_0001448))
+Declaration(Class(obo:PHIPO_0001449))
 Declaration(ObjectProperty(obo:PHIPO_0000304))
 Declaration(AnnotationProperty(obo:IAO_0000115))
 Declaration(AnnotationProperty(obo:def))
@@ -1378,6 +1379,8 @@ Declaration(AnnotationProperty(oboInOwl:hasOBONamespace))
 Declaration(AnnotationProperty(oboInOwl:hasRelatedSynonym))
 Declaration(AnnotationProperty(oboInOwl:id))
 Declaration(AnnotationProperty(oboInOwl:inSubset))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/obolnOwl#created_by>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/obolnOwl#creation_date>))
 Declaration(AnnotationProperty(rdfs:comment))
 
 ############################
@@ -14413,6 +14416,13 @@ AnnotationAssertion(oboInOwl:inSubset obo:PHIPO_0001448 "qc_extension_only")
 AnnotationAssertion(rdfs:comment obo:PHIPO_0001448 "For use in the annotation extension infective ability. Can only apply to changes in the pathogen. Note that this ability to cause pathogenicity is a feature of the pathogen. Therefore restoration of pathogenicity should never be dependent on changes to the host genotype, only on changes to the pathogen genotype. If you are annotating changes in disease presence or absence dependent on the changes to the host consider increased/decreased virulence phenotypes.")
 AnnotationAssertion(rdfs:label obo:PHIPO_0001448 "restored pathogenicity"@en)
 SubClassOf(obo:PHIPO_0001448 obo:PHIPO_0000006)
+
+# Class: obo:PHIPO_0001449 (sensitive to ammonium)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/obolnOwl#created_by> obo:PHIPO_0001449 "Hsinyugithub")
+AnnotationAssertion(<http://www.geneontology.org/formats/obolnOwl#creation_date> obo:PHIPO_0001449 "2026-01-26T10:20:17Z"^^xsd:dateTime)
+AnnotationAssertion(Annotation(obo:IAO_0000115 "A growth phenotype which describes the sensitivity of individuals or populations after exposure to ammonium. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow.") rdfs:label obo:PHIPO_0001449 "sensitive to ammonium"@en)
+SubClassOf(obo:PHIPO_0001449 obo:PHIPO_0000021)
 
 
 )
