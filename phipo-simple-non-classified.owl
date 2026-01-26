@@ -11,13 +11,13 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/phipo/phipo-simple-non-classified.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2025-10-29/phipo-simple-non-classified.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2026-01-26/phipo-simple-non-classified.owl"/>
         <dc:description>Ontology of species-neutral phenotypes observed in pathogen-host interactions.</dc:description>
         <dc:title>Pathogen Host Interactions Phenotype Ontology</dc:title>
         <terms:license>https://creativecommons.org/licenses/by/3.0/</terms:license>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date>2018-07-09T13:43:00Z</oboInOwl:creation_date>
-        <owl:versionInfo>2025-10-29</owl:versionInfo>
+        <owl:versionInfo>2026-01-26</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -78,6 +78,12 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#created_date -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_date"/>
     
 
 
@@ -18531,6 +18537,23 @@ occurs to a lesser extent than normal.</obo:IAO_0000115>
         <rdfs:comment>For use in the annotation extension infective ability. Can only apply to changes in the pathogen. Note that this ability to cause pathogenicity is a feature of the pathogen. Therefore restoration of pathogenicity should never be dependent on changes to the host genotype, only on changes to the pathogen genotype. If you are annotating changes in disease presence or absence dependent on the changes to the host consider increased/decreased virulence phenotypes.</rdfs:comment>
         <rdfs:label xml:lang="en">restored pathogenicity</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001449 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001449">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000021"/>
+        <oboInOwl:created_by>Hsinyugithub</oboInOwl:created_by>
+        <oboInOwl:created_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T10:20:17Z</oboInOwl:created_date>
+        <rdfs:label xml:lang="en">sensitive to ammonium</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001449"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="en">sensitive to ammonium</owl:annotatedTarget>
+        <obo:IAO_0000115>A growth phenotype which describes the sensitivity of individuals or populations after exposure to ammonium. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow.</obo:IAO_0000115>
+    </owl:Axiom>
 </rdf:RDF>
 
 
