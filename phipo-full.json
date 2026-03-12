@@ -19,9 +19,9 @@
         "val" : "2018-07-09T13:43:00Z"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2026-01-26"
+        "val" : "2026-03-12"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/phipo/releases/2026-01-26/phipo-full.json"
+      "version" : "http://purl.obolibrary.org/obo/phipo/releases/2026-03-12/phipo-full.json"
     },
     "nodes" : [ {
       "id" : "http://identifiers.org/ensembl/ENSG00000100604",
@@ -47327,6 +47327,47 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBI_747204",
+      "lbl" : "reference compound",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "Any well-characterized compound that serves as a standard for the identification, quantification, calibration, or quality control of substances in scientific analysis."
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/chebi/3_STAR" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "reference compounds",
+          "xrefs" : [ "chebi" ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "reference standard",
+          "xrefs" : [ "chebi" ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "reference standards",
+          "xrefs" : [ "chebi" ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "chebi_ontology"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBI_747325",
+      "lbl" : "additive",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "a role for a chemical additive to a mixture"
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/chebi/2_STAR" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "chebi_ontology"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/CHEBI_74783",
       "lbl" : "astringent",
       "type" : "CLASS",
@@ -69803,12 +69844,6 @@
           "val" : "reproductive physiological process"
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
-          "val" : "GO:0019952"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
-          "val" : "GO:0050876"
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
         } ]
@@ -78625,47 +78660,6 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/GO_0004176",
-      "lbl" : "ATP-dependent peptidase activity",
-      "type" : "CLASS",
-      "meta" : {
-        "definition" : {
-          "val" : "Catalysis of the hydrolysis of peptide bonds, driven by ATP hydrolysis.",
-          "xrefs" : [ "GOC:mah" ]
-        },
-        "synonyms" : [ {
-          "pred" : "hasRelatedSynonym",
-          "val" : "ATP-dependent proteolysis",
-          "xrefs" : [ "GOC:mah" ]
-        } ],
-        "xrefs" : [ {
-          "val" : "Reactome:R-HSA-9698929"
-        }, {
-          "val" : "Reactome:R-HSA-9838004"
-        }, {
-          "val" : "Reactome:R-HSA-9838081"
-        }, {
-          "val" : "Reactome:R-HSA-9838289"
-        }, {
-          "val" : "Reactome:R-HSA-9839059"
-        }, {
-          "val" : "Reactome:R-HSA-9839105"
-        }, {
-          "val" : "Reactome:R-HSA-9839113"
-        }, {
-          "val" : "Reactome:R-HSA-9839146"
-        }, {
-          "val" : "Reactome:R-HSA-9839751"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
-          "val" : "GO:0004280"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "molecular_function"
-        } ]
-      }
-    }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0004518",
       "lbl" : "nuclease activity",
       "type" : "CLASS",
@@ -85809,8 +85803,6 @@
           "val" : "Reactome:R-HSA-5685902"
         }, {
           "val" : "Reactome:R-HSA-6803060"
-        }, {
-          "val" : "Reactome:R-HSA-9935547"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
@@ -86697,7 +86689,7 @@
       "meta" : {
         "definition" : {
           "val" : "The chemical reactions and pathways resulting in the formation of amino acids of the aspartate family, comprising asparagine, aspartate, lysine, methionine and threonine.",
-          "xrefs" : [ "GOC:ai" ]
+          "xrefs" : [ "GOC:ai", "MetaCyc:PWY0-781" ]
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -86711,6 +86703,9 @@
         }, {
           "pred" : "hasExactSynonym",
           "val" : "aspartate family amino acid synthesis"
+        } ],
+        "xrefs" : [ {
+          "val" : "MetaCyc:PWY0-781"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -86773,12 +86768,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/GO_0009085",
-      "lbl" : "lysine biosynthetic process",
+      "lbl" : "L-lysine biosynthetic process",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "The chemical reactions and pathways resulting in the formation of lysine, 2,6-diaminohexanoic acid.",
-          "xrefs" : [ "GOC:go_curators" ]
+          "val" : "The chemical reactions and pathways resulting in the formation of L-lysine, 2,6-diaminohexanoic acid.",
+          "xrefs" : [ "GOC:go_curators", "MetaCyc:LYSINE-SYN" ]
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -94079,8 +94074,6 @@
           "val" : "Reactome:R-HSA-8938314"
         }, {
           "val" : "Reactome:R-HSA-8952137"
-        }, {
-          "val" : "Reactome:R-HSA-9942295"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -94113,8 +94106,6 @@
           "val" : "Reactome:R-HSA-1793176"
         }, {
           "val" : "Reactome:R-HSA-2065233"
-        }, {
-          "val" : "Reactome:R-HSA-5333609"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -94280,12 +94271,6 @@
           "val" : "Reactome:R-HSA-9706399"
         }, {
           "val" : "Reactome:R-HSA-9749350"
-        }, {
-          "val" : "Reactome:R-HSA-9948300"
-        }, {
-          "val" : "Reactome:R-HSA-9949632"
-        }, {
-          "val" : "Reactome:R-HSA-9955731"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
@@ -98481,7 +98466,13 @@
           "val" : "2012-09-19T15:56:06Z"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "GO:0019952"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "GO:0044702"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+          "val" : "GO:0050876"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
@@ -132655,6 +132646,7 @@
           "val" : "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways involving macromolecules, any molecule of high relative molecular mass, the structure of which essentially comprises the multiple repetition of units derived, actually or conceptually, from molecules of low relative molecular mass.",
           "xrefs" : [ "GOC:dph", "GOC:tb" ]
         },
+        "subsets" : [ "http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "biological_process"
@@ -217813,12 +217805,60 @@
       "lbl" : "sensitive to ammonium",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "A growth phenotype which describes the sensitivity of individuals or populations after exposure to ammonium. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "Hsinyugithub"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_date",
           "val" : "2026-01-26T10:20:17Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001450",
+      "lbl" : "resistance to sodium dodecyl sulfate",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A growth phenotype which describes the resistance of individuals or populations after exposure to sodium dodecyl sulfate (SDS). Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "resistance to SDS"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "Hsinyugithub"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-03-04T17:17:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001451",
+      "lbl" : "sensitive to acidity",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A cell phenotype in which cells grow to a lower extent than wild type following exposure to acidic pH."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "Hsinyugithub"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-03-04T17:23:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
         } ]
       }
     }, {
@@ -290446,7 +290486,6 @@
       "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.w3.org/2000/01/rdf-schema#label",
-      "lbl" : "label",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     } ],
@@ -293193,11 +293232,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_228364",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_33232"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/CHEBI_228364",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_51086"
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_747204"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_22888",
       "pred" : "is_a",
@@ -304545,7 +304580,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_64047",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/CHEBI_33232"
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_747325"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_64047",
       "pred" : "is_a",
@@ -305318,6 +305353,22 @@
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_7451",
       "pred" : "http://purl.obolibrary.org/obo/RO_0000087",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_83317"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_747204",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_33232"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_747204",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_51086"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_747325",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_33232"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_747325",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_51086"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_74783",
       "pred" : "is_a",
@@ -320304,14 +320355,6 @@
       "sub" : "http://purl.obolibrary.org/obo/GO_0003824",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/GO_0003674"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0004176",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0008233"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/GO_0004176",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/GO_0140657"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/GO_0004518",
       "pred" : "is_a",
@@ -369853,6 +369896,14 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000021"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001450",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000022"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001451",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001098"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PR_000000001",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/CHEBI_33695"
@@ -402957,13 +403008,6 @@
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0004009",
         "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_33697"
-      } ]
-    }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/GO_0004176",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/GO_0008233" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000051",
-        "fillerId" : "http://purl.obolibrary.org/obo/GO_0016887"
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/GO_0004925",

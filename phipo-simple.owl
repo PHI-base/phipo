@@ -12,13 +12,13 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/phipo/phipo-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2026-01-26/phipo-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2026-03-12/phipo-simple.owl"/>
         <dc:description>Ontology of species-neutral phenotypes observed in pathogen-host interactions.</dc:description>
         <dc:title>Pathogen Host Interactions Phenotype Ontology</dc:title>
         <terms:license>https://creativecommons.org/licenses/by/3.0/</terms:license>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date>2018-07-09T13:43:00Z</oboInOwl:creation_date>
-        <owl:versionInfo>2026-01-26</owl:versionInfo>
+        <owl:versionInfo>2026-03-12</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -18728,16 +18728,39 @@ occurs to a lesser extent than normal.</obo:IAO_0000115>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001449">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000021"/>
+        <obo:IAO_0000115>A growth phenotype which describes the sensitivity of individuals or populations after exposure to ammonium. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow.</obo:IAO_0000115>
         <oboInOwl:created_by>Hsinyugithub</oboInOwl:created_by>
         <oboInOwl:created_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-01-26T10:20:17Z</oboInOwl:created_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">sensitive to ammonium</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001449"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="en">sensitive to ammonium</owl:annotatedTarget>
-        <obo:IAO_0000115>A growth phenotype which describes the sensitivity of individuals or populations after exposure to ammonium. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow.</obo:IAO_0000115>
-    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001450 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001450">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000022"/>
+        <obo:IAO_0000115>A growth phenotype which describes the resistance of individuals or populations after exposure to sodium dodecyl sulfate (SDS). Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow.</obo:IAO_0000115>
+        <oboInOwl:created_by>Hsinyugithub</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-04T17:17:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>resistance to SDS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">resistance to sodium dodecyl sulfate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001451 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001451">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001098"/>
+        <obo:IAO_0000115>A cell phenotype in which cells grow to a lower extent than wild type following exposure to acidic pH.</obo:IAO_0000115>
+        <oboInOwl:created_by>Hsinyugithub</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-04T17:23:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">sensitive to acidity</rdfs:label>
+    </owl:Class>
 </rdf:RDF>
 
 

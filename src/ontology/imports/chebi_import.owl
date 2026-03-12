@@ -7,9 +7,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/phipo/imports/chebi_import.owl>
-<http://purl.obolibrary.org/obo/phipo/releases/2026-01-26/imports/chebi_import.owl>
-Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/chebi/obophenotype/releases/2025-10-11/chebi_slim.owl>)
-Annotation(owl:versionInfo "2026-01-26")
+<http://purl.obolibrary.org/obo/phipo/releases/2026-03-12/imports/chebi_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/chebi/obophenotype/releases/2026-03-05/chebi_slim.owl>)
+Annotation(owl:versionInfo "2026-03-12")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_100147>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_10022>))
@@ -1551,6 +1551,8 @@ Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_73754>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_73913>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_74159>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_7451>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_747204>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_747325>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_74783>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_74818>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_7489>))
@@ -5398,8 +5400,7 @@ AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#has
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_228364> "CHEBI:228364")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CHEBI_228364> <http://purl.obolibrary.org/obo/chebi/3_STAR>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_228364> "NMR chemical shift reference compound")
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_228364> <http://purl.obolibrary.org/obo/CHEBI_33232>)
-SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_228364> <http://purl.obolibrary.org/obo/CHEBI_51086>)
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_228364> <http://purl.obolibrary.org/obo/CHEBI_747204>)
 
 # Class: <http://purl.obolibrary.org/obo/CHEBI_22888> (biphenyls)
 
@@ -22262,6 +22263,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://pu
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CHEBI_64047> <http://purl.obolibrary.org/obo/chebi/3_STAR>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_64047> "food additive")
 SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_64047> <http://purl.obolibrary.org/obo/CHEBI_33232>)
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_64047> <http://purl.obolibrary.org/obo/CHEBI_747325>)
 SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_64047> <http://purl.obolibrary.org/obo/CHEBI_78295>)
 
 # Class: <http://purl.obolibrary.org/obo/CHEBI_64049> (food acidity regulator)
@@ -23590,6 +23592,29 @@ SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_7451> <http://purl.obolibrary.o
 SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_7451> <http://purl.obolibrary.org/obo/CHEBI_87127>)
 SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_7451> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> <http://purl.obolibrary.org/obo/CHEBI_59285>))
 SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_7451> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> <http://purl.obolibrary.org/obo/CHEBI_83317>))
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_747204> (reference compound)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_747204> "Any well-characterized compound that serves as a standard for the identification, quantification, calibration, or quality control of substances in scientific analysis.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_747204> "chebi_ontology")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "chebi") <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/CHEBI_747204> "reference compounds")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "chebi") <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/CHEBI_747204> "reference standard")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "chebi") <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/CHEBI_747204> "reference standards")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_747204> "CHEBI:747204")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CHEBI_747204> <http://purl.obolibrary.org/obo/chebi/3_STAR>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_747204> "reference compound")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_747204> <http://purl.obolibrary.org/obo/CHEBI_33232>)
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_747204> <http://purl.obolibrary.org/obo/CHEBI_51086>)
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_747325> (additive)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_747325> "a role for a chemical additive to a mixture")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/CHEBI_747325> "chebi_ontology")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CHEBI_747325> "CHEBI:747325")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CHEBI_747325> <http://purl.obolibrary.org/obo/chebi/2_STAR>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_747325> "additive")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_747325> <http://purl.obolibrary.org/obo/CHEBI_33232>)
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_747325> <http://purl.obolibrary.org/obo/CHEBI_51086>)
 
 # Class: <http://purl.obolibrary.org/obo/CHEBI_74783> (astringent)
 

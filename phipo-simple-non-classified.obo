@@ -1,12 +1,12 @@
 format-version: 1.2
-data-version: phipo/releases/2026-01-26/phipo-simple-non-classified.owl
+data-version: phipo/releases/2026-03-12/phipo-simple-non-classified.owl
 idspace: dc http://purl.org/dc/elements/1.1/ 
 idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
 idspace: terms http://purl.org/dc/terms/ 
 ontology: phipo/phipo-simple-non-classified
 property_value: dc:description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: dc:title "Pathogen Host Interactions Phenotype Ontology" xsd:string
-property_value: owl:versionInfo "2026-01-26" xsd:string
+property_value: owl:versionInfo "2026-03-12" xsd:string
 property_value: terms:license "https://creativecommons.org/licenses/by/3.0/" xsd:string
 creation_date: 2018-07-09T13:43:00Z
 created_by: alaynecuzick
@@ -12944,10 +12944,31 @@ creation_date: 2025-07-14T13:24:34Z
 
 [Term]
 id: PHIPO:0001449
-name: sensitive to ammonium {def="A growth phenotype which describes the sensitivity of individuals or populations after exposure to ammonium. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow."}
+name: sensitive to ammonium
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the sensitivity of individuals or populations after exposure to ammonium. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow." []
 is_a: PHIPO:0000021 ! increased sensitivity to chemical
 property_value: oboInOwl:created_date "2026-01-26T10:20:17Z" xsd:dateTime
 created_by: Hsinyugithub
+
+[Term]
+id: PHIPO:0001450
+name: resistance to sodium dodecyl sulfate
+namespace: single_species_phenotype
+def: "A growth phenotype which describes the resistance of individuals or populations after exposure to sodium dodecyl sulfate (SDS). Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow." []
+synonym: "resistance to SDS" EXACT []
+is_a: PHIPO:0000022 ! increased resistance to chemical
+created_by: Hsinyugithub
+creation_date: 2026-03-04T17:17:00Z
+
+[Term]
+id: PHIPO:0001451
+name: sensitive to acidity
+namespace: single_species_phenotype
+def: "A cell phenotype in which cells grow to a lower extent than wild type following exposure to acidic pH." []
+is_a: PHIPO:0001098 ! sensitive to stress
+created_by: Hsinyugithub
+creation_date: 2026-03-04T17:23:00Z
 
 [Typedef]
 id: PHIPO:0000304

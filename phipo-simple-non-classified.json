@@ -19,9 +19,9 @@
         "val" : "2018-07-09T13:43:00Z"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2026-01-26"
+        "val" : "2026-03-12"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/phipo/releases/2026-01-26/phipo-simple-non-classified.json"
+      "version" : "http://purl.obolibrary.org/obo/phipo/releases/2026-03-12/phipo-simple-non-classified.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000001",
@@ -27964,12 +27964,60 @@
       "lbl" : "sensitive to ammonium",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "A growth phenotype which describes the sensitivity of individuals or populations after exposure to ammonium. Typically, organisms are deemed sensitive to a chemical if they stop growing (and may die) at a concentration of the chemical that allows wild type individuals or populations to grow."
+        },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "Hsinyugithub"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_date",
           "val" : "2026-01-26T10:20:17Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001450",
+      "lbl" : "resistance to sodium dodecyl sulfate",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A growth phenotype which describes the resistance of individuals or populations after exposure to sodium dodecyl sulfate (SDS). Typically, organisms are deemed resistant to a chemical if they survive at a concentration of the chemical that does not allow wild type individuals or populations to grow."
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "resistance to SDS"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "Hsinyugithub"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-03-04T17:17:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001451",
+      "lbl" : "sensitive to acidity",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A cell phenotype in which cells grow to a lower extent than wild type following exposure to acidic pH."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "Hsinyugithub"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-03-04T17:23:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
         } ]
       }
     }, {
@@ -32668,6 +32716,14 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001449",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000021"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001450",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000022"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001451",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001098"
     } ]
   } ]
 }
