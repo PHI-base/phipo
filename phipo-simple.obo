@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: phipo/releases/2026-07-20/phipo-simple.owl
+data-version: phipo/releases/2026-07-21/phipo-simple.owl
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
@@ -11,7 +11,7 @@ idspace: terms http://purl.org/dc/terms/
 ontology: phipo/phipo-simple
 property_value: dc:description "Ontology of species-neutral phenotypes observed in pathogen-host interactions." xsd:string
 property_value: dc:title "Pathogen Host Interactions Phenotype Ontology" xsd:string
-property_value: owl:versionInfo "2026-07-20" xsd:string
+property_value: owl:versionInfo "2026-07-21" xsd:string
 property_value: terms:license "https://creativecommons.org/licenses/by/3.0/" xsd:string
 creation_date: 2018-07-09T13:43:00Z
 created_by: alaynecuzick
@@ -13043,6 +13043,50 @@ def: "A phenotype where there is an accelerated process of host tissue cell deat
 is_a: PHIPO:0000192 ! presence of host-defense induced lesion by host hypersensitive response
 created_by: Hsinyugithub
 creation_date: 2026-06-22T14:03:42Z
+
+[Term]
+id: PHIPO:0001456
+name: susceptibility to pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A quality of an organism describing the extent to which it is prone to infection, colonization, or disease development following exposure to a pathogen." []
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0000001 ! pathogen host interaction phenotype
+created_by: Hsinyugithub
+creation_date: 2026-07-21T10:23:48+01:00
+
+[Term]
+id: PHIPO:0001457
+name: increased susceptibility to pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A quality of an organism describing an increased proneness to infection, colonization, or disease development following exposure to a pathogen relative to a reference organism or population under equivalent conditions." []
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0001456 ! susceptibility to pathogen
+created_by: Hsinyugithub
+creation_date: 2026-07-21T10:23:48+01:00
+
+[Term]
+id: PHIPO:0001458
+name: reduced susceptibility to pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A quality of an organism describing a decreased proneness to infection, colonization, or disease development following exposure to a pathogen relative to a reference organism or population under equivalent conditions." []
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0001456 ! susceptibility to pathogen
+created_by: Hsinyugithub
+creation_date: 2026-07-21T10:23:48+01:00
+
+[Term]
+id: PHIPO:0001459
+name: unaffected susceptibility to pathogen
+namespace: pathogen_host_interaction_phenotype
+def: "A quality of an organism in which its proneness to infection, colonization, or disease following exposure to a pathogen is comparable to that of a reference or wild-type organism under equivalent conditions." []
+subset: qc_do_not_annotate
+subset: qc_do_not_manually_annotate
+is_a: PHIPO:0001456 ! susceptibility to pathogen
+created_by: Hsinyugithub
+creation_date: 2026-07-21T10:23:48+01:00
 
 [Typedef]
 id: BFO:0000050
