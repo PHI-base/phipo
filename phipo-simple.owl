@@ -12,13 +12,13 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/phipo/phipo-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2026-03-12/phipo-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/phipo/releases/2026-08-06/phipo-simple.owl"/>
         <dc:description>Ontology of species-neutral phenotypes observed in pathogen-host interactions.</dc:description>
         <dc:title>Pathogen Host Interactions Phenotype Ontology</dc:title>
         <terms:license>https://creativecommons.org/licenses/by/3.0/</terms:license>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date>2018-07-09T13:43:00Z</oboInOwl:creation_date>
-        <owl:versionInfo>2026-03-12</owl:versionInfo>
+        <owl:versionInfo>2026-08-06</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -42,6 +42,18 @@
         <rdfs:label>definition</rdfs:label>
         <rdfs:label xml:lang="en">definition</rdfs:label>
         <rdfs:label>textual definition</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0100001 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0100001">
+        <obo:IAO_0000115 xml:lang="en">Add as annotation triples in the granting ontology</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Use on obsolete terms, relating the term to another term that can be used as a substitute</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">Add as annotation triples in the granting ontology</rdfs:comment>
+        <rdfs:label>term replaced by</rdfs:label>
+        <rdfs:label xml:lang="en">term replaced by</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -127,6 +139,14 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#SubsetProperty -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#consider -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#consider">
+        <rdfs:label>consider</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -2958,7 +2978,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000190">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000192"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000985"/>
-        <obo:IAO_0000115>A phenotype where the process of host tissue cell death causing a host lesion is induced by the host activating its own hypersensitive response in defense is delayed.</obo:IAO_0000115>
+        <obo:IAO_0000115>A phenotype where there is an delayed process of host tissue cell death, leading to the formation of a host lesion, which is induced by the host activating its own hypersensitive response in defense against a pathogen.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-01T13:14:10Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
@@ -6820,6 +6840,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000501">
         <obo:IAO_0000115>A single species cell phenotype in which the amount of deoxynivalenol measured in a cell is higher than normal.</obo:IAO_0000115>
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001447"/>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-18T13:06:49Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
@@ -6833,6 +6854,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000502">
         <obo:IAO_0000115>A single species cell phenotype in which the amount of deoxynivalenol measured in a cell is lower than normal.</obo:IAO_0000115>
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001445"/>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-18T13:07:24Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
@@ -6845,12 +6867,12 @@
     <!-- http://purl.obolibrary.org/obo/PHIPO_0000503 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000503">
-        <obo:IAO_0000115>A single organism cell phenotype in which the amount of deoxynivalenol measured in a cell is too low to detect.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001034"/>
+        <obo:IAO_0000115>A single species cell phenotype in which the amount of deoxynivalenol measured in a cell is too low to detect.</obo:IAO_0000115>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-18T13:07:42Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
-        <rdfs:label>obsolete deoxynivalenol absent from cell</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <rdfs:label xml:lang="en">deoxynivalenol absent from cell</rdfs:label>
     </owl:Class>
     
 
@@ -6859,6 +6881,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0000504">
         <obo:IAO_0000115>A single species cell phenotype in which the amount of deoxynivalenol measured in a cell is normal (i.e. indistinguishable from wild type).</obo:IAO_0000115>
+        <oboInOwl:consider rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001182"/>
         <oboInOwl:created_by>alaynecuzick</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-18T13:07:54Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
@@ -18760,6 +18783,117 @@ occurs to a lesser extent than normal.</obo:IAO_0000115>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-04T17:23:00Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
         <rdfs:label xml:lang="en">sensitive to acidity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001452 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001452">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000446"/>
+        <dc:description>A single species phenotype in which the cell death typically triggered by the expression or activity of the pro-apoptotic protein BAX is completely abolished.</dc:description>
+        <oboInOwl:created_by>Hsinyugithub</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-05-05T11:44:04Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>BAX-triggered apoptosis abolished</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">BAX-induced cell death absent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001453 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001453">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000446"/>
+        <dc:description>A single species phenotype in which the expression or activity of the pro-apoptotic protein BAX leads to observable cell death.</dc:description>
+        <oboInOwl:created_by>Hsinyugithub</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-05-05T11:46:49Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>BAX-triggered apoptosis present</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">BAX-induced cell death present</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001454 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001454">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001119"/>
+        <obo:IAO_0000115>A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, occurs to a higher extent than normal.</obo:IAO_0000115>
+        <oboInOwl:created_by>Hsinyugithub</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-05-21T09:48:17Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>single_species_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">increased protein phosphorylation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001455 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001455">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000192"/>
+        <obo:IAO_0000115>A phenotype where there is an accelerated process of host tissue cell death, leading to the formation of a host lesion, which is induced by the host activating its own hypersensitive response in defense against a pathogen.</obo:IAO_0000115>
+        <oboInOwl:created_by>Hsinyugithub</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-06-22T14:03:42Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <rdfs:label xml:lang="en">accelerated host-defense induced lesion formation by host hypersensitive response</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001456 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001456">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0000001"/>
+        <obo:IAO_0000115>A quality of an organism describing the extent to which it is prone to infection, colonization, or disease development following exposure to a pathogen.</obo:IAO_0000115>
+        <oboInOwl:created_by>Hsinyugithub</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-21T10:23:48+01:00</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>qc_do_not_annotate</oboInOwl:inSubset>
+        <oboInOwl:inSubset>qc_do_not_manually_annotate</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">susceptibility to pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001457 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001457">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001456"/>
+        <obo:IAO_0000115>A quality of an organism describing an increased proneness to infection, colonization, or disease development following exposure to a pathogen relative to a reference organism or population under equivalent conditions.</obo:IAO_0000115>
+        <oboInOwl:created_by>Hsinyugithub</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-21T10:23:48+01:00</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>qc_extension_only</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">increased susceptibility to pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001458 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001458">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001456"/>
+        <obo:IAO_0000115>A quality of an organism describing a decreased proneness to infection, colonization, or disease development following exposure to a pathogen relative to a reference organism or population under equivalent conditions.</obo:IAO_0000115>
+        <oboInOwl:created_by>Hsinyugithub</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-21T10:23:48+01:00</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>qc_extension_only</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">reduced susceptibility to pathogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PHIPO_0001459 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PHIPO_0001459">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PHIPO_0001456"/>
+        <obo:IAO_0000115>A quality of an organism in which its proneness to infection, colonization, or disease following exposure to a pathogen is comparable to that of a reference or wild-type organism under equivalent conditions.</obo:IAO_0000115>
+        <oboInOwl:created_by>Hsinyugithub</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-07-21T10:23:48+01:00</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>pathogen_host_interaction_phenotype</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset>qc_extension_only</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">unaffected susceptibility to pathogen</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

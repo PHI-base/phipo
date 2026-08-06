@@ -19,9 +19,9 @@
         "val" : "2018-07-09T13:43:00Z"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2026-03-12"
+        "val" : "2026-08-06"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/phipo/releases/2026-03-12/phipo-simple.json"
+      "version" : "http://purl.obolibrary.org/obo/phipo/releases/2026-08-06/phipo-simple.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000001",
@@ -3954,7 +3954,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A phenotype where the process of host tissue cell death causing a host lesion is induced by the host activating its own hypersensitive response in defense is delayed."
+          "val" : "A phenotype where there is an delayed process of host tissue cell death, leading to the formation of a host lesion, which is induced by the host activating its own hypersensitive response in defense against a pathogen."
         },
         "comments" : [ "This term is to be used for host protection against the pathogen." ],
         "synonyms" : [ {
@@ -9903,6 +9903,9 @@
           "val" : "A single species cell phenotype in which the amount of deoxynivalenol measured in a cell is higher than normal."
         },
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
+          "val" : "http://purl.obolibrary.org/obo/PHIPO_0001447"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
         }, {
@@ -9923,6 +9926,9 @@
           "val" : "A single species cell phenotype in which the amount of deoxynivalenol measured in a cell is lower than normal."
         },
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
+          "val" : "http://purl.obolibrary.org/obo/PHIPO_0001445"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
         }, {
@@ -9936,11 +9942,11 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000503",
-      "lbl" : "obsolete deoxynivalenol absent from cell",
+      "lbl" : "deoxynivalenol absent from cell",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A single organism cell phenotype in which the amount of deoxynivalenol measured in a cell is too low to detect."
+          "val" : "A single species cell phenotype in which the amount of deoxynivalenol measured in a cell is too low to detect."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
@@ -9951,8 +9957,7 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "single_species_phenotype"
-        } ],
-        "deprecated" : true
+        } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PHIPO_0000504",
@@ -9963,6 +9968,9 @@
           "val" : "A single species cell phenotype in which the amount of deoxynivalenol measured in a cell is normal (i.e. indistinguishable from wild type)."
         },
         "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
+          "val" : "http://purl.obolibrary.org/obo/PHIPO_0001182"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "alaynecuzick"
         }, {
@@ -28021,6 +28029,170 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001452",
+      "lbl" : "BAX-induced cell death absent",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "BAX-triggered apoptosis abolished"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/description",
+          "val" : "A single species phenotype in which the cell death typically triggered by the expression or activity of the pro-apoptotic protein BAX is completely abolished."
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "Hsinyugithub"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-05-05T11:44:04Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001453",
+      "lbl" : "BAX-induced cell death present",
+      "type" : "CLASS",
+      "meta" : {
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "BAX-triggered apoptosis present"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/description",
+          "val" : "A single species phenotype in which the expression or activity of the pro-apoptotic protein BAX leads to observable cell death."
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "Hsinyugithub"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-05-05T11:46:49Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001454",
+      "lbl" : "increased protein phosphorylation",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A cellular process phenotype observed in the vegetative growth phase of the life cycle in which the phosphorylation of one or more specific proteins, or of specific protein sites, occurs to a higher extent than normal."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "Hsinyugithub"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-05-21T09:48:17Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "single_species_phenotype"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001455",
+      "lbl" : "accelerated host-defense induced lesion formation by host hypersensitive response",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A phenotype where there is an accelerated process of host tissue cell death, leading to the formation of a host lesion, which is induced by the host activating its own hypersensitive response in defense against a pathogen."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "Hsinyugithub"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-06-22T14:03:42Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "pathogen_host_interaction_phenotype"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001456",
+      "lbl" : "susceptibility to pathogen",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A quality of an organism describing the extent to which it is prone to infection, colonization, or disease development following exposure to a pathogen."
+        },
+        "subsets" : [ "\"qc_do_not_annotate\"", "\"qc_do_not_manually_annotate\"" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "Hsinyugithub"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-21T10:23:48+01:00"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "pathogen_host_interaction_phenotype"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001457",
+      "lbl" : "increased susceptibility to pathogen",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A quality of an organism describing an increased proneness to infection, colonization, or disease development following exposure to a pathogen relative to a reference organism or population under equivalent conditions."
+        },
+        "subsets" : [ "\"qc_extension_only\"" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "Hsinyugithub"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-21T10:23:48+01:00"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "pathogen_host_interaction_phenotype"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001458",
+      "lbl" : "reduced susceptibility to pathogen",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A quality of an organism describing a decreased proneness to infection, colonization, or disease development following exposure to a pathogen relative to a reference organism or population under equivalent conditions."
+        },
+        "subsets" : [ "\"qc_extension_only\"" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "Hsinyugithub"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-21T10:23:48+01:00"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "pathogen_host_interaction_phenotype"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PHIPO_0001459",
+      "lbl" : "unaffected susceptibility to pathogen",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A quality of an organism in which its proneness to infection, colonization, or disease following exposure to a pathogen is comparable to that of a reference or wild-type organism under equivalent conditions."
+        },
+        "subsets" : [ "\"qc_extension_only\"" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "Hsinyugithub"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-21T10:23:48+01:00"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "pathogen_host_interaction_phenotype"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "lbl" : "part_of",
       "type" : "PROPERTY",
@@ -28149,6 +28321,17 @@
         }
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0100001",
+      "lbl" : "term replaced by",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "Use on obsolete terms, relating the term to another term that can be used as a substitute"
+        },
+        "comments" : [ "Add as annotation triples in the granting ontology" ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/def",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
@@ -28195,6 +28378,11 @@
       "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#SubsetProperty",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#consider",
+      "lbl" : "consider",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
@@ -29586,6 +29774,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000498",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000929"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000503",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001034"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0000509",
       "pred" : "is_a",
@@ -32978,6 +33170,38 @@
       "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001451",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001098"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001452",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000446"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001453",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000446"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001454",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001119"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001455",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000192"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001456",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001457",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001456"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001458",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001456"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PHIPO_0001459",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PHIPO_0001456"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0000052",
       "pred" : "subPropertyOf",

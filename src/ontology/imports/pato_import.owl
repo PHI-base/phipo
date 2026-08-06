@@ -7,9 +7,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/phipo/imports/pato_import.owl>
-<http://purl.obolibrary.org/obo/phipo/releases/2026-03-12/imports/pato_import.owl>
+<http://purl.obolibrary.org/obo/phipo/releases/2026-08-06/imports/pato_import.owl>
 Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/pato/releases/2025-05-14/pato.owl>)
-Annotation(owl:versionInfo "2026-03-12")
+Annotation(owl:versionInfo "2026-08-06")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000003>))
@@ -646,6 +646,7 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/pato#towards>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/pr#has_constituent_monomer>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/pr#has_gene_template>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0100001>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/RO_0002259>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/valid_for_go_annotation_extension>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/valid_for_go_gp2term>))
@@ -695,6 +696,7 @@ Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/title>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#SubsetProperty>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#consider>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#created_by>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#creation_date>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId>))
@@ -714,6 +716,10 @@ Declaration(AnnotationProperty(rdfs:comment))
 # Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000115> (definition)
 
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000115> "definition")
+
+# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0100001> (term replaced by)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0100001> "term replaced by")
 
 # Annotation Property: <http://purl.obolibrary.org/obo/RO_0002259> (<http://purl.obolibrary.org/obo/RO_0002259>)
 
@@ -882,6 +888,10 @@ SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/uberon/core#upper_level>
 # Annotation Property: <http://purl.obolibrary.org/obo/ubprop#_upper_level> (<http://purl.obolibrary.org/obo/ubprop#_upper_level>)
 
 SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/ubprop#_upper_level> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#consider> (consider)
+
+AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#consider> "consider")
 
 # Annotation Property: <http://www.geneontology.org/formats/oboInOwl#created_by> (created by)
 
@@ -1505,6 +1515,7 @@ SubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0040036> <http://purl.obo
 # Object Property: <http://purl.obolibrary.org/obo/pato#decreased_in_magnitude_relative_to> (obsolete decreased_in_magnitude_relative_to)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PATOC:CJM") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/pato#decreased_in_magnitude_relative_to> "OBSOLETE. q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) < magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <http://purl.obolibrary.org/obo/pato#decreased_in_magnitude_relative_to> <http://purl.obolibrary.org/obo/RO_0015008>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/pato#decreased_in_magnitude_relative_to> "quality")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/pato#decreased_in_magnitude_relative_to> "decreased_in_magnitude_relative_to")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/pato#decreased_in_magnitude_relative_to> "Refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason. This relation is used to determine the 'directionality' of relative qualities such as 'decreased strength', relative to the parent type, 'strength'.")
@@ -1515,6 +1526,7 @@ ObjectPropertyRange(<http://purl.obolibrary.org/obo/pato#decreased_in_magnitude_
 
 # Object Property: <http://purl.obolibrary.org/obo/pato#has_relative_magnitude> (obsolete has_relative_magnitude)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <http://purl.obolibrary.org/obo/pato#has_relative_magnitude> <http://purl.obolibrary.org/obo/RO_0015010>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/pato#has_relative_magnitude> "quality")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/pato#has_relative_magnitude> "has_relative_magnitude")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/pato#has_relative_magnitude> "Refer to https://github.com/pato-ontology/pato/issues/454.")
@@ -1523,6 +1535,7 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/pato#has_relative
 # Object Property: <http://purl.obolibrary.org/obo/pato#increased_in_magnitude_relative_to> (obsolete increased_in_magnitude_relative_to)
 
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PATOC:CJM") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/pato#increased_in_magnitude_relative_to> "OBSOLETE. q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) > magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <http://purl.obolibrary.org/obo/pato#increased_in_magnitude_relative_to> <http://purl.obolibrary.org/obo/RO_0015007>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/pato#increased_in_magnitude_relative_to> "quality")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/pato#increased_in_magnitude_relative_to> "increased_in_magnitude_relative_to")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/pato#increased_in_magnitude_relative_to> "Refer to https://github.com/pato-ontology/pato/issues/454. This relation is used to determine the 'directionality' of relative qualities such as 'increased strength', relative to the parent type, 'strength'.")
@@ -1533,6 +1546,7 @@ ObjectPropertyRange(<http://purl.obolibrary.org/obo/pato#increased_in_magnitude_
 
 # Object Property: <http://purl.obolibrary.org/obo/pato#towards> (obsolete towards)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <http://purl.obolibrary.org/obo/pato#towards> <http://purl.obolibrary.org/obo/RO_0002503>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/pato#towards> "quality")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/pato#towards> "towards")
 AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/pato#towards> "Consider using RO:0002503 instead. See https://github.com/pato-ontology/pato/issues/454")
